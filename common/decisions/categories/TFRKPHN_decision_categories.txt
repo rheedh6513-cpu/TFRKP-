@@ -1,0 +1,85 @@
+TFRKPHN_hong_minsim_category = {
+	icon = generic_political_actions
+	priority = 200
+	allowed = { original_tag = KOR }
+	visible_when_empty = yes
+	visible = {
+		has_country_flag = TFRKP_HN_hong_president
+		has_completed_focus = TFRKPHN_hong_b01_02
+	}
+	scripted_gui = TFRKPHN_hong_minsim_gui
+}
+
+TFRKPHN_hong_invest_category = {
+	icon = generic_economy
+	priority = 190
+	allowed = { original_tag = KOR }
+	visible = {
+		has_country_flag = TFRKP_HN_hong_president
+		has_completed_focus = TFRKPHN_hong_b01_02
+	}
+}
+
+TFRKPHN_hong_rear_category = {
+	icon = GFX_decision_icon_KOR_taiwan
+	priority = 180
+	allowed = { original_tag = KOR }
+	visible = {
+		has_country_flag = TFRKP_HN_hong_president
+		has_completed_focus = TFRKPHN_hong_b02_08
+	}
+}
+
+TFRKPHN_hong_hourglass_category = {
+	icon = generic_political_actions
+	priority = 210
+	allowed = { original_tag = KOR }
+	visible_when_empty = yes
+	visible = {
+		has_country_flag = TFRKP_HN_hong_president
+		has_completed_focus = TFRKPHN_hong_b03_04
+	}
+	scripted_gui = TFRKPHN_hong_hourglass_gui
+}
+
+TFRKPHN_hong_amend_category = {
+	icon = generic_political_actions
+	priority = 220
+	allowed = { original_tag = KOR }
+	visible_when_empty = yes
+	visible = {
+		# 개헌은 홍준표 대통령 전용: 양안전쟁 개입(b02_02) + 중국 패전(승전)일 때만
+		has_country_flag = TFRKP_HN_hong_president
+		has_completed_focus = TFRKPHN_hong_b02_02
+		has_global_flag = PRC_taiwan_war_lost
+		OR = {
+			has_country_flag = TFRKPHN_amend_active
+			has_country_flag = TFRKPHN_amend_passed	# 가결 뒤에는 개헌 결정과 헌법 조문을 계속 보여 준다
+		}
+	}
+	scripted_gui = TFRKPHN_hong_amend_gui
+}
+
+TFRKPHN_senate_category = {
+	icon = generic_political_actions
+	priority = 98
+	allowed = { original_tag = KOR }
+	visible_when_empty = yes
+	visible = {
+		has_country_flag = TFRKPHN_bicameral
+	}
+	scripted_gui = TFRKPHN_senate_gui
+}
+
+TFRKPHN_crime_category = {
+	icon = generic_political_actions
+	priority = 205
+	allowed = { original_tag = KOR }
+	visible_when_empty = yes
+	visible = {
+		has_country_flag = TFRKP_HN_hong_president
+		has_completed_focus = TFRKPHN_hong_b03_06
+		NOT = { has_country_flag = TFRKPHN_crime_closed }
+	}
+	scripted_gui = TFRKPHN_crime_gui
+}

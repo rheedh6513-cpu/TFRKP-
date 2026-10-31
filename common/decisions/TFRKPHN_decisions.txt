@@ -1,0 +1,661 @@
+TFRKPHN_hong_minsim_category = {
+	TFRKPHN_hong_tour_prewar_info = {
+		icon = GFX_decision_icon_KOR_LJS_misc
+		cost = 0
+		priority = 1001
+		visible = {
+			tag = KOR
+			has_country_flag = TFRKP_HN_hong_president
+			NOT = { OR = { has_global_flag = PRC_taiwan_war_lost has_global_flag = PRC_taiwan_war_won } }
+		}
+		available = { always = no }
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_hong_tour_select_first = {
+		icon = GFX_decision_icon_KOR_LJS_misc
+		cost = 0
+		priority = 1000
+		visible = {
+			tag = KOR
+			check_variable = { TFRKPHN_select_region_var = 0 }
+		}
+		available = { always = no }
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_hong_tour_seoul = {
+		icon = GFX_decision_icon_KOR_LJS_misc
+		cost = 50
+		days_remove = 14
+		days_re_enable = 21
+		priority = 100
+		visible = {
+			tag = KOR
+			has_country_flag = TFRKP_HN_hong_president
+			OR = { has_global_flag = PRC_taiwan_war_lost has_global_flag = PRC_taiwan_war_won }	# 종전 뒤에만 (전쟁 전에는 지지도가 사건으로만 움직인다)
+			check_variable = { TFRKPHN_select_region_var = 1 }
+		}
+		available = {
+			check_variable = { TFRKPHN_support_seoul < 100 }
+		}
+		complete_effect = {
+			custom_effect_tooltip = TFRKPHN_after_14_tt
+			custom_effect_tooltip = TFRKPHN_hong_tour_seoul_tt
+		}
+		remove_effect = {
+			hidden_effect = {
+				add_to_variable = { TFRKPHN_support_seoul = 10 }
+				clamp_variable = { var = TFRKPHN_support_seoul min = 0 max = 100 }
+				TFRKPHN_hong_update_support_display = yes
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_hong_tour_gyeonggi = {
+		icon = GFX_decision_icon_KOR_LJS_misc
+		cost = 50
+		days_remove = 14
+		days_re_enable = 21
+		priority = 100
+		visible = {
+			tag = KOR
+			has_country_flag = TFRKP_HN_hong_president
+			OR = { has_global_flag = PRC_taiwan_war_lost has_global_flag = PRC_taiwan_war_won }	# 종전 뒤에만 (전쟁 전에는 지지도가 사건으로만 움직인다)
+			check_variable = { TFRKPHN_select_region_var = 2 }
+		}
+		available = {
+			check_variable = { TFRKPHN_support_gyeonggi < 100 }
+		}
+		complete_effect = {
+			custom_effect_tooltip = TFRKPHN_after_14_tt
+			custom_effect_tooltip = TFRKPHN_hong_tour_gyeonggi_tt
+		}
+		remove_effect = {
+			hidden_effect = {
+				add_to_variable = { TFRKPHN_support_gyeonggi = 10 }
+				clamp_variable = { var = TFRKPHN_support_gyeonggi min = 0 max = 100 }
+				TFRKPHN_hong_update_support_display = yes
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_hong_tour_gangwon = {
+		icon = GFX_decision_icon_KOR_LJS_misc
+		cost = 50
+		days_remove = 14
+		days_re_enable = 21
+		priority = 100
+		visible = {
+			tag = KOR
+			has_country_flag = TFRKP_HN_hong_president
+			OR = { has_global_flag = PRC_taiwan_war_lost has_global_flag = PRC_taiwan_war_won }	# 종전 뒤에만 (전쟁 전에는 지지도가 사건으로만 움직인다)
+			check_variable = { TFRKPHN_select_region_var = 3 }
+		}
+		available = {
+			check_variable = { TFRKPHN_support_gangwon < 100 }
+		}
+		complete_effect = {
+			custom_effect_tooltip = TFRKPHN_after_14_tt
+			custom_effect_tooltip = TFRKPHN_hong_tour_gangwon_tt
+		}
+		remove_effect = {
+			hidden_effect = {
+				add_to_variable = { TFRKPHN_support_gangwon = 10 }
+				clamp_variable = { var = TFRKPHN_support_gangwon min = 0 max = 100 }
+				TFRKPHN_hong_update_support_display = yes
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_hong_tour_chungcheong = {
+		icon = GFX_decision_icon_KOR_LJS_misc
+		cost = 50
+		days_remove = 14
+		days_re_enable = 21
+		priority = 100
+		visible = {
+			tag = KOR
+			has_country_flag = TFRKP_HN_hong_president
+			OR = { has_global_flag = PRC_taiwan_war_lost has_global_flag = PRC_taiwan_war_won }	# 종전 뒤에만 (전쟁 전에는 지지도가 사건으로만 움직인다)
+			check_variable = { TFRKPHN_select_region_var = 4 }
+		}
+		available = {
+			check_variable = { TFRKPHN_support_chungcheong < 100 }
+		}
+		complete_effect = {
+			custom_effect_tooltip = TFRKPHN_after_14_tt
+			custom_effect_tooltip = TFRKPHN_hong_tour_chungcheong_tt
+		}
+		remove_effect = {
+			hidden_effect = {
+				add_to_variable = { TFRKPHN_support_chungcheong = 10 }
+				clamp_variable = { var = TFRKPHN_support_chungcheong min = 0 max = 100 }
+				TFRKPHN_hong_update_support_display = yes
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_hong_tour_jeonbuk = {
+		icon = GFX_decision_icon_KOR_LJS_misc
+		cost = 50
+		days_remove = 14
+		days_re_enable = 21
+		priority = 100
+		visible = {
+			tag = KOR
+			has_country_flag = TFRKP_HN_hong_president
+			OR = { has_global_flag = PRC_taiwan_war_lost has_global_flag = PRC_taiwan_war_won }	# 종전 뒤에만 (전쟁 전에는 지지도가 사건으로만 움직인다)
+			check_variable = { TFRKPHN_select_region_var = 5 }
+		}
+		available = {
+			check_variable = { TFRKPHN_support_jeonbuk < 100 }
+		}
+		complete_effect = {
+			custom_effect_tooltip = TFRKPHN_after_14_tt
+			custom_effect_tooltip = TFRKPHN_hong_tour_jeonbuk_tt
+		}
+		remove_effect = {
+			hidden_effect = {
+				add_to_variable = { TFRKPHN_support_jeonbuk = 10 }
+				clamp_variable = { var = TFRKPHN_support_jeonbuk min = 0 max = 100 }
+				TFRKPHN_hong_update_support_display = yes
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_hong_tour_jeonnam = {
+		icon = GFX_decision_icon_KOR_LJS_misc
+		cost = 50
+		days_remove = 14
+		days_re_enable = 21
+		priority = 100
+		visible = {
+			tag = KOR
+			has_country_flag = TFRKP_HN_hong_president
+			OR = { has_global_flag = PRC_taiwan_war_lost has_global_flag = PRC_taiwan_war_won }	# 종전 뒤에만 (전쟁 전에는 지지도가 사건으로만 움직인다)
+			check_variable = { TFRKPHN_select_region_var = 6 }
+		}
+		available = {
+			check_variable = { TFRKPHN_support_jeonnam < 100 }
+		}
+		complete_effect = {
+			custom_effect_tooltip = TFRKPHN_after_14_tt
+			custom_effect_tooltip = TFRKPHN_hong_tour_jeonnam_tt
+		}
+		remove_effect = {
+			hidden_effect = {
+				add_to_variable = { TFRKPHN_support_jeonnam = 10 }
+				clamp_variable = { var = TFRKPHN_support_jeonnam min = 0 max = 100 }
+				TFRKPHN_hong_update_support_display = yes
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_hong_tour_gyeongbuk = {
+		icon = GFX_decision_icon_KOR_LJS_misc
+		cost = 50
+		days_remove = 14
+		days_re_enable = 21
+		priority = 100
+		visible = {
+			tag = KOR
+			has_country_flag = TFRKP_HN_hong_president
+			OR = { has_global_flag = PRC_taiwan_war_lost has_global_flag = PRC_taiwan_war_won }	# 종전 뒤에만 (전쟁 전에는 지지도가 사건으로만 움직인다)
+			check_variable = { TFRKPHN_select_region_var = 7 }
+		}
+		available = {
+			check_variable = { TFRKPHN_support_gyeongbuk < 100 }
+		}
+		complete_effect = {
+			custom_effect_tooltip = TFRKPHN_after_14_tt
+			custom_effect_tooltip = TFRKPHN_hong_tour_gyeongbuk_tt
+		}
+		remove_effect = {
+			hidden_effect = {
+				add_to_variable = { TFRKPHN_support_gyeongbuk = 10 }
+				clamp_variable = { var = TFRKPHN_support_gyeongbuk min = 0 max = 100 }
+				TFRKPHN_hong_update_support_display = yes
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_hong_tour_gyeongnam = {
+		icon = GFX_decision_icon_KOR_LJS_misc
+		cost = 50
+		days_remove = 14
+		days_re_enable = 21
+		priority = 100
+		visible = {
+			tag = KOR
+			has_country_flag = TFRKP_HN_hong_president
+			OR = { has_global_flag = PRC_taiwan_war_lost has_global_flag = PRC_taiwan_war_won }	# 종전 뒤에만 (전쟁 전에는 지지도가 사건으로만 움직인다)
+			check_variable = { TFRKPHN_select_region_var = 8 }
+		}
+		available = {
+			check_variable = { TFRKPHN_support_gyeongnam < 100 }
+		}
+		complete_effect = {
+			custom_effect_tooltip = TFRKPHN_after_14_tt
+			custom_effect_tooltip = TFRKPHN_hong_tour_gyeongnam_tt
+		}
+		remove_effect = {
+			hidden_effect = {
+				add_to_variable = { TFRKPHN_support_gyeongnam = 10 }
+				clamp_variable = { var = TFRKPHN_support_gyeongnam min = 0 max = 100 }
+				TFRKPHN_hong_update_support_display = yes
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_hong_tour_jeju = {
+		icon = GFX_decision_icon_KOR_LJS_misc
+		cost = 50
+		days_remove = 14
+		days_re_enable = 21
+		priority = 100
+		visible = {
+			tag = KOR
+			has_country_flag = TFRKP_HN_hong_president
+			OR = { has_global_flag = PRC_taiwan_war_lost has_global_flag = PRC_taiwan_war_won }	# 종전 뒤에만 (전쟁 전에는 지지도가 사건으로만 움직인다)
+			check_variable = { TFRKPHN_select_region_var = 9 }
+		}
+		available = {
+			check_variable = { TFRKPHN_support_jeju < 100 }
+		}
+		complete_effect = {
+			custom_effect_tooltip = TFRKPHN_after_14_tt
+			custom_effect_tooltip = TFRKPHN_hong_tour_jeju_tt
+		}
+		remove_effect = {
+			hidden_effect = {
+				add_to_variable = { TFRKPHN_support_jeju = 10 }
+				clamp_variable = { var = TFRKPHN_support_jeju min = 0 max = 100 }
+				TFRKPHN_hong_update_support_display = yes
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_hong_arms_seoul = {
+		icon = GFX_decision_icon_KOR_arms_factory_icon
+		cost = 30
+		days_remove = 14
+		fire_only_once = yes
+		priority = 90
+		visible = {
+			tag = KOR
+			NOT = { has_country_flag = TFRKPHN_arms_done }
+			has_completed_focus = TFRKPHN_hong_b01_02
+			check_variable = { TFRKPHN_select_region_var = 1 }
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = TFRKPHN_arms_once_tt
+				NOT = { has_country_flag = TFRKPHN_arms_chosen }
+			}
+			owns_state = 1041
+			controls_state = 1041
+		}
+		highlight_states = {
+			highlight_state_targets = { state = 1041 }
+		}
+		complete_effect = {
+			set_country_flag = TFRKPHN_arms_chosen
+			custom_effect_tooltip = TFRKPHN_after_14_tt
+			custom_effect_tooltip = TFRKPHN_hong_arms_factory_tt
+			custom_effect_tooltip = TFRKPHN_hong_arms_seoul_tt
+		}
+		remove_effect = {
+			set_country_flag = TFRKPHN_arms_done
+			hidden_effect = {
+				if = {
+					limit = { controls_state = 1041 }
+					1041 = {
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+					}
+				}
+				hidden_effect = {
+					add_to_variable = { TFRKPHN_support_seoul = 5 }
+					clamp_variable = { var = TFRKPHN_support_seoul min = 0 max = 100 }
+					TFRKPHN_hong_update_support_display = yes
+				}
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_hong_arms_gyeonggi = {
+		icon = GFX_decision_icon_KOR_arms_factory_icon
+		cost = 30
+		days_remove = 14
+		fire_only_once = yes
+		priority = 90
+		visible = {
+			tag = KOR
+			NOT = { has_country_flag = TFRKPHN_arms_done }
+			has_completed_focus = TFRKPHN_hong_b01_02
+			check_variable = { TFRKPHN_select_region_var = 2 }
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = TFRKPHN_arms_once_tt
+				NOT = { has_country_flag = TFRKPHN_arms_chosen }
+			}
+			owns_state = 1041
+			controls_state = 1041
+		}
+		highlight_states = {
+			highlight_state_targets = { state = 1041 }
+		}
+		complete_effect = {
+			set_country_flag = TFRKPHN_arms_chosen
+			custom_effect_tooltip = TFRKPHN_after_14_tt
+			custom_effect_tooltip = TFRKPHN_hong_arms_factory_tt
+			custom_effect_tooltip = TFRKPHN_hong_arms_gyeonggi_tt
+		}
+		remove_effect = {
+			set_country_flag = TFRKPHN_arms_done
+			hidden_effect = {
+				if = {
+					limit = { controls_state = 1041 }
+					1041 = {
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+					}
+				}
+				hidden_effect = {
+					add_to_variable = { TFRKPHN_support_gyeonggi = 5 }
+					clamp_variable = { var = TFRKPHN_support_gyeonggi min = 0 max = 100 }
+					TFRKPHN_hong_update_support_display = yes
+				}
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_hong_arms_gangwon = {
+		icon = GFX_decision_icon_KOR_arms_factory_icon
+		cost = 30
+		days_remove = 14
+		fire_only_once = yes
+		priority = 90
+		visible = {
+			tag = KOR
+			NOT = { has_country_flag = TFRKPHN_arms_done }
+			has_completed_focus = TFRKPHN_hong_b01_02
+			check_variable = { TFRKPHN_select_region_var = 3 }
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = TFRKPHN_arms_once_tt
+				NOT = { has_country_flag = TFRKPHN_arms_chosen }
+			}
+			owns_state = 871
+			controls_state = 871
+		}
+		highlight_states = {
+			highlight_state_targets = { state = 871 }
+		}
+		complete_effect = {
+			set_country_flag = TFRKPHN_arms_chosen
+			custom_effect_tooltip = TFRKPHN_after_14_tt
+			custom_effect_tooltip = TFRKPHN_hong_arms_factory_tt
+			custom_effect_tooltip = TFRKPHN_hong_arms_gangwon_tt
+		}
+		remove_effect = {
+			set_country_flag = TFRKPHN_arms_done
+			hidden_effect = {
+				if = {
+					limit = { controls_state = 871 }
+					871 = {
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+					}
+				}
+				hidden_effect = {
+					add_to_variable = { TFRKPHN_support_gangwon = 5 }
+					clamp_variable = { var = TFRKPHN_support_gangwon min = 0 max = 100 }
+					TFRKPHN_hong_update_support_display = yes
+				}
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_hong_arms_chungcheong = {
+		icon = GFX_decision_icon_KOR_arms_factory_icon
+		cost = 30
+		days_remove = 14
+		fire_only_once = yes
+		priority = 90
+		visible = {
+			tag = KOR
+			NOT = { has_country_flag = TFRKPHN_arms_done }
+			has_completed_focus = TFRKPHN_hong_b01_02
+			check_variable = { TFRKPHN_select_region_var = 4 }
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = TFRKPHN_arms_once_tt
+				NOT = { has_country_flag = TFRKPHN_arms_chosen }
+			}
+			owns_state = 525
+			controls_state = 525
+		}
+		highlight_states = {
+			highlight_state_targets = { state = 525 }
+		}
+		complete_effect = {
+			set_country_flag = TFRKPHN_arms_chosen
+			custom_effect_tooltip = TFRKPHN_after_14_tt
+			custom_effect_tooltip = TFRKPHN_hong_arms_factory_tt
+			custom_effect_tooltip = TFRKPHN_hong_arms_chungcheong_tt
+		}
+		remove_effect = {
+			set_country_flag = TFRKPHN_arms_done
+			hidden_effect = {
+				if = {
+					limit = { controls_state = 525 }
+					525 = {
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+					}
+				}
+				hidden_effect = {
+					add_to_variable = { TFRKPHN_support_chungcheong = 5 }
+					clamp_variable = { var = TFRKPHN_support_chungcheong min = 0 max = 100 }
+					TFRKPHN_hong_update_support_display = yes
+				}
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_hong_arms_jeonbuk = {
+		icon = GFX_decision_icon_KOR_arms_factory_icon
+		cost = 30
+		days_remove = 14
+		fire_only_once = yes
+		priority = 90
+		visible = {
+			tag = KOR
+			NOT = { has_country_flag = TFRKPHN_arms_done }
+			has_completed_focus = TFRKPHN_hong_b01_02
+			check_variable = { TFRKPHN_select_region_var = 5 }
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = TFRKPHN_arms_once_tt
+				NOT = { has_country_flag = TFRKPHN_arms_chosen }
+			}
+			owns_state = 869
+			controls_state = 869
+		}
+		highlight_states = {
+			highlight_state_targets = { state = 869 }
+		}
+		complete_effect = {
+			set_country_flag = TFRKPHN_arms_chosen
+			custom_effect_tooltip = TFRKPHN_after_14_tt
+			custom_effect_tooltip = TFRKPHN_hong_arms_factory_tt
+			custom_effect_tooltip = TFRKPHN_hong_arms_jeonbuk_tt
+		}
+		remove_effect = {
+			set_country_flag = TFRKPHN_arms_done
+			hidden_effect = {
+				if = {
+					limit = { controls_state = 869 }
+					869 = {
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+					}
+				}
+				hidden_effect = {
+					add_to_variable = { TFRKPHN_support_jeonbuk = 5 }
+					clamp_variable = { var = TFRKPHN_support_jeonbuk min = 0 max = 100 }
+					TFRKPHN_hong_update_support_display = yes
+				}
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_hong_arms_jeonnam = {
+		icon = GFX_decision_icon_KOR_arms_factory_icon
+		cost = 30
+		days_remove = 14
+		fire_only_once = yes
+		priority = 90
+		visible = {
+			tag = KOR
+			NOT = { has_country_flag = TFRKPHN_arms_done }
+			has_completed_focus = TFRKPHN_hong_b01_02
+			check_variable = { TFRKPHN_select_region_var = 6 }
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = TFRKPHN_arms_once_tt
+				NOT = { has_country_flag = TFRKPHN_arms_chosen }
+			}
+			owns_state = 869
+			controls_state = 869
+		}
+		highlight_states = {
+			highlight_state_targets = { state = 869 }
+		}
+		complete_effect = {
+			set_country_flag = TFRKPHN_arms_chosen
+			custom_effect_tooltip = TFRKPHN_after_14_tt
+			custom_effect_tooltip = TFRKPHN_hong_arms_factory_tt
+			custom_effect_tooltip = TFRKPHN_hong_arms_jeonnam_tt
+		}
+		remove_effect = {
+			set_country_flag = TFRKPHN_arms_done
+			hidden_effect = {
+				if = {
+					limit = { controls_state = 869 }
+					869 = {
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+					}
+				}
+				hidden_effect = {
+					add_to_variable = { TFRKPHN_support_jeonnam = 5 }
+					clamp_variable = { var = TFRKPHN_support_jeonnam min = 0 max = 100 }
+					TFRKPHN_hong_update_support_display = yes
+				}
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_hong_arms_gyeongbuk = {
+		icon = GFX_decision_icon_KOR_arms_factory_icon
+		cost = 30
+		days_remove = 14
+		fire_only_once = yes
+		priority = 90
+		visible = {
+			tag = KOR
+			NOT = { has_country_flag = TFRKPHN_arms_done }
+			has_completed_focus = TFRKPHN_hong_b01_02
+			check_variable = { TFRKPHN_select_region_var = 7 }
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = TFRKPHN_arms_once_tt
+				NOT = { has_country_flag = TFRKPHN_arms_chosen }
+			}
+			owns_state = 870
+			controls_state = 870
+		}
+		highlight_states = {
+			highlight_state_targets = { state = 870 }
+		}
+		complete_effect = {
+			set_country_flag = TFRKPHN_arms_chosen
+			custom_effect_tooltip = TFRKPHN_after_14_tt
+			custom_effect_tooltip = TFRKPHN_hong_arms_factory_tt
+			custom_effect_tooltip = TFRKPHN_hong_arms_gyeongbuk_tt
+		}
+		remove_effect = {
+			set_country_flag = TFRKPHN_arms_done
+			hidden_effect = {
+				if = {
+					limit = { controls_state = 870 }
+					870 = {
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+					}
+				}
+				hidden_effect = {
+					add_to_variable = { TFRKPHN_support_gyeongbuk = 5 }
+					clamp_variable = { var = TFRKPHN_support_gyeongbuk min = 0 max = 100 }
+					TFRKPHN_hong_update_support_display = yes
+				}
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_hong_arms_gyeongnam = {
+		icon = GFX_decision_icon_KOR_arms_factory_icon
+		cost = 30
+		days_remove = 14
+		fire_only_once = yes
+		priority = 90
+		visible = {
+			tag = KOR
+			NOT = { has_country_flag = TFRKPHN_arms_done }
+			has_completed_focus = TFRKPHN_hong_b01_02
+			check_variable = { TFRKPHN_select_region_var = 8 }
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = TFRKPHN_arms_once_tt
+				NOT = { has_country_flag = TFRKPHN_arms_chosen }
+			}
+			owns_state = 1412
+			controls_state = 1412
+		}
+		highlight_states = {
+			highlight_state_targets = { state = 1412 }
+		}
+		complete_effect = {
+			set_country_flag = TFRKPHN_arms_chosen
+			custom_effect_tooltip = TFRKPHN_after_14_tt
+			custom_effect_tooltip = TFRKPHN_hong_arms_factory_tt
+			custom_effect_tooltip = TFRKPHN_hong_arms_gyeongnam_tt
+		}
+		remove_effect = {
+			set_country_flag = TFRKPHN_arms_done
+			hidden_effect = {
+				if = {
+					limit = { controls_state = 1412 }
+					1412 = {
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+					}
+				}
+				hidden_effect = {
+					add_to_variable = { TFRKPHN_support_gyeongnam = 5 }
+					clamp_variable = { var = TFRKPHN_support_gyeongnam min = 0 max = 100 }
+					TFRKPHN_hong_update_support_display = yes
+				}
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+}

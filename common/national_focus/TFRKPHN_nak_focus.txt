@@ -1,0 +1,188 @@
+focus_tree = {
+	id = TFRKPHN_nak_tree
+
+	country = {
+		factor = 0
+	}
+	default = no
+
+	continuous_focus_position = { x = 50 y = 1170 }
+
+	focus = {
+		id = TFRKPHN_nak_b01_01
+		icon = GFX_goal_generic_political_pressure
+		x = 3
+		y = 0
+		cost = 5
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TFRKPHN_nak_b01_02
+		icon = GFX_goal_generic_political_pressure
+		x = 3
+		y = 1
+		cost = 4
+		prerequisite = { focus = TFRKPHN_nak_b01_01 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TFRKPHN_nak_b01_03
+		icon = GFX_goal_generic_political_pressure
+		x = 1
+		y = 2
+		cost = 3
+		prerequisite = { focus = TFRKPHN_nak_b01_02 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TFRKPHN_nak_b01_04
+		icon = GFX_goal_generic_political_pressure
+		x = 3
+		y = 2
+		cost = 2
+		prerequisite = { focus = TFRKPHN_nak_b01_02 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TFRKPHN_nak_b01_05
+		icon = GFX_goal_generic_political_pressure
+		x = 5
+		y = 2
+		cost = 3
+		prerequisite = { focus = TFRKPHN_nak_b01_02 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TFRKPHN_nak_b01_06
+		icon = GFX_goal_generic_political_pressure
+		x = 0
+		y = 3
+		cost = 3
+		prerequisite = { focus = TFRKPHN_nak_b01_03 }
+		prerequisite = { focus = TFRKPHN_nak_b01_04 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TFRKPHN_nak_b01_07
+		icon = GFX_goal_generic_political_pressure
+		x = 2
+		y = 3
+		cost = 3
+		prerequisite = { focus = TFRKPHN_nak_b01_03 }
+		prerequisite = { focus = TFRKPHN_nak_b01_04 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TFRKPHN_nak_b01_08
+		icon = GFX_goal_generic_political_pressure
+		x = 4
+		y = 3
+		cost = 3
+		prerequisite = { focus = TFRKPHN_nak_b01_05 }
+		prerequisite = { focus = TFRKPHN_nak_b01_04 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TFRKPHN_nak_b01_09
+		icon = GFX_goal_generic_political_pressure
+		x = 6
+		y = 3
+		cost = 3
+		prerequisite = { focus = TFRKPHN_nak_b01_05 }
+		prerequisite = { focus = TFRKPHN_nak_b01_04 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TFRKPHN_nak_b01_10
+		icon = GFX_goal_generic_political_pressure
+		x = 3
+		y = 4
+		cost = 14.3
+		prerequisite = { focus = TFRKPHN_nak_b01_09 }
+		prerequisite = { focus = TFRKPHN_nak_b01_08 }
+		prerequisite = { focus = TFRKPHN_nak_b01_04 }
+		prerequisite = { focus = TFRKPHN_nak_b01_07 }
+		prerequisite = { focus = TFRKPHN_nak_b01_06 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TFRKPHN_nak_b01_11
+		icon = GFX_goal_generic_political_pressure
+		x = 1
+		y = 5
+		cost = 14.3
+		prerequisite = { focus = TFRKPHN_nak_b01_10 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TFRKPHN_nak_b01_12
+		icon = GFX_goal_generic_political_pressure
+		x = 5
+		y = 5
+		cost = 14.3
+		prerequisite = { focus = TFRKPHN_nak_b01_10 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TFRKPHN_nak_b01_13
+		icon = GFX_goal_generic_political_pressure
+		x = 3
+		y = 6
+		cost = 14.3
+		prerequisite = { focus = TFRKPHN_nak_b01_11 }
+		prerequisite = { focus = TFRKPHN_nak_b01_12 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+}

@@ -1,0 +1,45 @@
+add_namespace = tfrkphn
+
+country_event = {
+	id = tfrkphn.181
+	title = korea.81.t
+	desc = korea.81.desc
+	picture = GFX_TFRKPHN_hong_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		NOT = { has_global_flag = TFRKPHN_k81_shown }
+	}
+
+	immediate = {
+		log = "TFRKPHN_DIAG tfrkphn.181 shown"
+		set_global_flag = TFRKPHN_k81_shown
+	}
+
+	option = {
+		name = korea.81.a
+	}
+}
+
+country_event = {
+	id = tfrkphn.182
+	title = korea.81.t
+	desc = korea.81.desc
+	picture = GFX_report_event_kor_election_1
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		NOT = { has_global_flag = TFRKPHN_k81_shown }
+	}
+
+	immediate = {
+		log = "TFRKPHN_DIAG tfrkphn.182 shown"
+		set_global_flag = TFRKPHN_k81_shown
+	}
+
+	option = {
+		name = korea.81.a
+	}
+}

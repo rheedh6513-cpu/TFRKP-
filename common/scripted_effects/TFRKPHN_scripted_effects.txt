@@ -1,0 +1,870 @@
+TFRKPHN_hourglass_init = {
+	if = {
+		limit = { NOT = { has_country_flag = TFRKPHN_hourglass_init } }
+		set_country_flag = TFRKPHN_hourglass_init
+		set_variable = { TFRKPHN_hourglass_step = 0 }
+		set_variable = { TFRKPHN_hourglass_frame = 1 }
+	}
+}
+
+TFRKPHN_hourglass_advance = {
+	TFRKPHN_hourglass_init = yes
+	add_to_variable = { TFRKPHN_hourglass_step = 1 }
+	set_variable = { TFRKPHN_hourglass_frame = TFRKPHN_hourglass_step }
+	add_to_variable = { TFRKPHN_hourglass_frame = 1 }
+}
+
+# 홍준표 대통령 시작 처리 (tfrkphn.10 과 안전장치 tfrkphn.12 가 함께 사용한다)
+TFRKPHN_hong_start_effect = {
+	if = {
+		limit = { NOT = { has_character = KOR_hong_joon_pyo_char } }
+		recruit_character = KOR_hong_joon_pyo_char
+	}
+	if = {
+		limit = { has_character = KOR_hong_joon_pyo_char }
+		KOR_hong_joon_pyo_char = { promote_character = judicial_conservatism }
+	}
+	set_country_flag = TFRKP_HN_hong_president
+	# 당선 뒤 2주마다 차례로 뜨는 사건 (예전에는 중점 보상이었다)
+	if = {
+		limit = { NOT = { has_country_flag = TFRKPHN_hong_auto_events_sent } }
+		set_country_flag = TFRKPHN_hong_auto_events_sent
+		country_event = { id = tfrkphn.21 days = 14 }
+		country_event = { id = tfrkphn.22 days = 28 }
+		country_event = { id = tfrkphn.23 days = 42 }
+		country_event = { id = tfrkphn.24 days = 56 }
+		country_event = { id = tfrkphn.313 days = 70 }
+		country_event = { id = tfrkphn.314 days = 105 }
+		country_event = { id = tfrkphn.315 days = 140 }
+	}
+	# 제20대 대선에서 이낙연을 이긴 경우: 3일 뒤 정의당 당사 사건 '늘 그래 왔으니까'
+	if = {
+		limit = {
+			has_country_flag = TFRKP_HN_DPK_lee_nakyeon
+			NOT = { has_global_flag = TFRKPHN_justice_hq_fired }
+		}
+		set_global_flag = TFRKPHN_justice_hq_fired
+		country_event = { id = tfrkphn.307 days = 3 }
+	}
+	TFRKPHN_hourglass_init = yes
+	# 이미 홍준표 트리가 적용되어 있으면 다시 불러오지 않는다 (진행한 중점을 지우지 않기 위해)
+	if = {
+		limit = { NOT = { has_focus_tree = TFRKPHN_hong_tree } }
+		load_focus_tree = { tree = TFRKPHN_hong_tree keep_completed = no }
+	}
+	mark_focus_tree_layout_dirty = yes
+	# 지역별 지지도 시작값: 전국 평균 약 62% (취임 직후). 막말 구설수와 무작위 하락으로 40%대까지 떨어지고, 승전하면 오른다
+	set_variable = { TFRKPHN_support_seoul = 64 }
+	set_variable = { TFRKPHN_support_gyeonggi = 60 }
+	set_variable = { TFRKPHN_support_gangwon = 68 }
+	set_variable = { TFRKPHN_support_chungcheong = 65 }
+	set_variable = { TFRKPHN_support_jeonbuk = 28 }
+	set_variable = { TFRKPHN_support_jeonnam = 26 }
+	set_variable = { TFRKPHN_support_gyeongbuk = 87 }
+	set_variable = { TFRKPHN_support_gyeongnam = 72 }
+	set_variable = { TFRKPHN_support_jeju = 56 }
+	set_variable = { TFRKPHN_select_region_var = 0 }
+	TFRKPHN_hong_update_support_display = yes
+	# 2주마다 무작위 지역 지지도 하락 시작
+	country_event = { id = tfrkphn.100 days = 14 }
+}
+
+TFRKPHN_hong_update_support_display = {
+	# seoul
+	set_variable = { TFRKPHN_dpk_seoul = 100 }
+	subtract_from_variable = { TFRKPHN_dpk_seoul = TFRKPHN_support_seoul }
+	if = { limit = { check_variable = { TFRKPHN_support_seoul < 30 } } set_variable = { TFRKPHN_mapframe_seoul = 1 } }
+	else_if = { limit = { check_variable = { TFRKPHN_support_seoul < 40 } } set_variable = { TFRKPHN_mapframe_seoul = 2 } }
+	else_if = { limit = { check_variable = { TFRKPHN_support_seoul < 50 } } set_variable = { TFRKPHN_mapframe_seoul = 3 } }
+	else_if = { limit = { check_variable = { TFRKPHN_support_seoul < 60 } } set_variable = { TFRKPHN_mapframe_seoul = 4 } }
+	else_if = { limit = { check_variable = { TFRKPHN_support_seoul < 70 } } set_variable = { TFRKPHN_mapframe_seoul = 5 } }
+	else = { set_variable = { TFRKPHN_mapframe_seoul = 6 } }
+	set_variable = { TFRKPHN_barframe_seoul = TFRKPHN_support_seoul }
+	divide_variable = { TFRKPHN_barframe_seoul = 5 }
+	round_variable = TFRKPHN_barframe_seoul
+	add_to_variable = { TFRKPHN_barframe_seoul = 1 }
+	# gyeonggi
+	set_variable = { TFRKPHN_dpk_gyeonggi = 100 }
+	subtract_from_variable = { TFRKPHN_dpk_gyeonggi = TFRKPHN_support_gyeonggi }
+	if = { limit = { check_variable = { TFRKPHN_support_gyeonggi < 30 } } set_variable = { TFRKPHN_mapframe_gyeonggi = 1 } }
+	else_if = { limit = { check_variable = { TFRKPHN_support_gyeonggi < 40 } } set_variable = { TFRKPHN_mapframe_gyeonggi = 2 } }
+	else_if = { limit = { check_variable = { TFRKPHN_support_gyeonggi < 50 } } set_variable = { TFRKPHN_mapframe_gyeonggi = 3 } }
+	else_if = { limit = { check_variable = { TFRKPHN_support_gyeonggi < 60 } } set_variable = { TFRKPHN_mapframe_gyeonggi = 4 } }
+	else_if = { limit = { check_variable = { TFRKPHN_support_gyeonggi < 70 } } set_variable = { TFRKPHN_mapframe_gyeonggi = 5 } }
+	else = { set_variable = { TFRKPHN_mapframe_gyeonggi = 6 } }
+	set_variable = { TFRKPHN_barframe_gyeonggi = TFRKPHN_support_gyeonggi }
+	divide_variable = { TFRKPHN_barframe_gyeonggi = 5 }
+	round_variable = TFRKPHN_barframe_gyeonggi
+	add_to_variable = { TFRKPHN_barframe_gyeonggi = 1 }
+	# gangwon
+	set_variable = { TFRKPHN_dpk_gangwon = 100 }
+	subtract_from_variable = { TFRKPHN_dpk_gangwon = TFRKPHN_support_gangwon }
+	if = { limit = { check_variable = { TFRKPHN_support_gangwon < 30 } } set_variable = { TFRKPHN_mapframe_gangwon = 1 } }
+	else_if = { limit = { check_variable = { TFRKPHN_support_gangwon < 40 } } set_variable = { TFRKPHN_mapframe_gangwon = 2 } }
+	else_if = { limit = { check_variable = { TFRKPHN_support_gangwon < 50 } } set_variable = { TFRKPHN_mapframe_gangwon = 3 } }
+	else_if = { limit = { check_variable = { TFRKPHN_support_gangwon < 60 } } set_variable = { TFRKPHN_mapframe_gangwon = 4 } }
+	else_if = { limit = { check_variable = { TFRKPHN_support_gangwon < 70 } } set_variable = { TFRKPHN_mapframe_gangwon = 5 } }
+	else = { set_variable = { TFRKPHN_mapframe_gangwon = 6 } }
+	set_variable = { TFRKPHN_barframe_gangwon = TFRKPHN_support_gangwon }
+	divide_variable = { TFRKPHN_barframe_gangwon = 5 }
+	round_variable = TFRKPHN_barframe_gangwon
+	add_to_variable = { TFRKPHN_barframe_gangwon = 1 }
+	# chungcheong
+	set_variable = { TFRKPHN_dpk_chungcheong = 100 }
+	subtract_from_variable = { TFRKPHN_dpk_chungcheong = TFRKPHN_support_chungcheong }
+	if = { limit = { check_variable = { TFRKPHN_support_chungcheong < 30 } } set_variable = { TFRKPHN_mapframe_chungcheong = 1 } }
+	else_if = { limit = { check_variable = { TFRKPHN_support_chungcheong < 40 } } set_variable = { TFRKPHN_mapframe_chungcheong = 2 } }
+	else_if = { limit = { check_variable = { TFRKPHN_support_chungcheong < 50 } } set_variable = { TFRKPHN_mapframe_chungcheong = 3 } }
+	else_if = { limit = { check_variable = { TFRKPHN_support_chungcheong < 60 } } set_variable = { TFRKPHN_mapframe_chungcheong = 4 } }
+	else_if = { limit = { check_variable = { TFRKPHN_support_chungcheong < 70 } } set_variable = { TFRKPHN_mapframe_chungcheong = 5 } }
+	else = { set_variable = { TFRKPHN_mapframe_chungcheong = 6 } }
+	set_variable = { TFRKPHN_barframe_chungcheong = TFRKPHN_support_chungcheong }
+	divide_variable = { TFRKPHN_barframe_chungcheong = 5 }
+	round_variable = TFRKPHN_barframe_chungcheong
+	add_to_variable = { TFRKPHN_barframe_chungcheong = 1 }
+	# jeonbuk
+	set_variable = { TFRKPHN_dpk_jeonbuk = 100 }
+	subtract_from_variable = { TFRKPHN_dpk_jeonbuk = TFRKPHN_support_jeonbuk }
+	if = { limit = { check_variable = { TFRKPHN_support_jeonbuk < 30 } } set_variable = { TFRKPHN_mapframe_jeonbuk = 1 } }
+	else_if = { limit = { check_variable = { TFRKPHN_support_jeonbuk < 40 } } set_variable = { TFRKPHN_mapframe_jeonbuk = 2 } }
+	else_if = { limit = { check_variable = { TFRKPHN_support_jeonbuk < 50 } } set_variable = { TFRKPHN_mapframe_jeonbuk = 3 } }
+	else_if = { limit = { check_variable = { TFRKPHN_support_jeonbuk < 60 } } set_variable = { TFRKPHN_mapframe_jeonbuk = 4 } }
+	else_if = { limit = { check_variable = { TFRKPHN_support_jeonbuk < 70 } } set_variable = { TFRKPHN_mapframe_jeonbuk = 5 } }
+	else = { set_variable = { TFRKPHN_mapframe_jeonbuk = 6 } }
+	set_variable = { TFRKPHN_barframe_jeonbuk = TFRKPHN_support_jeonbuk }
+	divide_variable = { TFRKPHN_barframe_jeonbuk = 5 }
+	round_variable = TFRKPHN_barframe_jeonbuk
+	add_to_variable = { TFRKPHN_barframe_jeonbuk = 1 }
+	# jeonnam
+	set_variable = { TFRKPHN_dpk_jeonnam = 100 }
+	subtract_from_variable = { TFRKPHN_dpk_jeonnam = TFRKPHN_support_jeonnam }
+	if = { limit = { check_variable = { TFRKPHN_support_jeonnam < 30 } } set_variable = { TFRKPHN_mapframe_jeonnam = 1 } }
+	else_if = { limit = { check_variable = { TFRKPHN_support_jeonnam < 40 } } set_variable = { TFRKPHN_mapframe_jeonnam = 2 } }
+	else_if = { limit = { check_variable = { TFRKPHN_support_jeonnam < 50 } } set_variable = { TFRKPHN_mapframe_jeonnam = 3 } }
+	else_if = { limit = { check_variable = { TFRKPHN_support_jeonnam < 60 } } set_variable = { TFRKPHN_mapframe_jeonnam = 4 } }
+	else_if = { limit = { check_variable = { TFRKPHN_support_jeonnam < 70 } } set_variable = { TFRKPHN_mapframe_jeonnam = 5 } }
+	else = { set_variable = { TFRKPHN_mapframe_jeonnam = 6 } }
+	set_variable = { TFRKPHN_barframe_jeonnam = TFRKPHN_support_jeonnam }
+	divide_variable = { TFRKPHN_barframe_jeonnam = 5 }
+	round_variable = TFRKPHN_barframe_jeonnam
+	add_to_variable = { TFRKPHN_barframe_jeonnam = 1 }
+	# gyeongbuk
+	set_variable = { TFRKPHN_dpk_gyeongbuk = 100 }
+	subtract_from_variable = { TFRKPHN_dpk_gyeongbuk = TFRKPHN_support_gyeongbuk }
+	if = { limit = { check_variable = { TFRKPHN_support_gyeongbuk < 30 } } set_variable = { TFRKPHN_mapframe_gyeongbuk = 1 } }
+	else_if = { limit = { check_variable = { TFRKPHN_support_gyeongbuk < 40 } } set_variable = { TFRKPHN_mapframe_gyeongbuk = 2 } }
+	else_if = { limit = { check_variable = { TFRKPHN_support_gyeongbuk < 50 } } set_variable = { TFRKPHN_mapframe_gyeongbuk = 3 } }
+	else_if = { limit = { check_variable = { TFRKPHN_support_gyeongbuk < 60 } } set_variable = { TFRKPHN_mapframe_gyeongbuk = 4 } }
+	else_if = { limit = { check_variable = { TFRKPHN_support_gyeongbuk < 70 } } set_variable = { TFRKPHN_mapframe_gyeongbuk = 5 } }
+	else = { set_variable = { TFRKPHN_mapframe_gyeongbuk = 6 } }
+	set_variable = { TFRKPHN_barframe_gyeongbuk = TFRKPHN_support_gyeongbuk }
+	divide_variable = { TFRKPHN_barframe_gyeongbuk = 5 }
+	round_variable = TFRKPHN_barframe_gyeongbuk
+	add_to_variable = { TFRKPHN_barframe_gyeongbuk = 1 }
+	# gyeongnam
+	set_variable = { TFRKPHN_dpk_gyeongnam = 100 }
+	subtract_from_variable = { TFRKPHN_dpk_gyeongnam = TFRKPHN_support_gyeongnam }
+	if = { limit = { check_variable = { TFRKPHN_support_gyeongnam < 30 } } set_variable = { TFRKPHN_mapframe_gyeongnam = 1 } }
+	else_if = { limit = { check_variable = { TFRKPHN_support_gyeongnam < 40 } } set_variable = { TFRKPHN_mapframe_gyeongnam = 2 } }
+	else_if = { limit = { check_variable = { TFRKPHN_support_gyeongnam < 50 } } set_variable = { TFRKPHN_mapframe_gyeongnam = 3 } }
+	else_if = { limit = { check_variable = { TFRKPHN_support_gyeongnam < 60 } } set_variable = { TFRKPHN_mapframe_gyeongnam = 4 } }
+	else_if = { limit = { check_variable = { TFRKPHN_support_gyeongnam < 70 } } set_variable = { TFRKPHN_mapframe_gyeongnam = 5 } }
+	else = { set_variable = { TFRKPHN_mapframe_gyeongnam = 6 } }
+	set_variable = { TFRKPHN_barframe_gyeongnam = TFRKPHN_support_gyeongnam }
+	divide_variable = { TFRKPHN_barframe_gyeongnam = 5 }
+	round_variable = TFRKPHN_barframe_gyeongnam
+	add_to_variable = { TFRKPHN_barframe_gyeongnam = 1 }
+	# jeju
+	set_variable = { TFRKPHN_dpk_jeju = 100 }
+	subtract_from_variable = { TFRKPHN_dpk_jeju = TFRKPHN_support_jeju }
+	if = { limit = { check_variable = { TFRKPHN_support_jeju < 30 } } set_variable = { TFRKPHN_mapframe_jeju = 1 } }
+	else_if = { limit = { check_variable = { TFRKPHN_support_jeju < 40 } } set_variable = { TFRKPHN_mapframe_jeju = 2 } }
+	else_if = { limit = { check_variable = { TFRKPHN_support_jeju < 50 } } set_variable = { TFRKPHN_mapframe_jeju = 3 } }
+	else_if = { limit = { check_variable = { TFRKPHN_support_jeju < 60 } } set_variable = { TFRKPHN_mapframe_jeju = 4 } }
+	else_if = { limit = { check_variable = { TFRKPHN_support_jeju < 70 } } set_variable = { TFRKPHN_mapframe_jeju = 5 } }
+	else = { set_variable = { TFRKPHN_mapframe_jeju = 6 } }
+	set_variable = { TFRKPHN_barframe_jeju = TFRKPHN_support_jeju }
+	divide_variable = { TFRKPHN_barframe_jeju = 5 }
+	round_variable = TFRKPHN_barframe_jeju
+	add_to_variable = { TFRKPHN_barframe_jeju = 1 }
+	# 전국 평균 지지도 (지역 인구 비중으로 가중: 1000분율 기준)
+	set_variable = { TFRKPHN_support_avg = 0 }
+	set_temp_variable = { TFRKPHN_avg_part = TFRKPHN_support_seoul }
+	multiply_temp_variable = { TFRKPHN_avg_part = 187 }
+	divide_temp_variable = { TFRKPHN_avg_part = 1000 }
+	add_to_variable = { TFRKPHN_support_avg = TFRKPHN_avg_part }
+	set_temp_variable = { TFRKPHN_avg_part = TFRKPHN_support_gyeonggi }
+	multiply_temp_variable = { TFRKPHN_avg_part = 318 }
+	divide_temp_variable = { TFRKPHN_avg_part = 1000 }
+	add_to_variable = { TFRKPHN_support_avg = TFRKPHN_avg_part }
+	set_temp_variable = { TFRKPHN_avg_part = TFRKPHN_support_gangwon }
+	multiply_temp_variable = { TFRKPHN_avg_part = 30 }
+	divide_temp_variable = { TFRKPHN_avg_part = 1000 }
+	add_to_variable = { TFRKPHN_support_avg = TFRKPHN_avg_part }
+	set_temp_variable = { TFRKPHN_avg_part = TFRKPHN_support_chungcheong }
+	multiply_temp_variable = { TFRKPHN_avg_part = 107 }
+	divide_temp_variable = { TFRKPHN_avg_part = 1000 }
+	add_to_variable = { TFRKPHN_support_avg = TFRKPHN_avg_part }
+	set_temp_variable = { TFRKPHN_avg_part = TFRKPHN_support_jeonbuk }
+	multiply_temp_variable = { TFRKPHN_avg_part = 35 }
+	divide_temp_variable = { TFRKPHN_avg_part = 1000 }
+	add_to_variable = { TFRKPHN_support_avg = TFRKPHN_avg_part }
+	set_temp_variable = { TFRKPHN_avg_part = TFRKPHN_support_jeonnam }
+	multiply_temp_variable = { TFRKPHN_avg_part = 63 }
+	divide_temp_variable = { TFRKPHN_avg_part = 1000 }
+	add_to_variable = { TFRKPHN_support_avg = TFRKPHN_avg_part }
+	set_temp_variable = { TFRKPHN_avg_part = TFRKPHN_support_gyeongbuk }
+	multiply_temp_variable = { TFRKPHN_avg_part = 97 }
+	divide_temp_variable = { TFRKPHN_avg_part = 1000 }
+	add_to_variable = { TFRKPHN_support_avg = TFRKPHN_avg_part }
+	set_temp_variable = { TFRKPHN_avg_part = TFRKPHN_support_gyeongnam }
+	multiply_temp_variable = { TFRKPHN_avg_part = 150 }
+	divide_temp_variable = { TFRKPHN_avg_part = 1000 }
+	add_to_variable = { TFRKPHN_support_avg = TFRKPHN_avg_part }
+	set_temp_variable = { TFRKPHN_avg_part = TFRKPHN_support_jeju }
+	multiply_temp_variable = { TFRKPHN_avg_part = 13 }
+	divide_temp_variable = { TFRKPHN_avg_part = 1000 }
+	add_to_variable = { TFRKPHN_support_avg = TFRKPHN_avg_part }
+	set_variable = { TFRKPHN_dpk_avg = 100 }
+	subtract_from_variable = { TFRKPHN_dpk_avg = TFRKPHN_support_avg }
+}
+
+# ===== 개헌 논의 =====
+TFRKPHN_amend_start = {
+	set_country_flag = TFRKPHN_amend_active
+	set_country_flag = TFRKPHN_amend_ongoing
+	set_variable = { TFRKPHN_amend_yes = 147 }
+	set_variable = { TFRKPHN_amend_days = 300 }
+	set_variable = { TFRKPHN_amend_pp_drain = 0 }
+	set_variable = { TFRKPHN_amend_comp = 0 }
+	set_variable = { TFRKPHN_const_done = 0 }
+	TFRKPHN_amend_calc_eff = yes
+	add_dynamic_modifier = { modifier = TFRKPHN_amend_cost_mod }
+	TFRKPHN_amend_refresh = yes
+	activate_mission = TFRKPHN_amend_deadline
+	activate_mission = TFRKPHN_amend_opposition_moves
+}
+
+# 임시 변수 TFRKPHN_amend_delta 만큼 찬성 의원 수를 바꾼다 (음수면 반대파로 이동)
+TFRKPHN_amend_add_yes = {
+	add_to_variable = { TFRKPHN_amend_yes = TFRKPHN_amend_delta }
+	clamp_variable = { var = TFRKPHN_amend_yes min = 0 max = 300 }
+	TFRKPHN_amend_refresh = yes
+}
+
+# 결정을 누를 때마다 매일 정치력 -0.05 누적
+TFRKPHN_amend_add_drain = {
+	subtract_from_variable = { TFRKPHN_amend_pp_drain = 0.05 }
+}
+
+TFRKPHN_amend_refresh = {
+	set_variable = { TFRKPHN_amend_no = 300 }
+	subtract_from_variable = { TFRKPHN_amend_no = TFRKPHN_amend_yes }
+	set_variable = { TFRKPHN_amend_f0 = TFRKPHN_amend_yes }
+	subtract_from_variable = { TFRKPHN_amend_f0 = 0 }
+	clamp_variable = { var = TFRKPHN_amend_f0 min = 0 max = 30 }
+	add_to_variable = { TFRKPHN_amend_f0 = 1 }
+	set_variable = { TFRKPHN_amend_f1 = TFRKPHN_amend_yes }
+	subtract_from_variable = { TFRKPHN_amend_f1 = 30 }
+	clamp_variable = { var = TFRKPHN_amend_f1 min = 0 max = 30 }
+	add_to_variable = { TFRKPHN_amend_f1 = 1 }
+	set_variable = { TFRKPHN_amend_f2 = TFRKPHN_amend_yes }
+	subtract_from_variable = { TFRKPHN_amend_f2 = 60 }
+	clamp_variable = { var = TFRKPHN_amend_f2 min = 0 max = 30 }
+	add_to_variable = { TFRKPHN_amend_f2 = 1 }
+	set_variable = { TFRKPHN_amend_f3 = TFRKPHN_amend_yes }
+	subtract_from_variable = { TFRKPHN_amend_f3 = 90 }
+	clamp_variable = { var = TFRKPHN_amend_f3 min = 0 max = 30 }
+	add_to_variable = { TFRKPHN_amend_f3 = 1 }
+	set_variable = { TFRKPHN_amend_f4 = TFRKPHN_amend_yes }
+	subtract_from_variable = { TFRKPHN_amend_f4 = 120 }
+	clamp_variable = { var = TFRKPHN_amend_f4 min = 0 max = 30 }
+	add_to_variable = { TFRKPHN_amend_f4 = 1 }
+	set_variable = { TFRKPHN_amend_f5 = TFRKPHN_amend_yes }
+	subtract_from_variable = { TFRKPHN_amend_f5 = 150 }
+	clamp_variable = { var = TFRKPHN_amend_f5 min = 0 max = 30 }
+	add_to_variable = { TFRKPHN_amend_f5 = 1 }
+	set_variable = { TFRKPHN_amend_f6 = TFRKPHN_amend_yes }
+	subtract_from_variable = { TFRKPHN_amend_f6 = 180 }
+	clamp_variable = { var = TFRKPHN_amend_f6 min = 0 max = 30 }
+	add_to_variable = { TFRKPHN_amend_f6 = 1 }
+	set_variable = { TFRKPHN_amend_f7 = TFRKPHN_amend_yes }
+	subtract_from_variable = { TFRKPHN_amend_f7 = 210 }
+	clamp_variable = { var = TFRKPHN_amend_f7 min = 0 max = 30 }
+	add_to_variable = { TFRKPHN_amend_f7 = 1 }
+	set_variable = { TFRKPHN_amend_f8 = TFRKPHN_amend_yes }
+	subtract_from_variable = { TFRKPHN_amend_f8 = 240 }
+	clamp_variable = { var = TFRKPHN_amend_f8 min = 0 max = 30 }
+	add_to_variable = { TFRKPHN_amend_f8 = 1 }
+	set_variable = { TFRKPHN_amend_f9 = TFRKPHN_amend_yes }
+	subtract_from_variable = { TFRKPHN_amend_f9 = 270 }
+	clamp_variable = { var = TFRKPHN_amend_f9 min = 0 max = 30 }
+	add_to_variable = { TFRKPHN_amend_f9 = 1 }
+	if = {
+		limit = {
+			has_country_flag = TFRKPHN_amend_ongoing
+			check_variable = { TFRKPHN_amend_yes > 199 }
+		}
+		clr_country_flag = TFRKPHN_amend_ongoing
+		set_country_flag = TFRKPHN_amend_passed
+		country_event = { id = tfrkphn.130 }
+		# 가결되면 60일 뒤에 개헌 논의 탭을 닫는다 (남은 기간을 60일로 맞춤)
+		set_variable = { TFRKPHN_amend_days = 60 }
+		remove_dynamic_modifier = { modifier = TFRKPHN_amend_cost_mod }
+		set_variable = { TFRKPHN_amend_pp_drain = 0 }
+	}
+	else_if = {
+		limit = {
+			has_country_flag = TFRKPHN_amend_ongoing
+			check_variable = { TFRKPHN_amend_yes < 101 }
+		}
+		clr_country_flag = TFRKPHN_amend_ongoing
+		set_country_flag = TFRKPHN_amend_rejected
+		country_event = { id = tfrkphn.131 }
+	}
+}
+
+# 300일이 지나면 결과와 상관없이 개헌 논의 탭을 닫는다
+TFRKPHN_amend_end = {
+	if = {
+		limit = { has_country_flag = TFRKPHN_amend_active }
+		if = {
+			limit = { has_country_flag = TFRKPHN_amend_ongoing }
+			clr_country_flag = TFRKPHN_amend_ongoing
+			set_country_flag = TFRKPHN_amend_rejected
+			country_event = { id = tfrkphn.131 }
+		}
+		clr_country_flag = TFRKPHN_amend_active
+		remove_dynamic_modifier = { modifier = TFRKPHN_amend_cost_mod }
+		set_variable = { TFRKPHN_amend_pp_drain = 0 }
+	}
+}
+
+# 타협(야당과 협력) 횟수로 개헌 결정의 효과 배율을 정한다: 1회당 -10%, 최소 30%
+TFRKPHN_amend_calc_eff = {
+	if = {
+		limit = { NOT = { has_variable = TFRKPHN_amend_comp } }
+		set_variable = { TFRKPHN_amend_comp = 0 }
+	}
+	set_variable = { TFRKPHN_amend_eff = TFRKPHN_amend_comp }
+	multiply_variable = { TFRKPHN_amend_eff = -0.1 }
+	add_to_variable = { TFRKPHN_amend_eff = 1 }
+	clamp_variable = { var = TFRKPHN_amend_eff min = 0.3 max = 1 }
+}
+
+# 개헌 결정 하나: 제7공화국을 1단계 대신 '효과 배율'만큼 강하게 한다
+TFRKPHN_7rep_add_scaled = {
+	TFRKPHN_amend_calc_eff = yes
+	if = {
+		limit = { NOT = { has_country_flag = TFRKPHN_7rep_on } }
+		set_country_flag = TFRKPHN_7rep_on
+		set_variable = { TFRKPHN_7rep_lv = 0 }
+		add_dynamic_modifier = { modifier = TFRKPHN_7th_republic }
+	}
+	add_to_variable = { TFRKPHN_7rep_lv = TFRKPHN_amend_eff }
+	clamp_variable = { var = TFRKPHN_7rep_lv min = 0 max = 10 }
+	set_variable = { TFRKPHN_7rep_stab = TFRKPHN_7rep_lv }
+	multiply_variable = { TFRKPHN_7rep_stab = 0.015 }
+	set_variable = { TFRKPHN_7rep_pp = TFRKPHN_7rep_lv }
+	multiply_variable = { TFRKPHN_7rep_pp = 0.05 }
+	set_variable = { TFRKPHN_7rep_aca = TFRKPHN_7rep_lv }
+	multiply_variable = { TFRKPHN_7rep_aca = 0.02 }
+	set_variable = { TFRKPHN_7rep_farm = TFRKPHN_7rep_lv }
+	multiply_variable = { TFRKPHN_7rep_farm = 0.01 }
+	set_variable = { TFRKPHN_7rep_war = TFRKPHN_7rep_lv }
+	multiply_variable = { TFRKPHN_7rep_war = 0.02 }
+	set_variable = { TFRKPHN_7rep_wstab = TFRKPHN_7rep_lv }
+	multiply_variable = { TFRKPHN_7rep_wstab = 0.0001 }
+	set_variable = { TFRKPHN_7rep_res = TFRKPHN_7rep_lv }
+	multiply_variable = { TFRKPHN_7rep_res = 0.02 }
+}
+
+# ===== 양원제: 상원 50석 (하원 의석 비율대로 배분) =====
+TFRKPHN_senate_setup = {
+	set_country_flag = TFRKPHN_bicameral
+	set_variable = { TFRKPHN_sen_DP = KOR_NatAsm_DP_seats }
+	multiply_variable = { TFRKPHN_sen_DP = 50 }
+	divide_variable = { TFRKPHN_sen_DP = 300 }
+	round_variable = TFRKPHN_sen_DP
+	set_variable = { TFRKPHN_sen_JP = KOR_NatAsm_JP_seats }
+	multiply_variable = { TFRKPHN_sen_JP = 50 }
+	divide_variable = { TFRKPHN_sen_JP = 300 }
+	round_variable = TFRKPHN_sen_JP
+	set_variable = { TFRKPHN_sen_PP = KOR_NatAsm_PP_seats }
+	multiply_variable = { TFRKPHN_sen_PP = 50 }
+	divide_variable = { TFRKPHN_sen_PP = 300 }
+	round_variable = TFRKPHN_sen_PP
+	set_variable = { TFRKPHN_sen_Ind = KOR_NatAsm_Ind_seats }
+	multiply_variable = { TFRKPHN_sen_Ind = 50 }
+	divide_variable = { TFRKPHN_sen_Ind = 300 }
+	round_variable = TFRKPHN_sen_Ind
+	set_variable = { TFRKPHN_sen_PPP = 50 }
+	subtract_from_variable = { TFRKPHN_sen_PPP = TFRKPHN_sen_DP }
+	subtract_from_variable = { TFRKPHN_sen_PPP = TFRKPHN_sen_JP }
+	subtract_from_variable = { TFRKPHN_sen_PPP = TFRKPHN_sen_PP }
+	subtract_from_variable = { TFRKPHN_sen_PPP = TFRKPHN_sen_Ind }
+	clamp_variable = { var = TFRKPHN_sen_PPP min = 0 max = 50 }
+	# 좌석 순서: 민주당(왼쪽) - 국민의힘 - 제3지대 - 무소속(오른쪽 끝)
+	set_variable = { TFRKPHN_sen_c1 = TFRKPHN_sen_DP }
+	set_variable = { TFRKPHN_sen_c2 = TFRKPHN_sen_c1 }
+	add_to_variable = { TFRKPHN_sen_c2 = TFRKPHN_sen_PPP }
+	set_variable = { TFRKPHN_sen_c3 = TFRKPHN_sen_c2 }
+	add_to_variable = { TFRKPHN_sen_c3 = TFRKPHN_sen_JP }
+	set_variable = { TFRKPHN_sen_c4 = TFRKPHN_sen_c3 }
+	add_to_variable = { TFRKPHN_sen_c4 = TFRKPHN_sen_PP }
+	if = { limit = { check_variable = { TFRKPHN_sen_c1 > 0 } } set_variable = { TFRKPHN_sen_s1 = 1 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c2 > 0 } } set_variable = { TFRKPHN_sen_s1 = 2 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c3 > 0 } } set_variable = { TFRKPHN_sen_s1 = 3 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c4 > 0 } } set_variable = { TFRKPHN_sen_s1 = 4 } }
+	else = { set_variable = { TFRKPHN_sen_s1 = 5 } }
+	if = { limit = { check_variable = { TFRKPHN_sen_c1 > 1 } } set_variable = { TFRKPHN_sen_s2 = 1 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c2 > 1 } } set_variable = { TFRKPHN_sen_s2 = 2 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c3 > 1 } } set_variable = { TFRKPHN_sen_s2 = 3 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c4 > 1 } } set_variable = { TFRKPHN_sen_s2 = 4 } }
+	else = { set_variable = { TFRKPHN_sen_s2 = 5 } }
+	if = { limit = { check_variable = { TFRKPHN_sen_c1 > 2 } } set_variable = { TFRKPHN_sen_s3 = 1 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c2 > 2 } } set_variable = { TFRKPHN_sen_s3 = 2 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c3 > 2 } } set_variable = { TFRKPHN_sen_s3 = 3 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c4 > 2 } } set_variable = { TFRKPHN_sen_s3 = 4 } }
+	else = { set_variable = { TFRKPHN_sen_s3 = 5 } }
+	if = { limit = { check_variable = { TFRKPHN_sen_c1 > 3 } } set_variable = { TFRKPHN_sen_s4 = 1 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c2 > 3 } } set_variable = { TFRKPHN_sen_s4 = 2 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c3 > 3 } } set_variable = { TFRKPHN_sen_s4 = 3 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c4 > 3 } } set_variable = { TFRKPHN_sen_s4 = 4 } }
+	else = { set_variable = { TFRKPHN_sen_s4 = 5 } }
+	if = { limit = { check_variable = { TFRKPHN_sen_c1 > 4 } } set_variable = { TFRKPHN_sen_s5 = 1 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c2 > 4 } } set_variable = { TFRKPHN_sen_s5 = 2 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c3 > 4 } } set_variable = { TFRKPHN_sen_s5 = 3 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c4 > 4 } } set_variable = { TFRKPHN_sen_s5 = 4 } }
+	else = { set_variable = { TFRKPHN_sen_s5 = 5 } }
+	if = { limit = { check_variable = { TFRKPHN_sen_c1 > 5 } } set_variable = { TFRKPHN_sen_s6 = 1 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c2 > 5 } } set_variable = { TFRKPHN_sen_s6 = 2 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c3 > 5 } } set_variable = { TFRKPHN_sen_s6 = 3 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c4 > 5 } } set_variable = { TFRKPHN_sen_s6 = 4 } }
+	else = { set_variable = { TFRKPHN_sen_s6 = 5 } }
+	if = { limit = { check_variable = { TFRKPHN_sen_c1 > 6 } } set_variable = { TFRKPHN_sen_s7 = 1 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c2 > 6 } } set_variable = { TFRKPHN_sen_s7 = 2 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c3 > 6 } } set_variable = { TFRKPHN_sen_s7 = 3 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c4 > 6 } } set_variable = { TFRKPHN_sen_s7 = 4 } }
+	else = { set_variable = { TFRKPHN_sen_s7 = 5 } }
+	if = { limit = { check_variable = { TFRKPHN_sen_c1 > 7 } } set_variable = { TFRKPHN_sen_s8 = 1 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c2 > 7 } } set_variable = { TFRKPHN_sen_s8 = 2 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c3 > 7 } } set_variable = { TFRKPHN_sen_s8 = 3 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c4 > 7 } } set_variable = { TFRKPHN_sen_s8 = 4 } }
+	else = { set_variable = { TFRKPHN_sen_s8 = 5 } }
+	if = { limit = { check_variable = { TFRKPHN_sen_c1 > 8 } } set_variable = { TFRKPHN_sen_s9 = 1 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c2 > 8 } } set_variable = { TFRKPHN_sen_s9 = 2 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c3 > 8 } } set_variable = { TFRKPHN_sen_s9 = 3 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c4 > 8 } } set_variable = { TFRKPHN_sen_s9 = 4 } }
+	else = { set_variable = { TFRKPHN_sen_s9 = 5 } }
+	if = { limit = { check_variable = { TFRKPHN_sen_c1 > 9 } } set_variable = { TFRKPHN_sen_s10 = 1 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c2 > 9 } } set_variable = { TFRKPHN_sen_s10 = 2 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c3 > 9 } } set_variable = { TFRKPHN_sen_s10 = 3 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c4 > 9 } } set_variable = { TFRKPHN_sen_s10 = 4 } }
+	else = { set_variable = { TFRKPHN_sen_s10 = 5 } }
+	if = { limit = { check_variable = { TFRKPHN_sen_c1 > 10 } } set_variable = { TFRKPHN_sen_s11 = 1 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c2 > 10 } } set_variable = { TFRKPHN_sen_s11 = 2 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c3 > 10 } } set_variable = { TFRKPHN_sen_s11 = 3 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c4 > 10 } } set_variable = { TFRKPHN_sen_s11 = 4 } }
+	else = { set_variable = { TFRKPHN_sen_s11 = 5 } }
+	if = { limit = { check_variable = { TFRKPHN_sen_c1 > 11 } } set_variable = { TFRKPHN_sen_s12 = 1 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c2 > 11 } } set_variable = { TFRKPHN_sen_s12 = 2 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c3 > 11 } } set_variable = { TFRKPHN_sen_s12 = 3 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c4 > 11 } } set_variable = { TFRKPHN_sen_s12 = 4 } }
+	else = { set_variable = { TFRKPHN_sen_s12 = 5 } }
+	if = { limit = { check_variable = { TFRKPHN_sen_c1 > 12 } } set_variable = { TFRKPHN_sen_s13 = 1 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c2 > 12 } } set_variable = { TFRKPHN_sen_s13 = 2 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c3 > 12 } } set_variable = { TFRKPHN_sen_s13 = 3 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c4 > 12 } } set_variable = { TFRKPHN_sen_s13 = 4 } }
+	else = { set_variable = { TFRKPHN_sen_s13 = 5 } }
+	if = { limit = { check_variable = { TFRKPHN_sen_c1 > 13 } } set_variable = { TFRKPHN_sen_s14 = 1 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c2 > 13 } } set_variable = { TFRKPHN_sen_s14 = 2 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c3 > 13 } } set_variable = { TFRKPHN_sen_s14 = 3 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c4 > 13 } } set_variable = { TFRKPHN_sen_s14 = 4 } }
+	else = { set_variable = { TFRKPHN_sen_s14 = 5 } }
+	if = { limit = { check_variable = { TFRKPHN_sen_c1 > 14 } } set_variable = { TFRKPHN_sen_s15 = 1 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c2 > 14 } } set_variable = { TFRKPHN_sen_s15 = 2 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c3 > 14 } } set_variable = { TFRKPHN_sen_s15 = 3 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c4 > 14 } } set_variable = { TFRKPHN_sen_s15 = 4 } }
+	else = { set_variable = { TFRKPHN_sen_s15 = 5 } }
+	if = { limit = { check_variable = { TFRKPHN_sen_c1 > 15 } } set_variable = { TFRKPHN_sen_s16 = 1 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c2 > 15 } } set_variable = { TFRKPHN_sen_s16 = 2 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c3 > 15 } } set_variable = { TFRKPHN_sen_s16 = 3 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c4 > 15 } } set_variable = { TFRKPHN_sen_s16 = 4 } }
+	else = { set_variable = { TFRKPHN_sen_s16 = 5 } }
+	if = { limit = { check_variable = { TFRKPHN_sen_c1 > 16 } } set_variable = { TFRKPHN_sen_s17 = 1 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c2 > 16 } } set_variable = { TFRKPHN_sen_s17 = 2 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c3 > 16 } } set_variable = { TFRKPHN_sen_s17 = 3 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c4 > 16 } } set_variable = { TFRKPHN_sen_s17 = 4 } }
+	else = { set_variable = { TFRKPHN_sen_s17 = 5 } }
+	if = { limit = { check_variable = { TFRKPHN_sen_c1 > 17 } } set_variable = { TFRKPHN_sen_s18 = 1 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c2 > 17 } } set_variable = { TFRKPHN_sen_s18 = 2 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c3 > 17 } } set_variable = { TFRKPHN_sen_s18 = 3 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c4 > 17 } } set_variable = { TFRKPHN_sen_s18 = 4 } }
+	else = { set_variable = { TFRKPHN_sen_s18 = 5 } }
+	if = { limit = { check_variable = { TFRKPHN_sen_c1 > 18 } } set_variable = { TFRKPHN_sen_s19 = 1 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c2 > 18 } } set_variable = { TFRKPHN_sen_s19 = 2 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c3 > 18 } } set_variable = { TFRKPHN_sen_s19 = 3 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c4 > 18 } } set_variable = { TFRKPHN_sen_s19 = 4 } }
+	else = { set_variable = { TFRKPHN_sen_s19 = 5 } }
+	if = { limit = { check_variable = { TFRKPHN_sen_c1 > 19 } } set_variable = { TFRKPHN_sen_s20 = 1 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c2 > 19 } } set_variable = { TFRKPHN_sen_s20 = 2 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c3 > 19 } } set_variable = { TFRKPHN_sen_s20 = 3 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c4 > 19 } } set_variable = { TFRKPHN_sen_s20 = 4 } }
+	else = { set_variable = { TFRKPHN_sen_s20 = 5 } }
+	if = { limit = { check_variable = { TFRKPHN_sen_c1 > 20 } } set_variable = { TFRKPHN_sen_s21 = 1 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c2 > 20 } } set_variable = { TFRKPHN_sen_s21 = 2 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c3 > 20 } } set_variable = { TFRKPHN_sen_s21 = 3 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c4 > 20 } } set_variable = { TFRKPHN_sen_s21 = 4 } }
+	else = { set_variable = { TFRKPHN_sen_s21 = 5 } }
+	if = { limit = { check_variable = { TFRKPHN_sen_c1 > 21 } } set_variable = { TFRKPHN_sen_s22 = 1 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c2 > 21 } } set_variable = { TFRKPHN_sen_s22 = 2 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c3 > 21 } } set_variable = { TFRKPHN_sen_s22 = 3 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c4 > 21 } } set_variable = { TFRKPHN_sen_s22 = 4 } }
+	else = { set_variable = { TFRKPHN_sen_s22 = 5 } }
+	if = { limit = { check_variable = { TFRKPHN_sen_c1 > 22 } } set_variable = { TFRKPHN_sen_s23 = 1 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c2 > 22 } } set_variable = { TFRKPHN_sen_s23 = 2 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c3 > 22 } } set_variable = { TFRKPHN_sen_s23 = 3 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c4 > 22 } } set_variable = { TFRKPHN_sen_s23 = 4 } }
+	else = { set_variable = { TFRKPHN_sen_s23 = 5 } }
+	if = { limit = { check_variable = { TFRKPHN_sen_c1 > 23 } } set_variable = { TFRKPHN_sen_s24 = 1 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c2 > 23 } } set_variable = { TFRKPHN_sen_s24 = 2 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c3 > 23 } } set_variable = { TFRKPHN_sen_s24 = 3 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c4 > 23 } } set_variable = { TFRKPHN_sen_s24 = 4 } }
+	else = { set_variable = { TFRKPHN_sen_s24 = 5 } }
+	if = { limit = { check_variable = { TFRKPHN_sen_c1 > 24 } } set_variable = { TFRKPHN_sen_s25 = 1 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c2 > 24 } } set_variable = { TFRKPHN_sen_s25 = 2 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c3 > 24 } } set_variable = { TFRKPHN_sen_s25 = 3 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c4 > 24 } } set_variable = { TFRKPHN_sen_s25 = 4 } }
+	else = { set_variable = { TFRKPHN_sen_s25 = 5 } }
+	if = { limit = { check_variable = { TFRKPHN_sen_c1 > 25 } } set_variable = { TFRKPHN_sen_s26 = 1 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c2 > 25 } } set_variable = { TFRKPHN_sen_s26 = 2 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c3 > 25 } } set_variable = { TFRKPHN_sen_s26 = 3 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c4 > 25 } } set_variable = { TFRKPHN_sen_s26 = 4 } }
+	else = { set_variable = { TFRKPHN_sen_s26 = 5 } }
+	if = { limit = { check_variable = { TFRKPHN_sen_c1 > 26 } } set_variable = { TFRKPHN_sen_s27 = 1 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c2 > 26 } } set_variable = { TFRKPHN_sen_s27 = 2 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c3 > 26 } } set_variable = { TFRKPHN_sen_s27 = 3 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c4 > 26 } } set_variable = { TFRKPHN_sen_s27 = 4 } }
+	else = { set_variable = { TFRKPHN_sen_s27 = 5 } }
+	if = { limit = { check_variable = { TFRKPHN_sen_c1 > 27 } } set_variable = { TFRKPHN_sen_s28 = 1 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c2 > 27 } } set_variable = { TFRKPHN_sen_s28 = 2 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c3 > 27 } } set_variable = { TFRKPHN_sen_s28 = 3 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c4 > 27 } } set_variable = { TFRKPHN_sen_s28 = 4 } }
+	else = { set_variable = { TFRKPHN_sen_s28 = 5 } }
+	if = { limit = { check_variable = { TFRKPHN_sen_c1 > 28 } } set_variable = { TFRKPHN_sen_s29 = 1 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c2 > 28 } } set_variable = { TFRKPHN_sen_s29 = 2 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c3 > 28 } } set_variable = { TFRKPHN_sen_s29 = 3 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c4 > 28 } } set_variable = { TFRKPHN_sen_s29 = 4 } }
+	else = { set_variable = { TFRKPHN_sen_s29 = 5 } }
+	if = { limit = { check_variable = { TFRKPHN_sen_c1 > 29 } } set_variable = { TFRKPHN_sen_s30 = 1 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c2 > 29 } } set_variable = { TFRKPHN_sen_s30 = 2 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c3 > 29 } } set_variable = { TFRKPHN_sen_s30 = 3 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c4 > 29 } } set_variable = { TFRKPHN_sen_s30 = 4 } }
+	else = { set_variable = { TFRKPHN_sen_s30 = 5 } }
+	if = { limit = { check_variable = { TFRKPHN_sen_c1 > 30 } } set_variable = { TFRKPHN_sen_s31 = 1 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c2 > 30 } } set_variable = { TFRKPHN_sen_s31 = 2 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c3 > 30 } } set_variable = { TFRKPHN_sen_s31 = 3 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c4 > 30 } } set_variable = { TFRKPHN_sen_s31 = 4 } }
+	else = { set_variable = { TFRKPHN_sen_s31 = 5 } }
+	if = { limit = { check_variable = { TFRKPHN_sen_c1 > 31 } } set_variable = { TFRKPHN_sen_s32 = 1 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c2 > 31 } } set_variable = { TFRKPHN_sen_s32 = 2 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c3 > 31 } } set_variable = { TFRKPHN_sen_s32 = 3 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c4 > 31 } } set_variable = { TFRKPHN_sen_s32 = 4 } }
+	else = { set_variable = { TFRKPHN_sen_s32 = 5 } }
+	if = { limit = { check_variable = { TFRKPHN_sen_c1 > 32 } } set_variable = { TFRKPHN_sen_s33 = 1 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c2 > 32 } } set_variable = { TFRKPHN_sen_s33 = 2 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c3 > 32 } } set_variable = { TFRKPHN_sen_s33 = 3 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c4 > 32 } } set_variable = { TFRKPHN_sen_s33 = 4 } }
+	else = { set_variable = { TFRKPHN_sen_s33 = 5 } }
+	if = { limit = { check_variable = { TFRKPHN_sen_c1 > 33 } } set_variable = { TFRKPHN_sen_s34 = 1 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c2 > 33 } } set_variable = { TFRKPHN_sen_s34 = 2 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c3 > 33 } } set_variable = { TFRKPHN_sen_s34 = 3 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c4 > 33 } } set_variable = { TFRKPHN_sen_s34 = 4 } }
+	else = { set_variable = { TFRKPHN_sen_s34 = 5 } }
+	if = { limit = { check_variable = { TFRKPHN_sen_c1 > 34 } } set_variable = { TFRKPHN_sen_s35 = 1 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c2 > 34 } } set_variable = { TFRKPHN_sen_s35 = 2 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c3 > 34 } } set_variable = { TFRKPHN_sen_s35 = 3 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c4 > 34 } } set_variable = { TFRKPHN_sen_s35 = 4 } }
+	else = { set_variable = { TFRKPHN_sen_s35 = 5 } }
+	if = { limit = { check_variable = { TFRKPHN_sen_c1 > 35 } } set_variable = { TFRKPHN_sen_s36 = 1 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c2 > 35 } } set_variable = { TFRKPHN_sen_s36 = 2 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c3 > 35 } } set_variable = { TFRKPHN_sen_s36 = 3 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c4 > 35 } } set_variable = { TFRKPHN_sen_s36 = 4 } }
+	else = { set_variable = { TFRKPHN_sen_s36 = 5 } }
+	if = { limit = { check_variable = { TFRKPHN_sen_c1 > 36 } } set_variable = { TFRKPHN_sen_s37 = 1 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c2 > 36 } } set_variable = { TFRKPHN_sen_s37 = 2 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c3 > 36 } } set_variable = { TFRKPHN_sen_s37 = 3 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c4 > 36 } } set_variable = { TFRKPHN_sen_s37 = 4 } }
+	else = { set_variable = { TFRKPHN_sen_s37 = 5 } }
+	if = { limit = { check_variable = { TFRKPHN_sen_c1 > 37 } } set_variable = { TFRKPHN_sen_s38 = 1 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c2 > 37 } } set_variable = { TFRKPHN_sen_s38 = 2 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c3 > 37 } } set_variable = { TFRKPHN_sen_s38 = 3 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c4 > 37 } } set_variable = { TFRKPHN_sen_s38 = 4 } }
+	else = { set_variable = { TFRKPHN_sen_s38 = 5 } }
+	if = { limit = { check_variable = { TFRKPHN_sen_c1 > 38 } } set_variable = { TFRKPHN_sen_s39 = 1 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c2 > 38 } } set_variable = { TFRKPHN_sen_s39 = 2 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c3 > 38 } } set_variable = { TFRKPHN_sen_s39 = 3 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c4 > 38 } } set_variable = { TFRKPHN_sen_s39 = 4 } }
+	else = { set_variable = { TFRKPHN_sen_s39 = 5 } }
+	if = { limit = { check_variable = { TFRKPHN_sen_c1 > 39 } } set_variable = { TFRKPHN_sen_s40 = 1 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c2 > 39 } } set_variable = { TFRKPHN_sen_s40 = 2 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c3 > 39 } } set_variable = { TFRKPHN_sen_s40 = 3 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c4 > 39 } } set_variable = { TFRKPHN_sen_s40 = 4 } }
+	else = { set_variable = { TFRKPHN_sen_s40 = 5 } }
+	if = { limit = { check_variable = { TFRKPHN_sen_c1 > 40 } } set_variable = { TFRKPHN_sen_s41 = 1 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c2 > 40 } } set_variable = { TFRKPHN_sen_s41 = 2 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c3 > 40 } } set_variable = { TFRKPHN_sen_s41 = 3 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c4 > 40 } } set_variable = { TFRKPHN_sen_s41 = 4 } }
+	else = { set_variable = { TFRKPHN_sen_s41 = 5 } }
+	if = { limit = { check_variable = { TFRKPHN_sen_c1 > 41 } } set_variable = { TFRKPHN_sen_s42 = 1 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c2 > 41 } } set_variable = { TFRKPHN_sen_s42 = 2 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c3 > 41 } } set_variable = { TFRKPHN_sen_s42 = 3 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c4 > 41 } } set_variable = { TFRKPHN_sen_s42 = 4 } }
+	else = { set_variable = { TFRKPHN_sen_s42 = 5 } }
+	if = { limit = { check_variable = { TFRKPHN_sen_c1 > 42 } } set_variable = { TFRKPHN_sen_s43 = 1 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c2 > 42 } } set_variable = { TFRKPHN_sen_s43 = 2 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c3 > 42 } } set_variable = { TFRKPHN_sen_s43 = 3 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c4 > 42 } } set_variable = { TFRKPHN_sen_s43 = 4 } }
+	else = { set_variable = { TFRKPHN_sen_s43 = 5 } }
+	if = { limit = { check_variable = { TFRKPHN_sen_c1 > 43 } } set_variable = { TFRKPHN_sen_s44 = 1 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c2 > 43 } } set_variable = { TFRKPHN_sen_s44 = 2 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c3 > 43 } } set_variable = { TFRKPHN_sen_s44 = 3 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c4 > 43 } } set_variable = { TFRKPHN_sen_s44 = 4 } }
+	else = { set_variable = { TFRKPHN_sen_s44 = 5 } }
+	if = { limit = { check_variable = { TFRKPHN_sen_c1 > 44 } } set_variable = { TFRKPHN_sen_s45 = 1 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c2 > 44 } } set_variable = { TFRKPHN_sen_s45 = 2 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c3 > 44 } } set_variable = { TFRKPHN_sen_s45 = 3 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c4 > 44 } } set_variable = { TFRKPHN_sen_s45 = 4 } }
+	else = { set_variable = { TFRKPHN_sen_s45 = 5 } }
+	if = { limit = { check_variable = { TFRKPHN_sen_c1 > 45 } } set_variable = { TFRKPHN_sen_s46 = 1 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c2 > 45 } } set_variable = { TFRKPHN_sen_s46 = 2 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c3 > 45 } } set_variable = { TFRKPHN_sen_s46 = 3 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c4 > 45 } } set_variable = { TFRKPHN_sen_s46 = 4 } }
+	else = { set_variable = { TFRKPHN_sen_s46 = 5 } }
+	if = { limit = { check_variable = { TFRKPHN_sen_c1 > 46 } } set_variable = { TFRKPHN_sen_s47 = 1 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c2 > 46 } } set_variable = { TFRKPHN_sen_s47 = 2 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c3 > 46 } } set_variable = { TFRKPHN_sen_s47 = 3 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c4 > 46 } } set_variable = { TFRKPHN_sen_s47 = 4 } }
+	else = { set_variable = { TFRKPHN_sen_s47 = 5 } }
+	if = { limit = { check_variable = { TFRKPHN_sen_c1 > 47 } } set_variable = { TFRKPHN_sen_s48 = 1 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c2 > 47 } } set_variable = { TFRKPHN_sen_s48 = 2 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c3 > 47 } } set_variable = { TFRKPHN_sen_s48 = 3 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c4 > 47 } } set_variable = { TFRKPHN_sen_s48 = 4 } }
+	else = { set_variable = { TFRKPHN_sen_s48 = 5 } }
+	if = { limit = { check_variable = { TFRKPHN_sen_c1 > 48 } } set_variable = { TFRKPHN_sen_s49 = 1 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c2 > 48 } } set_variable = { TFRKPHN_sen_s49 = 2 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c3 > 48 } } set_variable = { TFRKPHN_sen_s49 = 3 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c4 > 48 } } set_variable = { TFRKPHN_sen_s49 = 4 } }
+	else = { set_variable = { TFRKPHN_sen_s49 = 5 } }
+	if = { limit = { check_variable = { TFRKPHN_sen_c1 > 49 } } set_variable = { TFRKPHN_sen_s50 = 1 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c2 > 49 } } set_variable = { TFRKPHN_sen_s50 = 2 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c3 > 49 } } set_variable = { TFRKPHN_sen_s50 = 3 } }
+	else_if = { limit = { check_variable = { TFRKPHN_sen_c4 > 49 } } set_variable = { TFRKPHN_sen_s50 = 4 } }
+	else = { set_variable = { TFRKPHN_sen_s50 = 5 } }
+}
+
+# ===== 국민정신: 제7공화국 (개헌 중점을 찍을 때마다 1단계씩 강화, 최대 10단계) =====
+TFRKPHN_7rep_up = {
+	if = {
+		limit = { NOT = { has_country_flag = TFRKPHN_7rep_on } }
+		set_country_flag = TFRKPHN_7rep_on
+		set_variable = { TFRKPHN_7rep_lv = 0 }
+		add_dynamic_modifier = { modifier = TFRKPHN_7th_republic }
+	}
+	add_to_variable = { TFRKPHN_7rep_lv = 1 }
+	clamp_variable = { var = TFRKPHN_7rep_lv min = 0 max = 10 }
+	set_variable = { TFRKPHN_7rep_stab = TFRKPHN_7rep_lv }
+	multiply_variable = { TFRKPHN_7rep_stab = 0.015 }
+	set_variable = { TFRKPHN_7rep_pp = TFRKPHN_7rep_lv }
+	multiply_variable = { TFRKPHN_7rep_pp = 0.05 }
+	set_variable = { TFRKPHN_7rep_aca = TFRKPHN_7rep_lv }
+	multiply_variable = { TFRKPHN_7rep_aca = 0.02 }
+	set_variable = { TFRKPHN_7rep_farm = TFRKPHN_7rep_lv }
+	multiply_variable = { TFRKPHN_7rep_farm = 0.01 }
+	set_variable = { TFRKPHN_7rep_war = TFRKPHN_7rep_lv }
+	multiply_variable = { TFRKPHN_7rep_war = 0.02 }
+	set_variable = { TFRKPHN_7rep_wstab = TFRKPHN_7rep_lv }
+	multiply_variable = { TFRKPHN_7rep_wstab = 0.0001 }
+	set_variable = { TFRKPHN_7rep_res = TFRKPHN_7rep_lv }
+	multiply_variable = { TFRKPHN_7rep_res = 0.02 }
+}
+
+# 모든 지역 지지도를 임시 변수 TFRKPHN_support_delta 만큼 바꾼다
+TFRKPHN_support_add_all = {
+	add_to_variable = { TFRKPHN_support_seoul = TFRKPHN_support_delta }
+	clamp_variable = { var = TFRKPHN_support_seoul min = 0 max = 100 }
+	add_to_variable = { TFRKPHN_support_gyeonggi = TFRKPHN_support_delta }
+	clamp_variable = { var = TFRKPHN_support_gyeonggi min = 0 max = 100 }
+	add_to_variable = { TFRKPHN_support_gangwon = TFRKPHN_support_delta }
+	clamp_variable = { var = TFRKPHN_support_gangwon min = 0 max = 100 }
+	add_to_variable = { TFRKPHN_support_chungcheong = TFRKPHN_support_delta }
+	clamp_variable = { var = TFRKPHN_support_chungcheong min = 0 max = 100 }
+	add_to_variable = { TFRKPHN_support_jeonbuk = TFRKPHN_support_delta }
+	clamp_variable = { var = TFRKPHN_support_jeonbuk min = 0 max = 100 }
+	add_to_variable = { TFRKPHN_support_jeonnam = TFRKPHN_support_delta }
+	clamp_variable = { var = TFRKPHN_support_jeonnam min = 0 max = 100 }
+	add_to_variable = { TFRKPHN_support_gyeongbuk = TFRKPHN_support_delta }
+	clamp_variable = { var = TFRKPHN_support_gyeongbuk min = 0 max = 100 }
+	add_to_variable = { TFRKPHN_support_gyeongnam = TFRKPHN_support_delta }
+	clamp_variable = { var = TFRKPHN_support_gyeongnam min = 0 max = 100 }
+	add_to_variable = { TFRKPHN_support_jeju = TFRKPHN_support_delta }
+	clamp_variable = { var = TFRKPHN_support_jeju min = 0 max = 100 }
+	TFRKPHN_hong_update_support_display = yes
+}
+
+# 무작위 지역 1곳의 지지도 -5
+TFRKPHN_support_decay_random = {
+	random_list = {
+		10 = {
+			subtract_from_variable = { TFRKPHN_support_seoul = 5 }
+			clamp_variable = { var = TFRKPHN_support_seoul min = 0 max = 100 }
+		}
+		10 = {
+			subtract_from_variable = { TFRKPHN_support_gyeonggi = 5 }
+			clamp_variable = { var = TFRKPHN_support_gyeonggi min = 0 max = 100 }
+		}
+		10 = {
+			subtract_from_variable = { TFRKPHN_support_gangwon = 5 }
+			clamp_variable = { var = TFRKPHN_support_gangwon min = 0 max = 100 }
+		}
+		10 = {
+			subtract_from_variable = { TFRKPHN_support_chungcheong = 5 }
+			clamp_variable = { var = TFRKPHN_support_chungcheong min = 0 max = 100 }
+		}
+		10 = {
+			subtract_from_variable = { TFRKPHN_support_jeonbuk = 5 }
+			clamp_variable = { var = TFRKPHN_support_jeonbuk min = 0 max = 100 }
+		}
+		10 = {
+			subtract_from_variable = { TFRKPHN_support_jeonnam = 5 }
+			clamp_variable = { var = TFRKPHN_support_jeonnam min = 0 max = 100 }
+		}
+		10 = {
+			subtract_from_variable = { TFRKPHN_support_gyeongbuk = 5 }
+			clamp_variable = { var = TFRKPHN_support_gyeongbuk min = 0 max = 100 }
+		}
+		10 = {
+			subtract_from_variable = { TFRKPHN_support_gyeongnam = 5 }
+			clamp_variable = { var = TFRKPHN_support_gyeongnam min = 0 max = 100 }
+		}
+		10 = {
+			subtract_from_variable = { TFRKPHN_support_jeju = 5 }
+			clamp_variable = { var = TFRKPHN_support_jeju min = 0 max = 100 }
+		}
+	}
+	TFRKPHN_hong_update_support_display = yes
+}
+
+# 범죄와의 전쟁: 도시별 범죄율 초기화 / 선택한 도시의 범죄율 표시 갱신
+TFRKPHN_crime_init = {
+	if = {
+		limit = { NOT = { has_country_flag = TFRKPHN_crime_init } }
+		set_country_flag = TFRKPHN_crime_init
+		set_variable = { TFRKPHN_crime_sel = 0 }
+		set_variable = { TFRKPHN_crime_count = 0 }
+	set_variable = { TFRKPHN_crime_rate_seoul = 62 }
+	set_variable = { TFRKPHN_crime_rate_busan = 71 }
+	set_variable = { TFRKPHN_crime_rate_daegu = 58 }
+	set_variable = { TFRKPHN_crime_rate_gwangju = 49 }
+	set_variable = { TFRKPHN_crime_rate_daejeon = 45 }
+	set_variable = { TFRKPHN_crime_rate_ulsan = 53 }
+		TFRKPHN_crime_refresh = yes
+	}
+}
+
+TFRKPHN_crime_refresh = {
+	if = {
+		limit = { check_variable = { TFRKPHN_crime_sel = 1 } }
+		set_variable = { TFRKPHN_crime_rate_sel = TFRKPHN_crime_rate_seoul }
+	}
+	else_if = {
+		limit = { check_variable = { TFRKPHN_crime_sel = 2 } }
+		set_variable = { TFRKPHN_crime_rate_sel = TFRKPHN_crime_rate_busan }
+	}
+	else_if = {
+		limit = { check_variable = { TFRKPHN_crime_sel = 3 } }
+		set_variable = { TFRKPHN_crime_rate_sel = TFRKPHN_crime_rate_daegu }
+	}
+	else_if = {
+		limit = { check_variable = { TFRKPHN_crime_sel = 4 } }
+		set_variable = { TFRKPHN_crime_rate_sel = TFRKPHN_crime_rate_gwangju }
+	}
+	else_if = {
+		limit = { check_variable = { TFRKPHN_crime_sel = 5 } }
+		set_variable = { TFRKPHN_crime_rate_sel = TFRKPHN_crime_rate_daejeon }
+	}
+	else_if = {
+		limit = { check_variable = { TFRKPHN_crime_sel = 6 } }
+		set_variable = { TFRKPHN_crime_rate_sel = TFRKPHN_crime_rate_ulsan }
+	}
+	else = {
+		set_variable = { TFRKPHN_crime_rate_sel = 0 }
+	}
+}
+
+# ===== 2027 대선: 양안전쟁 결과에 따른 정권 교체 =====
+TFRKPHN_ge2027_lee_in_je_effect = {
+	clr_country_flag = TFRKP_HN_hong_president
+	clr_country_flag = TFRKPHN_amend_busy
+	set_country_flag = TFRKPHN_successor_lee_in_je
+	set_politics = { ruling_party = conservative elections_allowed = yes }
+	add_popularity = { ideology = conservative popularity = 0.15 }
+	if = { limit = { NOT = { has_character = KOR_lee_in_je_char } } recruit_character = KOR_lee_in_je_char }
+	KOR_lee_in_je_char = { promote_character = korean_conservatism }
+	load_focus_tree = { tree = TFRKPHN_lee_in_je_tree keep_completed = no }
+	mark_focus_tree_layout_dirty = yes
+}
+TFRKPHN_ge2027_oh_se_hoon_effect = {
+	clr_country_flag = TFRKP_HN_hong_president
+	clr_country_flag = TFRKPHN_amend_busy
+	set_country_flag = TFRKPHN_successor_oh_se_hoon
+	set_politics = { ruling_party = conservative elections_allowed = yes }
+	add_popularity = { ideology = conservative popularity = 0.15 }
+	if = { limit = { NOT = { has_character = KOR_oh_se_hoon_char } } recruit_character = KOR_oh_se_hoon_char }
+	KOR_oh_se_hoon_char = { promote_character = korean_conservatism }
+	load_focus_tree = { tree = TFRKPHN_oh_se_hoon_tree keep_completed = no }
+	mark_focus_tree_layout_dirty = yes
+}
+TFRKPHN_ge2027_cho_won_jin_effect = {
+	clr_country_flag = TFRKP_HN_hong_president
+	clr_country_flag = TFRKPHN_amend_busy
+	set_country_flag = TFRKPHN_successor_cho_won_jin
+	set_politics = { ruling_party = authoritarian_democrat elections_allowed = yes }
+	add_popularity = { ideology = authoritarian_democrat popularity = 0.15 }
+	set_party_name = { ideology = authoritarian_democrat name = TFRKPHN_party_cho_won_jin long_name = TFRKPHN_party_cho_won_jin_long }
+	if = { limit = { NOT = { has_character = KOR_cho_won_jin_char } } recruit_character = KOR_cho_won_jin_char }
+	KOR_cho_won_jin_char = { promote_character = ultra_conservatism }
+	load_focus_tree = { tree = TFRKPHN_cho_won_jin_tree keep_completed = no }
+	mark_focus_tree_layout_dirty = yes
+}
+TFRKPHN_ge2027_ahn_cheol_soo_effect = {
+	clr_country_flag = TFRKP_HN_hong_president
+	clr_country_flag = TFRKPHN_amend_busy
+	set_country_flag = TFRKPHN_successor_ahn_cheol_soo
+	set_politics = { ruling_party = market_liberal elections_allowed = yes }
+	add_popularity = { ideology = market_liberal popularity = 0.15 }
+	set_party_name = { ideology = market_liberal name = TFRKPHN_party_ahn_cheol_soo long_name = TFRKPHN_party_ahn_cheol_soo_long }
+	if = { limit = { NOT = { has_character = KOR_ahn_cheol_soo_char } } recruit_character = KOR_ahn_cheol_soo_char }
+	KOR_ahn_cheol_soo_char = { promote_character = classical_liberalism }
+	load_focus_tree = { tree = TFRKPHN_ahn_cheol_soo_tree keep_completed = no }
+	mark_focus_tree_layout_dirty = yes
+}
+TFRKPHN_ge2027_hwang_kyo_ahn_effect = {
+	clr_country_flag = TFRKP_HN_hong_president
+	clr_country_flag = TFRKPHN_amend_busy
+	set_country_flag = TFRKPHN_successor_hwang_kyo_ahn
+	# 자유와혁신 = 권위주의 민주 그룹 (기반 모드의 황교안은 보수 계열이라 권위주의 민주 지도자 역할을 새로 붙인다)
+	set_politics = { ruling_party = authoritarian_democrat elections_allowed = yes }
+	add_popularity = { ideology = authoritarian_democrat popularity = 0.15 }
+	set_party_name = { ideology = authoritarian_democrat name = TFRKPHN_party_hwang_kyo_ahn long_name = TFRKPHN_party_hwang_kyo_ahn_long }
+	if = { limit = { NOT = { has_character = KOR_hwang_kyo_ahn_char } } recruit_character = KOR_hwang_kyo_ahn_char }
+	KOR_hwang_kyo_ahn_char = {
+		add_country_leader_role = {
+			country_leader = { ideology = ultra_conservatism }
+			promote_leader = yes
+		}
+	}
+	load_focus_tree = { tree = TFRKPHN_hwang_kyo_ahn_tree keep_completed = no }
+	mark_focus_tree_layout_dirty = yes
+}

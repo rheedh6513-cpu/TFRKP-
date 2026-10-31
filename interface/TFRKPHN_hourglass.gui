@@ -1,0 +1,121 @@
+guiTypes = {
+	containerWindowType = {
+		name = "TFRKPHN_hong_hourglass_container"
+		size = { width = 100%% height = 474 }
+
+		containerWindowType = {
+			name = "TFRKPHN_hong_hourglass_panel"
+			position = { x = 0 y = 0 }
+			size = { width = 192 height = 470 }
+
+			background = {
+				name = "background"
+				spriteType = "GFX_tiled_decisions_bg_small"
+				alwaystransparent = yes
+			}
+
+			containerWindowType = {
+				name = "TFRKPHN_hong_hourglass_title_container"
+				position = { x = 1 y = 0 }
+				size = { width = 190 height = 30 }
+				background = {
+					name = "background"
+					spriteType = "GFX_tiled_header_1"
+					alwaystransparent = yes
+				}
+				instantTextBoxType = {
+					name = "TFRKPHN_hong_hourglass_title_textbox"
+					position = { x = 10 y = 2 }
+					text = "TFRKPHN_hong_hourglass_title"
+					font = "hoi_18mbs"
+					format = left
+					maxWidth = 170
+					alwaystransparent = yes
+				}
+			}
+
+			iconType = {
+				name = "TFRKPHN_hong_hourglass_icon"
+				position = { x = 6 y = 66 }
+				spriteType = "GFX_TFRKPHN_hourglass"
+				alwaystransparent = yes
+			}
+
+			instantTextBoxType = {
+				name = "TFRKPHN_hong_hourglass_label"
+				position = { x = 0 y = 306 }
+				text = "TFRKPHN_hong_hourglass_label"
+				font = "hoi_16mbs"
+				format = center
+				maxWidth = 192
+				maxHeight = 22
+				alwaystransparent = yes
+			}
+
+			instantTextBoxType = {
+				name = "TFRKPHN_hong_hourglass_count"
+				position = { x = 0 y = 330 }
+				text = "TFRKPHN_hong_hourglass_count"
+				font = "hoi_18mbs"
+				format = center
+				maxWidth = 192
+				maxHeight = 26
+				alwaystransparent = yes
+			}
+
+			instantTextBoxType = {
+				name = "TFRKPHN_hong_hourglass_note"
+				position = { x = 12 y = 366 }
+				text = "TFRKPHN_hong_hourglass_note"
+				font = "hoi_16mbs"
+				format = center
+				maxWidth = 168
+				maxHeight = 80
+				alwaystransparent = yes
+			}
+		}
+
+		containerWindowType = {
+			name = "TFRKPHN_hong_hourglass_story_panel"
+			position = { x = 195 y = 0 }
+			size = { width = 305 height = 470 }
+
+			background = {
+				name = "background"
+				spriteType = "GFX_tiled_decisions_bg_small"
+				alwaystransparent = yes
+			}
+
+			containerWindowType = {
+				name = "TFRKPHN_hong_hourglass_story_title_container"
+				position = { x = 1 y = 0 }
+				size = { width = 303 height = 30 }
+				background = {
+					name = "background"
+					spriteType = "GFX_tiled_header_1"
+					alwaystransparent = yes
+				}
+				instantTextBoxType = {
+					name = "TFRKPHN_hong_hourglass_story_title_textbox"
+					position = { x = 12 y = 2 }
+					text = "TFRKPHN_hong_hourglass_story_title"
+					font = "hoi_18mbs"
+					format = left
+					maxWidth = 280
+					alwaystransparent = yes
+				}
+			}
+
+			instantTextBoxType = {
+				name = "TFRKPHN_hong_hourglass_story_text"
+				position = { x = 12 y = 42 }
+				text = "TFRKPHN_hong_hourglass_story"
+				font = "hoi_16mbs"
+				format = left
+				maxWidth = 281
+				maxHeight = 420
+				alwaystransparent = yes
+			}
+		}
+	}
+}

@@ -1,0 +1,24 @@
+focus_tree = {
+	id = TFRKPHN_ahn_cheol_soo_tree
+
+	country = {
+		factor = 0
+	}
+	default = no
+
+	continuous_focus_position = { x = 50 y = 1170 }
+
+	# 2027 대선 뒤 tfrkphn.304 에서 불러온다. 이후 중점은 글쓰기 도구 계통도에서 이어 붙이면 된다.
+	focus = {
+		id = TFRKPHN_ahn_cheol_soo_b01_01
+		icon = GFX_goal_generic_political_pressure
+		x = 3
+		y = 0
+		cost = 5
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.03
+		}
+	}
+}

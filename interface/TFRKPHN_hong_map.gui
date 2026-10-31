@@ -1,0 +1,661 @@
+guiTypes = {
+	containerWindowType = {
+		name = "TFRKPHN_hong_minsim_container"
+		size = { width = 100%% height = 392 }
+
+		containerWindowType = {
+			name = "TFRKPHN_hong_map_container"
+			position = { x = 0 y = 0 }
+			size = { width = 280 height = 388 }
+
+			background = {
+				name = "background"
+				spriteType = "GFX_tiled_decisions_bg_small"
+				alwaystransparent = yes
+			}
+
+			containerWindowType = {
+				name = "TFRKPHN_hong_map_title_container"
+				position = { x = 1 y = 0 }
+				size = { width = 278 height = 30 }
+				background = {
+					name = "background"
+					spriteType = "GFX_tiled_header_1"
+					alwaystransparent = yes
+				}
+				instantTextBoxType = {
+					name = "TFRKPHN_hong_map_title_textbox"
+					position = { x = -130 y = 2 }
+					orientation = CENTER_UP
+					text = "TFRKPHN_hong_map_title"
+					font = "hoi_18mbs"
+					format = left
+					maxWidth = 300
+					alwaystransparent = yes
+				}
+			}
+
+			buttonType = {
+				name = "TFRKPHN_hong_map_gyeonggi"
+				position = { x = 26 y = 44 }
+				spriteType = "GFX_TFRKPHN_map_gyeonggi"
+				clicksound = click_default
+				pdx_tooltip = TFRKPHN_hong_map_gyeonggi_tt
+			}
+
+			buttonType = {
+				name = "TFRKPHN_hong_map_seoul"
+				position = { x = 63 y = 91 }
+				spriteType = "GFX_TFRKPHN_map_seoul"
+				clicksound = click_default
+				pdx_tooltip = TFRKPHN_hong_map_seoul_tt
+			}
+
+			buttonType = {
+				name = "TFRKPHN_hong_map_gangwon"
+				position = { x = 81 y = 16 }
+				spriteType = "GFX_LJS_map_gangwon"
+				clicksound = click_default
+				pdx_tooltip = TFRKPHN_hong_map_gangwon_tt
+			}
+
+			buttonType = {
+				name = "TFRKPHN_hong_map_chungcheong"
+				position = { x = 19 y = 123 }
+				spriteType = "GFX_LJS_map_chungcheong"
+				clicksound = click_default
+				pdx_tooltip = TFRKPHN_hong_map_chungcheong_tt
+			}
+
+			buttonType = {
+				name = "TFRKPHN_hong_map_jeonbuk"
+				position = { x = 36 y = 210 }
+				spriteType = "GFX_TFRKPHN_map_jeonbuk"
+				clicksound = click_default
+				pdx_tooltip = TFRKPHN_hong_map_jeonbuk_tt
+			}
+
+			buttonType = {
+				name = "TFRKPHN_hong_map_jeonnam"
+				position = { x = 0 y = 266 }
+				spriteType = "GFX_TFRKPHN_map_jeonnam"
+				clicksound = click_default
+				pdx_tooltip = TFRKPHN_hong_map_jeonnam_tt
+			}
+
+			buttonType = {
+				name = "TFRKPHN_hong_map_gyeongbuk"
+				position = { x = 127 y = 130 }
+				spriteType = "GFX_TFRKPHN_map_gyeongbuk"
+				clicksound = click_default
+				pdx_tooltip = TFRKPHN_hong_map_gyeongbuk_tt
+			}
+
+			buttonType = {
+				name = "TFRKPHN_hong_map_gyeongnam"
+				position = { x = 112 y = 233 }
+				spriteType = "GFX_TFRKPHN_map_gyeongnam"
+				clicksound = click_default
+				pdx_tooltip = TFRKPHN_hong_map_gyeongnam_tt
+			}
+
+			buttonType = {
+				name = "TFRKPHN_hong_map_jeju"
+				position = { x = 190 y = 315 }
+				spriteType = "GFX_LJS_map_jeju"
+				clicksound = click_default
+				pdx_tooltip = TFRKPHN_hong_map_jeju_tt
+			}
+
+			iconType = {
+				name = "TFRKPHN_hong_mapcolor_seoul"
+				position = { x = 63 y = 91 }
+				spriteType = "GFX_TFRKPHN_color_seoul"
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name = "TFRKPHN_hong_mapcolor_gyeonggi"
+				position = { x = 26 y = 44 }
+				spriteType = "GFX_TFRKPHN_color_gyeonggi"
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name = "TFRKPHN_hong_mapcolor_gangwon"
+				position = { x = 81 y = 16 }
+				spriteType = "GFX_TFRKPHN_color_gangwon"
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name = "TFRKPHN_hong_mapcolor_chungcheong"
+				position = { x = 19 y = 123 }
+				spriteType = "GFX_TFRKPHN_color_chungcheong"
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name = "TFRKPHN_hong_mapcolor_jeonbuk"
+				position = { x = 36 y = 210 }
+				spriteType = "GFX_TFRKPHN_color_jeonbuk"
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name = "TFRKPHN_hong_mapcolor_jeonnam"
+				position = { x = 0 y = 266 }
+				spriteType = "GFX_TFRKPHN_color_jeonnam"
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name = "TFRKPHN_hong_mapcolor_gyeongbuk"
+				position = { x = 127 y = 130 }
+				spriteType = "GFX_TFRKPHN_color_gyeongbuk"
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name = "TFRKPHN_hong_mapcolor_gyeongnam"
+				position = { x = 112 y = 233 }
+				spriteType = "GFX_TFRKPHN_color_gyeongnam"
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name = "TFRKPHN_hong_mapcolor_jeju"
+				position = { x = 190 y = 315 }
+				spriteType = "GFX_TFRKPHN_color_jeju"
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name = "TFRKPHN_hong_map_outline"
+				position = { x = 0 y = 15 }
+				spriteType = "GFX_TFRKPHN_map_bg"
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name = "TFRKPHN_hong_logo_seoul"
+				position = { x = 67 y = 93 }
+				spriteType = "GFX_TFRKPHN_logo_split_small"
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name = "TFRKPHN_hong_logo_gyeonggi"
+				position = { x = 84 y = 117 }
+				spriteType = "GFX_TFRKPHN_logo_split"
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name = "TFRKPHN_hong_logo_gangwon"
+				position = { x = 149 y = 70 }
+				spriteType = "GFX_TFRKPHN_logo_split"
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name = "TFRKPHN_hong_logo_chungcheong"
+				position = { x = 79 y = 170 }
+				spriteType = "GFX_TFRKPHN_logo_split"
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name = "TFRKPHN_hong_logo_jeonbuk"
+				position = { x = 69 y = 230 }
+				spriteType = "GFX_TFRKPHN_logo_split"
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name = "TFRKPHN_hong_logo_jeonnam"
+				position = { x = 59 y = 290 }
+				spriteType = "GFX_TFRKPHN_logo_split"
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name = "TFRKPHN_hong_logo_gyeongbuk"
+				position = { x = 179 y = 185 }
+				spriteType = "GFX_TFRKPHN_logo_split"
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name = "TFRKPHN_hong_logo_gyeongnam"
+				position = { x = 169 y = 260 }
+				spriteType = "GFX_TFRKPHN_logo_split"
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name = "TFRKPHN_hong_logo_jeju"
+				position = { x = 220 y = 334 }
+				spriteType = "GFX_TFRKPHN_logo_split_small"
+				alwaystransparent = yes
+			}
+		}
+
+		containerWindowType = {
+			name = "TFRKPHN_hong_avg_container"
+			position = { x = 283 y = 0 }
+			size = { width = 125 height = 388 }
+
+			background = {
+				name = "background"
+				spriteType = "GFX_tiled_decisions_bg_small"
+				alwaystransparent = yes
+			}
+
+			containerWindowType = {
+				name = "TFRKPHN_hong_avg_title_container"
+				position = { x = 1 y = 0 }
+				size = { width = 123 height = 30 }
+				background = {
+					name = "background"
+					spriteType = "GFX_tiled_header_1"
+					alwaystransparent = yes
+				}
+				instantTextBoxType = {
+					name = "TFRKPHN_hong_avg_title_textbox"
+					position = { x = 8 y = 2 }
+					text = "TFRKPHN_hong_avg_title"
+					font = "hoi_18mbs"
+					format = left
+					maxWidth = 110
+					alwaystransparent = yes
+				}
+			}
+
+			instantTextBoxType = {
+				name = "TFRKPHN_hong_avg_col_region"
+				position = { x = 8 y = 36 }
+				text = "TFRKPHN_hong_avg_col_region"
+				font = "hoi_16mbs"
+				format = left
+				maxWidth = 48
+				maxHeight = 20
+				alwaystransparent = yes
+			}
+
+			instantTextBoxType = {
+				name = "TFRKPHN_hong_avg_col_ppp"
+				position = { x = 56 y = 36 }
+				text = "TFRKPHN_hong_avg_col_ppp"
+				font = "hoi_16mbs"
+				format = right
+				maxWidth = 32
+				maxHeight = 20
+				alwaystransparent = yes
+			}
+
+			instantTextBoxType = {
+				name = "TFRKPHN_hong_avg_col_dpk"
+				position = { x = 90 y = 36 }
+				text = "TFRKPHN_hong_avg_col_dpk"
+				font = "hoi_16mbs"
+				format = right
+				maxWidth = 32
+				maxHeight = 20
+				alwaystransparent = yes
+			}
+
+			instantTextBoxType = {
+				name = "TFRKPHN_hong_avg_name_seoul"
+				position = { x = 8 y = 58 }
+				text = "TFRKPHN_hong_avg_name_seoul"
+				font = "hoi_16mbs"
+				format = left
+				maxWidth = 48
+				maxHeight = 20
+				alwaystransparent = yes
+			}
+
+			instantTextBoxType = {
+				name = "TFRKPHN_hong_avg_ppp_seoul"
+				position = { x = 56 y = 58 }
+				text = "TFRKPHN_hong_avg_ppp_seoul"
+				font = "hoi_16mbs"
+				format = right
+				maxWidth = 32
+				maxHeight = 20
+				alwaystransparent = yes
+			}
+
+			instantTextBoxType = {
+				name = "TFRKPHN_hong_avg_dpk_seoul"
+				position = { x = 90 y = 58 }
+				text = "TFRKPHN_hong_avg_dpk_seoul"
+				font = "hoi_16mbs"
+				format = right
+				maxWidth = 32
+				maxHeight = 20
+				alwaystransparent = yes
+			}
+
+			instantTextBoxType = {
+				name = "TFRKPHN_hong_avg_name_gyeonggi"
+				position = { x = 8 y = 82 }
+				text = "TFRKPHN_hong_avg_name_gyeonggi"
+				font = "hoi_16mbs"
+				format = left
+				maxWidth = 48
+				maxHeight = 20
+				alwaystransparent = yes
+			}
+
+			instantTextBoxType = {
+				name = "TFRKPHN_hong_avg_ppp_gyeonggi"
+				position = { x = 56 y = 82 }
+				text = "TFRKPHN_hong_avg_ppp_gyeonggi"
+				font = "hoi_16mbs"
+				format = right
+				maxWidth = 32
+				maxHeight = 20
+				alwaystransparent = yes
+			}
+
+			instantTextBoxType = {
+				name = "TFRKPHN_hong_avg_dpk_gyeonggi"
+				position = { x = 90 y = 82 }
+				text = "TFRKPHN_hong_avg_dpk_gyeonggi"
+				font = "hoi_16mbs"
+				format = right
+				maxWidth = 32
+				maxHeight = 20
+				alwaystransparent = yes
+			}
+
+			instantTextBoxType = {
+				name = "TFRKPHN_hong_avg_name_gangwon"
+				position = { x = 8 y = 106 }
+				text = "TFRKPHN_hong_avg_name_gangwon"
+				font = "hoi_16mbs"
+				format = left
+				maxWidth = 48
+				maxHeight = 20
+				alwaystransparent = yes
+			}
+
+			instantTextBoxType = {
+				name = "TFRKPHN_hong_avg_ppp_gangwon"
+				position = { x = 56 y = 106 }
+				text = "TFRKPHN_hong_avg_ppp_gangwon"
+				font = "hoi_16mbs"
+				format = right
+				maxWidth = 32
+				maxHeight = 20
+				alwaystransparent = yes
+			}
+
+			instantTextBoxType = {
+				name = "TFRKPHN_hong_avg_dpk_gangwon"
+				position = { x = 90 y = 106 }
+				text = "TFRKPHN_hong_avg_dpk_gangwon"
+				font = "hoi_16mbs"
+				format = right
+				maxWidth = 32
+				maxHeight = 20
+				alwaystransparent = yes
+			}
+
+			instantTextBoxType = {
+				name = "TFRKPHN_hong_avg_name_chungcheong"
+				position = { x = 8 y = 130 }
+				text = "TFRKPHN_hong_avg_name_chungcheong"
+				font = "hoi_16mbs"
+				format = left
+				maxWidth = 48
+				maxHeight = 20
+				alwaystransparent = yes
+			}
+
+			instantTextBoxType = {
+				name = "TFRKPHN_hong_avg_ppp_chungcheong"
+				position = { x = 56 y = 130 }
+				text = "TFRKPHN_hong_avg_ppp_chungcheong"
+				font = "hoi_16mbs"
+				format = right
+				maxWidth = 32
+				maxHeight = 20
+				alwaystransparent = yes
+			}
+
+			instantTextBoxType = {
+				name = "TFRKPHN_hong_avg_dpk_chungcheong"
+				position = { x = 90 y = 130 }
+				text = "TFRKPHN_hong_avg_dpk_chungcheong"
+				font = "hoi_16mbs"
+				format = right
+				maxWidth = 32
+				maxHeight = 20
+				alwaystransparent = yes
+			}
+
+			instantTextBoxType = {
+				name = "TFRKPHN_hong_avg_name_jeonbuk"
+				position = { x = 8 y = 154 }
+				text = "TFRKPHN_hong_avg_name_jeonbuk"
+				font = "hoi_16mbs"
+				format = left
+				maxWidth = 48
+				maxHeight = 20
+				alwaystransparent = yes
+			}
+
+			instantTextBoxType = {
+				name = "TFRKPHN_hong_avg_ppp_jeonbuk"
+				position = { x = 56 y = 154 }
+				text = "TFRKPHN_hong_avg_ppp_jeonbuk"
+				font = "hoi_16mbs"
+				format = right
+				maxWidth = 32
+				maxHeight = 20
+				alwaystransparent = yes
+			}
+
+			instantTextBoxType = {
+				name = "TFRKPHN_hong_avg_dpk_jeonbuk"
+				position = { x = 90 y = 154 }
+				text = "TFRKPHN_hong_avg_dpk_jeonbuk"
+				font = "hoi_16mbs"
+				format = right
+				maxWidth = 32
+				maxHeight = 20
+				alwaystransparent = yes
+			}
+
+			instantTextBoxType = {
+				name = "TFRKPHN_hong_avg_name_jeonnam"
+				position = { x = 8 y = 178 }
+				text = "TFRKPHN_hong_avg_name_jeonnam"
+				font = "hoi_16mbs"
+				format = left
+				maxWidth = 48
+				maxHeight = 20
+				alwaystransparent = yes
+			}
+
+			instantTextBoxType = {
+				name = "TFRKPHN_hong_avg_ppp_jeonnam"
+				position = { x = 56 y = 178 }
+				text = "TFRKPHN_hong_avg_ppp_jeonnam"
+				font = "hoi_16mbs"
+				format = right
+				maxWidth = 32
+				maxHeight = 20
+				alwaystransparent = yes
+			}
+
+			instantTextBoxType = {
+				name = "TFRKPHN_hong_avg_dpk_jeonnam"
+				position = { x = 90 y = 178 }
+				text = "TFRKPHN_hong_avg_dpk_jeonnam"
+				font = "hoi_16mbs"
+				format = right
+				maxWidth = 32
+				maxHeight = 20
+				alwaystransparent = yes
+			}
+
+			instantTextBoxType = {
+				name = "TFRKPHN_hong_avg_name_gyeongbuk"
+				position = { x = 8 y = 202 }
+				text = "TFRKPHN_hong_avg_name_gyeongbuk"
+				font = "hoi_16mbs"
+				format = left
+				maxWidth = 48
+				maxHeight = 20
+				alwaystransparent = yes
+			}
+
+			instantTextBoxType = {
+				name = "TFRKPHN_hong_avg_ppp_gyeongbuk"
+				position = { x = 56 y = 202 }
+				text = "TFRKPHN_hong_avg_ppp_gyeongbuk"
+				font = "hoi_16mbs"
+				format = right
+				maxWidth = 32
+				maxHeight = 20
+				alwaystransparent = yes
+			}
+
+			instantTextBoxType = {
+				name = "TFRKPHN_hong_avg_dpk_gyeongbuk"
+				position = { x = 90 y = 202 }
+				text = "TFRKPHN_hong_avg_dpk_gyeongbuk"
+				font = "hoi_16mbs"
+				format = right
+				maxWidth = 32
+				maxHeight = 20
+				alwaystransparent = yes
+			}
+
+			instantTextBoxType = {
+				name = "TFRKPHN_hong_avg_name_gyeongnam"
+				position = { x = 8 y = 226 }
+				text = "TFRKPHN_hong_avg_name_gyeongnam"
+				font = "hoi_16mbs"
+				format = left
+				maxWidth = 48
+				maxHeight = 20
+				alwaystransparent = yes
+			}
+
+			instantTextBoxType = {
+				name = "TFRKPHN_hong_avg_ppp_gyeongnam"
+				position = { x = 56 y = 226 }
+				text = "TFRKPHN_hong_avg_ppp_gyeongnam"
+				font = "hoi_16mbs"
+				format = right
+				maxWidth = 32
+				maxHeight = 20
+				alwaystransparent = yes
+			}
+
+			instantTextBoxType = {
+				name = "TFRKPHN_hong_avg_dpk_gyeongnam"
+				position = { x = 90 y = 226 }
+				text = "TFRKPHN_hong_avg_dpk_gyeongnam"
+				font = "hoi_16mbs"
+				format = right
+				maxWidth = 32
+				maxHeight = 20
+				alwaystransparent = yes
+			}
+
+			instantTextBoxType = {
+				name = "TFRKPHN_hong_avg_name_jeju"
+				position = { x = 8 y = 250 }
+				text = "TFRKPHN_hong_avg_name_jeju"
+				font = "hoi_16mbs"
+				format = left
+				maxWidth = 48
+				maxHeight = 20
+				alwaystransparent = yes
+			}
+
+			instantTextBoxType = {
+				name = "TFRKPHN_hong_avg_ppp_jeju"
+				position = { x = 56 y = 250 }
+				text = "TFRKPHN_hong_avg_ppp_jeju"
+				font = "hoi_16mbs"
+				format = right
+				maxWidth = 32
+				maxHeight = 20
+				alwaystransparent = yes
+			}
+
+			instantTextBoxType = {
+				name = "TFRKPHN_hong_avg_dpk_jeju"
+				position = { x = 90 y = 250 }
+				text = "TFRKPHN_hong_avg_dpk_jeju"
+				font = "hoi_16mbs"
+				format = right
+				maxWidth = 32
+				maxHeight = 20
+				alwaystransparent = yes
+			}
+
+			containerWindowType = {
+				name = "TFRKPHN_hong_avg_total_container"
+				position = { x = 1 y = 278 }
+				size = { width = 123 height = 28 }
+				background = {
+					name = "background"
+					spriteType = "GFX_tiled_header_1"
+					alwaystransparent = yes
+				}
+				instantTextBoxType = {
+					name = "TFRKPHN_hong_avg_total_textbox"
+					position = { x = 8 y = 2 }
+					text = "TFRKPHN_hong_avg_total_title"
+					font = "hoi_18mbs"
+					format = left
+					maxWidth = 110
+					alwaystransparent = yes
+				}
+			}
+
+			instantTextBoxType = {
+				name = "TFRKPHN_hong_avg_total_ppp"
+				position = { x = 8 y = 314 }
+				text = "TFRKPHN_hong_avg_total_ppp"
+				font = "hoi_18mbs"
+				format = left
+				maxWidth = 112
+				maxHeight = 24
+				alwaystransparent = yes
+			}
+
+			instantTextBoxType = {
+				name = "TFRKPHN_hong_avg_total_dpk"
+				position = { x = 8 y = 340 }
+				text = "TFRKPHN_hong_avg_total_dpk"
+				font = "hoi_18mbs"
+				format = left
+				maxWidth = 112
+				maxHeight = 24
+				alwaystransparent = yes
+			}
+
+			instantTextBoxType = {
+				name = "TFRKPHN_hong_avg_note"
+				position = { x = 8 y = 366 }
+				text = "TFRKPHN_hong_avg_note"
+				font = "hoi_16mbs"
+				format = left
+				maxWidth = 112
+				maxHeight = 20
+				alwaystransparent = yes
+			}
+
+		}
+
+	}
+}

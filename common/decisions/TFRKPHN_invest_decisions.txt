@@ -1,0 +1,841 @@
+TFRKPHN_hong_invest_category = {
+	# 중국/대만 중 하나 선택
+	TFRKPHN_hong_choose_prc = {
+		icon = GFX_decision_generic_attract_foreign_investors
+		cost = 25
+		days_remove = 14
+		fire_only_once = yes
+		priority = 300
+		visible = {
+			NOT = { has_global_flag = PRC_ongoing_taiwan_war }
+			NOT = { has_global_flag = PRC_taiwan_war_won }
+			NOT = { has_global_flag = PRC_taiwan_war_lost }
+			NOT = { has_country_flag = TFRKPHN_hong_chose_prc }
+			NOT = { has_country_flag = TFRKPHN_hong_chose_chi }
+			NOT = { has_country_flag = TFRKPHN_hong_choice_pending }
+		}
+		available = { country_exists = PRC }
+		complete_effect = {
+			custom_effect_tooltip = TFRKPHN_after_14_tt
+			hidden_effect = { set_country_flag = TFRKPHN_hong_choice_pending }
+			custom_effect_tooltip = TFRKPHN_hong_choose_prc_tt
+		}
+		remove_effect = {
+			hidden_effect = {
+				clr_country_flag = TFRKPHN_hong_choice_pending
+				set_country_flag = TFRKPHN_hong_chose_prc
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_hong_choose_chi = {
+		icon = GFX_decision_generic_attract_foreign_investors
+		cost = 25
+		days_remove = 14
+		fire_only_once = yes
+		priority = 300
+		visible = {
+			NOT = { has_global_flag = PRC_ongoing_taiwan_war }
+			NOT = { has_global_flag = PRC_taiwan_war_won }
+			NOT = { has_global_flag = PRC_taiwan_war_lost }
+			NOT = { has_country_flag = TFRKPHN_hong_chose_prc }
+			NOT = { has_country_flag = TFRKPHN_hong_chose_chi }
+			NOT = { has_country_flag = TFRKPHN_hong_choice_pending }
+		}
+		available = { country_exists = CHI }
+		complete_effect = {
+			custom_effect_tooltip = TFRKPHN_after_14_tt
+			hidden_effect = { set_country_flag = TFRKPHN_hong_choice_pending }
+			custom_effect_tooltip = TFRKPHN_hong_choose_chi_tt
+		}
+		remove_effect = {
+			hidden_effect = {
+				clr_country_flag = TFRKPHN_hong_choice_pending
+				set_country_flag = TFRKPHN_hong_chose_chi
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_hong_invest_VIN = {
+		icon = GFX_decision_generic_attract_foreign_investors
+		cost = 0
+		days_remove = 14
+		days_re_enable = 30
+		priority = 100
+		visible = {
+			tag = KOR
+			country_exists = VIN
+		}
+		available = {
+			NOT = { has_war_with = VIN }
+			NOT = { check_variable = { TFRKPHN_invest_count_VIN > 4 } }
+		}
+		custom_cost_trigger = {
+			check_variable = { var = income_var value = 5 compare = greater_than_or_equals }
+		}
+		custom_cost_text = dx_more_than_5B
+		complete_effect = {
+			custom_effect_tooltip = TFRKPHN_after_14_tt
+			set_temp_variable = { var = income_var_temp value = -5 }
+			add_income = yes
+			add_to_variable = { TFRKPHN_invest_count_VIN = 1 }
+			custom_effect_tooltip = TFRKPHN_hong_invest_count_tt
+		}
+		remove_effect = {
+			hidden_effect = {
+				if = {
+					limit = { check_variable = { TFRKPHN_invest_count_VIN = 1 } }
+					VIN = { add_opinion_modifier = { target = KOR modifier = TFRKPHN_invest_trade } }
+				}
+				else_if = {
+					limit = { check_variable = { TFRKPHN_invest_count_VIN = 3 } }
+					custom_effect_tooltip = TFRKPHN_hong_invest_rr_tt
+					hidden_effect = {
+						VIN = {
+							random_owned_controlled_state = {
+								set_temp_variable = { TFRKPHN_rr_state_temp = THIS }
+							}
+							give_resource_rights = { receiver = KOR state = var:TFRKPHN_rr_state_temp }
+						}
+					}
+				}
+				else_if = {
+					limit = { check_variable = { TFRKPHN_invest_count_VIN = 5 } }
+					VIN = { add_opinion_modifier = { target = KOR modifier = TFRKPHN_invest_trade_2 } }
+				}
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_hong_invest_SIG = {
+		icon = GFX_decision_generic_attract_foreign_investors
+		cost = 0
+		days_remove = 14
+		days_re_enable = 30
+		priority = 100
+		visible = {
+			tag = KOR
+			country_exists = SIG
+		}
+		available = {
+			NOT = { has_war_with = SIG }
+			NOT = { check_variable = { TFRKPHN_invest_count_SIG > 4 } }
+		}
+		custom_cost_trigger = {
+			check_variable = { var = income_var value = 5 compare = greater_than_or_equals }
+		}
+		custom_cost_text = dx_more_than_5B
+		complete_effect = {
+			custom_effect_tooltip = TFRKPHN_after_14_tt
+			set_temp_variable = { var = income_var_temp value = -5 }
+			add_income = yes
+			add_to_variable = { TFRKPHN_invest_count_SIG = 1 }
+			custom_effect_tooltip = TFRKPHN_hong_invest_count_tt
+		}
+		remove_effect = {
+			hidden_effect = {
+				if = {
+					limit = { check_variable = { TFRKPHN_invest_count_SIG = 1 } }
+					SIG = { add_opinion_modifier = { target = KOR modifier = TFRKPHN_invest_trade } }
+				}
+				else_if = {
+					limit = { check_variable = { TFRKPHN_invest_count_SIG = 3 } }
+					custom_effect_tooltip = TFRKPHN_hong_invest_rr_tt
+					hidden_effect = {
+						SIG = {
+							random_owned_controlled_state = {
+								set_temp_variable = { TFRKPHN_rr_state_temp = THIS }
+							}
+							give_resource_rights = { receiver = KOR state = var:TFRKPHN_rr_state_temp }
+						}
+					}
+				}
+				else_if = {
+					limit = { check_variable = { TFRKPHN_invest_count_SIG = 5 } }
+					SIG = { add_opinion_modifier = { target = KOR modifier = TFRKPHN_invest_trade_2 } }
+				}
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_hong_invest_SIA = {
+		icon = GFX_decision_generic_attract_foreign_investors
+		cost = 0
+		days_remove = 14
+		days_re_enable = 30
+		priority = 100
+		visible = {
+			tag = KOR
+			country_exists = SIA
+		}
+		available = {
+			NOT = { has_war_with = SIA }
+			NOT = { check_variable = { TFRKPHN_invest_count_SIA > 4 } }
+		}
+		custom_cost_trigger = {
+			check_variable = { var = income_var value = 5 compare = greater_than_or_equals }
+		}
+		custom_cost_text = dx_more_than_5B
+		complete_effect = {
+			custom_effect_tooltip = TFRKPHN_after_14_tt
+			set_temp_variable = { var = income_var_temp value = -5 }
+			add_income = yes
+			add_to_variable = { TFRKPHN_invest_count_SIA = 1 }
+			custom_effect_tooltip = TFRKPHN_hong_invest_count_tt
+		}
+		remove_effect = {
+			hidden_effect = {
+				if = {
+					limit = { check_variable = { TFRKPHN_invest_count_SIA = 1 } }
+					SIA = { add_opinion_modifier = { target = KOR modifier = TFRKPHN_invest_trade } }
+				}
+				else_if = {
+					limit = { check_variable = { TFRKPHN_invest_count_SIA = 3 } }
+					custom_effect_tooltip = TFRKPHN_hong_invest_rr_tt
+					hidden_effect = {
+						SIA = {
+							random_owned_controlled_state = {
+								set_temp_variable = { TFRKPHN_rr_state_temp = THIS }
+							}
+							give_resource_rights = { receiver = KOR state = var:TFRKPHN_rr_state_temp }
+						}
+					}
+				}
+				else_if = {
+					limit = { check_variable = { TFRKPHN_invest_count_SIA = 5 } }
+					SIA = { add_opinion_modifier = { target = KOR modifier = TFRKPHN_invest_trade_2 } }
+				}
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_hong_invest_MAL = {
+		icon = GFX_decision_generic_attract_foreign_investors
+		cost = 0
+		days_remove = 14
+		days_re_enable = 30
+		priority = 100
+		visible = {
+			tag = KOR
+			country_exists = MAL
+		}
+		available = {
+			NOT = { has_war_with = MAL }
+			NOT = { check_variable = { TFRKPHN_invest_count_MAL > 4 } }
+		}
+		custom_cost_trigger = {
+			check_variable = { var = income_var value = 5 compare = greater_than_or_equals }
+		}
+		custom_cost_text = dx_more_than_5B
+		complete_effect = {
+			custom_effect_tooltip = TFRKPHN_after_14_tt
+			set_temp_variable = { var = income_var_temp value = -5 }
+			add_income = yes
+			add_to_variable = { TFRKPHN_invest_count_MAL = 1 }
+			custom_effect_tooltip = TFRKPHN_hong_invest_count_tt
+		}
+		remove_effect = {
+			hidden_effect = {
+				if = {
+					limit = { check_variable = { TFRKPHN_invest_count_MAL = 1 } }
+					MAL = { add_opinion_modifier = { target = KOR modifier = TFRKPHN_invest_trade } }
+				}
+				else_if = {
+					limit = { check_variable = { TFRKPHN_invest_count_MAL = 3 } }
+					custom_effect_tooltip = TFRKPHN_hong_invest_rr_tt
+					hidden_effect = {
+						MAL = {
+							random_owned_controlled_state = {
+								set_temp_variable = { TFRKPHN_rr_state_temp = THIS }
+							}
+							give_resource_rights = { receiver = KOR state = var:TFRKPHN_rr_state_temp }
+						}
+					}
+				}
+				else_if = {
+					limit = { check_variable = { TFRKPHN_invest_count_MAL = 5 } }
+					MAL = { add_opinion_modifier = { target = KOR modifier = TFRKPHN_invest_trade_2 } }
+				}
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_hong_invest_INS = {
+		icon = GFX_decision_generic_attract_foreign_investors
+		cost = 0
+		days_remove = 14
+		days_re_enable = 30
+		priority = 100
+		visible = {
+			tag = KOR
+			country_exists = INS
+		}
+		available = {
+			NOT = { has_war_with = INS }
+			NOT = { check_variable = { TFRKPHN_invest_count_INS > 4 } }
+		}
+		custom_cost_trigger = {
+			check_variable = { var = income_var value = 5 compare = greater_than_or_equals }
+		}
+		custom_cost_text = dx_more_than_5B
+		complete_effect = {
+			custom_effect_tooltip = TFRKPHN_after_14_tt
+			set_temp_variable = { var = income_var_temp value = -5 }
+			add_income = yes
+			add_to_variable = { TFRKPHN_invest_count_INS = 1 }
+			custom_effect_tooltip = TFRKPHN_hong_invest_count_tt
+		}
+		remove_effect = {
+			hidden_effect = {
+				if = {
+					limit = { check_variable = { TFRKPHN_invest_count_INS = 1 } }
+					INS = { add_opinion_modifier = { target = KOR modifier = TFRKPHN_invest_trade } }
+				}
+				else_if = {
+					limit = { check_variable = { TFRKPHN_invest_count_INS = 3 } }
+					custom_effect_tooltip = TFRKPHN_hong_invest_rr_tt
+					hidden_effect = {
+						INS = {
+							random_owned_controlled_state = {
+								set_temp_variable = { TFRKPHN_rr_state_temp = THIS }
+							}
+							give_resource_rights = { receiver = KOR state = var:TFRKPHN_rr_state_temp }
+						}
+					}
+				}
+				else_if = {
+					limit = { check_variable = { TFRKPHN_invest_count_INS = 5 } }
+					INS = { add_opinion_modifier = { target = KOR modifier = TFRKPHN_invest_trade_2 } }
+				}
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_hong_invest_PHI = {
+		icon = GFX_decision_generic_attract_foreign_investors
+		cost = 0
+		days_remove = 14
+		days_re_enable = 30
+		priority = 100
+		visible = {
+			tag = KOR
+			country_exists = PHI
+		}
+		available = {
+			NOT = { has_war_with = PHI }
+			NOT = { check_variable = { TFRKPHN_invest_count_PHI > 4 } }
+		}
+		custom_cost_trigger = {
+			check_variable = { var = income_var value = 5 compare = greater_than_or_equals }
+		}
+		custom_cost_text = dx_more_than_5B
+		complete_effect = {
+			custom_effect_tooltip = TFRKPHN_after_14_tt
+			set_temp_variable = { var = income_var_temp value = -5 }
+			add_income = yes
+			add_to_variable = { TFRKPHN_invest_count_PHI = 1 }
+			custom_effect_tooltip = TFRKPHN_hong_invest_count_tt
+		}
+		remove_effect = {
+			hidden_effect = {
+				if = {
+					limit = { check_variable = { TFRKPHN_invest_count_PHI = 1 } }
+					PHI = { add_opinion_modifier = { target = KOR modifier = TFRKPHN_invest_trade } }
+				}
+				else_if = {
+					limit = { check_variable = { TFRKPHN_invest_count_PHI = 3 } }
+					custom_effect_tooltip = TFRKPHN_hong_invest_rr_tt
+					hidden_effect = {
+						PHI = {
+							random_owned_controlled_state = {
+								set_temp_variable = { TFRKPHN_rr_state_temp = THIS }
+							}
+							give_resource_rights = { receiver = KOR state = var:TFRKPHN_rr_state_temp }
+						}
+					}
+				}
+				else_if = {
+					limit = { check_variable = { TFRKPHN_invest_count_PHI = 5 } }
+					PHI = { add_opinion_modifier = { target = KOR modifier = TFRKPHN_invest_trade_2 } }
+				}
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_hong_invest_BRM = {
+		icon = GFX_decision_generic_attract_foreign_investors
+		cost = 0
+		days_remove = 14
+		days_re_enable = 30
+		priority = 100
+		visible = {
+			tag = KOR
+			country_exists = BRM
+		}
+		available = {
+			NOT = { has_war_with = BRM }
+			NOT = { check_variable = { TFRKPHN_invest_count_BRM > 4 } }
+		}
+		custom_cost_trigger = {
+			check_variable = { var = income_var value = 5 compare = greater_than_or_equals }
+		}
+		custom_cost_text = dx_more_than_5B
+		complete_effect = {
+			custom_effect_tooltip = TFRKPHN_after_14_tt
+			set_temp_variable = { var = income_var_temp value = -5 }
+			add_income = yes
+			add_to_variable = { TFRKPHN_invest_count_BRM = 1 }
+			custom_effect_tooltip = TFRKPHN_hong_invest_count_tt
+		}
+		remove_effect = {
+			hidden_effect = {
+				if = {
+					limit = { check_variable = { TFRKPHN_invest_count_BRM = 1 } }
+					BRM = { add_opinion_modifier = { target = KOR modifier = TFRKPHN_invest_trade } }
+				}
+				else_if = {
+					limit = { check_variable = { TFRKPHN_invest_count_BRM = 3 } }
+					custom_effect_tooltip = TFRKPHN_hong_invest_rr_tt
+					hidden_effect = {
+						BRM = {
+							random_owned_controlled_state = {
+								set_temp_variable = { TFRKPHN_rr_state_temp = THIS }
+							}
+							give_resource_rights = { receiver = KOR state = var:TFRKPHN_rr_state_temp }
+						}
+					}
+				}
+				else_if = {
+					limit = { check_variable = { TFRKPHN_invest_count_BRM = 5 } }
+					BRM = { add_opinion_modifier = { target = KOR modifier = TFRKPHN_invest_trade_2 } }
+				}
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_hong_invest_CAM = {
+		icon = GFX_decision_generic_attract_foreign_investors
+		cost = 0
+		days_remove = 14
+		days_re_enable = 30
+		priority = 100
+		visible = {
+			tag = KOR
+			country_exists = CAM
+		}
+		available = {
+			NOT = { has_war_with = CAM }
+			NOT = { check_variable = { TFRKPHN_invest_count_CAM > 4 } }
+		}
+		custom_cost_trigger = {
+			check_variable = { var = income_var value = 5 compare = greater_than_or_equals }
+		}
+		custom_cost_text = dx_more_than_5B
+		complete_effect = {
+			custom_effect_tooltip = TFRKPHN_after_14_tt
+			set_temp_variable = { var = income_var_temp value = -5 }
+			add_income = yes
+			add_to_variable = { TFRKPHN_invest_count_CAM = 1 }
+			custom_effect_tooltip = TFRKPHN_hong_invest_count_tt
+		}
+		remove_effect = {
+			hidden_effect = {
+				if = {
+					limit = { check_variable = { TFRKPHN_invest_count_CAM = 1 } }
+					CAM = { add_opinion_modifier = { target = KOR modifier = TFRKPHN_invest_trade } }
+				}
+				else_if = {
+					limit = { check_variable = { TFRKPHN_invest_count_CAM = 3 } }
+					custom_effect_tooltip = TFRKPHN_hong_invest_rr_tt
+					hidden_effect = {
+						CAM = {
+							random_owned_controlled_state = {
+								set_temp_variable = { TFRKPHN_rr_state_temp = THIS }
+							}
+							give_resource_rights = { receiver = KOR state = var:TFRKPHN_rr_state_temp }
+						}
+					}
+				}
+				else_if = {
+					limit = { check_variable = { TFRKPHN_invest_count_CAM = 5 } }
+					CAM = { add_opinion_modifier = { target = KOR modifier = TFRKPHN_invest_trade_2 } }
+				}
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_hong_invest_LAO = {
+		icon = GFX_decision_generic_attract_foreign_investors
+		cost = 0
+		days_remove = 14
+		days_re_enable = 30
+		priority = 100
+		visible = {
+			tag = KOR
+			country_exists = LAO
+		}
+		available = {
+			NOT = { has_war_with = LAO }
+			NOT = { check_variable = { TFRKPHN_invest_count_LAO > 4 } }
+		}
+		custom_cost_trigger = {
+			check_variable = { var = income_var value = 5 compare = greater_than_or_equals }
+		}
+		custom_cost_text = dx_more_than_5B
+		complete_effect = {
+			custom_effect_tooltip = TFRKPHN_after_14_tt
+			set_temp_variable = { var = income_var_temp value = -5 }
+			add_income = yes
+			add_to_variable = { TFRKPHN_invest_count_LAO = 1 }
+			custom_effect_tooltip = TFRKPHN_hong_invest_count_tt
+		}
+		remove_effect = {
+			hidden_effect = {
+				if = {
+					limit = { check_variable = { TFRKPHN_invest_count_LAO = 1 } }
+					LAO = { add_opinion_modifier = { target = KOR modifier = TFRKPHN_invest_trade } }
+				}
+				else_if = {
+					limit = { check_variable = { TFRKPHN_invest_count_LAO = 3 } }
+					custom_effect_tooltip = TFRKPHN_hong_invest_rr_tt
+					hidden_effect = {
+						LAO = {
+							random_owned_controlled_state = {
+								set_temp_variable = { TFRKPHN_rr_state_temp = THIS }
+							}
+							give_resource_rights = { receiver = KOR state = var:TFRKPHN_rr_state_temp }
+						}
+					}
+				}
+				else_if = {
+					limit = { check_variable = { TFRKPHN_invest_count_LAO = 5 } }
+					LAO = { add_opinion_modifier = { target = KOR modifier = TFRKPHN_invest_trade_2 } }
+				}
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_hong_invest_AST = {
+		icon = GFX_decision_generic_attract_foreign_investors
+		cost = 0
+		days_remove = 14
+		days_re_enable = 30
+		priority = 100
+		visible = {
+			tag = KOR
+			country_exists = AST
+		}
+		available = {
+			NOT = { has_war_with = AST }
+			NOT = { check_variable = { TFRKPHN_invest_count_AST > 4 } }
+		}
+		custom_cost_trigger = {
+			check_variable = { var = income_var value = 5 compare = greater_than_or_equals }
+		}
+		custom_cost_text = dx_more_than_5B
+		complete_effect = {
+			custom_effect_tooltip = TFRKPHN_after_14_tt
+			set_temp_variable = { var = income_var_temp value = -5 }
+			add_income = yes
+			add_to_variable = { TFRKPHN_invest_count_AST = 1 }
+			custom_effect_tooltip = TFRKPHN_hong_invest_count_tt
+		}
+		remove_effect = {
+			hidden_effect = {
+				if = {
+					limit = { check_variable = { TFRKPHN_invest_count_AST = 1 } }
+					AST = { add_opinion_modifier = { target = KOR modifier = TFRKPHN_invest_trade } }
+				}
+				else_if = {
+					limit = { check_variable = { TFRKPHN_invest_count_AST = 3 } }
+					custom_effect_tooltip = TFRKPHN_hong_invest_rr_tt
+					hidden_effect = {
+						AST = {
+							random_owned_controlled_state = {
+								set_temp_variable = { TFRKPHN_rr_state_temp = THIS }
+							}
+							give_resource_rights = { receiver = KOR state = var:TFRKPHN_rr_state_temp }
+						}
+					}
+				}
+				else_if = {
+					limit = { check_variable = { TFRKPHN_invest_count_AST = 5 } }
+					AST = { add_opinion_modifier = { target = KOR modifier = TFRKPHN_invest_trade_2 } }
+				}
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_hong_invest_NZL = {
+		icon = GFX_decision_generic_attract_foreign_investors
+		cost = 0
+		days_remove = 14
+		days_re_enable = 30
+		priority = 100
+		visible = {
+			tag = KOR
+			country_exists = NZL
+		}
+		available = {
+			NOT = { has_war_with = NZL }
+			NOT = { check_variable = { TFRKPHN_invest_count_NZL > 4 } }
+		}
+		custom_cost_trigger = {
+			check_variable = { var = income_var value = 5 compare = greater_than_or_equals }
+		}
+		custom_cost_text = dx_more_than_5B
+		complete_effect = {
+			custom_effect_tooltip = TFRKPHN_after_14_tt
+			set_temp_variable = { var = income_var_temp value = -5 }
+			add_income = yes
+			add_to_variable = { TFRKPHN_invest_count_NZL = 1 }
+			custom_effect_tooltip = TFRKPHN_hong_invest_count_tt
+		}
+		remove_effect = {
+			hidden_effect = {
+				if = {
+					limit = { check_variable = { TFRKPHN_invest_count_NZL = 1 } }
+					NZL = { add_opinion_modifier = { target = KOR modifier = TFRKPHN_invest_trade } }
+				}
+				else_if = {
+					limit = { check_variable = { TFRKPHN_invest_count_NZL = 3 } }
+					custom_effect_tooltip = TFRKPHN_hong_invest_rr_tt
+					hidden_effect = {
+						NZL = {
+							random_owned_controlled_state = {
+								set_temp_variable = { TFRKPHN_rr_state_temp = THIS }
+							}
+							give_resource_rights = { receiver = KOR state = var:TFRKPHN_rr_state_temp }
+						}
+					}
+				}
+				else_if = {
+					limit = { check_variable = { TFRKPHN_invest_count_NZL = 5 } }
+					NZL = { add_opinion_modifier = { target = KOR modifier = TFRKPHN_invest_trade_2 } }
+				}
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_hong_invest_JAP = {
+		icon = GFX_decision_generic_attract_foreign_investors
+		cost = 0
+		days_remove = 14
+		days_re_enable = 30
+		priority = 100
+		visible = {
+			tag = KOR
+			country_exists = JAP
+		}
+		available = {
+			NOT = { has_war_with = JAP }
+			NOT = { check_variable = { TFRKPHN_invest_count_JAP > 4 } }
+		}
+		custom_cost_trigger = {
+			check_variable = { var = income_var value = 5 compare = greater_than_or_equals }
+		}
+		custom_cost_text = dx_more_than_5B
+		complete_effect = {
+			custom_effect_tooltip = TFRKPHN_after_14_tt
+			set_temp_variable = { var = income_var_temp value = -5 }
+			add_income = yes
+			add_to_variable = { TFRKPHN_invest_count_JAP = 1 }
+			custom_effect_tooltip = TFRKPHN_hong_invest_count_tt
+			set_temp_variable = { industrial_development_var_temp = 0.05 }
+		}
+		remove_effect = {
+			hidden_effect = {
+				add_industrial_development = yes
+				if = {
+					limit = { check_variable = { TFRKPHN_invest_count_JAP = 1 } }
+					JAP = { add_opinion_modifier = { target = KOR modifier = TFRKPHN_invest_trade } }
+				}
+				else_if = {
+					limit = { check_variable = { TFRKPHN_invest_count_JAP = 3 } }
+					custom_effect_tooltip = TFRKPHN_hong_invest_rr_tt
+					hidden_effect = {
+						JAP = {
+							random_owned_controlled_state = {
+								set_temp_variable = { TFRKPHN_rr_state_temp = THIS }
+							}
+							give_resource_rights = { receiver = KOR state = var:TFRKPHN_rr_state_temp }
+						}
+					}
+				}
+				else_if = {
+					limit = { check_variable = { TFRKPHN_invest_count_JAP = 5 } }
+					JAP = { add_opinion_modifier = { target = KOR modifier = TFRKPHN_invest_trade_2 } }
+				}
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_hong_invest_PRC = {
+		icon = GFX_decision_generic_attract_foreign_investors
+		cost = 0
+		days_remove = 14
+		days_re_enable = 30
+		priority = 100
+		visible = {
+			NOT = { has_global_flag = PRC_ongoing_taiwan_war }
+			NOT = { has_global_flag = PRC_taiwan_war_won }
+			NOT = { has_global_flag = PRC_taiwan_war_lost }
+			tag = KOR
+			country_exists = PRC
+			has_country_flag = TFRKPHN_hong_chose_prc
+		}
+		available = {
+			NOT = { has_war_with = PRC }
+			NOT = { check_variable = { TFRKPHN_invest_count_PRC > 4 } }
+		}
+		custom_cost_trigger = {
+			check_variable = { var = income_var value = 5 compare = greater_than_or_equals }
+		}
+		custom_cost_text = dx_more_than_5B
+		complete_effect = {
+			custom_effect_tooltip = TFRKPHN_after_14_tt
+			set_temp_variable = { var = income_var_temp value = -5 }
+			add_income = yes
+			add_to_variable = { TFRKPHN_invest_count_PRC = 1 }
+			custom_effect_tooltip = TFRKPHN_hong_invest_count_tt
+			custom_effect_tooltip = TFRKPHN_hong_invest_prc_civ_tt
+		}
+		remove_effect = {
+			hidden_effect = {
+				hidden_effect = {
+					random_owned_controlled_state = {
+						limit = {
+							is_core_of = ROOT
+							free_building_slots = { building = industrial_complex size > 0 include_locked = no }
+						}
+						add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+					}
+				}
+				if = {
+					limit = { check_variable = { TFRKPHN_invest_count_PRC = 1 } }
+					PRC = { add_opinion_modifier = { target = KOR modifier = TFRKPHN_invest_trade } }
+				}
+				else_if = {
+					limit = { check_variable = { TFRKPHN_invest_count_PRC = 3 } }
+					custom_effect_tooltip = TFRKPHN_hong_invest_rr_tt
+					hidden_effect = {
+						PRC = {
+							random_owned_controlled_state = {
+								set_temp_variable = { TFRKPHN_rr_state_temp = THIS }
+							}
+							give_resource_rights = { receiver = KOR state = var:TFRKPHN_rr_state_temp }
+						}
+					}
+				}
+				else_if = {
+					limit = { check_variable = { TFRKPHN_invest_count_PRC = 5 } }
+					PRC = { add_opinion_modifier = { target = KOR modifier = TFRKPHN_invest_trade_2 } }
+				}
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_hong_invest_CHI = {
+		icon = GFX_decision_generic_attract_foreign_investors
+		cost = 0
+		days_remove = 14
+		days_re_enable = 30
+		priority = 100
+		visible = {
+			NOT = { has_global_flag = PRC_ongoing_taiwan_war }
+			NOT = { has_global_flag = PRC_taiwan_war_won }
+			NOT = { has_global_flag = PRC_taiwan_war_lost }
+			tag = KOR
+			country_exists = CHI
+			has_country_flag = TFRKPHN_hong_chose_chi
+		}
+		available = {
+			NOT = { has_war_with = CHI }
+			NOT = { check_variable = { TFRKPHN_invest_count_CHI > 4 } }
+		}
+		custom_cost_trigger = {
+			check_variable = { var = income_var value = 5 compare = greater_than_or_equals }
+		}
+		custom_cost_text = dx_more_than_5B
+		complete_effect = {
+			custom_effect_tooltip = TFRKPHN_after_14_tt
+			set_temp_variable = { var = income_var_temp value = -5 }
+			add_income = yes
+			add_to_variable = { TFRKPHN_invest_count_CHI = 1 }
+			custom_effect_tooltip = TFRKPHN_hong_invest_count_tt
+			custom_effect_tooltip = TFRKPHN_hong_invest_chi_pdto_tt
+		}
+		remove_effect = {
+			hidden_effect = {
+				hidden_effect = {
+					if = {
+						limit = { country_exists = BRM }
+						set_temp_variable = { var = global.JAP_influence_BRM_var_temp value = 0.10 }
+						JAP_add_BRM_influence = yes
+					}
+					if = {
+						limit = { country_exists = VIN }
+						set_temp_variable = { var = global.JAP_influence_VIN_var_temp value = 0.10 }
+						JAP_add_VIN_influence = yes
+					}
+					if = {
+						limit = { country_exists = LAO }
+						set_temp_variable = { var = global.JAP_influence_LAO_var_temp value = 0.10 }
+						JAP_add_LAO_influence = yes
+					}
+					if = {
+						limit = { country_exists = CAM }
+						set_temp_variable = { var = global.JAP_influence_CAM_var_temp value = 0.10 }
+						JAP_add_CAM_influence = yes
+					}
+					if = {
+						limit = { country_exists = INS }
+						set_temp_variable = { var = global.JAP_influence_INS_var_temp value = 0.10 }
+						JAP_add_INS_influence = yes
+					}
+					if = {
+						limit = { country_exists = MAL }
+						set_temp_variable = { var = global.JAP_influence_MAL_var_temp value = 0.10 }
+						JAP_add_MAL_influence = yes
+					}
+					if = {
+						limit = { country_exists = PHI }
+						set_temp_variable = { var = global.JAP_influence_PHI_var_temp value = 0.10 }
+						JAP_add_PHI_influence = yes
+					}
+					if = {
+						limit = { country_exists = SIG }
+						set_temp_variable = { var = global.JAP_influence_SIG_var_temp value = 0.10 }
+						JAP_add_SIG_influence = yes
+					}
+					if = {
+						limit = { country_exists = SIA }
+						set_temp_variable = { var = global.JAP_influence_SIA_var_temp value = 0.10 }
+						JAP_add_SIA_influence = yes
+					}
+				}
+				if = {
+					limit = { check_variable = { TFRKPHN_invest_count_CHI = 1 } }
+					CHI = { add_opinion_modifier = { target = KOR modifier = TFRKPHN_invest_trade } }
+				}
+				else_if = {
+					limit = { check_variable = { TFRKPHN_invest_count_CHI = 3 } }
+					custom_effect_tooltip = TFRKPHN_hong_invest_rr_tt
+					hidden_effect = {
+						CHI = {
+							random_owned_controlled_state = {
+								set_temp_variable = { TFRKPHN_rr_state_temp = THIS }
+							}
+							give_resource_rights = { receiver = KOR state = var:TFRKPHN_rr_state_temp }
+						}
+					}
+				}
+				else_if = {
+					limit = { check_variable = { TFRKPHN_invest_count_CHI = 5 } }
+					CHI = { add_opinion_modifier = { target = KOR modifier = TFRKPHN_invest_trade_2 } }
+				}
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+}

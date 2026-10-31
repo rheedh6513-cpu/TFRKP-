@@ -1,0 +1,16 @@
+opinion_modifiers = {
+	TFRKPHN_invest_trade = {
+		value = 20
+		trade = yes
+	}
+	TFRKPHN_invest_trade_2 = {
+		value = 20
+		trade = yes
+	}
+	TFRKPHN_condemn_china = {
+		value = 30
+	}
+	TFRKPHN_postwar_friend = {
+		value = 30
+	}
+}

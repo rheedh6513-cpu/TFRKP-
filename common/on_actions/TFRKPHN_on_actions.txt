@@ -1,0 +1,218 @@
+# TFRKP Hong Nak: 전당대회 이벤트를 실제 날짜에 정확히 띄우기
+on_actions = {
+	on_daily_KOR = {
+		effect = {
+			# 전국 지지도 하락 미션: 2주마다 무한 반복
+if = {
+	limit = {
+		has_country_flag = TFRKP_HN_hong_president
+		has_completed_focus = TFRKPHN_hong_b01_02
+		NOT = { has_active_mission = TFRKPHN_support_decay_mission }
+		NOT = { has_country_flag = TFRKPHN_poll_ban KOR_in_taiwan_war = yes }	# 여론조사 금지: 전쟁 중엔 쉼
+	}
+	activate_mission = TFRKPHN_support_decay_mission
+}
+
+# 개헌 논의: 남은 기간 표시, 2주마다 반대파 움직임 미션 재가동, 300일 만료 처리
+if = {
+	limit = { has_country_flag = TFRKPHN_amend_active }
+	subtract_from_variable = { TFRKPHN_amend_days = 1 }
+	clamp_variable = { var = TFRKPHN_amend_days min = 0 max = 300 }
+	if = {
+		limit = {
+			has_country_flag = TFRKPHN_amend_ongoing
+			NOT = { has_active_mission = TFRKPHN_amend_opposition_moves }
+		}
+		activate_mission = TFRKPHN_amend_opposition_moves
+	}
+	if = {
+		limit = { check_variable = { TFRKPHN_amend_days < 1 } }
+		TFRKPHN_amend_end = yes
+	}
+}
+
+# 개헌안 가결 후에는 결정 탭의 개헌 결정으로 진행한다 (자동 완료 없음)
+
+# 양철 인간: 참전한 홍준표 대통령, 양안전쟁이 끝나고 7일 뒤 (패전 310 / 승전 311)
+if = {
+	limit = {
+		has_country_flag = TFRKP_HN_hong_president
+		has_completed_focus = TFRKPHN_hong_b02_02
+		NOT = { has_country_flag = TFRKPHN_tin_man_sent }
+		OR = {
+			has_global_flag = PRC_taiwan_war_won
+			has_global_flag = PRC_taiwan_war_lost
+		}
+	}
+	set_country_flag = TFRKPHN_tin_man_sent
+	if = {
+		limit = { has_global_flag = PRC_taiwan_war_won }
+		country_event = { id = tfrkphn.310 days = 7 }
+	}
+	else = {
+		country_event = { id = tfrkphn.311 days = 7 }
+		# 승전: 전국 지지도 +12
+		set_temp_variable = { TFRKPHN_support_delta = 12 }
+		TFRKPHN_support_add_all = yes
+		TFRKPHN_hong_update_support_display = yes
+	}
+}
+
+# 2020.3.27: 북한 선전매체 '메아리'의 홍준표 언급 보도 (한 달 안에 시작한 게임에서만)
+if = {
+	limit = {
+		NOT = { date < 2020.3.27 }
+		date < 2020.4.27
+		NOT = { has_global_flag = TFRKPHN_meari_hong_fired }
+	}
+	set_global_flag = TFRKPHN_meari_hong_fired
+	country_event = { id = tfrkphn.308 }
+}
+
+# 제21대 총선 다음 날(2020.4.16): 무소속 홍준표 당선 보도 (한 달 안에 시작한 게임에서만)
+if = {
+	limit = {
+		NOT = { date < 2020.4.16 }
+		date < 2020.5.16
+		NOT = { has_global_flag = TFRKPHN_hong_2020_win_fired }
+	}
+	set_global_flag = TFRKPHN_hong_2020_win_fired
+	country_event = { id = tfrkphn.306 }
+}
+
+# 제21대 대선 (2027.3.3): 홍준표 단임 종료, 양안전쟁 결과로 차기 대통령 결정
+if = {
+	limit = {
+		NOT = { date < 2027.3.3 }
+		has_country_flag = TFRKP_HN_hong_president
+		NOT = { has_country_flag = TFRKPHN_ge2027_done }
+		OR = {
+			has_global_flag = PRC_taiwan_war_lost
+			has_global_flag = PRC_taiwan_war_won
+		}
+	}
+	set_country_flag = TFRKPHN_ge2027_done
+	TFRKPHN_hong_update_support_display = yes
+	if = {	# 개입 · 승전
+		limit = { has_completed_focus = TFRKPHN_hong_b02_02 has_global_flag = PRC_taiwan_war_lost }
+		if = {
+			limit = { check_variable = { TFRKPHN_support_avg > 39.999 } }	# 40% 이상이면 이인제
+			country_event = { id = tfrkphn.301 }
+		}
+		else = { country_event = { id = tfrkphn.302 } }
+	}
+	else_if = {	# 개입 · 패전
+		limit = { has_completed_focus = TFRKPHN_hong_b02_02 }
+		country_event = { id = tfrkphn.303 }
+	}
+	else_if = {	# 중립 · 승전
+		limit = { has_global_flag = PRC_taiwan_war_lost }
+		country_event = { id = tfrkphn.304 }
+	}
+	else = {	# 중립 · 패전
+		country_event = { id = tfrkphn.305 }
+	}
+}
+
+# 제22대 총선(2024.4.10) 결과 이벤트: 홍준표 대통령 + 양안전쟁 참전 승전 경로
+			if = {
+				limit = {
+					NOT = { date < 2024.4.10 }
+					has_country_flag = TFRKP_HN_hong_president
+					has_global_flag = PRC_taiwan_war_lost
+					has_completed_focus = TFRKPHN_hong_b02_02
+					NOT = { has_country_flag = TFRKPHN_ge2024_done }
+					NOT = { has_country_flag = TFRKPHN_ge2024_sent }
+				}
+				set_country_flag = TFRKPHN_ge2024_sent
+				country_event = { id = tfrkphn.151 }
+			}
+			# 모래시계 검사: 이미 홍준표 대통령인 저장 파일에서도 모래시계 변수를 준비한다
+			if = {
+				limit = {
+					has_country_flag = TFRKP_HN_hong_president
+					NOT = { has_country_flag = TFRKPHN_hourglass_init }
+				}
+				TFRKPHN_hourglass_init = yes
+			}
+			if = {
+				limit = {
+					NOT = { date < 2021.10.10 }
+					NOT = { has_global_flag = TFRKPHN_dpk_convention_fired }
+					NOT = { has_country_flag = KOR_sided_with_yoon }
+					NOT = { has_country_flag = KOR_sided_with_lee }
+				}
+				set_global_flag = TFRKPHN_dpk_convention_fired
+				country_event = { id = tfrkphn.2 }
+			}
+			if = {
+				limit = {
+					NOT = { date < 2021.11.5 }
+					NOT = { has_global_flag = TFRKPHN_ppp_convention_fired }
+					NOT = { has_country_flag = KOR_sided_with_yoon }
+					NOT = { has_country_flag = KOR_sided_with_lee }
+				}
+				set_global_flag = TFRKPHN_ppp_convention_fired
+				country_event = { id = tfrkphn.1 }
+			}
+
+			# 홍준표 중점 트리 안전장치: 대선 후에도 홍준표 트리가 적용되지 않았다면 다시 적용한다
+			if = {
+				limit = {
+					NOT = { date < 2022.5.10 }
+					has_country_flag = TFRKP_HN_PPP_hong
+					has_country_flag = KOR_yoon_path
+					NOT = { has_country_flag = TFRKPHN_tree_confirmed }
+					has_focus_tree = TFRKPHN_hong_tree
+				}
+				set_country_flag = TFRKPHN_tree_confirmed
+				log = "TFRKPHN_DIAG hong tree confirmed active"
+			}
+			if = {
+				limit = {
+					NOT = { date < 2022.5.10 }
+					has_country_flag = TFRKP_HN_PPP_hong
+					has_country_flag = KOR_yoon_path
+					NOT = { check_variable = { TFRKPHN_tree_retry > 30 } }
+					OR = {
+						NOT = { has_country_flag = TFRKP_HN_hong_president }
+						AND = {
+							NOT = { has_country_flag = TFRKPHN_tree_confirmed }
+							NOT = { has_focus_tree = TFRKPHN_hong_tree }
+						}
+					}
+				}
+				country_event = { id = tfrkphn.12 }
+			}
+
+			# 홍준표 트리: 양안전쟁 상태가 바뀌면 중점 트리 분기(2번 전쟁 / 3번 승리)를 새로 그린다
+			if = {
+				limit = {
+					has_country_flag = TFRKP_HN_hong_president
+					KOR_in_taiwan_war = yes
+					NOT = { has_country_flag = TFRKPHN_b02_shown }
+				}
+				set_country_flag = TFRKPHN_b02_shown
+				mark_focus_tree_layout_dirty = yes
+			}
+			if = {
+				limit = {
+					has_country_flag = TFRKP_HN_hong_president
+					KOR_in_taiwan_war = no
+					has_country_flag = TFRKPHN_b02_shown
+				}
+				clr_country_flag = TFRKPHN_b02_shown
+				mark_focus_tree_layout_dirty = yes
+			}
+			if = {
+				limit = {
+					has_country_flag = TFRKP_HN_hong_president
+					has_global_flag = PRC_taiwan_war_lost
+					NOT = { has_country_flag = TFRKPHN_b03_shown }
+				}
+				set_country_flag = TFRKPHN_b03_shown
+				mark_focus_tree_layout_dirty = yes
+			}
+		}
+	}
+}

@@ -1,0 +1,18 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_TFRKPHN_crime_board"
+		texturefile = "gfx/interface/gui/TFRKPHN_crime/TFRKPHN_crime_board.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_crime_stamp"
+		texturefile = "gfx/interface/gui/TFRKPHN_crime/TFRKPHN_crime_stamp.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_crime_hit"
+		texturefile = "gfx/interface/gui/TFRKPHN_crime/TFRKPHN_crime_hit.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_crime_sel"
+		texturefile = "gfx/interface/gui/TFRKPHN_crime/TFRKPHN_crime_sel.png"
+	}
+}

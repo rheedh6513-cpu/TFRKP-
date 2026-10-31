@@ -1,0 +1,1729 @@
+add_namespace = tfrkphn
+
+# 2021 People Power Party convention: Yoon Suk-yeol or Hong Joon-pyo
+country_event = {
+	id = tfrkphn.1
+	title = tfrkphn.1.t
+	desc = tfrkphn.1.desc
+	picture = GFX_TFRKPHN_ppp_convention
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = KOR
+		NOT = { date < 2021.11.5 }
+		# 이미 대선 후보를 골랐다면(대선 중점을 일찍 끝낸 경우) 늦은 전당대회는 열리지 않는다
+		NOT = { has_country_flag = KOR_sided_with_yoon }
+		NOT = { has_country_flag = KOR_sided_with_lee }
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	immediate = {
+		set_global_flag = TFRKPHN_ppp_convention_fired
+	}
+
+	option = {
+		name = tfrkphn.1.a
+		ai_chance = { base = 100 }
+		custom_effect_tooltip = TFRKPHN_tt_yoon
+		set_country_flag = TFRKP_HN_PPP_yoon
+	}
+
+	option = {
+		name = tfrkphn.1.b
+		ai_chance = { base = 0 }
+		custom_effect_tooltip = TFRKPHN_tt_hong
+		set_country_flag = TFRKP_HN_PPP_hong
+	}
+}
+
+# 2021 Democratic Party convention: Lee Jae-myung or Lee Nak-yeon
+country_event = {
+	id = tfrkphn.2
+	title = tfrkphn.2.t
+	desc = tfrkphn.2.desc
+	picture = GFX_TFRKPHN_dpk_convention
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = KOR
+		NOT = { date < 2021.10.10 }
+		# 이미 대선 후보를 골랐다면(대선 중점을 일찍 끝낸 경우) 늦은 전당대회는 열리지 않는다
+		NOT = { has_country_flag = KOR_sided_with_yoon }
+		NOT = { has_country_flag = KOR_sided_with_lee }
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	immediate = {
+		set_global_flag = TFRKPHN_dpk_convention_fired
+	}
+
+	option = {
+		name = tfrkphn.2.a
+		ai_chance = { base = 100 }
+		custom_effect_tooltip = TFRKPHN_tt_lee_jaemyung
+		set_country_flag = TFRKP_HN_DPK_lee_jaemyung
+	}
+
+	option = {
+		name = tfrkphn.2.b
+		ai_chance = { base = 0 }
+		custom_effect_tooltip = TFRKPHN_tt_lee_nakyeon
+		set_country_flag = TFRKP_HN_DPK_lee_nakyeon
+	}
+}
+
+# 홍준표 시작 처리 안전장치 (매일 점검 on_action이 호출한다)
+# - 홍준표 대통령 표시가 없으면 시작 처리를 직접 실행한다 (tfrkphn.10 이 돌지 않았을 때)
+# - 표시는 있는데 홍준표 트리가 적용되지 않았으면 트리를 다시 불러온다
+country_event = {
+	id = tfrkphn.12
+	hidden = yes
+	is_triggered_only = yes
+
+	immediate = {
+		log = "TFRKPHN_DIAG tfrkphn.12 safety net fired"
+		add_to_variable = { TFRKPHN_tree_retry = 1 }
+		if = {
+			limit = { NOT = { has_country_flag = TFRKP_HN_hong_president } }
+			log = "TFRKPHN_DIAG tfrkphn.12: running hong start effect directly"
+			TFRKPHN_hong_start_effect = yes
+		}
+		else = {
+			log = "TFRKPHN_DIAG tfrkphn.12: reloading hong tree"
+			load_focus_tree = { tree = TFRKPHN_hong_tree keep_completed = no }
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+
+	option = {
+		name = tfrkphn.12.a
+	}
+}
+
+# Lee Nak-yeon wins the 2022 election (Democratic Party side)
+country_event = {
+	id = tfrkphn.11
+	hidden = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = KOR
+		has_country_flag = KOR_lee_path
+		has_country_flag = TFRKP_HN_DPK_lee_nakyeon
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	immediate = {
+		# 대통령 교체는 korea.52(대선 결과)에서 처리
+		set_country_flag = TFRKP_HN_nak_president
+		load_focus_tree = { tree = TFRKPHN_nak_tree keep_completed = no }
+	}
+
+	option = {
+		name = tfrkphn.11.a
+	}
+}
+
+# Hong Joon-pyo cabinet (like korea.106 for Yoon)
+country_event = {
+	id = tfrkphn.20
+	title = tfrkphn.20.t
+	desc = tfrkphn.20.desc
+	picture = GFX_TFRKPHN_hong_temp
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			remove_ideas = KOR_han_duck_soo_HM
+			remove_ideas = KOR_park_jin_FM
+			remove_ideas = KOR_choo_kyung_hoo_EM
+			remove_ideas = KOR_lee_sang_min_IM
+			remove_ideas = KOR_kim_seung_han_IntelM
+			remove_ideas = KOR_lee_jung_sub_TM
+			add_ideas = TFRKPHN_lee_in_je_HM
+			add_ideas = TFRKPHN_kim_dae_sik_FM
+			add_ideas = TFRKPHN_seo_byung_soo_EM
+			add_ideas = TFRKPHN_hong_il_pyo_IM
+			add_ideas = TFRKPHN_yoon_jae_ok_IntelM
+			add_ideas = TFRKPHN_lim_jong_deuk_TM
+			swap_ideas = {
+				remove_idea = KOR_candlelight_idea
+				add_idea = KOR_conservation_idea
+			}
+		}
+	}
+
+	option = {
+		name = tfrkphn.20.a
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = KOR_candlelight_idea
+				add_idea = KOR_conservation_idea
+			}
+		}
+		custom_effect_tooltip = appoint_head_minister_tooltip
+		show_ideas_tooltip = TFRKPHN_lee_in_je_HM
+		custom_effect_tooltip = appoint_foreign_minister_tooltip
+		show_ideas_tooltip = TFRKPHN_kim_dae_sik_FM
+		custom_effect_tooltip = appoint_economic_minister_tooltip
+		show_ideas_tooltip = TFRKPHN_seo_byung_soo_EM
+		custom_effect_tooltip = appoint_interior_minister_tooltip
+		show_ideas_tooltip = TFRKPHN_hong_il_pyo_IM
+		custom_effect_tooltip = appoint_int_minister_tooltip
+		show_ideas_tooltip = TFRKPHN_yoon_jae_ok_IntelM
+		custom_effect_tooltip = appoint_theorist_minister_tooltip
+		show_ideas_tooltip = TFRKPHN_lim_jong_deuk_TM
+	}
+}
+
+# 1-6 이벤트
+country_event = {
+	id = tfrkphn.21
+	title = tfrkphn.21.t
+	desc = tfrkphn.21.desc
+	picture = GFX_TFRKPHN_hong_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.21.a
+		if = {
+			limit = { has_country_flag = TFRKPHN_hong_people_event_done }
+			add_ideas = TFRKPHN_true_conservative
+		}
+		else = {
+			custom_effect_tooltip = TFRKPHN_true_conservative_wait_tt
+		}
+		set_country_flag = TFRKPHN_hong_youth_event_done
+	}
+}
+
+# 1-7 이벤트
+country_event = {
+	id = tfrkphn.22
+	title = tfrkphn.22.t
+	desc = tfrkphn.22.desc
+	picture = GFX_TFRKPHN_hong_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.22.a
+		if = {
+			limit = { has_country_flag = TFRKPHN_hong_youth_event_done }
+			add_ideas = TFRKPHN_true_conservative
+		}
+		else = {
+			custom_effect_tooltip = TFRKPHN_true_conservative_wait_tt
+		}
+		set_country_flag = TFRKPHN_hong_people_event_done
+	}
+}
+
+# 1-8 이벤트
+country_event = {
+	id = tfrkphn.23
+	title = tfrkphn.23.t
+	desc = tfrkphn.23.desc
+	picture = GFX_TFRKPHN_hong_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.23.a
+		add_popularity = { ideology = social_liberal popularity = -0.05 }
+		custom_effect_tooltip = TFRKPHN_hong_all_regions_dpk_down_tt
+		hidden_effect = {
+			add_to_variable = { TFRKPHN_support_seoul = 5 }
+			clamp_variable = { var = TFRKPHN_support_seoul min = 0 max = 100 }
+			add_to_variable = { TFRKPHN_support_gyeonggi = 5 }
+			clamp_variable = { var = TFRKPHN_support_gyeonggi min = 0 max = 100 }
+			add_to_variable = { TFRKPHN_support_gangwon = 5 }
+			clamp_variable = { var = TFRKPHN_support_gangwon min = 0 max = 100 }
+			add_to_variable = { TFRKPHN_support_chungcheong = 5 }
+			clamp_variable = { var = TFRKPHN_support_chungcheong min = 0 max = 100 }
+			add_to_variable = { TFRKPHN_support_jeonbuk = 5 }
+			clamp_variable = { var = TFRKPHN_support_jeonbuk min = 0 max = 100 }
+			add_to_variable = { TFRKPHN_support_jeonnam = 5 }
+			clamp_variable = { var = TFRKPHN_support_jeonnam min = 0 max = 100 }
+			add_to_variable = { TFRKPHN_support_gyeongbuk = 5 }
+			clamp_variable = { var = TFRKPHN_support_gyeongbuk min = 0 max = 100 }
+			add_to_variable = { TFRKPHN_support_gyeongnam = 5 }
+			clamp_variable = { var = TFRKPHN_support_gyeongnam min = 0 max = 100 }
+			add_to_variable = { TFRKPHN_support_jeju = 5 }
+			clamp_variable = { var = TFRKPHN_support_jeju min = 0 max = 100 }
+			TFRKPHN_hong_update_support_display = yes
+		}
+	}
+}
+
+# 1-9 이벤트
+country_event = {
+	id = tfrkphn.24
+	title = tfrkphn.24.t
+	desc = tfrkphn.24.desc
+	picture = GFX_TFRKPHN_hong_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.24.a
+		set_temp_variable = { military_development_var_temp = 0.10 }
+		add_military_development = yes
+	}
+}
+
+# 1-10 이벤트
+country_event = {
+	id = tfrkphn.25
+	title = tfrkphn.25.t
+	desc = tfrkphn.25.desc
+	picture = GFX_TFRKPHN_hong_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.25.a
+		set_temp_variable = { poverty_development_var_temp = 0.10 }
+		add_poverty_development = yes
+	}
+}
+
+# 1-11 이벤트
+country_event = {
+	id = tfrkphn.26
+	title = tfrkphn.26.t
+	desc = tfrkphn.26.desc
+	picture = GFX_TFRKPHN_hong_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.26.a
+		add_ideas = TFRKPHN_intel_restore
+	}
+}
+
+# 1-13 이벤트
+country_event = {
+	id = tfrkphn.27
+	title = tfrkphn.27.t
+	desc = tfrkphn.27.desc
+	picture = GFX_TFRKPHN_hong_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.27.a
+	}
+}
+
+# 2-1 이벤트: 대만지원법 표결
+country_event = {
+	id = tfrkphn.29
+	title = tfrkphn.29.t
+	desc = tfrkphn.29.desc
+	picture = GFX_TFRKPHN_hong_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {	# 가결
+		name = tfrkphn.29.a
+		ai_chance = { base = 70 }
+		set_country_flag = TFRKPHN_hong_tw_bill_passed
+		custom_effect_tooltip = TFRKPHN_hong_tw_bill_passed_tt
+	}
+
+	option = {	# 부결
+		name = tfrkphn.29.b
+		ai_chance = { base = 30 }
+		set_country_flag = TFRKPHN_hong_tw_bill_rejected
+		custom_effect_tooltip = TFRKPHN_hong_tw_bill_rejected_tt
+	}
+}
+
+# 2-2 이벤트: 대한민국의 양안전쟁 참전
+country_event = {
+	id = tfrkphn.30
+	title = tfrkphn.30.t
+	desc = tfrkphn.30.desc
+	picture = GFX_TFRKPHN_hong_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.30.a
+		set_country_flag = TFRKPHN_hong_tw_de_facto_war
+	}
+}
+
+# 2-4 이벤트: 탄약 지원
+country_event = {
+	id = tfrkphn.31
+	title = tfrkphn.31.t
+	desc = tfrkphn.31.desc
+	picture = GFX_TFRKPHN_hong_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.31.a
+	}
+}
+
+# 2-8 이벤트: 후방의 싸움
+country_event = {
+	id = tfrkphn.32
+	title = tfrkphn.32.t
+	desc = tfrkphn.32.desc
+	picture = GFX_TFRKPHN_hong_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.32.a
+	}
+}
+
+# 2-5 국민 안심시키기
+country_event = {
+	id = tfrkphn.33
+	title = tfrkphn.33.t
+	desc = tfrkphn.33.desc
+	picture = GFX_TFRKPHN_hong_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.33.a
+	}
+}
+
+# 2-9 강경한 대북관
+country_event = {
+	id = tfrkphn.34
+	title = tfrkphn.34.t
+	desc = tfrkphn.34.desc
+	picture = GFX_TFRKPHN_hong_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.34.a
+	}
+}
+
+# 2-12 이벤트: 병력 파견
+country_event = {
+	id = tfrkphn.35
+	title = tfrkphn.35.t
+	desc = tfrkphn.35.desc
+	picture = GFX_TFRKPHN_hong_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.35.a
+	}
+}
+
+# 2-3 이벤트: 부결
+country_event = {
+	id = tfrkphn.36
+	title = tfrkphn.36.t
+	desc = tfrkphn.36.desc
+	picture = GFX_TFRKPHN_hong_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.36.a
+	}
+}
+
+# 2-6 이벤트: 해상보급 지원
+country_event = {
+	id = tfrkphn.37
+	title = tfrkphn.37.t
+	desc = tfrkphn.37.desc
+	picture = GFX_TFRKPHN_hong_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.37.a
+	}
+}
+
+# 2-10 이벤트: 그래도 할 건 해야지
+country_event = {
+	id = tfrkphn.38
+	title = tfrkphn.38.t
+	desc = tfrkphn.38.desc
+	picture = GFX_TFRKPHN_hong_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.38.a
+	}
+}
+
+# 2-7 이벤트: 국제사회에 중국 규탄
+country_event = {
+	id = tfrkphn.39
+	title = tfrkphn.39.t
+	desc = tfrkphn.39.desc
+	picture = GFX_TFRKPHN_hong_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.39.a
+	}
+}
+
+# 2-11 이벤트: 유럽으로 가는 K-방산
+country_event = {
+	id = tfrkphn.40
+	title = tfrkphn.40.t
+	desc = tfrkphn.40.desc
+	picture = GFX_TFRKPHN_hong_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.40.a
+	}
+}
+
+# 2-13 이벤트: 비밀스러운 지원
+country_event = {
+	id = tfrkphn.41
+	title = tfrkphn.41.t
+	desc = tfrkphn.41.desc
+	picture = GFX_TFRKPHN_hong_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.41.a
+	}
+}
+
+country_event = {
+	id = tfrkphn.50
+	title = tfrkphn.50.t
+	desc = tfrkphn.50.desc
+	picture = GFX_TFRKPHN_hong_office
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.50.a
+	}
+}
+
+country_event = {
+	id = tfrkphn.51
+	title = tfrkphn.51.t
+	desc = tfrkphn.51.desc
+	picture = GFX_TFRKPHN_hong_memorial
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.51.a
+	}
+}
+
+country_event = {
+	id = tfrkphn.52
+	title = tfrkphn.52.t
+	desc = tfrkphn.52.desc
+	picture = GFX_TFRKPHN_hong_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.52.a
+	}
+}
+
+country_event = {
+	id = tfrkphn.53
+	title = tfrkphn.53.t
+	desc = tfrkphn.53.desc
+	picture = GFX_TFRKPHN_hong_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.53.a
+	}
+}
+
+country_event = {
+	id = tfrkphn.54
+	title = tfrkphn.54.t
+	desc = tfrkphn.54.desc
+	picture = GFX_TFRKPHN_hong_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.54.a
+	}
+}
+
+country_event = {
+	id = tfrkphn.55
+	title = tfrkphn.55.t
+	desc = tfrkphn.55.desc
+	picture = GFX_TFRKPHN_hong_crimewar
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.55.a
+	}
+}
+
+country_event = {
+	id = tfrkphn.56
+	title = tfrkphn.56.t
+	desc = tfrkphn.56.desc
+	picture = GFX_TFRKPHN_hong_union
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.56.a
+	}
+}
+
+country_event = {
+	id = tfrkphn.57
+	title = tfrkphn.57.t
+	desc = tfrkphn.57.desc
+	picture = GFX_TFRKPHN_hong_hongkacola
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.57.a
+	}
+}
+
+country_event = {
+	id = tfrkphn.58
+	title = tfrkphn.58.t
+	desc = tfrkphn.58.desc
+	picture = GFX_TFRKPHN_hong_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.58.a
+	}
+}
+
+country_event = {
+	id = tfrkphn.59
+	title = tfrkphn.59.t
+	desc = tfrkphn.59.desc
+	picture = GFX_TFRKPHN_hong_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.59.a
+	}
+}
+
+country_event = {
+	id = tfrkphn.60
+	title = tfrkphn.60.t
+	desc = tfrkphn.60.desc
+	picture = GFX_TFRKPHN_hong_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.60.a
+	}
+}
+
+country_event = {
+	id = tfrkphn.61
+	title = tfrkphn.61.t
+	desc = tfrkphn.61.desc
+	picture = GFX_TFRKPHN_hong_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.61.a
+	}
+}
+
+country_event = {
+	id = tfrkphn.62
+	title = tfrkphn.62.t
+	desc = tfrkphn.62.desc
+	picture = GFX_TFRKPHN_hong_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.62.a
+	}
+}
+
+country_event = {
+	id = tfrkphn.63
+	title = tfrkphn.63.t
+	desc = tfrkphn.63.desc
+	picture = GFX_TFRKPHN_hong_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.63.a
+	}
+}
+
+country_event = {
+	id = tfrkphn.64
+	title = tfrkphn.64.t
+	desc = tfrkphn.64.desc
+	picture = GFX_TFRKPHN_hong_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.64.a
+	}
+}
+
+country_event = {
+	id = tfrkphn.65
+	title = tfrkphn.65.t
+	desc = tfrkphn.65.desc
+	picture = GFX_TFRKPHN_hong_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.65.a
+	}
+}
+
+country_event = {
+	id = tfrkphn.66
+	title = tfrkphn.66.t
+	desc = tfrkphn.66.desc
+	picture = GFX_TFRKPHN_hong_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.66.a
+	}
+}
+
+country_event = {
+	id = tfrkphn.67
+	title = tfrkphn.67.t
+	desc = tfrkphn.67.desc
+	picture = GFX_TFRKPHN_hong_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.67.a
+	}
+}
+
+country_event = {
+	id = tfrkphn.68
+	title = tfrkphn.68.t
+	desc = tfrkphn.68.desc
+	picture = GFX_TFRKPHN_hong_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.68.a
+	}
+}
+
+country_event = {
+	id = tfrkphn.69
+	title = tfrkphn.69.t
+	desc = tfrkphn.69.desc
+	picture = GFX_TFRKPHN_hong_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.69.a
+	}
+}
+
+country_event = {
+	id = tfrkphn.70
+	title = tfrkphn.70.t
+	desc = tfrkphn.70.desc
+	picture = GFX_TFRKPHN_hong_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.70.a
+	}
+}
+
+country_event = {
+	id = tfrkphn.71
+	title = tfrkphn.71.t
+	desc = tfrkphn.71.desc
+	picture = GFX_TFRKPHN_hong_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.71.a
+	}
+}
+
+country_event = {
+	id = tfrkphn.72
+	title = tfrkphn.72.t
+	desc = tfrkphn.72.desc
+	picture = GFX_TFRKPHN_hong_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.72.a
+	}
+}
+
+country_event = {
+	id = tfrkphn.73
+	title = tfrkphn.73.t
+	desc = tfrkphn.73.desc
+	picture = GFX_TFRKPHN_hong_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.73.a
+	}
+}
+
+country_event = {
+	id = tfrkphn.74
+	title = tfrkphn.74.t
+	desc = tfrkphn.74.desc
+	picture = GFX_TFRKPHN_hong_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.74.a
+	}
+}
+
+# ===== 3-4. 국민 통합 갈래 =====
+
+country_event = {
+	id = tfrkphn.120
+	title = tfrkphn.120.t
+	desc = tfrkphn.120.desc
+	picture = GFX_TFRKPHN_hong_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.120.a
+	}
+}
+
+country_event = {
+	id = tfrkphn.121
+	title = tfrkphn.121.t
+	desc = tfrkphn.121.desc
+	picture = GFX_TFRKPHN_hong_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.121.a
+	}
+}
+
+country_event = {
+	id = tfrkphn.122
+	title = tfrkphn.122.t
+	desc = tfrkphn.122.desc
+	picture = GFX_TFRKPHN_hong_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.122.a
+	}
+}
+
+country_event = {
+	id = tfrkphn.123
+	title = tfrkphn.123.t
+	desc = tfrkphn.123.desc
+	picture = GFX_TFRKPHN_hong_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.123.a
+	}
+}
+
+country_event = {
+	id = tfrkphn.124
+	title = tfrkphn.124.t
+	desc = tfrkphn.124.desc
+	picture = GFX_TFRKPHN_hong_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.124.a
+	}
+}
+
+country_event = {
+	id = tfrkphn.125
+	title = tfrkphn.125.t
+	desc = tfrkphn.125.desc
+	picture = GFX_TFRKPHN_hong_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.125.a
+	}
+}
+
+country_event = {
+	id = tfrkphn.126
+	title = tfrkphn.126.t
+	desc = tfrkphn.126.desc
+	picture = GFX_TFRKPHN_hong_debtzero
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.126.a
+	}
+}
+
+# ===== 개헌 논의 결과 =====
+
+country_event = {
+	id = tfrkphn.130
+	title = tfrkphn.130.t
+	desc = tfrkphn.130.desc
+	picture = GFX_TFRKPHN_hong_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.130.a
+	}
+}
+
+country_event = {
+	id = tfrkphn.131
+	title = tfrkphn.131.t
+	desc = tfrkphn.131.desc
+	picture = GFX_TFRKPHN_hong_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.131.a
+	}
+}
+
+# ===== 개헌 세부 과제 =====
+
+country_event = {
+	id = tfrkphn.132
+	title = tfrkphn.132.t
+	desc = tfrkphn.132.desc
+	picture = GFX_TFRKPHN_hong_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.132.a
+	}
+}
+
+country_event = {
+	id = tfrkphn.133
+	title = tfrkphn.133.t
+	desc = tfrkphn.133.desc
+	picture = GFX_TFRKPHN_hong_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.133.a
+	}
+}
+
+country_event = {
+	id = tfrkphn.134
+	title = tfrkphn.134.t
+	desc = tfrkphn.134.desc
+	picture = GFX_TFRKPHN_hong_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.134.a
+	}
+}
+
+country_event = {
+	id = tfrkphn.135
+	title = tfrkphn.135.t
+	desc = tfrkphn.135.desc
+	picture = GFX_TFRKPHN_hong_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.135.a
+	}
+}
+
+country_event = {
+	id = tfrkphn.136
+	title = tfrkphn.136.t
+	desc = tfrkphn.136.desc
+	picture = GFX_TFRKPHN_hong_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.136.a
+	}
+}
+
+country_event = {
+	id = tfrkphn.137
+	title = tfrkphn.137.t
+	desc = tfrkphn.137.desc
+	picture = GFX_TFRKPHN_hong_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.137.a
+	}
+}
+
+country_event = {
+	id = tfrkphn.138
+	title = tfrkphn.138.t
+	desc = tfrkphn.138.desc
+	picture = GFX_TFRKPHN_hong_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.138.a
+	}
+}
+
+# ===== 4. 전후 개혁 과제 (양안전쟁 개입 승전 이후) =====
+
+# 4-01 이벤트
+country_event = {
+	id = tfrkphn.75
+	title = tfrkphn.75.t
+	desc = tfrkphn.75.desc
+	picture = GFX_TFRKPHN_hong_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.75.a
+		add_political_power = 50
+		set_country_flag = TFRKPHN_reform_started
+	}
+}
+
+# 4-02 이벤트
+country_event = {
+	id = tfrkphn.76
+	title = tfrkphn.76.t
+	desc = tfrkphn.76.desc
+	picture = GFX_TFRKPHN_hong_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.76.a
+		add_political_power = 75
+		add_stability = -0.02
+		set_country_flag = TFRKPHN_reform_four_year_term
+	}
+}
+
+# 4-03 이벤트
+country_event = {
+	id = tfrkphn.77
+	title = tfrkphn.77.t
+	desc = tfrkphn.77.desc
+	picture = GFX_TFRKPHN_hong_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.77.a
+		add_political_power = 100
+		add_stability = -0.03
+		set_country_flag = TFRKPHN_reform_bicameral
+	}
+}
+
+# 4-04 이벤트
+country_event = {
+	id = tfrkphn.78
+	title = tfrkphn.78.t
+	desc = tfrkphn.78.desc
+	picture = GFX_TFRKPHN_hong_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.78.a
+		set_temp_variable = { poverty_development_var_temp = 0.03 }
+		add_poverty_development = yes
+		set_temp_variable = { academic_development_var_temp = -0.02 }
+		add_academic_development = yes
+		add_stability = -0.01
+		set_country_flag = TFRKPHN_reform_bar_exam
+	}
+}
+
+# 4-05 이벤트
+country_event = {
+	id = tfrkphn.79
+	title = tfrkphn.79.t
+	desc = tfrkphn.79.desc
+	picture = GFX_TFRKPHN_hong_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.79.a
+		set_temp_variable = { academic_development_var_temp = 0.02 }
+		add_academic_development = yes
+		add_stability = -0.01
+		set_country_flag = TFRKPHN_reform_regular_admission
+	}
+}
+
+# 4-06 이벤트
+country_event = {
+	id = tfrkphn.80
+	title = tfrkphn.80.t
+	desc = tfrkphn.80.desc
+	picture = GFX_TFRKPHN_hong_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.80.a
+		set_temp_variable = { military_development_var_temp = 0.02 }
+		add_military_development = yes
+		add_war_support = -0.02
+		add_stability = 0.02
+		set_country_flag = TFRKPHN_reform_volunteer_army
+	}
+}
+
+# 4-07 이벤트
+country_event = {
+	id = tfrkphn.81
+	title = tfrkphn.81.t
+	desc = tfrkphn.81.desc
+	picture = GFX_TFRKPHN_hong_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.81.a
+		add_war_support = 0.04
+		add_stability = -0.02
+		set_country_flag = TFRKPHN_reform_nuclear_sharing
+	}
+}
+
+# 4-08 이벤트
+country_event = {
+	id = tfrkphn.82
+	title = tfrkphn.82.t
+	desc = tfrkphn.82.desc
+	picture = GFX_TFRKPHN_hong_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.82.a
+		set_temp_variable = { industrial_development_var_temp = 0.03 }
+		add_industrial_development = yes
+		set_temp_variable = { society_development_var_temp = -0.01 }
+		add_society_development = yes
+		add_stability = -0.03
+		set_country_flag = TFRKPHN_reform_labor_flexibility
+	}
+}
+
+# 4-09 이벤트
+country_event = {
+	id = tfrkphn.83
+	title = tfrkphn.83.t
+	desc = tfrkphn.83.desc
+	picture = GFX_TFRKPHN_hong_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.83.a
+		set_temp_variable = { income_var_temp = 6 }
+		add_income_with_inflation = yes
+		set_temp_variable = { society_development_var_temp = -0.01 }
+		add_society_development = yes
+		add_stability = -0.02
+		set_country_flag = TFRKPHN_reform_public_broadcaster
+	}
+}
+
+# 4-10 이벤트
+country_event = {
+	id = tfrkphn.84
+	title = tfrkphn.84.t
+	desc = tfrkphn.84.desc
+	picture = GFX_TFRKPHN_hong_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.84.a
+		add_stability = 0.03
+		add_political_power = 100
+		set_country_flag = TFRKPHN_reform_done
+	}
+}
+
+# 2주마다 무작위 지역의 홍준표(국민의힘) 지지도 5% 하락 (숨김, 반복)
+country_event = {
+	id = tfrkphn.100
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = TFRKP_HN_hong_president
+	}
+
+	immediate = {
+		# 여론조사 금지(전쟁 중)이면 이번 차례는 건너뛴다. 사건 고리는 그대로 이어진다
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = TFRKPHN_poll_ban
+					KOR_in_taiwan_war = yes
+				}
+			}
+		random_list = {
+			10 = {
+				add_to_variable = { TFRKPHN_support_seoul = -5 }
+				clamp_variable = { var = TFRKPHN_support_seoul min = 0 max = 100 }
+			}
+			10 = {
+				add_to_variable = { TFRKPHN_support_gyeonggi = -5 }
+				clamp_variable = { var = TFRKPHN_support_gyeonggi min = 0 max = 100 }
+			}
+			10 = {
+				add_to_variable = { TFRKPHN_support_gangwon = -5 }
+				clamp_variable = { var = TFRKPHN_support_gangwon min = 0 max = 100 }
+			}
+			10 = {
+				add_to_variable = { TFRKPHN_support_chungcheong = -5 }
+				clamp_variable = { var = TFRKPHN_support_chungcheong min = 0 max = 100 }
+			}
+			10 = {
+				add_to_variable = { TFRKPHN_support_jeonbuk = -5 }
+				clamp_variable = { var = TFRKPHN_support_jeonbuk min = 0 max = 100 }
+			}
+			10 = {
+				add_to_variable = { TFRKPHN_support_jeonnam = -5 }
+				clamp_variable = { var = TFRKPHN_support_jeonnam min = 0 max = 100 }
+			}
+			10 = {
+				add_to_variable = { TFRKPHN_support_gyeongbuk = -5 }
+				clamp_variable = { var = TFRKPHN_support_gyeongbuk min = 0 max = 100 }
+			}
+			10 = {
+				add_to_variable = { TFRKPHN_support_gyeongnam = -5 }
+				clamp_variable = { var = TFRKPHN_support_gyeongnam min = 0 max = 100 }
+			}
+			10 = {
+				add_to_variable = { TFRKPHN_support_jeju = -5 }
+				clamp_variable = { var = TFRKPHN_support_jeju min = 0 max = 100 }
+			}
+		}
+		}
+		TFRKPHN_hong_update_support_display = yes
+		country_event = { id = tfrkphn.100 days = 14 }
+	}
+
+	option = {
+		name = tfrkphn.10.a
+	}
+}
+
+# ===== 2021 대선 후보 선택 (korea.115 대체) =====
+country_event = { # 20대 후보 선택 (GFX_TFRKPHN_choice_korea_hong_nak)
+	id = tfrkphn.115
+	title = korea.115.t
+	desc = korea.115.desc
+	picture = GFX_TFRKPHN_choice_korea_hong_nak
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = TFRKP_HN_115b_nak
+		set_country_flag = KOR_sided_with_lee
+		custom_effect_tooltip = TFRKP_HN_115b_tt_nak
+		hidden_effect = {
+			country_event = { id = korea.283 days = 5 }
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				has_game_rule = {
+					rule = TFRKP_2022_president_election
+					option = TFRKP_2022_president_election_yoon
+				}
+				factor = 0
+			}
+		}
+	}
+	option = {
+		name = TFRKP_HN_115a_hong
+		set_country_flag = KOR_sided_with_yoon
+		custom_effect_tooltip = TFRKP_HN_115a_tt_hong
+		ai_chance = {
+			factor = 1
+			modifier = {
+				has_game_rule = {
+					rule = TFRKP_2022_president_election
+					option = TFRKP_2022_president_election_lee
+				}
+				factor = 0
+			}
+		}
+	}
+}
+
+
+country_event = { # 20대 후보 선택 (GFX_TFRKPHN_choice_korea_hong)
+	id = tfrkphn.116
+	title = korea.115.t
+	desc = korea.115.desc
+	picture = GFX_TFRKPHN_choice_korea_hong
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = TFRKP_HN_115b_lee
+		set_country_flag = KOR_sided_with_lee
+		custom_effect_tooltip = TFRKP_HN_115b_tt_lee
+		hidden_effect = {
+			country_event = { id = korea.283 days = 5 }
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				has_game_rule = {
+					rule = TFRKP_2022_president_election
+					option = TFRKP_2022_president_election_yoon
+				}
+				factor = 0
+			}
+		}
+	}
+	option = {
+		name = TFRKP_HN_115a_hong
+		set_country_flag = KOR_sided_with_yoon
+		custom_effect_tooltip = TFRKP_HN_115a_tt_hong
+		ai_chance = {
+			factor = 1
+			modifier = {
+				has_game_rule = {
+					rule = TFRKP_2022_president_election
+					option = TFRKP_2022_president_election_lee
+				}
+				factor = 0
+			}
+		}
+	}
+}
+
+
+country_event = { # 20대 후보 선택 (GFX_TFRKPHN_choice_korea_nak)
+	id = tfrkphn.117
+	title = korea.115.t
+	desc = korea.115.desc
+	picture = GFX_TFRKPHN_choice_korea_nak
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = TFRKP_HN_115b_nak
+		set_country_flag = KOR_sided_with_lee
+		custom_effect_tooltip = TFRKP_HN_115b_tt_nak
+		hidden_effect = {
+			country_event = { id = korea.283 days = 5 }
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				has_game_rule = {
+					rule = TFRKP_2022_president_election
+					option = TFRKP_2022_president_election_yoon
+				}
+				factor = 0
+			}
+		}
+	}
+	option = {
+		name = TFRKP_HN_115a_yoon
+		set_country_flag = KOR_sided_with_yoon
+		custom_effect_tooltip = TFRKP_HN_115a_tt_yoon
+		ai_chance = {
+			factor = 1
+			modifier = {
+				has_game_rule = {
+					rule = TFRKP_2022_president_election
+					option = TFRKP_2022_president_election_lee
+				}
+				factor = 0
+			}
+		}
+	}
+}
+
+
+country_event = { # 20대 후보 선택 (GFX_report_event_choice_korea)
+	id = tfrkphn.118
+	title = korea.115.t
+	desc = korea.115.desc
+	picture = GFX_report_event_choice_korea
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = korea.115.b
+		set_country_flag = KOR_sided_with_lee
+		custom_effect_tooltip = KOR_sided_with_lee_tooltip
+		hidden_effect = {
+			country_event = { id = korea.283 days = 5 }
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				has_game_rule = {
+					rule = TFRKP_2022_president_election
+					option = TFRKP_2022_president_election_yoon
+				}
+				factor = 0
+			}
+		}
+	}
+	option = {
+		name = korea.115.a
+		set_country_flag = KOR_sided_with_yoon
+		custom_effect_tooltip = KOR_sided_with_yoon_tooltip
+		ai_chance = {
+			factor = 1
+			modifier = {
+				has_game_rule = {
+					rule = TFRKP_2022_president_election
+					option = TFRKP_2022_president_election_lee
+				}
+				factor = 0
+			}
+		}
+	}
+}
+
+
+
+# ===== 2022 대선 결과 (korea.292 대체) =====
+country_event = { # 홍준표 당선
+	id = tfrkphn.292
+	title = tfrkphn.292.t
+	desc = tfrkphn.292.d
+	picture = GFX_TFRKPHN_hong_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.292.a
+		custom_effect_tooltip = korea.292.tooltip
+		hidden_effect = {
+			news_event = { id = tfrkphn.294 hours = 6 }
+		}
+	}
+}
+
+country_event = { # 윤카 당선 (원본)
+	id = tfrkphn.293
+	title = korea.292.t
+	desc = korea.292.d
+	picture = GFX_report_event_yoon_president
+	is_triggered_only = yes
+	fire_only_once = yes
+
+
+	option = {
+		name = korea.292.a
+		custom_effect_tooltip = korea.292.tooltip
+		hidden_effect = {
+			news_event = { id = kor_news.51 hours = 6 }
+		}
+	}
+}
+
+news_event = { # 홍준표 후보 당선 (뉴스)
+	id = tfrkphn.294
+	title = tfrkphn.294.t
+	desc = tfrkphn.294.desc
+	picture = GFX_TFRKPHN_hong_temp
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = tfrkphn.294.o1
+		trigger = { tag = KOR }
+	}
+	option = {
+		name = tfrkphn.294.o2
+		trigger = { tag = JAP }
+	}
+	option = {
+		name = tfrkphn.294.o3
+		trigger = { tag = PRC }
+	}
+	option = {
+		name = tfrkphn.294.o4
+		trigger = { NOT = { tag = KOR tag = JAP tag = PRC } }
+	}
+}
+
+country_event = {
+	id = tfrkphn.200
+	title = tfrkphn.200.t
+	desc = tfrkphn.200.desc
+	picture = GFX_TFRKPHN_hong_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.200.a
+	}
+}
+
+country_event = {
+	id = tfrkphn.201
+	title = tfrkphn.201.t
+	desc = tfrkphn.201.desc
+	picture = GFX_TFRKPHN_hong_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.201.a
+	}
+}
+
+country_event = {
+	id = tfrkphn.202
+	title = tfrkphn.202.t
+	desc = tfrkphn.202.desc
+	picture = GFX_TFRKPHN_hong_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.202.a
+	}
+}
+
+country_event = {
+	id = tfrkphn.203
+	title = tfrkphn.203.t
+	desc = tfrkphn.203.desc
+	picture = GFX_TFRKPHN_hong_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.203.a
+	}
+}
+
+country_event = {
+	id = tfrkphn.204
+	title = tfrkphn.204.t
+	desc = tfrkphn.204.desc
+	picture = GFX_TFRKPHN_hong_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.204.a
+	}
+}
+
+country_event = {
+	id = tfrkphn.205
+	title = tfrkphn.205.t
+	desc = tfrkphn.205.desc
+	picture = GFX_TFRKPHN_hong_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.205.a
+	}
+}
+
+country_event = {
+	id = tfrkphn.206
+	title = tfrkphn.206.t
+	desc = tfrkphn.206.desc
+	picture = GFX_TFRKPHN_hong_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.206.a
+	}
+}
+
+country_event = {
+	id = tfrkphn.207
+	title = tfrkphn.207.t
+	desc = tfrkphn.207.desc
+	picture = GFX_TFRKPHN_hong_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.207.a
+	}
+}
+
+country_event = {
+	id = tfrkphn.208
+	title = tfrkphn.208.t
+	desc = tfrkphn.208.desc
+	picture = GFX_TFRKPHN_hong_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.208.a
+	}
+}
+
+country_event = {
+	id = tfrkphn.209
+	title = tfrkphn.209.t
+	desc = tfrkphn.209.desc
+	picture = GFX_TFRKPHN_hong_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.209.a
+	}
+}
+
+country_event = {
+	id = tfrkphn.210
+	title = tfrkphn.210.t
+	desc = tfrkphn.210.desc
+	picture = GFX_TFRKPHN_hong_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.210.a
+	}
+}
+
+country_event = {
+	id = tfrkphn.211
+	title = tfrkphn.211.t
+	desc = tfrkphn.211.desc
+	picture = GFX_TFRKPHN_hong_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.211.a
+	}
+}
+
+country_event = {
+	id = tfrkphn.220
+	title = tfrkphn.220.t
+	desc = tfrkphn.220.desc
+	picture = GFX_TFRKPHN_hong_temp
+	is_triggered_only = yes
+
+
+	option = {
+		name = tfrkphn.220.a
+	}
+}
+
+country_event = {
+	id = tfrkphn.221
+	title = tfrkphn.221.t
+	desc = tfrkphn.221.desc
+	picture = GFX_TFRKPHN_hong_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.221.a
+	}
+}

@@ -1,0 +1,299 @@
+TFRKPHN_crime_category = {
+
+	TFRKPHN_crime_seoul = {
+		icon = GFX_decision_generic_political_actions
+		cost = 35
+		days_remove = 14
+		visible = {
+			check_variable = { TFRKPHN_crime_sel = 1 }
+			NOT = { has_country_flag = TFRKPHN_crime_done_seoul }
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = TFRKPHN_crime_left_tt
+				check_variable = { TFRKPHN_crime_rate_seoul > 0 }
+			}
+		}
+		complete_effect = {
+			custom_effect_tooltip = TFRKPHN_crime_wait_tt
+		}
+		remove_effect = {
+			custom_effect_tooltip = TFRKPHN_crime_op_tt
+			hidden_effect = {
+				set_temp_variable_to_random = { var = TFRKPHN_crime_drop min = 20 max = 31 integer = yes }
+				clamp_temp_variable = { var = TFRKPHN_crime_drop min = 20 max = 30 }
+				subtract_from_variable = { TFRKPHN_crime_rate_seoul = TFRKPHN_crime_drop }
+				clamp_variable = { var = TFRKPHN_crime_rate_seoul min = 0 max = 100 }
+				add_to_variable = { TFRKPHN_support_seoul = 1 }
+				clamp_variable = { var = TFRKPHN_support_seoul min = 0 max = 100 }
+				TFRKPHN_hong_update_support_display = yes
+				TFRKPHN_crime_refresh = yes
+				if = {
+					limit = {
+						check_variable = { TFRKPHN_crime_rate_seoul < 1 }
+						NOT = { has_country_flag = TFRKPHN_crime_done_seoul }
+					}
+					set_country_flag = TFRKPHN_crime_done_seoul
+					add_to_variable = { TFRKPHN_crime_count = 1 }
+					add_stability = 0.02
+					add_to_variable = { TFRKPHN_support_seoul = 3 }
+					clamp_variable = { var = TFRKPHN_support_seoul min = 0 max = 100 }
+					TFRKPHN_hong_update_support_display = yes
+					country_event = { id = tfrkphn.220 }
+				}
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	TFRKPHN_crime_busan = {
+		icon = GFX_decision_generic_political_actions
+		cost = 35
+		days_remove = 14
+		visible = {
+			check_variable = { TFRKPHN_crime_sel = 2 }
+			NOT = { has_country_flag = TFRKPHN_crime_done_busan }
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = TFRKPHN_crime_left_tt
+				check_variable = { TFRKPHN_crime_rate_busan > 0 }
+			}
+		}
+		complete_effect = {
+			custom_effect_tooltip = TFRKPHN_crime_wait_tt
+		}
+		remove_effect = {
+			custom_effect_tooltip = TFRKPHN_crime_op_tt
+			hidden_effect = {
+				set_temp_variable_to_random = { var = TFRKPHN_crime_drop min = 20 max = 31 integer = yes }
+				clamp_temp_variable = { var = TFRKPHN_crime_drop min = 20 max = 30 }
+				subtract_from_variable = { TFRKPHN_crime_rate_busan = TFRKPHN_crime_drop }
+				clamp_variable = { var = TFRKPHN_crime_rate_busan min = 0 max = 100 }
+				add_to_variable = { TFRKPHN_support_gyeongnam = 1 }
+				clamp_variable = { var = TFRKPHN_support_gyeongnam min = 0 max = 100 }
+				TFRKPHN_hong_update_support_display = yes
+				TFRKPHN_crime_refresh = yes
+				if = {
+					limit = {
+						check_variable = { TFRKPHN_crime_rate_busan < 1 }
+						NOT = { has_country_flag = TFRKPHN_crime_done_busan }
+					}
+					set_country_flag = TFRKPHN_crime_done_busan
+					add_to_variable = { TFRKPHN_crime_count = 1 }
+					add_stability = 0.02
+					add_to_variable = { TFRKPHN_support_gyeongnam = 3 }
+					clamp_variable = { var = TFRKPHN_support_gyeongnam min = 0 max = 100 }
+					TFRKPHN_hong_update_support_display = yes
+					country_event = { id = tfrkphn.220 }
+				}
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	TFRKPHN_crime_daegu = {
+		icon = GFX_decision_generic_political_actions
+		cost = 35
+		days_remove = 14
+		visible = {
+			check_variable = { TFRKPHN_crime_sel = 3 }
+			NOT = { has_country_flag = TFRKPHN_crime_done_daegu }
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = TFRKPHN_crime_left_tt
+				check_variable = { TFRKPHN_crime_rate_daegu > 0 }
+			}
+		}
+		complete_effect = {
+			custom_effect_tooltip = TFRKPHN_crime_wait_tt
+		}
+		remove_effect = {
+			custom_effect_tooltip = TFRKPHN_crime_op_tt
+			hidden_effect = {
+				set_temp_variable_to_random = { var = TFRKPHN_crime_drop min = 20 max = 31 integer = yes }
+				clamp_temp_variable = { var = TFRKPHN_crime_drop min = 20 max = 30 }
+				subtract_from_variable = { TFRKPHN_crime_rate_daegu = TFRKPHN_crime_drop }
+				clamp_variable = { var = TFRKPHN_crime_rate_daegu min = 0 max = 100 }
+				add_to_variable = { TFRKPHN_support_gyeongbuk = 1 }
+				clamp_variable = { var = TFRKPHN_support_gyeongbuk min = 0 max = 100 }
+				TFRKPHN_hong_update_support_display = yes
+				TFRKPHN_crime_refresh = yes
+				if = {
+					limit = {
+						check_variable = { TFRKPHN_crime_rate_daegu < 1 }
+						NOT = { has_country_flag = TFRKPHN_crime_done_daegu }
+					}
+					set_country_flag = TFRKPHN_crime_done_daegu
+					add_to_variable = { TFRKPHN_crime_count = 1 }
+					add_stability = 0.02
+					add_to_variable = { TFRKPHN_support_gyeongbuk = 3 }
+					clamp_variable = { var = TFRKPHN_support_gyeongbuk min = 0 max = 100 }
+					TFRKPHN_hong_update_support_display = yes
+					country_event = { id = tfrkphn.220 }
+				}
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	TFRKPHN_crime_gwangju = {
+		icon = GFX_decision_generic_political_actions
+		cost = 35
+		days_remove = 14
+		visible = {
+			check_variable = { TFRKPHN_crime_sel = 4 }
+			NOT = { has_country_flag = TFRKPHN_crime_done_gwangju }
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = TFRKPHN_crime_left_tt
+				check_variable = { TFRKPHN_crime_rate_gwangju > 0 }
+			}
+		}
+		complete_effect = {
+			custom_effect_tooltip = TFRKPHN_crime_wait_tt
+		}
+		remove_effect = {
+			custom_effect_tooltip = TFRKPHN_crime_op_tt
+			hidden_effect = {
+				set_temp_variable_to_random = { var = TFRKPHN_crime_drop min = 20 max = 31 integer = yes }
+				clamp_temp_variable = { var = TFRKPHN_crime_drop min = 20 max = 30 }
+				subtract_from_variable = { TFRKPHN_crime_rate_gwangju = TFRKPHN_crime_drop }
+				clamp_variable = { var = TFRKPHN_crime_rate_gwangju min = 0 max = 100 }
+				add_to_variable = { TFRKPHN_support_jeonnam = 1 }
+				clamp_variable = { var = TFRKPHN_support_jeonnam min = 0 max = 100 }
+				TFRKPHN_hong_update_support_display = yes
+				TFRKPHN_crime_refresh = yes
+				if = {
+					limit = {
+						check_variable = { TFRKPHN_crime_rate_gwangju < 1 }
+						NOT = { has_country_flag = TFRKPHN_crime_done_gwangju }
+					}
+					set_country_flag = TFRKPHN_crime_done_gwangju
+					add_to_variable = { TFRKPHN_crime_count = 1 }
+					add_stability = 0.02
+					add_to_variable = { TFRKPHN_support_jeonnam = 3 }
+					clamp_variable = { var = TFRKPHN_support_jeonnam min = 0 max = 100 }
+					TFRKPHN_hong_update_support_display = yes
+					country_event = { id = tfrkphn.220 }
+				}
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	TFRKPHN_crime_daejeon = {
+		icon = GFX_decision_generic_political_actions
+		cost = 35
+		days_remove = 14
+		visible = {
+			check_variable = { TFRKPHN_crime_sel = 5 }
+			NOT = { has_country_flag = TFRKPHN_crime_done_daejeon }
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = TFRKPHN_crime_left_tt
+				check_variable = { TFRKPHN_crime_rate_daejeon > 0 }
+			}
+		}
+		complete_effect = {
+			custom_effect_tooltip = TFRKPHN_crime_wait_tt
+		}
+		remove_effect = {
+			custom_effect_tooltip = TFRKPHN_crime_op_tt
+			hidden_effect = {
+				set_temp_variable_to_random = { var = TFRKPHN_crime_drop min = 20 max = 31 integer = yes }
+				clamp_temp_variable = { var = TFRKPHN_crime_drop min = 20 max = 30 }
+				subtract_from_variable = { TFRKPHN_crime_rate_daejeon = TFRKPHN_crime_drop }
+				clamp_variable = { var = TFRKPHN_crime_rate_daejeon min = 0 max = 100 }
+				add_to_variable = { TFRKPHN_support_chungcheong = 1 }
+				clamp_variable = { var = TFRKPHN_support_chungcheong min = 0 max = 100 }
+				TFRKPHN_hong_update_support_display = yes
+				TFRKPHN_crime_refresh = yes
+				if = {
+					limit = {
+						check_variable = { TFRKPHN_crime_rate_daejeon < 1 }
+						NOT = { has_country_flag = TFRKPHN_crime_done_daejeon }
+					}
+					set_country_flag = TFRKPHN_crime_done_daejeon
+					add_to_variable = { TFRKPHN_crime_count = 1 }
+					add_stability = 0.02
+					add_to_variable = { TFRKPHN_support_chungcheong = 3 }
+					clamp_variable = { var = TFRKPHN_support_chungcheong min = 0 max = 100 }
+					TFRKPHN_hong_update_support_display = yes
+					country_event = { id = tfrkphn.220 }
+				}
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	TFRKPHN_crime_ulsan = {
+		icon = GFX_decision_generic_political_actions
+		cost = 35
+		days_remove = 14
+		visible = {
+			check_variable = { TFRKPHN_crime_sel = 6 }
+			NOT = { has_country_flag = TFRKPHN_crime_done_ulsan }
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = TFRKPHN_crime_left_tt
+				check_variable = { TFRKPHN_crime_rate_ulsan > 0 }
+			}
+		}
+		complete_effect = {
+			custom_effect_tooltip = TFRKPHN_crime_wait_tt
+		}
+		remove_effect = {
+			custom_effect_tooltip = TFRKPHN_crime_op_tt
+			hidden_effect = {
+				set_temp_variable_to_random = { var = TFRKPHN_crime_drop min = 20 max = 31 integer = yes }
+				clamp_temp_variable = { var = TFRKPHN_crime_drop min = 20 max = 30 }
+				subtract_from_variable = { TFRKPHN_crime_rate_ulsan = TFRKPHN_crime_drop }
+				clamp_variable = { var = TFRKPHN_crime_rate_ulsan min = 0 max = 100 }
+				add_to_variable = { TFRKPHN_support_gyeongnam = 1 }
+				clamp_variable = { var = TFRKPHN_support_gyeongnam min = 0 max = 100 }
+				TFRKPHN_hong_update_support_display = yes
+				TFRKPHN_crime_refresh = yes
+				if = {
+					limit = {
+						check_variable = { TFRKPHN_crime_rate_ulsan < 1 }
+						NOT = { has_country_flag = TFRKPHN_crime_done_ulsan }
+					}
+					set_country_flag = TFRKPHN_crime_done_ulsan
+					add_to_variable = { TFRKPHN_crime_count = 1 }
+					add_stability = 0.02
+					add_to_variable = { TFRKPHN_support_gyeongnam = 3 }
+					clamp_variable = { var = TFRKPHN_support_gyeongnam min = 0 max = 100 }
+					TFRKPHN_hong_update_support_display = yes
+					country_event = { id = tfrkphn.220 }
+				}
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	TFRKPHN_crime_victory = {
+		icon = GFX_decision_generic_political_actions
+		cost = 0
+		fire_only_once = yes
+		visible = { check_variable = { TFRKPHN_crime_count > 5 } }
+		complete_effect = {
+			add_stability = 0.05
+			add_political_power = 100
+			custom_effect_tooltip = TFRKPHN_support_all2_tt
+			custom_effect_tooltip = TFRKPHN_crime_close_tt
+			hidden_effect = {
+				set_temp_variable = { TFRKPHN_support_delta = 2 }
+				TFRKPHN_support_add_all = yes
+				TFRKPHN_hong_update_support_display = yes
+				set_country_flag = TFRKPHN_crime_closed
+				country_event = { id = tfrkphn.221 }
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+}

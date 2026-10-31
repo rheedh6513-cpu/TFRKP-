@@ -1,0 +1,8 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_TFRKPHN_senate_seat"
+		texturefile = "gfx/interface/gui/TFRKPHN_senate/TFRKPHN_senate_seat.png"
+		noOfFrames = 5
+		legacy_lazy_load = no
+	}
+}

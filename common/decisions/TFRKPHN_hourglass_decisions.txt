@@ -1,0 +1,324 @@
+# TFRKP Hong Nak: 모래시계 검사 (사법부 개혁 5 + 검찰 개혁 5 + 마무리 선언 1)
+# 개혁을 시행할 때마다 모래시계의 모래가 한 단계씩 떨어진다. (TFRKPHN_hourglass_step 0~11)
+TFRKPHN_hong_hourglass_category = {
+	TFRKPHN_hong_hourglass_01 = {
+		icon = GFX_decision_generic_political_actions
+		cost = 40
+		days_remove = 14
+		fire_only_once = yes
+		visible = { tag = KOR }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = TFRKPHN_hourglass_busy_tt
+				NOT = { has_country_flag = TFRKPHN_hourglass_busy }
+			}
+		}
+		complete_effect = {
+			set_country_flag = TFRKPHN_hourglass_busy
+			TFRKPHN_hourglass_advance = yes
+			custom_effect_tooltip = TFRKPHN_hourglass_drop_tt
+			custom_effect_tooltip = TFRKPHN_after_14_tt
+			custom_effect_tooltip = TFRKPHN_hong_hourglass_01_tt
+		}
+		remove_effect = {
+			hidden_effect = {
+				clr_country_flag = TFRKPHN_hourglass_busy
+				add_stability = 0.02
+				add_political_power = 20
+				add_to_variable = { TFRKPHN_support_seoul = 1 }
+				TFRKPHN_hong_update_support_display = yes
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_hong_hourglass_02 = {
+		icon = GFX_decision_generic_political_actions
+		cost = 50
+		days_remove = 14
+		fire_only_once = yes
+		visible = { tag = KOR }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = TFRKPHN_hourglass_busy_tt
+				NOT = { has_country_flag = TFRKPHN_hourglass_busy }
+			}
+		}
+		complete_effect = {
+			set_country_flag = TFRKPHN_hourglass_busy
+			TFRKPHN_hourglass_advance = yes
+			custom_effect_tooltip = TFRKPHN_hourglass_drop_tt
+			custom_effect_tooltip = TFRKPHN_after_14_tt
+			custom_effect_tooltip = TFRKPHN_hong_hourglass_02_tt
+		}
+		remove_effect = {
+			hidden_effect = {
+				clr_country_flag = TFRKPHN_hourglass_busy
+				add_stability = 0.02
+				add_to_variable = { TFRKPHN_support_gyeonggi = 1 }
+				TFRKPHN_hong_update_support_display = yes
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_hong_hourglass_03 = {
+		icon = GFX_decision_generic_political_actions
+		cost = 50
+		days_remove = 14
+		fire_only_once = yes
+		visible = { tag = KOR }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = TFRKPHN_hourglass_busy_tt
+				NOT = { has_country_flag = TFRKPHN_hourglass_busy }
+			}
+		}
+		complete_effect = {
+			set_country_flag = TFRKPHN_hourglass_busy
+			TFRKPHN_hourglass_advance = yes
+			custom_effect_tooltip = TFRKPHN_hourglass_drop_tt
+			custom_effect_tooltip = TFRKPHN_after_14_tt
+			custom_effect_tooltip = TFRKPHN_hong_hourglass_03_tt
+		}
+		remove_effect = {
+			hidden_effect = {
+				clr_country_flag = TFRKPHN_hourglass_busy
+				add_stability = 0.01
+				add_political_power = 40
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_hong_hourglass_04 = {
+		icon = GFX_decision_generic_political_actions
+		cost = 75
+		days_remove = 14
+		fire_only_once = yes
+		visible = { tag = KOR }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = TFRKPHN_hourglass_busy_tt
+				NOT = { has_country_flag = TFRKPHN_hourglass_busy }
+			}
+		}
+		complete_effect = {
+			set_country_flag = TFRKPHN_hourglass_busy
+			TFRKPHN_hourglass_advance = yes
+			custom_effect_tooltip = TFRKPHN_hourglass_drop_tt
+			custom_effect_tooltip = TFRKPHN_after_14_tt
+			custom_effect_tooltip = TFRKPHN_hong_hourglass_04_tt
+		}
+		remove_effect = {
+			hidden_effect = {
+				clr_country_flag = TFRKPHN_hourglass_busy
+				add_stability = -0.01
+				add_political_power = 80
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_hong_hourglass_05 = {
+		icon = GFX_decision_generic_political_actions
+		cost = 60
+		days_remove = 14
+		fire_only_once = yes
+		visible = { tag = KOR }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = TFRKPHN_hourglass_busy_tt
+				NOT = { has_country_flag = TFRKPHN_hourglass_busy }
+			}
+		}
+		complete_effect = {
+			set_country_flag = TFRKPHN_hourglass_busy
+			TFRKPHN_hourglass_advance = yes
+			custom_effect_tooltip = TFRKPHN_hourglass_drop_tt
+			custom_effect_tooltip = TFRKPHN_after_14_tt
+			custom_effect_tooltip = TFRKPHN_hong_hourglass_05_tt
+		}
+		remove_effect = {
+			hidden_effect = {
+				clr_country_flag = TFRKPHN_hourglass_busy
+				add_stability = 0.02
+				add_war_support = 0.02
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_hong_hourglass_06 = {
+		icon = GFX_decision_generic_political_actions
+		cost = 50
+		days_remove = 14
+		fire_only_once = yes
+		visible = { tag = KOR }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = TFRKPHN_hourglass_busy_tt
+				NOT = { has_country_flag = TFRKPHN_hourglass_busy }
+			}
+		}
+		complete_effect = {
+			set_country_flag = TFRKPHN_hourglass_busy
+			TFRKPHN_hourglass_advance = yes
+			custom_effect_tooltip = TFRKPHN_hourglass_drop_tt
+			custom_effect_tooltip = TFRKPHN_after_14_tt
+			custom_effect_tooltip = TFRKPHN_hong_hourglass_06_tt
+		}
+		remove_effect = {
+			hidden_effect = {
+				clr_country_flag = TFRKPHN_hourglass_busy
+				add_stability = 0.02
+				add_political_power = 30
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_hong_hourglass_07 = {
+		icon = GFX_decision_generic_political_actions
+		cost = 50
+		days_remove = 14
+		fire_only_once = yes
+		visible = { tag = KOR }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = TFRKPHN_hourglass_busy_tt
+				NOT = { has_country_flag = TFRKPHN_hourglass_busy }
+			}
+		}
+		complete_effect = {
+			set_country_flag = TFRKPHN_hourglass_busy
+			TFRKPHN_hourglass_advance = yes
+			custom_effect_tooltip = TFRKPHN_hourglass_drop_tt
+			custom_effect_tooltip = TFRKPHN_after_14_tt
+			custom_effect_tooltip = TFRKPHN_hong_hourglass_07_tt
+		}
+		remove_effect = {
+			hidden_effect = {
+				clr_country_flag = TFRKPHN_hourglass_busy
+				add_stability = 0.01
+				add_political_power = 40
+				add_to_variable = { TFRKPHN_support_gyeongnam = 1 }
+				TFRKPHN_hong_update_support_display = yes
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_hong_hourglass_08 = {
+		icon = GFX_decision_generic_political_actions
+		cost = 40
+		days_remove = 14
+		fire_only_once = yes
+		visible = { tag = KOR }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = TFRKPHN_hourglass_busy_tt
+				NOT = { has_country_flag = TFRKPHN_hourglass_busy }
+			}
+		}
+		complete_effect = {
+			set_country_flag = TFRKPHN_hourglass_busy
+			TFRKPHN_hourglass_advance = yes
+			custom_effect_tooltip = TFRKPHN_hourglass_drop_tt
+			custom_effect_tooltip = TFRKPHN_after_14_tt
+			custom_effect_tooltip = TFRKPHN_hong_hourglass_08_tt
+		}
+		remove_effect = {
+			hidden_effect = {
+				clr_country_flag = TFRKPHN_hourglass_busy
+				add_stability = 0.02
+				add_political_power = 20
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_hong_hourglass_09 = {
+		icon = GFX_decision_generic_political_actions
+		cost = 60
+		days_remove = 14
+		fire_only_once = yes
+		visible = { tag = KOR }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = TFRKPHN_hourglass_busy_tt
+				NOT = { has_country_flag = TFRKPHN_hourglass_busy }
+			}
+		}
+		complete_effect = {
+			set_country_flag = TFRKPHN_hourglass_busy
+			TFRKPHN_hourglass_advance = yes
+			custom_effect_tooltip = TFRKPHN_hourglass_drop_tt
+			custom_effect_tooltip = TFRKPHN_after_14_tt
+			custom_effect_tooltip = TFRKPHN_hong_hourglass_09_tt
+		}
+		remove_effect = {
+			hidden_effect = {
+				clr_country_flag = TFRKPHN_hourglass_busy
+				add_stability = 0.02
+				add_to_variable = { TFRKPHN_support_seoul = 1 }
+				add_to_variable = { TFRKPHN_support_gyeonggi = 1 }
+				TFRKPHN_hong_update_support_display = yes
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_hong_hourglass_10 = {
+		icon = GFX_decision_generic_political_actions
+		cost = 75
+		days_remove = 14
+		fire_only_once = yes
+		visible = { tag = KOR }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = TFRKPHN_hourglass_busy_tt
+				NOT = { has_country_flag = TFRKPHN_hourglass_busy }
+			}
+		}
+		complete_effect = {
+			set_country_flag = TFRKPHN_hourglass_busy
+			TFRKPHN_hourglass_advance = yes
+			custom_effect_tooltip = TFRKPHN_hourglass_drop_tt
+			custom_effect_tooltip = TFRKPHN_after_14_tt
+			custom_effect_tooltip = TFRKPHN_hong_hourglass_10_tt
+		}
+		remove_effect = {
+			hidden_effect = {
+				clr_country_flag = TFRKPHN_hourglass_busy
+				add_stability = -0.01
+				add_political_power = 70
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_hong_hourglass_11 = {
+		icon = GFX_decision_generic_political_actions
+		cost = 100
+		days_remove = 14
+		fire_only_once = yes
+		visible = { tag = KOR }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = TFRKPHN_hourglass_busy_tt
+				NOT = { has_country_flag = TFRKPHN_hourglass_busy }
+			}
+			custom_trigger_tooltip = {
+				tooltip = TFRKPHN_hourglass_need_tt
+				check_variable = { TFRKPHN_hourglass_step > 9 }
+			}
+		}
+		complete_effect = {
+			set_country_flag = TFRKPHN_hourglass_busy
+			TFRKPHN_hourglass_advance = yes
+			custom_effect_tooltip = TFRKPHN_hourglass_drop_tt
+			custom_effect_tooltip = TFRKPHN_after_14_tt
+			custom_effect_tooltip = TFRKPHN_hong_hourglass_11_tt
+		}
+		remove_effect = {
+			hidden_effect = {
+				clr_country_flag = TFRKPHN_hourglass_busy
+				add_stability = 0.05
+				add_political_power = 150
+				set_country_flag = TFRKPHN_hourglass_done
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+}

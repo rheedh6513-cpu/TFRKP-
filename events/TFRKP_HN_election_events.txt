@@ -1,0 +1,41 @@
+add_namespace = tfrkphn
+
+# 제22대 국회의원 총선거 (홍준표 참전 승전 경로)
+# 국민의힘 199석 / 더불어민주당 94석 / 제3지대 정당 7석
+country_event = {
+	id = tfrkphn.151
+	title = korea.151.t
+	desc = tfrkphn.151.desc
+	picture = GFX_report_event_ppp_ge_win
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		NOT = { has_country_flag = TFRKPHN_ge2024_done }
+	}
+
+	immediate = {
+		hidden_effect = {
+			log = "TFRKPHN_DIAG tfrkphn.151 shown"
+			set_country_flag = TFRKPHN_ge2024_done
+			set_country_flag = KOR_election_of_NA_2024
+			set_country_flag = KOR_election_of_NA_2024_tw_win
+			set_country_flag = KOR_yoon_second_election_victory
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+
+	option = {
+		name = tfrkphn.151.a
+		set_variable = { KOR_NatAsm_DP_seats = 94 }
+		set_variable = { KOR_NatAsm_PPP_seats = 199 }
+		set_variable = { KOR_NatAsm_JP_seats = 3 }
+		set_variable = { KOR_NatAsm_PP_seats = 4 }
+		set_variable = { KOR_NatAsm_Ind_seats = 0 }
+		KOR_rerender_NatAsm = yes
+		custom_effect_tooltip = KOR_NatAsm_changed_tt
+		hidden_effect = {
+			set_variable = { NA_show_LP = 1 }
+		}
+	}
+}

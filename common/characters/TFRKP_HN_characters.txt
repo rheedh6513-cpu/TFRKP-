@@ -1,0 +1,31 @@
+characters = {
+	KOR_hong_joon_pyo_char = {
+		name = KOR_hong_joon_pyo_char
+		portraits = {
+			civilian = {
+				large = GFX_portrait_KOR_hong_joon_pyo
+			}
+		}
+		country_leader = {
+			ideology = judicial_conservatism
+			expire = "2065.1.1"
+			id = -1
+		}
+	}
+	KOR_lee_in_je_char = {
+		name = KOR_lee_in_je_char
+		country_leader = {
+			ideology = korean_conservatism
+			expire = "2065.1.1"
+			id = -1
+		}
+	}
+	KOR_oh_se_hoon_char = {
+		name = KOR_oh_se_hoon_char
+		country_leader = {
+			ideology = korean_conservatism
+			expire = "2065.1.1"
+			id = -1
+		}
+	}
+}

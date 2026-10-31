@@ -1,0 +1,86 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_TFRKPHN_amend_seats_0"
+		texturefile = "gfx/interface/gui/TFRKPHN_amend/TFRKPHN_amend_seats_0.png"
+		noOfFrames = 31
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_amend_seats_1"
+		texturefile = "gfx/interface/gui/TFRKPHN_amend/TFRKPHN_amend_seats_1.png"
+		noOfFrames = 31
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_amend_seats_2"
+		texturefile = "gfx/interface/gui/TFRKPHN_amend/TFRKPHN_amend_seats_2.png"
+		noOfFrames = 31
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_amend_seats_3"
+		texturefile = "gfx/interface/gui/TFRKPHN_amend/TFRKPHN_amend_seats_3.png"
+		noOfFrames = 31
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_amend_seats_4"
+		texturefile = "gfx/interface/gui/TFRKPHN_amend/TFRKPHN_amend_seats_4.png"
+		noOfFrames = 31
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_amend_seats_5"
+		texturefile = "gfx/interface/gui/TFRKPHN_amend/TFRKPHN_amend_seats_5.png"
+		noOfFrames = 31
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_amend_seats_6"
+		texturefile = "gfx/interface/gui/TFRKPHN_amend/TFRKPHN_amend_seats_6.png"
+		noOfFrames = 31
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_amend_seats_7"
+		texturefile = "gfx/interface/gui/TFRKPHN_amend/TFRKPHN_amend_seats_7.png"
+		noOfFrames = 31
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_amend_seats_8"
+		texturefile = "gfx/interface/gui/TFRKPHN_amend/TFRKPHN_amend_seats_8.png"
+		noOfFrames = 31
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_amend_seats_9"
+		texturefile = "gfx/interface/gui/TFRKPHN_amend/TFRKPHN_amend_seats_9.png"
+		noOfFrames = 31
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_amend_pass"
+		texturefile = "gfx/interface/gui/TFRKPHN_amend/TFRKPHN_amend_pass.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_amend_fail"
+		texturefile = "gfx/interface/gui/TFRKPHN_amend/TFRKPHN_amend_fail.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_amend_assembly"
+		texturefile = "gfx/interface/gui/TFRKPHN_amend/TFRKPHN_amend_assembly.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_const_bg"
+		texturefile = "gfx/interface/gui/TFRKPHN_amend/TFRKPHN_const_bg.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_decision_TFRKPHN_constitution"
+		texturefile = "gfx/interface/decisions/TFRKPHN_decision_constitution.png"
+	}
+}

@@ -1,0 +1,164 @@
+scripted_gui = {
+	TFRKPHN_hong_minsim_gui = {
+		context_type = decision_category
+		window_name = TFRKPHN_hong_minsim_container
+
+		effects = {
+			TFRKPHN_hong_map_seoul_click = { set_variable = { TFRKPHN_select_region_var = 1 } }
+			TFRKPHN_hong_map_gyeonggi_click = { set_variable = { TFRKPHN_select_region_var = 2 } }
+			TFRKPHN_hong_map_gangwon_click = { set_variable = { TFRKPHN_select_region_var = 3 } }
+			TFRKPHN_hong_map_chungcheong_click = { set_variable = { TFRKPHN_select_region_var = 4 } }
+			TFRKPHN_hong_map_jeonbuk_click = { set_variable = { TFRKPHN_select_region_var = 5 } }
+			TFRKPHN_hong_map_jeonnam_click = { set_variable = { TFRKPHN_select_region_var = 6 } }
+			TFRKPHN_hong_map_gyeongbuk_click = { set_variable = { TFRKPHN_select_region_var = 7 } }
+			TFRKPHN_hong_map_gyeongnam_click = { set_variable = { TFRKPHN_select_region_var = 8 } }
+			TFRKPHN_hong_map_jeju_click = { set_variable = { TFRKPHN_select_region_var = 9 } }
+		}
+
+		properties = {
+			TFRKPHN_hong_logo_seoul = { frame = TFRKPHN_barframe_seoul }
+			TFRKPHN_hong_logo_gyeonggi = { frame = TFRKPHN_barframe_gyeonggi }
+			TFRKPHN_hong_logo_gangwon = { frame = TFRKPHN_barframe_gangwon }
+			TFRKPHN_hong_logo_chungcheong = { frame = TFRKPHN_barframe_chungcheong }
+			TFRKPHN_hong_logo_jeonbuk = { frame = TFRKPHN_barframe_jeonbuk }
+			TFRKPHN_hong_logo_jeonnam = { frame = TFRKPHN_barframe_jeonnam }
+			TFRKPHN_hong_logo_gyeongbuk = { frame = TFRKPHN_barframe_gyeongbuk }
+			TFRKPHN_hong_logo_gyeongnam = { frame = TFRKPHN_barframe_gyeongnam }
+			TFRKPHN_hong_logo_jeju = { frame = TFRKPHN_barframe_jeju }
+			TFRKPHN_hong_mapcolor_seoul = { frame = TFRKPHN_mapframe_seoul }
+			TFRKPHN_hong_mapcolor_gyeonggi = { frame = TFRKPHN_mapframe_gyeonggi }
+			TFRKPHN_hong_mapcolor_gangwon = { frame = TFRKPHN_mapframe_gangwon }
+			TFRKPHN_hong_mapcolor_chungcheong = { frame = TFRKPHN_mapframe_chungcheong }
+			TFRKPHN_hong_mapcolor_jeonbuk = { frame = TFRKPHN_mapframe_jeonbuk }
+			TFRKPHN_hong_mapcolor_jeonnam = { frame = TFRKPHN_mapframe_jeonnam }
+			TFRKPHN_hong_mapcolor_gyeongbuk = { frame = TFRKPHN_mapframe_gyeongbuk }
+			TFRKPHN_hong_mapcolor_gyeongnam = { frame = TFRKPHN_mapframe_gyeongnam }
+			TFRKPHN_hong_mapcolor_jeju = { frame = TFRKPHN_mapframe_jeju }
+		}
+	}
+}
+
+scripted_gui = {
+	TFRKPHN_hong_hourglass_gui = {
+		context_type = decision_category
+		window_name = TFRKPHN_hong_hourglass_container
+
+		properties = {
+			TFRKPHN_hong_hourglass_icon = { frame = TFRKPHN_hourglass_frame }
+		}
+	}
+
+	TFRKPHN_hong_amend_gui = {
+		context_type = decision_category
+		window_name = TFRKPHN_hong_amend_container
+
+		properties = {
+			TFRKPHN_amend_seats_0 = { frame = TFRKPHN_amend_f0 }
+			TFRKPHN_amend_seats_1 = { frame = TFRKPHN_amend_f1 }
+			TFRKPHN_amend_seats_2 = { frame = TFRKPHN_amend_f2 }
+			TFRKPHN_amend_seats_3 = { frame = TFRKPHN_amend_f3 }
+			TFRKPHN_amend_seats_4 = { frame = TFRKPHN_amend_f4 }
+			TFRKPHN_amend_seats_5 = { frame = TFRKPHN_amend_f5 }
+			TFRKPHN_amend_seats_6 = { frame = TFRKPHN_amend_f6 }
+			TFRKPHN_amend_seats_7 = { frame = TFRKPHN_amend_f7 }
+			TFRKPHN_amend_seats_8 = { frame = TFRKPHN_amend_f8 }
+			TFRKPHN_amend_seats_9 = { frame = TFRKPHN_amend_f9 }
+		}
+
+		triggers = {
+			TFRKPHN_amend_pass_box_visible = { has_country_flag = TFRKPHN_amend_passed }
+			TFRKPHN_amend_vote_box_visible = { NOT = { has_country_flag = TFRKPHN_amend_passed } }
+			TFRKPHN_amend_const_box_visible = { has_country_flag = TFRKPHN_amend_passed }
+			TFRKPHN_amend_fail_box_visible = { has_country_flag = TFRKPHN_amend_rejected }
+		}
+	}
+
+	TFRKPHN_senate_gui = {
+		context_type = decision_category
+		window_name = TFRKPHN_senate_container
+
+		properties = {
+			TFRKPHN_senate_s1 = { frame = TFRKPHN_sen_s1 }
+			TFRKPHN_senate_s2 = { frame = TFRKPHN_sen_s2 }
+			TFRKPHN_senate_s3 = { frame = TFRKPHN_sen_s3 }
+			TFRKPHN_senate_s4 = { frame = TFRKPHN_sen_s4 }
+			TFRKPHN_senate_s5 = { frame = TFRKPHN_sen_s5 }
+			TFRKPHN_senate_s6 = { frame = TFRKPHN_sen_s6 }
+			TFRKPHN_senate_s7 = { frame = TFRKPHN_sen_s7 }
+			TFRKPHN_senate_s8 = { frame = TFRKPHN_sen_s8 }
+			TFRKPHN_senate_s9 = { frame = TFRKPHN_sen_s9 }
+			TFRKPHN_senate_s10 = { frame = TFRKPHN_sen_s10 }
+			TFRKPHN_senate_s11 = { frame = TFRKPHN_sen_s11 }
+			TFRKPHN_senate_s12 = { frame = TFRKPHN_sen_s12 }
+			TFRKPHN_senate_s13 = { frame = TFRKPHN_sen_s13 }
+			TFRKPHN_senate_s14 = { frame = TFRKPHN_sen_s14 }
+			TFRKPHN_senate_s15 = { frame = TFRKPHN_sen_s15 }
+			TFRKPHN_senate_s16 = { frame = TFRKPHN_sen_s16 }
+			TFRKPHN_senate_s17 = { frame = TFRKPHN_sen_s17 }
+			TFRKPHN_senate_s18 = { frame = TFRKPHN_sen_s18 }
+			TFRKPHN_senate_s19 = { frame = TFRKPHN_sen_s19 }
+			TFRKPHN_senate_s20 = { frame = TFRKPHN_sen_s20 }
+			TFRKPHN_senate_s21 = { frame = TFRKPHN_sen_s21 }
+			TFRKPHN_senate_s22 = { frame = TFRKPHN_sen_s22 }
+			TFRKPHN_senate_s23 = { frame = TFRKPHN_sen_s23 }
+			TFRKPHN_senate_s24 = { frame = TFRKPHN_sen_s24 }
+			TFRKPHN_senate_s25 = { frame = TFRKPHN_sen_s25 }
+			TFRKPHN_senate_s26 = { frame = TFRKPHN_sen_s26 }
+			TFRKPHN_senate_s27 = { frame = TFRKPHN_sen_s27 }
+			TFRKPHN_senate_s28 = { frame = TFRKPHN_sen_s28 }
+			TFRKPHN_senate_s29 = { frame = TFRKPHN_sen_s29 }
+			TFRKPHN_senate_s30 = { frame = TFRKPHN_sen_s30 }
+			TFRKPHN_senate_s31 = { frame = TFRKPHN_sen_s31 }
+			TFRKPHN_senate_s32 = { frame = TFRKPHN_sen_s32 }
+			TFRKPHN_senate_s33 = { frame = TFRKPHN_sen_s33 }
+			TFRKPHN_senate_s34 = { frame = TFRKPHN_sen_s34 }
+			TFRKPHN_senate_s35 = { frame = TFRKPHN_sen_s35 }
+			TFRKPHN_senate_s36 = { frame = TFRKPHN_sen_s36 }
+			TFRKPHN_senate_s37 = { frame = TFRKPHN_sen_s37 }
+			TFRKPHN_senate_s38 = { frame = TFRKPHN_sen_s38 }
+			TFRKPHN_senate_s39 = { frame = TFRKPHN_sen_s39 }
+			TFRKPHN_senate_s40 = { frame = TFRKPHN_sen_s40 }
+			TFRKPHN_senate_s41 = { frame = TFRKPHN_sen_s41 }
+			TFRKPHN_senate_s42 = { frame = TFRKPHN_sen_s42 }
+			TFRKPHN_senate_s43 = { frame = TFRKPHN_sen_s43 }
+			TFRKPHN_senate_s44 = { frame = TFRKPHN_sen_s44 }
+			TFRKPHN_senate_s45 = { frame = TFRKPHN_sen_s45 }
+			TFRKPHN_senate_s46 = { frame = TFRKPHN_sen_s46 }
+			TFRKPHN_senate_s47 = { frame = TFRKPHN_sen_s47 }
+			TFRKPHN_senate_s48 = { frame = TFRKPHN_sen_s48 }
+			TFRKPHN_senate_s49 = { frame = TFRKPHN_sen_s49 }
+			TFRKPHN_senate_s50 = { frame = TFRKPHN_sen_s50 }
+		}
+	}
+}
+
+scripted_gui = {
+	TFRKPHN_crime_gui = {
+		context_type = decision_category
+		window_name = TFRKPHN_crime_container
+
+		effects = {
+			TFRKPHN_crime_btn_seoul_click = { set_variable = { TFRKPHN_crime_sel = 1 } TFRKPHN_crime_refresh = yes }
+			TFRKPHN_crime_btn_busan_click = { set_variable = { TFRKPHN_crime_sel = 2 } TFRKPHN_crime_refresh = yes }
+			TFRKPHN_crime_btn_daegu_click = { set_variable = { TFRKPHN_crime_sel = 3 } TFRKPHN_crime_refresh = yes }
+			TFRKPHN_crime_btn_gwangju_click = { set_variable = { TFRKPHN_crime_sel = 4 } TFRKPHN_crime_refresh = yes }
+			TFRKPHN_crime_btn_daejeon_click = { set_variable = { TFRKPHN_crime_sel = 5 } TFRKPHN_crime_refresh = yes }
+			TFRKPHN_crime_btn_ulsan_click = { set_variable = { TFRKPHN_crime_sel = 6 } TFRKPHN_crime_refresh = yes }
+		}
+
+		triggers = {
+			TFRKPHN_crime_stamp_seoul_visible = { has_country_flag = TFRKPHN_crime_done_seoul }
+			TFRKPHN_crime_selbox_seoul_visible = { check_variable = { TFRKPHN_crime_sel = 1 } }
+			TFRKPHN_crime_stamp_busan_visible = { has_country_flag = TFRKPHN_crime_done_busan }
+			TFRKPHN_crime_selbox_busan_visible = { check_variable = { TFRKPHN_crime_sel = 2 } }
+			TFRKPHN_crime_stamp_daegu_visible = { has_country_flag = TFRKPHN_crime_done_daegu }
+			TFRKPHN_crime_selbox_daegu_visible = { check_variable = { TFRKPHN_crime_sel = 3 } }
+			TFRKPHN_crime_stamp_gwangju_visible = { has_country_flag = TFRKPHN_crime_done_gwangju }
+			TFRKPHN_crime_selbox_gwangju_visible = { check_variable = { TFRKPHN_crime_sel = 4 } }
+			TFRKPHN_crime_stamp_daejeon_visible = { has_country_flag = TFRKPHN_crime_done_daejeon }
+			TFRKPHN_crime_selbox_daejeon_visible = { check_variable = { TFRKPHN_crime_sel = 5 } }
+			TFRKPHN_crime_stamp_ulsan_visible = { has_country_flag = TFRKPHN_crime_done_ulsan }
+			TFRKPHN_crime_selbox_ulsan_visible = { check_variable = { TFRKPHN_crime_sel = 6 } }
+		}
+	}
+}

@@ -1,0 +1,188 @@
+guiTypes = {
+	containerWindowType = {
+		name = "TFRKPHN_hong_amend_container"
+		size = { width = 100%% height = 500 }
+
+		containerWindowType = {
+			name = "TFRKPHN_hong_amend_panel"
+			position = { x = 0 y = 0 }
+			size = { width = 500 height = 498 }
+
+			background = {
+				name = "background"
+				spriteType = "GFX_tiled_decisions_bg_small"
+				alwaystransparent = yes
+			}
+
+			containerWindowType = {
+				name = "TFRKPHN_hong_amend_title_container"
+				position = { x = 1 y = 0 }
+				size = { width = 498 height = 30 }
+				background = {
+					name = "background"
+					spriteType = "GFX_tiled_header_1"
+					alwaystransparent = yes
+				}
+				instantTextBoxType = {
+					name = "TFRKPHN_hong_amend_title_text"
+					position = { x = 0 y = 4 }
+					text = "TFRKPHN_hong_amend_title"
+					font = "hoi_18mbs"
+					format = center
+					maxWidth = 498
+					alwaystransparent = yes
+				}
+			}
+
+			# 대표 그림: 국회 본회의장
+			iconType = {
+				name = "TFRKPHN_amend_assembly"
+				position = { x = 1 y = 30 }
+				spriteType = "GFX_TFRKPHN_amend_assembly"
+				alwaystransparent = yes
+			}
+
+			# 표결 중: 의석 현황 (가결되면 숨김)
+			containerWindowType = {
+				name = "TFRKPHN_amend_vote_box"
+				position = { x = 0 y = 200 }
+				size = { width = 500 height = 272 }
+
+				iconType = {
+					name = "TFRKPHN_amend_seats_0"
+					position = { x = 54 y = 10 }
+					spriteType = "GFX_TFRKPHN_amend_seats_0"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "TFRKPHN_amend_seats_1"
+					position = { x = 54 y = 10 }
+					spriteType = "GFX_TFRKPHN_amend_seats_1"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "TFRKPHN_amend_seats_2"
+					position = { x = 54 y = 10 }
+					spriteType = "GFX_TFRKPHN_amend_seats_2"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "TFRKPHN_amend_seats_3"
+					position = { x = 54 y = 10 }
+					spriteType = "GFX_TFRKPHN_amend_seats_3"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "TFRKPHN_amend_seats_4"
+					position = { x = 54 y = 10 }
+					spriteType = "GFX_TFRKPHN_amend_seats_4"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "TFRKPHN_amend_seats_5"
+					position = { x = 54 y = 10 }
+					spriteType = "GFX_TFRKPHN_amend_seats_5"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "TFRKPHN_amend_seats_6"
+					position = { x = 54 y = 10 }
+					spriteType = "GFX_TFRKPHN_amend_seats_6"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "TFRKPHN_amend_seats_7"
+					position = { x = 54 y = 10 }
+					spriteType = "GFX_TFRKPHN_amend_seats_7"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "TFRKPHN_amend_seats_8"
+					position = { x = 54 y = 10 }
+					spriteType = "GFX_TFRKPHN_amend_seats_8"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "TFRKPHN_amend_seats_9"
+					position = { x = 54 y = 10 }
+					spriteType = "GFX_TFRKPHN_amend_seats_9"
+					alwaystransparent = yes
+				}
+
+				instantTextBoxType = {
+					name = "TFRKPHN_hong_amend_total"
+					position = { x = 175 y = 166 }
+					text = "TFRKPHN_hong_amend_total"
+					font = "hoi_16mbs"
+					format = center
+					maxWidth = 150
+					alwaystransparent = yes
+				}
+				instantTextBoxType = {
+					name = "TFRKPHN_hong_amend_count"
+					position = { x = 175 y = 188 }
+					text = "TFRKPHN_hong_amend_count"
+					font = "hoi_18mbs"
+					format = center
+					maxWidth = 150
+					alwaystransparent = yes
+				}
+
+				iconType = {
+					name = "TFRKPHN_amend_pass_box"
+					position = { x = 8 y = 3 }
+					spriteType = "GFX_TFRKPHN_amend_pass"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "TFRKPHN_amend_fail_box"
+					position = { x = 342 y = 3 }
+					spriteType = "GFX_TFRKPHN_amend_fail"
+					alwaystransparent = yes
+				}
+
+				instantTextBoxType = {
+					name = "TFRKPHN_hong_amend_info"
+					position = { x = 10 y = 224 }
+					text = "TFRKPHN_hong_amend_info"
+					font = "hoi_16mbs"
+					format = center
+					maxWidth = 480
+					maxHeight = 40
+					alwaystransparent = yes
+				}
+			}
+
+			# 가결 뒤: 대한민국헌법 조문 (개헌 결정을 마칠 때마다 바뀜)
+			containerWindowType = {
+				name = "TFRKPHN_amend_const_box"
+				position = { x = 1 y = 200 }
+				size = { width = 498 height = 296 }
+
+				iconType = {
+					name = "TFRKPHN_const_bg"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_TFRKPHN_const_bg"
+					alwaystransparent = yes
+				}
+				instantTextBoxType = {
+					name = "TFRKPHN_const_header"
+					position = { x = 10 y = 6 }
+					text = "TFRKPHN_const_header"
+					font = "hoi_16mbs"
+					maxWidth = 480
+					alwaystransparent = yes
+				}
+				instantTextBoxType = {
+					name = "TFRKPHN_const_body"
+					position = { x = 14 y = 40 }
+					text = "TFRKPHN_const_body"
+					font = "hoi_16mbs"
+					maxWidth = 470
+					maxHeight = 250
+					alwaystransparent = yes
+				}
+			}
+		}
+	}
+}

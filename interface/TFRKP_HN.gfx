@@ -1,0 +1,170 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_TFRKPHN_ppp_convention"
+		texturefile = "gfx/event_pictures/TFRKPHN_ppp_convention.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_dpk_convention"
+		texturefile = "gfx/event_pictures/TFRKPHN_dpk_convention.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_tt_lee_jaemyung"
+		texturefile = "gfx/event_pictures/TFRKPHN_tt_lee_jaemyung.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_tt_lee_nakyeon"
+		texturefile = "gfx/event_pictures/TFRKPHN_tt_lee_nakyeon.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_tt_yoon"
+		texturefile = "gfx/event_pictures/TFRKPHN_tt_yoon.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_tt_hong"
+		texturefile = "gfx/event_pictures/TFRKPHN_tt_hong.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_portrait_KOR_hong_joon_pyo"
+		texturefile = "gfx/leaders/KOR/TFRKPHN_hong_joon_pyo.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_KOR_lee_in_je"
+		texturefile = "gfx/leaders/KOR/TFRKPHN_lee_in_je.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TFRKPHN_lee_in_je"
+		texturefile = "gfx/interface/ideas/TFRKPHN_lee_in_je.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TFRKPHN_kim_dae_sik"
+		texturefile = "gfx/interface/ideas/TFRKPHN_kim_dae_sik.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TFRKPHN_seo_byung_soo"
+		texturefile = "gfx/interface/ideas/TFRKPHN_seo_byung_soo.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TFRKPHN_hong_il_pyo"
+		texturefile = "gfx/interface/ideas/TFRKPHN_hong_il_pyo.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TFRKPHN_yoon_jae_ok"
+		texturefile = "gfx/interface/ideas/TFRKPHN_yoon_jae_ok.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TFRKPHN_lim_jong_deuk"
+		texturefile = "gfx/interface/ideas/TFRKPHN_lim_jong_deuk.png"
+	}
+	spriteType = {
+		name = "GFX_focus_TFRKPHN_hong_start"
+		texturefile = "gfx/interface/goals/TFRKPHN_hong_start.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_nak_temp"
+		texturefile = "gfx/event_pictures/TFRKPHN_nak_temp.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_hong_temp"
+		texturefile = "gfx/event_pictures/TFRKPHN_hong_temp.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_choice_korea_hong"
+		texturefile = "gfx/event_pictures/TFRKPHN_choice_korea_hong.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_choice_korea_nak"
+		texturefile = "gfx/event_pictures/TFRKPHN_choice_korea_nak.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_choice_korea_hong_nak"
+		texturefile = "gfx/event_pictures/TFRKPHN_choice_korea_hong_nak.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_human_hong"
+		texturefile = "gfx/interface/GUI/TFRKPHN_inlay/human_hong.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_human_nak"
+		texturefile = "gfx/interface/GUI/TFRKPHN_inlay/human_nak.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_human_hong_nak"
+		texturefile = "gfx/interface/GUI/TFRKPHN_inlay/human_hong_nak.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_hong_prime"
+		texturefile = "gfx/interface/GUI/TFRKPHN_inlay/hong_prime.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_hong_certain"
+		texturefile = "gfx/interface/GUI/TFRKPHN_inlay/hong_certain.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_nak_prime"
+		texturefile = "gfx/interface/GUI/TFRKPHN_inlay/nak_prime.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_nak_certain"
+		texturefile = "gfx/interface/GUI/TFRKPHN_inlay/nak_certain.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_tt_hong_election"
+		texturefile = "gfx/event_pictures/TFRKPHN_tt_hong_election.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_tt_nak_election"
+		texturefile = "gfx/event_pictures/TFRKPHN_tt_nak_election.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_hong_office"
+		texturefile = "gfx/event_pictures/TFRKPHN_hong_office.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_hong_memorial"
+		texturefile = "gfx/event_pictures/TFRKPHN_hong_memorial.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_hong_crimewar"
+		texturefile = "gfx/event_pictures/TFRKPHN_hong_crimewar.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_hong_hongkacola"
+		texturefile = "gfx/event_pictures/TFRKPHN_hong_hongkacola.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_hong_debtzero"
+		texturefile = "gfx/event_pictures/TFRKPHN_hong_debtzero.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_hong_union"
+		texturefile = "gfx/event_pictures/TFRKPHN_hong_union.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_hong_2020_win"
+		texturefile = "gfx/event_pictures/TFRKPHN_hong_2020_win.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_justice_party_hq"
+		texturefile = "gfx/event_pictures/TFRKPHN_justice_party_hq.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_meari_hong"
+		texturefile = "gfx/event_pictures/TFRKPHN_meari_hong.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_taiwan_protest"
+		texturefile = "gfx/event_pictures/TFRKPHN_taiwan_protest.png"
+	}
+}

@@ -1,0 +1,91 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_TFRKPHN_map_seoul"
+		texturefile = "gfx/interface/gui/TFRKPHN_map/TFRKPHN_seoul.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_map_gyeonggi"
+		texturefile = "gfx/interface/gui/TFRKPHN_map/TFRKPHN_gyeonggi.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_map_jeonbuk"
+		texturefile = "gfx/interface/gui/TFRKPHN_map/TFRKPHN_jeonbuk.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_map_jeonnam"
+		texturefile = "gfx/interface/gui/TFRKPHN_map/TFRKPHN_jeonnam.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_map_gyeongbuk"
+		texturefile = "gfx/interface/gui/TFRKPHN_map/TFRKPHN_gyeongbuk.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_map_gyeongnam"
+		texturefile = "gfx/interface/gui/TFRKPHN_map/TFRKPHN_gyeongnam.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_map_bg"
+		texturefile = "gfx/interface/gui/TFRKPHN_map/TFRKPHN_map_bg.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_color_seoul"
+		texturefile = "gfx/interface/gui/TFRKPHN_map/TFRKPHN_color_seoul.png"
+		noOfFrames = 6
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_color_gyeonggi"
+		texturefile = "gfx/interface/gui/TFRKPHN_map/TFRKPHN_color_gyeonggi.png"
+		noOfFrames = 6
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_color_gangwon"
+		texturefile = "gfx/interface/gui/TFRKPHN_map/TFRKPHN_color_gangwon.png"
+		noOfFrames = 6
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_color_chungcheong"
+		texturefile = "gfx/interface/gui/TFRKPHN_map/TFRKPHN_color_chungcheong.png"
+		noOfFrames = 6
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_color_jeonbuk"
+		texturefile = "gfx/interface/gui/TFRKPHN_map/TFRKPHN_color_jeonbuk.png"
+		noOfFrames = 6
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_color_jeonnam"
+		texturefile = "gfx/interface/gui/TFRKPHN_map/TFRKPHN_color_jeonnam.png"
+		noOfFrames = 6
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_color_gyeongbuk"
+		texturefile = "gfx/interface/gui/TFRKPHN_map/TFRKPHN_color_gyeongbuk.png"
+		noOfFrames = 6
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_color_gyeongnam"
+		texturefile = "gfx/interface/gui/TFRKPHN_map/TFRKPHN_color_gyeongnam.png"
+		noOfFrames = 6
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_color_jeju"
+		texturefile = "gfx/interface/gui/TFRKPHN_map/TFRKPHN_color_jeju.png"
+		noOfFrames = 6
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_logo_split"
+		texturefile = "gfx/interface/gui/TFRKPHN_map/TFRKPHN_logo_split.png"
+		noOfFrames = 21
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_logo_split_small"
+		texturefile = "gfx/interface/gui/TFRKPHN_map/TFRKPHN_logo_split_small.png"
+		noOfFrames = 21
+	}
+}

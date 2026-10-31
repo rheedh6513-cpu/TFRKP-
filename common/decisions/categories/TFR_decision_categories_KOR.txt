@@ -1,0 +1,1251 @@
+########################################
+## Category priority Guide
+## 100 = TFR Debug decisions
+## 99 = National Assembly of Korea
+## 98 = Covid
+## 95 = Great Asian War
+## 90 = Turning Point War
+## 80 = Martial Laws
+## 70 = Important Political GUI (ex. DPK, DLP, PPP GUIs)
+## Plz don't setting so big amount
+########################################
+
+
+### Debug-only holder for an otherwise unattached decision-category UI ###
+KOR_debug_KMS_ECON_category = {
+	icon = GFX_KOR_icarus_dec_categories
+	allowed = {
+		original_tag = KOR
+	}
+	priority = 100
+	visible_when_empty = yes
+	visible = {
+		has_country_flag = KOR_debug_show_all_decision_uis_flag
+	}
+	scripted_gui = KMS_ECON_gui
+}
+
+
+### Common Decisions ###
+KOR_national_assembly_category = {
+	icon = GFX_decision_KOR_national_assembly
+	allowed = {
+		original_tag = KOR
+	}
+	priority = 99
+	visible_when_empty = yes
+	visible = {
+		OR = {
+			has_country_flag = KOR_debug_show_all_decision_uis_flag
+			AND = {
+				NOT = {
+					has_country_flag = KOR_NatAsm_new_established_flag
+					has_country_flag = KOR_NatAsm_new_established_2_flag
+				}
+			}
+		}
+	}
+	scripted_gui = TFR_KOR_national_assembly
+}
+
+KOR_national_assembly_new_category = {
+	icon = GFX_decision_KOR_national_assembly
+	allowed = {
+		original_tag = KOR
+	}
+	priority = 99
+	visible_when_empty = yes
+	visible = {
+		has_country_flag = KOR_NatAsm_new_established_flag
+	}
+}
+
+KOR_national_conference_for_unification_category = {
+	icon = GFX_decision_KOR_national_conference_for_unification_category
+	allowed = {
+		original_tag = KOR
+	}
+	priority = 99
+	visible_when_empty = yes
+	visible = {
+		OR = {
+			has_country_flag = KOR_debug_show_all_decision_uis_flag
+			AND = {
+				has_country_flag = KOR_NatAsm_new_established_2_flag
+				NOT = {
+					has_country_flag = KOR_army_happy_real_unlock
+				}
+			}
+		}
+	}
+    scripted_gui = KOR_national_conference_for_unification_gui
+}
+
+KOR_coronavirus_category = {
+	icon = GFX_decision_KOR_coronavirus
+	allowed = {
+		original_tag = KOR
+	}
+	priority = 98
+	visible = {
+		OR = {
+			has_country_flag = KOR_debug_show_all_decision_uis_flag
+			has_country_flag = KOR_coronavirus_crisis
+		}
+	}
+	visible_when_empty = yes
+	scripted_gui = TFR_KOR_coronavirus
+}
+
+KOR_saudi_volunteer_category = {
+	icon = GFX_decision_KOR_saudi_volunteer
+	allowed = {
+		original_tag = KOR
+	}
+	priority = 90
+	visible = {
+		OR = {
+			has_country_flag = KOR_debug_show_all_decision_uis_flag
+			has_country_flag = KOR_saudi_volunteer_active
+		}
+	}
+	visible_when_empty = yes
+	scripted_gui = TFR_KOR_saudi_volunteer
+}
+
+KOR_taiwan_guardian_category = {
+	icon = GFX_decision_icon_KOR_taiwan_defend
+	allowed = {
+		original_tag = KOR
+	}
+	priority = 90
+	visible = {
+		KOR_in_taiwan_war = yes
+	}
+	available = {
+		if = {
+			limit = {
+				KOR_is_lee_path = yes
+			}
+			has_completed_focus = KOR_lee_overseas_dispatch
+		}
+		# TFRKP Hong Nak: 홍준표 정부는 2-2 '대한민국의 양안전쟁 참전'(개입)을 해야 사용 가능
+		if = {
+			limit = {
+				has_country_flag = TFRKP_HN_hong_president
+			}
+			has_completed_focus = TFRKPHN_hong_b02_02
+		}
+	}
+	visible_when_empty = yes
+}
+
+KOR_asian_cold_war_category = {
+	icon = GFX_decision_icon_KOR_foreign_office_korea_icon
+	allowed = {
+		original_tag = KOR
+	}
+	priority = 91
+	visible = {
+		OR = {
+			has_country_flag = KOR_debug_show_all_decision_uis_flag
+			AND = {
+				has_country_flag = KOR_asian_cold_war_active
+				NOT = {
+					has_global_flag = pan_asian_war_ongoing
+					has_global_flag = PRC_chinese_gaw_victory_global
+					has_global_flag = PRC_japanese_gaw_victory_global
+				}
+			}
+		}
+	}
+	scripted_gui = TFR_asian_cold_war_gui
+	visible_when_empty = yes
+}
+KOR_defense_reform_category = {
+	icon = GFX_decision_icon_KOR_defreform_category
+	priority = 50
+
+	allowed = {
+		original_tag = KOR
+	}
+
+	visible = {
+		OR = {
+			has_country_flag = KOR_debug_show_all_decision_uis_flag
+			AND = {
+				original_tag = KOR
+				has_country_flag = TFRKP_show_defreform_GUI
+			}
+		}
+	}
+
+	# 카테고리 상단에 국방개혁 패널 부착
+	visible_when_empty = yes
+	scripted_gui = TFRKP_defreform_main_ui
+}
+kimminseok_korea_war_confrontation = {
+	icon = GFX_decision_icon_kimminseok_korea_war_confrontation_category
+	picture = GFX_kmsw3_cat_picture
+
+	priority = 90
+	visible_when_empty = yes
+
+	allowed = {
+		original_tag = KOR
+	}
+	visible = {
+		OR = {
+			has_country_flag = KOR_debug_show_all_decision_uis_flag
+			has_country_flag = kimminseok_korea_war_unlocked
+		}
+		NOT = {
+			has_global_flag = PRC_japanese_gaw_victory_global
+			has_global_flag = TFRKP_GAW_is_started_flag
+		}
+	}
+
+	scripted_gui = kimminseok_korea_war_ui_v3
+}
+KOR_nation_army_category = {
+	icon = GFX_decision_KOR_saudi_volunteer
+	allowed = {
+		original_tag = KOR
+	}
+	priority = 30
+	visible = { # Common Army Reform focus-decisions
+		has_country_flag = KOR_army_reform_active
+	}
+	visible_when_empty = yes
+}
+
+KOR_kari_category = {
+	icon = GFX_decision_icon_KOR_kari
+	allowed = {
+		original_tag = KOR
+	}
+	priority = 30
+	visible = {
+		has_country_flag = KOR_kari_enable_flag
+		has_war = no
+	}
+	activation = {
+		has_war = no
+	}
+}
+
+KOR_kfxx_project_category = {
+	icon = GFX_decision_icon_KOR_kfxx_project_category
+	allowed = {
+		original_tag = KOR
+	}
+	priority = 45
+	visible_when_empty = yes
+	visible = {
+		has_country_flag = KOR_kfxx_project_category_flag
+	}
+}
+
+KOR_korea_defense_business_category = {
+	icon = GFX_decision_icon_KOR_taiwan_defend
+	allowed = {
+		original_tag = KOR
+	}
+	visible = {
+		has_war = no
+		KOR_is_PP_path = no
+	}
+}
+
+KOR_great_aisa_war = {
+	icon = GFX_decision_icon_KOR_biochemical_weapons_icon 
+	allowed = {
+		original_tag = KOR
+	}
+	priority = 95
+	visible = {
+		has_country_flag = KOR_great_asia_war
+		NOT = {
+			has_global_flag = PRC_japanese_gaw_victory_global
+		}
+	}
+	visible_when_empty = yes
+}
+
+KOR_biochemical_weapons_category = {
+	icon = GFX_decision_icon_KOR_biochemical_weapons_icon
+	allowed = {
+		original_tag = KOR
+	}
+	priority = 50
+	visible = {
+		has_country_flag = KOR_great_asia_war
+		has_country_flag = KOR_bio_weapon
+		OR = {
+			has_war_with = PRC
+			has_war_with = PRK
+		}
+	}
+}
+
+KOR_special_strategic_materials_program_category = {
+	icon = GFX_decision_icon_KOR_biochemical_weapons_icon
+	allowed = {
+		original_tag = KOR
+	}
+	priority = 96
+	visible_when_empty = yes
+	visible = {
+		OR = {
+			has_country_flag = KOR_debug_show_all_decision_uis_flag
+			has_country_flag = KOR_special_strategic_materials_program_visible_flag
+		}
+	}
+	scripted_gui = KOR_special_strategic_materials_program_gui
+}
+
+### Moon Jae-in Decisions ###
+KOR_new_econimic_crisis_category = {
+	icon = GFX_decision_icon_KOR_america_civil_war_icon
+	allowed = {
+		original_tag = KOR
+	}
+	priority = 75
+	visible = {
+		has_country_flag = KOR_economic_crisis
+	}
+}
+
+KOR_foreign_office_category = {
+	icon = GFX_decision_icon_KOR_foreign_office_korea_icon
+	allowed = {
+		original_tag = KOR
+	}
+	visible = {
+		has_country_flag = KOR_foreign_office_active
+		has_country_leader = {
+			character = KOR_moon_jae_in_char
+			ruling_only = yes
+		}
+	}
+	visible_when_empty = yes
+}
+
+KOR_korea_economy_category = {
+	icon = GFX_decision_icon_KOR_build
+	allowed = {
+		original_tag = KOR
+	}
+	visible = {
+		has_completed_focus = KOR_a_new_decade_of_the_twentyonest_century
+	}
+}
+
+##############################
+# After 2022 Presidential Election - Yoon
+##############################
+
+### Yoon Seok-yeol Path Decisions ###
+KOR_korea_yongsan_category = {
+	icon = GFX_decision_icon_KOR_youngsan
+	allowed = {
+		original_tag = KOR
+	}
+	priority = 70
+	visible = {
+		has_country_flag = KOR_youngsan_move
+		NOT = {
+			has_completed_focus = KOR_yoon_expulsion
+		}
+	}
+	visible_when_empty = yes
+}
+KOR_Yoon_inner_circle_category = {
+	icon = GFX_decision_icon_KOR_yoon_inne_circle
+	allowed = {
+		original_tag = KOR
+	}
+	priority = 70
+	visible_when_empty = yes
+	visible = {
+		OR = {
+			has_country_flag = KOR_debug_show_all_decision_uis_flag
+			AND = {
+				NOT = {
+					has_completed_focus = KOR_yoon_expulsion
+					KOR_is_yoon_declare_martial_law = yes
+				}
+				KOR_is_yoon_path = yes
+				has_country_leader = {
+					character = KOR_yoon_suk_yeol_char
+					ruling_only = yes
+				}
+			}
+		}
+	}
+	scripted_gui = TFR_KOR_inner_circle
+}
+
+### Yoon Seok-yeol Happy Route Decisions ###
+KOR_PPP_inner_circle_category = {
+	icon = GFX_decision_icon_KOR_PPP_icon
+	allowed = {
+		original_tag = KOR
+	}
+	priority = 70
+	visible = {
+		OR = {
+			has_country_flag = KOR_debug_show_all_decision_uis_flag
+			AND = {
+				KOR_is_yoon_path = yes
+				has_country_flag = KOR_yoon_taiwan_war_victory
+				has_country_flag = KOR_yoon_second_election_victory
+				has_country_flag = KOR_yoon_second_governemnt
+				has_country_flag = KOR_second_president_PPP
+				NOT = {
+					KOR_is_lee_path = yes
+					KOR_is_lee_after_yoon_path = yes
+				}
+			}
+		}
+	}
+	visible_when_empty = yes
+	scripted_gui = TFR_KOR_PPP_inner_circle
+}
+
+KOR_yoon_ai_delete_category = {
+	icon = GFX_decision_icon_KOR_agi_icon
+	allowed = {
+		original_tag = KOR
+	}
+	priority = 60
+	visible = {
+		has_completed_focus = KOR_yoon_industrial_revolution_5
+		has_completed_focus = KOR_yoon_age_of_prosperity_3
+		has_country_flag = KOR_ai_park_one
+		NOT = { 
+			has_country_flag = KOR_lee_path
+		}
+	}
+	visible_when_empty = yes
+}
+
+KOR_victory_plan = {
+	icon = GFX_decision_icon_KOR_build
+	allowed = {
+		original_tag = KOR
+	}
+	priority = 35
+	visible = {
+		original_tag = KOR
+		has_completed_focus = KOR_yoon_ready_election
+	}
+}
+
+KOR_new_economy_plan_category = {
+	icon = GFX_decision_icon_KOR_youngsan
+	allowed = {
+		original_tag = KOR
+	}
+	priority = 35
+	visible = {
+		has_country_flag = new_economy_plan
+	}
+}
+
+### Yoon Seok-yeol Martial Route Decisions ###
+KOR_korea_martial_law_countdown_category = {
+	icon = GFX_decision_icon_KOR_mat_icon
+	allowed = {
+		original_tag = KOR
+	}
+	priority = 80
+	visible = {
+		has_country_flag = KOR_martial_law_countdown
+		NOT = {
+			KOR_is_yoon_declare_martial_law = yes
+		}
+		NOT = {
+			has_country_flag = KOR_yoon_failed_coup
+		}
+	}
+	visible_when_empty = yes
+}
+
+KOR_korea_martial_law_category = {
+	icon = GFX_decision_icon_KOR_martial_icon
+	allowed = {
+		original_tag = KOR
+	}
+	priority = 80
+	visible = {
+		has_country_flag = KOR_yoon_under_martial_law
+	}
+}
+
+KOR_nuke_delete = {
+	icon = GFX_decision_generic_deploy_nukes
+	allowed = {
+		original_tag = KOR
+	}
+	priority = 97 # Nuclear Weapon Launched
+	visible = {
+		has_completed_focus = KOR_yoon_gori_plan
+	}
+}
+
+KOR_nuclear_weapon_launch_category = {
+	icon = GFX_decision_icon_KOR_nuke_category_icon
+	allowed = {
+		original_tag = KOR
+	}
+	priority = 99
+	visible_when_empty = yes
+	visible = {
+		OR = {
+			has_country_flag = KOR_nuclear_weapon_launch_category_flag
+			has_completed_focus = KOR_lee_army_route_common_focus_20
+		}
+	}
+}
+
+KOR_national_territorial_plan = {
+	icon = GFX_decision_icon_KOR_build
+	allowed = {
+		original_tag = KOR
+	}
+	priority = 35
+	visible = {
+		has_completed_focus = KOR_yoon_passionate_korean
+	}
+}
+
+### Lee after Martial Route Decisions ###
+KOR_korea_yoon_delete = {
+	icon = GFX_decision_icon_KOR_martial_icon
+	allowed = {
+		original_tag = KOR
+	}
+	priority = 65
+	visible = {
+		has_completed_focus = KOR_yoon_impeachment
+		NOT = {
+			has_completed_focus = KOR_lee_be_elected
+		}
+	}
+	visible_when_empty = yes
+}
+
+KOR_korea_lee_delete = {
+	icon = GFX_decision_icon_KOR_the_task_icon
+	allowed = {
+		original_tag = KOR
+	}
+	priority = 25
+	visible = {
+		has_country_flag = KOR_lee_the_task
+	}
+}
+
+KOR_lee_economy_decision = {
+	icon = GFX_decision_icon_KOR_build
+	allowed = {
+		original_tag = KOR
+	}
+	priority = 20
+	visible = {
+		has_completed_focus = KOR_economic_recovery
+	}
+}
+
+##############################
+# After 2022 Presidential Election - Lee
+##############################
+
+### Lee Jae-myung Path Decisions ###
+KOR_democratic_party_dynasty_category = {
+	icon = GFX_decision_icon_KOR_lee_dp_category
+	allowed = {
+		original_tag = KOR
+	}
+	priority = 70
+	visible_when_empty = yes
+	visible = { # Only DPK ruling Show
+		OR = {
+			has_country_flag = KOR_debug_show_all_decision_uis_flag
+			AND = {
+				has_country_flag = KOR_lee_blue_house_show_flag
+				NOT = {
+					has_country_flag = KOR_lee_is_dead
+					has_country_flag = KOR_lee_DPK_path
+				}
+				has_government = social_liberal
+			}
+		}
+	}
+	scripted_gui = TFR_KOR_dpk_dynasty_gui
+}
+
+KOR_pdto_cooperation_initiative_category = {
+	icon = GFX_decision_KOR_lee_PDTO_category
+	allowed = {
+		original_tag = KOR
+	}
+	priority = 20
+	visible_when_empty = yes
+	visible = {
+		has_country_flag = KOR_pdto_cooperation_initiative_flag
+	}
+}
+
+KOR_people_economy_category = {
+	icon = GFX_decision_icon_KOR_invite_industries_icon
+	allowed = {
+		original_tag = KOR
+	}
+	visible = {
+		has_country_flag = KOR_lee_us_question
+		NOT = {
+			has_country_flag = KOR_lee_is_dead
+		}
+	}
+}
+
+KOR_korea_death_business_category = {
+	icon = GFX_decision_icon_KOR_taiwan_defend
+	allowed = {
+		original_tag = KOR
+	}
+	visible = {
+		has_country_flag = death_merchant
+		has_war = no
+	}
+}
+
+### Lee Jae-myung Happy Route Decisions ###
+KOR_lee_new_republic_category = {
+	icon = GFX_decision_icon_KOR_lee_great_socity_cateogry
+	allowed = {
+		original_tag = KOR
+	}
+	priority = 40
+	visible_when_empty = yes
+	visible = {
+		has_country_flag = KOR_lee_new_republic_category_flag
+		NOT = {
+			has_country_flag = KOR_lee_new_republic_category_closed_flag
+		}
+		NOT = {
+			has_completed_focus = KOR_lee_victory_sup_26
+		}
+		NOT = {
+			has_country_flag = KOR_lee_kim_min_seok_flag
+		}
+	}
+}
+
+KOR_lee_economy_decision_22_vic = {
+	icon = GFX_decision_icon_KOR_lee_after_plan_category
+	allowed = {
+		original_tag = KOR
+	}
+	priority = 20
+	visible = {
+		has_country_flag = KOR_lee_economy_decision_22_vic_flag
+	}
+}
+
+KOR_lee_victory_culture = {
+	icon = GFX_decision_icon_KOR_lee_victory_culture_category
+	allowed = {
+		original_tag = KOR
+	}
+	priority = 20
+
+	visible = {
+		has_country_flag = KOR_lee_culture_flag
+		has_war = no
+	}
+}
+
+KOR_kimminseok_reform_category = {
+	icon = GFX_KOR_icarus_dec_categories
+	priority = 80
+	visible_when_empty = yes
+
+	allowed = {
+		original_tag = KOR
+	}
+
+	visible = {
+		OR = {
+			has_country_flag = KOR_debug_show_all_decision_uis_flag
+			AND = {
+				original_tag = KOR
+				has_country_flag = KOR_lee_kim_min_seok_flag
+				has_country_leader = {
+					character = KOR_kim_min_seok_char
+					ruling_only = yes
+				}
+			}
+		}
+	}
+	scripted_gui = TFRKP_kimminseok_reform_tab_ui
+}
+
+### Lee Nothing Route Decisions ###
+KOR_save_the_korea_category = {
+	icon = GFX_KOR_save_the_korea_category
+	priority = 30
+	visible_when_empty = yes
+
+	allowed = {
+		original_tag = KOR
+	}
+
+	visible = {
+		has_country_flag = KOR_save_the_korea_category_flag
+	}
+}
+
+### Cho Kuk Route Decisions ### 
+KOR_three_principles_category = {
+	icon = GFX_decision_icon_KOR_three_principles
+	allowed = {
+		original_tag = KOR
+	}
+	priority = 90
+	visible_when_empty = yes
+	visible = {
+		OR = {
+			has_country_flag = KOR_debug_show_all_decision_uis_flag
+			has_country_flag = KOR_three_principles_category_unlocked_flag
+		}
+	}
+	scripted_gui = KOR_three_principles_category_gui
+}
+
+KOR_choguk_baseball_category = {
+	icon = GFX_decision_icon_KOR_choguk_baseball_category
+	allowed = {
+		original_tag = KOR
+	}
+	visible = {
+		OR = {
+			has_country_flag = KOR_debug_show_all_decision_uis_flag
+			has_country_flag = KOR_baseball_start_flag
+		}
+	}
+	priority = 85
+	visible_when_empty = yes
+	scripted_gui = KOR_baseball_game_GUI
+}
+
+KOR_democratic_pillars_category = {
+	icon = GFX_decision_icon_KOR_lee_pantarki_icon
+	allowed = {
+		original_tag = KOR
+	}
+	priority = 70
+	visible_when_empty = yes
+	visible = {
+		OR = {
+			has_country_flag = KOR_debug_show_all_decision_uis_flag
+			has_country_flag = KOR_democratic_pillars_category_visible_flag
+		}
+	}
+	scripted_gui = KOR_democratic_pillars_gui
+}
+
+KOR_lee_homeland_socity = {
+	icon = GFX_decision_icon_KOR_build
+	allowed = {
+		original_tag = KOR
+	}
+	priority = 40
+
+	visible = {
+		has_country_flag = KOR_lee_homeland_socity_flag
+	}
+}
+
+### Lee Jun-seok Route Decisions ###
+KOR_LJS_government = {
+	icon = GFX_decision_icon_KOR_LJS_newness_category
+	allowed = {
+		original_tag = KOR
+	}
+	priority = 70
+	visible_when_empty = yes
+	visible = {
+		OR = {
+			has_country_flag = KOR_debug_show_all_decision_uis_flag
+			has_country_flag = KOR_LJS_government_enable_flag
+		}
+	}
+	scripted_gui = TFR_KOR_LJS_government_gui
+}
+
+KOR_LJS_pivot_to_local_category = {
+	icon = GFX_decision_icon_KOR_LJS_pivot_to_local
+	allowed = {
+		original_tag = KOR
+	}
+	priority = 65
+	visible_when_empty = yes
+	visible = {
+		OR = {
+			has_country_flag = KOR_debug_show_all_decision_uis_flag
+			AND = {
+				has_completed_focus = KOR_lee_nothing_ppp_focus_4
+				has_country_flag = KOR_LJS_government_enable_flag
+			}
+		}
+	}
+	scripted_gui = TFR_KOR_LJS_blue_marble
+}
+
+### Lee Fail Route Decisions ###
+KOR_korea_lee_martial_law_category = {
+	icon = GFX_decision_icon_KOR_martial_icon
+	allowed = {
+		original_tag = KOR
+	}
+	priority = 80
+	visible = {
+		has_country_flag = KOR_lee_martial_law
+		NOT = {
+			has_country_flag = KOR_lee_dead_22nd_president_election_flag
+		}
+	}
+	visible_when_empty = yes
+}
+
+### Coalition Route Decisions ###
+KOR_unfinished_symphony_category = {
+	icon = GFX_decision_icon_KOR_unfinished_symphony
+	scripted_gui = KOR_unfinished_symphony_gui
+	visible_when_empty = yes
+	allowed = {
+		original_tag = KOR
+	}
+	priority = 75
+	visible = {
+		OR = {
+			has_country_flag = KOR_debug_show_all_decision_uis_flag
+			AND = {
+				has_country_flag = KOR_unfinished_symphony_visible_flag
+				NOT = {
+					has_country_flag = KOR_symphony_end_flag
+				}
+			}
+		}
+	}
+}
+
+KOR_kim_moonsoo_president = {
+	icon = GFX_decision_icon_KOR_kim_moonsoo_president_category
+	allowed = {
+		original_tag = KOR
+	}
+	priority = 70
+	visible_when_empty = yes
+	visible = {
+		has_country_flag = KOR_coa_kim_moon_soo
+	}
+}
+
+KOR_in_the_ruins_category = {
+	icon = GFX_decision_icon_KOR_lee_coa_in_the_ruins_cate
+	allowed = {
+		original_tag = KOR
+	}
+	priority = 50
+	visible_when_empty = yes
+	visible = {
+		has_country_flag = KOR_coa_kim_moon_soo
+	}
+}
+
+KOR_moonso_kospi = {
+	icon = GFX_decision_icon_KOR_moonso_kospi
+	allowed = {
+		original_tag = KOR
+	}
+	priority = 30
+	visible = {
+		has_country_flag = KOR_moonso_kospi_flag
+	}
+}
+
+KOR_coa_economy_decision = {
+	icon = GFX_decision_icon_KOR_build
+	allowed = {
+		original_tag = KOR
+	}
+	priority = 30
+	visible = {
+		has_country_flag = KOR_coa_economy_decision_enable_flag
+	}
+}
+
+### Army Route Decisions ###
+KOR_behind_the_curtain_category = {
+	icon = GFX_decision_icon_KOR_behind_the_curtain_category
+	allowed = {
+		original_tag = KOR
+	}
+	visible = {
+		OR = {
+			has_country_flag = KOR_debug_show_all_decision_uis_flag
+			AND = {
+				has_country_flag = KOR_lee_national_revolution_route
+				has_country_flag = KOR_BtC_mechanic_visible_flag
+				NOT = {
+					has_country_flag = KOR_army_happy_real_unlock
+				}
+			}
+		}
+	}
+	priority = 70
+	visible_when_empty = yes
+	scripted_gui = KOR_behind_the_curtain_gui
+}
+
+KOR_lee_military_ignorant = {
+	icon = GFX_idea_KOR_army_ignorant_idea
+	allowed = {
+		original_tag = KOR
+	}
+	priority = 60
+	visible_when_empty = yes
+	visible = {
+		OR = {
+			has_country_flag = KOR_debug_show_all_decision_uis_flag
+			AND = {
+				has_country_flag = KOR_lee_army_igonrant_flag
+				NOT = {
+					has_country_flag = KOR_army_happy_real_unlock
+				}
+			}
+		}
+	}
+	scripted_gui = KOR_lee_military_ignorant_gui
+}
+
+KOR_underground_red_resistance_category = {
+	icon = GFX_decision_icon_KOR_lee_army_reds_plan
+	allowed = {
+		original_tag = KOR
+	}
+	priority = 50
+	visible_when_empty = no
+	visible = {
+		has_country_flag = KOR_red_conspiracy_mission_visible_flag
+	}
+}
+
+KOR_military_supreme_council_category = {
+	icon = GFX_decision_icon_KOR_military_supreme_council_category
+	allowed = {
+		original_tag = KOR
+	}
+	priority = 45
+	visible_when_empty = yes
+	visible = {
+		OR = {
+			has_country_flag = KOR_debug_show_all_decision_uis_flag
+			AND = {
+				has_country_flag = KOR_military_supreme_council_flag
+				NOT = {
+					has_country_flag = KOR_army_nam_route_happy_end_clear_flag
+				}
+			}
+		}
+	}
+	scripted_gui = KOR_military_supreme_council_gui
+}
+
+KOR_human_modification_category = {
+	icon = GFX_decision_icon_KOR_lee_army_youn_human_icon
+	allowed = {
+		original_tag = KOR
+	}
+	priority = 45
+	visible_when_empty = yes
+	visible = {
+		OR = {
+			has_country_flag = KOR_debug_show_all_decision_uis_flag
+			AND = {
+				has_country_flag = KOR_human_modification_category_flag
+				NOT = {
+					has_country_flag = KOR_army_happy_real_unlock
+				}
+			}
+		}
+	}
+	scripted_gui = KOR_human_modification_gui
+}
+
+KOR_national_riot_suppression_category = {
+	icon = GFX_decision_icon_KOR_national_riot_suppression_category_icon
+	allowed = {
+		original_tag = KOR
+	}
+	priority = 40
+	visible_when_empty = yes
+	visible = {
+		OR = {
+			has_country_flag = KOR_debug_show_all_decision_uis_flag
+			has_country_flag = KOR_national_riot_suppression_category_flag
+		}
+	}
+	scripted_gui = KOR_riot_suppression_gui
+}
+
+KOR_rok_armed_forces_innovation_category = {
+	icon = GFX_decision_icon_KOR_lee_army_innovation_icon
+	allowed = {
+		original_tag = KOR
+	}
+	priority = 40
+	visible = {
+		has_completed_focus = KOR_lee_army_route_common_focus_12
+	}
+	visible_when_empty = yes
+}
+
+KOR_bukhagui_category = {
+	icon = GFX_decision_icon_KOR_prc_tech_category
+	allowed = {
+		original_tag = KOR
+	}
+	priority = 40
+	visible_when_empty = yes
+	visible = {
+		has_country_flag = KOR_bukhagui_category_flag
+	}
+}
+
+### Reds Route Decisions ###
+KOR_peoples_labor_party_category = {
+	icon = GFX_decision_icon_KOR_peoples_labor_party_category
+	allowed = {
+		original_tag = KOR
+	}
+	visible = {
+		OR = {
+			has_country_flag = KOR_debug_show_all_decision_uis_flag
+			has_country_flag = KOR_PLP_party_setup_flag
+		}
+	}
+	priority = 70
+	visible_when_empty = yes
+	scripted_gui = KOR_plp_party_decision_gui
+}
+
+KOR_lee_reds_white_terror = {
+	icon = GFX_decision_icon_KOR_white_terror_category
+	allowed = {
+		original_tag = KOR
+	}
+	priority = 50
+	
+	visible = {
+		has_country_flag = KOR_lee_reds_white_terror_flag
+	}
+}
+
+KOR_nis_dismantlement_category = {
+	icon = GFX_decision_icon_KOR_nis_dismantlement_category
+	allowed = {
+		original_tag = KOR
+	}
+	priority = 50
+	visible_when_empty = yes
+	visible = {
+		OR = {
+			has_country_flag = KOR_debug_show_all_decision_uis_flag
+			has_country_flag = KOR_nis_dismantlement_category_flag
+		}
+	}
+	scripted_gui = KOR_nis_dismantlement_progress_gui
+}
+
+KOR_korea_major_surgery_category = {
+	icon = GFX_decision_icon_KOR_korea_major_surgery_category
+	allowed = {
+		original_tag = KOR
+	}
+	priority = 40
+	visible = {
+		has_completed_focus = KOR_lee_reds_focus_7
+	}
+}
+
+KOR_lee_eco_economy = {
+	icon = GFX_decision_icon_KOR_youngsan
+	allowed = {
+		original_tag = KOR
+	}
+	priority = 25
+	visible = {
+		has_country_flag = KOR_lee_not_reds_green_eco_flag
+	}
+}
+
+KOR_trade_network_diversification_category = {
+	icon = GFX_decision_icon_KOR_trade_network_diversification_category
+	allowed = {
+		original_tag = KOR
+	}
+	priority = 25
+	visible_when_empty = yes
+	visible = {
+		OR = {
+			has_country_flag = KOR_trade_network_diversification_category_flag
+			has_completed_focus = KOR_lee_reds_focus_35
+		}
+	}
+}
+
+KOR_lee_reds_train = {
+	icon = GFX_decision_icon_KOR_build
+	allowed = {
+		original_tag = KOR
+	}
+	priority = 25
+	visible = {
+		has_completed_focus = KOR_lee_reds_focus_29
+	}
+}
+
+KOR_beyond_seoul_republic_category = {
+	icon = GFX_decision_icon_KOR_beyond_seoul_republic_category
+	allowed = {
+		original_tag = KOR
+	}
+	priority = 25
+	visible_when_empty = yes
+	visible = {
+		has_country_flag = KOR_beyond_seoul_republic_category_flag
+	}
+}
+
+KOR_lee_reds_dprk = {
+	icon = GFX_decision_icon_KOR_lee_reds_dprk_category
+	allowed = {
+		original_tag = KOR
+	}
+	priority = 95
+	visible_when_empty = yes
+	visible = { # GAW
+		has_country_flag = KOR_lee_reds_dprk_army_flag
+		has_global_flag = PRK_north_korea_coupdeta_flag
+		NOT = {
+			has_global_flag = PRC_japanese_gaw_victory_global
+		}
+	}
+}
+
+KOR_lee_army_yec_emergency = {
+	icon = GFX_decision_icon_KOR_lee_army_yec_emergency_category
+	allowed = {
+		original_tag = KOR
+	}
+	priority = 50
+	visible = {
+		has_country_flag = KOR_lee_yec_army_emergency_decision
+	}
+}
+
+KOR_lee_army_yec_three_year_plan = {
+	icon = GFX_decision_icon_KOR_youngsan
+	allowed = {
+		original_tag = KOR
+	}
+	priority = 51
+	visible_when_empty = yes
+	visible = {
+		has_country_flag = korea.yec.three_year.plan
+	}
+}
+
+########################################
+# After Ending Decisions
+########################################
+KOR_addresring = {
+	icon = GFX_decision_icon_KOR_build
+	allowed = {
+		original_tag = KOR
+	}
+	visible = {
+		original_tag = KOR
+		NOT = {
+			OR = {
+				check_variable = {
+					KOR_korea_no_sex_var = 50
+				}
+				## Martial Law Success Path
+				has_country_flag = KOR_yoon_winter_republic
+			}
+		}
+		has_country_flag = unrestricted_diplomacy_flag
+	}
+}
+
+########################################
+# Just BOPs (권력의 균형 카테고리)
+# Plz don't put main decisions under this annotation
+########################################
+KOR_lee_victory_bop_category = {
+	allowed = {
+		original_tag = KOR
+	}
+	visible = {
+		has_country_flag = KOR_lee_victory_bop_enable_flag
+	}
+}
+
+KOR_coa_cabinet_bop_category = {
+	allowed = {
+		original_tag = KOR
+	}
+	visible = {
+		has_country_flag = KOR_coa_cabinet_bop_enable_flag
+	}
+}
+
+KOR_army_revolution_bop_category = {
+	allowed = {
+		original_tag = KOR
+	}
+	visible = {
+		has_country_flag = KOR_army_revolution_bop_enable_flag
+	}
+}
+
+KOR_reds_NA_fight_bop_category = {
+	allowed = {
+		original_tag = KOR
+	}
+	visible = {
+		has_country_flag = KOR_reds_NA_fight_bop_enable_flag
+	}
+}
+
+KOR_yec_space_revolution_category = {
+	icon = GFX_decision_icon_KOR_yec_space_revolution_category
+	allowed = {
+		original_tag = KOR
+	}
+	priority = 97
+	visible_when_empty = yes
+	visible = {
+		OR = {
+			has_country_flag = KOR_debug_show_all_decision_uis_flag
+			has_country_flag = KOR_yec_space_revolution_initialized_flag
+		}
+	}
+	scripted_gui = KOR_yec_space_revolution_gui
+}

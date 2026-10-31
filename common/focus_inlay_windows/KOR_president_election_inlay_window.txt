@@ -1,0 +1,118 @@
+# TFRKP Hong Nak: tfrkp 원본 덮어쓰기 (홍준표/이낙연 얼굴과 이름표 추가)
+KOR_president_election_inlay_window = {
+	window_name = TFR_KOR_president_election_inner_circle_gui_window
+	internal = no
+	visible = {
+		has_country_flag = KOR_president_election_2022
+		NOT = { KOR_is_lee_path = yes }
+		NOT = { KOR_is_yoon_path = yes }
+	}
+	scripted_images = {
+		background_icon = { GFX_KOR_president_election_background = yes }
+		background_human_icon = {
+			# TFRKP Hong Nak: 고른 후보에 맞는 얼굴
+			GFX_TFRKPHN_human_hong_nak = { has_country_flag = TFRKP_HN_PPP_hong has_country_flag = TFRKP_HN_DPK_lee_nakyeon }
+			GFX_TFRKPHN_human_hong = { has_country_flag = TFRKP_HN_PPP_hong }
+			GFX_TFRKPHN_human_nak = { has_country_flag = TFRKP_HN_DPK_lee_nakyeon }
+			GFX_KOR_president_election_background_human = yes
+		}
+		background_line_icon = { GFX_KOR_president_election_background_line = yes }
+		center_expect_icon = {
+			GFX_tight_match_president_election = {
+				check_variable = {
+					var = KOR_president_election_yoon_support
+					value = 0.51
+					compare = less_than_or_equals
+				}
+				check_variable = {
+					var = KOR_president_election_yoon_support
+					value = 0.49
+					compare = greater_than_or_equals
+				}
+				check_variable = {
+					var = KOR_president_election_lee_support
+					value = 0.51
+					compare = less_than_or_equals
+				}
+				check_variable = {
+					var = KOR_president_election_lee_support
+					value = 0.49
+					compare = greater_than_or_equals
+				}
+			}
+			GFX_TFRKPHN_nak_prime = {
+				has_country_flag = TFRKP_HN_DPK_lee_nakyeon
+				set_temp_variable = { KOR_president_election_support_temp = KOR_president_election_lee_support }
+				subtract_from_temp_variable = { KOR_president_election_support_temp = KOR_president_election_yoon_support }
+				AND = {
+					check_variable = { KOR_president_election_support_temp > 0.02 }
+					check_variable = {
+						var = KOR_president_election_support_temp
+						value = 0.08
+						compare = less_than_or_equals
+					}
+				}
+			}
+			GFX_lee_prime_president_election = {
+				set_temp_variable = { KOR_president_election_support_temp = KOR_president_election_lee_support }
+				subtract_from_temp_variable = { KOR_president_election_support_temp = KOR_president_election_yoon_support }
+				AND = {
+					check_variable = { KOR_president_election_support_temp > 0.02 }
+					check_variable = {
+						var = KOR_president_election_support_temp
+						value = 0.08
+						compare = less_than_or_equals
+					}
+				}
+			}
+			GFX_TFRKPHN_hong_prime = {
+				has_country_flag = TFRKP_HN_PPP_hong
+				set_temp_variable = { KOR_president_election_support_temp = KOR_president_election_yoon_support }
+				subtract_from_temp_variable = { KOR_president_election_support_temp = KOR_president_election_lee_support }
+				AND = {
+					check_variable = { KOR_president_election_support_temp > 0.02 }
+					check_variable = {
+						var = KOR_president_election_support_temp
+						value = 0.08
+						compare = less_than_or_equals
+					}
+				}
+			}
+			GFX_yoon_prime_president_election = {
+				set_temp_variable = { KOR_president_election_support_temp = KOR_president_election_yoon_support }
+				subtract_from_temp_variable = { KOR_president_election_support_temp = KOR_president_election_lee_support }
+				AND = {
+					check_variable = { KOR_president_election_support_temp > 0.02 }
+					check_variable = {
+						var = KOR_president_election_support_temp
+						value = 0.08
+						compare = less_than_or_equals
+					}
+				}
+			}
+			GFX_TFRKPHN_nak_certain = {
+				has_country_flag = TFRKP_HN_DPK_lee_nakyeon
+				set_temp_variable = { KOR_president_election_support_temp = KOR_president_election_lee_support }
+				subtract_from_temp_variable = { KOR_president_election_support_temp = KOR_president_election_yoon_support }
+				check_variable = { KOR_president_election_support_temp > 0.08 }
+			}
+			GFX_lee_certain_president_election = {
+				set_temp_variable = { KOR_president_election_support_temp = KOR_president_election_lee_support }
+				subtract_from_temp_variable = { KOR_president_election_support_temp = KOR_president_election_yoon_support }
+				check_variable = { KOR_president_election_support_temp > 0.08 }
+			}
+			GFX_TFRKPHN_hong_certain = {
+				has_country_flag = TFRKP_HN_PPP_hong
+				set_temp_variable = { KOR_president_election_support_temp = KOR_president_election_yoon_support }
+				subtract_from_temp_variable = { KOR_president_election_support_temp = KOR_president_election_lee_support }
+				check_variable = { KOR_president_election_support_temp > 0.08 }
+			}
+			GFX_yoon_certain_president_election = {
+				set_temp_variable = { KOR_president_election_support_temp = KOR_president_election_yoon_support }
+				subtract_from_temp_variable = { KOR_president_election_support_temp = KOR_president_election_lee_support }
+				check_variable = { KOR_president_election_support_temp > 0.08 }
+			}
+			GFX_unknown_president_election = yes
+		}
+	}
+}

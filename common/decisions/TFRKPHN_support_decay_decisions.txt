@@ -1,0 +1,17 @@
+TFRKPHN_hong_minsim_category = {
+
+	# 2주마다 전국 지지도가 떨어진다 (끝나면 on_daily_KOR에서 다시 시작, 무한 반복)
+	TFRKPHN_support_decay_mission = {
+		icon = GFX_decision_generic_political_actions
+		activation = { always = no }
+		available = { always = no }
+		is_good = no
+		days_mission_timeout = 30
+		timeout_effect = {
+			custom_effect_tooltip = TFRKPHN_support_decay_tt
+			hidden_effect = {
+				TFRKPHN_support_decay_random = yes
+			}
+		}
+	}
+}

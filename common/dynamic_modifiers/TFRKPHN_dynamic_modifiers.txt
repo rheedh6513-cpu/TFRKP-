@@ -1,0 +1,15 @@
+TFRKPHN_amend_cost_mod = {
+	icon = GFX_idea_KOR_yoon_common_conservatism_dynamic_modifir_idea
+	political_power_gain = TFRKPHN_amend_pp_drain
+}
+
+TFRKPHN_7th_republic = {
+	icon = GFX_idea_KOR_yoon_common_conservatism_dynamic_modifir_idea
+	stability_factor = TFRKPHN_7rep_stab
+	political_power_factor = TFRKPHN_7rep_pp
+	academic_development_monthly = TFRKPHN_7rep_aca
+	farming_development_monthly = TFRKPHN_7rep_farm
+	war_support_factor = TFRKPHN_7rep_war
+	stability_weekly = TFRKPHN_7rep_wstab
+	research_speed_factor = TFRKPHN_7rep_res
+}

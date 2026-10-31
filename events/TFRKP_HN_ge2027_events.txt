@@ -1,0 +1,277 @@
+add_namespace = tfrkphn
+
+# 제21대 대선 (2027.3.3): 양안전쟁 결과에 따른 차기 대통령
+country_event = {
+	id = tfrkphn.301
+	title = tfrkphn.301.t
+	desc = tfrkphn.301.desc
+	picture = GFX_report_event_ppp_ge_win
+	is_triggered_only = yes
+
+	option = {
+		name = tfrkphn.301.a
+		custom_effect_tooltip = TFRKPHN_ge2027_lee_in_je_tt
+		TFRKPHN_ge2027_lee_in_je_effect = yes
+	}
+}
+
+country_event = {
+	id = tfrkphn.302
+	title = tfrkphn.302.t
+	desc = tfrkphn.302.desc
+	picture = GFX_report_event_ppp_ge_win
+	is_triggered_only = yes
+
+	option = {
+		name = tfrkphn.302.a
+		custom_effect_tooltip = TFRKPHN_ge2027_oh_se_hoon_tt
+		TFRKPHN_ge2027_oh_se_hoon_effect = yes
+	}
+}
+
+country_event = {
+	id = tfrkphn.303
+	title = tfrkphn.303.t
+	desc = tfrkphn.303.desc
+	picture = GFX_report_event_ppp_ge_win
+	is_triggered_only = yes
+
+	option = {
+		name = tfrkphn.303.a
+		custom_effect_tooltip = TFRKPHN_ge2027_cho_won_jin_tt
+		TFRKPHN_ge2027_cho_won_jin_effect = yes
+	}
+}
+
+country_event = {
+	id = tfrkphn.304
+	title = tfrkphn.304.t
+	desc = tfrkphn.304.desc
+	picture = GFX_report_event_ppp_ge_win
+	is_triggered_only = yes
+
+	option = {
+		name = tfrkphn.304.a
+		custom_effect_tooltip = TFRKPHN_ge2027_ahn_cheol_soo_tt
+		TFRKPHN_ge2027_ahn_cheol_soo_effect = yes
+	}
+}
+
+country_event = {
+	id = tfrkphn.305
+	title = tfrkphn.305.t
+	desc = tfrkphn.305.desc
+	picture = GFX_report_event_ppp_ge_win
+	is_triggered_only = yes
+
+	option = {
+		name = tfrkphn.305.a
+		custom_effect_tooltip = TFRKPHN_ge2027_hwang_kyo_ahn_tt
+		TFRKPHN_ge2027_hwang_kyo_ahn_effect = yes
+	}
+}
+
+# 제21대 총선 (2020.4.15) 다음 날: 무소속 홍준표 대구 수성을 당선 보도
+country_event = {
+	id = tfrkphn.306
+	title = tfrkphn.306.t
+	desc = tfrkphn.306.desc
+	picture = GFX_TFRKPHN_hong_2020_win
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = tfrkphn.306.a
+	}
+}
+
+# 제20대 대선 뒤: 홍준표가 이낙연을 근소차로 이긴 경우, 정의당 당사
+country_event = {
+	id = tfrkphn.307
+	title = tfrkphn.307.t
+	desc = tfrkphn.307.desc
+	picture = GFX_TFRKPHN_justice_party_hq
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = tfrkphn.307.a
+	}
+}
+
+# 2020.3.27: 북한 선전매체 '메아리'가 무소속 홍준표를 언급
+country_event = {
+	id = tfrkphn.308
+	title = tfrkphn.308.t
+	desc = tfrkphn.308.desc
+	picture = GFX_TFRKPHN_meari_hong
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = tfrkphn.308.a
+	}
+}
+
+# 홍준표 루트: 대만 파병(b02_02) 60일 뒤, 대만 파병 반대 시민대행진
+country_event = {
+	id = tfrkphn.309
+	title = tfrkphn.309.t
+	desc = tfrkphn.309.desc
+	picture = GFX_TFRKPHN_taiwan_protest
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = tfrkphn.309.a
+	}
+}
+
+# 양철 인간: 홍준표 참전(b02_02) 뒤 양안전쟁 결과에 따라 거울 구도 (310 패전 / 311 승전)
+country_event = {
+	id = tfrkphn.310
+	title = tfrkphn.310.t
+	desc = tfrkphn.310.desc
+	picture = GFX_report_event_generic_read_write
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = tfrkphn.310.a
+	}
+}
+
+country_event = {
+	id = tfrkphn.311
+	title = tfrkphn.311.t
+	desc = tfrkphn.311.desc
+	picture = GFX_report_event_generic_read_write
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = tfrkphn.311.a
+	}
+}
+
+# 홍준표 주요 추진 정책: 전통경찰국 설립 (중점 b01_07)
+country_event = {
+	id = tfrkphn.312
+	title = tfrkphn.312.t
+	desc = tfrkphn.312.desc
+	picture = GFX_report_event_generic_read_write
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = tfrkphn.312.a
+		add_stability = 0.03
+		add_political_power = -25
+		set_country_flag = TFRKPHN_reform_police_bureau
+	}
+}
+
+# 막말 구설수: 사과(지지도 조금 하락, 정치력 소모) / 정면돌파(전국 크게 하락, 영남 지지층 결집)
+country_event = {
+	id = tfrkphn.313
+	title = tfrkphn.313.t
+	desc = tfrkphn.313.desc
+	picture = GFX_report_event_generic_read_write
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = tfrkphn.313.a
+		add_political_power = -30
+		custom_effect_tooltip = TFRKPHN_gaffe_apology_tt
+		hidden_effect = {
+			set_temp_variable = { TFRKPHN_support_delta = -4 }
+			TFRKPHN_support_add_all = yes
+			TFRKPHN_hong_update_support_display = yes
+		}
+	}
+	option = {
+		name = tfrkphn.313.b
+		add_war_support = 0.01
+		custom_effect_tooltip = TFRKPHN_gaffe_defiant_tt
+		hidden_effect = {
+			set_temp_variable = { TFRKPHN_support_delta = -8 }
+			TFRKPHN_support_add_all = yes
+			add_to_variable = { TFRKPHN_support_gyeongbuk = 6 }
+			clamp_variable = { var = TFRKPHN_support_gyeongbuk min = 0 max = 100 }
+			add_to_variable = { TFRKPHN_support_gyeongnam = 6 }
+			clamp_variable = { var = TFRKPHN_support_gyeongnam min = 0 max = 100 }
+			TFRKPHN_hong_update_support_display = yes
+		}
+	}
+}
+
+# 막말 구설수: 사과(지지도 조금 하락, 정치력 소모) / 정면돌파(전국 크게 하락, 영남 지지층 결집)
+country_event = {
+	id = tfrkphn.314
+	title = tfrkphn.314.t
+	desc = tfrkphn.314.desc
+	picture = GFX_report_event_generic_read_write
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = tfrkphn.314.a
+		add_political_power = -30
+		custom_effect_tooltip = TFRKPHN_gaffe_apology_tt
+		hidden_effect = {
+			set_temp_variable = { TFRKPHN_support_delta = -4 }
+			TFRKPHN_support_add_all = yes
+			TFRKPHN_hong_update_support_display = yes
+		}
+	}
+	option = {
+		name = tfrkphn.314.b
+		add_war_support = 0.01
+		custom_effect_tooltip = TFRKPHN_gaffe_defiant_tt
+		hidden_effect = {
+			set_temp_variable = { TFRKPHN_support_delta = -8 }
+			TFRKPHN_support_add_all = yes
+			add_to_variable = { TFRKPHN_support_gyeongbuk = 6 }
+			clamp_variable = { var = TFRKPHN_support_gyeongbuk min = 0 max = 100 }
+			add_to_variable = { TFRKPHN_support_gyeongnam = 6 }
+			clamp_variable = { var = TFRKPHN_support_gyeongnam min = 0 max = 100 }
+			TFRKPHN_hong_update_support_display = yes
+		}
+	}
+}
+
+# 막말 구설수: 사과(지지도 조금 하락, 정치력 소모) / 정면돌파(전국 크게 하락, 영남 지지층 결집)
+country_event = {
+	id = tfrkphn.315
+	title = tfrkphn.315.t
+	desc = tfrkphn.315.desc
+	picture = GFX_report_event_generic_read_write
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = tfrkphn.315.a
+		add_political_power = -30
+		custom_effect_tooltip = TFRKPHN_gaffe_apology_tt
+		hidden_effect = {
+			set_temp_variable = { TFRKPHN_support_delta = -4 }
+			TFRKPHN_support_add_all = yes
+			TFRKPHN_hong_update_support_display = yes
+		}
+	}
+	option = {
+		name = tfrkphn.315.b
+		add_war_support = 0.01
+		custom_effect_tooltip = TFRKPHN_gaffe_defiant_tt
+		hidden_effect = {
+			set_temp_variable = { TFRKPHN_support_delta = -8 }
+			TFRKPHN_support_add_all = yes
+			add_to_variable = { TFRKPHN_support_gyeongbuk = 6 }
+			clamp_variable = { var = TFRKPHN_support_gyeongbuk min = 0 max = 100 }
+			add_to_variable = { TFRKPHN_support_gyeongnam = 6 }
+			clamp_variable = { var = TFRKPHN_support_gyeongnam min = 0 max = 100 }
+			TFRKPHN_hong_update_support_display = yes
+		}
+	}
+}

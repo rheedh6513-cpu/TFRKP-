@@ -1,0 +1,186 @@
+ideas = {
+	head_minister = {
+		TFRKPHN_lee_in_je_HM = {
+			picture = TFRKPHN_lee_in_je
+			allowed = { original_tag = KOR }
+			allowed_to_remove = { head_minister_trigger = yes }
+			available = { }
+			visible = { has_country_flag = TFRKP_HN_hong_president }
+			traits = {
+				KOR_faction_PPP
+				hog_old_guard
+			}
+		}
+	}
+	foreign_minister = {
+		TFRKPHN_kim_dae_sik_FM = {
+			picture = TFRKPHN_kim_dae_sik
+			allowed = { original_tag = KOR }
+			available = { }
+			visible = { has_country_flag = TFRKP_HN_hong_president }
+			traits = {
+				KOR_faction_PPP
+				for_great_compromiser
+			}
+		}
+	}
+	economic_minister = {
+		TFRKPHN_seo_byung_soo_EM = {
+			picture = TFRKPHN_seo_byung_soo
+			allowed = { original_tag = KOR }
+			available = { }
+			visible = { has_country_flag = TFRKP_HN_hong_president }
+			traits = {
+				KOR_faction_PPP
+				eco_economic_organizer
+			}
+		}
+	}
+	interior_minister = {
+		TFRKPHN_hong_il_pyo_IM = {
+			picture = TFRKPHN_hong_il_pyo
+			allowed = { original_tag = KOR }
+			available = { }
+			visible = { has_country_flag = TFRKP_HN_hong_president }
+			traits = {
+				KOR_faction_PPP
+				sec_efficent_attorney
+			}
+		}
+	}
+	intelligence_minister = {
+		TFRKPHN_yoon_jae_ok_IntelM = {
+			picture = TFRKPHN_yoon_jae_ok
+			allowed = { original_tag = KOR }
+			available = { }
+			visible = { has_country_flag = TFRKP_HN_hong_president }
+			traits = {
+				KOR_faction_PPP
+				int_spy_staffer
+			}
+		}
+	}
+	theorist_minister = {
+		TFRKPHN_lim_jong_deuk_TM = {
+			picture = TFRKPHN_lim_jong_deuk
+			allowed = { original_tag = KOR }
+			available = { }
+			visible = { has_country_flag = TFRKP_HN_hong_president }
+			traits = {
+				KOR_faction_PPP
+				army_chief_planning_2
+			}
+		}
+	}
+	country = {
+		TFRKPHN_true_conservative = {
+			picture = KOR_yoon_common_conservatism_dynamic_modifir_idea
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				political_power_factor = 0.03
+				stability_factor = 0.03
+				war_support_factor = 0.03
+			}
+		}
+		TFRKPHN_postwar_prosperity = {
+			picture = KOR_yoon_common_conservatism_dynamic_modifir_idea
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				industrial_capacity_factory = 0.10
+				stability_factor = 0.03
+			}
+		}
+		TFRKPHN_postwar_defense = {
+			picture = KOR_yoon_common_conservatism_dynamic_modifir_idea
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				war_support_factor = 0.03
+			}
+		}
+		TFRKPHN_postwar_diplomacy = {
+			picture = KOR_yoon_common_conservatism_dynamic_modifir_idea
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				political_power_gain = 0.20
+				stability_factor = 0.03
+			}
+		}
+		TFRKPHN_national_unity_1 = {
+			picture = KOR_yoon_common_conservatism_dynamic_modifir_idea
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				society_development_monthly = 0.01
+				industrial_development_monthly = 0.01
+				academic_development_monthly = 0.01
+				research_speed_factor = 0.15
+				industrial_capacity_factory = 0.15
+				production_factory_efficiency_gain_factor = 0.30
+			}
+		}
+		TFRKPHN_national_unity_2 = {
+			picture = KOR_yoon_common_conservatism_dynamic_modifir_idea
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				society_development_monthly = 0.02
+				industrial_development_monthly = 0.02
+				academic_development_monthly = 0.02
+				research_speed_factor = 0.30
+				industrial_capacity_factory = 0.30
+				production_factory_efficiency_gain_factor = 0.60
+				stability_factor = 0.03
+			}
+		}
+		TFRKPHN_ieodo_watch = {
+			picture = KOR_secretly_great_military_network_idea
+			allowed = { always = no }
+			modifier = {
+				air_superiority_efficiency = 0.10
+				naval_coordination = 0.05
+				air_mission_efficiency = 0.10
+			}
+		}
+		TFRKPHN_west_sea_patrol = {
+			picture = KOR_secretly_great_military_network_idea
+			allowed = { always = no }
+			modifier = {
+				naval_coordination = -0.10
+				naval_damage_factor = -0.10
+				navy_org_factor = -0.10
+			}
+		}
+		TFRKPHN_free_volunteers = {
+			picture = KOR_dispatch_to_taiwan_idea
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			cancel = {
+				OR = {
+					has_global_flag = PRC_taiwan_war_won
+					has_global_flag = PRC_taiwan_war_lost
+					NOT = { has_global_flag = PRC_ongoing_taiwan_war }
+				}
+			}
+			modifier = {
+				send_volunteers_tension = -1
+				send_volunteer_size = 4
+			}
+		}
+		TFRKPHN_intel_restore = {
+			picture = KOR_secretly_great_military_network_idea
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				civilian_intel_factor = 0.15
+				army_intel_factor = 0.15
+				decryption_factor = 0.10
+			}
+		}
+	}
+}

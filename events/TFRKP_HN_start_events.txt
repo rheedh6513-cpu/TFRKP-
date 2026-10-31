@@ -1,0 +1,19 @@
+add_namespace = tfrkphn
+
+country_event = {
+	id = tfrkphn.10
+	hidden = yes
+	is_triggered_only = yes
+
+	immediate = {
+		log = "TFRKPHN_DIAG tfrkphn.10 fired"
+		if = {
+			limit = { NOT = { has_country_flag = TFRKP_HN_hong_president } }
+			TFRKPHN_hong_start_effect = yes
+		}
+	}
+
+	option = {
+		name = tfrkphn.10.a
+	}
+}

@@ -1,0 +1,7 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_TFRKPHN_hourglass"
+		texturefile = "gfx/interface/gui/TFRKPHN_hourglass/TFRKPHN_hourglass_frames.png"
+		noOfFrames = 12
+	}
+}

@@ -1,0 +1,389 @@
+defined_text = {
+	name = TFRKP_HN_115a
+	text = { trigger = { has_country_flag = TFRKP_HN_PPP_hong } localization_key = TFRKP_HN_115a_hong }
+	text = { localization_key = TFRKP_HN_115a_yoon }
+}
+defined_text = {
+	name = TFRKP_HN_115b
+	text = { trigger = { has_country_flag = TFRKP_HN_DPK_lee_nakyeon } localization_key = TFRKP_HN_115b_nak }
+	text = { localization_key = TFRKP_HN_115b_lee }
+}
+defined_text = {
+	name = TFRKP_HN_115a_tt
+	text = { trigger = { has_country_flag = TFRKP_HN_PPP_hong } localization_key = TFRKP_HN_115a_tt_hong }
+	text = { localization_key = TFRKP_HN_115a_tt_yoon }
+}
+defined_text = {
+	name = TFRKP_HN_115b_tt
+	text = { trigger = { has_country_flag = TFRKP_HN_DPK_lee_nakyeon } localization_key = TFRKP_HN_115b_tt_nak }
+	text = { localization_key = TFRKP_HN_115b_tt_lee }
+}
+defined_text = {
+	name = TFRKP_HN_sided_yoon
+	text = { trigger = { has_country_flag = TFRKP_HN_PPP_hong } localization_key = TFRKP_HN_sided_hong }
+	text = { localization_key = TFRKP_HN_sided_yoon_orig }
+}
+defined_text = {
+	name = TFRKP_HN_sided_lee
+	text = { trigger = { has_country_flag = TFRKP_HN_DPK_lee_nakyeon } localization_key = TFRKP_HN_sided_nak }
+	text = { localization_key = TFRKP_HN_sided_lee_orig }
+}
+defined_text = {
+	name = TFRKP_HN_52a
+	text = { trigger = { has_country_flag = TFRKP_HN_PPP_hong } localization_key = TFRKP_HN_52a_hong }
+	text = { localization_key = TFRKP_HN_52a_yoon }
+}
+defined_text = {
+	name = TFRKP_HN_52b
+	text = { trigger = { has_country_flag = TFRKP_HN_DPK_lee_nakyeon } localization_key = TFRKP_HN_52b_nak }
+	text = { localization_key = TFRKP_HN_52b_lee }
+}
+defined_text = {
+	name = TFRKP_HN_52desc
+	text = { trigger = { has_country_flag = TFRKP_HN_PPP_hong has_country_flag = TFRKP_HN_DPK_lee_nakyeon } localization_key = TFRKP_HN_52desc_hong_nak }
+	text = { trigger = { has_country_flag = TFRKP_HN_PPP_hong } localization_key = TFRKP_HN_52desc_hong }
+	text = { trigger = { has_country_flag = TFRKP_HN_DPK_lee_nakyeon } localization_key = TFRKP_HN_52desc_nak }
+	text = { localization_key = TFRKP_HN_52desc_orig }
+}
+defined_text = {
+	name = TFRKP_HN_354desc
+	text = { trigger = { has_country_flag = TFRKP_HN_PPP_hong } localization_key = TFRKP_HN_354desc_hong }
+	text = { localization_key = TFRKP_HN_354desc_orig }
+}
+defined_text = {
+	name = TFRKP_HN_x_korea_81_t
+	text = { trigger = { has_country_flag = TFRKP_HN_PPP_hong } localization_key = TFRKP_HN_x_korea_81_t_tmp }
+	text = { localization_key = TFRKP_HN_x_korea_81_t_orig }
+}
+defined_text = {
+	name = TFRKP_HN_x_korea_81_desc
+	text = { trigger = { has_country_flag = TFRKP_HN_PPP_hong } localization_key = TFRKP_HN_x_korea_81_desc_tmp }
+	text = { localization_key = TFRKP_HN_x_korea_81_desc_orig }
+}
+defined_text = {
+	name = TFRKP_HN_x_korea_81_a
+	text = { trigger = { has_country_flag = TFRKP_HN_PPP_hong } localization_key = TFRKP_HN_x_korea_81_a_tmp }
+	text = { localization_key = TFRKP_HN_x_korea_81_a_orig }
+}
+defined_text = {
+	name = TFRKP_HN_x_korea_122_t
+	text = { trigger = { has_country_flag = TFRKP_HN_PPP_hong } localization_key = TFRKP_HN_x_korea_122_t_tmp }
+	text = { localization_key = TFRKP_HN_x_korea_122_t_orig }
+}
+defined_text = {
+	name = TFRKP_HN_x_korea_122_desc
+	text = { trigger = { has_country_flag = TFRKP_HN_PPP_hong } localization_key = TFRKP_HN_x_korea_122_desc_tmp }
+	text = { localization_key = TFRKP_HN_x_korea_122_desc_orig }
+}
+defined_text = {
+	name = TFRKP_HN_x_korea_122_a
+	text = { trigger = { has_country_flag = TFRKP_HN_PPP_hong } localization_key = TFRKP_HN_x_korea_122_a_tmp }
+	text = { localization_key = TFRKP_HN_x_korea_122_a_orig }
+}
+defined_text = {
+	name = TFRKP_HN_x_korea_123_t
+	text = { trigger = { has_country_flag = TFRKP_HN_PPP_hong } localization_key = TFRKP_HN_x_korea_123_t_tmp }
+	text = { localization_key = TFRKP_HN_x_korea_123_t_orig }
+}
+defined_text = {
+	name = TFRKP_HN_x_korea_123_desc
+	text = { trigger = { has_country_flag = TFRKP_HN_PPP_hong } localization_key = TFRKP_HN_x_korea_123_desc_tmp }
+	text = { localization_key = TFRKP_HN_x_korea_123_desc_orig }
+}
+defined_text = {
+	name = TFRKP_HN_x_korea_123_a
+	text = { trigger = { has_country_flag = TFRKP_HN_PPP_hong } localization_key = TFRKP_HN_x_korea_123_a_tmp }
+	text = { localization_key = TFRKP_HN_x_korea_123_a_orig }
+}
+defined_text = {
+	name = TFRKP_HN_x_korea_124_t
+	text = { trigger = { has_country_flag = TFRKP_HN_PPP_hong } localization_key = TFRKP_HN_x_korea_124_t_tmp }
+	text = { localization_key = TFRKP_HN_x_korea_124_t_orig }
+}
+defined_text = {
+	name = TFRKP_HN_x_korea_124_desc
+	text = { trigger = { has_country_flag = TFRKP_HN_PPP_hong } localization_key = TFRKP_HN_x_korea_124_desc_tmp }
+	text = { localization_key = TFRKP_HN_x_korea_124_desc_orig }
+}
+defined_text = {
+	name = TFRKP_HN_x_korea_124_a
+	text = { trigger = { has_country_flag = TFRKP_HN_PPP_hong } localization_key = TFRKP_HN_x_korea_124_a_tmp }
+	text = { localization_key = TFRKP_HN_x_korea_124_a_orig }
+}
+defined_text = {
+	name = TFRKP_HN_x_korea_82_a
+	text = { trigger = { has_country_flag = TFRKP_HN_PPP_hong } localization_key = TFRKP_HN_x_korea_82_a_tmp }
+	text = { localization_key = TFRKP_HN_x_korea_82_a_orig }
+}
+defined_text = {
+	name = TFRKP_HN_x_korea_116_t
+	text = { trigger = { OR = { has_country_flag = TFRKP_HN_PPP_hong has_country_flag = TFRKP_HN_DPK_lee_nakyeon } } localization_key = TFRKP_HN_x_korea_116_t_tmp }
+	text = { localization_key = TFRKP_HN_x_korea_116_t_orig }
+}
+defined_text = {
+	name = TFRKP_HN_x_korea_116_desc
+	text = { trigger = { OR = { has_country_flag = TFRKP_HN_PPP_hong has_country_flag = TFRKP_HN_DPK_lee_nakyeon } } localization_key = TFRKP_HN_x_korea_116_desc_tmp }
+	text = { localization_key = TFRKP_HN_x_korea_116_desc_orig }
+}
+defined_text = {
+	name = TFRKP_HN_x_korea_116_a
+	text = { trigger = { OR = { has_country_flag = TFRKP_HN_PPP_hong has_country_flag = TFRKP_HN_DPK_lee_nakyeon } } localization_key = TFRKP_HN_x_korea_116_a_tmp }
+	text = { localization_key = TFRKP_HN_x_korea_116_a_orig }
+}
+defined_text = {
+	name = TFRKP_HN_x_korea_281_t
+	text = { trigger = { has_country_flag = TFRKP_HN_DPK_lee_nakyeon } localization_key = TFRKP_HN_x_korea_281_t_tmp }
+	text = { localization_key = TFRKP_HN_x_korea_281_t_orig }
+}
+defined_text = {
+	name = TFRKP_HN_x_korea_281_d
+	text = { trigger = { has_country_flag = TFRKP_HN_DPK_lee_nakyeon } localization_key = TFRKP_HN_x_korea_281_d_tmp }
+	text = { localization_key = TFRKP_HN_x_korea_281_d_orig }
+}
+defined_text = {
+	name = TFRKP_HN_x_korea_281_a
+	text = { trigger = { has_country_flag = TFRKP_HN_DPK_lee_nakyeon } localization_key = TFRKP_HN_x_korea_281_a_tmp }
+	text = { localization_key = TFRKP_HN_x_korea_281_a_orig }
+}
+defined_text = {
+	name = TFRKP_HN_x_korea_282_t
+	text = { trigger = { has_country_flag = TFRKP_HN_DPK_lee_nakyeon } localization_key = TFRKP_HN_x_korea_282_t_tmp }
+	text = { localization_key = TFRKP_HN_x_korea_282_t_orig }
+}
+defined_text = {
+	name = TFRKP_HN_x_korea_282_d
+	text = { trigger = { has_country_flag = TFRKP_HN_DPK_lee_nakyeon } localization_key = TFRKP_HN_x_korea_282_d_tmp }
+	text = { localization_key = TFRKP_HN_x_korea_282_d_orig }
+}
+defined_text = {
+	name = TFRKP_HN_x_korea_282_a
+	text = { trigger = { has_country_flag = TFRKP_HN_DPK_lee_nakyeon } localization_key = TFRKP_HN_x_korea_282_a_tmp }
+	text = { localization_key = TFRKP_HN_x_korea_282_a_orig }
+}
+defined_text = {
+	name = TFRKP_HN_x_korea_283_t
+	text = { trigger = { has_country_flag = TFRKP_HN_DPK_lee_nakyeon } localization_key = TFRKP_HN_x_korea_283_t_tmp }
+	text = { localization_key = TFRKP_HN_x_korea_283_t_orig }
+}
+defined_text = {
+	name = TFRKP_HN_x_korea_283_d
+	text = { trigger = { has_country_flag = TFRKP_HN_DPK_lee_nakyeon } localization_key = TFRKP_HN_x_korea_283_d_tmp }
+	text = { localization_key = TFRKP_HN_x_korea_283_d_orig }
+}
+defined_text = {
+	name = TFRKP_HN_x_korea_283_a
+	text = { trigger = { has_country_flag = TFRKP_HN_DPK_lee_nakyeon } localization_key = TFRKP_HN_x_korea_283_a_tmp }
+	text = { localization_key = TFRKP_HN_x_korea_283_a_orig }
+}
+defined_text = {
+	name = TFRKP_HN_x_korea_284_t
+	text = { trigger = { has_country_flag = TFRKP_HN_DPK_lee_nakyeon } localization_key = TFRKP_HN_x_korea_284_t_tmp }
+	text = { localization_key = TFRKP_HN_x_korea_284_t_orig }
+}
+defined_text = {
+	name = TFRKP_HN_x_korea_284_d
+	text = { trigger = { has_country_flag = TFRKP_HN_DPK_lee_nakyeon } localization_key = TFRKP_HN_x_korea_284_d_tmp }
+	text = { localization_key = TFRKP_HN_x_korea_284_d_orig }
+}
+defined_text = {
+	name = TFRKP_HN_x_korea_284_a
+	text = { trigger = { has_country_flag = TFRKP_HN_DPK_lee_nakyeon } localization_key = TFRKP_HN_x_korea_284_a_tmp }
+	text = { localization_key = TFRKP_HN_x_korea_284_a_orig }
+}
+defined_text = {
+	name = TFRKP_HN_x_korea_285_t
+	text = { trigger = { OR = { has_country_flag = TFRKP_HN_PPP_hong has_country_flag = TFRKP_HN_DPK_lee_nakyeon } } localization_key = TFRKP_HN_x_korea_285_t_tmp }
+	text = { localization_key = TFRKP_HN_x_korea_285_t_orig }
+}
+defined_text = {
+	name = TFRKP_HN_x_korea_285_d
+	text = { trigger = { OR = { has_country_flag = TFRKP_HN_PPP_hong has_country_flag = TFRKP_HN_DPK_lee_nakyeon } } localization_key = TFRKP_HN_x_korea_285_d_tmp }
+	text = { localization_key = TFRKP_HN_x_korea_285_d_orig }
+}
+defined_text = {
+	name = TFRKP_HN_x_korea_285_a
+	text = { trigger = { OR = { has_country_flag = TFRKP_HN_PPP_hong has_country_flag = TFRKP_HN_DPK_lee_nakyeon } } localization_key = TFRKP_HN_x_korea_285_a_tmp }
+	text = { localization_key = TFRKP_HN_x_korea_285_a_orig }
+}
+defined_text = {
+	name = TFRKP_HN_x_korea_286_t
+	text = { trigger = { OR = { has_country_flag = TFRKP_HN_PPP_hong has_country_flag = TFRKP_HN_DPK_lee_nakyeon } } localization_key = TFRKP_HN_x_korea_286_t_tmp }
+	text = { localization_key = TFRKP_HN_x_korea_286_t_orig }
+}
+defined_text = {
+	name = TFRKP_HN_x_korea_286_d
+	text = { trigger = { OR = { has_country_flag = TFRKP_HN_PPP_hong has_country_flag = TFRKP_HN_DPK_lee_nakyeon } } localization_key = TFRKP_HN_x_korea_286_d_tmp }
+	text = { localization_key = TFRKP_HN_x_korea_286_d_orig }
+}
+defined_text = {
+	name = TFRKP_HN_x_korea_286_a
+	text = { trigger = { OR = { has_country_flag = TFRKP_HN_PPP_hong has_country_flag = TFRKP_HN_DPK_lee_nakyeon } } localization_key = TFRKP_HN_x_korea_286_a_tmp }
+	text = { localization_key = TFRKP_HN_x_korea_286_a_orig }
+}
+defined_text = {
+	name = TFRKP_HN_x_korea_287_t
+	text = { trigger = { has_country_flag = TFRKP_HN_DPK_lee_nakyeon } localization_key = TFRKP_HN_x_korea_287_t_tmp }
+	text = { localization_key = TFRKP_HN_x_korea_287_t_orig }
+}
+defined_text = {
+	name = TFRKP_HN_x_korea_287_d
+	text = { trigger = { has_country_flag = TFRKP_HN_DPK_lee_nakyeon } localization_key = TFRKP_HN_x_korea_287_d_tmp }
+	text = { localization_key = TFRKP_HN_x_korea_287_d_orig }
+}
+defined_text = {
+	name = TFRKP_HN_x_korea_287_a
+	text = { trigger = { has_country_flag = TFRKP_HN_DPK_lee_nakyeon } localization_key = TFRKP_HN_x_korea_287_a_tmp }
+	text = { localization_key = TFRKP_HN_x_korea_287_a_orig }
+}
+defined_text = {
+	name = TFRKP_HN_x_korea_288_t
+	text = { trigger = { has_country_flag = TFRKP_HN_DPK_lee_nakyeon } localization_key = TFRKP_HN_x_korea_288_t_tmp }
+	text = { localization_key = TFRKP_HN_x_korea_288_t_orig }
+}
+defined_text = {
+	name = TFRKP_HN_x_korea_288_d
+	text = { trigger = { has_country_flag = TFRKP_HN_DPK_lee_nakyeon } localization_key = TFRKP_HN_x_korea_288_d_tmp }
+	text = { localization_key = TFRKP_HN_x_korea_288_d_orig }
+}
+defined_text = {
+	name = TFRKP_HN_x_korea_288_a
+	text = { trigger = { has_country_flag = TFRKP_HN_DPK_lee_nakyeon } localization_key = TFRKP_HN_x_korea_288_a_tmp }
+	text = { localization_key = TFRKP_HN_x_korea_288_a_orig }
+}
+defined_text = {
+	name = TFRKP_HN_x_korea_289_t
+	text = { trigger = { has_country_flag = TFRKP_HN_DPK_lee_nakyeon } localization_key = TFRKP_HN_x_korea_289_t_tmp }
+	text = { localization_key = TFRKP_HN_x_korea_289_t_orig }
+}
+defined_text = {
+	name = TFRKP_HN_x_korea_289_d
+	text = { trigger = { has_country_flag = TFRKP_HN_DPK_lee_nakyeon } localization_key = TFRKP_HN_x_korea_289_d_tmp }
+	text = { localization_key = TFRKP_HN_x_korea_289_d_orig }
+}
+defined_text = {
+	name = TFRKP_HN_x_korea_289_a
+	text = { trigger = { has_country_flag = TFRKP_HN_DPK_lee_nakyeon } localization_key = TFRKP_HN_x_korea_289_a_tmp }
+	text = { localization_key = TFRKP_HN_x_korea_289_a_orig }
+}
+defined_text = {
+	name = TFRKP_HN_x_korea_290_t
+	text = { trigger = { has_country_flag = TFRKP_HN_DPK_lee_nakyeon } localization_key = TFRKP_HN_x_korea_290_t_tmp }
+	text = { localization_key = TFRKP_HN_x_korea_290_t_orig }
+}
+defined_text = {
+	name = TFRKP_HN_x_korea_290_d
+	text = { trigger = { has_country_flag = TFRKP_HN_DPK_lee_nakyeon } localization_key = TFRKP_HN_x_korea_290_d_tmp }
+	text = { localization_key = TFRKP_HN_x_korea_290_d_orig }
+}
+defined_text = {
+	name = TFRKP_HN_x_korea_290_a
+	text = { trigger = { has_country_flag = TFRKP_HN_DPK_lee_nakyeon } localization_key = TFRKP_HN_x_korea_290_a_tmp }
+	text = { localization_key = TFRKP_HN_x_korea_290_a_orig }
+}
+defined_text = {
+	name = TFRKP_HN_x_KOR_democratic_party_desc
+	text = { trigger = { has_country_flag = TFRKP_HN_DPK_lee_nakyeon } localization_key = TFRKP_HN_x_KOR_democratic_party_desc_tmp }
+	text = { localization_key = TFRKP_HN_x_KOR_democratic_party_desc_orig }
+}
+defined_text = {
+	name = TFRKP_HN_x_KOR_election_economy_dp_desc
+	text = { trigger = { OR = { has_country_flag = TFRKP_HN_PPP_hong has_country_flag = TFRKP_HN_DPK_lee_nakyeon } } localization_key = TFRKP_HN_x_KOR_election_economy_dp_desc_tmp }
+	text = { localization_key = TFRKP_HN_x_KOR_election_economy_dp_desc_orig }
+}
+defined_text = {
+	name = TFRKP_HN_x_KOR_election_our_ppp_desc
+	text = { trigger = { has_country_flag = TFRKP_HN_PPP_hong } localization_key = TFRKP_HN_x_KOR_election_our_ppp_desc_tmp }
+	text = { localization_key = TFRKP_HN_x_KOR_election_our_ppp_desc_orig }
+}
+defined_text = {
+	name = TFRKP_HN_x_KOR_election_attack_ppp_desc
+	text = { trigger = { has_country_flag = TFRKP_HN_DPK_lee_nakyeon } localization_key = TFRKP_HN_x_KOR_election_attack_ppp_desc_tmp }
+	text = { localization_key = TFRKP_HN_x_KOR_election_attack_ppp_desc_orig }
+}
+defined_text = {
+	name = TFRKP_HN_ppp_name
+	text = { trigger = { has_country_flag = TFRKP_HN_PPP_hong } localization_key = TFRKP_HN_ppp_name_hong }
+	text = { localization_key = TFRKP_HN_ppp_name_yoon }
+}
+defined_text = {
+	name = TFRKP_HN_dpk_name
+	text = { trigger = { has_country_flag = TFRKP_HN_DPK_lee_nakyeon } localization_key = TFRKP_HN_dpk_name_nak }
+	text = { localization_key = TFRKP_HN_dpk_name_lee }
+}
+defined_text = {
+	name = TFRKPHN_NatAsm_title
+	text = { trigger = { has_country_flag = TFRKPHN_bicameral } localization_key = TFRKPHN_NatAsm_title_lower }
+	text = { localization_key = TFRKPHN_NatAsm_title_normal }
+}
+
+defined_text = {
+	name = TFRKPHN_crime_sel_name
+	text = { trigger = { check_variable = { TFRKPHN_crime_sel = 1 } } localization_key = TFRKPHN_crime_city_seoul }
+	text = { trigger = { check_variable = { TFRKPHN_crime_sel = 2 } } localization_key = TFRKPHN_crime_city_busan }
+	text = { trigger = { check_variable = { TFRKPHN_crime_sel = 3 } } localization_key = TFRKPHN_crime_city_daegu }
+	text = { trigger = { check_variable = { TFRKPHN_crime_sel = 4 } } localization_key = TFRKPHN_crime_city_gwangju }
+	text = { trigger = { check_variable = { TFRKPHN_crime_sel = 5 } } localization_key = TFRKPHN_crime_city_daejeon }
+	text = { trigger = { check_variable = { TFRKPHN_crime_sel = 6 } } localization_key = TFRKPHN_crime_city_ulsan }
+	text = { localization_key = TFRKPHN_crime_city_none }
+}
+
+# ===== 개헌 논의 범주: 제목과 헌법 조문 (개헌 결정을 마칠 때마다 바뀜) =====
+defined_text = {
+	name = TFRKPHN_GetAmendTitle
+	text = { trigger = { has_country_flag = TFRKPHN_amend_passed } localization_key = TFRKPHN_hong_amend_title_const }
+	text = { localization_key = TFRKPHN_hong_amend_title_vote }
+}
+defined_text = {
+	name = TFRKPHN_GetConstHeader
+	text = { trigger = { has_country_flag = TFRKPHN_const_review } localization_key = TFRKPHN_const_header_7rep }
+	text = { trigger = { has_country_flag = TFRKPHN_const_committee } localization_key = TFRKPHN_const_header_wip }
+	text = { localization_key = TFRKPHN_const_header_1987 }
+}
+defined_text = {
+	name = TFRKPHN_GetConst_term
+	text = { trigger = { has_country_flag = TFRKPHN_const_term_weak } localization_key = TFRKPHN_const_term_weak }
+	text = { trigger = { has_country_flag = TFRKPHN_const_term } localization_key = TFRKPHN_const_term_new }
+	text = { localization_key = TFRKPHN_const_term_old }
+}
+defined_text = {
+	name = TFRKPHN_GetConst_vp
+	text = { trigger = { has_country_flag = TFRKPHN_const_vp_weak } localization_key = TFRKPHN_const_vp_weak }
+	text = { trigger = { has_country_flag = TFRKPHN_const_vp } localization_key = TFRKPHN_const_vp_new }
+	text = { localization_key = TFRKPHN_const_vp_old }
+}
+defined_text = {
+	name = TFRKPHN_GetConst_bicam
+	text = { trigger = { has_country_flag = TFRKPHN_const_bicam_weak } localization_key = TFRKPHN_const_bicam_weak }
+	text = { trigger = { has_country_flag = TFRKPHN_const_bicam } localization_key = TFRKPHN_const_bicam_new }
+	text = { localization_key = TFRKPHN_const_bicam_old }
+}
+defined_text = {
+	name = TFRKPHN_GetConst_court
+	text = { trigger = { has_country_flag = TFRKPHN_const_court_weak } localization_key = TFRKPHN_const_court_weak }
+	text = { trigger = { has_country_flag = TFRKPHN_const_court } localization_key = TFRKPHN_const_court_new }
+	text = { localization_key = TFRKPHN_const_court_old }
+}
+defined_text = {
+	name = TFRKPHN_GetConst_cio
+	text = { trigger = { has_country_flag = TFRKPHN_const_cio_weak } localization_key = TFRKPHN_const_cio_weak }
+	text = { trigger = { has_country_flag = TFRKPHN_const_cio } localization_key = TFRKPHN_const_cio_new }
+	text = { localization_key = TFRKPHN_const_cio_old }
+}
+defined_text = {
+	name = TFRKPHN_GetConst_nbi
+	text = { trigger = { has_country_flag = TFRKPHN_const_nbi_weak } localization_key = TFRKPHN_const_nbi_weak }
+	text = { trigger = { has_country_flag = TFRKPHN_const_nbi } localization_key = TFRKPHN_const_nbi_new }
+	text = { localization_key = TFRKPHN_const_nbi_old }
+}
+defined_text = {
+	name = TFRKPHN_GetConst_district
+	text = { trigger = { has_country_flag = TFRKPHN_const_district_weak } localization_key = TFRKPHN_const_district_weak }
+	text = { trigger = { has_country_flag = TFRKPHN_const_district } localization_key = TFRKPHN_const_district_new }
+	text = { localization_key = TFRKPHN_const_district_old }
+}
+defined_text = {
+	name = TFRKPHN_GetConst_nec
+	text = { trigger = { has_country_flag = TFRKPHN_const_nec_weak } localization_key = TFRKPHN_const_nec_weak }
+	text = { trigger = { has_country_flag = TFRKPHN_const_nec } localization_key = TFRKPHN_const_nec_new }
+	text = { localization_key = TFRKPHN_const_nec_old }
+}
