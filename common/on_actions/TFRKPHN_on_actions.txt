@@ -58,6 +58,28 @@ if = {
 	}
 }
 
+# 2020.7.15: 박원순 시장 사망 사건 뒤 정의당 조문 거부 논란
+if = {
+	limit = {
+		NOT = { date < 2020.7.15 }
+		has_global_flag = TFRKPHN_park_mayor_dead
+		NOT = { has_global_flag = TFRKPHN_no_condolence_fired }
+	}
+	set_global_flag = TFRKPHN_no_condolence_fired
+	country_event = { id = tfrkphn.316 }
+}
+
+# 2020.3.17: 'n번방 사건' 박사방 운영자 검거 보도 (한 달 안에 시작한 게임에서만)
+if = {
+	limit = {
+		NOT = { date < 2020.3.17 }
+		date < 2020.4.17
+		NOT = { has_global_flag = TFRKPHN_nth_room_fired }
+	}
+	set_global_flag = TFRKPHN_nth_room_fired
+	country_event = { id = tfrkphn.317 }
+}
+
 # 2020.3.27: 북한 선전매체 '메아리'의 홍준표 언급 보도 (한 달 안에 시작한 게임에서만)
 if = {
 	limit = {

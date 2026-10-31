@@ -6933,6 +6933,7 @@ country_event = { # 박원순 서울특별시장 사망 사건
 	option = {
 		name = korea.265.a
 		hidden_effect = {
+			set_global_flag = TFRKPHN_park_mayor_dead	# TFRKP Hong Nak: 2020.7.15 정의당 조문 거부 사건(tfrkphn.316)용
 			KOR_seoul_city_mayor_reset_effect = yes
 		}
 	}

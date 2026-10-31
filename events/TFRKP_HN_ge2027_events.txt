@@ -132,7 +132,7 @@ country_event = {
 	id = tfrkphn.310
 	title = tfrkphn.310.t
 	desc = tfrkphn.310.desc
-	picture = GFX_report_event_generic_read_write
+	picture = GFX_TFRKPHN_national_cemetery
 	fire_only_once = yes
 	is_triggered_only = yes
 
@@ -145,7 +145,7 @@ country_event = {
 	id = tfrkphn.311
 	title = tfrkphn.311.t
 	desc = tfrkphn.311.desc
-	picture = GFX_report_event_generic_read_write
+	picture = GFX_TFRKPHN_national_cemetery
 	fire_only_once = yes
 	is_triggered_only = yes
 
@@ -273,5 +273,33 @@ country_event = {
 			clamp_variable = { var = TFRKPHN_support_gyeongnam min = 0 max = 100 }
 			TFRKPHN_hong_update_support_display = yes
 		}
+	}
+}
+
+# 2020.7.15: 박원순 시장 사망(korea.265) 뒤 정의당 장혜영·류호정 의원 조문 거부 논란
+country_event = {
+	id = tfrkphn.316
+	title = tfrkphn.316.t
+	desc = tfrkphn.316.desc
+	picture = GFX_TFRKPHN_justice_no_condolence
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = tfrkphn.316.a
+	}
+}
+
+# 2020.3.17: 'n번방 사건' 박사방 운영자 검거 보도
+country_event = {
+	id = tfrkphn.317
+	title = tfrkphn.317.t
+	desc = tfrkphn.317.desc
+	picture = GFX_TFRKPHN_nth_room_arrest
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = tfrkphn.317.a
 	}
 }

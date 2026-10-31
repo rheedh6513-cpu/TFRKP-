@@ -187,7 +187,7 @@ country_event = {
 	id = tfrkphn.21
 	title = tfrkphn.21.t
 	desc = tfrkphn.21.desc
-	picture = GFX_TFRKPHN_hong_temp
+	picture = GFX_TFRKPHN_youth_dream
 	is_triggered_only = yes
 	fire_only_once = yes
 
@@ -231,7 +231,7 @@ country_event = {
 	id = tfrkphn.23
 	title = tfrkphn.23.t
 	desc = tfrkphn.23.desc
-	picture = GFX_TFRKPHN_hong_temp
+	picture = GFX_TFRKPHN_fake_peace
 	is_triggered_only = yes
 	fire_only_once = yes
 
@@ -284,7 +284,7 @@ country_event = {
 	id = tfrkphn.25
 	title = tfrkphn.25.t
 	desc = tfrkphn.25.desc
-	picture = GFX_TFRKPHN_hong_temp
+	picture = GFX_TFRKPHN_minsaeng
 	is_triggered_only = yes
 	fire_only_once = yes
 
@@ -560,7 +560,7 @@ country_event = {
 	id = tfrkphn.53
 	title = tfrkphn.53.t
 	desc = tfrkphn.53.desc
-	picture = GFX_TFRKPHN_hong_temp
+	picture = GFX_TFRKPHN_sandglass
 	is_triggered_only = yes
 	fire_only_once = yes
 
@@ -1113,7 +1113,7 @@ country_event = {
 	id = tfrkphn.78
 	title = tfrkphn.78.t
 	desc = tfrkphn.78.desc
-	picture = GFX_TFRKPHN_hong_temp
+	picture = GFX_TFRKPHN_bar_exam_rally
 	is_triggered_only = yes
 	fire_only_once = yes
 
@@ -1151,7 +1151,7 @@ country_event = {
 	id = tfrkphn.80
 	title = tfrkphn.80.t
 	desc = tfrkphn.80.desc
-	picture = GFX_TFRKPHN_hong_temp
+	picture = GFX_TFRKPHN_army_poster
 	is_triggered_only = yes
 	fire_only_once = yes
 

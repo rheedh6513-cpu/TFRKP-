@@ -67,9 +67,25 @@ scripted_gui = {
 
 		triggers = {
 			TFRKPHN_amend_pass_box_visible = { has_country_flag = TFRKPHN_amend_passed }
-			TFRKPHN_amend_vote_box_visible = { NOT = { has_country_flag = TFRKPHN_amend_passed } }
-			TFRKPHN_amend_const_box_visible = { has_country_flag = TFRKPHN_amend_passed }
+			# 틀(container) 단위 숨김은 게임에서 먹히지 않아, 안의 그림·글마다 조건을 건다
+			# 표결 중: 의석 현황 / 가결 뒤: 헌법 조문
+			TFRKPHN_amend_seats_0_visible = { NOT = { has_country_flag = TFRKPHN_amend_passed } }
+			TFRKPHN_amend_seats_1_visible = { NOT = { has_country_flag = TFRKPHN_amend_passed } }
+			TFRKPHN_amend_seats_2_visible = { NOT = { has_country_flag = TFRKPHN_amend_passed } }
+			TFRKPHN_amend_seats_3_visible = { NOT = { has_country_flag = TFRKPHN_amend_passed } }
+			TFRKPHN_amend_seats_4_visible = { NOT = { has_country_flag = TFRKPHN_amend_passed } }
+			TFRKPHN_amend_seats_5_visible = { NOT = { has_country_flag = TFRKPHN_amend_passed } }
+			TFRKPHN_amend_seats_6_visible = { NOT = { has_country_flag = TFRKPHN_amend_passed } }
+			TFRKPHN_amend_seats_7_visible = { NOT = { has_country_flag = TFRKPHN_amend_passed } }
+			TFRKPHN_amend_seats_8_visible = { NOT = { has_country_flag = TFRKPHN_amend_passed } }
+			TFRKPHN_amend_seats_9_visible = { NOT = { has_country_flag = TFRKPHN_amend_passed } }
+			TFRKPHN_hong_amend_total_visible = { NOT = { has_country_flag = TFRKPHN_amend_passed } }
+			TFRKPHN_hong_amend_count_visible = { NOT = { has_country_flag = TFRKPHN_amend_passed } }
+			TFRKPHN_hong_amend_info_visible = { NOT = { has_country_flag = TFRKPHN_amend_passed } }
 			TFRKPHN_amend_fail_box_visible = { has_country_flag = TFRKPHN_amend_rejected }
+			TFRKPHN_const_bg_visible = { has_country_flag = TFRKPHN_amend_passed }
+			TFRKPHN_const_header_visible = { has_country_flag = TFRKPHN_amend_passed }
+			TFRKPHN_const_body_visible = { has_country_flag = TFRKPHN_amend_passed }
 		}
 	}
 

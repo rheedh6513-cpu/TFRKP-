@@ -167,4 +167,40 @@ spriteTypes = {
 		name = "GFX_TFRKPHN_taiwan_protest"
 		texturefile = "gfx/event_pictures/TFRKPHN_taiwan_protest.png"
 	}
+	spriteType = {
+		name = "GFX_TFRKPHN_army_poster"
+		texturefile = "gfx/event_pictures/TFRKPHN_army_poster.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_bar_exam_rally"
+		texturefile = "gfx/event_pictures/TFRKPHN_bar_exam_rally.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_minsaeng"
+		texturefile = "gfx/event_pictures/TFRKPHN_minsaeng.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_sandglass"
+		texturefile = "gfx/event_pictures/TFRKPHN_sandglass.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_fake_peace"
+		texturefile = "gfx/event_pictures/TFRKPHN_fake_peace.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_youth_dream"
+		texturefile = "gfx/event_pictures/TFRKPHN_youth_dream.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_national_cemetery"
+		texturefile = "gfx/event_pictures/TFRKPHN_national_cemetery.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_justice_no_condolence"
+		texturefile = "gfx/event_pictures/TFRKPHN_justice_no_condolence.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_nth_room_arrest"
+		texturefile = "gfx/event_pictures/TFRKPHN_nth_room_arrest.png"
+	}
 }
