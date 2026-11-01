@@ -704,6 +704,20 @@ guiTypes = {
 					pdx_tooltip = KOR_hong_path_tt
 				}
 			}
+
+			# TFRKP Hong Nak: 이낙연 초상화
+			containerWindowType = {
+				name = "backdrop_3"
+				position = { x = 460 y = 250 }
+				size = { width = 172  height = 380 }
+
+				iconType = {
+					name = "backdrop_texture_3"
+					quadTextureSprite = "GFX_TFRKPHN_nak_intro"
+					position = { x = 2  y = 2 }
+					pdx_tooltip = KOR_nak_path_tt
+				}
+			}
 		}
 
 		containerWindowType = {

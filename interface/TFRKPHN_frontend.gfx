@@ -8,4 +8,13 @@ spriteTypes = {
 		texturefile = "gfx/menu_setup_image/TFRKPHN_hong_inaug.png"
 		legacy_lazy_load = no
 	}
+	spriteType = {
+		name = "GFX_TFRKPHN_nak_intro"
+		texturefile = "gfx/menu_setup_image/TFRKPHN_nak_intro.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_nak_banner"
+		texturefile = "gfx/menu_setup_image/TFRKPHN_nak_banner.png"
+		legacy_lazy_load = no
+	}
 }
