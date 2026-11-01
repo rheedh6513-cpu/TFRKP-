@@ -1,0 +1,11 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_TFRKPHN_hong_intro"
+		texturefile = "gfx/menu_setup_image/TFRKPHN_hong_intro.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_hong_inaug"
+		texturefile = "gfx/menu_setup_image/TFRKPHN_hong_inaug.png"
+		legacy_lazy_load = no
+	}
+}
