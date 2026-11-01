@@ -303,3 +303,31 @@ country_event = {
 		name = tfrkphn.317.a
 	}
 }
+
+# 미합중국 금융위기(korea.64) → 나락(korea.261) 7일 뒤: 민주노총 총파업
+country_event = {
+	id = tfrkphn.318
+	title = tfrkphn.318.t
+	desc = tfrkphn.318.desc
+	picture = GFX_TFRKPHN_general_strike
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = tfrkphn.318.a
+	}
+}
+
+# 2020.2.23: 코로나19 확산 속 광화문 집회 강행
+country_event = {
+	id = tfrkphn.319
+	title = tfrkphn.319.t
+	desc = tfrkphn.319.desc
+	picture = GFX_TFRKPHN_gwanghwamun_rally
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = tfrkphn.319.a
+	}
+}

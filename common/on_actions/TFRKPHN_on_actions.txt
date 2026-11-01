@@ -69,6 +69,17 @@ if = {
 	country_event = { id = tfrkphn.316 }
 }
 
+# 2020.2.23: 코로나19 확산 속 광화문 집회 강행 (한 달 안에 시작한 게임에서만)
+if = {
+	limit = {
+		NOT = { date < 2020.2.23 }
+		date < 2020.3.23
+		NOT = { has_global_flag = TFRKPHN_gwanghwamun_fired }
+	}
+	set_global_flag = TFRKPHN_gwanghwamun_fired
+	country_event = { id = tfrkphn.319 }
+}
+
 # 2020.3.17: 'n번방 사건' 박사방 운영자 검거 보도 (한 달 안에 시작한 게임에서만)
 if = {
 	limit = {

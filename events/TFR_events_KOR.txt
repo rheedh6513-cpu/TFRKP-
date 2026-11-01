@@ -6818,6 +6818,7 @@ country_event = { # 나락
 			KOR = { scoped_play_song = "MUSIC_endangered_love_tfrkp" }
 			country_event = { id = korea.862 days = 5 }
 			country_event = { id = korea.795 days = 45 }
+			country_event = { id = tfrkphn.318 days = 7 }	# TFRKP Hong Nak: 민주노총 총파업
 		}
 	}
 }

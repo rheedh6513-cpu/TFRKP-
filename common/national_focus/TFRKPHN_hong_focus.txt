@@ -582,7 +582,7 @@ focus_tree = {
 
 	focus = {
 		id = TFRKPHN_hong_b03_08
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_focus_TFRKPHN_hongkacola
 		relative_position_id = TFRKPHN_hong_b03_06
 		prerequisite = { focus = TFRKPHN_hong_b03_06 }
 		prerequisite = { focus = TFRKPHN_hong_b03_07 }
