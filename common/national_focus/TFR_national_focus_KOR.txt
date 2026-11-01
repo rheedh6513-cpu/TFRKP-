@@ -927,28 +927,19 @@ focus_tree = {
 	## 선거중점 ##
 
 	focus = {
-		id = KOR_2022_election
-		# TFRKP Hong Nak: 홍준표·이낙연 판이면 '2022 국민의 선택' 아이콘, 아니면 원래 아이콘
-		icon = {
-			trigger = {
-				OR = {
-					has_country_flag = TFRKP_HN_PPP_hong
-					has_country_flag = TFRKP_HN_DPK_lee_nakyeon
-				}
-			}
-			value = GFX_focus_TFRKPHN_2022_choice
-		}
-		icon = {
-			trigger = {
-				NOT = {
-					has_country_flag = TFRKP_HN_PPP_hong
-					has_country_flag = TFRKP_HN_DPK_lee_nakyeon
-				}
-			}
-			value = GFX_KOR_2022_election
-		}
-		allow_branch = {
-			has_country_flag = KOR_president_election_2022
+id = KOR_2022_election
+# TFRKP Hong Nak: 홍준표나 이낙연이 후보면 새 아이콘, 아니면 원래 아이콘
+icon = {
+GFX_focus_TFRKPHN_2022_choice = {
+OR = {
+has_country_flag = TFRKP_HN_PPP_hong
+has_country_flag = TFRKP_HN_DPK_lee_nakyeon
+}
+}
+GFX_KOR_2022_election = yes
+}
+allow_branch = {
+has_country_flag = KOR_president_election_2022
 			NOT = { KOR_is_lee_path = yes }
 			NOT = { KOR_is_yoon_path = yes }
 		}
