@@ -6819,6 +6819,7 @@ country_event = { # 나락
 			country_event = { id = korea.862 days = 5 }
 			country_event = { id = korea.795 days = 45 }
 			country_event = { id = tfrkphn.318 days = 7 }	# TFRKP Hong Nak: 민주노총 총파업
+			country_event = { id = tfrkphn.320 days = 30 }	# TFRKP Hong Nak: 가끔 아빠도 회사에 가기 싫겠지
 		}
 	}
 }
@@ -9138,6 +9139,7 @@ country_event = { #홍준표 복당
 
 	option = {
 		name = korea.358.a
+		hidden_effect = { country_event = { id = tfrkphn.321 days = 7 } }	# TFRKP Hong Nak: 돌아온 친정
 		set_temp_variable = { KOR_NatAsm_seat_temp = 1 } #증가 수
 		set_temp_variable = { KOR_NatAsm_faction_temp = 2 } #국힘
 		set_temp_variable = { KOR_NatAsm_faction_target_temp = 5 } #무소속

@@ -1133,7 +1133,7 @@ country_event = {
 	id = tfrkphn.79
 	title = tfrkphn.79.t
 	desc = tfrkphn.79.desc
-	picture = GFX_TFRKPHN_hong_temp
+	picture = GFX_TFRKPHN_suneung
 	is_triggered_only = yes
 	fire_only_once = yes
 
@@ -1187,7 +1187,7 @@ country_event = {
 	id = tfrkphn.82
 	title = tfrkphn.82.t
 	desc = tfrkphn.82.desc
-	picture = GFX_TFRKPHN_hong_temp
+	picture = GFX_TFRKPHN_ulsan_factory
 	is_triggered_only = yes
 	fire_only_once = yes
 
@@ -1489,12 +1489,12 @@ country_event = { # 홍준표 당선
 	id = tfrkphn.292
 	title = tfrkphn.292.t
 	desc = tfrkphn.292.d
-	picture = GFX_TFRKPHN_hong_temp
+	picture = GFX_TFRKPHN_hong_elected
 	is_triggered_only = yes
 	fire_only_once = yes
 
 	option = {
-		name = tfrkphn.292.a
+		name = tfrkphn.292.veteran
 		custom_effect_tooltip = korea.292.tooltip
 		hidden_effect = {
 			news_event = { id = tfrkphn.294 hours = 6 }
@@ -1524,7 +1524,7 @@ news_event = { # 홍준표 후보 당선 (뉴스)
 	id = tfrkphn.294
 	title = tfrkphn.294.t
 	desc = tfrkphn.294.desc
-	picture = GFX_TFRKPHN_hong_temp
+	picture = GFX_TFRKPHN_hong_elected_news
 	major = yes
 	is_triggered_only = yes
 

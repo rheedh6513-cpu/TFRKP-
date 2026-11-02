@@ -125,9 +125,53 @@ TFRKPHN_hong_amend_category = {
 	# ===== 개헌 결정 (가결 후): 하나당 30일, 진행 중에는 다른 개헌 결정 불가 =====
 	# 타협(야당과 협력) 횟수만큼 효과가 줄어든다: 1회당 -10%, 최소 30%
 
+	# 가결 뒤에도 야당과 타협할 수 있다: 안정도ㆍ정치력을 얻는 대신 이후 개헌 결정의 효과가 줄어든다
+	TFRKPHN_amend_d_coop = {
+		icon = GFX_decision_generic_political_actions
+		cost = 0
+		days_remove = 14
+		visible = {
+			has_country_flag = TFRKP_HN_hong_president
+			has_country_flag = TFRKPHN_amend_passed
+			NOT = { check_variable = { TFRKPHN_amend_comp > 6 } }
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = TFRKPHN_amend_not_busy_tt
+				NOT = { has_country_flag = TFRKPHN_amend_busy }
+			}
+			custom_trigger_tooltip = {
+				tooltip = TFRKPHN_amend_token_held_tt
+				NOT = { has_country_flag = TFRKPHN_amend_coop_token }
+			}
+		}
+		complete_effect = {
+			set_country_flag = TFRKPHN_amend_busy
+			custom_effect_tooltip = TFRKPHN_amend_busy_tt
+		}
+		remove_effect = {
+			clr_country_flag = TFRKPHN_amend_busy
+			custom_effect_tooltip = TFRKPHN_amend_comp_tt
+			hidden_effect = {
+				add_to_variable = { TFRKPHN_amend_comp = 1 }
+				TFRKPHN_amend_calc_eff = yes
+			}
+			set_country_flag = TFRKPHN_amend_coop_token
+			custom_effect_tooltip = TFRKPHN_amend_coop_token_tt
+			add_stability = 0.03
+		}
+		ai_will_do = { factor = 0 }
+	}
+
 	TFRKPHN_amend_d_committee = {
 		icon = GFX_decision_TFRKPHN_constitution
-		cost = 0
+		custom_cost_trigger = {
+			OR = {
+				has_country_flag = TFRKPHN_amend_coop_token
+				has_political_power > 179
+			}
+		}
+		custom_cost_text = TFRKPHN_amend_cost_180
 		fire_only_once = yes
 		days_remove = 30
 		visible = {
@@ -142,6 +186,11 @@ TFRKPHN_hong_amend_category = {
 			}
 		}
 		complete_effect = {
+			if = {
+				limit = { has_country_flag = TFRKPHN_amend_coop_token }
+				clr_country_flag = TFRKPHN_amend_coop_token
+			}
+			else = { add_political_power = -180 }
 			set_country_flag = TFRKPHN_amend_busy
 			custom_effect_tooltip = TFRKPHN_amend_busy_tt
 		}
@@ -166,7 +215,13 @@ TFRKPHN_hong_amend_category = {
 
 	TFRKPHN_amend_d_term = {
 		icon = GFX_decision_TFRKPHN_constitution
-		cost = 0
+		custom_cost_trigger = {
+			OR = {
+				has_country_flag = TFRKPHN_amend_coop_token
+				has_political_power > 179
+			}
+		}
+		custom_cost_text = TFRKPHN_amend_cost_180
 		fire_only_once = yes
 		days_remove = 30
 		visible = {
@@ -185,6 +240,11 @@ TFRKPHN_hong_amend_category = {
 			}
 		}
 		complete_effect = {
+			if = {
+				limit = { has_country_flag = TFRKPHN_amend_coop_token }
+				clr_country_flag = TFRKPHN_amend_coop_token
+			}
+			else = { add_political_power = -180 }
 			set_country_flag = TFRKPHN_amend_busy
 			custom_effect_tooltip = TFRKPHN_amend_busy_tt
 		}
@@ -206,7 +266,13 @@ TFRKPHN_hong_amend_category = {
 
 	TFRKPHN_amend_d_vp = {
 		icon = GFX_decision_TFRKPHN_constitution
-		cost = 0
+		custom_cost_trigger = {
+			OR = {
+				has_country_flag = TFRKPHN_amend_coop_token
+				has_political_power > 179
+			}
+		}
+		custom_cost_text = TFRKPHN_amend_cost_180
 		fire_only_once = yes
 		days_remove = 30
 		visible = {
@@ -225,6 +291,11 @@ TFRKPHN_hong_amend_category = {
 			}
 		}
 		complete_effect = {
+			if = {
+				limit = { has_country_flag = TFRKPHN_amend_coop_token }
+				clr_country_flag = TFRKPHN_amend_coop_token
+			}
+			else = { add_political_power = -180 }
 			set_country_flag = TFRKPHN_amend_busy
 			custom_effect_tooltip = TFRKPHN_amend_busy_tt
 		}
@@ -254,7 +325,13 @@ TFRKPHN_hong_amend_category = {
 
 	TFRKPHN_amend_d_bicam = {
 		icon = GFX_decision_TFRKPHN_constitution
-		cost = 0
+		custom_cost_trigger = {
+			OR = {
+				has_country_flag = TFRKPHN_amend_coop_token
+				has_political_power > 179
+			}
+		}
+		custom_cost_text = TFRKPHN_amend_cost_180
 		fire_only_once = yes
 		days_remove = 30
 		visible = {
@@ -273,6 +350,11 @@ TFRKPHN_hong_amend_category = {
 			}
 		}
 		complete_effect = {
+			if = {
+				limit = { has_country_flag = TFRKPHN_amend_coop_token }
+				clr_country_flag = TFRKPHN_amend_coop_token
+			}
+			else = { add_political_power = -180 }
 			set_country_flag = TFRKPHN_amend_busy
 			custom_effect_tooltip = TFRKPHN_amend_busy_tt
 		}
@@ -296,7 +378,13 @@ TFRKPHN_hong_amend_category = {
 
 	TFRKPHN_amend_d_court = {
 		icon = GFX_decision_TFRKPHN_constitution
-		cost = 0
+		custom_cost_trigger = {
+			OR = {
+				has_country_flag = TFRKPHN_amend_coop_token
+				has_political_power > 179
+			}
+		}
+		custom_cost_text = TFRKPHN_amend_cost_180
 		fire_only_once = yes
 		days_remove = 30
 		visible = {
@@ -315,6 +403,11 @@ TFRKPHN_hong_amend_category = {
 			}
 		}
 		complete_effect = {
+			if = {
+				limit = { has_country_flag = TFRKPHN_amend_coop_token }
+				clr_country_flag = TFRKPHN_amend_coop_token
+			}
+			else = { add_political_power = -180 }
 			set_country_flag = TFRKPHN_amend_busy
 			custom_effect_tooltip = TFRKPHN_amend_busy_tt
 		}
@@ -344,7 +437,13 @@ TFRKPHN_hong_amend_category = {
 
 	TFRKPHN_amend_d_cio = {
 		icon = GFX_decision_TFRKPHN_constitution
-		cost = 0
+		custom_cost_trigger = {
+			OR = {
+				has_country_flag = TFRKPHN_amend_coop_token
+				has_political_power > 179
+			}
+		}
+		custom_cost_text = TFRKPHN_amend_cost_180
 		fire_only_once = yes
 		days_remove = 30
 		visible = {
@@ -363,6 +462,11 @@ TFRKPHN_hong_amend_category = {
 			}
 		}
 		complete_effect = {
+			if = {
+				limit = { has_country_flag = TFRKPHN_amend_coop_token }
+				clr_country_flag = TFRKPHN_amend_coop_token
+			}
+			else = { add_political_power = -180 }
 			set_country_flag = TFRKPHN_amend_busy
 			custom_effect_tooltip = TFRKPHN_amend_busy_tt
 		}
@@ -392,7 +496,13 @@ TFRKPHN_hong_amend_category = {
 
 	TFRKPHN_amend_d_nbi = {
 		icon = GFX_decision_TFRKPHN_constitution
-		cost = 0
+		custom_cost_trigger = {
+			OR = {
+				has_country_flag = TFRKPHN_amend_coop_token
+				has_political_power > 179
+			}
+		}
+		custom_cost_text = TFRKPHN_amend_cost_180
 		fire_only_once = yes
 		days_remove = 30
 		visible = {
@@ -411,6 +521,11 @@ TFRKPHN_hong_amend_category = {
 			}
 		}
 		complete_effect = {
+			if = {
+				limit = { has_country_flag = TFRKPHN_amend_coop_token }
+				clr_country_flag = TFRKPHN_amend_coop_token
+			}
+			else = { add_political_power = -180 }
 			set_country_flag = TFRKPHN_amend_busy
 			custom_effect_tooltip = TFRKPHN_amend_busy_tt
 		}
@@ -440,7 +555,13 @@ TFRKPHN_hong_amend_category = {
 
 	TFRKPHN_amend_d_district = {
 		icon = GFX_decision_TFRKPHN_constitution
-		cost = 0
+		custom_cost_trigger = {
+			OR = {
+				has_country_flag = TFRKPHN_amend_coop_token
+				has_political_power > 179
+			}
+		}
+		custom_cost_text = TFRKPHN_amend_cost_180
 		fire_only_once = yes
 		days_remove = 30
 		visible = {
@@ -459,6 +580,11 @@ TFRKPHN_hong_amend_category = {
 			}
 		}
 		complete_effect = {
+			if = {
+				limit = { has_country_flag = TFRKPHN_amend_coop_token }
+				clr_country_flag = TFRKPHN_amend_coop_token
+			}
+			else = { add_political_power = -180 }
 			set_country_flag = TFRKPHN_amend_busy
 			custom_effect_tooltip = TFRKPHN_amend_busy_tt
 		}
@@ -488,7 +614,13 @@ TFRKPHN_hong_amend_category = {
 
 	TFRKPHN_amend_d_nec = {
 		icon = GFX_decision_TFRKPHN_constitution
-		cost = 0
+		custom_cost_trigger = {
+			OR = {
+				has_country_flag = TFRKPHN_amend_coop_token
+				has_political_power > 179
+			}
+		}
+		custom_cost_text = TFRKPHN_amend_cost_180
 		fire_only_once = yes
 		days_remove = 30
 		visible = {
@@ -507,6 +639,11 @@ TFRKPHN_hong_amend_category = {
 			}
 		}
 		complete_effect = {
+			if = {
+				limit = { has_country_flag = TFRKPHN_amend_coop_token }
+				clr_country_flag = TFRKPHN_amend_coop_token
+			}
+			else = { add_political_power = -180 }
 			set_country_flag = TFRKPHN_amend_busy
 			custom_effect_tooltip = TFRKPHN_amend_busy_tt
 		}
@@ -536,7 +673,13 @@ TFRKPHN_hong_amend_category = {
 
 	TFRKPHN_amend_d_review = {
 		icon = GFX_decision_TFRKPHN_constitution
-		cost = 0
+		custom_cost_trigger = {
+			OR = {
+				has_country_flag = TFRKPHN_amend_coop_token
+				has_political_power > 179
+			}
+		}
+		custom_cost_text = TFRKPHN_amend_cost_180
 		fire_only_once = yes
 		days_remove = 30
 		visible = {
@@ -562,6 +705,11 @@ TFRKPHN_hong_amend_category = {
 			}
 		}
 		complete_effect = {
+			if = {
+				limit = { has_country_flag = TFRKPHN_amend_coop_token }
+				clr_country_flag = TFRKPHN_amend_coop_token
+			}
+			else = { add_political_power = -180 }
 			set_country_flag = TFRKPHN_amend_busy
 			custom_effect_tooltip = TFRKPHN_amend_busy_tt
 		}

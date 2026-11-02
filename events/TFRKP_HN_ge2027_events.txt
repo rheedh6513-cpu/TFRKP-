@@ -158,7 +158,7 @@ country_event = {
 country_event = {
 	id = tfrkphn.312
 	title = tfrkphn.312.t
-	desc = tfrkphn.312.desc
+	desc = tfrkphn.312.news
 	picture = GFX_report_event_generic_read_write
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -175,7 +175,7 @@ country_event = {
 country_event = {
 	id = tfrkphn.313
 	title = tfrkphn.313.t
-	desc = tfrkphn.313.desc
+	desc = tfrkphn.313.news
 	picture = GFX_report_event_generic_read_write
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -210,7 +210,7 @@ country_event = {
 country_event = {
 	id = tfrkphn.314
 	title = tfrkphn.314.t
-	desc = tfrkphn.314.desc
+	desc = tfrkphn.314.news
 	picture = GFX_report_event_generic_read_write
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -245,7 +245,7 @@ country_event = {
 country_event = {
 	id = tfrkphn.315
 	title = tfrkphn.315.t
-	desc = tfrkphn.315.desc
+	desc = tfrkphn.315.news
 	picture = GFX_report_event_generic_read_write
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -329,5 +329,34 @@ country_event = {
 
 	option = {
 		name = tfrkphn.319.a
+	}
+}
+
+# 미합중국 금융위기(korea.64) → 나락(korea.261, 제2차 외환위기) 30일 뒤: 명예퇴직당한 아버지
+country_event = {
+	id = tfrkphn.320
+	title = tfrkphn.320.t
+	desc = tfrkphn.320.desc
+	picture = GFX_TFRKPHN_dad_park
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = tfrkphn.320.a
+		custom_effect_tooltip = tfrkphn.320.tt
+	}
+}
+
+# 홍준표 복당(korea.358) 7일 뒤: 돌아온 친정
+country_event = {
+	id = tfrkphn.321
+	title = tfrkphn.321.t
+	desc = tfrkphn.321.desc
+	picture = GFX_TFRKPHN_hong_return
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = tfrkphn.321.a
 	}
 }

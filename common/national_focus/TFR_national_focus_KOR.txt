@@ -1,4 +1,4 @@
-﻿# TFRKP Hong Nak: Korea Plus 의 TFR_national_focus_KOR.txt 를 그대로 덮어쓴 사본
+# TFRKP Hong Nak: Korea Plus 의 TFR_national_focus_KOR.txt 를 그대로 덮어쓴 사본
 # 바꾼 곳은 'TFRKP Hong Nak' 주석이 붙은 곳뿐이다. Korea Plus 가 이 파일을 업데이트하면 새 원본에 같은 곳만 다시 고칠 것.
 focus_tree = {
 	id = TFR_tree_KOR
@@ -1077,7 +1077,10 @@ focus_tree = {
 
 	focus = {
 		id = KOR_election_candlelight_dp
-		icon = GFX_KOR_election_candlelight_dp
+		icon = {
+			GFX_focus_TFRKPHN_nak_destiny = { OR = { has_country_flag = TFRKP_HN_PPP_hong has_country_flag = TFRKP_HN_DPK_lee_nakyeon } }
+			GFX_KOR_election_candlelight_dp = yes
+		}
 		prerequisite = { focus = KOR_election_economy_dp }
 		relative_position_id = KOR_election_economy_dp
 		cost = 3

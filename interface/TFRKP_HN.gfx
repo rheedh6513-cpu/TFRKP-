@@ -204,6 +204,10 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/TFRKPHN_nth_room_arrest.png"
 	}
 	spriteType = {
+		name = "GFX_focus_TFRKPHN_nak_destiny"
+		texturefile = "gfx/interface/goals/TFRKPHN_nak_destiny.png"
+	}
+	spriteType = {
 		name = "GFX_focus_TFRKPHN_moon_prince"
 		texturefile = "gfx/interface/goals/TFRKPHN_moon_prince.png"
 	}
@@ -214,6 +218,30 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_focus_TFRKPHN_2022_choice"
 		texturefile = "gfx/interface/goals/TFRKPHN_2022_choice.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_hong_return"
+		texturefile = "gfx/event_pictures/TFRKPHN_hong_return.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_suneung"
+		texturefile = "gfx/event_pictures/TFRKPHN_suneung.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_ulsan_factory"
+		texturefile = "gfx/event_pictures/TFRKPHN_ulsan_factory.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_hong_elected"
+		texturefile = "gfx/event_pictures/TFRKPHN_hong_elected.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_hong_elected_news"
+		texturefile = "gfx/event_pictures/TFRKPHN_hong_elected_news.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_dad_park"
+		texturefile = "gfx/event_pictures/TFRKPHN_dad_park.png"
 	}
 	spriteType = {
 		name = "GFX_TFRKPHN_general_strike"
