@@ -505,6 +505,12 @@ focus_tree = {
 		y = 1
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			custom_effect_tooltip = TFRKPHN_sp_jin_03_tt
+			hidden_effect = {
+				TFRKPHN_sp_jin_init = yes
+				add_to_variable = { TFRKPHN_sp_jin_stab = 0.02 }
+				add_to_variable = { TFRKPHN_sp_jin_pp = 0.05 }
+			}
 			country_event = tfrkphn.52
 			add_ideas = TFRKPHN_national_unity_1
 			add_political_power = 100
@@ -522,6 +528,11 @@ focus_tree = {
 		y = 1
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			custom_effect_tooltip = TFRKPHN_sp_jin_04_tt
+			hidden_effect = {
+				TFRKPHN_sp_jin_init = yes
+				add_to_variable = { TFRKPHN_sp_jin_stab = 0.02 }
+			}
 			country_event = tfrkphn.53
 			custom_effect_tooltip = TFRKPHN_hourglass_unlock_tt
 			add_stability = 0.03
@@ -539,6 +550,11 @@ focus_tree = {
 		y = 1
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			custom_effect_tooltip = TFRKPHN_sp_jin_05_tt
+			hidden_effect = {
+				TFRKPHN_sp_jin_init = yes
+				add_to_variable = { TFRKPHN_sp_jin_cg = -0.02 }
+			}
 			country_event = tfrkphn.54
 			add_political_power = 75
 			set_temp_variable = { income_var_temp = 10 }
@@ -556,9 +572,17 @@ focus_tree = {
 		y = 1
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			custom_effect_tooltip = TFRKPHN_sp_jin_06_tt
+			hidden_effect = {
+				TFRKPHN_sp_jin_init = yes
+				add_to_variable = { TFRKPHN_sp_jin_stab = 0.03 }
+			}
 			country_event = tfrkphn.55
 			custom_effect_tooltip = TFRKPHN_crime_unlock_tt
-			hidden_effect = { TFRKPHN_crime_init = yes }
+			hidden_effect = {
+				TFRKPHN_crime_init = yes
+				country_event = { id = tfrkphn.322 days = 2 }	# 검사의 칼날 (회상)
+			}
 			add_stability = 0.05
 		}
 	}
@@ -573,6 +597,12 @@ focus_tree = {
 		y = 1
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			custom_effect_tooltip = TFRKPHN_sp_jin_07_tt
+			hidden_effect = {
+				TFRKPHN_sp_jin_init = yes
+				add_to_variable = { TFRKPHN_sp_jin_eff = 0.05 }
+				add_to_variable = { TFRKPHN_sp_jin_ind = 0.02 }
+			}
 			country_event = tfrkphn.56
 			add_political_power = 50
 			set_temp_variable = { income_var_temp = 15 }
@@ -591,6 +621,11 @@ focus_tree = {
 		y = 1
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			custom_effect_tooltip = TFRKPHN_sp_jin_08_tt
+			hidden_effect = {
+				TFRKPHN_sp_jin_init = yes
+				add_to_variable = { TFRKPHN_sp_jin_pp = 0.05 }
+			}
 			country_event = tfrkphn.57
 			custom_effect_tooltip = TFRKPHN_support_all2_tt
 			hidden_effect = {
@@ -611,6 +646,12 @@ focus_tree = {
 		y = 1
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			custom_effect_tooltip = TFRKPHN_sp_jin_09_tt
+			hidden_effect = {
+				TFRKPHN_sp_jin_init = yes
+				add_to_variable = { TFRKPHN_sp_jin_cg = -0.01 }
+				add_to_variable = { TFRKPHN_sp_jin_stab = 0.02 }
+			}
 			country_event = tfrkphn.58
 			set_temp_variable = { poverty_development_var_temp = 0.1 }
 			add_poverty_development = yes
@@ -1077,6 +1118,11 @@ focus_tree = {
 		y = 1
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			custom_effect_tooltip = TFRKPHN_sp_jin_33_tt
+			hidden_effect = {
+				TFRKPHN_sp_jin_init = yes
+				add_to_variable = { TFRKPHN_sp_jin_stab = 0.03 }
+			}
 			country_event = tfrkphn.200
 			custom_effect_tooltip = TFRKPHN_support_all3_tt
 			hidden_effect = {
@@ -1097,6 +1143,11 @@ focus_tree = {
 		y = 1
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			custom_effect_tooltip = TFRKPHN_sp_jin_34_tt
+			hidden_effect = {
+				TFRKPHN_sp_jin_init = yes
+				add_to_variable = { TFRKPHN_sp_jin_res = 0.03 }
+			}
 			country_event = tfrkphn.201
 			add_stability = 0.03
 			add_political_power = 50

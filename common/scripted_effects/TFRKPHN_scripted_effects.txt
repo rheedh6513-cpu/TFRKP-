@@ -868,3 +868,18 @@ TFRKPHN_ge2027_hwang_kyo_ahn_effect = {
 	load_focus_tree = { tree = TFRKPHN_hwang_kyo_ahn_tree keep_completed = no }
 	mark_focus_tree_layout_dirty = yes
 }
+
+# 승전 계통도 진 줄기 국민정신 다할 진의 정신: 처음 한 번 만들고, 중점마다 변수만 더한다
+TFRKPHN_sp_jin_init = {
+	if = {
+		limit = { NOT = { has_country_flag = TFRKPHN_sp_jin_on } }
+		set_country_flag = TFRKPHN_sp_jin_on
+		set_variable = { TFRKPHN_sp_jin_stab = 0 }
+		set_variable = { TFRKPHN_sp_jin_pp = 0 }
+		set_variable = { TFRKPHN_sp_jin_cg = 0 }
+		set_variable = { TFRKPHN_sp_jin_eff = 0 }
+		set_variable = { TFRKPHN_sp_jin_ind = 0 }
+		set_variable = { TFRKPHN_sp_jin_res = 0 }
+		add_dynamic_modifier = { modifier = TFRKPHN_sp_jin }
+	}
+}
