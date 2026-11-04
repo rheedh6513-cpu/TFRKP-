@@ -13,3 +13,14 @@ TFRKPHN_7th_republic = {
 	stability_weekly = TFRKPHN_7rep_wstab
 	research_speed_factor = TFRKPHN_7rep_res
 }
+
+# 승전 계통도 진 줄기 국민정신: 중점마다 다른 효과가 더해진다
+TFRKPHN_sp_jin = {
+	icon = GFX_idea_KOR_yoon_common_conservatism_dynamic_modifir_idea
+	stability_factor = TFRKPHN_sp_jin_stab
+	political_power_factor = TFRKPHN_sp_jin_pp
+	consumer_goods_factor = TFRKPHN_sp_jin_cg
+	production_factory_efficiency_gain_factor = TFRKPHN_sp_jin_eff
+	industrial_capacity_factory = TFRKPHN_sp_jin_ind
+	research_speed_factor = TFRKPHN_sp_jin_res
+}

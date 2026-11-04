@@ -13,7 +13,7 @@ focus_tree = {
 
 	inlay_window = {
 		id = KOR_president_election_inlay_window
-		position = { x = 1600 y = 1550 }
+		position = { x = 1900 y = 1550 }
 	}
 
 	inlay_window = {
@@ -928,17 +928,17 @@ focus_tree = {
 
 	focus = {
 		id = KOR_2022_election
-		# TFRKP Hong Nak: 홍준표나 이낙연이 후보면 '2022 국민의 선택' 아이콘, 아니면 원래 아이콘 (Korea Plus 와 같은 조건부 아이콘 문법)
-		icon = {
-			GFX_focus_TFRKPHN_2022_choice = {
-				OR = {
-					has_country_flag = TFRKP_HN_PPP_hong
-					has_country_flag = TFRKP_HN_DPK_lee_nakyeon
-				}
-			}
-			GFX_KOR_2022_election = yes
-		}
+		icon = GFX_KOR_2022_election
 		allow_branch = {
+			# TFRKP Hong Nak: 홍준표ㆍ이낙연 판에서는 아래 홍낙 전용 대선 계통도가 대신 나온다
+			NOT = {
+				OR = {
+				has_country_flag = TFRKP_HN_PPP_hong
+				has_country_flag = TFRKP_HN_DPK_lee_nakyeon
+				has_global_flag = TFRKP_HN_G_hong
+				has_global_flag = TFRKP_HN_G_nak
+			}
+			}
 			has_country_flag = KOR_president_election_2022
 			NOT = { KOR_is_lee_path = yes }
 			NOT = { KOR_is_yoon_path = yes }
@@ -1007,10 +1007,7 @@ focus_tree = {
 
 	focus = {
 		id = KOR_election_left_dp
-		icon = {
-			GFX_focus_TFRKPHN_myeongnak = { OR = { has_country_flag = TFRKP_HN_PPP_hong has_country_flag = TFRKP_HN_DPK_lee_nakyeon } }
-			GFX_KOR_election_left_dp = yes
-		}
+		icon = GFX_KOR_election_left_dp
 		prerequisite = { focus = KOR_democratic_party }
 		relative_position_id = KOR_democratic_party
 		mutually_exclusive = { focus = KOR_election_middle_dp }
@@ -1031,10 +1028,7 @@ focus_tree = {
 
 	focus = {
 		id = KOR_election_middle_dp
-		icon = {
-			GFX_focus_TFRKPHN_moon_prince = { OR = { has_country_flag = TFRKP_HN_PPP_hong has_country_flag = TFRKP_HN_DPK_lee_nakyeon } }
-			GFX_KOR_election_middle_dp = yes
-		}
+		icon = GFX_KOR_election_middle_dp
 		prerequisite = { focus = KOR_democratic_party }
 		relative_position_id = KOR_democratic_party
 		mutually_exclusive = { focus = KOR_election_left_dp }
@@ -1077,10 +1071,7 @@ focus_tree = {
 
 	focus = {
 		id = KOR_election_candlelight_dp
-		icon = {
-			GFX_focus_TFRKPHN_nak_destiny = { OR = { has_country_flag = TFRKP_HN_PPP_hong has_country_flag = TFRKP_HN_DPK_lee_nakyeon } }
-			GFX_KOR_election_candlelight_dp = yes
-		}
+		icon = GFX_KOR_election_candlelight_dp
 		prerequisite = { focus = KOR_election_economy_dp }
 		relative_position_id = KOR_election_economy_dp
 		cost = 3
@@ -1181,6 +1172,260 @@ focus_tree = {
 			focus = KOR_election_candlelight_dp
 		}
 		relative_position_id = KOR_election_depend_ppp
+		cost = 3
+		x = -2
+		y = 1
+		completion_reward = {
+			country_event = { id = korea.82 hours = 6 }
+		}
+	}
+
+	##### TFRKP Hong Nak: 홍준표ㆍ이낙연 판 2022 대선 계통도 (원본과 같은 구조ㆍ효과, 이름ㆍ아이콘만 홍낙용) #####
+
+	focus = {
+		id = TFRKPHN_e22_2022_election
+		icon = GFX_focus_TFRKPHN_e22_root
+		allow_branch = {
+			# TFRKP Hong Nak: 홍준표ㆍ이낙연 판 전용 대선 계통도
+			OR = {
+				has_country_flag = TFRKP_HN_PPP_hong
+				has_country_flag = TFRKP_HN_DPK_lee_nakyeon
+				has_global_flag = TFRKP_HN_G_hong
+				has_global_flag = TFRKP_HN_G_nak
+			}
+			has_country_flag = KOR_president_election_2022
+			NOT = { KOR_is_lee_path = yes }
+			NOT = { KOR_is_yoon_path = yes }
+		}
+		available = {
+			has_country_leader = {
+				character = KOR_moon_jae_in_char
+				ruling_only = yes
+			}
+		}
+		relative_position_id = KOR_putting_out_the_big_fire
+		cost = 3
+		x = -5
+		y = 2
+		completion_reward = {
+			add_political_power = -25
+			country_event = { id = korea.115 hours = 6 }
+		}
+	}
+
+	focus = {
+		id = TFRKPHN_e22_democratic_party
+		icon = GFX_focus_TFRKPHN_nak_flag
+		available = {
+			has_country_flag = KOR_sided_with_lee
+		}
+		prerequisite = { focus = TFRKPHN_e22_2022_election }
+		relative_position_id = TFRKPHN_e22_2022_election
+		cost = 3
+		x = -3
+		y = 1
+		completion_reward = {
+			set_temp_variable = { KOR_president_election_lee_support_temp = 0.04 }
+			KOR_president_election_lee_support_change_effect = yes
+			add_stability = 0.03
+			country_event = { id = korea.281 hours = 6 }
+			hidden_effect = {
+				country_event = { id = korea.282 days = 3 }
+			}
+		}
+	}
+
+	focus = {
+		id = TFRKPHN_e22_people_power_party
+		icon = GFX_KOR_people_power_party
+		available = {
+			has_country_flag = KOR_sided_with_yoon
+		}
+		prerequisite = { focus = TFRKPHN_e22_2022_election }
+		relative_position_id = TFRKPHN_e22_2022_election
+		cost = 3
+		x = 3
+		y = 1
+		completion_reward = {
+			set_temp_variable = { KOR_president_election_yoon_support_temp = 0.04 }
+			KOR_president_election_yoon_support_change_effect = yes
+			custom_effect_tooltip = tooltip_white_line
+			country_event = { id = korea.81 hours = 6 }
+			hidden_effect = {
+				country_event = { id = korea.116 days = 3 }
+			}
+		}
+	}
+
+	##더불어민주당##
+
+	focus = {
+		id = TFRKPHN_e22_election_left_dp
+		icon = GFX_focus_TFRKPHN_myeongnak
+		prerequisite = { focus = TFRKPHN_e22_democratic_party }
+		relative_position_id = TFRKPHN_e22_democratic_party
+		mutually_exclusive = { focus = TFRKPHN_e22_election_middle_dp }
+		cost = 3
+		x = -2
+		y = 1
+		completion_reward = {
+			set_temp_variable = { KOR_president_election_lee_support_temp = -0.05 }
+			KOR_president_election_lee_support_change_effect = yes
+			set_temp_variable = { society_development_var_temp = 0.1 }
+			add_society_development = yes
+			country_event = { id = korea.285 hours = 6 }
+			hidden_effect = {
+				country_event = { id = korea.288 days = 4 }
+			}
+		}
+	}
+
+	focus = {
+		id = TFRKPHN_e22_election_middle_dp
+		icon = GFX_focus_TFRKPHN_moon_prince
+		prerequisite = { focus = TFRKPHN_e22_democratic_party }
+		relative_position_id = TFRKPHN_e22_democratic_party
+		mutually_exclusive = { focus = TFRKPHN_e22_election_left_dp }
+		cost = 3
+		x = 2
+		y = 1
+		completion_reward = {
+			set_temp_variable = { KOR_president_election_lee_support_temp = 0.03 }
+			KOR_president_election_lee_support_change_effect = yes
+			add_political_power = 30
+			country_event = { id = korea.284 hours = 6 }
+			hidden_effect = {
+				country_event = { id = korea.288 days = 4 }
+			}
+		}
+	}
+
+	focus = {
+		id = TFRKPHN_e22_election_economy_dp
+		icon = GFX_KOR_election_economy_dp
+		prerequisite = {
+			focus = TFRKPHN_e22_election_left_dp
+			focus = TFRKPHN_e22_election_middle_dp
+		}
+		relative_position_id = TFRKPHN_e22_democratic_party
+		cost = 3
+		x = 0
+		y = 2
+		completion_reward = {
+			set_temp_variable = { KOR_president_election_lee_support_temp = 0.06 }
+			KOR_president_election_lee_support_change_effect = yes
+			set_temp_variable = { industrial_development_var_temp = 0.05 }
+			add_industrial_development = yes
+			country_event = { id = korea.286 hours = 6 }
+			hidden_effect = {
+				country_event = { id = korea.289 days = 4 }
+			}
+		}
+	}
+
+	focus = {
+		id = TFRKPHN_e22_election_candlelight_dp
+		icon = GFX_focus_TFRKPHN_nak_destiny
+		prerequisite = { focus = TFRKPHN_e22_election_economy_dp }
+		relative_position_id = TFRKPHN_e22_election_economy_dp
+		cost = 3
+		x = 1
+		y = 1
+		completion_reward = {
+			set_temp_variable = { KOR_president_election_lee_support_temp = 0.05 }
+			KOR_president_election_lee_support_change_effect = yes
+			add_stability = 0.1
+			country_event = { id = korea.287 hours = 6 }
+			hidden_effect = {
+				country_event = { id = korea.290 days = 5 }
+			}
+		}
+	}
+
+	##국민의힘##
+
+	focus = {
+		id = TFRKPHN_e22_election_our_ppp
+		icon = GFX_KOR_election_our_ppp
+		prerequisite = { focus = TFRKPHN_e22_people_power_party }
+		relative_position_id = TFRKPHN_e22_people_power_party
+		mutually_exclusive = { focus = TFRKPHN_e22_election_new_ppp }
+		cost = 3
+		x = -2
+		y = 1
+		completion_reward = {
+			set_temp_variable = { KOR_president_election_yoon_support_temp = 0.05 }
+			KOR_president_election_yoon_support_change_effect = yes
+		}
+	}
+
+	focus = {
+		id = TFRKPHN_e22_election_new_ppp
+		icon = GFX_KOR_election_new_ppp
+		prerequisite = { focus = TFRKPHN_e22_people_power_party }
+		relative_position_id = TFRKPHN_e22_people_power_party
+		mutually_exclusive = { focus = TFRKPHN_e22_election_our_ppp }
+		cost = 3
+		x = 2
+		y = 1
+		completion_reward = {
+			set_temp_variable = { KOR_president_election_yoon_support_temp = 0.04 }
+			KOR_president_election_yoon_support_change_effect = yes
+			country_event = { id = korea.122 days = 2 }
+		}
+	}
+
+	focus = {
+		id = TFRKPHN_e22_election_attack_ppp
+		icon = GFX_KOR_election_attack_ppp
+		prerequisite = {
+			focus = TFRKPHN_e22_election_our_ppp
+			focus = TFRKPHN_e22_election_new_ppp
+		}
+		relative_position_id = TFRKPHN_e22_people_power_party
+		cost = 3
+		x = 0
+		y = 2
+		completion_reward = {
+			set_temp_variable = { KOR_president_election_yoon_support_temp = 0.07 }
+			KOR_president_election_yoon_support_change_effect = yes
+			add_stability = -0.03
+			hidden_effect = {
+				country_event = { id = korea.123 days = 5 }
+			}
+		}
+	}
+
+	focus = {
+		id = TFRKPHN_e22_election_depend_ppp
+		icon = GFX_KOR_election_depend_ppp
+		prerequisite = { focus = TFRKPHN_e22_election_attack_ppp }
+		relative_position_id = TFRKPHN_e22_election_attack_ppp
+		cost = 3
+		x = -1
+		y = 1
+		completion_reward = {
+			set_temp_variable = { KOR_president_election_yoon_support_temp = 0.05 }
+			KOR_president_election_yoon_support_change_effect = yes
+			set_temp_variable = { military_development_var_temp = 0.01 }
+			add_military_development = yes
+			country_event = { id = korea.80 hours = 6 }
+			hidden_effect = {
+				country_event = { id = korea.124 days = 5 }
+			}
+		}
+	}
+
+	##중도##
+
+	focus = {
+		id = TFRKPHN_e22_election_cheol_soo
+		icon = GFX_KOR_election_cheol_soo
+		prerequisite = {
+			focus = TFRKPHN_e22_election_depend_ppp
+			focus = TFRKPHN_e22_election_candlelight_dp
+		}
+		relative_position_id = TFRKPHN_e22_election_depend_ppp
 		cost = 3
 		x = -2
 		y = 1

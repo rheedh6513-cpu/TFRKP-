@@ -360,3 +360,30 @@ country_event = {
 		name = tfrkphn.321.a
 	}
 }
+
+# 범죄와의 전쟁(b03_06) 2일 뒤: 검사의 칼날 (홍준표 회상)
+country_event = {
+	id = tfrkphn.322
+	title = tfrkphn.322.t
+	desc = tfrkphn.322.desc
+	picture = GFX_TFRKPHN_sandglass
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = tfrkphn.322.a
+	}
+}
+
+# 진력(tfrkphn.202) 바로 뒤: 화개장터 (사진 없음)
+country_event = {
+	id = tfrkphn.323
+	title = tfrkphn.323.t
+	desc = tfrkphn.323.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = tfrkphn.323.a
+	}
+}
