@@ -1,3 +1,5 @@
+﻿# [안내] 2027 대선과 그 뒤 이벤트, 한일 공동 핵무장 뉴스. 문구는 TFRKP_HN_ge2027_l_korean.yml, TFRKP_HN_story_l_korean.yml.
+# [안내] 수정 방법: 모드 폴더의 TUTORIAL_KO.md 7~9장 참고. 새 이름에는 TFRKPHN_ 접두어를 붙이세요.
 add_namespace = tfrkphn
 
 # 제21대 대선 (2027.3.3): 양안전쟁 결과에 따른 차기 대통령
@@ -301,6 +303,7 @@ country_event = {
 
 	option = {
 		name = tfrkphn.317.a
+		custom_effect_tooltip = tfrkphn.317.a_tt
 	}
 }
 
@@ -427,5 +430,32 @@ news_event = {
 
 	option = {
 		name = tfrkphn.326.a
+	}
+}
+
+# 한일 공동 핵무장: 첫 핵실험 (공식 발표 tfrkphn.326 이전)
+news_event = {
+	id = tfrkphn.327
+	title = tfrkphn.327.t
+	desc = tfrkphn.327.desc
+	picture = GFX_TFRKPHN_east_sea_blast
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = tfrkphn.327.a
+	}
+}
+
+# 사우디아라비아 내전 발발 후: 종량제 봉투 사재기
+country_event = {
+	id = tfrkphn.328
+	title = tfrkphn.328.t
+	desc = tfrkphn.328.desc
+	picture = GFX_TFRKPHN_trash_bag_rush
+	is_triggered_only = yes
+
+	option = {
+		name = tfrkphn.328.a
 	}
 }

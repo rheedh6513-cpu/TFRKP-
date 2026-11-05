@@ -1,3 +1,5 @@
+﻿# [안내] 수치가 변수로 바뀌는 국가 보정치.
+# [안내] 수정 방법: 모드 폴더의 TUTORIAL_KO.md 7~9장 참고. 새 이름에는 TFRKPHN_ 접두어를 붙이세요.
 TFRKPHN_amend_cost_mod = {
 	icon = GFX_idea_KOR_yoon_common_conservatism_dynamic_modifir_idea
 	political_power_gain = TFRKPHN_amend_pp_drain
@@ -29,4 +31,152 @@ TFRKPHN_sp_jin = {
 TFRKPHN_kj_factory_use = {
 	icon = GFX_idea_KOR_yoon_common_conservatism_dynamic_modifir_idea
 	civilian_factory_use = 3
+}
+
+# 국방부 군사 결정: 육군 정예화, 해군 기동함대 (영구)
+TFRKPHN_mnd_army = {
+	icon = GFX_idea_KOR_yoon_common_conservatism_dynamic_modifir_idea
+	army_attack_factor = 0.05
+	army_defence_factor = 0.05
+}
+TFRKPHN_mnd_navy = {
+	icon = GFX_idea_KOR_yoon_common_conservatism_dynamic_modifir_idea
+	naval_damage_factor = 0.05
+	naval_speed_factor = 0.05
+}
+# 국방부 군사 결정: 개혁 (영구)
+TFRKPHN_mnd_fa50 = {
+	icon = GFX_idea_KOR_yoon_common_conservatism_dynamic_modifir_idea
+	air_attack_factor = 0.05
+	air_agility_factor = 0.05
+}
+TFRKPHN_mnd_f4 = {
+	icon = GFX_idea_KOR_yoon_common_conservatism_dynamic_modifir_idea
+	air_accidents_factor = -0.25
+	air_defence_factor = 0.05
+}
+TFRKPHN_mnd_marine_sof = {
+	icon = GFX_idea_KOR_yoon_common_conservatism_dynamic_modifir_idea
+	special_forces_cap = 0.10
+	special_forces_attack_factor = 0.10
+	special_forces_defence_factor = 0.10
+}
+TFRKPHN_mnd_space = {
+	icon = GFX_idea_KOR_yoon_common_conservatism_dynamic_modifir_idea
+	army_intel_factor = 0.10
+	navy_intel_factor = 0.10
+	airforce_intel_factor = 0.10
+	research_speed_factor = 0.03
+}
+
+# 국방부 결정 목록
+TFRKPHN_mnd_barracks = {
+	icon = GFX_idea_KOR_yoon_common_conservatism_dynamic_modifir_idea
+	army_morale_factor = 0.05
+	stability_factor = 0.02
+}
+TFRKPHN_mnd_kdefense_export = {
+	icon = GFX_idea_KOR_yoon_common_conservatism_dynamic_modifir_idea
+	production_factory_efficiency_gain_factor = 0.10
+	production_factory_max_efficiency_factor = 0.05
+}
+
+# 임명식 군사 버프 (한 사람당 하나, 영구)
+TFRKPHN_appoint_park_an_su = {
+	icon = GFX_idea_KOR_yoon_common_conservatism_dynamic_modifir_idea
+	army_attack_factor = 0.02
+	army_defence_factor = 0.02
+}
+TFRKPHN_appoint_kang_sin_chul = {
+	icon = GFX_idea_KOR_yoon_common_conservatism_dynamic_modifir_idea
+	army_attack_factor = 0.02
+	army_defence_factor = 0.02
+}
+TFRKPHN_appoint_son_sik = {
+	icon = GFX_idea_KOR_yoon_common_conservatism_dynamic_modifir_idea
+	army_attack_factor = 0.02
+	army_defence_factor = 0.02
+}
+TFRKPHN_appoint_ko_chang_jun = {
+	icon = GFX_idea_KOR_yoon_common_conservatism_dynamic_modifir_idea
+	army_attack_factor = 0.02
+	army_defence_factor = 0.02
+}
+TFRKPHN_appoint_hwang_you_sung = {
+	icon = GFX_idea_KOR_yoon_common_conservatism_dynamic_modifir_idea
+	army_attack_factor = 0.02
+	army_defence_factor = 0.02
+}
+TFRKPHN_appoint_yeo_in_hyeong = {
+	icon = GFX_idea_KOR_yoon_common_conservatism_dynamic_modifir_idea
+	army_attack_factor = 0.02
+	army_defence_factor = 0.02
+}
+TFRKPHN_appoint_lee_jin_woo = {
+	icon = GFX_idea_KOR_yoon_common_conservatism_dynamic_modifir_idea
+	army_attack_factor = 0.02
+	army_defence_factor = 0.02
+}
+TFRKPHN_appoint_kwak_jong_keun = {
+	icon = GFX_idea_KOR_yoon_common_conservatism_dynamic_modifir_idea
+	army_attack_factor = 0.02
+	army_defence_factor = 0.02
+}
+TFRKPHN_appoint_kim_myung_soo = {
+	icon = GFX_idea_KOR_yoon_common_conservatism_dynamic_modifir_idea
+	naval_damage_factor = 0.02
+	naval_defense_factor = 0.02
+}
+TFRKPHN_appoint_yang_yong_mo = {
+	icon = GFX_idea_KOR_yoon_common_conservatism_dynamic_modifir_idea
+	naval_damage_factor = 0.02
+	naval_defense_factor = 0.02
+}
+TFRKPHN_appoint_kang_dong_gil = {
+	icon = GFX_idea_KOR_yoon_common_conservatism_dynamic_modifir_idea
+	naval_damage_factor = 0.02
+	naval_defense_factor = 0.02
+}
+TFRKPHN_appoint_choi_sung_hyeok = {
+	icon = GFX_idea_KOR_yoon_common_conservatism_dynamic_modifir_idea
+	naval_damage_factor = 0.02
+	naval_defense_factor = 0.02
+}
+TFRKPHN_appoint_lee_young_soo = {
+	icon = GFX_idea_KOR_yoon_common_conservatism_dynamic_modifir_idea
+	air_attack_factor = 0.02
+	air_defence_factor = 0.02
+}
+TFRKPHN_appoint_son_sug_rag = {
+	icon = GFX_idea_KOR_yoon_common_conservatism_dynamic_modifir_idea
+	air_attack_factor = 0.02
+	air_defence_factor = 0.02
+}
+TFRKPHN_appoint_kim_hyoung_soo = {
+	icon = GFX_idea_KOR_yoon_common_conservatism_dynamic_modifir_idea
+	air_attack_factor = 0.02
+	air_defence_factor = 0.02
+}
+
+# 3축 체계 완성 (홍준표 중점 b03_13): 방공 + 현무 대량응징 (영구)
+TFRKPHN_3axis = {
+	icon = GFX_idea_KOR_yoon_common_conservatism_dynamic_modifir_idea
+	static_anti_air_damage_factor = 0.20
+	static_anti_air_hit_chance_factor = 0.20
+	army_artillery_attack_factor = 0.10
+	army_artillery_defence_factor = 0.05
+	army_attack_factor = 0.03
+}
+
+# 국방과학연구소 강화 (홍준표 중점 b03_36): 매달 군사 발전도 상승 (영구)
+TFRKPHN_add_research = {
+	icon = GFX_idea_KOR_yoon_common_conservatism_dynamic_modifir_idea
+	military_development_monthly = 0.01
+}
+
+# 충성의 3축 5군 (홍준표 중점 b03_38): 5군 체제 (영구)
+TFRKPHN_3axis5 = {
+	icon = GFX_idea_KOR_yoon_common_conservatism_dynamic_modifir_idea
+	special_forces_attack_factor = 0.05
+	army_org_factor = 0.03
 }

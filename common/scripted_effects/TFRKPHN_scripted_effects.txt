@@ -1,3 +1,5 @@
+﻿# [안내] 여러 곳에서 같이 쓰는 효과 묶음 (트리 교체, 한일 핵 패널 진행 등). 전역 변수는 set_variable = { global.이름 = 값 }.
+# [안내] 수정 방법: 모드 폴더의 TUTORIAL_KO.md 7~9장 참고. 새 이름에는 TFRKPHN_ 접두어를 붙이세요.
 TFRKPHN_hourglass_init = {
 	if = {
 		limit = { NOT = { has_country_flag = TFRKPHN_hourglass_init } }
@@ -910,7 +912,8 @@ TFRKPHN_kj_bomb_effect = {
 	if = {
 		limit = { NOT = { has_global_flag = TFRKPHN_kj_test_news } }
 		set_global_flag = TFRKPHN_kj_test_news
-		news_event = { id = tfrkphn.326 hours = 6 }
+		news_event = { id = tfrkphn.327 hours = 6 }
+		news_event = { id = tfrkphn.326 days = 7 }
 	}
 }
 
@@ -1557,5 +1560,32 @@ TFRKPHN_kj_daily = {
 				if = { limit = { tag = KOR NOT = { has_global_flag = TFRKPHN_kj_path_u_KOR } } set_global_flag = TFRKPHN_kj_path_u_KOR set_global_flag = TFRKPHN_kj_path_p_JAP } if = { limit = { tag = JAP NOT = { has_global_flag = TFRKPHN_kj_path_u_JAP } } set_global_flag = TFRKPHN_kj_path_u_JAP set_global_flag = TFRKPHN_kj_path_p_KOR }
 			}
 		}
+	}
+}
+
+# 국방부 군사 결정: FA-50 경공격기 40대 (By Blood Alone 있으면 전용 설계, 없으면 근접항공지원기)
+TFRKPHN_mnd_fa50_planes = {
+	if = {
+		limit = { has_dlc = "By Blood Alone" }
+		create_equipment_variant = {
+			name = "FA-50"
+			type = small_plane_cas_airframe_1
+			parent_version = 0
+			allow_without_tech = yes
+			modules = {
+				fixed_main_weapon_slot = heavy_mg_2x
+				fixed_auxiliary_weapon_slot_1 = light_mg_4x
+				fixed_auxiliary_weapon_slot_2 = empty
+				fixed_auxiliary_weapon_slot_3 = empty
+				engine_type_slot = engine_2_1x
+				special_type_slot_1 = fuel_tanks_small
+				special_type_slot_2 = empty
+				special_type_slot_3 = empty
+			}
+		}
+		add_equipment_to_stockpile = { type = small_plane_cas_airframe_1 variant_name = "FA-50" amount = 40 producer = KOR }
+	}
+	else = {
+		add_equipment_to_stockpile = { type = CAS_equipment_2 amount = 40 producer = KOR }
 	}
 }
