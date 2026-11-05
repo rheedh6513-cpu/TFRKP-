@@ -1,3 +1,5 @@
+﻿# [안내] 메인 이벤트 (대선, 홍준표 정부). 문구는 TFRKP_HN_story_l_korean.yml 등. 콘솔: event tfrkphn.번호
+# [안내] 수정 방법: 모드 폴더의 TUTORIAL_KO.md 7~9장 참고. 새 이름에는 TFRKPHN_ 접두어를 붙이세요.
 add_namespace = tfrkphn
 
 # 2021 People Power Party convention: Yoon Suk-yeol or Hong Joon-pyo
@@ -1617,7 +1619,7 @@ country_event = {
 	id = tfrkphn.205
 	title = tfrkphn.205.t
 	desc = tfrkphn.205.desc
-	picture = GFX_TFRKPHN_hong_temp
+	picture = GFX_TFRKPHN_taegukgi
 	is_triggered_only = yes
 	fire_only_once = yes
 
@@ -1727,5 +1729,18 @@ country_event = {
 
 	option = {
 		name = tfrkphn.221.a
+	}
+}
+
+# 2022.2.20 이낙연 유세 말실수 (민주당 후보 이낙연일 때)
+country_event = {
+	id = tfrkphn.140
+	title = tfrkphn.140.t
+	desc = tfrkphn.140.desc
+	picture = GFX_TFRKPHN_nak_who_choose
+	is_triggered_only = yes
+
+	option = {
+		name = tfrkphn.140.a
 	}
 }

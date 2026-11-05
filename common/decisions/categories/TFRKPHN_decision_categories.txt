@@ -1,3 +1,5 @@
+﻿# [안내] 결정 카테고리 (아이콘, 보이는 조건, 연결된 scripted_gui).
+# [안내] 수정 방법: 모드 폴더의 TUTORIAL_KO.md 7~9장 참고. 새 이름에는 TFRKPHN_ 접두어를 붙이세요.
 TFRKPHN_hong_minsim_category = {
 	icon = generic_political_actions
 	priority = 200
@@ -95,4 +97,14 @@ TFRKPHN_kj_nuke_category = {
 		OR = { tag = KOR tag = JAP }
 	}
 	scripted_gui = TFRKPHN_kj_gui
+}
+
+# 국방부 군사 결정: 홍준표 정부에서 열림. 화면은 interface/TFRKPHN_mnd.gui
+TFRKPHN_mnd_category = {
+	icon = GFX_decision_icon_KOR_defreform_category
+	priority = 140
+	allowed = { original_tag = KOR }
+	visible_when_empty = yes
+	visible = { has_country_flag = TFRKP_HN_hong_president }
+	scripted_gui = TFRKPHN_mnd_gui
 }

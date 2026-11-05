@@ -1,0 +1,130 @@
+﻿# [안내] 국방부 군사 결정 패널. 각 군 마크(버튼)를 누르면 효과가 나갑니다. 동작은 common/scripted_guis/TFRKPHN_scripted_guis.txt의 TFRKPHN_mnd_gui.
+# [안내] 수정 방법: 모드 폴더의 TUTORIAL_KO.md 7~9장 참고. 새 이름에는 TFRKPHN_ 접두어를 붙이세요.
+guiTypes = {
+	containerWindowType = {
+		name = "TFRKPHN_mnd_container"
+		size = { width = 100%% height = 330 }
+
+		containerWindowType = {
+			name = "TFRKPHN_mnd_panel"
+			position = { x = 0 y = 0 }
+			size = { width = 500 height = 328 }
+
+			background = {
+				name = "background"
+				spriteType = "GFX_tiled_decisions_bg_small"
+				alwaystransparent = yes
+			}
+			containerWindowType = {
+				name = "TFRKPHN_mnd_title_container"
+				position = { x = 1 y = 0 }
+				size = { width = 498 height = 30 }
+				background = {
+					name = "background"
+					spriteType = "GFX_tiled_header_1"
+					alwaystransparent = yes
+				}
+				instantTextBoxType = {
+					name = "TFRKPHN_mnd_title_text"
+					position = { x = 0 y = 4 }
+					text = "TFRKPHN_mnd_title"
+					font = "hoi_18mbs"
+					format = center
+					maxWidth = 498
+					alwaystransparent = yes
+				}
+			}
+			iconType = {
+				name = "TFRKPHN_mnd_bg"
+				position = { x = 0 y = 34 }
+				spriteType = "GFX_TFRKPHN_mnd_bg"
+				alwaystransparent = yes
+			}
+			buttonType = {
+				name = "TFRKPHN_mnd_btn_army"
+				position = { x = 24 y = 47 }
+				spriteType = "GFX_TFRKPHN_mnd_btn_army"
+				pdx_tooltip = "TFRKPHN_mnd_army_tt"
+				clicksound = click_default
+			}
+			buttonType = {
+				name = "TFRKPHN_mnd_btn_navy"
+				position = { x = 27 y = 167 }
+				spriteType = "GFX_TFRKPHN_mnd_btn_navy"
+				pdx_tooltip = "TFRKPHN_mnd_navy_tt"
+				clicksound = click_default
+			}
+			buttonType = {
+				name = "TFRKPHN_mnd_btn_air"
+				position = { x = 380 y = 60 }
+				spriteType = "GFX_TFRKPHN_mnd_btn_air"
+				pdx_tooltip = "TFRKPHN_mnd_air_tt"
+				clicksound = click_default
+			}
+			buttonType = {
+				name = "TFRKPHN_mnd_btn_marine"
+				position = { x = 380 y = 167 }
+				spriteType = "GFX_TFRKPHN_mnd_btn_marine"
+				pdx_tooltip = "TFRKPHN_mnd_marine_tt"
+				clicksound = click_default
+			}
+			buttonType = {
+				name = "TFRKPHN_mnd_btn_mnd"
+				position = { x = 125 y = 76 }
+				spriteType = "GFX_TFRKPHN_mnd_btn_mnd"
+				pdx_tooltip = "TFRKPHN_mnd_mnd_tt"
+				clicksound = click_default
+			}
+			instantTextBoxType = {
+				name = "TFRKPHN_mnd_st_army"
+				position = { x = 8 y = 292 }
+				text = "TFRKPHN_mnd_st_army"
+				font = "hoi_16mbs"
+				format = center
+				maxWidth = 96
+				maxHeight = 34
+				alwaystransparent = yes
+			}
+			instantTextBoxType = {
+				name = "TFRKPHN_mnd_st_navy"
+				position = { x = 106 y = 292 }
+				text = "TFRKPHN_mnd_st_navy"
+				font = "hoi_16mbs"
+				format = center
+				maxWidth = 96
+				maxHeight = 34
+				alwaystransparent = yes
+			}
+			instantTextBoxType = {
+				name = "TFRKPHN_mnd_st_air"
+				position = { x = 204 y = 292 }
+				text = "TFRKPHN_mnd_st_air"
+				font = "hoi_16mbs"
+				format = center
+				maxWidth = 96
+				maxHeight = 34
+				alwaystransparent = yes
+			}
+			instantTextBoxType = {
+				name = "TFRKPHN_mnd_st_marine"
+				position = { x = 302 y = 292 }
+				text = "TFRKPHN_mnd_st_marine"
+				font = "hoi_16mbs"
+				format = center
+				maxWidth = 96
+				maxHeight = 34
+				alwaystransparent = yes
+			}
+			instantTextBoxType = {
+				name = "TFRKPHN_mnd_st_mnd"
+				position = { x = 400 y = 292 }
+				text = "TFRKPHN_mnd_st_mnd"
+				font = "hoi_16mbs"
+				format = center
+				maxWidth = 96
+				maxHeight = 34
+				alwaystransparent = yes
+			}
+		}
+	}
+}

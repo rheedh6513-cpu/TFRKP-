@@ -1,3 +1,5 @@
+﻿# [안내] 양안전쟁 후방 지원 결정.
+# [안내] 수정 방법: 모드 폴더의 TUTORIAL_KO.md 7~9장 참고. 새 이름에는 TFRKPHN_ 접두어를 붙이세요.
 TFRKPHN_hong_rear_category = {
 	# 1. 중국 내 반공 인사 망명 지원
 	TFRKPHN_hong_rear_defectors = {

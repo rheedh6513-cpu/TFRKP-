@@ -1,3 +1,5 @@
+﻿# [안내] 상황에 따라 바뀌는 문구 [이름]. 문구 본문은 localisation 파일.
+# [안내] 수정 방법: 모드 폴더의 TUTORIAL_KO.md 7~9장 참고. 새 이름에는 TFRKPHN_ 접두어를 붙이세요.
 
 
 # ===== 제20대 대선 중점 이름: 홍준표/이낙연 판이면 홍낙 이름, 아니면 원래 이름 =====
@@ -207,4 +209,62 @@ defined_text = {
 	text = { trigger = { NOT = { OR = { AND = { tag = KOR NOT = { has_global_flag = TFRKPHN_kj_path_u_JAP } } AND = { tag = JAP NOT = { has_global_flag = TFRKPHN_kj_path_u_KOR } } } } } localization_key = TFRKPHN_kj_st_other }
 	text = { trigger = { has_global_flag = TFRKPHN_kj_u2_done } localization_key = TFRKPHN_kj_st_u3_ready }
 	text = { localization_key = TFRKPHN_kj_st_lock }
+}
+
+# ===== 국방부 군사 결정 패널 문구 =====
+defined_text = {
+	name = TFRKPHN_mnd_st_army_d
+	text = { trigger = { has_country_flag = TFRKPHN_mnd_army_done } localization_key = TFRKPHN_mnd_st_army_done }
+	text = { localization_key = TFRKPHN_mnd_st_army_off }
+}
+defined_text = {
+	name = TFRKPHN_mnd_army_tt_d
+	text = { trigger = { has_country_flag = TFRKPHN_mnd_army_done } localization_key = TFRKPHN_mnd_army_tt_done }
+	text = { localization_key = TFRKPHN_mnd_army_tt_1 }
+}
+defined_text = {
+	name = TFRKPHN_mnd_st_navy_d
+	text = { trigger = { has_country_flag = TFRKPHN_mnd_navy_done } localization_key = TFRKPHN_mnd_st_navy_done }
+	text = { localization_key = TFRKPHN_mnd_st_navy_off }
+}
+defined_text = {
+	name = TFRKPHN_mnd_navy_tt_d
+	text = { trigger = { has_country_flag = TFRKPHN_mnd_navy_done } localization_key = TFRKPHN_mnd_navy_tt_done }
+	text = { localization_key = TFRKPHN_mnd_navy_tt_1 }
+}
+defined_text = {
+	name = TFRKPHN_mnd_st_marine_d
+	text = { trigger = { has_country_flag = TFRKPHN_mnd_marine_done } localization_key = TFRKPHN_mnd_st_marine_done }
+	text = { localization_key = TFRKPHN_mnd_st_marine_off }
+}
+defined_text = {
+	name = TFRKPHN_mnd_marine_tt_d
+	text = { trigger = { has_country_flag = TFRKPHN_mnd_marine_done } localization_key = TFRKPHN_mnd_marine_tt_done }
+	text = { localization_key = TFRKPHN_mnd_marine_tt_1 }
+}
+defined_text = {
+	name = TFRKPHN_mnd_st_air_d
+	text = { trigger = { has_country_flag = TFRKPHN_mnd_f4_done } localization_key = TFRKPHN_mnd_st_air_done }
+	text = { trigger = { has_country_flag = TFRKPHN_mnd_fa50_done } localization_key = TFRKPHN_mnd_st_air_2 }
+	text = { localization_key = TFRKPHN_mnd_st_air_1 }
+}
+defined_text = {
+	name = TFRKPHN_mnd_air_tt_d
+	text = { trigger = { has_country_flag = TFRKPHN_mnd_f4_done } localization_key = TFRKPHN_mnd_air_tt_done }
+	text = { trigger = { has_country_flag = TFRKPHN_mnd_fa50_done } localization_key = TFRKPHN_mnd_air_tt_2 }
+	text = { localization_key = TFRKPHN_mnd_air_tt_1 }
+}
+defined_text = {
+	name = TFRKPHN_mnd_st_mnd_d
+	text = { trigger = { has_country_flag = TFRKPHN_mnd_space_done } localization_key = TFRKPHN_mnd_st_mnd_done }
+	text = { trigger = { has_country_flag = TFRKPHN_mnd_army_done has_country_flag = TFRKPHN_mnd_navy_done has_country_flag = TFRKPHN_mnd_fa50_done has_country_flag = TFRKPHN_mnd_f4_done has_country_flag = TFRKPHN_mnd_marine_done } localization_key = TFRKPHN_mnd_st_mnd_space }
+	text = { trigger = { has_country_flag = TFRKPHN_mnd_factory_done } localization_key = TFRKPHN_mnd_st_mnd_wait }
+	text = { localization_key = TFRKPHN_mnd_st_mnd_off }
+}
+defined_text = {
+	name = TFRKPHN_mnd_mnd_tt_d
+	text = { trigger = { has_country_flag = TFRKPHN_mnd_space_done } localization_key = TFRKPHN_mnd_mnd_tt_done }
+	text = { trigger = { has_country_flag = TFRKPHN_mnd_army_done has_country_flag = TFRKPHN_mnd_navy_done has_country_flag = TFRKPHN_mnd_fa50_done has_country_flag = TFRKPHN_mnd_f4_done has_country_flag = TFRKPHN_mnd_marine_done } localization_key = TFRKPHN_mnd_mnd_tt_space }
+	text = { trigger = { has_country_flag = TFRKPHN_mnd_factory_done } localization_key = TFRKPHN_mnd_mnd_tt_wait }
+	text = { localization_key = TFRKPHN_mnd_mnd_tt_factory }
 }

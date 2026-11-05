@@ -1,4 +1,5 @@
 ﻿l_korean:
+ # [안내] 원본 TFR 문구를 덮어쓰는 곳. 원본과 같은 키를 넣으면 이쪽이 이깁니다.
  korea.115.a:0 "[TFRKP_HN_115a]"
  korea.115.b:0 "[TFRKP_HN_115b]"
  KOR_sided_with_yoon_tooltip:0 "[TFRKP_HN_115a_tt]"

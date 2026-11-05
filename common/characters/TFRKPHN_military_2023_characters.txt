@@ -1,0 +1,117 @@
+﻿# [안내] 박안수, 이진우, 여인형은 원본 TFR 인물(KOR_park_an_soo_char 등)을 그대로 씁니다(포트레잇 포함).
+# [안내] 육군 장성은 모두 군단장으로 시작하고, 신규 육군참모총장으로 뽑힌 사람만 원수가 됩니다.
+# [안내] 2023년 10월 대장 인사(2023.10.30 등장)와 11월 중장 인사(2023.11.6 등장), 홍준표 정부. 포트레잇은 gfx/leaders/KOR/TFRKPHN_이름.png (156x210).
+# [안내] 수정 방법: 모드 폴더의 TUTORIAL_KO.md 7~9장 참고. 새 이름에는 TFRKPHN_ 접두어를 붙이세요.
+characters = {
+	# 김명수 (합참의장, 해사 43기, 전 해군작전사령관)
+	KOR_TFRKPHN_kim_myung_soo = {
+		name = KOR_TFRKPHN_kim_myung_soo
+		portraits = { army = { large = GFX_portrait_TFRKPHN_kim_myung_soo small = GFX_portrait_TFRKPHN_kim_myung_soo } }
+		navy_leader = { traits = { } skill = 4 attack_skill = 3 defense_skill = 4 maneuvering_skill = 3 coordination_skill = 4 legacy_id = -1 }
+		advisor = {
+			slot = high_command
+			idea_token = TFRKPHN_kim_myung_soo_high_command
+			allowed = { original_tag = KOR }
+			cost = 100
+			traits = { navy_capital_ship_2 }
+			ai_will_do = { factor = 1 }
+		}
+	}
+	# 양용모 (해군참모총장, 해사 44기, 전 합참 군사지원본부장)
+	KOR_TFRKPHN_yang_yong_mo = {
+		name = KOR_TFRKPHN_yang_yong_mo
+		portraits = { army = { large = GFX_portrait_TFRKPHN_yang_yong_mo small = GFX_portrait_TFRKPHN_yang_yong_mo } }
+		navy_leader = { traits = { } skill = 4 attack_skill = 3 defense_skill = 4 maneuvering_skill = 3 coordination_skill = 4 legacy_id = -1 }
+		advisor = {
+			slot = navy_chief
+			idea_token = TFRKPHN_yang_yong_mo_navy_chief
+			allowed = { original_tag = KOR }
+			cost = 100
+			traits = { navy_chief_decisive_battle_2 }
+			ai_will_do = { factor = 1 }
+		}
+	}
+	# 이영수 (공군참모총장, 공사 38기, 전 합참 전략기획본부장)
+	KOR_TFRKPHN_lee_young_soo = {
+		name = KOR_TFRKPHN_lee_young_soo
+		portraits = { army = { large = GFX_portrait_TFRKPHN_lee_young_soo small = GFX_portrait_TFRKPHN_lee_young_soo } }
+		advisor = {
+			slot = air_chief
+			idea_token = TFRKPHN_lee_young_soo_air_chief
+			allowed = { original_tag = KOR }
+			cost = 100
+			traits = { air_chief_ground_support_2 }
+			ai_will_do = { factor = 1 }
+		}
+	}
+	# 강신철 (한미연합사 부사령관, 육사 46기, 전 합참 작전본부장)
+	KOR_TFRKPHN_kang_sin_chul = {
+		name = KOR_TFRKPHN_kang_sin_chul
+		portraits = { army = { large = GFX_portrait_TFRKPHN_kang_sin_chul small = GFX_portrait_TFRKPHN_kang_sin_chul } }
+		corps_commander = { traits = { } skill = 4 attack_skill = 3 defense_skill = 4 planning_skill = 4 logistics_skill = 3 legacy_id = -1 }
+	}
+	# 손식 (지상작전사령관, 육사 47기, 전 특수전사령관)
+	KOR_TFRKPHN_son_sik = {
+		name = KOR_TFRKPHN_son_sik
+		portraits = { army = { large = GFX_portrait_TFRKPHN_son_sik small = GFX_portrait_TFRKPHN_son_sik } }
+		corps_commander = { traits = { } skill = 4 attack_skill = 3 defense_skill = 4 planning_skill = 4 logistics_skill = 3 legacy_id = -1 }
+	}
+	# 고창준 (육군 제2작전사령관, 3사 26기, 전 수도군단장)
+	KOR_TFRKPHN_ko_chang_jun = {
+		name = KOR_TFRKPHN_ko_chang_jun
+		portraits = { army = { large = GFX_portrait_TFRKPHN_ko_chang_jun small = GFX_portrait_TFRKPHN_ko_chang_jun } }
+		corps_commander = { traits = { } skill = 4 attack_skill = 3 defense_skill = 4 planning_skill = 4 logistics_skill = 3 legacy_id = -1 }
+	}
+
+	# ===== 2023년 11월 중장급 인사 =====
+	# 황유성 (합동참모차장, 육사 46기)
+	KOR_TFRKPHN_hwang_you_sung = {
+		name = KOR_TFRKPHN_hwang_you_sung
+		portraits = { army = { large = GFX_portrait_TFRKPHN_hwang_you_sung small = GFX_portrait_TFRKPHN_hwang_you_sung } }
+		corps_commander = { traits = { } skill = 3 attack_skill = 3 defense_skill = 3 planning_skill = 3 logistics_skill = 3 legacy_id = -1 }
+	}
+	# 강동길 (해군참모차장, 해사 46기)
+	KOR_TFRKPHN_kang_dong_gil = {
+		name = KOR_TFRKPHN_kang_dong_gil
+		portraits = { army = { large = GFX_portrait_TFRKPHN_kang_dong_gil small = GFX_portrait_TFRKPHN_kang_dong_gil } }
+		navy_leader = { traits = { } skill = 3 attack_skill = 3 defense_skill = 3 maneuvering_skill = 3 coordination_skill = 3 legacy_id = -1 }
+	}
+	# 손석락 (공군참모차장, 공사 40기)
+	KOR_TFRKPHN_son_sug_rag = {
+		name = KOR_TFRKPHN_son_sug_rag
+		portraits = { army = { large = GFX_portrait_TFRKPHN_son_sug_rag small = GFX_portrait_TFRKPHN_son_sug_rag } }
+		advisor = {
+			slot = air_chief
+			idea_token = TFRKPHN_son_sug_rag_air_chief
+			allowed = { original_tag = KOR }
+			cost = 100
+			traits = { air_chief_safety_2 }
+			ai_will_do = { factor = 1 }
+		}
+	}
+	# 곽종근 (특수전사령관, 육사 47기)
+	KOR_TFRKPHN_kwak_jong_keun = {
+		name = KOR_TFRKPHN_kwak_jong_keun
+		portraits = { army = { large = GFX_portrait_TFRKPHN_kwak_jong_keun small = GFX_portrait_TFRKPHN_kwak_jong_keun } }
+		corps_commander = { traits = { } skill = 3 attack_skill = 3 defense_skill = 3 planning_skill = 3 logistics_skill = 3 legacy_id = -1 }
+	}
+	# 최성혁 (해군작전사령관, 해사 46기)
+	KOR_TFRKPHN_choi_sung_hyeok = {
+		name = KOR_TFRKPHN_choi_sung_hyeok
+		portraits = { army = { large = GFX_portrait_TFRKPHN_choi_sung_hyeok small = GFX_portrait_TFRKPHN_choi_sung_hyeok } }
+		navy_leader = { traits = { } skill = 3 attack_skill = 3 defense_skill = 3 maneuvering_skill = 3 coordination_skill = 3 legacy_id = -1 }
+	}
+	# 김형수 (공군작전사령관, 공사 39기)
+	KOR_TFRKPHN_kim_hyoung_soo = {
+		name = KOR_TFRKPHN_kim_hyoung_soo
+		portraits = { army = { large = GFX_portrait_TFRKPHN_kim_hyoung_soo small = GFX_portrait_TFRKPHN_kim_hyoung_soo } }
+		advisor = {
+			slot = high_command
+			idea_token = TFRKPHN_kim_hyoung_soo_high_command
+			allowed = { original_tag = KOR }
+			cost = 100
+			traits = { air_air_superiority_2 }
+			ai_will_do = { factor = 1 }
+		}
+	}
+}

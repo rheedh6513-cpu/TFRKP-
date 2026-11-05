@@ -1,3 +1,5 @@
+﻿# [안내] 홍준표 중점 트리. 위치는 x/y와 relative_position_id, 이름과 설명은 localisation/korean/TFRKP_HN_hong_focus_l_korean.yml. 자세한 방법은 TUTORIAL_KO.md 참고.
+# [안내] 수정 방법: 모드 폴더의 TUTORIAL_KO.md 7~9장 참고. 새 이름에는 TFRKPHN_ 접두어를 붙이세요.
 focus_tree = {
 	id = TFRKPHN_hong_tree
 
@@ -46,7 +48,7 @@ focus_tree = {
 	focus = {
 		id = TFRKPHN_hong_b01_03
 		icon = GFX_goal_generic_political_pressure
-		x = 4
+		x = 3
 		y = 2
 		cost = 5
 		prerequisite = { focus = TFRKPHN_hong_b01_02 }
@@ -72,7 +74,7 @@ focus_tree = {
 	focus = {
 		id = TFRKPHN_hong_b01_05
 		icon = GFX_goal_generic_political_pressure
-		x = 8
+		x = 9
 		y = 2
 		cost = 5
 		prerequisite = { focus = TFRKPHN_hong_b01_02 }
@@ -85,7 +87,7 @@ focus_tree = {
 	focus = {
 		id = TFRKPHN_hong_b01_06
 		icon = GFX_goal_generic_political_pressure
-		x = 3
+		x = 2
 		y = 3
 		cost = 5
 		prerequisite = { focus = TFRKPHN_hong_b01_03 }
@@ -99,8 +101,8 @@ focus_tree = {
 	focus = {
 		id = TFRKPHN_hong_b01_07
 		icon = GFX_goal_generic_political_pressure
-		x = 5
-		y = 3
+		x = 4
+		y = 4
 		cost = 5
 		prerequisite = { focus = TFRKPHN_hong_b01_03 }
 		prerequisite = { focus = TFRKPHN_hong_b01_04 }
@@ -128,7 +130,7 @@ focus_tree = {
 		id = TFRKPHN_hong_b01_09
 		icon = GFX_goal_generic_political_pressure
 		x = 9
-		y = 3
+		y = 4
 		cost = 5
 		prerequisite = { focus = TFRKPHN_hong_b01_05 }
 		prerequisite = { focus = TFRKPHN_hong_b01_04 }
@@ -141,8 +143,8 @@ focus_tree = {
 	focus = {
 		id = TFRKPHN_hong_b01_10
 		icon = GFX_goal_generic_political_pressure
-		x = 4
-		y = 4
+		x = 3
+		y = 5
 		cost = 5
 		prerequisite = { focus = TFRKPHN_hong_b01_06 focus = TFRKPHN_hong_b01_07 focus = TFRKPHN_hong_b01_08 focus = TFRKPHN_hong_b01_09 }
 		ai_will_do = { factor = 1 }
@@ -155,7 +157,7 @@ focus_tree = {
 		id = TFRKPHN_hong_b01_11
 		icon = GFX_goal_generic_political_pressure
 		x = 8
-		y = 4
+		y = 5
 		cost = 5
 		prerequisite = { focus = TFRKPHN_hong_b01_06 focus = TFRKPHN_hong_b01_07 focus = TFRKPHN_hong_b01_08 focus = TFRKPHN_hong_b01_09 }
 		ai_will_do = { factor = 1 }
@@ -177,7 +179,7 @@ focus_tree = {
 			}
 		}
 		x = 6
-		y = 5
+		y = 6
 		cost = 5
 		prerequisite = { focus = TFRKPHN_hong_b01_10 focus = TFRKPHN_hong_b01_11 }
 		ai_will_do = { factor = 1 }
@@ -245,7 +247,7 @@ focus_tree = {
 		mutually_exclusive = { focus = TFRKPHN_hong_b02_02 }
 		available = { has_country_flag = TFRKPHN_hong_tw_bill_rejected }
 		cost = 2
-		x = 2
+		x = 3
 		y = 1
 		ai_will_do = { factor = 1 }
 		completion_reward = {
@@ -299,7 +301,7 @@ focus_tree = {
 		relative_position_id = TFRKPHN_hong_b02_03
 		prerequisite = { focus = TFRKPHN_hong_b02_03 }
 		cost = 5
-		x = 0
+		x = -1
 		y = 1
 		ai_will_do = { factor = 1 }
 		completion_reward = {
@@ -318,7 +320,7 @@ focus_tree = {
 		relative_position_id = TFRKPHN_hong_b02_03
 		prerequisite = { focus = TFRKPHN_hong_b02_03 }
 		cost = 5
-		x = 2
+		x = 1
 		y = 1
 		ai_will_do = { factor = 1 }
 		completion_reward = {
@@ -362,7 +364,7 @@ focus_tree = {
 		relative_position_id = TFRKPHN_hong_b02_05
 		prerequisite = { focus = TFRKPHN_hong_b02_05 }
 		cost = 5
-		x = 0
+		x = 1
 		y = 1
 		ai_will_do = { factor = 1 }
 		completion_reward = {
@@ -400,7 +402,7 @@ focus_tree = {
 		prerequisite = { focus = TFRKPHN_hong_b02_07 }
 		cost = 5
 		x = 0
-		y = 1
+		y = 2
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			country_event = tfrkphn.40
@@ -425,7 +427,7 @@ focus_tree = {
 		prerequisite = { focus = TFRKPHN_hong_b02_09 }
 		cost = 5
 		x = 1
-		y = 1
+		y = 2
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			country_event = tfrkphn.35
@@ -442,7 +444,7 @@ focus_tree = {
 		prerequisite = { focus = TFRKPHN_hong_b02_11 }
 		cost = 5
 		x = 1
-		y = 1
+		y = 2
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			country_event = tfrkphn.41
@@ -469,7 +471,7 @@ focus_tree = {
 		}
 		relative_position_id = TFRKPHN_hong_b01_01
 		cost = 2
-		x = 22
+		x = 23
 		y = 0
 		ai_will_do = { factor = 1 }
 		completion_reward = {
@@ -546,7 +548,7 @@ focus_tree = {
 		relative_position_id = TFRKPHN_hong_b03_03
 		prerequisite = { focus = TFRKPHN_hong_b03_03 }
 		cost = 5
-		x = 1
+		x = 2
 		y = 1
 		ai_will_do = { factor = 1 }
 		completion_reward = {
@@ -594,7 +596,7 @@ focus_tree = {
 		prerequisite = { focus = TFRKPHN_hong_b03_05 }
 		cost = 5
 		x = 0
-		y = 1
+		y = 2
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			custom_effect_tooltip = TFRKPHN_sp_jin_07_tt
@@ -618,7 +620,7 @@ focus_tree = {
 		prerequisite = { focus = TFRKPHN_hong_b03_07 }
 		cost = 5
 		x = 1
-		y = 1
+		y = 2
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			custom_effect_tooltip = TFRKPHN_sp_jin_08_tt
@@ -687,6 +689,8 @@ focus_tree = {
 			country_event = tfrkphn.60
 			set_temp_variable = { military_development_var_temp = 0.1 }
 			add_military_development = yes
+			unlock_decision_tooltip = TFRKPHN_mnd_armpeace_arms
+			unlock_decision_tooltip = TFRKPHN_mnd_armpeace_dock
 		}
 	}
 
@@ -702,6 +706,10 @@ focus_tree = {
 		completion_reward = {
 			country_event = tfrkphn.61
 			army_experience = 50
+			# 여성 복무 법을 '전투에서의 평등'(higher_female_service)으로
+			if = { limit = { has_idea = KOR_only_male_service } remove_ideas = KOR_only_male_service }
+			if = { limit = { has_idea = medium_female_service } remove_ideas = medium_female_service }
+			if = { limit = { NOT = { has_idea = higher_female_service } } add_ideas = higher_female_service }
 		}
 	}
 
@@ -711,12 +719,28 @@ focus_tree = {
 		relative_position_id = TFRKPHN_hong_b03_11
 		prerequisite = { focus = TFRKPHN_hong_b03_11 }
 		cost = 5
-		x = 0
+		x = -1
 		y = 1
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			country_event = tfrkphn.62
 			air_experience = 50
+			# 킬체인: 레이더 (수도 +3, 본토 3개 주 +2)
+			capital_scope = { add_building_construction = { type = radar_station level = 3 instant_build = yes } }
+			every_owned_state = {
+				limit = { is_core_of = ROOT NOT = { is_capital = yes } }
+				random_select_amount = 3
+				add_building_construction = { type = radar_station level = 2 instant_build = yes }
+			}
+			# 한국형 미사일 방어: 건설 방공 (수도 +3, 본토 5개 주 +2)
+			capital_scope = { add_building_construction = { type = anti_air_building level = 3 instant_build = yes } }
+			every_owned_state = {
+				limit = { is_core_of = ROOT NOT = { is_capital = yes } }
+				random_select_amount = 5
+				add_building_construction = { type = anti_air_building level = 2 instant_build = yes }
+			}
+			# 방공 버프 + 대량응징보복(현무 양산) 군사 버프
+			add_dynamic_modifier = { modifier = TFRKPHN_3axis }
 		}
 	}
 
@@ -727,7 +751,7 @@ focus_tree = {
 		prerequisite = { focus = TFRKPHN_hong_b03_12 }
 		cost = 5
 		x = 0
-		y = 1
+		y = 2
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			country_event = tfrkphn.63
@@ -748,8 +772,8 @@ focus_tree = {
 		prerequisite = { focus = TFRKPHN_hong_b03_13 }
 		prerequisite = { focus = TFRKPHN_hong_b03_14 }
 		cost = 5
-		x = 1
-		y = 1
+		x = 2
+		y = 2
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			country_event = tfrkphn.64
@@ -773,6 +797,8 @@ focus_tree = {
 		completion_reward = {
 			country_event = tfrkphn.65
 			add_ideas = TFRKPHN_postwar_defense
+			set_country_flag = KOR_foreign_office_active
+			unlock_decision_category_tooltip = KOR_foreign_office_category
 		}
 	}
 
@@ -803,6 +829,15 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			country_event = tfrkphn.67
+			# PDTO 협력 이니셔티브 탭 열기 (원본 탭, 아직 안 열렸을 때만)
+			if = {
+				limit = { NOT = { has_country_flag = KOR_pdto_cooperation_initiative_flag } }
+				set_variable = { KOR_pdto_coin_var = 1 }
+				set_variable = { KOR_pdto_cohesion_var = 30 }
+				activate_mission = KOR_pdto_coin_generation_mission
+				set_country_flag = KOR_pdto_cooperation_initiative_flag
+			}
+			unlock_decision_category_tooltip = KOR_pdto_cooperation_initiative_category
 			if = {
 				limit = { country_exists = JAP }
 				add_opinion_modifier = { target = JAP modifier = TFRKPHN_postwar_friend }
@@ -866,7 +901,7 @@ focus_tree = {
 		relative_position_id = TFRKPHN_hong_b03_17
 		prerequisite = { focus = TFRKPHN_hong_b03_17 }
 		cost = 5
-		x = 1
+		x = 2
 		y = 1
 		ai_will_do = { factor = 1 }
 		completion_reward = {
@@ -906,7 +941,7 @@ focus_tree = {
 		prerequisite = { focus = TFRKPHN_hong_b03_19 }
 		cost = 5
 		x = 0
-		y = 1
+		y = 2
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			country_event = tfrkphn.70
@@ -928,7 +963,7 @@ focus_tree = {
 		prerequisite = { focus = TFRKPHN_hong_b03_21 }
 		cost = 5
 		x = 1
-		y = 1
+		y = 2
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			country_event = tfrkphn.71
@@ -986,7 +1021,7 @@ focus_tree = {
 		relative_position_id = TFRKPHN_hong_b03_22
 		prerequisite = { focus = TFRKPHN_hong_b03_22 }
 		cost = 5
-		x = 0
+		x = 1
 		y = 1
 		ai_will_do = { factor = 1 }
 		completion_reward = {
@@ -1003,7 +1038,7 @@ focus_tree = {
 		relative_position_id = TFRKPHN_hong_b03_02
 		prerequisite = { focus = TFRKPHN_hong_b03_02 }
 		cost = 5
-		x = 8
+		x = 9
 		y = 1
 		ai_will_do = { factor = 1 }
 		completion_reward = {
@@ -1037,7 +1072,7 @@ focus_tree = {
 		prerequisite = { focus = TFRKPHN_hong_b03_26 }
 		cost = 5
 		x = 1
-		y = 1
+		y = 2
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			country_event = tfrkphn.122
@@ -1054,7 +1089,7 @@ focus_tree = {
 		relative_position_id = TFRKPHN_hong_b03_27
 		prerequisite = { focus = TFRKPHN_hong_b03_27 }
 		cost = 5
-		x = 0
+		x = -1
 		y = 1
 		ai_will_do = { factor = 1 }
 		completion_reward = {
@@ -1088,8 +1123,8 @@ focus_tree = {
 		prerequisite = { focus = TFRKPHN_hong_b03_29 }
 		prerequisite = { focus = TFRKPHN_hong_b03_30 }
 		cost = 5
-		x = 1
-		y = 1
+		x = 2
+		y = 2
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			country_event = tfrkphn.125
@@ -1119,7 +1154,7 @@ focus_tree = {
 		relative_position_id = TFRKPHN_hong_b03_09
 		prerequisite = { focus = TFRKPHN_hong_b03_09 }
 		cost = 5
-		x = -1
+		x = -2
 		y = 1
 		ai_will_do = { factor = 1 }
 		completion_reward = {
@@ -1166,7 +1201,7 @@ focus_tree = {
 		prerequisite = { focus = TFRKPHN_hong_b03_33 }
 		prerequisite = { focus = TFRKPHN_hong_b03_34 }
 		cost = 5
-		x = 1
+		x = 2
 		y = 1
 		ai_will_do = { factor = 1 }
 		completion_reward = {
@@ -1188,9 +1223,9 @@ focus_tree = {
 		y = 1
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			add_research_slot = 1
 			country_event = tfrkphn.203
-			set_temp_variable = { military_development_var_temp = 0.1 }
-			add_military_development = yes
+			add_dynamic_modifier = { modifier = TFRKPHN_add_research }
 		}
 	}
 
@@ -1221,12 +1256,30 @@ focus_tree = {
 		y = 1
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			# 대한민국의 우주개발 (원본 KARI 탭) 해금
+			set_country_flag = KOR_kari_enable_flag
+			set_country_flag = KOR_space_age
+			if = { limit = { NOT = { has_variable = KOR_kari_academic_capacity_var } } set_variable = { KOR_kari_academic_capacity_var = 0 } }
+			hidden_effect = {
+				if = {
+					limit = { NOT = { has_dynamic_modifier = { modifier = KOR_space_age_dynamic } } }
+					add_dynamic_modifier = { modifier = KOR_space_age_dynamic }
+				}
+			}
+			unlock_decision_category_tooltip = KOR_kari_category
 			country_event = tfrkphn.205
-			navy_experience = 50
-			add_equipment_to_stockpile = { type = convoy_1 amount = 50 producer = KOR }
-			add_stability = 0.03
-			add_war_support = 0.05
-			add_political_power = 100
+			# 현무-5 공개: 대량응징보복 억지력 과시
+			add_named_threat = { threat = 2 name = TFRKPHN_hyunmoo5_threat }
+			add_war_support = 0.03
+			# 현무-6 개발: 로켓 연구 보너스
+			add_tech_bonus = { name = TFRKPHN_hyunmoo6_bonus bonus = 1.0 uses = 2 category = rocketry }
+			# 한국형 미사일방어(L-SAM) 도입: 레이더 연구 보너스
+			add_tech_bonus = { name = TFRKPHN_lsam_bonus bonus = 1.0 uses = 2 category = radar_tech }
+			# 5군 체제 정비
+			add_dynamic_modifier = { modifier = TFRKPHN_3axis5 }
+			army_experience = 25
+			navy_experience = 25
+			air_experience = 25
 		}
 	}
 
@@ -1236,7 +1289,7 @@ focus_tree = {
 		relative_position_id = TFRKPHN_hong_b03_23
 		prerequisite = { focus = TFRKPHN_hong_b03_23 }
 		cost = 5
-		x = -1
+		x = -2
 		y = 1
 		ai_will_do = { factor = 1 }
 		completion_reward = {
@@ -1324,7 +1377,7 @@ focus_tree = {
 		relative_position_id = TFRKPHN_hong_b03_32
 		prerequisite = { focus = TFRKPHN_hong_b03_32 }
 		cost = 5
-		x = 1
+		x = 2
 		y = 1
 		ai_will_do = { factor = 1 }
 		completion_reward = {
@@ -1363,7 +1416,7 @@ focus_tree = {
 		prerequisite = { focus = TFRKPHN_hong_b03_44 }
 		cost = 5
 		x = 0
-		y = 8
+		y = 9
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			country_event = tfrkphn.73

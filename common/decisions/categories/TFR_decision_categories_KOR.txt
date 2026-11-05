@@ -1,4 +1,4 @@
-########################################
+﻿########################################
 ## Category priority Guide
 ## 100 = TFR Debug decisions
 ## 99 = National Assembly of Korea
@@ -322,10 +322,16 @@ KOR_foreign_office_category = {
 		original_tag = KOR
 	}
 	visible = {
-		has_country_flag = KOR_foreign_office_active
-		has_country_leader = {
-			character = KOR_moon_jae_in_char
-			ruling_only = yes
+		OR = {
+			AND = {
+				has_country_flag = KOR_foreign_office_active
+				has_country_leader = {
+					character = KOR_moon_jae_in_char
+					ruling_only = yes
+				}
+			}
+			# TFRKP Hong Nak: 홍준표 'EADI 대응' 중점을 마치면 신남방정책(외교부) 탭이 다시 열림
+			has_completed_focus = TFRKPHN_hong_b03_16
 		}
 	}
 	visible_when_empty = yes

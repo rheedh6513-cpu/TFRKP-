@@ -1,0 +1,373 @@
+﻿# [안내] 국방부 임명식 이벤트 (국방부 결정의 임명식 버튼을 누르면 뜸). 그림은 gfx/event_pictures/TFRKPHN_appoint/.
+# [안내] 수정 방법: 모드 폴더의 TUTORIAL_KO.md 7~9장 참고. 새 이름에는 TFRKPHN_ 접두어를 붙이세요.
+add_namespace = tfrkphn
+
+# 박안수 육군참모총장 임명식
+country_event = {
+	id = tfrkphn.401
+	title = tfrkphn.401.t
+	desc = tfrkphn.401.desc
+	picture = GFX_TFRKPHN_appoint_park_an_su
+	is_triggered_only = yes
+
+	option = {
+		name = tfrkphn.401.a
+	}
+}
+
+# 강신철 한미연합군사령부 부사령관 임명식
+country_event = {
+	id = tfrkphn.402
+	title = tfrkphn.402.t
+	desc = tfrkphn.402.desc
+	picture = GFX_TFRKPHN_appoint_kang_sin_chul
+	is_triggered_only = yes
+
+	option = {
+		name = tfrkphn.402.a
+	}
+}
+
+# 손식 지상작전사령관 임명식
+country_event = {
+	id = tfrkphn.403
+	title = tfrkphn.403.t
+	desc = tfrkphn.403.desc
+	picture = GFX_TFRKPHN_appoint_son_sik
+	is_triggered_only = yes
+
+	option = {
+		name = tfrkphn.403.a
+	}
+}
+
+# 고창준 육군 제2작전사령관 임명식
+country_event = {
+	id = tfrkphn.404
+	title = tfrkphn.404.t
+	desc = tfrkphn.404.desc
+	picture = GFX_TFRKPHN_appoint_ko_chang_jun
+	is_triggered_only = yes
+
+	option = {
+		name = tfrkphn.404.a
+	}
+}
+
+# 황유성 합동참모차장 임명식
+country_event = {
+	id = tfrkphn.405
+	title = tfrkphn.405.t
+	desc = tfrkphn.405.desc
+	picture = GFX_TFRKPHN_appoint_hwang_you_sung
+	is_triggered_only = yes
+
+	option = {
+		name = tfrkphn.405.a
+	}
+}
+
+# 여인형 국군방첩사령관 임명식
+country_event = {
+	id = tfrkphn.406
+	title = tfrkphn.406.t
+	desc = tfrkphn.406.desc
+	picture = GFX_TFRKPHN_appoint_yeo_in_hyeong
+	is_triggered_only = yes
+
+	option = {
+		name = tfrkphn.406.a
+	}
+}
+
+# 이진우 수도방위사령관 임명식
+country_event = {
+	id = tfrkphn.407
+	title = tfrkphn.407.t
+	desc = tfrkphn.407.desc
+	picture = GFX_TFRKPHN_appoint_lee_jin_woo
+	is_triggered_only = yes
+
+	option = {
+		name = tfrkphn.407.a
+	}
+}
+
+# 곽종근 특수전사령관 임명식
+country_event = {
+	id = tfrkphn.408
+	title = tfrkphn.408.t
+	desc = tfrkphn.408.desc
+	picture = GFX_TFRKPHN_appoint_kwak_jong_keun
+	is_triggered_only = yes
+
+	option = {
+		name = tfrkphn.408.a
+	}
+}
+
+# 김명수 합동참모의장 임명식
+country_event = {
+	id = tfrkphn.409
+	title = tfrkphn.409.t
+	desc = tfrkphn.409.desc
+	picture = GFX_TFRKPHN_appoint_kim_myung_soo
+	is_triggered_only = yes
+
+	option = {
+		name = tfrkphn.409.a
+	}
+}
+
+# 양용모 해군참모총장 임명식
+country_event = {
+	id = tfrkphn.410
+	title = tfrkphn.410.t
+	desc = tfrkphn.410.desc
+	picture = GFX_TFRKPHN_appoint_yang_yong_mo
+	is_triggered_only = yes
+
+	option = {
+		name = tfrkphn.410.a
+	}
+}
+
+# 강동길 해군참모차장 임명식
+country_event = {
+	id = tfrkphn.411
+	title = tfrkphn.411.t
+	desc = tfrkphn.411.desc
+	picture = GFX_TFRKPHN_appoint_kang_dong_gil
+	is_triggered_only = yes
+
+	option = {
+		name = tfrkphn.411.a
+	}
+}
+
+# 최성혁 해군작전사령관 임명식
+country_event = {
+	id = tfrkphn.412
+	title = tfrkphn.412.t
+	desc = tfrkphn.412.desc
+	picture = GFX_TFRKPHN_appoint_choi_sung_hyeok
+	is_triggered_only = yes
+
+	option = {
+		name = tfrkphn.412.a
+	}
+}
+
+# 이영수 공군참모총장 임명식
+country_event = {
+	id = tfrkphn.413
+	title = tfrkphn.413.t
+	desc = tfrkphn.413.desc
+	picture = GFX_TFRKPHN_appoint_lee_young_soo
+	is_triggered_only = yes
+
+	option = {
+		name = tfrkphn.413.a
+	}
+}
+
+# 손석락 공군참모차장 임명식
+country_event = {
+	id = tfrkphn.414
+	title = tfrkphn.414.t
+	desc = tfrkphn.414.desc
+	picture = GFX_TFRKPHN_appoint_son_sug_rag
+	is_triggered_only = yes
+
+	option = {
+		name = tfrkphn.414.a
+	}
+}
+
+# 김형수 공군작전사령관 임명식
+country_event = {
+	id = tfrkphn.415
+	title = tfrkphn.415.t
+	desc = tfrkphn.415.desc
+	picture = GFX_TFRKPHN_appoint_kim_hyoung_soo
+	is_triggered_only = yes
+
+	option = {
+		name = tfrkphn.415.a
+	}
+}
+
+# ===== 신규 참모총장 임명 (삼정검 수치 수여): 후보 중 한 명을 고르면 그 사람이 참모총장이 된다 =====
+
+# 신규 육군참모총장 임명
+country_event = {
+	id = tfrkphn.421
+	title = tfrkphn.421.t
+	desc = tfrkphn.421.desc
+	picture = GFX_TFRKPHN_rok_armed_forces
+	is_triggered_only = yes
+
+	option = {
+		name = tfrkphn.421.a
+		if = { limit = { NOT = { has_character = KOR_park_an_soo_char } } recruit_character = KOR_park_an_soo_char }
+		KOR_park_an_soo_char = {
+			add_advisor_role = { advisor = { slot = army_chief idea_token = TFRKPHN_park_an_su_new_army_chief cost = 0 allowed = { original_tag = KOR } traits = { army_chief_defensive_2 } } activate = yes }
+			if = { limit = { is_corps_commander = yes } promote_leader = yes }
+			else_if = { limit = { NOT = { is_field_marshal = yes } } add_field_marshal_role = { traits = { } skill = 4 attack_skill = 3 defense_skill = 4 planning_skill = 4 logistics_skill = 3 } }
+			add_skill_level = 1
+		}
+		custom_effect_tooltip = tfrkphn.421.a_tt
+		ai_chance = { base = 10 }
+	}
+
+	option = {
+		name = tfrkphn.421.b
+		if = { limit = { NOT = { has_character = KOR_TFRKPHN_kang_sin_chul } } recruit_character = KOR_TFRKPHN_kang_sin_chul }
+		KOR_TFRKPHN_kang_sin_chul = {
+			if = { limit = { is_corps_commander = yes } promote_leader = yes }
+			else_if = { limit = { NOT = { is_field_marshal = yes } } add_field_marshal_role = { traits = { } skill = 4 attack_skill = 3 defense_skill = 4 planning_skill = 4 logistics_skill = 3 } }
+			add_skill_level = 1
+			add_advisor_role = { advisor = { slot = army_chief idea_token = TFRKPHN_kang_sin_chul_new_army_chief cost = 0 allowed = { original_tag = KOR } traits = { army_chief_defensive_2 } } activate = yes }
+		}
+		custom_effect_tooltip = tfrkphn.421.b_tt
+		ai_chance = { base = 5 }
+	}
+
+	option = {
+		name = tfrkphn.421.c
+		if = { limit = { NOT = { has_character = KOR_TFRKPHN_son_sik } } recruit_character = KOR_TFRKPHN_son_sik }
+		KOR_TFRKPHN_son_sik = {
+			if = { limit = { is_corps_commander = yes } promote_leader = yes }
+			else_if = { limit = { NOT = { is_field_marshal = yes } } add_field_marshal_role = { traits = { } skill = 4 attack_skill = 3 defense_skill = 4 planning_skill = 4 logistics_skill = 3 } }
+			add_skill_level = 1
+			add_advisor_role = { advisor = { slot = army_chief idea_token = TFRKPHN_son_sik_new_army_chief cost = 0 allowed = { original_tag = KOR } traits = { army_chief_defensive_2 } } activate = yes }
+		}
+		custom_effect_tooltip = tfrkphn.421.c_tt
+		ai_chance = { base = 5 }
+	}
+
+	option = {
+		name = tfrkphn.421.d
+		if = { limit = { NOT = { has_character = KOR_TFRKPHN_ko_chang_jun } } recruit_character = KOR_TFRKPHN_ko_chang_jun }
+		KOR_TFRKPHN_ko_chang_jun = {
+			if = { limit = { is_corps_commander = yes } promote_leader = yes }
+			else_if = { limit = { NOT = { is_field_marshal = yes } } add_field_marshal_role = { traits = { } skill = 4 attack_skill = 3 defense_skill = 4 planning_skill = 4 logistics_skill = 3 } }
+			add_skill_level = 1
+			add_advisor_role = { advisor = { slot = army_chief idea_token = TFRKPHN_ko_chang_jun_new_army_chief cost = 0 allowed = { original_tag = KOR } traits = { army_chief_defensive_2 } } activate = yes }
+		}
+		custom_effect_tooltip = tfrkphn.421.d_tt
+		ai_chance = { base = 5 }
+	}
+
+	option = {
+		name = tfrkphn.421.e
+		if = { limit = { NOT = { has_character = KOR_TFRKPHN_hwang_you_sung } } recruit_character = KOR_TFRKPHN_hwang_you_sung }
+		KOR_TFRKPHN_hwang_you_sung = {
+			if = { limit = { is_corps_commander = yes } promote_leader = yes }
+			else_if = { limit = { NOT = { is_field_marshal = yes } } add_field_marshal_role = { traits = { } skill = 4 attack_skill = 3 defense_skill = 4 planning_skill = 4 logistics_skill = 3 } }
+			add_skill_level = 1
+			add_advisor_role = { advisor = { slot = army_chief idea_token = TFRKPHN_hwang_you_sung_new_army_chief cost = 0 allowed = { original_tag = KOR } traits = { army_chief_defensive_2 } } activate = yes }
+		}
+		custom_effect_tooltip = tfrkphn.421.e_tt
+		ai_chance = { base = 5 }
+	}
+
+	option = {
+		name = tfrkphn.421.f
+		if = { limit = { NOT = { has_character = KOR_TFRKPHN_kwak_jong_keun } } recruit_character = KOR_TFRKPHN_kwak_jong_keun }
+		KOR_TFRKPHN_kwak_jong_keun = {
+			if = { limit = { is_corps_commander = yes } promote_leader = yes }
+			else_if = { limit = { NOT = { is_field_marshal = yes } } add_field_marshal_role = { traits = { } skill = 4 attack_skill = 3 defense_skill = 4 planning_skill = 4 logistics_skill = 3 } }
+			add_skill_level = 1
+			add_advisor_role = { advisor = { slot = army_chief idea_token = TFRKPHN_kwak_jong_keun_new_army_chief cost = 0 allowed = { original_tag = KOR } traits = { army_chief_defensive_2 } } activate = yes }
+		}
+		custom_effect_tooltip = tfrkphn.421.f_tt
+		ai_chance = { base = 5 }
+	}
+}
+
+# 신규 해군참모총장 임명
+country_event = {
+	id = tfrkphn.422
+	title = tfrkphn.422.t
+	desc = tfrkphn.422.desc
+	picture = GFX_TFRKPHN_rok_armed_forces
+	is_triggered_only = yes
+
+	option = {
+		name = tfrkphn.422.a
+		if = { limit = { NOT = { has_character = KOR_TFRKPHN_yang_yong_mo } } recruit_character = KOR_TFRKPHN_yang_yong_mo }
+		KOR_TFRKPHN_yang_yong_mo = {
+			add_skill_level = 1
+		}
+		activate_advisor = TFRKPHN_yang_yong_mo_navy_chief
+		custom_effect_tooltip = tfrkphn.422.a_tt
+		ai_chance = { base = 10 }
+	}
+
+	option = {
+		name = tfrkphn.422.b
+		if = { limit = { NOT = { has_character = KOR_TFRKPHN_kim_myung_soo } } recruit_character = KOR_TFRKPHN_kim_myung_soo }
+		KOR_TFRKPHN_kim_myung_soo = {
+			add_skill_level = 1
+			add_advisor_role = { advisor = { slot = navy_chief idea_token = TFRKPHN_kim_myung_soo_new_navy_chief cost = 0 allowed = { original_tag = KOR } traits = { navy_chief_decisive_battle_2 } } activate = yes }
+		}
+		custom_effect_tooltip = tfrkphn.422.b_tt
+		ai_chance = { base = 5 }
+	}
+
+	option = {
+		name = tfrkphn.422.c
+		if = { limit = { NOT = { has_character = KOR_TFRKPHN_kang_dong_gil } } recruit_character = KOR_TFRKPHN_kang_dong_gil }
+		KOR_TFRKPHN_kang_dong_gil = {
+			add_skill_level = 1
+			add_advisor_role = { advisor = { slot = navy_chief idea_token = TFRKPHN_kang_dong_gil_new_navy_chief cost = 0 allowed = { original_tag = KOR } traits = { navy_chief_decisive_battle_2 } } activate = yes }
+		}
+		custom_effect_tooltip = tfrkphn.422.c_tt
+		ai_chance = { base = 5 }
+	}
+
+	option = {
+		name = tfrkphn.422.d
+		if = { limit = { NOT = { has_character = KOR_TFRKPHN_choi_sung_hyeok } } recruit_character = KOR_TFRKPHN_choi_sung_hyeok }
+		KOR_TFRKPHN_choi_sung_hyeok = {
+			add_skill_level = 1
+			add_advisor_role = { advisor = { slot = navy_chief idea_token = TFRKPHN_choi_sung_hyeok_new_navy_chief cost = 0 allowed = { original_tag = KOR } traits = { navy_chief_decisive_battle_2 } } activate = yes }
+		}
+		custom_effect_tooltip = tfrkphn.422.d_tt
+		ai_chance = { base = 5 }
+	}
+}
+
+# 신규 공군참모총장 임명
+country_event = {
+	id = tfrkphn.423
+	title = tfrkphn.423.t
+	desc = tfrkphn.423.desc
+	picture = GFX_TFRKPHN_rok_armed_forces
+	is_triggered_only = yes
+
+	option = {
+		name = tfrkphn.423.a
+		if = { limit = { NOT = { has_character = KOR_TFRKPHN_lee_young_soo } } recruit_character = KOR_TFRKPHN_lee_young_soo }
+		activate_advisor = TFRKPHN_lee_young_soo_air_chief
+		custom_effect_tooltip = tfrkphn.423.a_tt
+		ai_chance = { base = 10 }
+	}
+
+	option = {
+		name = tfrkphn.423.b
+		if = { limit = { NOT = { has_character = KOR_TFRKPHN_son_sug_rag } } recruit_character = KOR_TFRKPHN_son_sug_rag }
+		KOR_TFRKPHN_son_sug_rag = { add_advisor_role = { advisor = { slot = air_chief idea_token = TFRKPHN_son_sug_rag_new_air_chief cost = 0 allowed = { original_tag = KOR } traits = { air_chief_ground_support_2 } } activate = yes } }
+		custom_effect_tooltip = tfrkphn.423.b_tt
+		ai_chance = { base = 5 }
+	}
+
+	option = {
+		name = tfrkphn.423.c
+		if = { limit = { NOT = { has_character = KOR_TFRKPHN_kim_hyoung_soo } } recruit_character = KOR_TFRKPHN_kim_hyoung_soo }
+		KOR_TFRKPHN_kim_hyoung_soo = { add_advisor_role = { advisor = { slot = air_chief idea_token = TFRKPHN_kim_hyoung_soo_new_air_chief cost = 0 allowed = { original_tag = KOR } traits = { air_chief_ground_support_2 } } activate = yes } }
+		custom_effect_tooltip = tfrkphn.423.c_tt
+		ai_chance = { base = 5 }
+	}
+}

@@ -1,3 +1,5 @@
+﻿# [안내] 결정 화면의 버튼 동작과 보이는 조건. 모양은 interface/*.gui.
+# [안내] 수정 방법: 모드 폴더의 TUTORIAL_KO.md 7~9장 참고. 새 이름에는 TFRKPHN_ 접두어를 붙이세요.
 scripted_gui = {
 	TFRKPHN_hong_minsim_gui = {
 		context_type = decision_category
@@ -425,6 +427,99 @@ scripted_gui = {
 			TFRKPHN_kj_lock_u3_visible = { OR = { NOT = { has_global_flag = TFRKPHN_kj_u2_done } NOT = { OR = { AND = { tag = KOR NOT = { has_global_flag = TFRKPHN_kj_path_u_JAP } } AND = { tag = JAP NOT = { has_global_flag = TFRKPHN_kj_path_u_KOR } } } } } }
 			TFRKPHN_kj_busy_u3_visible = { has_global_flag = TFRKPHN_kj_u3_busy }
 			TFRKPHN_kj_done_u3_visible = { has_global_flag = TFRKPHN_kj_u3_done }
+		}
+	}
+}
+
+# 국방부 군사 결정 (모두 1회)
+#  육군: 육군 정예화 / 해군: 기동함대 창설 / 공군: 1번째 파오공(FA-50) 추가생산, 2번째 팬텀 퇴역 / 해병대: 해병특수작전군 창설
+#  국방부: 개혁이 남아 있으면 방위산업 육성(군수공장 2개), 모든 개혁이 끝나면 우주군 창설
+scripted_gui = {
+	TFRKPHN_mnd_gui = {
+		context_type = decision_category
+		window_name = TFRKPHN_mnd_container
+
+		effects = {
+			TFRKPHN_mnd_btn_army_click = {
+				add_political_power = -50
+				army_experience = 25
+				set_country_flag = TFRKPHN_mnd_army_done
+				add_dynamic_modifier = { modifier = TFRKPHN_mnd_army }
+			}
+			TFRKPHN_mnd_btn_navy_click = {
+				add_political_power = -50
+				navy_experience = 25
+				set_country_flag = TFRKPHN_mnd_navy_done
+				add_dynamic_modifier = { modifier = TFRKPHN_mnd_navy }
+			}
+			TFRKPHN_mnd_btn_air_click = {
+				if = {
+					limit = { NOT = { has_country_flag = TFRKPHN_mnd_fa50_done } }
+					add_political_power = -75
+					air_experience = 25
+					set_country_flag = TFRKPHN_mnd_fa50_done
+					add_dynamic_modifier = { modifier = TFRKPHN_mnd_fa50 }
+					TFRKPHN_mnd_fa50_planes = yes
+				}
+				else = {
+					add_political_power = -50
+					air_experience = 25
+					set_country_flag = TFRKPHN_mnd_f4_done
+					add_dynamic_modifier = { modifier = TFRKPHN_mnd_f4 }
+				}
+			}
+			TFRKPHN_mnd_btn_marine_click = {
+				add_political_power = -100
+				army_experience = 25
+				set_country_flag = TFRKPHN_mnd_marine_done
+				add_dynamic_modifier = { modifier = TFRKPHN_mnd_marine_sof }
+			}
+			TFRKPHN_mnd_btn_mnd_click = {
+				if = {
+					limit = { has_country_flag = TFRKPHN_mnd_army_done has_country_flag = TFRKPHN_mnd_navy_done has_country_flag = TFRKPHN_mnd_fa50_done has_country_flag = TFRKPHN_mnd_f4_done has_country_flag = TFRKPHN_mnd_marine_done }
+					add_political_power = -150
+					set_country_flag = TFRKPHN_mnd_space_done
+					add_dynamic_modifier = { modifier = TFRKPHN_mnd_space }
+				}
+				else = {
+					add_political_power = -100
+					set_country_flag = TFRKPHN_mnd_factory_done
+					every_owned_state = {
+						limit = { is_core_of = ROOT free_building_slots = { building = arms_factory size > 0 include_locked = no } }
+						random_select_amount = 2
+						add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+					}
+					if = {
+						limit = { NOT = { any_owned_state = { is_core_of = ROOT free_building_slots = { building = arms_factory size > 0 include_locked = no } } } }
+						capital_scope = {
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = { type = arms_factory level = 2 instant_build = yes }
+						}
+					}
+				}
+			}
+		}
+
+		triggers = {
+			TFRKPHN_mnd_btn_army_click_enabled = { NOT = { has_country_flag = TFRKPHN_mnd_army_done } has_political_power > 49 }
+			TFRKPHN_mnd_btn_navy_click_enabled = { NOT = { has_country_flag = TFRKPHN_mnd_navy_done } has_political_power > 49 }
+			TFRKPHN_mnd_btn_air_click_enabled = {
+				NOT = { has_country_flag = TFRKPHN_mnd_f4_done }
+				if = { limit = { NOT = { has_country_flag = TFRKPHN_mnd_fa50_done } } has_political_power > 74 }
+				else = { has_political_power > 49 }
+			}
+			TFRKPHN_mnd_btn_marine_click_enabled = { NOT = { has_country_flag = TFRKPHN_mnd_marine_done } has_political_power > 99 }
+			TFRKPHN_mnd_btn_mnd_click_enabled = {
+				NOT = { has_country_flag = TFRKPHN_mnd_space_done }
+				if = {
+					limit = { has_country_flag = TFRKPHN_mnd_army_done has_country_flag = TFRKPHN_mnd_navy_done has_country_flag = TFRKPHN_mnd_fa50_done has_country_flag = TFRKPHN_mnd_f4_done has_country_flag = TFRKPHN_mnd_marine_done }
+					has_political_power > 149
+				}
+				else = {
+					NOT = { has_country_flag = TFRKPHN_mnd_factory_done }
+					has_political_power > 99
+				}
+			}
 		}
 	}
 }

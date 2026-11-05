@@ -1,0 +1,365 @@
+﻿# [안내] 국방부 결정 목록 (모두 1회). 위쪽 그림 패널은 interface/TFRKPHN_mnd.gui, 동작은 scripted_guis의 TFRKPHN_mnd_gui.
+# [안내] 수정 방법: 모드 폴더의 TUTORIAL_KO.md 7~9장 참고. 새 이름에는 TFRKPHN_ 접두어를 붙이세요.
+TFRKPHN_mnd_category = {
+	TFRKPHN_mnd_k2 = {
+		icon = GFX_decision_generic_political_actions
+		cost = 75
+		days_remove = 90
+		fire_only_once = yes
+		available = { has_country_flag = TFRKPHN_mnd_army_done }
+		complete_effect = { custom_effect_tooltip = TFRKPHN_mnd_after_90_tt }
+		remove_effect = { add_equipment_to_stockpile = { type = modern_tank_equipment_3 amount = 150 producer = KOR } }
+		ai_will_do = { factor = 1 }
+	}
+	TFRKPHN_mnd_k9 = {
+		icon = GFX_decision_generic_political_actions
+		cost = 75
+		days_remove = 90
+		fire_only_once = yes
+		available = { has_country_flag = TFRKPHN_mnd_army_done }
+		complete_effect = { custom_effect_tooltip = TFRKPHN_mnd_after_90_tt }
+		remove_effect = { add_equipment_to_stockpile = { type = modern_tank_artillery_equipment_2 amount = 100 producer = KOR } }
+		ai_will_do = { factor = 1 }
+	}
+	TFRKPHN_mnd_reserve = {
+		icon = GFX_decision_generic_political_actions
+		cost = 50
+		days_remove = 60
+		fire_only_once = yes
+		complete_effect = { custom_effect_tooltip = TFRKPHN_mnd_after_60_tt }
+		remove_effect = { add_manpower = 30000 army_experience = 10 }
+		ai_will_do = { factor = 1 }
+	}
+	TFRKPHN_mnd_barracks = {
+		icon = GFX_decision_generic_political_actions
+		cost = 50
+		fire_only_once = yes
+		complete_effect = { add_dynamic_modifier = { modifier = TFRKPHN_mnd_barracks } }
+		ai_will_do = { factor = 1 }
+	}
+	TFRKPHN_mnd_export = {
+		icon = GFX_decision_generic_attract_foreign_investors
+		cost = 50
+		days_remove = 30
+		fire_only_once = yes
+		available = { has_country_flag = TFRKPHN_mnd_factory_done }
+		complete_effect = { custom_effect_tooltip = TFRKPHN_mnd_after_30_tt }
+		remove_effect = { add_dynamic_modifier = { modifier = TFRKPHN_mnd_kdefense_export days = 365 } }
+		ai_will_do = { factor = 1 }
+	}
+
+	# ===== 임명식 (각 1회): 지휘력 10을 쓰고, 그 인물 영입 + 군사 버프 + 임명장 이벤트 =====
+	TFRKPHN_mnd_appoint_park_an_su = {
+		icon = GFX_decision_generic_political_actions
+		custom_cost_trigger = { command_power > 9 }
+		custom_cost_text = TFRKPHN_cost_cp10
+		fire_only_once = yes
+		priority = 200
+		visible = { NOT = { date < 2023.10.30 } }
+		complete_effect = {
+			add_command_power = -10
+			if = { limit = { NOT = { has_character = KOR_park_an_soo_char } } recruit_character = KOR_park_an_soo_char }
+			add_dynamic_modifier = { modifier = TFRKPHN_appoint_park_an_su }
+			country_event = { id = tfrkphn.401 }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	TFRKPHN_mnd_appoint_kang_sin_chul = {
+		icon = GFX_decision_generic_political_actions
+		custom_cost_trigger = { command_power > 9 }
+		custom_cost_text = TFRKPHN_cost_cp10
+		fire_only_once = yes
+		priority = 200
+		visible = { NOT = { date < 2023.10.30 } }
+		complete_effect = {
+			add_command_power = -10
+			recruit_character = KOR_TFRKPHN_kang_sin_chul
+			add_dynamic_modifier = { modifier = TFRKPHN_appoint_kang_sin_chul }
+			country_event = { id = tfrkphn.402 }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	TFRKPHN_mnd_appoint_son_sik = {
+		icon = GFX_decision_generic_political_actions
+		custom_cost_trigger = { command_power > 9 }
+		custom_cost_text = TFRKPHN_cost_cp10
+		fire_only_once = yes
+		priority = 200
+		visible = { NOT = { date < 2023.10.30 } }
+		complete_effect = {
+			add_command_power = -10
+			recruit_character = KOR_TFRKPHN_son_sik
+			add_dynamic_modifier = { modifier = TFRKPHN_appoint_son_sik }
+			country_event = { id = tfrkphn.403 }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	TFRKPHN_mnd_appoint_ko_chang_jun = {
+		icon = GFX_decision_generic_political_actions
+		custom_cost_trigger = { command_power > 9 }
+		custom_cost_text = TFRKPHN_cost_cp10
+		fire_only_once = yes
+		priority = 200
+		visible = { NOT = { date < 2023.10.30 } }
+		complete_effect = {
+			add_command_power = -10
+			recruit_character = KOR_TFRKPHN_ko_chang_jun
+			add_dynamic_modifier = { modifier = TFRKPHN_appoint_ko_chang_jun }
+			country_event = { id = tfrkphn.404 }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	TFRKPHN_mnd_appoint_hwang_you_sung = {
+		icon = GFX_decision_generic_political_actions
+		custom_cost_trigger = { command_power > 9 }
+		custom_cost_text = TFRKPHN_cost_cp10
+		fire_only_once = yes
+		priority = 200
+		visible = { NOT = { date < 2023.11.6 } }
+		complete_effect = {
+			add_command_power = -10
+			recruit_character = KOR_TFRKPHN_hwang_you_sung
+			add_dynamic_modifier = { modifier = TFRKPHN_appoint_hwang_you_sung }
+			country_event = { id = tfrkphn.405 }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	TFRKPHN_mnd_appoint_yeo_in_hyeong = {
+		icon = GFX_decision_generic_political_actions
+		custom_cost_trigger = { command_power > 9 }
+		custom_cost_text = TFRKPHN_cost_cp10
+		fire_only_once = yes
+		priority = 200
+		visible = { NOT = { date < 2023.11.6 } }
+		complete_effect = {
+			add_command_power = -10
+			if = { limit = { NOT = { has_character = KOR_yeo_inhyung_char } } recruit_character = KOR_yeo_inhyung_char }
+			add_dynamic_modifier = { modifier = TFRKPHN_appoint_yeo_in_hyeong }
+			country_event = { id = tfrkphn.406 }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	TFRKPHN_mnd_appoint_lee_jin_woo = {
+		icon = GFX_decision_generic_political_actions
+		custom_cost_trigger = { command_power > 9 }
+		custom_cost_text = TFRKPHN_cost_cp10
+		fire_only_once = yes
+		priority = 200
+		visible = { NOT = { date < 2023.11.6 } }
+		complete_effect = {
+			add_command_power = -10
+			if = { limit = { NOT = { has_character = KOR_lee_jin_woo_char } } recruit_character = KOR_lee_jin_woo_char }
+			add_dynamic_modifier = { modifier = TFRKPHN_appoint_lee_jin_woo }
+			country_event = { id = tfrkphn.407 }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	TFRKPHN_mnd_appoint_kwak_jong_keun = {
+		icon = GFX_decision_generic_political_actions
+		custom_cost_trigger = { command_power > 9 }
+		custom_cost_text = TFRKPHN_cost_cp10
+		fire_only_once = yes
+		priority = 200
+		visible = { NOT = { date < 2023.11.6 } }
+		complete_effect = {
+			add_command_power = -10
+			recruit_character = KOR_TFRKPHN_kwak_jong_keun
+			add_dynamic_modifier = { modifier = TFRKPHN_appoint_kwak_jong_keun }
+			country_event = { id = tfrkphn.408 }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	TFRKPHN_mnd_appoint_kim_myung_soo = {
+		icon = GFX_decision_generic_political_actions
+		custom_cost_trigger = { command_power > 9 }
+		custom_cost_text = TFRKPHN_cost_cp10
+		fire_only_once = yes
+		priority = 190
+		visible = { NOT = { date < 2023.10.30 } }
+		complete_effect = {
+			add_command_power = -10
+			recruit_character = KOR_TFRKPHN_kim_myung_soo
+			add_dynamic_modifier = { modifier = TFRKPHN_appoint_kim_myung_soo }
+			country_event = { id = tfrkphn.409 }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	TFRKPHN_mnd_appoint_yang_yong_mo = {
+		icon = GFX_decision_generic_political_actions
+		custom_cost_trigger = { command_power > 9 }
+		custom_cost_text = TFRKPHN_cost_cp10
+		fire_only_once = yes
+		priority = 190
+		visible = { NOT = { date < 2023.10.30 } }
+		complete_effect = {
+			add_command_power = -10
+			recruit_character = KOR_TFRKPHN_yang_yong_mo
+			add_dynamic_modifier = { modifier = TFRKPHN_appoint_yang_yong_mo }
+			country_event = { id = tfrkphn.410 }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	TFRKPHN_mnd_appoint_kang_dong_gil = {
+		icon = GFX_decision_generic_political_actions
+		custom_cost_trigger = { command_power > 9 }
+		custom_cost_text = TFRKPHN_cost_cp10
+		fire_only_once = yes
+		priority = 190
+		visible = { NOT = { date < 2023.11.6 } }
+		complete_effect = {
+			add_command_power = -10
+			recruit_character = KOR_TFRKPHN_kang_dong_gil
+			add_dynamic_modifier = { modifier = TFRKPHN_appoint_kang_dong_gil }
+			country_event = { id = tfrkphn.411 }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	TFRKPHN_mnd_appoint_choi_sung_hyeok = {
+		icon = GFX_decision_generic_political_actions
+		custom_cost_trigger = { command_power > 9 }
+		custom_cost_text = TFRKPHN_cost_cp10
+		fire_only_once = yes
+		priority = 190
+		visible = { NOT = { date < 2023.11.6 } }
+		complete_effect = {
+			add_command_power = -10
+			recruit_character = KOR_TFRKPHN_choi_sung_hyeok
+			add_dynamic_modifier = { modifier = TFRKPHN_appoint_choi_sung_hyeok }
+			country_event = { id = tfrkphn.412 }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	TFRKPHN_mnd_appoint_lee_young_soo = {
+		icon = GFX_decision_generic_political_actions
+		custom_cost_trigger = { command_power > 9 }
+		custom_cost_text = TFRKPHN_cost_cp10
+		fire_only_once = yes
+		priority = 180
+		visible = { NOT = { date < 2023.10.30 } }
+		complete_effect = {
+			add_command_power = -10
+			recruit_character = KOR_TFRKPHN_lee_young_soo
+			add_dynamic_modifier = { modifier = TFRKPHN_appoint_lee_young_soo }
+			country_event = { id = tfrkphn.413 }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	TFRKPHN_mnd_appoint_son_sug_rag = {
+		icon = GFX_decision_generic_political_actions
+		custom_cost_trigger = { command_power > 9 }
+		custom_cost_text = TFRKPHN_cost_cp10
+		fire_only_once = yes
+		priority = 180
+		visible = { NOT = { date < 2023.11.6 } }
+		complete_effect = {
+			add_command_power = -10
+			recruit_character = KOR_TFRKPHN_son_sug_rag
+			add_dynamic_modifier = { modifier = TFRKPHN_appoint_son_sug_rag }
+			country_event = { id = tfrkphn.414 }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	TFRKPHN_mnd_appoint_kim_hyoung_soo = {
+		icon = GFX_decision_generic_political_actions
+		custom_cost_trigger = { command_power > 9 }
+		custom_cost_text = TFRKPHN_cost_cp10
+		fire_only_once = yes
+		priority = 180
+		visible = { NOT = { date < 2023.11.6 } }
+		complete_effect = {
+			add_command_power = -10
+			recruit_character = KOR_TFRKPHN_kim_hyoung_soo
+			add_dynamic_modifier = { modifier = TFRKPHN_appoint_kim_hyoung_soo }
+			country_event = { id = tfrkphn.415 }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	# ===== 신규 참모총장 임명 (각 1회, 지휘력 20): 후보 중 한 명을 골라 참모총장으로 =====
+	TFRKPHN_mnd_new_army_chief = {
+		icon = GFX_decision_generic_political_actions
+		custom_cost_trigger = { command_power > 19 }
+		custom_cost_text = TFRKPHN_cost_cp20
+		fire_only_once = yes
+		priority = 250
+		visible = { NOT = { date < 2023.10.30 } }
+		complete_effect = {
+			add_command_power = -20
+			country_event = { id = tfrkphn.421 }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	TFRKPHN_mnd_new_navy_chief = {
+		icon = GFX_decision_generic_political_actions
+		custom_cost_trigger = { command_power > 19 }
+		custom_cost_text = TFRKPHN_cost_cp20
+		fire_only_once = yes
+		priority = 250
+		visible = { NOT = { date < 2023.10.30 } }
+		complete_effect = {
+			add_command_power = -20
+			country_event = { id = tfrkphn.422 }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	TFRKPHN_mnd_new_air_chief = {
+		icon = GFX_decision_generic_political_actions
+		custom_cost_trigger = { command_power > 19 }
+		custom_cost_text = TFRKPHN_cost_cp20
+		fire_only_once = yes
+		priority = 250
+		visible = { NOT = { date < 2023.10.30 } }
+		complete_effect = {
+			add_command_power = -20
+			country_event = { id = tfrkphn.423 }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	# ===== 무장평화론 (중점 TFRKPHN_hong_b03_11 완료 뒤, 각 1회) =====
+	TFRKPHN_mnd_armpeace_arms = {
+		icon = GFX_decision_generic_political_actions
+		cost = 75
+		days_remove = 90
+		fire_only_once = yes
+		priority = 260
+		visible = { has_completed_focus = TFRKPHN_hong_b03_11 }
+		complete_effect = { custom_effect_tooltip = TFRKPHN_mnd_after_90_tt }
+		remove_effect = {
+			every_owned_state = {
+				limit = { is_core_of = ROOT free_building_slots = { building = arms_factory size > 0 include_locked = no } }
+				random_select_amount = 3
+				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+			}
+			if = {
+				limit = { NOT = { any_owned_state = { is_core_of = ROOT free_building_slots = { building = arms_factory size > 0 include_locked = no } } } }
+				capital_scope = { add_extra_state_shared_building_slots = 3 add_building_construction = { type = arms_factory level = 3 instant_build = yes } }
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	TFRKPHN_mnd_armpeace_dock = {
+		icon = GFX_decision_generic_political_actions
+		cost = 75
+		days_remove = 90
+		fire_only_once = yes
+		priority = 260
+		visible = { has_completed_focus = TFRKPHN_hong_b03_11 }
+		available = { any_owned_state = { is_core_of = ROOT is_coastal = yes } }
+		complete_effect = { custom_effect_tooltip = TFRKPHN_mnd_after_90_tt }
+		remove_effect = {
+			every_owned_state = {
+				limit = { is_core_of = ROOT is_coastal = yes free_building_slots = { building = dockyard size > 0 include_locked = no } }
+				random_select_amount = 2
+				add_building_construction = { type = dockyard level = 1 instant_build = yes }
+			}
+			if = {
+				limit = { NOT = { any_owned_state = { is_core_of = ROOT is_coastal = yes free_building_slots = { building = dockyard size > 0 include_locked = no } } } }
+				random_owned_state = {
+					limit = { is_core_of = ROOT is_coastal = yes }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = { type = dockyard level = 2 instant_build = yes }
+				}
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+}

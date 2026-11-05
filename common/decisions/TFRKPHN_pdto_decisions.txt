@@ -1,0 +1,30 @@
+﻿# [안내] 원본 PDTO 협력 이니셔티브 탭(KOR_pdto_cooperation_initiative_category)에 추가하는 결정.
+# [안내] 수정 방법: 모드 폴더의 TUTORIAL_KO.md 7~9장 참고. 새 이름에는 TFRKPHN_ 접두어를 붙이세요.
+KOR_pdto_cooperation_initiative_category = {
+	# 캄보디아 특공대 파견: 1회, PDTO 코인 1 + 정치력 50, 30일 뒤 PDTO 결속도 +10
+	TFRKPHN_pdto_cambodia_commando = {
+		icon = GFX_decision_generic_political_actions
+		cost = 50
+		days_remove = 30
+		fire_only_once = yes
+		visible = { country_exists = CAM }
+		available = {
+			check_variable = { KOR_pdto_coin_var > 0 }
+			has_manpower > 999
+		}
+		complete_effect = {
+			subtract_from_variable = { KOR_pdto_coin_var = 1 }
+			custom_effect_tooltip = TFRKPHN_pdto_cambodia_cost_tt
+			add_manpower = -1000
+			custom_effect_tooltip = TFRKPHN_mnd_after_30_tt
+		}
+		remove_effect = {
+			add_to_variable = { KOR_pdto_cohesion_var = 10 }
+			custom_effect_tooltip = TFRKPHN_pdto_cambodia_cohesion_tt
+			army_experience = 15
+			add_manpower = 900
+			CAM = { add_opinion_modifier = { target = KOR modifier = TFRKPHN_postwar_friend } }
+		}
+		ai_will_do = { factor = 1 }
+	}
+}

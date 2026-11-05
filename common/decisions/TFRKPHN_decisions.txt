@@ -1,3 +1,5 @@
+﻿# [안내] 일반 결정 모음 (홍준표 정부).
+# [안내] 수정 방법: 모드 폴더의 TUTORIAL_KO.md 7~9장 참고. 새 이름에는 TFRKPHN_ 접두어를 붙이세요.
 TFRKPHN_hong_minsim_category = {
 	TFRKPHN_hong_tour_prewar_info = {
 		icon = GFX_decision_icon_KOR_LJS_misc

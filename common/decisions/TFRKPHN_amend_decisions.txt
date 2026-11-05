@@ -1,3 +1,5 @@
+﻿# [안내] 개헌(헌법 개정) 결정. 카테고리 설정은 categories/TFRKPHN_decision_categories.txt, 화면은 interface/TFRKPHN_amend.gui.
+# [안내] 수정 방법: 모드 폴더의 TUTORIAL_KO.md 7~9장 참고. 새 이름에는 TFRKPHN_ 접두어를 붙이세요.
 TFRKPHN_hong_amend_category = {
 
 	TFRKPHN_amend_persuade = {

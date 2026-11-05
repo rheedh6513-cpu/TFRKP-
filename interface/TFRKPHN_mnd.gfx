@@ -1,0 +1,34 @@
+﻿# [안내] 국방부 군사 결정 패널. 각 군 마크(버튼)를 누르면 효과가 나갑니다. 동작은 common/scripted_guis/TFRKPHN_scripted_guis.txt의 TFRKPHN_mnd_gui.
+# [안내] 수정 방법: 모드 폴더의 TUTORIAL_KO.md 7~9장 참고. 새 이름에는 TFRKPHN_ 접두어를 붙이세요.
+spriteTypes = {
+	spriteType = {
+		name = "GFX_TFRKPHN_mnd_bg"
+		texturefile = "gfx/interface/gui/TFRKPHN_mnd/TFRKPHN_mnd_bg.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_mnd_btn_mnd"
+		texturefile = "gfx/interface/gui/TFRKPHN_mnd/TFRKPHN_mnd_btn_mnd.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_mnd_btn_army"
+		texturefile = "gfx/interface/gui/TFRKPHN_mnd/TFRKPHN_mnd_btn_army.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_mnd_btn_navy"
+		texturefile = "gfx/interface/gui/TFRKPHN_mnd/TFRKPHN_mnd_btn_navy.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_mnd_btn_air"
+		texturefile = "gfx/interface/gui/TFRKPHN_mnd/TFRKPHN_mnd_btn_air.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_mnd_btn_marine"
+		texturefile = "gfx/interface/gui/TFRKPHN_mnd/TFRKPHN_mnd_btn_marine.png"
+		legacy_lazy_load = no
+	}
+}

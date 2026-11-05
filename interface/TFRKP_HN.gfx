@@ -1,3 +1,5 @@
+﻿# [안내] 그림 등록부. 새 그림은 spriteType = { name = "GFX_..." texturefile = "gfx/...png" } 한 덩어리를 추가.
+# [안내] 수정 방법: 모드 폴더의 TUTORIAL_KO.md 7~9장 참고. 새 이름에는 TFRKPHN_ 접두어를 붙이세요.
 spriteTypes = {
 	spriteType = {
 		name = "GFX_TFRKPHN_ppp_convention"
@@ -282,5 +284,135 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_focus_TFRKPHN_hongkacola"
 		texturefile = "gfx/interface/goals/TFRKPHN_hongkacola.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_east_sea_blast"
+		texturefile = "gfx/event_pictures/TFRKPHN_east_sea_blast.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_trash_bag_rush"
+		texturefile = "gfx/event_pictures/TFRKPHN_trash_bag_rush.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_nak_who_choose"
+		texturefile = "gfx/event_pictures/TFRKPHN_nak_who_choose.png"
+	}
+	# 2023년 군 수뇌부 포트레잇 (사진을 받으면 같은 파일 이름으로 바꿔 넣기)
+	spriteType = {
+		name = "GFX_portrait_TFRKPHN_kim_myung_soo"
+		texturefile = "gfx/leaders/KOR/TFRKPHN_kim_myung_soo.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_TFRKPHN_yang_yong_mo"
+		texturefile = "gfx/leaders/KOR/TFRKPHN_yang_yong_mo.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_TFRKPHN_lee_young_soo"
+		texturefile = "gfx/leaders/KOR/TFRKPHN_lee_young_soo.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_TFRKPHN_kang_sin_chul"
+		texturefile = "gfx/leaders/KOR/TFRKPHN_kang_sin_chul.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_TFRKPHN_son_sik"
+		texturefile = "gfx/leaders/KOR/TFRKPHN_son_sik.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_TFRKPHN_ko_chang_jun"
+		texturefile = "gfx/leaders/KOR/TFRKPHN_ko_chang_jun.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_TFRKPHN_hwang_you_sung"
+		texturefile = "gfx/leaders/KOR/TFRKPHN_hwang_you_sung.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_TFRKPHN_kang_dong_gil"
+		texturefile = "gfx/leaders/KOR/TFRKPHN_kang_dong_gil.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_TFRKPHN_son_sug_rag"
+		texturefile = "gfx/leaders/KOR/TFRKPHN_son_sug_rag.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_TFRKPHN_kwak_jong_keun"
+		texturefile = "gfx/leaders/KOR/TFRKPHN_kwak_jong_keun.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_TFRKPHN_choi_sung_hyeok"
+		texturefile = "gfx/leaders/KOR/TFRKPHN_choi_sung_hyeok.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_TFRKPHN_kim_hyoung_soo"
+		texturefile = "gfx/leaders/KOR/TFRKPHN_kim_hyoung_soo.png"
+	}
+	# 임명장 이벤트 그림
+	spriteType = {
+		name = "GFX_TFRKPHN_appoint_park_an_su"
+		texturefile = "gfx/event_pictures/TFRKPHN_appoint/TFRKPHN_appoint_park_an_su.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_appoint_kang_sin_chul"
+		texturefile = "gfx/event_pictures/TFRKPHN_appoint/TFRKPHN_appoint_kang_sin_chul.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_appoint_son_sik"
+		texturefile = "gfx/event_pictures/TFRKPHN_appoint/TFRKPHN_appoint_son_sik.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_appoint_ko_chang_jun"
+		texturefile = "gfx/event_pictures/TFRKPHN_appoint/TFRKPHN_appoint_ko_chang_jun.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_appoint_hwang_you_sung"
+		texturefile = "gfx/event_pictures/TFRKPHN_appoint/TFRKPHN_appoint_hwang_you_sung.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_appoint_yeo_in_hyeong"
+		texturefile = "gfx/event_pictures/TFRKPHN_appoint/TFRKPHN_appoint_yeo_in_hyeong.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_appoint_lee_jin_woo"
+		texturefile = "gfx/event_pictures/TFRKPHN_appoint/TFRKPHN_appoint_lee_jin_woo.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_appoint_kwak_jong_keun"
+		texturefile = "gfx/event_pictures/TFRKPHN_appoint/TFRKPHN_appoint_kwak_jong_keun.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_appoint_kim_myung_soo"
+		texturefile = "gfx/event_pictures/TFRKPHN_appoint/TFRKPHN_appoint_kim_myung_soo.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_appoint_yang_yong_mo"
+		texturefile = "gfx/event_pictures/TFRKPHN_appoint/TFRKPHN_appoint_yang_yong_mo.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_appoint_kang_dong_gil"
+		texturefile = "gfx/event_pictures/TFRKPHN_appoint/TFRKPHN_appoint_kang_dong_gil.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_appoint_choi_sung_hyeok"
+		texturefile = "gfx/event_pictures/TFRKPHN_appoint/TFRKPHN_appoint_choi_sung_hyeok.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_appoint_lee_young_soo"
+		texturefile = "gfx/event_pictures/TFRKPHN_appoint/TFRKPHN_appoint_lee_young_soo.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_appoint_son_sug_rag"
+		texturefile = "gfx/event_pictures/TFRKPHN_appoint/TFRKPHN_appoint_son_sug_rag.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_appoint_kim_hyoung_soo"
+		texturefile = "gfx/event_pictures/TFRKPHN_appoint/TFRKPHN_appoint_kim_hyoung_soo.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_rok_armed_forces"
+		texturefile = "gfx/event_pictures/TFRKPHN_rok_armed_forces.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_taegukgi"
+		texturefile = "gfx/event_pictures/TFRKPHN_taegukgi.png"
 	}
 }
