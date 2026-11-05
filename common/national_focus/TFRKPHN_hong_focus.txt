@@ -733,6 +733,11 @@ focus_tree = {
 			country_event = tfrkphn.63
 			add_war_support = 0.05
 			add_stability = 0.02
+			set_global_flag = TFRKPHN_kj_nuke_open
+			custom_effect_tooltip = TFRKPHN_kj_nuke_unlock_tt
+			hidden_effect = {
+				if = { limit = { country_exists = JAP } JAP = { country_event = { id = tfrkphn.324 days = 1 } } }
+			}
 		}
 	}
 

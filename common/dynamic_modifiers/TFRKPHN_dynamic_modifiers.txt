@@ -24,3 +24,9 @@ TFRKPHN_sp_jin = {
 	industrial_capacity_factory = TFRKPHN_sp_jin_ind
 	research_speed_factor = TFRKPHN_sp_jin_res
 }
+
+# 한일 공동 핵무장: 시설 가동 중 민간 공장 3개 사용
+TFRKPHN_kj_factory_use = {
+	icon = GFX_idea_KOR_yoon_common_conservatism_dynamic_modifir_idea
+	civilian_factory_use = 3
+}

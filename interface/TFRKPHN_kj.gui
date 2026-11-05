@@ -1,0 +1,478 @@
+guiTypes = {
+	containerWindowType = {
+		name = "TFRKPHN_kj_container"
+		size = { width = 100%% height = 470 }
+
+		containerWindowType = {
+			name = "TFRKPHN_kj_panel"
+			position = { x = 0 y = 0 }
+			size = { width = 500 height = 468 }
+
+			background = {
+				name = "background"
+				spriteType = "GFX_tiled_decisions_bg_small"
+				alwaystransparent = yes
+			}
+			containerWindowType = {
+				name = "TFRKPHN_kj_title_container"
+				position = { x = 1 y = 0 }
+				size = { width = 498 height = 30 }
+				background = {
+					name = "background"
+					spriteType = "GFX_tiled_header_1"
+					alwaystransparent = yes
+				}
+				instantTextBoxType = {
+					name = "TFRKPHN_kj_title_text"
+					position = { x = 0 y = 4 }
+					text = "TFRKPHN_kj_title"
+					font = "hoi_18mbs"
+					format = center
+					maxWidth = 498
+					alwaystransparent = yes
+				}
+			}
+			buttonType = {
+				name = "TFRKPHN_kj_sign_btn"
+				position = { x = 10 y = 34 }
+				quadTextureSprite = "GFX_button_148x34"
+				buttonText = "TFRKPHN_kj_sign_btn"
+				buttonFont = "hoi_16mbs"
+				pdx_tooltip = "TFRKPHN_kj_sign_btn_tt"
+				clicksound = click_default
+			}
+			instantTextBoxType = {
+				name = "TFRKPHN_kj_sign_status"
+				position = { x = 168 y = 42 }
+				text = "TFRKPHN_kj_sign_status"
+				font = "hoi_16mbs"
+				maxWidth = 320
+				maxHeight = 20
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "TFRKPHN_kj_bg"
+				position = { x = 0 y = 60 }
+				spriteType = "GFX_TFRKPHN_kj_bg"
+				alwaystransparent = yes
+			}
+
+			buttonType = {
+				name = "TFRKPHN_kj_btn_s1"
+				position = { x = 18 y = 118 }
+				quadTextureSprite = "GFX_TFRKPHN_kj_btn_s1"
+				pdx_tooltip = "TFRKPHN_kj_s1_tt"
+				clicksound = click_default
+			}
+			iconType = {
+				name = "TFRKPHN_kj_lock_s1"
+				position = { x = 18 y = 118 }
+				spriteType = "GFX_TFRKPHN_kj_lock"
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "TFRKPHN_kj_busy_s1"
+				position = { x = 18 y = 118 }
+				spriteType = "GFX_TFRKPHN_kj_busy"
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "TFRKPHN_kj_done_s1"
+				position = { x = 56 y = 114 }
+				spriteType = "GFX_TFRKPHN_kj_done"
+				alwaystransparent = yes
+			}
+			instantTextBoxType = {
+				name = "TFRKPHN_kj_state_s1"
+				position = { x = 12 y = 168 }
+				text = "TFRKPHN_kj_state_s1"
+				font = "hoi_16mbs"
+				format = centre
+				maxWidth = 68
+				maxHeight = 16
+				fixedsize = yes
+				alwaystransparent = yes
+			}
+
+			buttonType = {
+				name = "TFRKPHN_kj_btn_s2"
+				position = { x = 18 y = 262 }
+				quadTextureSprite = "GFX_TFRKPHN_kj_btn_s2"
+				pdx_tooltip = "TFRKPHN_kj_s2_tt"
+				clicksound = click_default
+			}
+			iconType = {
+				name = "TFRKPHN_kj_lock_s2"
+				position = { x = 18 y = 262 }
+				spriteType = "GFX_TFRKPHN_kj_lock"
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "TFRKPHN_kj_busy_s2"
+				position = { x = 18 y = 262 }
+				spriteType = "GFX_TFRKPHN_kj_busy"
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "TFRKPHN_kj_done_s2"
+				position = { x = 56 y = 258 }
+				spriteType = "GFX_TFRKPHN_kj_done"
+				alwaystransparent = yes
+			}
+			instantTextBoxType = {
+				name = "TFRKPHN_kj_state_s2"
+				position = { x = 12 y = 312 }
+				text = "TFRKPHN_kj_state_s2"
+				font = "hoi_16mbs"
+				format = centre
+				maxWidth = 68
+				maxHeight = 16
+				fixedsize = yes
+				alwaystransparent = yes
+			}
+
+			buttonType = {
+				name = "TFRKPHN_kj_btn_p1"
+				position = { x = 104 y = 118 }
+				quadTextureSprite = "GFX_TFRKPHN_kj_btn_p1"
+				pdx_tooltip = "TFRKPHN_kj_p1_tt"
+				clicksound = click_default
+			}
+			iconType = {
+				name = "TFRKPHN_kj_lock_p1"
+				position = { x = 104 y = 118 }
+				spriteType = "GFX_TFRKPHN_kj_lock"
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "TFRKPHN_kj_busy_p1"
+				position = { x = 104 y = 118 }
+				spriteType = "GFX_TFRKPHN_kj_busy"
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "TFRKPHN_kj_done_p1"
+				position = { x = 142 y = 114 }
+				spriteType = "GFX_TFRKPHN_kj_done"
+				alwaystransparent = yes
+			}
+			instantTextBoxType = {
+				name = "TFRKPHN_kj_state_p1"
+				position = { x = 98 y = 168 }
+				text = "TFRKPHN_kj_state_p1"
+				font = "hoi_16mbs"
+				format = centre
+				maxWidth = 68
+				maxHeight = 16
+				fixedsize = yes
+				alwaystransparent = yes
+			}
+
+			buttonType = {
+				name = "TFRKPHN_kj_btn_p2"
+				position = { x = 170 y = 118 }
+				quadTextureSprite = "GFX_TFRKPHN_kj_btn_p2"
+				pdx_tooltip = "TFRKPHN_kj_p2_tt"
+				clicksound = click_default
+			}
+			iconType = {
+				name = "TFRKPHN_kj_lock_p2"
+				position = { x = 170 y = 118 }
+				spriteType = "GFX_TFRKPHN_kj_lock"
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "TFRKPHN_kj_busy_p2"
+				position = { x = 170 y = 118 }
+				spriteType = "GFX_TFRKPHN_kj_busy"
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "TFRKPHN_kj_done_p2"
+				position = { x = 208 y = 114 }
+				spriteType = "GFX_TFRKPHN_kj_done"
+				alwaystransparent = yes
+			}
+			instantTextBoxType = {
+				name = "TFRKPHN_kj_state_p2"
+				position = { x = 164 y = 168 }
+				text = "TFRKPHN_kj_state_p2"
+				font = "hoi_16mbs"
+				format = centre
+				maxWidth = 68
+				maxHeight = 16
+				fixedsize = yes
+				alwaystransparent = yes
+			}
+
+			buttonType = {
+				name = "TFRKPHN_kj_btn_p3"
+				position = { x = 236 y = 118 }
+				quadTextureSprite = "GFX_TFRKPHN_kj_btn_p3"
+				pdx_tooltip = "TFRKPHN_kj_p3_tt"
+				clicksound = click_default
+			}
+			iconType = {
+				name = "TFRKPHN_kj_lock_p3"
+				position = { x = 236 y = 118 }
+				spriteType = "GFX_TFRKPHN_kj_lock"
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "TFRKPHN_kj_busy_p3"
+				position = { x = 236 y = 118 }
+				spriteType = "GFX_TFRKPHN_kj_busy"
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "TFRKPHN_kj_done_p3"
+				position = { x = 274 y = 114 }
+				spriteType = "GFX_TFRKPHN_kj_done"
+				alwaystransparent = yes
+			}
+			instantTextBoxType = {
+				name = "TFRKPHN_kj_state_p3"
+				position = { x = 230 y = 168 }
+				text = "TFRKPHN_kj_state_p3"
+				font = "hoi_16mbs"
+				format = centre
+				maxWidth = 68
+				maxHeight = 16
+				fixedsize = yes
+				alwaystransparent = yes
+			}
+
+			buttonType = {
+				name = "TFRKPHN_kj_btn_p4"
+				position = { x = 302 y = 118 }
+				quadTextureSprite = "GFX_TFRKPHN_kj_btn_p4"
+				pdx_tooltip = "TFRKPHN_kj_p4_tt"
+				clicksound = click_default
+			}
+			iconType = {
+				name = "TFRKPHN_kj_lock_p4"
+				position = { x = 302 y = 118 }
+				spriteType = "GFX_TFRKPHN_kj_lock"
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "TFRKPHN_kj_busy_p4"
+				position = { x = 302 y = 118 }
+				spriteType = "GFX_TFRKPHN_kj_busy"
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "TFRKPHN_kj_done_p4"
+				position = { x = 340 y = 114 }
+				spriteType = "GFX_TFRKPHN_kj_done"
+				alwaystransparent = yes
+			}
+			instantTextBoxType = {
+				name = "TFRKPHN_kj_state_p4"
+				position = { x = 296 y = 168 }
+				text = "TFRKPHN_kj_state_p4"
+				font = "hoi_16mbs"
+				format = centre
+				maxWidth = 68
+				maxHeight = 16
+				fixedsize = yes
+				alwaystransparent = yes
+			}
+
+			buttonType = {
+				name = "TFRKPHN_kj_btn_p5"
+				position = { x = 368 y = 118 }
+				quadTextureSprite = "GFX_TFRKPHN_kj_btn_p5"
+				pdx_tooltip = "TFRKPHN_kj_p5_tt"
+				clicksound = click_default
+			}
+			iconType = {
+				name = "TFRKPHN_kj_lock_p5"
+				position = { x = 368 y = 118 }
+				spriteType = "GFX_TFRKPHN_kj_lock"
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "TFRKPHN_kj_busy_p5"
+				position = { x = 368 y = 118 }
+				spriteType = "GFX_TFRKPHN_kj_busy"
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "TFRKPHN_kj_done_p5"
+				position = { x = 406 y = 114 }
+				spriteType = "GFX_TFRKPHN_kj_done"
+				alwaystransparent = yes
+			}
+			instantTextBoxType = {
+				name = "TFRKPHN_kj_state_p5"
+				position = { x = 362 y = 168 }
+				text = "TFRKPHN_kj_state_p5"
+				font = "hoi_16mbs"
+				format = centre
+				maxWidth = 68
+				maxHeight = 16
+				fixedsize = yes
+				alwaystransparent = yes
+			}
+
+			buttonType = {
+				name = "TFRKPHN_kj_btn_p6"
+				position = { x = 434 y = 118 }
+				quadTextureSprite = "GFX_TFRKPHN_kj_btn_p6"
+				pdx_tooltip = "TFRKPHN_kj_p6_tt"
+				clicksound = click_default
+			}
+			iconType = {
+				name = "TFRKPHN_kj_lock_p6"
+				position = { x = 434 y = 118 }
+				spriteType = "GFX_TFRKPHN_kj_lock"
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "TFRKPHN_kj_busy_p6"
+				position = { x = 434 y = 118 }
+				spriteType = "GFX_TFRKPHN_kj_busy"
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "TFRKPHN_kj_done_p6"
+				position = { x = 472 y = 114 }
+				spriteType = "GFX_TFRKPHN_kj_done"
+				alwaystransparent = yes
+			}
+			instantTextBoxType = {
+				name = "TFRKPHN_kj_state_p6"
+				position = { x = 428 y = 168 }
+				text = "TFRKPHN_kj_state_p6"
+				font = "hoi_16mbs"
+				format = centre
+				maxWidth = 68
+				maxHeight = 16
+				fixedsize = yes
+				alwaystransparent = yes
+			}
+
+			buttonType = {
+				name = "TFRKPHN_kj_btn_u1"
+				position = { x = 170 y = 262 }
+				quadTextureSprite = "GFX_TFRKPHN_kj_btn_u1"
+				pdx_tooltip = "TFRKPHN_kj_u1_tt"
+				clicksound = click_default
+			}
+			iconType = {
+				name = "TFRKPHN_kj_lock_u1"
+				position = { x = 170 y = 262 }
+				spriteType = "GFX_TFRKPHN_kj_lock"
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "TFRKPHN_kj_busy_u1"
+				position = { x = 170 y = 262 }
+				spriteType = "GFX_TFRKPHN_kj_busy"
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "TFRKPHN_kj_done_u1"
+				position = { x = 208 y = 258 }
+				spriteType = "GFX_TFRKPHN_kj_done"
+				alwaystransparent = yes
+			}
+			instantTextBoxType = {
+				name = "TFRKPHN_kj_state_u1"
+				position = { x = 164 y = 312 }
+				text = "TFRKPHN_kj_state_u1"
+				font = "hoi_16mbs"
+				format = centre
+				maxWidth = 68
+				maxHeight = 16
+				fixedsize = yes
+				alwaystransparent = yes
+			}
+
+			buttonType = {
+				name = "TFRKPHN_kj_btn_u2"
+				position = { x = 302 y = 262 }
+				quadTextureSprite = "GFX_TFRKPHN_kj_btn_u2"
+				pdx_tooltip = "TFRKPHN_kj_u2_tt"
+				clicksound = click_default
+			}
+			iconType = {
+				name = "TFRKPHN_kj_lock_u2"
+				position = { x = 302 y = 262 }
+				spriteType = "GFX_TFRKPHN_kj_lock"
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "TFRKPHN_kj_busy_u2"
+				position = { x = 302 y = 262 }
+				spriteType = "GFX_TFRKPHN_kj_busy"
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "TFRKPHN_kj_done_u2"
+				position = { x = 340 y = 258 }
+				spriteType = "GFX_TFRKPHN_kj_done"
+				alwaystransparent = yes
+			}
+			instantTextBoxType = {
+				name = "TFRKPHN_kj_state_u2"
+				position = { x = 296 y = 312 }
+				text = "TFRKPHN_kj_state_u2"
+				font = "hoi_16mbs"
+				format = centre
+				maxWidth = 68
+				maxHeight = 16
+				fixedsize = yes
+				alwaystransparent = yes
+			}
+
+			buttonType = {
+				name = "TFRKPHN_kj_btn_u3"
+				position = { x = 434 y = 262 }
+				quadTextureSprite = "GFX_TFRKPHN_kj_btn_u3"
+				pdx_tooltip = "TFRKPHN_kj_u3_tt"
+				clicksound = click_default
+			}
+			iconType = {
+				name = "TFRKPHN_kj_lock_u3"
+				position = { x = 434 y = 262 }
+				spriteType = "GFX_TFRKPHN_kj_lock"
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "TFRKPHN_kj_busy_u3"
+				position = { x = 434 y = 262 }
+				spriteType = "GFX_TFRKPHN_kj_busy"
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "TFRKPHN_kj_done_u3"
+				position = { x = 472 y = 258 }
+				spriteType = "GFX_TFRKPHN_kj_done"
+				alwaystransparent = yes
+			}
+			instantTextBoxType = {
+				name = "TFRKPHN_kj_state_u3"
+				position = { x = 428 y = 312 }
+				text = "TFRKPHN_kj_state_u3"
+				font = "hoi_16mbs"
+				format = centre
+				maxWidth = 68
+				maxHeight = 16
+				fixedsize = yes
+				alwaystransparent = yes
+			}
+
+			instantTextBoxType = {
+				name = "TFRKPHN_kj_footer"
+				position = { x = 12 y = 440 }
+				text = "TFRKPHN_kj_footer"
+				font = "hoi_16mbs"
+				maxWidth = 480
+				maxHeight = 20
+				alwaystransparent = yes
+			}
+		}
+	}
+}

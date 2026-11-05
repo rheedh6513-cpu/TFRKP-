@@ -2,6 +2,20 @@
 on_actions = {
 	on_daily_KOR = {
 		effect = {
+			if = { limit = { has_global_flag = TFRKPHN_kj_nuke_open } TFRKPHN_kj_daily = yes }
+			# 홍준표 대통령 재임 중에는 보수 지도자가 반드시 홍준표 (다른 사건이 이준석 등을 당 대표로 올려도 되돌린다)
+			if = {
+				limit = {
+					has_country_flag = TFRKP_HN_hong_president
+					has_government = conservative
+					NOT = { has_country_leader = { character = KOR_hong_joon_pyo_char ruling_only = yes } }
+				}
+				if = {
+					limit = { NOT = { has_character = KOR_hong_joon_pyo_char } }
+					recruit_character = KOR_hong_joon_pyo_char
+				}
+				KOR_hong_joon_pyo_char = { promote_character = judicial_conservatism }
+			}
 			# 전국 지지도 하락 미션: 2주마다 무한 반복
 if = {
 	limit = {

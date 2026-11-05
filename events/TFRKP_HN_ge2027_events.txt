@@ -387,3 +387,45 @@ country_event = {
 		name = tfrkphn.323.a
 	}
 }
+
+# PDTO 핵억지 협의 뒤 일본에게: 한일 공동 핵무장 제안
+country_event = {
+	id = tfrkphn.324
+	title = tfrkphn.324.t
+	desc = tfrkphn.324.desc
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.324.a
+		custom_effect_tooltip = TFRKPHN_kj_nuke_unlock_tt
+	}
+}
+
+# 한일 양국 모두 서명: 공동 핵무장 협정 체결
+country_event = {
+	id = tfrkphn.325
+	title = tfrkphn.325.t
+	desc = tfrkphn.325.desc
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = tfrkphn.325.a
+	}
+}
+
+# 한일 첫 핵실험 (세계 뉴스)
+news_event = {
+	id = tfrkphn.326
+	title = tfrkphn.326.t
+	desc = tfrkphn.326.desc
+	picture = GFX_news_event_generic_read_write
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = tfrkphn.326.a
+	}
+}

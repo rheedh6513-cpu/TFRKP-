@@ -177,4 +177,254 @@ scripted_gui = {
 			TFRKPHN_crime_selbox_ulsan_visible = { check_variable = { TFRKPHN_crime_sel = 6 } }
 		}
 	}
+
+	# 한일 공동 핵무장 패널 (결정 탭 대신 그림 위 버튼)
+	TFRKPHN_kj_gui = {
+		context_type = decision_category
+		window_name = TFRKPHN_kj_container
+
+		effects = {
+			TFRKPHN_kj_sign_btn_click = {
+				TFRKPHN_kj_sign_effect = yes
+			}
+			TFRKPHN_kj_btn_s1_click = {
+				add_political_power = -100
+				set_global_flag = TFRKPHN_kj_s1_busy
+				set_variable = { global.TFRKPHN_kj_s1_d = 60 }
+				set_country_flag = TFRKPHN_kj_working
+				add_dynamic_modifier = { modifier = TFRKPHN_kj_factory_use }
+				if = { limit = { tag = KOR } set_global_flag = TFRKPHN_kj_s1_by_KOR }
+				if = { limit = { tag = JAP } set_global_flag = TFRKPHN_kj_s1_by_JAP }
+				
+			}
+			TFRKPHN_kj_btn_s2_click = {
+				add_political_power = -100
+				set_global_flag = TFRKPHN_kj_s2_busy
+				set_variable = { global.TFRKPHN_kj_s2_d = 60 }
+				set_country_flag = TFRKPHN_kj_working
+				add_dynamic_modifier = { modifier = TFRKPHN_kj_factory_use }
+				if = { limit = { tag = KOR } set_global_flag = TFRKPHN_kj_s2_by_KOR }
+				if = { limit = { tag = JAP } set_global_flag = TFRKPHN_kj_s2_by_JAP }
+				
+			}
+			TFRKPHN_kj_btn_p1_click = {
+				add_political_power = -100
+				set_global_flag = TFRKPHN_kj_p1_busy
+				set_variable = { global.TFRKPHN_kj_p1_d = 60 }
+				set_country_flag = TFRKPHN_kj_working
+				add_dynamic_modifier = { modifier = TFRKPHN_kj_factory_use }
+				if = { limit = { tag = KOR } set_global_flag = TFRKPHN_kj_p1_by_KOR }
+				if = { limit = { tag = JAP } set_global_flag = TFRKPHN_kj_p1_by_JAP }
+				if = { limit = { tag = KOR NOT = { has_global_flag = TFRKPHN_kj_path_p_KOR } } set_global_flag = TFRKPHN_kj_path_p_KOR set_global_flag = TFRKPHN_kj_path_u_JAP } if = { limit = { tag = JAP NOT = { has_global_flag = TFRKPHN_kj_path_p_JAP } } set_global_flag = TFRKPHN_kj_path_p_JAP set_global_flag = TFRKPHN_kj_path_u_KOR }
+			}
+			TFRKPHN_kj_btn_p2_click = {
+				add_political_power = -100
+				set_global_flag = TFRKPHN_kj_p2_busy
+				set_variable = { global.TFRKPHN_kj_p2_d = 60 }
+				set_country_flag = TFRKPHN_kj_working
+				add_dynamic_modifier = { modifier = TFRKPHN_kj_factory_use }
+				if = { limit = { tag = KOR } set_global_flag = TFRKPHN_kj_p2_by_KOR }
+				if = { limit = { tag = JAP } set_global_flag = TFRKPHN_kj_p2_by_JAP }
+				if = { limit = { tag = KOR NOT = { has_global_flag = TFRKPHN_kj_path_p_KOR } } set_global_flag = TFRKPHN_kj_path_p_KOR set_global_flag = TFRKPHN_kj_path_u_JAP } if = { limit = { tag = JAP NOT = { has_global_flag = TFRKPHN_kj_path_p_JAP } } set_global_flag = TFRKPHN_kj_path_p_JAP set_global_flag = TFRKPHN_kj_path_u_KOR }
+			}
+			TFRKPHN_kj_btn_p3_click = {
+				add_political_power = -100
+				set_global_flag = TFRKPHN_kj_p3_busy
+				set_variable = { global.TFRKPHN_kj_p3_d = 60 }
+				set_country_flag = TFRKPHN_kj_working
+				add_dynamic_modifier = { modifier = TFRKPHN_kj_factory_use }
+				if = { limit = { tag = KOR } set_global_flag = TFRKPHN_kj_p3_by_KOR }
+				if = { limit = { tag = JAP } set_global_flag = TFRKPHN_kj_p3_by_JAP }
+				if = { limit = { tag = KOR NOT = { has_global_flag = TFRKPHN_kj_path_p_KOR } } set_global_flag = TFRKPHN_kj_path_p_KOR set_global_flag = TFRKPHN_kj_path_u_JAP } if = { limit = { tag = JAP NOT = { has_global_flag = TFRKPHN_kj_path_p_JAP } } set_global_flag = TFRKPHN_kj_path_p_JAP set_global_flag = TFRKPHN_kj_path_u_KOR }
+			}
+			TFRKPHN_kj_btn_p4_click = {
+				add_political_power = -100
+				set_global_flag = TFRKPHN_kj_p4_busy
+				set_variable = { global.TFRKPHN_kj_p4_d = 60 }
+				set_country_flag = TFRKPHN_kj_working
+				add_dynamic_modifier = { modifier = TFRKPHN_kj_factory_use }
+				if = { limit = { tag = KOR } set_global_flag = TFRKPHN_kj_p4_by_KOR }
+				if = { limit = { tag = JAP } set_global_flag = TFRKPHN_kj_p4_by_JAP }
+				if = { limit = { tag = KOR NOT = { has_global_flag = TFRKPHN_kj_path_p_KOR } } set_global_flag = TFRKPHN_kj_path_p_KOR set_global_flag = TFRKPHN_kj_path_u_JAP } if = { limit = { tag = JAP NOT = { has_global_flag = TFRKPHN_kj_path_p_JAP } } set_global_flag = TFRKPHN_kj_path_p_JAP set_global_flag = TFRKPHN_kj_path_u_KOR }
+			}
+			TFRKPHN_kj_btn_p5_click = {
+				add_political_power = -100
+				set_global_flag = TFRKPHN_kj_p5_busy
+				set_variable = { global.TFRKPHN_kj_p5_d = 60 }
+				set_country_flag = TFRKPHN_kj_working
+				add_dynamic_modifier = { modifier = TFRKPHN_kj_factory_use }
+				if = { limit = { tag = KOR } set_global_flag = TFRKPHN_kj_p5_by_KOR }
+				if = { limit = { tag = JAP } set_global_flag = TFRKPHN_kj_p5_by_JAP }
+				if = { limit = { tag = KOR NOT = { has_global_flag = TFRKPHN_kj_path_p_KOR } } set_global_flag = TFRKPHN_kj_path_p_KOR set_global_flag = TFRKPHN_kj_path_u_JAP } if = { limit = { tag = JAP NOT = { has_global_flag = TFRKPHN_kj_path_p_JAP } } set_global_flag = TFRKPHN_kj_path_p_JAP set_global_flag = TFRKPHN_kj_path_u_KOR }
+			}
+			TFRKPHN_kj_btn_p6_click = {
+				add_political_power = -100
+				set_global_flag = TFRKPHN_kj_p6_busy
+				set_variable = { global.TFRKPHN_kj_p6_d = 60 }
+				set_country_flag = TFRKPHN_kj_working
+				add_dynamic_modifier = { modifier = TFRKPHN_kj_factory_use }
+				if = { limit = { tag = KOR } set_global_flag = TFRKPHN_kj_p6_by_KOR }
+				if = { limit = { tag = JAP } set_global_flag = TFRKPHN_kj_p6_by_JAP }
+				if = { limit = { tag = KOR NOT = { has_global_flag = TFRKPHN_kj_path_p_KOR } } set_global_flag = TFRKPHN_kj_path_p_KOR set_global_flag = TFRKPHN_kj_path_u_JAP } if = { limit = { tag = JAP NOT = { has_global_flag = TFRKPHN_kj_path_p_JAP } } set_global_flag = TFRKPHN_kj_path_p_JAP set_global_flag = TFRKPHN_kj_path_u_KOR }
+			}
+			TFRKPHN_kj_btn_u1_click = {
+				add_political_power = -100
+				set_global_flag = TFRKPHN_kj_u1_busy
+				set_variable = { global.TFRKPHN_kj_u1_d = 60 }
+				set_country_flag = TFRKPHN_kj_working
+				add_dynamic_modifier = { modifier = TFRKPHN_kj_factory_use }
+				if = { limit = { tag = KOR } set_global_flag = TFRKPHN_kj_u1_by_KOR }
+				if = { limit = { tag = JAP } set_global_flag = TFRKPHN_kj_u1_by_JAP }
+				if = { limit = { tag = KOR NOT = { has_global_flag = TFRKPHN_kj_path_u_KOR } } set_global_flag = TFRKPHN_kj_path_u_KOR set_global_flag = TFRKPHN_kj_path_p_JAP } if = { limit = { tag = JAP NOT = { has_global_flag = TFRKPHN_kj_path_u_JAP } } set_global_flag = TFRKPHN_kj_path_u_JAP set_global_flag = TFRKPHN_kj_path_p_KOR }
+			}
+			TFRKPHN_kj_btn_u2_click = {
+				add_political_power = -100
+				set_global_flag = TFRKPHN_kj_u2_busy
+				set_variable = { global.TFRKPHN_kj_u2_d = 60 }
+				set_country_flag = TFRKPHN_kj_working
+				add_dynamic_modifier = { modifier = TFRKPHN_kj_factory_use }
+				if = { limit = { tag = KOR } set_global_flag = TFRKPHN_kj_u2_by_KOR }
+				if = { limit = { tag = JAP } set_global_flag = TFRKPHN_kj_u2_by_JAP }
+				if = { limit = { tag = KOR NOT = { has_global_flag = TFRKPHN_kj_path_u_KOR } } set_global_flag = TFRKPHN_kj_path_u_KOR set_global_flag = TFRKPHN_kj_path_p_JAP } if = { limit = { tag = JAP NOT = { has_global_flag = TFRKPHN_kj_path_u_JAP } } set_global_flag = TFRKPHN_kj_path_u_JAP set_global_flag = TFRKPHN_kj_path_p_KOR }
+			}
+			TFRKPHN_kj_btn_u3_click = {
+				add_political_power = -100
+				set_global_flag = TFRKPHN_kj_u3_busy
+				set_variable = { global.TFRKPHN_kj_u3_d = 60 }
+				set_country_flag = TFRKPHN_kj_working
+				add_dynamic_modifier = { modifier = TFRKPHN_kj_factory_use }
+				if = { limit = { tag = KOR } set_global_flag = TFRKPHN_kj_u3_by_KOR }
+				if = { limit = { tag = JAP } set_global_flag = TFRKPHN_kj_u3_by_JAP }
+				if = { limit = { tag = KOR NOT = { has_global_flag = TFRKPHN_kj_path_u_KOR } } set_global_flag = TFRKPHN_kj_path_u_KOR set_global_flag = TFRKPHN_kj_path_p_JAP } if = { limit = { tag = JAP NOT = { has_global_flag = TFRKPHN_kj_path_u_JAP } } set_global_flag = TFRKPHN_kj_path_u_JAP set_global_flag = TFRKPHN_kj_path_p_KOR }
+			}
+		}
+
+		triggers = {
+			TFRKPHN_kj_sign_btn_click_enabled = {
+				NOT = { has_country_flag = TFRKPHN_kj_signed }
+				has_political_power > 49
+			}
+			TFRKPHN_kj_btn_s1_click_enabled = {
+				has_global_flag = TFRKPHN_kj_pact
+				NOT = { has_global_flag = TFRKPHN_kj_s1_done }
+				NOT = { has_global_flag = TFRKPHN_kj_s1_busy }
+				NOT = { has_country_flag = TFRKPHN_kj_working }
+				always = yes
+				has_political_power > 99
+			}
+			TFRKPHN_kj_lock_s1_visible = { OR = { NOT = { has_global_flag = TFRKPHN_kj_pact } NOT = { always = yes } } }
+			TFRKPHN_kj_busy_s1_visible = { has_global_flag = TFRKPHN_kj_s1_busy }
+			TFRKPHN_kj_done_s1_visible = { has_global_flag = TFRKPHN_kj_s1_done }
+			TFRKPHN_kj_btn_s2_click_enabled = {
+				has_global_flag = TFRKPHN_kj_s1_done
+				NOT = { has_global_flag = TFRKPHN_kj_s2_done }
+				NOT = { has_global_flag = TFRKPHN_kj_s2_busy }
+				NOT = { has_country_flag = TFRKPHN_kj_working }
+				always = yes
+				has_political_power > 99
+			}
+			TFRKPHN_kj_lock_s2_visible = { OR = { NOT = { has_global_flag = TFRKPHN_kj_s1_done } NOT = { always = yes } } }
+			TFRKPHN_kj_busy_s2_visible = { has_global_flag = TFRKPHN_kj_s2_busy }
+			TFRKPHN_kj_done_s2_visible = { has_global_flag = TFRKPHN_kj_s2_done }
+			TFRKPHN_kj_btn_p1_click_enabled = {
+				has_global_flag = TFRKPHN_kj_s2_done
+				NOT = { has_global_flag = TFRKPHN_kj_p1_done }
+				NOT = { has_global_flag = TFRKPHN_kj_p1_busy }
+				NOT = { has_country_flag = TFRKPHN_kj_working }
+				OR = { AND = { tag = KOR NOT = { has_global_flag = TFRKPHN_kj_path_p_JAP } } AND = { tag = JAP NOT = { has_global_flag = TFRKPHN_kj_path_p_KOR } } }
+				has_political_power > 99
+			}
+			TFRKPHN_kj_lock_p1_visible = { OR = { NOT = { has_global_flag = TFRKPHN_kj_s2_done } NOT = { OR = { AND = { tag = KOR NOT = { has_global_flag = TFRKPHN_kj_path_p_JAP } } AND = { tag = JAP NOT = { has_global_flag = TFRKPHN_kj_path_p_KOR } } } } } }
+			TFRKPHN_kj_busy_p1_visible = { has_global_flag = TFRKPHN_kj_p1_busy }
+			TFRKPHN_kj_done_p1_visible = { has_global_flag = TFRKPHN_kj_p1_done }
+			TFRKPHN_kj_btn_p2_click_enabled = {
+				has_global_flag = TFRKPHN_kj_p1_done
+				NOT = { has_global_flag = TFRKPHN_kj_p2_done }
+				NOT = { has_global_flag = TFRKPHN_kj_p2_busy }
+				NOT = { has_country_flag = TFRKPHN_kj_working }
+				OR = { AND = { tag = KOR NOT = { has_global_flag = TFRKPHN_kj_path_p_JAP } } AND = { tag = JAP NOT = { has_global_flag = TFRKPHN_kj_path_p_KOR } } }
+				has_political_power > 99
+			}
+			TFRKPHN_kj_lock_p2_visible = { OR = { NOT = { has_global_flag = TFRKPHN_kj_p1_done } NOT = { OR = { AND = { tag = KOR NOT = { has_global_flag = TFRKPHN_kj_path_p_JAP } } AND = { tag = JAP NOT = { has_global_flag = TFRKPHN_kj_path_p_KOR } } } } } }
+			TFRKPHN_kj_busy_p2_visible = { has_global_flag = TFRKPHN_kj_p2_busy }
+			TFRKPHN_kj_done_p2_visible = { has_global_flag = TFRKPHN_kj_p2_done }
+			TFRKPHN_kj_btn_p3_click_enabled = {
+				has_global_flag = TFRKPHN_kj_p2_done
+				NOT = { has_global_flag = TFRKPHN_kj_p3_done }
+				NOT = { has_global_flag = TFRKPHN_kj_p3_busy }
+				NOT = { has_country_flag = TFRKPHN_kj_working }
+				OR = { AND = { tag = KOR NOT = { has_global_flag = TFRKPHN_kj_path_p_JAP } } AND = { tag = JAP NOT = { has_global_flag = TFRKPHN_kj_path_p_KOR } } }
+				has_political_power > 99
+			}
+			TFRKPHN_kj_lock_p3_visible = { OR = { NOT = { has_global_flag = TFRKPHN_kj_p2_done } NOT = { OR = { AND = { tag = KOR NOT = { has_global_flag = TFRKPHN_kj_path_p_JAP } } AND = { tag = JAP NOT = { has_global_flag = TFRKPHN_kj_path_p_KOR } } } } } }
+			TFRKPHN_kj_busy_p3_visible = { has_global_flag = TFRKPHN_kj_p3_busy }
+			TFRKPHN_kj_done_p3_visible = { has_global_flag = TFRKPHN_kj_p3_done }
+			TFRKPHN_kj_btn_p4_click_enabled = {
+				has_global_flag = TFRKPHN_kj_p3_done
+				NOT = { has_global_flag = TFRKPHN_kj_p4_done }
+				NOT = { has_global_flag = TFRKPHN_kj_p4_busy }
+				NOT = { has_country_flag = TFRKPHN_kj_working }
+				OR = { AND = { tag = KOR NOT = { has_global_flag = TFRKPHN_kj_path_p_JAP } } AND = { tag = JAP NOT = { has_global_flag = TFRKPHN_kj_path_p_KOR } } }
+				has_political_power > 99
+			}
+			TFRKPHN_kj_lock_p4_visible = { OR = { NOT = { has_global_flag = TFRKPHN_kj_p3_done } NOT = { OR = { AND = { tag = KOR NOT = { has_global_flag = TFRKPHN_kj_path_p_JAP } } AND = { tag = JAP NOT = { has_global_flag = TFRKPHN_kj_path_p_KOR } } } } } }
+			TFRKPHN_kj_busy_p4_visible = { has_global_flag = TFRKPHN_kj_p4_busy }
+			TFRKPHN_kj_done_p4_visible = { has_global_flag = TFRKPHN_kj_p4_done }
+			TFRKPHN_kj_btn_p5_click_enabled = {
+				has_global_flag = TFRKPHN_kj_p4_done
+				NOT = { has_global_flag = TFRKPHN_kj_p5_done }
+				NOT = { has_global_flag = TFRKPHN_kj_p5_busy }
+				NOT = { has_country_flag = TFRKPHN_kj_working }
+				OR = { AND = { tag = KOR NOT = { has_global_flag = TFRKPHN_kj_path_p_JAP } } AND = { tag = JAP NOT = { has_global_flag = TFRKPHN_kj_path_p_KOR } } }
+				has_political_power > 99
+			}
+			TFRKPHN_kj_lock_p5_visible = { OR = { NOT = { has_global_flag = TFRKPHN_kj_p4_done } NOT = { OR = { AND = { tag = KOR NOT = { has_global_flag = TFRKPHN_kj_path_p_JAP } } AND = { tag = JAP NOT = { has_global_flag = TFRKPHN_kj_path_p_KOR } } } } } }
+			TFRKPHN_kj_busy_p5_visible = { has_global_flag = TFRKPHN_kj_p5_busy }
+			TFRKPHN_kj_done_p5_visible = { has_global_flag = TFRKPHN_kj_p5_done }
+			TFRKPHN_kj_btn_p6_click_enabled = {
+				has_global_flag = TFRKPHN_kj_p5_done
+				NOT = { has_global_flag = TFRKPHN_kj_p6_done }
+				NOT = { has_global_flag = TFRKPHN_kj_p6_busy }
+				NOT = { has_country_flag = TFRKPHN_kj_working }
+				OR = { AND = { tag = KOR NOT = { has_global_flag = TFRKPHN_kj_path_p_JAP } } AND = { tag = JAP NOT = { has_global_flag = TFRKPHN_kj_path_p_KOR } } }
+				has_political_power > 99
+			}
+			TFRKPHN_kj_lock_p6_visible = { OR = { NOT = { has_global_flag = TFRKPHN_kj_p5_done } NOT = { OR = { AND = { tag = KOR NOT = { has_global_flag = TFRKPHN_kj_path_p_JAP } } AND = { tag = JAP NOT = { has_global_flag = TFRKPHN_kj_path_p_KOR } } } } } }
+			TFRKPHN_kj_busy_p6_visible = { has_global_flag = TFRKPHN_kj_p6_busy }
+			TFRKPHN_kj_done_p6_visible = { has_global_flag = TFRKPHN_kj_p6_done }
+			TFRKPHN_kj_btn_u1_click_enabled = {
+				has_global_flag = TFRKPHN_kj_s2_done
+				NOT = { has_global_flag = TFRKPHN_kj_u1_done }
+				NOT = { has_global_flag = TFRKPHN_kj_u1_busy }
+				NOT = { has_country_flag = TFRKPHN_kj_working }
+				OR = { AND = { tag = KOR NOT = { has_global_flag = TFRKPHN_kj_path_u_JAP } } AND = { tag = JAP NOT = { has_global_flag = TFRKPHN_kj_path_u_KOR } } }
+				has_political_power > 99
+			}
+			TFRKPHN_kj_lock_u1_visible = { OR = { NOT = { has_global_flag = TFRKPHN_kj_s2_done } NOT = { OR = { AND = { tag = KOR NOT = { has_global_flag = TFRKPHN_kj_path_u_JAP } } AND = { tag = JAP NOT = { has_global_flag = TFRKPHN_kj_path_u_KOR } } } } } }
+			TFRKPHN_kj_busy_u1_visible = { has_global_flag = TFRKPHN_kj_u1_busy }
+			TFRKPHN_kj_done_u1_visible = { has_global_flag = TFRKPHN_kj_u1_done }
+			TFRKPHN_kj_btn_u2_click_enabled = {
+				has_global_flag = TFRKPHN_kj_u1_done
+				NOT = { has_global_flag = TFRKPHN_kj_u2_done }
+				NOT = { has_global_flag = TFRKPHN_kj_u2_busy }
+				NOT = { has_country_flag = TFRKPHN_kj_working }
+				OR = { AND = { tag = KOR NOT = { has_global_flag = TFRKPHN_kj_path_u_JAP } } AND = { tag = JAP NOT = { has_global_flag = TFRKPHN_kj_path_u_KOR } } }
+				has_political_power > 99
+			}
+			TFRKPHN_kj_lock_u2_visible = { OR = { NOT = { has_global_flag = TFRKPHN_kj_u1_done } NOT = { OR = { AND = { tag = KOR NOT = { has_global_flag = TFRKPHN_kj_path_u_JAP } } AND = { tag = JAP NOT = { has_global_flag = TFRKPHN_kj_path_u_KOR } } } } } }
+			TFRKPHN_kj_busy_u2_visible = { has_global_flag = TFRKPHN_kj_u2_busy }
+			TFRKPHN_kj_done_u2_visible = { has_global_flag = TFRKPHN_kj_u2_done }
+			TFRKPHN_kj_btn_u3_click_enabled = {
+				has_global_flag = TFRKPHN_kj_u2_done
+				NOT = { has_global_flag = TFRKPHN_kj_u3_done }
+				NOT = { has_global_flag = TFRKPHN_kj_u3_busy }
+				NOT = { has_country_flag = TFRKPHN_kj_working }
+				OR = { AND = { tag = KOR NOT = { has_global_flag = TFRKPHN_kj_path_u_JAP } } AND = { tag = JAP NOT = { has_global_flag = TFRKPHN_kj_path_u_KOR } } }
+				has_political_power > 99
+			}
+			TFRKPHN_kj_lock_u3_visible = { OR = { NOT = { has_global_flag = TFRKPHN_kj_u2_done } NOT = { OR = { AND = { tag = KOR NOT = { has_global_flag = TFRKPHN_kj_path_u_JAP } } AND = { tag = JAP NOT = { has_global_flag = TFRKPHN_kj_path_u_KOR } } } } } }
+			TFRKPHN_kj_busy_u3_visible = { has_global_flag = TFRKPHN_kj_u3_busy }
+			TFRKPHN_kj_done_u3_visible = { has_global_flag = TFRKPHN_kj_u3_done }
+		}
+	}
 }

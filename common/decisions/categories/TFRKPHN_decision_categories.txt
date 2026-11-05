@@ -83,3 +83,16 @@ TFRKPHN_crime_category = {
 	}
 	scripted_gui = TFRKPHN_crime_gui
 }
+
+# 한일 공동 핵무장: 홍준표 'PDTO 핵억지 협의' 중점 뒤 한국과 일본 양쪽에 열림
+TFRKPHN_kj_nuke_category = {
+	icon = generic_political_actions
+	priority = 150
+	allowed = { OR = { original_tag = KOR original_tag = JAP } }
+	visible_when_empty = yes
+	visible = {
+		has_global_flag = TFRKPHN_kj_nuke_open
+		OR = { tag = KOR tag = JAP }
+	}
+	scripted_gui = TFRKPHN_kj_gui
+}

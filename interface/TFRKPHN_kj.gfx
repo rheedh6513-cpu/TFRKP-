@@ -1,0 +1,121 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_TFRKPHN_kj_bg"
+		texturefile = "gfx/interface/gui/TFRKPHN_kj/TFRKPHN_kj_bg.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_kj_done"
+		texturefile = "gfx/interface/gui/TFRKPHN_kj/TFRKPHN_kj_done.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_kj_lock"
+		texturefile = "gfx/interface/gui/TFRKPHN_kj/TFRKPHN_kj_lock.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_kj_busy"
+		texturefile = "gfx/interface/gui/TFRKPHN_kj/TFRKPHN_kj_busy.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_kj_btn_s1"
+		texturefile = "gfx/interface/gui/TFRKPHN_kj/TFRKPHN_kj_btn_s1.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_kj_btn_s2"
+		texturefile = "gfx/interface/gui/TFRKPHN_kj/TFRKPHN_kj_btn_s2.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_kj_btn_p1"
+		texturefile = "gfx/interface/gui/TFRKPHN_kj/TFRKPHN_kj_btn_p1.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_kj_btn_p2"
+		texturefile = "gfx/interface/gui/TFRKPHN_kj/TFRKPHN_kj_btn_p2.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_kj_btn_p3"
+		texturefile = "gfx/interface/gui/TFRKPHN_kj/TFRKPHN_kj_btn_p3.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_kj_btn_p4"
+		texturefile = "gfx/interface/gui/TFRKPHN_kj/TFRKPHN_kj_btn_p4.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_kj_btn_p5"
+		texturefile = "gfx/interface/gui/TFRKPHN_kj/TFRKPHN_kj_btn_p5.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_kj_btn_p6"
+		texturefile = "gfx/interface/gui/TFRKPHN_kj/TFRKPHN_kj_btn_p6.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_kj_btn_u1"
+		texturefile = "gfx/interface/gui/TFRKPHN_kj/TFRKPHN_kj_btn_u1.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_kj_btn_u2"
+		texturefile = "gfx/interface/gui/TFRKPHN_kj/TFRKPHN_kj_btn_u2.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_kj_btn_u3"
+		texturefile = "gfx/interface/gui/TFRKPHN_kj/TFRKPHN_kj_btn_u3.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_decision_TFRKPHN_kj_s1"
+		texturefile = "gfx/interface/decisions/TFRKPHN_kj_s1.png"
+	}
+	spriteType = {
+		name = "GFX_decision_TFRKPHN_kj_s2"
+		texturefile = "gfx/interface/decisions/TFRKPHN_kj_s2.png"
+	}
+	spriteType = {
+		name = "GFX_decision_TFRKPHN_kj_p1"
+		texturefile = "gfx/interface/decisions/TFRKPHN_kj_p1.png"
+	}
+	spriteType = {
+		name = "GFX_decision_TFRKPHN_kj_p2"
+		texturefile = "gfx/interface/decisions/TFRKPHN_kj_p2.png"
+	}
+	spriteType = {
+		name = "GFX_decision_TFRKPHN_kj_p3"
+		texturefile = "gfx/interface/decisions/TFRKPHN_kj_p3.png"
+	}
+	spriteType = {
+		name = "GFX_decision_TFRKPHN_kj_p4"
+		texturefile = "gfx/interface/decisions/TFRKPHN_kj_p4.png"
+	}
+	spriteType = {
+		name = "GFX_decision_TFRKPHN_kj_p5"
+		texturefile = "gfx/interface/decisions/TFRKPHN_kj_p5.png"
+	}
+	spriteType = {
+		name = "GFX_decision_TFRKPHN_kj_p6"
+		texturefile = "gfx/interface/decisions/TFRKPHN_kj_p6.png"
+	}
+	spriteType = {
+		name = "GFX_decision_TFRKPHN_kj_u1"
+		texturefile = "gfx/interface/decisions/TFRKPHN_kj_u1.png"
+	}
+	spriteType = {
+		name = "GFX_decision_TFRKPHN_kj_u2"
+		texturefile = "gfx/interface/decisions/TFRKPHN_kj_u2.png"
+	}
+	spriteType = {
+		name = "GFX_decision_TFRKPHN_kj_u3"
+		texturefile = "gfx/interface/decisions/TFRKPHN_kj_u3.png"
+	}
+}
