@@ -1,4 +1,4 @@
-﻿# [안내] 범죄와의 전쟁 결정. 화면은 interface/TFRKPHN_crime.gui.
+# [안내] 범죄와의 전쟁 결정. 화면은 interface/TFRKPHN_crime.gui.
 # [안내] 수정 방법: 모드 폴더의 TUTORIAL_KO.md 7~9장 참고. 새 이름에는 TFRKPHN_ 접두어를 붙이세요.
 TFRKPHN_crime_category = {
 
@@ -36,6 +36,7 @@ TFRKPHN_crime_category = {
 						NOT = { has_country_flag = TFRKPHN_crime_done_seoul }
 					}
 					set_country_flag = TFRKPHN_crime_done_seoul
+					set_variable = { TFRKPHN_crime_last = 1 }
 					add_to_variable = { TFRKPHN_crime_count = 1 }
 					add_stability = 0.02
 					add_to_variable = { TFRKPHN_support_seoul = 3 }
@@ -82,6 +83,7 @@ TFRKPHN_crime_category = {
 						NOT = { has_country_flag = TFRKPHN_crime_done_busan }
 					}
 					set_country_flag = TFRKPHN_crime_done_busan
+					set_variable = { TFRKPHN_crime_last = 2 }
 					add_to_variable = { TFRKPHN_crime_count = 1 }
 					add_stability = 0.02
 					add_to_variable = { TFRKPHN_support_gyeongnam = 3 }
@@ -128,6 +130,7 @@ TFRKPHN_crime_category = {
 						NOT = { has_country_flag = TFRKPHN_crime_done_daegu }
 					}
 					set_country_flag = TFRKPHN_crime_done_daegu
+					set_variable = { TFRKPHN_crime_last = 3 }
 					add_to_variable = { TFRKPHN_crime_count = 1 }
 					add_stability = 0.02
 					add_to_variable = { TFRKPHN_support_gyeongbuk = 3 }
@@ -174,6 +177,7 @@ TFRKPHN_crime_category = {
 						NOT = { has_country_flag = TFRKPHN_crime_done_gwangju }
 					}
 					set_country_flag = TFRKPHN_crime_done_gwangju
+					set_variable = { TFRKPHN_crime_last = 4 }
 					add_to_variable = { TFRKPHN_crime_count = 1 }
 					add_stability = 0.02
 					add_to_variable = { TFRKPHN_support_jeonnam = 3 }
@@ -220,6 +224,7 @@ TFRKPHN_crime_category = {
 						NOT = { has_country_flag = TFRKPHN_crime_done_daejeon }
 					}
 					set_country_flag = TFRKPHN_crime_done_daejeon
+					set_variable = { TFRKPHN_crime_last = 5 }
 					add_to_variable = { TFRKPHN_crime_count = 1 }
 					add_stability = 0.02
 					add_to_variable = { TFRKPHN_support_chungcheong = 3 }
@@ -266,6 +271,7 @@ TFRKPHN_crime_category = {
 						NOT = { has_country_flag = TFRKPHN_crime_done_ulsan }
 					}
 					set_country_flag = TFRKPHN_crime_done_ulsan
+					set_variable = { TFRKPHN_crime_last = 6 }
 					add_to_variable = { TFRKPHN_crime_count = 1 }
 					add_stability = 0.02
 					add_to_variable = { TFRKPHN_support_gyeongnam = 3 }

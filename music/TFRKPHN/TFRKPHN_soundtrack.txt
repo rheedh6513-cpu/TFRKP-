@@ -1,0 +1,8 @@
+music_station = "TFRKPHN_super_events"
+
+music = {
+	song = "TFRKP_TFRKPHN_SE_NK_CIVIL_WAR"
+	chance = {
+		factor = 0
+	}
+}

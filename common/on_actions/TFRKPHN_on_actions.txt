@@ -1,4 +1,4 @@
-﻿# [안내] 날짜와 상황에 맞춰 이벤트를 띄우는 곳 (매일 검사, 내전 발생 등).
+# [안내] 날짜와 상황에 맞춰 이벤트를 띄우는 곳 (매일 검사, 내전 발생 등).
 # [안내] 수정 방법: 모드 폴더의 TUTORIAL_KO.md 7~9장 참고. 새 이름에는 TFRKPHN_ 접두어를 붙이세요.
 # TFRKP Hong Nak: 전당대회 이벤트를 실제 날짜에 정확히 띄우기
 on_actions = {
@@ -18,7 +18,55 @@ on_actions = {
 				}
 				KOR_hong_joon_pyo_char = { promote_character = judicial_conservatism }
 			}
-			# 전국 지지도 하락 미션: 2주마다 무한 반복
+			# 대통령 임기: 대선일이 되면 4년 중임(현직 재출마 가능) 또는 단임(현직 출마 불가) 대선을 치른다
+			if = {
+				limit = { has_country_flag = TFRKPHN_pres_cycle }
+				subtract_from_variable = { TFRKPHN_term_days = 1 }
+				if = {
+					limit = { check_variable = { TFRKPHN_term_days < 1 } }
+					set_variable = { TFRKPHN_term_days = 9999 }	# 대선 이벤트가 끝날 때까지 다시 세지 않는다
+					# 무조건 보수 정권: 현직 재선 -> 아니면 이인제 -> 아니면 오세훈. 둘 다 임기를 다 채웠으면 대선 주기를 끝낸다
+					if = { limit = { TFRKPHN_incumbent_can_run = yes } country_event = { id = tfrkphn.241 } }
+					else_if = { limit = { TFRKPHN_lee_can_take = yes } country_event = { id = tfrkphn.245 } }
+					else_if = { limit = { TFRKPHN_oh_can_take = yes } country_event = { id = tfrkphn.246 } }
+					else = { clr_country_flag = TFRKPHN_pres_cycle }
+				}
+			}
+			# 김정은 참수 뒤 한국과 중국이 전쟁에 들어가면 대아대전이 시작된다 (Korea Plus의 대아대전 시작 처리와 같게)
+			if = {
+				limit = {
+					has_country_flag = TFRKPHN_kju_op_done
+					has_war_with = PRC
+					NOT = { has_global_flag = TFRKP_GAW_is_started_flag }
+				}
+				set_global_flag = TFRKP_GAW_is_started_flag
+				news_event = { id = tfrkphn.253 }
+				PRC = {
+					unlock_national_focus = PRC_support_the_korean_way
+					unlock_national_focus = PRC_finilize_korean_revolution
+					remove_mission = PRC_korean_war_joining
+					country_event = { id = china.1008 hours = 6 }
+					if = {
+						limit = { country_exists = JAP NOT = { has_war_with = JAP } }
+						declare_war_on = { target = JAP type = annex_everything }
+					}
+					PRC_gaw_start = yes
+				}
+			}
+			# 양안전쟁이 끝나면 여론조사 공표 금지를 풀고 지지도 하락을 다시 시작한다
+			if = {
+				limit = {
+					has_country_flag = TFRKPHN_poll_ban
+					KOR_in_taiwan_war = no
+					OR = {
+						has_global_flag = PRC_taiwan_war_lost
+						has_global_flag = PRC_taiwan_war_won
+					}
+				}
+				clr_country_flag = TFRKPHN_poll_ban
+				country_event = { id = tfrkphn.230 }
+			}
+			# 전국 지지도 하락 미션: 30일마다 무한 반복
 if = {
 	limit = {
 		has_country_flag = TFRKP_HN_hong_president
@@ -142,7 +190,15 @@ if = {
 	}
 	set_country_flag = TFRKPHN_ge2027_done
 	TFRKPHN_hong_update_support_display = yes
-	if = {	# 개입 · 승전
+	if = {	# 전당대회에서 이인제 선출 (마지막 중점)
+		limit = { has_country_flag = TFRKPHN_conv_lee }
+		country_event = { id = tfrkphn.301 }
+	}
+	else_if = {	# 전당대회에서 오세훈 선출 (마지막 중점)
+		limit = { has_country_flag = TFRKPHN_conv_oh }
+		country_event = { id = tfrkphn.302 }
+	}
+	else_if = {	# 개입 · 승전
 		limit = { has_completed_focus = TFRKPHN_hong_b02_02 has_global_flag = PRC_taiwan_war_lost }
 		if = {
 			limit = { check_variable = { TFRKPHN_support_avg > 39.999 } }	# 40% 이상이면 이인제
@@ -223,6 +279,7 @@ if = {
 					NOT = { date < 2022.5.10 }
 					has_country_flag = TFRKP_HN_PPP_hong
 					has_country_flag = KOR_yoon_path
+					NOT = { has_country_flag = TFRKPHN_hong_term_over }
 					NOT = { has_country_flag = TFRKPHN_tree_confirmed }
 					has_focus_tree = TFRKPHN_hong_tree
 				}
@@ -234,6 +291,7 @@ if = {
 					NOT = { date < 2022.5.10 }
 					has_country_flag = TFRKP_HN_PPP_hong
 					has_country_flag = KOR_yoon_path
+					NOT = { has_country_flag = TFRKPHN_hong_term_over }	# 2027 대선 뒤 새 대통령 트리를 홍준표 트리로 되돌리지 않는다
 					NOT = { check_variable = { TFRKPHN_tree_retry > 30 } }
 					OR = {
 						NOT = { has_country_flag = TFRKP_HN_hong_president }
@@ -272,6 +330,16 @@ if = {
 					NOT = { has_country_flag = TFRKPHN_b03_shown }
 				}
 				set_country_flag = TFRKPHN_b03_shown
+				mark_focus_tree_layout_dirty = yes
+			}
+			# 승전이든 패전이든 전쟁이 끝나면 1번 줄기를 지우도록 트리를 다시 그린다
+			if = {
+				limit = {
+					has_country_flag = TFRKP_HN_hong_president
+					OR = { has_global_flag = PRC_taiwan_war_lost has_global_flag = PRC_taiwan_war_won }
+					NOT = { has_country_flag = TFRKPHN_b01_hidden }
+				}
+				set_country_flag = TFRKPHN_b01_hidden
 				mark_focus_tree_layout_dirty = yes
 			}
 		}

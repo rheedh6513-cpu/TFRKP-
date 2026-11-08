@@ -1,4 +1,4 @@
-﻿# [안내] 결정 화면의 버튼 동작과 보이는 조건. 모양은 interface/*.gui.
+# [안내] 결정 화면의 버튼 동작과 보이는 조건. 모양은 interface/*.gui.
 # [안내] 수정 방법: 모드 폴더의 TUTORIAL_KO.md 7~9장 참고. 새 이름에는 TFRKPHN_ 접두어를 붙이세요.
 scripted_gui = {
 	TFRKPHN_hong_minsim_gui = {
@@ -431,95 +431,212 @@ scripted_gui = {
 	}
 }
 
-# 국방부 군사 결정 (모두 1회)
-#  육군: 육군 정예화 / 해군: 기동함대 창설 / 공군: 1번째 파오공(FA-50) 추가생산, 2번째 팬텀 퇴역 / 해병대: 해병특수작전군 창설
-#  국방부: 개혁이 남아 있으면 방위산업 육성(군수공장 2개), 모든 개혁이 끝나면 우주군 창설
+# 국방부 패널: 각 군 마크는 탭 버튼이다. 누르면 아래 결정 목록에 그 군의 결정만 보인다.
+#  변수 TFRKPHN_mnd_tab: 0 = 국방부(기본), 1 = 육군, 2 = 해군, 3 = 공군, 4 = 해병대, 5 = 인사 명단(마크 대신 명단이 보임)
+#  실제 개혁은 common/decisions/TFRKPHN_mnd_decisions.txt의 결정으로 한다.
 scripted_gui = {
 	TFRKPHN_mnd_gui = {
 		context_type = decision_category
 		window_name = TFRKPHN_mnd_container
 
-		effects = {
-			TFRKPHN_mnd_btn_army_click = {
-				add_political_power = -50
-				army_experience = 25
-				set_country_flag = TFRKPHN_mnd_army_done
-				add_dynamic_modifier = { modifier = TFRKPHN_mnd_army }
-			}
-			TFRKPHN_mnd_btn_navy_click = {
-				add_political_power = -50
-				navy_experience = 25
-				set_country_flag = TFRKPHN_mnd_navy_done
-				add_dynamic_modifier = { modifier = TFRKPHN_mnd_navy }
-			}
-			TFRKPHN_mnd_btn_air_click = {
-				if = {
-					limit = { NOT = { has_country_flag = TFRKPHN_mnd_fa50_done } }
-					add_political_power = -75
-					air_experience = 25
-					set_country_flag = TFRKPHN_mnd_fa50_done
-					add_dynamic_modifier = { modifier = TFRKPHN_mnd_fa50 }
-					TFRKPHN_mnd_fa50_planes = yes
-				}
-				else = {
-					add_political_power = -50
-					air_experience = 25
-					set_country_flag = TFRKPHN_mnd_f4_done
-					add_dynamic_modifier = { modifier = TFRKPHN_mnd_f4 }
-				}
-			}
-			TFRKPHN_mnd_btn_marine_click = {
-				add_political_power = -100
-				army_experience = 25
-				set_country_flag = TFRKPHN_mnd_marine_done
-				add_dynamic_modifier = { modifier = TFRKPHN_mnd_marine_sof }
-			}
-			TFRKPHN_mnd_btn_mnd_click = {
-				if = {
-					limit = { has_country_flag = TFRKPHN_mnd_army_done has_country_flag = TFRKPHN_mnd_navy_done has_country_flag = TFRKPHN_mnd_fa50_done has_country_flag = TFRKPHN_mnd_f4_done has_country_flag = TFRKPHN_mnd_marine_done }
-					add_political_power = -150
-					set_country_flag = TFRKPHN_mnd_space_done
-					add_dynamic_modifier = { modifier = TFRKPHN_mnd_space }
-				}
-				else = {
-					add_political_power = -100
-					set_country_flag = TFRKPHN_mnd_factory_done
-					every_owned_state = {
-						limit = { is_core_of = ROOT free_building_slots = { building = arms_factory size > 0 include_locked = no } }
-						random_select_amount = 2
-						add_building_construction = { type = arms_factory level = 1 instant_build = yes }
-					}
-					if = {
-						limit = { NOT = { any_owned_state = { is_core_of = ROOT free_building_slots = { building = arms_factory size > 0 include_locked = no } } } }
-						capital_scope = {
-							add_extra_state_shared_building_slots = 2
-							add_building_construction = { type = arms_factory level = 2 instant_build = yes }
-						}
-					}
-				}
-			}
-		}
 
+		effects = {
+			TFRKPHN_mnd_btn_army_click = { set_variable = { TFRKPHN_mnd_tab = 1 } }
+			TFRKPHN_mnd_btn_navy_click = { set_variable = { TFRKPHN_mnd_tab = 2 } }
+			TFRKPHN_mnd_btn_air_click = { set_variable = { TFRKPHN_mnd_tab = 3 } }
+			TFRKPHN_mnd_btn_marine_click = { set_variable = { TFRKPHN_mnd_tab = 4 } }
+			TFRKPHN_mnd_btn_mnd_click = { set_variable = { TFRKPHN_mnd_tab = 0 } }
+			# 인사 명단 열기 / 돌아가기 (돌아가면 국방부 탭)
+			TFRKPHN_mnd_btn_insa_click = { set_variable = { TFRKPHN_mnd_tab = 5 } }
+			TFRKPHN_mnd_btn_back_click = { set_variable = { TFRKPHN_mnd_tab = 0 } }
+			TFRKPHN_insa_tab_army_off_click = { set_variable = { TFRKPHN_insa_page = 1 } }
+			TFRKPHN_insa_tab_navy_off_click = { set_variable = { TFRKPHN_insa_page = 2 } }
+			TFRKPHN_insa_tab_air_off_click = { set_variable = { TFRKPHN_insa_page = 3 } }
+			# 인사 명단 칸을 누르면 그 사람을 바로 임명 (임명 결정과 같은 효과, 지휘력 10)
+			TFRKPHN_insa_card_park_an_su_click = { TFRKPHN_appoint_park_an_su_effect = yes }
+			TFRKPHN_insa_card_kang_sin_chul_click = { TFRKPHN_appoint_kang_sin_chul_effect = yes }
+			TFRKPHN_insa_card_son_sik_click = { TFRKPHN_appoint_son_sik_effect = yes }
+			TFRKPHN_insa_card_ko_chang_jun_click = { TFRKPHN_appoint_ko_chang_jun_effect = yes }
+			TFRKPHN_insa_card_hwang_you_sung_click = { TFRKPHN_appoint_hwang_you_sung_effect = yes }
+			TFRKPHN_insa_card_yeo_in_hyeong_click = { TFRKPHN_appoint_yeo_in_hyeong_effect = yes }
+			TFRKPHN_insa_card_lee_jin_woo_click = { TFRKPHN_appoint_lee_jin_woo_effect = yes }
+			TFRKPHN_insa_card_kwak_jong_keun_click = { TFRKPHN_appoint_kwak_jong_keun_effect = yes }
+			TFRKPHN_insa_card_kim_myung_soo_click = { TFRKPHN_appoint_kim_myung_soo_effect = yes }
+			TFRKPHN_insa_card_yang_yong_mo_click = { TFRKPHN_appoint_yang_yong_mo_effect = yes }
+			TFRKPHN_insa_card_kang_dong_gil_click = { TFRKPHN_appoint_kang_dong_gil_effect = yes }
+			TFRKPHN_insa_card_choi_sung_hyeok_click = { TFRKPHN_appoint_choi_sung_hyeok_effect = yes }
+			TFRKPHN_insa_card_lee_young_soo_click = { TFRKPHN_appoint_lee_young_soo_effect = yes }
+			TFRKPHN_insa_card_son_sug_rag_click = { TFRKPHN_appoint_son_sug_rag_effect = yes }
+			TFRKPHN_insa_card_kim_hyoung_soo_click = { TFRKPHN_appoint_kim_hyoung_soo_effect = yes }
+		}
 		triggers = {
-			TFRKPHN_mnd_btn_army_click_enabled = { NOT = { has_country_flag = TFRKPHN_mnd_army_done } has_political_power > 49 }
-			TFRKPHN_mnd_btn_navy_click_enabled = { NOT = { has_country_flag = TFRKPHN_mnd_navy_done } has_political_power > 49 }
-			TFRKPHN_mnd_btn_air_click_enabled = {
-				NOT = { has_country_flag = TFRKPHN_mnd_f4_done }
-				if = { limit = { NOT = { has_country_flag = TFRKPHN_mnd_fa50_done } } has_political_power > 74 }
-				else = { has_political_power > 49 }
-			}
-			TFRKPHN_mnd_btn_marine_click_enabled = { NOT = { has_country_flag = TFRKPHN_mnd_marine_done } has_political_power > 99 }
-			TFRKPHN_mnd_btn_mnd_click_enabled = {
-				NOT = { has_country_flag = TFRKPHN_mnd_space_done }
-				if = {
-					limit = { has_country_flag = TFRKPHN_mnd_army_done has_country_flag = TFRKPHN_mnd_navy_done has_country_flag = TFRKPHN_mnd_fa50_done has_country_flag = TFRKPHN_mnd_f4_done has_country_flag = TFRKPHN_mnd_marine_done }
-					has_political_power > 149
-				}
-				else = {
-					NOT = { has_country_flag = TFRKPHN_mnd_factory_done }
-					has_political_power > 99
-				}
-			}
+			TFRKPHN_mnd_bg_visible = { NOT = { check_variable = { TFRKPHN_mnd_tab = 5 } } }
+			TFRKPHN_mnd_btn_army_visible = { NOT = { check_variable = { TFRKPHN_mnd_tab = 5 } } }
+			TFRKPHN_mnd_btn_navy_visible = { NOT = { check_variable = { TFRKPHN_mnd_tab = 5 } } }
+			TFRKPHN_mnd_btn_air_visible = { NOT = { check_variable = { TFRKPHN_mnd_tab = 5 } } }
+			TFRKPHN_mnd_btn_marine_visible = { NOT = { check_variable = { TFRKPHN_mnd_tab = 5 } } }
+			TFRKPHN_mnd_btn_mnd_visible = { NOT = { check_variable = { TFRKPHN_mnd_tab = 5 } } }
+			TFRKPHN_mnd_st_army_visible = { NOT = { check_variable = { TFRKPHN_mnd_tab = 5 } } }
+			TFRKPHN_mnd_st_navy_visible = { NOT = { check_variable = { TFRKPHN_mnd_tab = 5 } } }
+			TFRKPHN_mnd_st_air_visible = { NOT = { check_variable = { TFRKPHN_mnd_tab = 5 } } }
+			TFRKPHN_mnd_st_marine_visible = { NOT = { check_variable = { TFRKPHN_mnd_tab = 5 } } }
+			TFRKPHN_mnd_st_mnd_visible = { NOT = { check_variable = { TFRKPHN_mnd_tab = 5 } } }
+			TFRKPHN_mnd_btn_insa_visible = { NOT = { check_variable = { TFRKPHN_mnd_tab = 5 } } }
+			TFRKPHN_mnd_btn_back_visible = { check_variable = { TFRKPHN_mnd_tab = 5 } }
+			# 개혁 완료 목록은 인사 명단을 볼 때 숨김
+			TFRKPHN_mnd_done_head_visible = { NOT = { check_variable = { TFRKPHN_mnd_tab = 5 } } }
+			TFRKPHN_mnd_done_0_visible = { NOT = { check_variable = { TFRKPHN_mnd_tab = 5 } } }
+			TFRKPHN_mnd_done_1_visible = { NOT = { check_variable = { TFRKPHN_mnd_tab = 5 } } }
+			TFRKPHN_mnd_done_2_visible = { NOT = { check_variable = { TFRKPHN_mnd_tab = 5 } } }
+			TFRKPHN_mnd_done_3_visible = { NOT = { check_variable = { TFRKPHN_mnd_tab = 5 } } }
+			TFRKPHN_mnd_done_4_visible = { NOT = { check_variable = { TFRKPHN_mnd_tab = 5 } } }
+			TFRKPHN_mnd_done_5_visible = { NOT = { check_variable = { TFRKPHN_mnd_tab = 5 } } }
+			TFRKPHN_mnd_done_6_visible = { NOT = { check_variable = { TFRKPHN_mnd_tab = 5 } } }
+			TFRKPHN_mnd_done_7_visible = { NOT = { check_variable = { TFRKPHN_mnd_tab = 5 } } }
+			TFRKPHN_mnd_done_8_visible = { NOT = { check_variable = { TFRKPHN_mnd_tab = 5 } } }
+			TFRKPHN_mnd_done_9_visible = { NOT = { check_variable = { TFRKPHN_mnd_tab = 5 } } }
+			TFRKPHN_mnd_done_10_visible = { NOT = { check_variable = { TFRKPHN_mnd_tab = 5 } } }
+			TFRKPHN_mnd_done_11_visible = { NOT = { check_variable = { TFRKPHN_mnd_tab = 5 } } }
+			TFRKPHN_mnd_done_12_visible = { NOT = { check_variable = { TFRKPHN_mnd_tab = 5 } } }
+			TFRKPHN_mnd_done_13_visible = { NOT = { check_variable = { TFRKPHN_mnd_tab = 5 } } }
+			TFRKPHN_mnd_done_14_visible = { NOT = { check_variable = { TFRKPHN_mnd_tab = 5 } } }
+			TFRKPHN_mnd_done_15_visible = { NOT = { check_variable = { TFRKPHN_mnd_tab = 5 } } }
+			TFRKPHN_mnd_done_16_visible = { NOT = { check_variable = { TFRKPHN_mnd_tab = 5 } } }
+			TFRKPHN_mnd_done_17_visible = { NOT = { check_variable = { TFRKPHN_mnd_tab = 5 } } }
+			TFRKPHN_mnd_done_18_visible = { NOT = { check_variable = { TFRKPHN_mnd_tab = 5 } } }
+			TFRKPHN_mnd_done_19_visible = { NOT = { check_variable = { TFRKPHN_mnd_tab = 5 } } }
+			TFRKPHN_mnd_done_20_visible = { NOT = { check_variable = { TFRKPHN_mnd_tab = 5 } } }
+			TFRKPHN_mnd_done_21_visible = { NOT = { check_variable = { TFRKPHN_mnd_tab = 5 } } }
+			TFRKPHN_mnd_done_22_visible = { NOT = { check_variable = { TFRKPHN_mnd_tab = 5 } } }
+			TFRKPHN_mnd_done_23_visible = { NOT = { check_variable = { TFRKPHN_mnd_tab = 5 } } }
+			TFRKPHN_mnd_done_24_visible = { NOT = { check_variable = { TFRKPHN_mnd_tab = 5 } } }
+			TFRKPHN_mnd_done_25_visible = { NOT = { check_variable = { TFRKPHN_mnd_tab = 5 } } }
+			TFRKPHN_mnd_done_26_visible = { NOT = { check_variable = { TFRKPHN_mnd_tab = 5 } } }
+			TFRKPHN_mnd_done_27_visible = { NOT = { check_variable = { TFRKPHN_mnd_tab = 5 } } }
+			# 인사 명단: 인사 탭일 때 + 고른 군(TFRKPHN_insa_page 1 육군(기본) 2 해군 3 공군)
+			TFRKPHN_insa_tab_army_on_visible = { check_variable = { TFRKPHN_mnd_tab = 5 } NOT = { check_variable = { TFRKPHN_insa_page = 2 } check_variable = { TFRKPHN_insa_page = 3 } } }
+			TFRKPHN_insa_tab_army_off_visible = { check_variable = { TFRKPHN_mnd_tab = 5 } NOT = { NOT = { check_variable = { TFRKPHN_insa_page = 2 } check_variable = { TFRKPHN_insa_page = 3 } } } }
+			TFRKPHN_insa_page_army_visible = { check_variable = { TFRKPHN_mnd_tab = 5 } NOT = { check_variable = { TFRKPHN_insa_page = 2 } check_variable = { TFRKPHN_insa_page = 3 } } }
+			TFRKPHN_insa_tab_navy_on_visible = { check_variable = { TFRKPHN_mnd_tab = 5 } check_variable = { TFRKPHN_insa_page = 2 } }
+			TFRKPHN_insa_tab_navy_off_visible = { check_variable = { TFRKPHN_mnd_tab = 5 } NOT = { check_variable = { TFRKPHN_insa_page = 2 } } }
+			TFRKPHN_insa_page_navy_visible = { check_variable = { TFRKPHN_mnd_tab = 5 } check_variable = { TFRKPHN_insa_page = 2 } }
+			TFRKPHN_insa_tab_air_on_visible = { check_variable = { TFRKPHN_mnd_tab = 5 } check_variable = { TFRKPHN_insa_page = 3 } }
+			TFRKPHN_insa_tab_air_off_visible = { check_variable = { TFRKPHN_mnd_tab = 5 } NOT = { check_variable = { TFRKPHN_insa_page = 3 } } }
+			TFRKPHN_insa_page_air_visible = { check_variable = { TFRKPHN_mnd_tab = 5 } check_variable = { TFRKPHN_insa_page = 3 } }
+			TFRKPHN_insa_card_park_an_su_visible = { check_variable = { TFRKPHN_mnd_tab = 5 } NOT = { check_variable = { TFRKPHN_insa_page = 2 } check_variable = { TFRKPHN_insa_page = 3 } } }
+			TFRKPHN_insa_st_park_an_su_visible = { check_variable = { TFRKPHN_mnd_tab = 5 } NOT = { check_variable = { TFRKPHN_insa_page = 2 } check_variable = { TFRKPHN_insa_page = 3 } } }
+			TFRKPHN_insa_card_kang_sin_chul_visible = { check_variable = { TFRKPHN_mnd_tab = 5 } NOT = { check_variable = { TFRKPHN_insa_page = 2 } check_variable = { TFRKPHN_insa_page = 3 } } }
+			TFRKPHN_insa_st_kang_sin_chul_visible = { check_variable = { TFRKPHN_mnd_tab = 5 } NOT = { check_variable = { TFRKPHN_insa_page = 2 } check_variable = { TFRKPHN_insa_page = 3 } } }
+			TFRKPHN_insa_card_son_sik_visible = { check_variable = { TFRKPHN_mnd_tab = 5 } NOT = { check_variable = { TFRKPHN_insa_page = 2 } check_variable = { TFRKPHN_insa_page = 3 } } }
+			TFRKPHN_insa_st_son_sik_visible = { check_variable = { TFRKPHN_mnd_tab = 5 } NOT = { check_variable = { TFRKPHN_insa_page = 2 } check_variable = { TFRKPHN_insa_page = 3 } } }
+			TFRKPHN_insa_card_ko_chang_jun_visible = { check_variable = { TFRKPHN_mnd_tab = 5 } NOT = { check_variable = { TFRKPHN_insa_page = 2 } check_variable = { TFRKPHN_insa_page = 3 } } }
+			TFRKPHN_insa_st_ko_chang_jun_visible = { check_variable = { TFRKPHN_mnd_tab = 5 } NOT = { check_variable = { TFRKPHN_insa_page = 2 } check_variable = { TFRKPHN_insa_page = 3 } } }
+			TFRKPHN_insa_card_hwang_you_sung_visible = { check_variable = { TFRKPHN_mnd_tab = 5 } NOT = { check_variable = { TFRKPHN_insa_page = 2 } check_variable = { TFRKPHN_insa_page = 3 } } }
+			TFRKPHN_insa_st_hwang_you_sung_visible = { check_variable = { TFRKPHN_mnd_tab = 5 } NOT = { check_variable = { TFRKPHN_insa_page = 2 } check_variable = { TFRKPHN_insa_page = 3 } } }
+			TFRKPHN_insa_card_yeo_in_hyeong_visible = { check_variable = { TFRKPHN_mnd_tab = 5 } NOT = { check_variable = { TFRKPHN_insa_page = 2 } check_variable = { TFRKPHN_insa_page = 3 } } }
+			TFRKPHN_insa_st_yeo_in_hyeong_visible = { check_variable = { TFRKPHN_mnd_tab = 5 } NOT = { check_variable = { TFRKPHN_insa_page = 2 } check_variable = { TFRKPHN_insa_page = 3 } } }
+			TFRKPHN_insa_card_lee_jin_woo_visible = { check_variable = { TFRKPHN_mnd_tab = 5 } NOT = { check_variable = { TFRKPHN_insa_page = 2 } check_variable = { TFRKPHN_insa_page = 3 } } }
+			TFRKPHN_insa_st_lee_jin_woo_visible = { check_variable = { TFRKPHN_mnd_tab = 5 } NOT = { check_variable = { TFRKPHN_insa_page = 2 } check_variable = { TFRKPHN_insa_page = 3 } } }
+			TFRKPHN_insa_card_kwak_jong_keun_visible = { check_variable = { TFRKPHN_mnd_tab = 5 } NOT = { check_variable = { TFRKPHN_insa_page = 2 } check_variable = { TFRKPHN_insa_page = 3 } } }
+			TFRKPHN_insa_st_kwak_jong_keun_visible = { check_variable = { TFRKPHN_mnd_tab = 5 } NOT = { check_variable = { TFRKPHN_insa_page = 2 } check_variable = { TFRKPHN_insa_page = 3 } } }
+			TFRKPHN_insa_card_kim_myung_soo_visible = { check_variable = { TFRKPHN_mnd_tab = 5 } check_variable = { TFRKPHN_insa_page = 2 } }
+			TFRKPHN_insa_st_kim_myung_soo_visible = { check_variable = { TFRKPHN_mnd_tab = 5 } check_variable = { TFRKPHN_insa_page = 2 } }
+			TFRKPHN_insa_card_yang_yong_mo_visible = { check_variable = { TFRKPHN_mnd_tab = 5 } check_variable = { TFRKPHN_insa_page = 2 } }
+			TFRKPHN_insa_st_yang_yong_mo_visible = { check_variable = { TFRKPHN_mnd_tab = 5 } check_variable = { TFRKPHN_insa_page = 2 } }
+			TFRKPHN_insa_card_kang_dong_gil_visible = { check_variable = { TFRKPHN_mnd_tab = 5 } check_variable = { TFRKPHN_insa_page = 2 } }
+			TFRKPHN_insa_st_kang_dong_gil_visible = { check_variable = { TFRKPHN_mnd_tab = 5 } check_variable = { TFRKPHN_insa_page = 2 } }
+			TFRKPHN_insa_card_choi_sung_hyeok_visible = { check_variable = { TFRKPHN_mnd_tab = 5 } check_variable = { TFRKPHN_insa_page = 2 } }
+			TFRKPHN_insa_st_choi_sung_hyeok_visible = { check_variable = { TFRKPHN_mnd_tab = 5 } check_variable = { TFRKPHN_insa_page = 2 } }
+			TFRKPHN_insa_card_lee_young_soo_visible = { check_variable = { TFRKPHN_mnd_tab = 5 } check_variable = { TFRKPHN_insa_page = 3 } }
+			TFRKPHN_insa_st_lee_young_soo_visible = { check_variable = { TFRKPHN_mnd_tab = 5 } check_variable = { TFRKPHN_insa_page = 3 } }
+			TFRKPHN_insa_card_son_sug_rag_visible = { check_variable = { TFRKPHN_mnd_tab = 5 } check_variable = { TFRKPHN_insa_page = 3 } }
+			TFRKPHN_insa_st_son_sug_rag_visible = { check_variable = { TFRKPHN_mnd_tab = 5 } check_variable = { TFRKPHN_insa_page = 3 } }
+			TFRKPHN_insa_card_kim_hyoung_soo_visible = { check_variable = { TFRKPHN_mnd_tab = 5 } check_variable = { TFRKPHN_insa_page = 3 } }
+			TFRKPHN_insa_st_kim_hyoung_soo_visible = { check_variable = { TFRKPHN_mnd_tab = 5 } check_variable = { TFRKPHN_insa_page = 3 } }
+			TFRKPHN_insa_card_park_an_su_click_enabled = { NOT = { has_country_flag = TFRKPHN_appointed_park_an_su } NOT = { date < 2023.10.30 } command_power > 9 }
+			TFRKPHN_insa_card_kang_sin_chul_click_enabled = { NOT = { has_country_flag = TFRKPHN_appointed_kang_sin_chul } NOT = { date < 2023.10.30 } command_power > 9 }
+			TFRKPHN_insa_card_son_sik_click_enabled = { NOT = { has_country_flag = TFRKPHN_appointed_son_sik } NOT = { date < 2023.10.30 } command_power > 9 }
+			TFRKPHN_insa_card_ko_chang_jun_click_enabled = { NOT = { has_country_flag = TFRKPHN_appointed_ko_chang_jun } NOT = { date < 2023.10.30 } command_power > 9 }
+			TFRKPHN_insa_card_hwang_you_sung_click_enabled = { NOT = { has_country_flag = TFRKPHN_appointed_hwang_you_sung } NOT = { date < 2023.11.6 } command_power > 9 }
+			TFRKPHN_insa_card_yeo_in_hyeong_click_enabled = { NOT = { has_country_flag = TFRKPHN_appointed_yeo_in_hyeong } NOT = { date < 2023.11.6 } command_power > 9 }
+			TFRKPHN_insa_card_lee_jin_woo_click_enabled = { NOT = { has_country_flag = TFRKPHN_appointed_lee_jin_woo } NOT = { date < 2023.11.6 } command_power > 9 }
+			TFRKPHN_insa_card_kwak_jong_keun_click_enabled = { NOT = { has_country_flag = TFRKPHN_appointed_kwak_jong_keun } NOT = { date < 2023.11.6 } command_power > 9 }
+			TFRKPHN_insa_card_kim_myung_soo_click_enabled = { NOT = { has_country_flag = TFRKPHN_appointed_kim_myung_soo } NOT = { date < 2023.10.30 } command_power > 9 }
+			TFRKPHN_insa_card_yang_yong_mo_click_enabled = { NOT = { has_country_flag = TFRKPHN_appointed_yang_yong_mo } NOT = { date < 2023.10.30 } command_power > 9 }
+			TFRKPHN_insa_card_kang_dong_gil_click_enabled = { NOT = { has_country_flag = TFRKPHN_appointed_kang_dong_gil } NOT = { date < 2023.11.6 } command_power > 9 }
+			TFRKPHN_insa_card_choi_sung_hyeok_click_enabled = { NOT = { has_country_flag = TFRKPHN_appointed_choi_sung_hyeok } NOT = { date < 2023.11.6 } command_power > 9 }
+			TFRKPHN_insa_card_lee_young_soo_click_enabled = { NOT = { has_country_flag = TFRKPHN_appointed_lee_young_soo } NOT = { date < 2023.10.30 } command_power > 9 }
+			TFRKPHN_insa_card_son_sug_rag_click_enabled = { NOT = { has_country_flag = TFRKPHN_appointed_son_sug_rag } NOT = { date < 2023.11.6 } command_power > 9 }
+			TFRKPHN_insa_card_kim_hyoung_soo_click_enabled = { NOT = { has_country_flag = TFRKPHN_appointed_kim_hyoung_soo } NOT = { date < 2023.11.6 } command_power > 9 }
+		}
+	}
+
+	# 「국 - 나라 국」 6각형 패널
+	TFRKPHN_kuk_gui = {
+		context_type = decision_category
+		window_name = TFRKPHN_kuk_container
+		effects = {
+			TFRKPHN_kuk_btn_seohee_click = { set_variable = { TFRKPHN_kuk_sel = 1 } }
+			TFRKPHN_kuk_btn_ottogi_click = { set_variable = { TFRKPHN_kuk_sel = 2 } }
+			TFRKPHN_kuk_btn_kyeryong_click = { set_variable = { TFRKPHN_kuk_sel = 3 } }
+			TFRKPHN_kuk_btn_mackis_click = { set_variable = { TFRKPHN_kuk_sel = 4 } }
+			TFRKPHN_kuk_btn_woomi_click = { set_variable = { TFRKPHN_kuk_sel = 5 } }
+			TFRKPHN_kuk_btn_bohae_click = { set_variable = { TFRKPHN_kuk_sel = 6 } }
+			TFRKPHN_kuk_btn_daemyung_click = { set_variable = { TFRKPHN_kuk_sel = 7 } }
+			TFRKPHN_kuk_btn_douzone_click = { set_variable = { TFRKPHN_kuk_sel = 8 } }
+			TFRKPHN_kuk_btn_hshwasung_click = { set_variable = { TFRKPHN_kuk_sel = 9 } }
+			TFRKPHN_kuk_btn_muhak_click = { set_variable = { TFRKPHN_kuk_sel = 10 } }
+			TFRKPHN_kuk_btn_raon_click = { set_variable = { TFRKPHN_kuk_sel = 11 } }
+			TFRKPHN_kuk_btn_jpdc_click = { set_variable = { TFRKPHN_kuk_sel = 12 } }
+			TFRKPHN_kuk_reg_gyeonggi_click = { set_variable = { TFRKPHN_kuk_sel = 101 } }
+			TFRKPHN_kuk_reg_chungcheong_click = { set_variable = { TFRKPHN_kuk_sel = 102 } }
+			TFRKPHN_kuk_reg_jeolla_click = { set_variable = { TFRKPHN_kuk_sel = 103 } }
+			TFRKPHN_kuk_reg_gangwon_click = { set_variable = { TFRKPHN_kuk_sel = 104 } }
+			TFRKPHN_kuk_reg_gyeongsang_click = { set_variable = { TFRKPHN_kuk_sel = 105 } }
+			TFRKPHN_kuk_reg_jeju_click = { set_variable = { TFRKPHN_kuk_sel = 106 } }
+			TFRKPHN_kuk_center_click = { set_country_flag = TFRKPHN_kuk_complete add_ideas = TFRKPHN_kuk_idea custom_effect_tooltip = TFRKPHN_kuk_idea_tt }
+		}
+		triggers = {
+			TFRKPHN_kuk_center_click_enabled = { NOT = { has_country_flag = TFRKPHN_kuk_complete } check_variable = { TFRKPHN_kuk_lv_gyeonggi > 4 } check_variable = { TFRKPHN_kuk_lv_chungcheong > 4 } check_variable = { TFRKPHN_kuk_lv_jeolla > 4 } check_variable = { TFRKPHN_kuk_lv_gangwon > 4 } check_variable = { TFRKPHN_kuk_lv_gyeongsang > 4 } check_variable = { TFRKPHN_kuk_lv_jeju > 4 } }
+			TFRKPHN_kuk_center_glow_visible = { NOT = { has_country_flag = TFRKPHN_kuk_complete } check_variable = { TFRKPHN_kuk_lv_gyeonggi > 4 } check_variable = { TFRKPHN_kuk_lv_chungcheong > 4 } check_variable = { TFRKPHN_kuk_lv_jeolla > 4 } check_variable = { TFRKPHN_kuk_lv_gangwon > 4 } check_variable = { TFRKPHN_kuk_lv_gyeongsang > 4 } check_variable = { TFRKPHN_kuk_lv_jeju > 4 } }
+			TFRKPHN_kuk_done_seohee_visible = { has_country_flag = TFRKPHN_kuk_done_seohee }
+			TFRKPHN_kuk_sel_seohee_visible = { check_variable = { TFRKPHN_kuk_sel = 1 } }
+			TFRKPHN_kuk_done_ottogi_visible = { has_country_flag = TFRKPHN_kuk_done_ottogi }
+			TFRKPHN_kuk_sel_ottogi_visible = { check_variable = { TFRKPHN_kuk_sel = 2 } }
+			TFRKPHN_kuk_done_kyeryong_visible = { has_country_flag = TFRKPHN_kuk_done_kyeryong }
+			TFRKPHN_kuk_sel_kyeryong_visible = { check_variable = { TFRKPHN_kuk_sel = 3 } }
+			TFRKPHN_kuk_done_mackis_visible = { has_country_flag = TFRKPHN_kuk_done_mackis }
+			TFRKPHN_kuk_sel_mackis_visible = { check_variable = { TFRKPHN_kuk_sel = 4 } }
+			TFRKPHN_kuk_done_woomi_visible = { has_country_flag = TFRKPHN_kuk_done_woomi }
+			TFRKPHN_kuk_sel_woomi_visible = { check_variable = { TFRKPHN_kuk_sel = 5 } }
+			TFRKPHN_kuk_done_bohae_visible = { has_country_flag = TFRKPHN_kuk_done_bohae }
+			TFRKPHN_kuk_sel_bohae_visible = { check_variable = { TFRKPHN_kuk_sel = 6 } }
+			TFRKPHN_kuk_done_daemyung_visible = { has_country_flag = TFRKPHN_kuk_done_daemyung }
+			TFRKPHN_kuk_sel_daemyung_visible = { check_variable = { TFRKPHN_kuk_sel = 7 } }
+			TFRKPHN_kuk_done_douzone_visible = { has_country_flag = TFRKPHN_kuk_done_douzone }
+			TFRKPHN_kuk_sel_douzone_visible = { check_variable = { TFRKPHN_kuk_sel = 8 } }
+			TFRKPHN_kuk_done_hshwasung_visible = { has_country_flag = TFRKPHN_kuk_done_hshwasung }
+			TFRKPHN_kuk_sel_hshwasung_visible = { check_variable = { TFRKPHN_kuk_sel = 9 } }
+			TFRKPHN_kuk_done_muhak_visible = { has_country_flag = TFRKPHN_kuk_done_muhak }
+			TFRKPHN_kuk_sel_muhak_visible = { check_variable = { TFRKPHN_kuk_sel = 10 } }
+			TFRKPHN_kuk_done_raon_visible = { has_country_flag = TFRKPHN_kuk_done_raon }
+			TFRKPHN_kuk_sel_raon_visible = { check_variable = { TFRKPHN_kuk_sel = 11 } }
+			TFRKPHN_kuk_done_jpdc_visible = { has_country_flag = TFRKPHN_kuk_done_jpdc }
+			TFRKPHN_kuk_sel_jpdc_visible = { check_variable = { TFRKPHN_kuk_sel = 12 } }
+			TFRKPHN_kuk_regsel_gyeonggi_visible = { check_variable = { TFRKPHN_kuk_sel = 101 } }
+			TFRKPHN_kuk_regsel_chungcheong_visible = { check_variable = { TFRKPHN_kuk_sel = 102 } }
+			TFRKPHN_kuk_regsel_jeolla_visible = { check_variable = { TFRKPHN_kuk_sel = 103 } }
+			TFRKPHN_kuk_regsel_gangwon_visible = { check_variable = { TFRKPHN_kuk_sel = 104 } }
+			TFRKPHN_kuk_regsel_gyeongsang_visible = { check_variable = { TFRKPHN_kuk_sel = 105 } }
+			TFRKPHN_kuk_regsel_jeju_visible = { check_variable = { TFRKPHN_kuk_sel = 106 } }
+		}
+		properties = {
+			TFRKPHN_kuk_tri_gyeonggi = { frame = TFRKPHN_kuk_fr_gyeonggi }
+			TFRKPHN_kuk_tri_chungcheong = { frame = TFRKPHN_kuk_fr_chungcheong }
+			TFRKPHN_kuk_tri_jeolla = { frame = TFRKPHN_kuk_fr_jeolla }
+			TFRKPHN_kuk_tri_gangwon = { frame = TFRKPHN_kuk_fr_gangwon }
+			TFRKPHN_kuk_tri_gyeongsang = { frame = TFRKPHN_kuk_fr_gyeongsang }
+			TFRKPHN_kuk_tri_jeju = { frame = TFRKPHN_kuk_fr_jeju }
 		}
 	}
 }

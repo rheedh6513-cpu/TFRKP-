@@ -1,0 +1,7 @@
+# 한국 2024년형 구축함 선체(ship_hull_cruiser_3) 그림을 KDDX 사진으로 바꾼다. 다른 나라는 원래 그림을 쓴다.
+spriteTypes = {
+	spriteType = {
+		name = "GFX_KOR_ship_hull_cruiser_3_medium"
+		texturefile = "gfx/interface/equipment/TFRKPHN_KOR_kddx_hull.png"
+	}
+}

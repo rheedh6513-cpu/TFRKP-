@@ -1,14 +1,15 @@
-﻿# [안내] 국방부 군사 결정 패널. 각 군 마크(버튼)를 누르면 효과가 나갑니다. 동작은 common/scripted_guis/TFRKPHN_scripted_guis.txt의 TFRKPHN_mnd_gui.
+# [안내] 국방부 군사 결정 패널. 각 군 마크는 탭 버튼(아래 결정 목록을 그 군 것만 보이게 함), 오른쪽 위 「인사 명단」 버튼은 장성 명단(스크롤)을 엽니다. 동작은 common/scripted_guis/TFRKPHN_scripted_guis.txt의 TFRKPHN_mnd_gui.
 # [안내] 수정 방법: 모드 폴더의 TUTORIAL_KO.md 7~9장 참고. 새 이름에는 TFRKPHN_ 접두어를 붙이세요.
 guiTypes = {
 	containerWindowType = {
 		name = "TFRKPHN_mnd_container"
-		size = { width = 100%% height = 330 }
+		size = { width = 100%% height = 492 }
 
 		containerWindowType = {
 			name = "TFRKPHN_mnd_panel"
 			position = { x = 0 y = 0 }
-			size = { width = 500 height = 328 }
+			size = { width = 500 height = 490 }
+			clipping = yes
 
 			background = {
 				name = "background"
@@ -26,18 +27,342 @@ guiTypes = {
 				}
 				instantTextBoxType = {
 					name = "TFRKPHN_mnd_title_text"
-					position = { x = 0 y = 4 }
+					position = { x = 4 y = 4 }
 					text = "TFRKPHN_mnd_title"
-					font = "hoi_18mbs"
+					font = "hoi_16mbs"
 					format = center
-					maxWidth = 498
+					maxWidth = 404
 					alwaystransparent = yes
+				}
+				buttonType = {
+					name = "TFRKPHN_mnd_btn_insa"
+					position = { x = 414 y = 3 }
+					spriteType = "GFX_TFRKPHN_mnd_btn_insa"
+					pdx_tooltip = "TFRKPHN_mnd_insa_tt"
+					clicksound = click_default
+				}
+				buttonType = {
+					name = "TFRKPHN_mnd_btn_back"
+					position = { x = 414 y = 3 }
+					spriteType = "GFX_TFRKPHN_mnd_btn_back"
+					pdx_tooltip = "TFRKPHN_mnd_back_tt"
+					clicksound = click_default
 				}
 			}
 			iconType = {
 				name = "TFRKPHN_mnd_bg"
 				position = { x = 0 y = 34 }
 				spriteType = "GFX_TFRKPHN_mnd_bg"
+				alwaystransparent = yes
+			}
+			# 인사 명단: 위 군 버튼(육군/해군/공군)으로 한 번에 한 군만 보인다. 마크보다 먼저 적어 마크가 위에 온다.
+			buttonType = {
+				name = "TFRKPHN_insa_tab_army_on"
+				position = { x = 8 y = 36 }
+				spriteType = "GFX_TFRKPHN_mnd_insa_tab_army_on"
+				clicksound = click_default
+			}
+			buttonType = {
+				name = "TFRKPHN_insa_tab_army_off"
+				position = { x = 8 y = 36 }
+				spriteType = "GFX_TFRKPHN_mnd_insa_tab_army_off"
+				clicksound = click_default
+			}
+			iconType = {
+				name = "TFRKPHN_insa_page_army"
+				position = { x = 10 y = 62 }
+				spriteType = "GFX_TFRKPHN_mnd_insa_army"
+				alwaystransparent = yes
+			}
+			buttonType = {
+				name = "TFRKPHN_insa_tab_navy_on"
+				position = { x = 170 y = 36 }
+				spriteType = "GFX_TFRKPHN_mnd_insa_tab_navy_on"
+				clicksound = click_default
+			}
+			buttonType = {
+				name = "TFRKPHN_insa_tab_navy_off"
+				position = { x = 170 y = 36 }
+				spriteType = "GFX_TFRKPHN_mnd_insa_tab_navy_off"
+				clicksound = click_default
+			}
+			iconType = {
+				name = "TFRKPHN_insa_page_navy"
+				position = { x = 10 y = 62 }
+				spriteType = "GFX_TFRKPHN_mnd_insa_navy"
+				alwaystransparent = yes
+			}
+			buttonType = {
+				name = "TFRKPHN_insa_tab_air_on"
+				position = { x = 332 y = 36 }
+				spriteType = "GFX_TFRKPHN_mnd_insa_tab_air_on"
+				clicksound = click_default
+			}
+			buttonType = {
+				name = "TFRKPHN_insa_tab_air_off"
+				position = { x = 332 y = 36 }
+				spriteType = "GFX_TFRKPHN_mnd_insa_tab_air_off"
+				clicksound = click_default
+			}
+			iconType = {
+				name = "TFRKPHN_insa_page_air"
+				position = { x = 10 y = 62 }
+				spriteType = "GFX_TFRKPHN_mnd_insa_air"
+				alwaystransparent = yes
+			}
+			buttonType = {
+				name = "TFRKPHN_insa_card_park_an_su"
+				position = { x = 14 y = 64 }
+				spriteType = "GFX_TFRKPHN_mnd_insa_card"
+				pdx_tooltip = "TFRKPHN_insa_tt_park_an_su"
+				clicksound = click_default
+			}
+			instantTextBoxType = {
+				name = "TFRKPHN_insa_st_park_an_su"
+				position = { x = 28 y = 230 }
+				text = "TFRKPHN_insa_st_park_an_su"
+				font = "hoi_16mbs"
+				format = center
+				maxWidth = 87
+				maxHeight = 16
+				alwaystransparent = yes
+			}
+			buttonType = {
+				name = "TFRKPHN_insa_card_kang_sin_chul"
+				position = { x = 133 y = 64 }
+				spriteType = "GFX_TFRKPHN_mnd_insa_card"
+				pdx_tooltip = "TFRKPHN_insa_tt_kang_sin_chul"
+				clicksound = click_default
+			}
+			instantTextBoxType = {
+				name = "TFRKPHN_insa_st_kang_sin_chul"
+				position = { x = 147 y = 230 }
+				text = "TFRKPHN_insa_st_kang_sin_chul"
+				font = "hoi_16mbs"
+				format = center
+				maxWidth = 87
+				maxHeight = 16
+				alwaystransparent = yes
+			}
+			buttonType = {
+				name = "TFRKPHN_insa_card_son_sik"
+				position = { x = 252 y = 64 }
+				spriteType = "GFX_TFRKPHN_mnd_insa_card"
+				pdx_tooltip = "TFRKPHN_insa_tt_son_sik"
+				clicksound = click_default
+			}
+			instantTextBoxType = {
+				name = "TFRKPHN_insa_st_son_sik"
+				position = { x = 266 y = 230 }
+				text = "TFRKPHN_insa_st_son_sik"
+				font = "hoi_16mbs"
+				format = center
+				maxWidth = 87
+				maxHeight = 16
+				alwaystransparent = yes
+			}
+			buttonType = {
+				name = "TFRKPHN_insa_card_ko_chang_jun"
+				position = { x = 371 y = 64 }
+				spriteType = "GFX_TFRKPHN_mnd_insa_card"
+				pdx_tooltip = "TFRKPHN_insa_tt_ko_chang_jun"
+				clicksound = click_default
+			}
+			instantTextBoxType = {
+				name = "TFRKPHN_insa_st_ko_chang_jun"
+				position = { x = 385 y = 230 }
+				text = "TFRKPHN_insa_st_ko_chang_jun"
+				font = "hoi_16mbs"
+				format = center
+				maxWidth = 87
+				maxHeight = 16
+				alwaystransparent = yes
+			}
+			buttonType = {
+				name = "TFRKPHN_insa_card_hwang_you_sung"
+				position = { x = 14 y = 252 }
+				spriteType = "GFX_TFRKPHN_mnd_insa_card"
+				pdx_tooltip = "TFRKPHN_insa_tt_hwang_you_sung"
+				clicksound = click_default
+			}
+			instantTextBoxType = {
+				name = "TFRKPHN_insa_st_hwang_you_sung"
+				position = { x = 28 y = 418 }
+				text = "TFRKPHN_insa_st_hwang_you_sung"
+				font = "hoi_16mbs"
+				format = center
+				maxWidth = 87
+				maxHeight = 16
+				alwaystransparent = yes
+			}
+			buttonType = {
+				name = "TFRKPHN_insa_card_yeo_in_hyeong"
+				position = { x = 133 y = 252 }
+				spriteType = "GFX_TFRKPHN_mnd_insa_card"
+				pdx_tooltip = "TFRKPHN_insa_tt_yeo_in_hyeong"
+				clicksound = click_default
+			}
+			instantTextBoxType = {
+				name = "TFRKPHN_insa_st_yeo_in_hyeong"
+				position = { x = 147 y = 418 }
+				text = "TFRKPHN_insa_st_yeo_in_hyeong"
+				font = "hoi_16mbs"
+				format = center
+				maxWidth = 87
+				maxHeight = 16
+				alwaystransparent = yes
+			}
+			buttonType = {
+				name = "TFRKPHN_insa_card_lee_jin_woo"
+				position = { x = 252 y = 252 }
+				spriteType = "GFX_TFRKPHN_mnd_insa_card"
+				pdx_tooltip = "TFRKPHN_insa_tt_lee_jin_woo"
+				clicksound = click_default
+			}
+			instantTextBoxType = {
+				name = "TFRKPHN_insa_st_lee_jin_woo"
+				position = { x = 266 y = 418 }
+				text = "TFRKPHN_insa_st_lee_jin_woo"
+				font = "hoi_16mbs"
+				format = center
+				maxWidth = 87
+				maxHeight = 16
+				alwaystransparent = yes
+			}
+			buttonType = {
+				name = "TFRKPHN_insa_card_kwak_jong_keun"
+				position = { x = 371 y = 252 }
+				spriteType = "GFX_TFRKPHN_mnd_insa_card"
+				pdx_tooltip = "TFRKPHN_insa_tt_kwak_jong_keun"
+				clicksound = click_default
+			}
+			instantTextBoxType = {
+				name = "TFRKPHN_insa_st_kwak_jong_keun"
+				position = { x = 385 y = 418 }
+				text = "TFRKPHN_insa_st_kwak_jong_keun"
+				font = "hoi_16mbs"
+				format = center
+				maxWidth = 87
+				maxHeight = 16
+				alwaystransparent = yes
+			}
+			buttonType = {
+				name = "TFRKPHN_insa_card_kim_myung_soo"
+				position = { x = 14 y = 64 }
+				spriteType = "GFX_TFRKPHN_mnd_insa_card"
+				pdx_tooltip = "TFRKPHN_insa_tt_kim_myung_soo"
+				clicksound = click_default
+			}
+			instantTextBoxType = {
+				name = "TFRKPHN_insa_st_kim_myung_soo"
+				position = { x = 28 y = 230 }
+				text = "TFRKPHN_insa_st_kim_myung_soo"
+				font = "hoi_16mbs"
+				format = center
+				maxWidth = 87
+				maxHeight = 16
+				alwaystransparent = yes
+			}
+			buttonType = {
+				name = "TFRKPHN_insa_card_yang_yong_mo"
+				position = { x = 133 y = 64 }
+				spriteType = "GFX_TFRKPHN_mnd_insa_card"
+				pdx_tooltip = "TFRKPHN_insa_tt_yang_yong_mo"
+				clicksound = click_default
+			}
+			instantTextBoxType = {
+				name = "TFRKPHN_insa_st_yang_yong_mo"
+				position = { x = 147 y = 230 }
+				text = "TFRKPHN_insa_st_yang_yong_mo"
+				font = "hoi_16mbs"
+				format = center
+				maxWidth = 87
+				maxHeight = 16
+				alwaystransparent = yes
+			}
+			buttonType = {
+				name = "TFRKPHN_insa_card_kang_dong_gil"
+				position = { x = 252 y = 64 }
+				spriteType = "GFX_TFRKPHN_mnd_insa_card"
+				pdx_tooltip = "TFRKPHN_insa_tt_kang_dong_gil"
+				clicksound = click_default
+			}
+			instantTextBoxType = {
+				name = "TFRKPHN_insa_st_kang_dong_gil"
+				position = { x = 266 y = 230 }
+				text = "TFRKPHN_insa_st_kang_dong_gil"
+				font = "hoi_16mbs"
+				format = center
+				maxWidth = 87
+				maxHeight = 16
+				alwaystransparent = yes
+			}
+			buttonType = {
+				name = "TFRKPHN_insa_card_choi_sung_hyeok"
+				position = { x = 371 y = 64 }
+				spriteType = "GFX_TFRKPHN_mnd_insa_card"
+				pdx_tooltip = "TFRKPHN_insa_tt_choi_sung_hyeok"
+				clicksound = click_default
+			}
+			instantTextBoxType = {
+				name = "TFRKPHN_insa_st_choi_sung_hyeok"
+				position = { x = 385 y = 230 }
+				text = "TFRKPHN_insa_st_choi_sung_hyeok"
+				font = "hoi_16mbs"
+				format = center
+				maxWidth = 87
+				maxHeight = 16
+				alwaystransparent = yes
+			}
+			buttonType = {
+				name = "TFRKPHN_insa_card_lee_young_soo"
+				position = { x = 14 y = 64 }
+				spriteType = "GFX_TFRKPHN_mnd_insa_card"
+				pdx_tooltip = "TFRKPHN_insa_tt_lee_young_soo"
+				clicksound = click_default
+			}
+			instantTextBoxType = {
+				name = "TFRKPHN_insa_st_lee_young_soo"
+				position = { x = 28 y = 230 }
+				text = "TFRKPHN_insa_st_lee_young_soo"
+				font = "hoi_16mbs"
+				format = center
+				maxWidth = 87
+				maxHeight = 16
+				alwaystransparent = yes
+			}
+			buttonType = {
+				name = "TFRKPHN_insa_card_son_sug_rag"
+				position = { x = 133 y = 64 }
+				spriteType = "GFX_TFRKPHN_mnd_insa_card"
+				pdx_tooltip = "TFRKPHN_insa_tt_son_sug_rag"
+				clicksound = click_default
+			}
+			instantTextBoxType = {
+				name = "TFRKPHN_insa_st_son_sug_rag"
+				position = { x = 147 y = 230 }
+				text = "TFRKPHN_insa_st_son_sug_rag"
+				font = "hoi_16mbs"
+				format = center
+				maxWidth = 87
+				maxHeight = 16
+				alwaystransparent = yes
+			}
+			buttonType = {
+				name = "TFRKPHN_insa_card_kim_hyoung_soo"
+				position = { x = 252 y = 64 }
+				spriteType = "GFX_TFRKPHN_mnd_insa_card"
+				pdx_tooltip = "TFRKPHN_insa_tt_kim_hyoung_soo"
+				clicksound = click_default
+			}
+			instantTextBoxType = {
+				name = "TFRKPHN_insa_st_kim_hyoung_soo"
+				position = { x = 266 y = 230 }
+				text = "TFRKPHN_insa_st_kim_hyoung_soo"
+				font = "hoi_16mbs"
+				format = center
+				maxWidth = 87
+				maxHeight = 16
 				alwaystransparent = yes
 			}
 			buttonType = {
@@ -70,7 +395,7 @@ guiTypes = {
 			}
 			buttonType = {
 				name = "TFRKPHN_mnd_btn_mnd"
-				position = { x = 125 y = 76 }
+				position = { x = 167 y = 98 }
 				spriteType = "GFX_TFRKPHN_mnd_btn_mnd"
 				pdx_tooltip = "TFRKPHN_mnd_mnd_tt"
 				clicksound = click_default
@@ -123,6 +448,268 @@ guiTypes = {
 				format = center
 				maxWidth = 96
 				maxHeight = 34
+				alwaystransparent = yes
+			}
+			# 개혁 완료 목록: 끝낸 개혁이 끝낸 순서대로 4칸씩 줄지어 쌓인다 (배열 TFRKPHN_mnd_done)
+			instantTextBoxType = {
+				name = "TFRKPHN_mnd_done_head"
+				position = { x = 10 y = 330 }
+				text = "TFRKPHN_mnd_done_head"
+				font = "hoi_16mbs"
+				maxWidth = 480
+				maxHeight = 18
+				alwaystransparent = yes
+			}
+			instantTextBoxType = {
+				name = "TFRKPHN_mnd_done_0"
+				position = { x = 12 y = 350 }
+				text = "TFRKPHN_mnd_done_0"
+				font = "hoi_16mbs"
+				maxWidth = 118
+				maxHeight = 18
+				alwaystransparent = yes
+			}
+			instantTextBoxType = {
+				name = "TFRKPHN_mnd_done_1"
+				position = { x = 133 y = 350 }
+				text = "TFRKPHN_mnd_done_1"
+				font = "hoi_16mbs"
+				maxWidth = 118
+				maxHeight = 18
+				alwaystransparent = yes
+			}
+			instantTextBoxType = {
+				name = "TFRKPHN_mnd_done_2"
+				position = { x = 254 y = 350 }
+				text = "TFRKPHN_mnd_done_2"
+				font = "hoi_16mbs"
+				maxWidth = 118
+				maxHeight = 18
+				alwaystransparent = yes
+			}
+			instantTextBoxType = {
+				name = "TFRKPHN_mnd_done_3"
+				position = { x = 375 y = 350 }
+				text = "TFRKPHN_mnd_done_3"
+				font = "hoi_16mbs"
+				maxWidth = 118
+				maxHeight = 18
+				alwaystransparent = yes
+			}
+			instantTextBoxType = {
+				name = "TFRKPHN_mnd_done_4"
+				position = { x = 12 y = 369 }
+				text = "TFRKPHN_mnd_done_4"
+				font = "hoi_16mbs"
+				maxWidth = 118
+				maxHeight = 18
+				alwaystransparent = yes
+			}
+			instantTextBoxType = {
+				name = "TFRKPHN_mnd_done_5"
+				position = { x = 133 y = 369 }
+				text = "TFRKPHN_mnd_done_5"
+				font = "hoi_16mbs"
+				maxWidth = 118
+				maxHeight = 18
+				alwaystransparent = yes
+			}
+			instantTextBoxType = {
+				name = "TFRKPHN_mnd_done_6"
+				position = { x = 254 y = 369 }
+				text = "TFRKPHN_mnd_done_6"
+				font = "hoi_16mbs"
+				maxWidth = 118
+				maxHeight = 18
+				alwaystransparent = yes
+			}
+			instantTextBoxType = {
+				name = "TFRKPHN_mnd_done_7"
+				position = { x = 375 y = 369 }
+				text = "TFRKPHN_mnd_done_7"
+				font = "hoi_16mbs"
+				maxWidth = 118
+				maxHeight = 18
+				alwaystransparent = yes
+			}
+			instantTextBoxType = {
+				name = "TFRKPHN_mnd_done_8"
+				position = { x = 12 y = 388 }
+				text = "TFRKPHN_mnd_done_8"
+				font = "hoi_16mbs"
+				maxWidth = 118
+				maxHeight = 18
+				alwaystransparent = yes
+			}
+			instantTextBoxType = {
+				name = "TFRKPHN_mnd_done_9"
+				position = { x = 133 y = 388 }
+				text = "TFRKPHN_mnd_done_9"
+				font = "hoi_16mbs"
+				maxWidth = 118
+				maxHeight = 18
+				alwaystransparent = yes
+			}
+			instantTextBoxType = {
+				name = "TFRKPHN_mnd_done_10"
+				position = { x = 254 y = 388 }
+				text = "TFRKPHN_mnd_done_10"
+				font = "hoi_16mbs"
+				maxWidth = 118
+				maxHeight = 18
+				alwaystransparent = yes
+			}
+			instantTextBoxType = {
+				name = "TFRKPHN_mnd_done_11"
+				position = { x = 375 y = 388 }
+				text = "TFRKPHN_mnd_done_11"
+				font = "hoi_16mbs"
+				maxWidth = 118
+				maxHeight = 18
+				alwaystransparent = yes
+			}
+			instantTextBoxType = {
+				name = "TFRKPHN_mnd_done_12"
+				position = { x = 12 y = 407 }
+				text = "TFRKPHN_mnd_done_12"
+				font = "hoi_16mbs"
+				maxWidth = 118
+				maxHeight = 18
+				alwaystransparent = yes
+			}
+			instantTextBoxType = {
+				name = "TFRKPHN_mnd_done_13"
+				position = { x = 133 y = 407 }
+				text = "TFRKPHN_mnd_done_13"
+				font = "hoi_16mbs"
+				maxWidth = 118
+				maxHeight = 18
+				alwaystransparent = yes
+			}
+			instantTextBoxType = {
+				name = "TFRKPHN_mnd_done_14"
+				position = { x = 254 y = 407 }
+				text = "TFRKPHN_mnd_done_14"
+				font = "hoi_16mbs"
+				maxWidth = 118
+				maxHeight = 18
+				alwaystransparent = yes
+			}
+			instantTextBoxType = {
+				name = "TFRKPHN_mnd_done_15"
+				position = { x = 375 y = 407 }
+				text = "TFRKPHN_mnd_done_15"
+				font = "hoi_16mbs"
+				maxWidth = 118
+				maxHeight = 18
+				alwaystransparent = yes
+			}
+			instantTextBoxType = {
+				name = "TFRKPHN_mnd_done_16"
+				position = { x = 12 y = 426 }
+				text = "TFRKPHN_mnd_done_16"
+				font = "hoi_16mbs"
+				maxWidth = 118
+				maxHeight = 18
+				alwaystransparent = yes
+			}
+			instantTextBoxType = {
+				name = "TFRKPHN_mnd_done_17"
+				position = { x = 133 y = 426 }
+				text = "TFRKPHN_mnd_done_17"
+				font = "hoi_16mbs"
+				maxWidth = 118
+				maxHeight = 18
+				alwaystransparent = yes
+			}
+			instantTextBoxType = {
+				name = "TFRKPHN_mnd_done_18"
+				position = { x = 254 y = 426 }
+				text = "TFRKPHN_mnd_done_18"
+				font = "hoi_16mbs"
+				maxWidth = 118
+				maxHeight = 18
+				alwaystransparent = yes
+			}
+			instantTextBoxType = {
+				name = "TFRKPHN_mnd_done_19"
+				position = { x = 375 y = 426 }
+				text = "TFRKPHN_mnd_done_19"
+				font = "hoi_16mbs"
+				maxWidth = 118
+				maxHeight = 18
+				alwaystransparent = yes
+			}
+			instantTextBoxType = {
+				name = "TFRKPHN_mnd_done_20"
+				position = { x = 12 y = 445 }
+				text = "TFRKPHN_mnd_done_20"
+				font = "hoi_16mbs"
+				maxWidth = 118
+				maxHeight = 18
+				alwaystransparent = yes
+			}
+			instantTextBoxType = {
+				name = "TFRKPHN_mnd_done_21"
+				position = { x = 133 y = 445 }
+				text = "TFRKPHN_mnd_done_21"
+				font = "hoi_16mbs"
+				maxWidth = 118
+				maxHeight = 18
+				alwaystransparent = yes
+			}
+			instantTextBoxType = {
+				name = "TFRKPHN_mnd_done_22"
+				position = { x = 254 y = 445 }
+				text = "TFRKPHN_mnd_done_22"
+				font = "hoi_16mbs"
+				maxWidth = 118
+				maxHeight = 18
+				alwaystransparent = yes
+			}
+			instantTextBoxType = {
+				name = "TFRKPHN_mnd_done_23"
+				position = { x = 375 y = 445 }
+				text = "TFRKPHN_mnd_done_23"
+				font = "hoi_16mbs"
+				maxWidth = 118
+				maxHeight = 18
+				alwaystransparent = yes
+			}
+			instantTextBoxType = {
+				name = "TFRKPHN_mnd_done_24"
+				position = { x = 12 y = 464 }
+				text = "TFRKPHN_mnd_done_24"
+				font = "hoi_16mbs"
+				maxWidth = 118
+				maxHeight = 18
+				alwaystransparent = yes
+			}
+			instantTextBoxType = {
+				name = "TFRKPHN_mnd_done_25"
+				position = { x = 133 y = 464 }
+				text = "TFRKPHN_mnd_done_25"
+				font = "hoi_16mbs"
+				maxWidth = 118
+				maxHeight = 18
+				alwaystransparent = yes
+			}
+			instantTextBoxType = {
+				name = "TFRKPHN_mnd_done_26"
+				position = { x = 254 y = 464 }
+				text = "TFRKPHN_mnd_done_26"
+				font = "hoi_16mbs"
+				maxWidth = 118
+				maxHeight = 18
+				alwaystransparent = yes
+			}
+			instantTextBoxType = {
+				name = "TFRKPHN_mnd_done_27"
+				position = { x = 375 y = 464 }
+				text = "TFRKPHN_mnd_done_27"
+				font = "hoi_16mbs"
+				maxWidth = 118
+				maxHeight = 18
 				alwaystransparent = yes
 			}
 		}

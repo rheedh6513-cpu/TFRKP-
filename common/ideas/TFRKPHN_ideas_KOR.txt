@@ -1,4 +1,4 @@
-﻿# [안내] 국가정신(아이디어). 아이콘은 interface/TFRKP_HN.gfx의 GFX_idea_*.
+# [안내] 국가정신(아이디어). 아이콘은 interface/TFRKP_HN.gfx의 GFX_idea_*.
 # [안내] 수정 방법: 모드 폴더의 TUTORIAL_KO.md 7~9장 참고. 새 이름에는 TFRKPHN_ 접두어를 붙이세요.
 ideas = {
 	head_minister = {
@@ -83,6 +83,51 @@ ideas = {
 				political_power_factor = 0.03
 				stability_factor = 0.03
 				war_support_factor = 0.03
+			}
+		}
+		# 법인세 인하 (홍준표 중점 b03_29)
+		TFRKPHN_corp_tax_cut = {
+			picture = KOR_yoon_common_conservatism_dynamic_modifir_idea
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				business_value_factor = 0.10
+				consumer_goods_factor = -0.05
+			}
+		}
+		# 이북5도위원회(NK3)가 받는 대한민국 국군의 지원
+		TFRKPHN_rok_army_support = {
+			picture = KOR_yoon_common_conservatism_dynamic_modifir_idea
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				army_attack_factor = 0.20
+				army_defence_factor = 0.20
+				army_org_factor = 0.10
+			}
+		}
+		# 김정은 암살 뒤 PDTO 연합국 폭격 (북한, 군사위원회)
+		TFRKPHN_pdto_bombing = {
+			picture = KOR_yoon_common_conservatism_dynamic_modifir_idea
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				industrial_capacity_factory = -0.25
+				army_attack_factor = -0.15
+				army_defence_factor = -0.15
+			}
+		}
+		# 「국 - 나라 국」 6도 균형발전 완성 (6각형 가운데 國 버튼)
+		TFRKPHN_kuk_idea = {
+			picture = KOR_yoon_common_conservatism_dynamic_modifir_idea
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				production_speed_buildings_factor = 0.15
+				production_speed_infrastructure_factor = 0.20
+				personal_value_factor = 0.10
+				business_value_factor = 0.10
+				misc_expense = -0.15
 			}
 		}
 		TFRKPHN_postwar_prosperity = {

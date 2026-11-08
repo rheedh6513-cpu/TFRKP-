@@ -1,4 +1,4 @@
-﻿# [안내] 홍준표 중점 트리. 위치는 x/y와 relative_position_id, 이름과 설명은 localisation/korean/TFRKP_HN_hong_focus_l_korean.yml. 자세한 방법은 TUTORIAL_KO.md 참고.
+# [안내] 홍준표 중점 트리. 위치는 x/y와 relative_position_id, 이름과 설명은 localisation/korean/TFRKP_HN_hong_focus_l_korean.yml. 자세한 방법은 TUTORIAL_KO.md 참고.
 # [안내] 수정 방법: 모드 폴더의 TUTORIAL_KO.md 7~9장 참고. 새 이름에는 TFRKPHN_ 접두어를 붙이세요.
 focus_tree = {
 	id = TFRKPHN_hong_tree
@@ -13,9 +13,16 @@ focus_tree = {
 	focus = {
 		id = TFRKPHN_hong_b01_01
 		icon = GFX_focus_TFRKPHN_hong_start
+		# 전쟁 전 줄기(1번)는 양안전쟁이 끝나면(승패 결정) 통째로 사라진다. 이미 완료한 중점 효과와 완료 기록은 그대로 남는다
+		allow_branch = {
+			NOT = {
+				has_global_flag = PRC_taiwan_war_lost
+				has_global_flag = PRC_taiwan_war_won
+			}
+		}
 		x = 6
 		y = 0
-		cost = 5
+		cost = 4
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_stability = 0.10
@@ -25,10 +32,10 @@ focus_tree = {
 
 	focus = {
 		id = TFRKPHN_hong_b01_02
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_focus_TFRKPHN_after_storm
 		x = 6
 		y = 1
-		cost = 5
+		cost = 4
 		prerequisite = { focus = TFRKPHN_hong_b01_01 }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
@@ -47,10 +54,10 @@ focus_tree = {
 
 	focus = {
 		id = TFRKPHN_hong_b01_03
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_focus_TFRKPHN_bar_exam
 		x = 3
 		y = 2
-		cost = 5
+		cost = 4
 		prerequisite = { focus = TFRKPHN_hong_b01_02 }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
@@ -60,7 +67,7 @@ focus_tree = {
 
 	focus = {
 		id = TFRKPHN_hong_b01_04
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_focus_TFRKPHN_labor_flex
 		x = 6
 		y = 2
 		cost = 2
@@ -73,10 +80,10 @@ focus_tree = {
 
 	focus = {
 		id = TFRKPHN_hong_b01_05
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_focus_TFRKPHN_phased_volunteer
 		x = 9
 		y = 2
-		cost = 5
+		cost = 4
 		prerequisite = { focus = TFRKPHN_hong_b01_02 }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
@@ -86,10 +93,10 @@ focus_tree = {
 
 	focus = {
 		id = TFRKPHN_hong_b01_06
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_focus_TFRKPHN_suneung_expand
 		x = 2
 		y = 3
-		cost = 5
+		cost = 4
 		prerequisite = { focus = TFRKPHN_hong_b01_03 }
 		prerequisite = { focus = TFRKPHN_hong_b01_04 }
 		ai_will_do = { factor = 1 }
@@ -100,10 +107,10 @@ focus_tree = {
 
 	focus = {
 		id = TFRKPHN_hong_b01_07
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_focus_TFRKPHN_police_bureau
 		x = 4
 		y = 4
-		cost = 5
+		cost = 4
 		prerequisite = { focus = TFRKPHN_hong_b01_03 }
 		prerequisite = { focus = TFRKPHN_hong_b01_04 }
 		ai_will_do = { factor = 1 }
@@ -114,10 +121,10 @@ focus_tree = {
 
 	focus = {
 		id = TFRKPHN_hong_b01_08
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_focus_TFRKPHN_broadcast_private
 		x = 7
 		y = 3
-		cost = 5
+		cost = 4
 		prerequisite = { focus = TFRKPHN_hong_b01_05 }
 		prerequisite = { focus = TFRKPHN_hong_b01_04 }
 		ai_will_do = { factor = 1 }
@@ -128,10 +135,10 @@ focus_tree = {
 
 	focus = {
 		id = TFRKPHN_hong_b01_09
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_focus_TFRKPHN_nuclear_sharing
 		x = 9
 		y = 4
-		cost = 5
+		cost = 4
 		prerequisite = { focus = TFRKPHN_hong_b01_05 }
 		prerequisite = { focus = TFRKPHN_hong_b01_04 }
 		ai_will_do = { factor = 1 }
@@ -142,10 +149,10 @@ focus_tree = {
 
 	focus = {
 		id = TFRKPHN_hong_b01_10
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_focus_TFRKPHN_livelihood_conservative
 		x = 3
 		y = 5
-		cost = 5
+		cost = 4
 		prerequisite = { focus = TFRKPHN_hong_b01_06 focus = TFRKPHN_hong_b01_07 focus = TFRKPHN_hong_b01_08 focus = TFRKPHN_hong_b01_09 }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
@@ -155,10 +162,10 @@ focus_tree = {
 
 	focus = {
 		id = TFRKPHN_hong_b01_11
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_focus_TFRKPHN_security_conservative
 		x = 8
 		y = 5
-		cost = 5
+		cost = 4
 		prerequisite = { focus = TFRKPHN_hong_b01_06 focus = TFRKPHN_hong_b01_07 focus = TFRKPHN_hong_b01_08 focus = TFRKPHN_hong_b01_09 }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
@@ -168,7 +175,7 @@ focus_tree = {
 
 	focus = {
 		id = TFRKPHN_hong_b01_13
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_focus_TFRKPHN_burning_flame
 		# Korea Plus처럼 처음에는 숨겼다가 양안전쟁이 시작되면 나타난다
 		allow_branch = {
 			OR = {
@@ -180,7 +187,7 @@ focus_tree = {
 		}
 		x = 6
 		y = 6
-		cost = 5
+		cost = 4
 		prerequisite = { focus = TFRKPHN_hong_b01_10 focus = TFRKPHN_hong_b01_11 }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
@@ -193,7 +200,7 @@ focus_tree = {
 
 	focus = {
 		id = TFRKPHN_hong_b02_01
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_focus_TFRKPHN_taiwan_bill
 		allow_branch = {
 			KOR_in_taiwan_war = yes
 		}
@@ -204,28 +211,13 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			country_event = tfrkphn.29
-		}
-	}
-
-	focus = {
-		id = TFRKPHN_hong_b02_20
-		icon = GFX_goal_generic_political_pressure
-		relative_position_id = TFRKPHN_hong_b02_01
-		prerequisite = { focus = TFRKPHN_hong_b02_01 }
-		cost = 1
-		x = 0
-		y = 1
-		ai_will_do = { factor = 1 }
-		completion_reward = {
-			set_country_flag = TFRKPHN_poll_ban
-			custom_effect_tooltip = TFRKPHN_poll_ban_tt
-			add_war_support = 0.02
+			hidden_effect = { country_event = { id = tfrkphn.85 days = 3 } }	# 여론조사 금지 (자동)
 		}
 	}
 
 	focus = {
 		id = TFRKPHN_hong_b02_02
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_focus_TFRKPHN_taiwan_law
 		relative_position_id = TFRKPHN_hong_b02_01
 		prerequisite = { focus = TFRKPHN_hong_b02_01 }
 		mutually_exclusive = { focus = TFRKPHN_hong_b02_03 }
@@ -241,7 +233,7 @@ focus_tree = {
 
 	focus = {
 		id = TFRKPHN_hong_b02_03
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_focus_TFRKPHN_taiwan_bill_rejected
 		relative_position_id = TFRKPHN_hong_b02_01
 		prerequisite = { focus = TFRKPHN_hong_b02_01 }
 		mutually_exclusive = { focus = TFRKPHN_hong_b02_02 }
@@ -257,10 +249,10 @@ focus_tree = {
 
 	focus = {
 		id = TFRKPHN_hong_b02_04
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_focus_TFRKPHN_ammo_support
 		relative_position_id = TFRKPHN_hong_b02_02
 		prerequisite = { focus = TFRKPHN_hong_b02_02 }
-		cost = 5
+		cost = 4
 		x = -2
 		y = 1
 		ai_will_do = { factor = 1 }
@@ -281,10 +273,10 @@ focus_tree = {
 
 	focus = {
 		id = TFRKPHN_hong_b02_05
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_focus_TFRKPHN_reassure_people
 		relative_position_id = TFRKPHN_hong_b02_02
 		prerequisite = { focus = TFRKPHN_hong_b02_02 }
-		cost = 5
+		cost = 4
 		x = 0
 		y = 1
 		ai_will_do = { factor = 1 }
@@ -297,10 +289,10 @@ focus_tree = {
 
 	focus = {
 		id = TFRKPHN_hong_b02_06
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_focus_TFRKPHN_sea_supply
 		relative_position_id = TFRKPHN_hong_b02_03
 		prerequisite = { focus = TFRKPHN_hong_b02_03 }
-		cost = 5
+		cost = 4
 		x = -1
 		y = 1
 		ai_will_do = { factor = 1 }
@@ -316,10 +308,10 @@ focus_tree = {
 
 	focus = {
 		id = TFRKPHN_hong_b02_07
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_focus_TFRKPHN_condemn_china
 		relative_position_id = TFRKPHN_hong_b02_03
 		prerequisite = { focus = TFRKPHN_hong_b02_03 }
-		cost = 5
+		cost = 4
 		x = 1
 		y = 1
 		ai_will_do = { factor = 1 }
@@ -345,10 +337,10 @@ focus_tree = {
 
 	focus = {
 		id = TFRKPHN_hong_b02_08
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_focus_TFRKPHN_rear_fight
 		relative_position_id = TFRKPHN_hong_b02_04
 		prerequisite = { focus = TFRKPHN_hong_b02_04 }
-		cost = 5
+		cost = 4
 		x = 0
 		y = 1
 		ai_will_do = { factor = 1 }
@@ -360,10 +352,10 @@ focus_tree = {
 
 	focus = {
 		id = TFRKPHN_hong_b02_09
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_focus_TFRKPHN_hardline_north
 		relative_position_id = TFRKPHN_hong_b02_05
 		prerequisite = { focus = TFRKPHN_hong_b02_05 }
-		cost = 5
+		cost = 4
 		x = 1
 		y = 1
 		ai_will_do = { factor = 1 }
@@ -381,10 +373,10 @@ focus_tree = {
 
 	focus = {
 		id = TFRKPHN_hong_b02_10
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_focus_TFRKPHN_still_must_act
 		relative_position_id = TFRKPHN_hong_b02_06
 		prerequisite = { focus = TFRKPHN_hong_b02_06 }
-		cost = 5
+		cost = 4
 		x = 0
 		y = 1
 		ai_will_do = { factor = 1 }
@@ -397,10 +389,10 @@ focus_tree = {
 
 	focus = {
 		id = TFRKPHN_hong_b02_11
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_focus_TFRKPHN_kdefense_europe
 		relative_position_id = TFRKPHN_hong_b02_07
 		prerequisite = { focus = TFRKPHN_hong_b02_07 }
-		cost = 5
+		cost = 4
 		x = 0
 		y = 2
 		ai_will_do = { factor = 1 }
@@ -421,11 +413,11 @@ focus_tree = {
 
 	focus = {
 		id = TFRKPHN_hong_b02_12
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_focus_TFRKPHN_troop_dispatch
 		relative_position_id = TFRKPHN_hong_b02_08
 		prerequisite = { focus = TFRKPHN_hong_b02_08 }
 		prerequisite = { focus = TFRKPHN_hong_b02_09 }
-		cost = 5
+		cost = 4
 		x = 1
 		y = 2
 		ai_will_do = { factor = 1 }
@@ -438,11 +430,11 @@ focus_tree = {
 
 	focus = {
 		id = TFRKPHN_hong_b02_13
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_focus_TFRKPHN_secret_support
 		relative_position_id = TFRKPHN_hong_b02_10
 		prerequisite = { focus = TFRKPHN_hong_b02_10 }
 		prerequisite = { focus = TFRKPHN_hong_b02_11 }
-		cost = 5
+		cost = 4
 		x = 1
 		y = 2
 		ai_will_do = { factor = 1 }
@@ -471,7 +463,7 @@ focus_tree = {
 		}
 		relative_position_id = TFRKPHN_hong_b01_01
 		cost = 2
-		x = 23
+		x = 26
 		y = 0
 		ai_will_do = { factor = 1 }
 		completion_reward = {
@@ -502,8 +494,8 @@ focus_tree = {
 		icon = GFX_goal_generic_political_pressure
 		relative_position_id = TFRKPHN_hong_b03_02
 		prerequisite = { focus = TFRKPHN_hong_b03_02 }
-		cost = 5
-		x = -7
+		cost = 3
+		x = -9
 		y = 1
 		ai_will_do = { factor = 1 }
 		completion_reward = {
@@ -523,11 +515,11 @@ focus_tree = {
 	focus = {
 		id = TFRKPHN_hong_b03_04
 		icon = GFX_goal_generic_political_pressure
-		relative_position_id = TFRKPHN_hong_b03_03
+		relative_position_id = TFRKPHN_hong_b03_02
 		prerequisite = { focus = TFRKPHN_hong_b03_03 }
-		cost = 5
-		x = -1
-		y = 1
+		cost = 3
+		x = -10
+		y = 2
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			custom_effect_tooltip = TFRKPHN_sp_jin_04_tt
@@ -545,11 +537,11 @@ focus_tree = {
 	focus = {
 		id = TFRKPHN_hong_b03_05
 		icon = GFX_goal_generic_political_pressure
-		relative_position_id = TFRKPHN_hong_b03_03
+		relative_position_id = TFRKPHN_hong_b03_02
 		prerequisite = { focus = TFRKPHN_hong_b03_03 }
-		cost = 5
-		x = 2
-		y = 1
+		cost = 3
+		x = -8
+		y = 2
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			custom_effect_tooltip = TFRKPHN_sp_jin_05_tt
@@ -567,11 +559,11 @@ focus_tree = {
 	focus = {
 		id = TFRKPHN_hong_b03_06
 		icon = GFX_goal_generic_political_pressure
-		relative_position_id = TFRKPHN_hong_b03_04
+		relative_position_id = TFRKPHN_hong_b03_02
 		prerequisite = { focus = TFRKPHN_hong_b03_04 }
-		cost = 5
-		x = 0
-		y = 1
+		cost = 3
+		x = -10
+		y = 3
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			custom_effect_tooltip = TFRKPHN_sp_jin_06_tt
@@ -592,11 +584,11 @@ focus_tree = {
 	focus = {
 		id = TFRKPHN_hong_b03_07
 		icon = GFX_goal_generic_political_pressure
-		relative_position_id = TFRKPHN_hong_b03_05
+		relative_position_id = TFRKPHN_hong_b03_02
 		prerequisite = { focus = TFRKPHN_hong_b03_05 }
-		cost = 5
-		x = 0
-		y = 2
+		cost = 3
+		x = -8
+		y = 3
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			custom_effect_tooltip = TFRKPHN_sp_jin_07_tt
@@ -615,12 +607,12 @@ focus_tree = {
 	focus = {
 		id = TFRKPHN_hong_b03_08
 		icon = GFX_focus_TFRKPHN_hongkacola
-		relative_position_id = TFRKPHN_hong_b03_06
+		relative_position_id = TFRKPHN_hong_b03_02
 		prerequisite = { focus = TFRKPHN_hong_b03_06 }
 		prerequisite = { focus = TFRKPHN_hong_b03_07 }
-		cost = 5
-		x = 1
-		y = 2
+		cost = 3
+		x = -9
+		y = 4
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			custom_effect_tooltip = TFRKPHN_sp_jin_08_tt
@@ -641,11 +633,11 @@ focus_tree = {
 	focus = {
 		id = TFRKPHN_hong_b03_09
 		icon = GFX_goal_generic_political_pressure
-		relative_position_id = TFRKPHN_hong_b03_08
+		relative_position_id = TFRKPHN_hong_b03_02
 		prerequisite = { focus = TFRKPHN_hong_b03_08 }
-		cost = 5
-		x = 0
-		y = 1
+		cost = 3
+		x = -9
+		y = 5
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			custom_effect_tooltip = TFRKPHN_sp_jin_09_tt
@@ -655,8 +647,9 @@ focus_tree = {
 				add_to_variable = { TFRKPHN_sp_jin_stab = 0.02 }
 			}
 			country_event = tfrkphn.58
-			set_temp_variable = { poverty_development_var_temp = 0.1 }
-			add_poverty_development = yes
+			set_temp_variable = { TFRKPHN_dev_tmp = 0.01 }
+			custom_effect_tooltip = TFRKPHN_dev_m_pov_up_tt
+			hidden_effect = { add_to_variable = { TFRKPHN_dev_m_pov = 0.01 } TFRKPHN_dev_monthly_ensure = yes }
 		}
 	}
 
@@ -665,8 +658,8 @@ focus_tree = {
 		icon = GFX_goal_generic_political_pressure
 		relative_position_id = TFRKPHN_hong_b03_02
 		prerequisite = { focus = TFRKPHN_hong_b03_02 }
-		cost = 5
-		x = -2
+		cost = 3
+		x = -3
 		y = 1
 		ai_will_do = { factor = 1 }
 		completion_reward = {
@@ -679,16 +672,17 @@ focus_tree = {
 	focus = {
 		id = TFRKPHN_hong_b03_11
 		icon = GFX_goal_generic_political_pressure
-		relative_position_id = TFRKPHN_hong_b03_10
+		relative_position_id = TFRKPHN_hong_b03_02
 		prerequisite = { focus = TFRKPHN_hong_b03_10 }
-		cost = 5
-		x = -1
-		y = 1
+		cost = 3
+		x = -4
+		y = 2
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			country_event = tfrkphn.60
-			set_temp_variable = { military_development_var_temp = 0.1 }
-			add_military_development = yes
+			set_temp_variable = { TFRKPHN_dev_tmp = 0.01 }
+			custom_effect_tooltip = TFRKPHN_dev_m_mil_up_tt
+			hidden_effect = { add_to_variable = { TFRKPHN_dev_m_mil = 0.01 } TFRKPHN_dev_monthly_ensure = yes }
 			unlock_decision_tooltip = TFRKPHN_mnd_armpeace_arms
 			unlock_decision_tooltip = TFRKPHN_mnd_armpeace_dock
 		}
@@ -696,12 +690,12 @@ focus_tree = {
 
 	focus = {
 		id = TFRKPHN_hong_b03_12
-		icon = GFX_goal_generic_political_pressure
-		relative_position_id = TFRKPHN_hong_b03_10
+		icon = GFX_focus_TFRKPHN_volunteer_army
+		relative_position_id = TFRKPHN_hong_b03_02
 		prerequisite = { focus = TFRKPHN_hong_b03_10 }
-		cost = 5
-		x = 1
-		y = 1
+		cost = 3
+		x = -2
+		y = 2
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			country_event = tfrkphn.61
@@ -716,11 +710,11 @@ focus_tree = {
 	focus = {
 		id = TFRKPHN_hong_b03_13
 		icon = GFX_goal_generic_political_pressure
-		relative_position_id = TFRKPHN_hong_b03_11
+		relative_position_id = TFRKPHN_hong_b03_02
 		prerequisite = { focus = TFRKPHN_hong_b03_11 }
-		cost = 5
-		x = -1
-		y = 1
+		cost = 3
+		x = -4
+		y = 3
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			country_event = tfrkphn.62
@@ -747,11 +741,11 @@ focus_tree = {
 	focus = {
 		id = TFRKPHN_hong_b03_14
 		icon = GFX_goal_generic_political_pressure
-		relative_position_id = TFRKPHN_hong_b03_12
+		relative_position_id = TFRKPHN_hong_b03_02
 		prerequisite = { focus = TFRKPHN_hong_b03_12 }
-		cost = 5
-		x = 0
-		y = 2
+		cost = 3
+		x = -2
+		y = 3
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			country_event = tfrkphn.63
@@ -768,12 +762,12 @@ focus_tree = {
 	focus = {
 		id = TFRKPHN_hong_b03_15
 		icon = GFX_goal_generic_political_pressure
-		relative_position_id = TFRKPHN_hong_b03_13
+		relative_position_id = TFRKPHN_hong_b03_02
 		prerequisite = { focus = TFRKPHN_hong_b03_13 }
 		prerequisite = { focus = TFRKPHN_hong_b03_14 }
-		cost = 5
-		x = 2
-		y = 2
+		cost = 3
+		x = -3
+		y = 4
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			country_event = tfrkphn.64
@@ -788,11 +782,11 @@ focus_tree = {
 	focus = {
 		id = TFRKPHN_hong_b03_16
 		icon = GFX_goal_generic_political_pressure
-		relative_position_id = TFRKPHN_hong_b03_15
+		relative_position_id = TFRKPHN_hong_b03_02
 		prerequisite = { focus = TFRKPHN_hong_b03_15 }
-		cost = 5
-		x = 0
-		y = 1
+		cost = 3
+		x = -3
+		y = 5
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			country_event = tfrkphn.65
@@ -807,7 +801,7 @@ focus_tree = {
 		icon = GFX_goal_generic_political_pressure
 		relative_position_id = TFRKPHN_hong_b03_02
 		prerequisite = { focus = TFRKPHN_hong_b03_02 }
-		cost = 5
+		cost = 3
 		x = 3
 		y = 1
 		ai_will_do = { factor = 1 }
@@ -821,14 +815,25 @@ focus_tree = {
 	focus = {
 		id = TFRKPHN_hong_b03_18
 		icon = GFX_goal_generic_political_pressure
-		relative_position_id = TFRKPHN_hong_b03_17
+		relative_position_id = TFRKPHN_hong_b03_02
 		prerequisite = { focus = TFRKPHN_hong_b03_17 }
-		cost = 5
-		x = -1
-		y = 1
+		cost = 3
+		x = 2
+		y = 2
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			country_event = tfrkphn.67
+			# PDTO 세력 가입
+			if = {
+				limit = {
+					country_exists = JAP
+					JAP = { is_faction_leader = yes }
+					NOT = { is_in_faction_with = JAP }
+				}
+				if = { limit = { is_in_faction = yes } leave_faction = yes }
+				JAP = { add_to_faction = KOR }
+				KOR_add_to_pdto_effect = yes
+			}
 			# PDTO 협력 이니셔티브 탭 열기 (원본 탭, 아직 안 열렸을 때만)
 			if = {
 				limit = { NOT = { has_country_flag = KOR_pdto_cooperation_initiative_flag } }
@@ -898,11 +903,11 @@ focus_tree = {
 	focus = {
 		id = TFRKPHN_hong_b03_19
 		icon = GFX_goal_generic_political_pressure
-		relative_position_id = TFRKPHN_hong_b03_17
+		relative_position_id = TFRKPHN_hong_b03_02
 		prerequisite = { focus = TFRKPHN_hong_b03_17 }
-		cost = 5
-		x = 2
-		y = 1
+		cost = 3
+		x = 4
+		y = 2
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			country_event = tfrkphn.68
@@ -919,11 +924,11 @@ focus_tree = {
 	focus = {
 		id = TFRKPHN_hong_b03_20
 		icon = GFX_goal_generic_political_pressure
-		relative_position_id = TFRKPHN_hong_b03_18
+		relative_position_id = TFRKPHN_hong_b03_02
 		prerequisite = { focus = TFRKPHN_hong_b03_18 }
-		cost = 5
-		x = 0
-		y = 1
+		cost = 3
+		x = 2
+		y = 3
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			country_event = tfrkphn.69
@@ -937,14 +942,19 @@ focus_tree = {
 	focus = {
 		id = TFRKPHN_hong_b03_21
 		icon = GFX_goal_generic_political_pressure
-		relative_position_id = TFRKPHN_hong_b03_19
+		relative_position_id = TFRKPHN_hong_b03_02
 		prerequisite = { focus = TFRKPHN_hong_b03_19 }
-		cost = 5
-		x = 0
-		y = 2
+		cost = 3
+		x = 4
+		y = 3
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			country_event = tfrkphn.70
+			# PDTO 4대 에너지 거점: 석유 +20씩
+			add_resource = { type = oil amount = 20 state = 1409 }	# 부산
+			add_resource = { type = oil amount = 20 state = 1341 }	# 요코하마
+			add_resource = { type = oil amount = 20 state = 1150 }	# 가오슝 (타이난 주)
+			add_resource = { type = oil amount = 20 state = 285 }	# 시드니
 			if = {
 				limit = { country_exists = JAP }
 				add_opinion_modifier = { target = JAP modifier = TFRKPHN_postwar_friend }
@@ -958,15 +968,25 @@ focus_tree = {
 	focus = {
 		id = TFRKPHN_hong_b03_22
 		icon = GFX_goal_generic_political_pressure
-		relative_position_id = TFRKPHN_hong_b03_20
+		relative_position_id = TFRKPHN_hong_b03_02
 		prerequisite = { focus = TFRKPHN_hong_b03_20 }
 		prerequisite = { focus = TFRKPHN_hong_b03_21 }
-		cost = 5
-		x = 1
-		y = 2
+		cost = 3
+		x = 3
+		y = 4
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			country_event = tfrkphn.71
+			# 인도와 무역관계 강화 + 오디샤 크롬 자원권리
+			if = {
+				limit = { country_exists = RAJ }
+				add_opinion_modifier = { target = RAJ modifier = TFRKPHN_india_trade }
+				RAJ = { add_opinion_modifier = { target = KOR modifier = TFRKPHN_india_trade } }
+				if = {
+					limit = { 426 = { is_owned_by = RAJ } }
+					RAJ = { give_resource_rights = { receiver = KOR state = 426 } }
+				}
+			}
 			if = {
 				limit = { country_exists = BRM }
 				set_temp_variable = { var = global.JAP_influence_BRM_var_temp value = 0.15 }
@@ -1018,11 +1038,11 @@ focus_tree = {
 	focus = {
 		id = TFRKPHN_hong_b03_23
 		icon = GFX_goal_generic_political_pressure
-		relative_position_id = TFRKPHN_hong_b03_22
+		relative_position_id = TFRKPHN_hong_b03_02
 		prerequisite = { focus = TFRKPHN_hong_b03_22 }
-		cost = 5
-		x = 1
-		y = 1
+		cost = 3
+		x = 3
+		y = 5
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			country_event = tfrkphn.72
@@ -1037,7 +1057,7 @@ focus_tree = {
 		icon = GFX_goal_generic_political_pressure
 		relative_position_id = TFRKPHN_hong_b03_02
 		prerequisite = { focus = TFRKPHN_hong_b03_02 }
-		cost = 5
+		cost = 3
 		x = 9
 		y = 1
 		ai_will_do = { factor = 1 }
@@ -1051,11 +1071,11 @@ focus_tree = {
 	focus = {
 		id = TFRKPHN_hong_b03_27
 		icon = GFX_goal_generic_political_pressure
-		relative_position_id = TFRKPHN_hong_b03_26
+		relative_position_id = TFRKPHN_hong_b03_02
 		prerequisite = { focus = TFRKPHN_hong_b03_26 }
-		cost = 5
-		x = -1
-		y = 1
+		cost = 3
+		x = 8
+		y = 2
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			country_event = tfrkphn.121
@@ -1068,10 +1088,10 @@ focus_tree = {
 	focus = {
 		id = TFRKPHN_hong_b03_28
 		icon = GFX_goal_generic_political_pressure
-		relative_position_id = TFRKPHN_hong_b03_26
+		relative_position_id = TFRKPHN_hong_b03_02
 		prerequisite = { focus = TFRKPHN_hong_b03_26 }
-		cost = 5
-		x = 1
+		cost = 3
+		x = 10
 		y = 2
 		ai_will_do = { factor = 1 }
 		completion_reward = {
@@ -1086,45 +1106,46 @@ focus_tree = {
 	focus = {
 		id = TFRKPHN_hong_b03_29
 		icon = GFX_goal_generic_political_pressure
-		relative_position_id = TFRKPHN_hong_b03_27
+		relative_position_id = TFRKPHN_hong_b03_02
 		prerequisite = { focus = TFRKPHN_hong_b03_27 }
-		cost = 5
-		x = -1
-		y = 1
+		cost = 3
+		x = 8
+		y = 3
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			country_event = tfrkphn.123
-			set_temp_variable = { income_var_temp = 15 }
+			set_temp_variable = { income_var_temp = 25 }
 			add_income_with_inflation = yes
-			add_stability = 0.03
+			add_ideas = TFRKPHN_corp_tax_cut
 		}
 	}
 
 	focus = {
 		id = TFRKPHN_hong_b03_30
 		icon = GFX_goal_generic_political_pressure
-		relative_position_id = TFRKPHN_hong_b03_28
+		relative_position_id = TFRKPHN_hong_b03_02
 		prerequisite = { focus = TFRKPHN_hong_b03_28 }
-		cost = 5
-		x = 0
-		y = 1
+		cost = 3
+		x = 10
+		y = 3
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			country_event = tfrkphn.124
-			set_temp_variable = { poverty_development_var_temp = 0.1 }
-			add_poverty_development = yes
+			set_temp_variable = { TFRKPHN_dev_tmp = 0.01 }
+			custom_effect_tooltip = TFRKPHN_dev_m_pov_up_tt
+			hidden_effect = { add_to_variable = { TFRKPHN_dev_m_pov = 0.01 } TFRKPHN_dev_monthly_ensure = yes }
 		}
 	}
 
 	focus = {
 		id = TFRKPHN_hong_b03_31
-		icon = GFX_goal_generic_political_pressure
-		relative_position_id = TFRKPHN_hong_b03_29
+		icon = GFX_focus_TFRKPHN_future_fund
+		relative_position_id = TFRKPHN_hong_b03_02
 		prerequisite = { focus = TFRKPHN_hong_b03_29 }
 		prerequisite = { focus = TFRKPHN_hong_b03_30 }
-		cost = 5
-		x = 2
-		y = 2
+		cost = 3
+		x = 9
+		y = 4
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			country_event = tfrkphn.125
@@ -1136,11 +1157,11 @@ focus_tree = {
 	focus = {
 		id = TFRKPHN_hong_b03_32
 		icon = GFX_goal_generic_political_pressure
-		relative_position_id = TFRKPHN_hong_b03_31
+		relative_position_id = TFRKPHN_hong_b03_02
 		prerequisite = { focus = TFRKPHN_hong_b03_31 }
-		cost = 5
-		x = 0
-		y = 1
+		cost = 3
+		x = 9
+		y = 5
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			country_event = tfrkphn.126
@@ -1151,11 +1172,11 @@ focus_tree = {
 	focus = {
 		id = TFRKPHN_hong_b03_33
 		icon = GFX_goal_generic_political_pressure
-		relative_position_id = TFRKPHN_hong_b03_09
+		relative_position_id = TFRKPHN_hong_b03_02
 		prerequisite = { focus = TFRKPHN_hong_b03_09 }
-		cost = 5
-		x = -2
-		y = 1
+		cost = 3
+		x = -10
+		y = 6
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			custom_effect_tooltip = TFRKPHN_sp_jin_33_tt
@@ -1176,11 +1197,11 @@ focus_tree = {
 	focus = {
 		id = TFRKPHN_hong_b03_34
 		icon = GFX_goal_generic_political_pressure
-		relative_position_id = TFRKPHN_hong_b03_09
+		relative_position_id = TFRKPHN_hong_b03_02
 		prerequisite = { focus = TFRKPHN_hong_b03_09 }
-		cost = 5
-		x = 1
-		y = 1
+		cost = 3
+		x = -8
+		y = 6
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			custom_effect_tooltip = TFRKPHN_sp_jin_34_tt
@@ -1197,12 +1218,12 @@ focus_tree = {
 	focus = {
 		id = TFRKPHN_hong_b03_35
 		icon = GFX_goal_generic_political_pressure
-		relative_position_id = TFRKPHN_hong_b03_33
+		relative_position_id = TFRKPHN_hong_b03_02
 		prerequisite = { focus = TFRKPHN_hong_b03_33 }
 		prerequisite = { focus = TFRKPHN_hong_b03_34 }
-		cost = 5
-		x = 2
-		y = 1
+		cost = 3
+		x = -9
+		y = 7
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			country_event = tfrkphn.202
@@ -1216,11 +1237,11 @@ focus_tree = {
 	focus = {
 		id = TFRKPHN_hong_b03_36
 		icon = GFX_goal_generic_political_pressure
-		relative_position_id = TFRKPHN_hong_b03_16
+		relative_position_id = TFRKPHN_hong_b03_02
 		prerequisite = { focus = TFRKPHN_hong_b03_16 }
-		cost = 5
-		x = -1
-		y = 1
+		cost = 3
+		x = -4
+		y = 6
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_research_slot = 1
@@ -1232,11 +1253,11 @@ focus_tree = {
 	focus = {
 		id = TFRKPHN_hong_b03_37
 		icon = GFX_goal_generic_political_pressure
-		relative_position_id = TFRKPHN_hong_b03_16
+		relative_position_id = TFRKPHN_hong_b03_02
 		prerequisite = { focus = TFRKPHN_hong_b03_16 }
-		cost = 5
-		x = 1
-		y = 1
+		cost = 3
+		x = -2
+		y = 6
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			country_event = tfrkphn.204
@@ -1248,12 +1269,12 @@ focus_tree = {
 	focus = {
 		id = TFRKPHN_hong_b03_38
 		icon = GFX_goal_generic_political_pressure
-		relative_position_id = TFRKPHN_hong_b03_36
+		relative_position_id = TFRKPHN_hong_b03_02
 		prerequisite = { focus = TFRKPHN_hong_b03_36 }
 		prerequisite = { focus = TFRKPHN_hong_b03_37 }
-		cost = 5
-		x = 1
-		y = 1
+		cost = 3
+		x = -3
+		y = 7
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			# 대한민국의 우주개발 (원본 KARI 탭) 해금
@@ -1286,14 +1307,67 @@ focus_tree = {
 	focus = {
 		id = TFRKPHN_hong_b03_39
 		icon = GFX_goal_generic_political_pressure
-		relative_position_id = TFRKPHN_hong_b03_23
+		relative_position_id = TFRKPHN_hong_b03_02
 		prerequisite = { focus = TFRKPHN_hong_b03_23 }
-		cost = 5
-		x = -2
-		y = 1
+		cost = 3
+		x = 2
+		y = 6
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			country_event = tfrkphn.206
+			# 폴란드: K2 300대 인도 + 같은 설계 현지 생산
+			if = {
+				limit = { country_exists = POL }
+				POL = {
+					add_equipment_to_stockpile = {
+						type = modern_tank_chassis_2
+						amount = 300
+						producer = KOR
+						variant_name = "K-2 'Black Panther'"
+					}
+					if = {
+						limit = { has_dlc = "No Step Back" }
+						set_technology = {
+							legacy_armor_designs = 1
+							gwtank_chassis = 1
+							basic_medium_tank_chassis = 1
+							improved_medium_tank_chassis = 1
+							auto_loader_tech = 1
+							third_gen_nv_tech = 1
+							engine_tech_1 = 1
+							engine_tech_2 = 1
+							armor_tech_1 = 1
+							armor_tech_2 = 1
+							heat_tech = 1
+							apds_tech = 1
+							turret_mounted_mg_tech = 1
+							apfsds_tech = 1
+							heatfs_tech = 1
+						}
+						create_equipment_variant = {
+							name = "K-2PL 'Black Panther'"
+							type = modern_tank_chassis_2
+							parent_version = 0
+							modules = {
+								main_armament_slot = tank_high_velocity_cannon_2
+								turret_type_slot = tank_modern_tank_turret
+								suspension_type_slot = tank_interleaved_suspension
+								armor_type_slot = tank_cast_armor
+								engine_type_slot = tank_diesel_engine
+								special_type_slot_1 = smoke_launchers
+								special_type_slot_2 = auto_loader
+								special_type_slot_3 = sloped_armor
+								special_type_slot_4 = tank_radio_1
+								special_type_slot_5 = gunner_thermal_1
+							}
+							upgrades = {
+								tank_nsb_engine_upgrade = 3
+								tank_nsb_armor_upgrade = 2
+							}
+						}
+					}
+				}
+			}
 			if = {
 				limit = { country_exists = GER }
 				add_opinion_modifier = { target = GER modifier = TFRKPHN_postwar_friend }
@@ -1323,11 +1397,11 @@ focus_tree = {
 	focus = {
 		id = TFRKPHN_hong_b03_40
 		icon = GFX_goal_generic_political_pressure
-		relative_position_id = TFRKPHN_hong_b03_23
+		relative_position_id = TFRKPHN_hong_b03_02
 		prerequisite = { focus = TFRKPHN_hong_b03_23 }
-		cost = 5
-		x = 1
-		y = 1
+		cost = 3
+		x = 4
+		y = 6
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			country_event = tfrkphn.207
@@ -1340,12 +1414,12 @@ focus_tree = {
 	focus = {
 		id = TFRKPHN_hong_b03_41
 		icon = GFX_goal_generic_political_pressure
-		relative_position_id = TFRKPHN_hong_b03_39
+		relative_position_id = TFRKPHN_hong_b03_02
 		prerequisite = { focus = TFRKPHN_hong_b03_39 }
 		prerequisite = { focus = TFRKPHN_hong_b03_40 }
-		cost = 5
-		x = 1
-		y = 1
+		cost = 3
+		x = 3
+		y = 7
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			country_event = tfrkphn.208
@@ -1357,16 +1431,17 @@ focus_tree = {
 	focus = {
 		id = TFRKPHN_hong_b03_42
 		icon = GFX_goal_generic_political_pressure
-		relative_position_id = TFRKPHN_hong_b03_32
+		relative_position_id = TFRKPHN_hong_b03_02
 		prerequisite = { focus = TFRKPHN_hong_b03_32 }
-		cost = 5
-		x = -1
-		y = 1
+		cost = 3
+		x = 8
+		y = 6
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			country_event = tfrkphn.209
-			set_temp_variable = { poverty_development_var_temp = 0.05 }
-			add_poverty_development = yes
+			set_temp_variable = { TFRKPHN_dev_tmp = 0.005 }
+			custom_effect_tooltip = TFRKPHN_dev_m_pov_up_tt
+			hidden_effect = { add_to_variable = { TFRKPHN_dev_m_pov = 0.005 } TFRKPHN_dev_monthly_ensure = yes }
 			add_stability = 0.03
 		}
 	}
@@ -1374,11 +1449,11 @@ focus_tree = {
 	focus = {
 		id = TFRKPHN_hong_b03_43
 		icon = GFX_goal_generic_political_pressure
-		relative_position_id = TFRKPHN_hong_b03_32
+		relative_position_id = TFRKPHN_hong_b03_02
 		prerequisite = { focus = TFRKPHN_hong_b03_32 }
-		cost = 5
-		x = 2
-		y = 1
+		cost = 3
+		x = 10
+		y = 6
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			country_event = tfrkphn.210
@@ -1390,12 +1465,12 @@ focus_tree = {
 	focus = {
 		id = TFRKPHN_hong_b03_44
 		icon = GFX_goal_generic_political_pressure
-		relative_position_id = TFRKPHN_hong_b03_42
+		relative_position_id = TFRKPHN_hong_b03_02
 		prerequisite = { focus = TFRKPHN_hong_b03_42 }
 		prerequisite = { focus = TFRKPHN_hong_b03_43 }
-		cost = 5
-		x = 1
-		y = 1
+		cost = 3
+		x = 9
+		y = 7
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			country_event = tfrkphn.211
@@ -1414,9 +1489,9 @@ focus_tree = {
 		prerequisite = { focus = TFRKPHN_hong_b03_38 }
 		prerequisite = { focus = TFRKPHN_hong_b03_41 }
 		prerequisite = { focus = TFRKPHN_hong_b03_44 }
-		cost = 5
+		cost = 3
 		x = 0
-		y = 9
+		y = 8
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			country_event = tfrkphn.73
@@ -1428,11 +1503,11 @@ focus_tree = {
 	focus = {
 		id = TFRKPHN_hong_b03_25
 		icon = GFX_goal_generic_political_pressure
-		relative_position_id = TFRKPHN_hong_b03_24
+		relative_position_id = TFRKPHN_hong_b03_02
 		prerequisite = { focus = TFRKPHN_hong_b03_24 }
-		cost = 5
+		cost = 3
 		x = 0
-		y = 1
+		y = 9
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			country_event = tfrkphn.74
@@ -1493,7 +1568,7 @@ focus_tree = {
 		id = KOR_yoon_army_upper
 		icon = GFX_KOR_yoon_army_upper
 		cost = 3
-		x = 53
+		x = 56
 		y = 0
 		available = { has_completed_focus = TFRKPHN_hong_b03_25 }
 		allow_branch = {
@@ -1730,7 +1805,7 @@ focus_tree = {
 	focus = {
 		id = KOR_yoon_after_airforce_5
 		icon = GFX_KOR_yoon_after_airforce_5
-		cost = 5
+		cost = 4
 		x = 0
 		y = 3
 		prerequisite = { focus = KOR_yoon_after_airforce_3 }
@@ -1766,7 +1841,7 @@ focus_tree = {
 	focus = {
 		id = KOR_yoon_after_navy_0 # 바다의 방패
 		icon = GFX_KOR_yoon_after_navy_0
-		cost = 5
+		cost = 4
 		x = 0
 		y = 1
 		prerequisite = { focus = KOR_yoon_army_upper }
@@ -1785,7 +1860,7 @@ focus_tree = {
 	focus = {
 		id = KOR_yoon_after_navy_1 # 우리의 미래
 		icon = GFX_KOR_yoon_after_navy_1
-		cost = 5
+		cost = 4
 		x = 0
 		y = 2
 		prerequisite = { focus = KOR_yoon_after_navy_0 }
@@ -1920,7 +1995,7 @@ focus_tree = {
 	focus = {
 		id = KOR_yoon_after_navy_6
 		icon = GFX_KOR_yoon_after_navy_6
-		cost = 5
+		cost = 4
 		x = 0
 		y = 5
 		prerequisite = {
@@ -1939,7 +2014,7 @@ focus_tree = {
 	focus = {
 		id = KOR_yoon_after_army_0
 		icon = GFX_KOR_yoon_after_army_6
-		cost = 5
+		cost = 4
 		x = 5
 		y = 1
 		prerequisite = { focus = KOR_yoon_army_upper }
@@ -1963,7 +2038,7 @@ focus_tree = {
 	focus = {
 		id = KOR_yoon_after_army_1
 		icon = GFX_KOR_yoon_after_army_1
-		cost = 5
+		cost = 4
 		x = -1
 		y = 1
 		prerequisite = { focus = KOR_yoon_after_army_0 }
@@ -1993,7 +2068,7 @@ focus_tree = {
 	focus = {
 		id = KOR_yoon_after_army_2
 		icon = GFX_KOR_TFR_KR
-		cost = 5
+		cost = 4
 		x = 1
 		y = 1
 		prerequisite = { focus = KOR_yoon_after_army_0 }
@@ -2023,7 +2098,7 @@ focus_tree = {
 	focus = {
 		id = KOR_yoon_after_army_3
 		icon = GFX_KOR_yoon_after_army_3
-		cost = 5
+		cost = 4
 		x = 0
 		y = 2
 		prerequisite = {
@@ -2043,7 +2118,7 @@ focus_tree = {
 	focus = {
 		id = KOR_yoon_after_army_4
 		icon = GFX_KOR_yoon_after_army_4
-		cost = 5
+		cost = 4
 		x = 1
 		y = 3
 		mutually_exclusive = { focus = KOR_yoon_after_army_5 }
@@ -2082,7 +2157,7 @@ focus_tree = {
 	focus = {
 		id = KOR_yoon_after_army_5
 		icon = GFX_KOR_yoon_after_army_5
-		cost = 5
+		cost = 4
 		x = -1
 		y = 3
 		mutually_exclusive = { focus = KOR_yoon_after_army_4 }
@@ -2177,7 +2252,7 @@ focus_tree = {
 	focus = {
 		id = KOR_yoon_after_army_7
 		icon = GFX_KOR_yoon_after_army_7
-		cost = 5
+		cost = 4
 		x = -2
 		y = 2
 		prerequisite = {
@@ -2207,7 +2282,7 @@ focus_tree = {
 	focus = {
 		id = KOR_yoon_after_army_8
 		icon = GFX_KOR_yoon_after_army_8
-		cost = 5
+		cost = 4
 		x = 2
 		y = 2
 		prerequisite = {
@@ -2259,7 +2334,7 @@ focus_tree = {
 	focus = {
 		id = KOR_military_common_1
 		icon = GFX_KOR_military_common_1
-		cost = 5
+		cost = 4
 		x = 0
 		y = 6
 		prerequisite = { focus = KOR_yoon_after_navy_6 }
@@ -2302,7 +2377,7 @@ focus_tree = {
 	focus = {
 		id = KOR_military_common_2
 		icon = GFX_KOR_military_common_2
-		cost = 5
+		cost = 4
 		x = -2
 		y = 1
 		allow_branch = {
@@ -2328,7 +2403,7 @@ focus_tree = {
 	focus = {
 		id = KOR_military_common_3
 		icon = GFX_KOR_military_common_3
-		cost = 5
+		cost = 4
 		x = 0
 		y = 1
 		allow_branch = {
@@ -2355,7 +2430,7 @@ focus_tree = {
 	focus = {
 		id = KOR_military_common_4
 		icon = GFX_KOR_military_common_4
-		cost = 5
+		cost = 4
 		x = 2
 		y = 1
 		allow_branch = {
@@ -2396,7 +2471,7 @@ focus_tree = {
 	focus = {
 		id = KOR_military_common_5
 		icon = GFX_KOR_military_common_5
-		cost = 5
+		cost = 4
 		x = -1
 		y = 2
 		prerequisite = { focus = KOR_military_common_2 }
@@ -2443,7 +2518,7 @@ focus_tree = {
 	focus = {
 		id = KOR_military_common_6
 		icon = GFX_KOR_military_common_6
-		cost = 5
+		cost = 4
 		x = 1
 		y = 2
 		prerequisite = { focus = KOR_military_common_2 }
@@ -2479,7 +2554,7 @@ focus_tree = {
 	focus = {
 		id = KOR_military_common_7
 		icon = GFX_KOR_military_common_7
-		cost = 5
+		cost = 4
 		x = 0
 		y = 3
 		prerequisite = { focus = KOR_military_common_5 }

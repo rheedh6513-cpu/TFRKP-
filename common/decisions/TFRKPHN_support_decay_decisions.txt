@@ -1,8 +1,8 @@
-﻿# [안내] 지역 지지도 하락 미션.
+# [안내] 지역 지지도 하락 미션.
 # [안내] 수정 방법: 모드 폴더의 TUTORIAL_KO.md 7~9장 참고. 새 이름에는 TFRKPHN_ 접두어를 붙이세요.
 TFRKPHN_hong_minsim_category = {
 
-	# 2주마다 전국 지지도가 떨어진다 (끝나면 on_daily_KOR에서 다시 시작, 무한 반복)
+	# 30일마다 무작위 지역 지지도가 떨어진다 (끝나면 on_daily_KOR에서 다시 시작, 무한 반복)
 	TFRKPHN_support_decay_mission = {
 		icon = GFX_decision_generic_political_actions
 		activation = { always = no }

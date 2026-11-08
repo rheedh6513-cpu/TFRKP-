@@ -1,4 +1,4 @@
-﻿# [안내] 원본 PDTO 협력 이니셔티브 탭(KOR_pdto_cooperation_initiative_category)에 추가하는 결정.
+# [안내] 원본 PDTO 협력 이니셔티브 탭(KOR_pdto_cooperation_initiative_category)에 추가하는 결정.
 # [안내] 수정 방법: 모드 폴더의 TUTORIAL_KO.md 7~9장 참고. 새 이름에는 TFRKPHN_ 접두어를 붙이세요.
 KOR_pdto_cooperation_initiative_category = {
 	# 캄보디아 특공대 파견: 1회, PDTO 코인 1 + 정치력 50, 30일 뒤 PDTO 결속도 +10

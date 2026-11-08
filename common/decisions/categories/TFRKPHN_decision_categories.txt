@@ -1,4 +1,4 @@
-﻿# [안내] 결정 카테고리 (아이콘, 보이는 조건, 연결된 scripted_gui).
+# [안내] 결정 카테고리 (아이콘, 보이는 조건, 연결된 scripted_gui).
 # [안내] 수정 방법: 모드 폴더의 TUTORIAL_KO.md 7~9장 참고. 새 이름에는 TFRKPHN_ 접두어를 붙이세요.
 TFRKPHN_hong_minsim_category = {
 	icon = generic_political_actions
@@ -105,6 +105,44 @@ TFRKPHN_mnd_category = {
 	priority = 140
 	allowed = { original_tag = KOR }
 	visible_when_empty = yes
-	visible = { has_country_flag = TFRKP_HN_hong_president }
+	# 홍준표 대통령 + 「충 - 충성 충」(TFRKPHN_hong_b03_10) 완료 뒤에만 보인다
+	# 이인제 정부(TFRKPHN_successor_lee_in_je)에서도 홍준표 때 열려 있었으면 계속 보인다
+	visible = {
+		OR = {
+			AND = { has_country_flag = TFRKP_HN_hong_president has_completed_focus = TFRKPHN_hong_b03_10 }
+			AND = { has_country_flag = TFRKPHN_successor_lee_in_je has_country_flag = TFRKPHN_mnd_open }
+		}
+	}
 	scripted_gui = TFRKPHN_mnd_gui
 }
+
+
+
+
+# 「국 - 나라 국」 6각형 패널 (6도 지역 기업)
+TFRKPHN_hong_kuk_category = {
+	icon = generic_economy
+	priority = 175
+	allowed = { original_tag = KOR }
+	visible_when_empty = yes
+	visible = {
+		OR = {
+			AND = { has_country_flag = TFRKP_HN_hong_president has_completed_focus = TFRKPHN_hong_b03_26 }
+			AND = { has_country_flag = TFRKPHN_successor_lee_in_je has_country_flag = TFRKPHN_kuk_open }
+		}
+	}
+	scripted_gui = TFRKPHN_kuk_gui
+}
+
+# 이인제 트리 「피닉제」 완료 뒤: 김정은 참수 작전
+TFRKPHN_lee_north_category = {
+	icon = GFX_decision_TFRKPHN_kju_target
+	priority = 210
+	picture = GFX_TFRKPHN_kju_cat_picture
+	allowed = { original_tag = KOR }
+	visible = {
+		has_country_flag = TFRKPHN_lee_tree_done
+		NOT = { has_country_flag = TFRKPHN_kju_op_done }
+	}
+}
+

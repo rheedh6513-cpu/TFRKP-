@@ -1,4 +1,4 @@
-﻿# [안내] 2027 대선과 그 뒤 이벤트, 한일 공동 핵무장 뉴스. 문구는 TFRKP_HN_ge2027_l_korean.yml, TFRKP_HN_story_l_korean.yml.
+# [안내] 2027 대선과 그 뒤 이벤트, 한일 공동 핵무장 뉴스. 문구는 TFRKP_HN_ge2027_l_korean.yml, TFRKP_HN_story_l_korean.yml.
 # [안내] 수정 방법: 모드 폴더의 TUTORIAL_KO.md 7~9장 참고. 새 이름에는 TFRKPHN_ 접두어를 붙이세요.
 add_namespace = tfrkphn
 
@@ -383,6 +383,7 @@ country_event = {
 	id = tfrkphn.323
 	title = tfrkphn.323.t
 	desc = tfrkphn.323.desc
+	picture = GFX_TFRKPHN_hwagae
 	fire_only_once = yes
 	is_triggered_only = yes
 

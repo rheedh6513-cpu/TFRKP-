@@ -1,4 +1,4 @@
-﻿# [안내] 수치가 변수로 바뀌는 국가 보정치.
+# [안내] 수치가 변수로 바뀌는 국가 보정치.
 # [안내] 수정 방법: 모드 폴더의 TUTORIAL_KO.md 7~9장 참고. 새 이름에는 TFRKPHN_ 접두어를 붙이세요.
 TFRKPHN_amend_cost_mod = {
 	icon = GFX_idea_KOR_yoon_common_conservatism_dynamic_modifir_idea
@@ -82,81 +82,6 @@ TFRKPHN_mnd_kdefense_export = {
 }
 
 # 임명식 군사 버프 (한 사람당 하나, 영구)
-TFRKPHN_appoint_park_an_su = {
-	icon = GFX_idea_KOR_yoon_common_conservatism_dynamic_modifir_idea
-	army_attack_factor = 0.02
-	army_defence_factor = 0.02
-}
-TFRKPHN_appoint_kang_sin_chul = {
-	icon = GFX_idea_KOR_yoon_common_conservatism_dynamic_modifir_idea
-	army_attack_factor = 0.02
-	army_defence_factor = 0.02
-}
-TFRKPHN_appoint_son_sik = {
-	icon = GFX_idea_KOR_yoon_common_conservatism_dynamic_modifir_idea
-	army_attack_factor = 0.02
-	army_defence_factor = 0.02
-}
-TFRKPHN_appoint_ko_chang_jun = {
-	icon = GFX_idea_KOR_yoon_common_conservatism_dynamic_modifir_idea
-	army_attack_factor = 0.02
-	army_defence_factor = 0.02
-}
-TFRKPHN_appoint_hwang_you_sung = {
-	icon = GFX_idea_KOR_yoon_common_conservatism_dynamic_modifir_idea
-	army_attack_factor = 0.02
-	army_defence_factor = 0.02
-}
-TFRKPHN_appoint_yeo_in_hyeong = {
-	icon = GFX_idea_KOR_yoon_common_conservatism_dynamic_modifir_idea
-	army_attack_factor = 0.02
-	army_defence_factor = 0.02
-}
-TFRKPHN_appoint_lee_jin_woo = {
-	icon = GFX_idea_KOR_yoon_common_conservatism_dynamic_modifir_idea
-	army_attack_factor = 0.02
-	army_defence_factor = 0.02
-}
-TFRKPHN_appoint_kwak_jong_keun = {
-	icon = GFX_idea_KOR_yoon_common_conservatism_dynamic_modifir_idea
-	army_attack_factor = 0.02
-	army_defence_factor = 0.02
-}
-TFRKPHN_appoint_kim_myung_soo = {
-	icon = GFX_idea_KOR_yoon_common_conservatism_dynamic_modifir_idea
-	naval_damage_factor = 0.02
-	naval_defense_factor = 0.02
-}
-TFRKPHN_appoint_yang_yong_mo = {
-	icon = GFX_idea_KOR_yoon_common_conservatism_dynamic_modifir_idea
-	naval_damage_factor = 0.02
-	naval_defense_factor = 0.02
-}
-TFRKPHN_appoint_kang_dong_gil = {
-	icon = GFX_idea_KOR_yoon_common_conservatism_dynamic_modifir_idea
-	naval_damage_factor = 0.02
-	naval_defense_factor = 0.02
-}
-TFRKPHN_appoint_choi_sung_hyeok = {
-	icon = GFX_idea_KOR_yoon_common_conservatism_dynamic_modifir_idea
-	naval_damage_factor = 0.02
-	naval_defense_factor = 0.02
-}
-TFRKPHN_appoint_lee_young_soo = {
-	icon = GFX_idea_KOR_yoon_common_conservatism_dynamic_modifir_idea
-	air_attack_factor = 0.02
-	air_defence_factor = 0.02
-}
-TFRKPHN_appoint_son_sug_rag = {
-	icon = GFX_idea_KOR_yoon_common_conservatism_dynamic_modifir_idea
-	air_attack_factor = 0.02
-	air_defence_factor = 0.02
-}
-TFRKPHN_appoint_kim_hyoung_soo = {
-	icon = GFX_idea_KOR_yoon_common_conservatism_dynamic_modifir_idea
-	air_attack_factor = 0.02
-	air_defence_factor = 0.02
-}
 
 # 3축 체계 완성 (홍준표 중점 b03_13): 방공 + 현무 대량응징 (영구)
 TFRKPHN_3axis = {
@@ -179,4 +104,65 @@ TFRKPHN_3axis5 = {
 	icon = GFX_idea_KOR_yoon_common_conservatism_dynamic_modifir_idea
 	special_forces_attack_factor = 0.05
 	army_org_factor = 0.03
+}
+
+# 국방부 패널 추가 결정 (해병대/공군/육군)
+TFRKPHN_mnd_marineon = {
+	icon = GFX_idea_KOR_yoon_common_conservatism_dynamic_modifir_idea
+	amphibious_invasion = 0.15
+	naval_invasion_capacity = 1
+}
+TFRKPHN_mnd_nwi_command = {
+	icon = GFX_idea_KOR_yoon_common_conservatism_dynamic_modifir_idea
+	army_defence_factor = 0.03
+}
+TFRKPHN_mnd_kc330 = {
+	icon = GFX_idea_KOR_yoon_common_conservatism_dynamic_modifir_idea
+	air_range_factor = 0.15
+}
+TFRKPHN_mnd_global_hawk = {
+	icon = GFX_idea_KOR_yoon_common_conservatism_dynamic_modifir_idea
+	airforce_intel_factor = 0.10
+	army_intel_factor = 0.05
+}
+TFRKPHN_mnd_sat425 = {
+	icon = GFX_idea_KOR_yoon_common_conservatism_dynamic_modifir_idea
+	army_intel_factor = 0.10
+	navy_intel_factor = 0.10
+	airforce_intel_factor = 0.10
+}
+TFRKPHN_mnd_drone_command = {
+	icon = GFX_idea_KOR_yoon_common_conservatism_dynamic_modifir_idea
+	recon_factor = 0.10
+	army_intel_factor = 0.05
+}
+TFRKPHN_mnd_army_tiger = {
+	icon = GFX_idea_KOR_yoon_common_conservatism_dynamic_modifir_idea
+	army_speed_factor = 0.05
+	army_attack_factor = 0.03
+}
+
+# 홍준표 정부 발전도: 한 번에 오르던 발전도를 매달 오르는 방식으로 바꿨다 (예전 일회성 값의 1/10이 매달 쌓인다)
+TFRKPHN_dev_monthly = {
+	icon = GFX_idea_KOR_yoon_common_conservatism_dynamic_modifir_idea
+	academic_development_monthly = TFRKPHN_dev_m_aca
+	industrial_development_monthly = TFRKPHN_dev_m_ind
+	society_development_monthly = TFRKPHN_dev_m_soc
+	military_development_monthly = TFRKPHN_dev_m_mil
+	poverty_development_monthly = TFRKPHN_dev_m_pov
+	farming_development_monthly = TFRKPHN_dev_m_farm
+}
+
+# 이인제 정부의 국정: 이인제 트리 중점마다 수치가 더해진다
+TFRKPHN_lee_gov = {
+	icon = GFX_idea_KOR_yoon_common_conservatism_dynamic_modifir_idea
+	stability_factor = TFRKPHN_lee_stab
+	political_power_factor = TFRKPHN_lee_pp
+	production_speed_buildings_factor = TFRKPHN_lee_build
+	research_speed_factor = TFRKPHN_lee_res
+	consumer_goods_factor = TFRKPHN_lee_cg
+	production_factory_efficiency_gain_factor = TFRKPHN_lee_eff
+	army_org_factor = TFRKPHN_lee_army
+	war_support_factor = TFRKPHN_lee_war
+	industrial_capacity_factory = TFRKPHN_lee_ind
 }

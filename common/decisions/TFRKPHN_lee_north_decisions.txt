@@ -1,0 +1,84 @@
+# [안내] 이인제 트리 「한라에서」 완료 뒤 열리는 김정은 참수 준비 (4단계, 단계마다 25%, 7일씩).
+# [안내] 준비가 100%가 되면 중점 「백두를 보네」를 찍을 수 있고, 그 중점이 김정은 암살 뉴스와 TFR 원본 북한 3분할 내전을 일으킨다.
+TFRKPHN_lee_north_category = {
+	TFRKPHN_kju_prep_1 = {
+		icon = GFX_decision_TFRKPHN_kju_target
+		cost = 50
+		days_remove = 7
+		fire_only_once = yes
+		visible = { has_country_flag = TFRKPHN_lee_tree_done }
+		available = {
+			country_exists = PRK
+			NOT = { has_global_flag = PRK_Civil_War }
+			NOT = { has_global_flag = north_korean_civil_war }
+			NOT = { has_global_flag = PRK_north_korea_coupdeta_flag }
+		}
+		remove_effect = {
+			set_country_flag = TFRKPHN_kju_prep_1_done
+			custom_effect_tooltip = TFRKPHN_kju_prep_add_tt
+			add_to_variable = { TFRKPHN_kju_prep = 25 }
+			if = { limit = { check_variable = { TFRKPHN_kju_prep > 99 } } set_country_flag = TFRKPHN_kju_prep_done }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	TFRKPHN_kju_prep_2 = {
+		icon = GFX_decision_TFRKPHN_kju_target
+		cost = 50
+		days_remove = 7
+		fire_only_once = yes
+		visible = { has_country_flag = TFRKPHN_lee_tree_done has_country_flag = TFRKPHN_kju_prep_1_done }
+		available = {
+			country_exists = PRK
+			NOT = { has_global_flag = PRK_Civil_War }
+			NOT = { has_global_flag = north_korean_civil_war }
+			NOT = { has_global_flag = PRK_north_korea_coupdeta_flag }
+		}
+		remove_effect = {
+			set_country_flag = TFRKPHN_kju_prep_2_done
+			custom_effect_tooltip = TFRKPHN_kju_prep_add_tt
+			add_to_variable = { TFRKPHN_kju_prep = 25 }
+			if = { limit = { check_variable = { TFRKPHN_kju_prep > 99 } } set_country_flag = TFRKPHN_kju_prep_done }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	TFRKPHN_kju_prep_3 = {
+		icon = GFX_decision_TFRKPHN_kju_target
+		cost = 50
+		days_remove = 7
+		fire_only_once = yes
+		visible = { has_country_flag = TFRKPHN_lee_tree_done has_country_flag = TFRKPHN_kju_prep_2_done }
+		available = {
+			country_exists = PRK
+			NOT = { has_global_flag = PRK_Civil_War }
+			NOT = { has_global_flag = north_korean_civil_war }
+			NOT = { has_global_flag = PRK_north_korea_coupdeta_flag }
+		}
+		remove_effect = {
+			set_country_flag = TFRKPHN_kju_prep_3_done
+			custom_effect_tooltip = TFRKPHN_kju_prep_add_tt
+			add_to_variable = { TFRKPHN_kju_prep = 25 }
+			if = { limit = { check_variable = { TFRKPHN_kju_prep > 99 } } set_country_flag = TFRKPHN_kju_prep_done }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	TFRKPHN_kju_prep_4 = {
+		icon = GFX_decision_TFRKPHN_kju_target
+		cost = 50
+		days_remove = 7
+		fire_only_once = yes
+		visible = { has_country_flag = TFRKPHN_lee_tree_done has_country_flag = TFRKPHN_kju_prep_3_done }
+		available = {
+			country_exists = PRK
+			NOT = { has_global_flag = PRK_Civil_War }
+			NOT = { has_global_flag = north_korean_civil_war }
+			NOT = { has_global_flag = PRK_north_korea_coupdeta_flag }
+		}
+		remove_effect = {
+			set_country_flag = TFRKPHN_kju_prep_4_done
+			custom_effect_tooltip = TFRKPHN_kju_prep_add_tt
+			add_to_variable = { TFRKPHN_kju_prep = 25 }
+			if = { limit = { check_variable = { TFRKPHN_kju_prep > 99 } } set_country_flag = TFRKPHN_kju_prep_done }
+		}
+		ai_will_do = { factor = 1 }
+	}
+}

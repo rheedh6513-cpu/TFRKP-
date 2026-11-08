@@ -1,0 +1,6 @@
+ideas = {
+	# 슈퍼이벤트용 더미 (KP 슈퍼이벤트 창이 이 이름으로 그림/제목/설명을 찾는다)
+	hidden_ideas = {
+		TFRKPHN_SE_NK_CIVIL_WAR = {}
+	}
+}

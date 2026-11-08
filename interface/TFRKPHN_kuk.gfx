@@ -1,0 +1,33 @@
+# [안내] 「국 - 나라 국」 6각형 패널 그림. 회사 로고 명판은 96x34, 도 이름 버튼은 96x26.
+spriteTypes = {
+	spriteType = { name = "GFX_TFRKPHN_kuk_bg" texturefile = "gfx/interface/gui/TFRKPHN_kuk/TFRKPHN_kuk_bg.png" }
+	spriteType = { name = "GFX_TFRKPHN_kuk_sel" texturefile = "gfx/interface/gui/TFRKPHN_kuk/TFRKPHN_kuk_sel.png" }
+	spriteType = { name = "GFX_TFRKPHN_kuk_done" texturefile = "gfx/interface/gui/TFRKPHN_kuk/TFRKPHN_kuk_done.png" }
+	spriteType = { name = "GFX_TFRKPHN_kuk_regsel" texturefile = "gfx/interface/gui/TFRKPHN_kuk/TFRKPHN_kuk_regsel.png" }
+	spriteType = { name = "GFX_TFRKPHN_kuk_center" texturefile = "gfx/interface/gui/TFRKPHN_kuk/TFRKPHN_kuk_center.png" }
+	spriteType = { name = "GFX_TFRKPHN_kuk_center_glow" texturefile = "gfx/interface/gui/TFRKPHN_kuk/TFRKPHN_kuk_center_glow.png" }
+	spriteType = { name = "GFX_TFRKPHN_kuk_seohee" texturefile = "gfx/interface/gui/TFRKPHN_kuk/TFRKPHN_kuk_seohee.png" }
+	spriteType = { name = "GFX_TFRKPHN_kuk_ottogi" texturefile = "gfx/interface/gui/TFRKPHN_kuk/TFRKPHN_kuk_ottogi.png" }
+	spriteType = { name = "GFX_TFRKPHN_kuk_kyeryong" texturefile = "gfx/interface/gui/TFRKPHN_kuk/TFRKPHN_kuk_kyeryong.png" }
+	spriteType = { name = "GFX_TFRKPHN_kuk_mackis" texturefile = "gfx/interface/gui/TFRKPHN_kuk/TFRKPHN_kuk_mackis.png" }
+	spriteType = { name = "GFX_TFRKPHN_kuk_woomi" texturefile = "gfx/interface/gui/TFRKPHN_kuk/TFRKPHN_kuk_woomi.png" }
+	spriteType = { name = "GFX_TFRKPHN_kuk_bohae" texturefile = "gfx/interface/gui/TFRKPHN_kuk/TFRKPHN_kuk_bohae.png" }
+	spriteType = { name = "GFX_TFRKPHN_kuk_daemyung" texturefile = "gfx/interface/gui/TFRKPHN_kuk/TFRKPHN_kuk_daemyung.png" }
+	spriteType = { name = "GFX_TFRKPHN_kuk_douzone" texturefile = "gfx/interface/gui/TFRKPHN_kuk/TFRKPHN_kuk_douzone.png" }
+	spriteType = { name = "GFX_TFRKPHN_kuk_hshwasung" texturefile = "gfx/interface/gui/TFRKPHN_kuk/TFRKPHN_kuk_hshwasung.png" }
+	spriteType = { name = "GFX_TFRKPHN_kuk_muhak" texturefile = "gfx/interface/gui/TFRKPHN_kuk/TFRKPHN_kuk_muhak.png" }
+	spriteType = { name = "GFX_TFRKPHN_kuk_raon" texturefile = "gfx/interface/gui/TFRKPHN_kuk/TFRKPHN_kuk_raon.png" }
+	spriteType = { name = "GFX_TFRKPHN_kuk_jpdc" texturefile = "gfx/interface/gui/TFRKPHN_kuk/TFRKPHN_kuk_jpdc.png" }
+	spriteType = { name = "GFX_TFRKPHN_kuk_reg_gyeonggi" texturefile = "gfx/interface/gui/TFRKPHN_kuk/TFRKPHN_kuk_reg_gyeonggi.png" }
+	spriteType = { name = "GFX_TFRKPHN_kuk_reg_chungcheong" texturefile = "gfx/interface/gui/TFRKPHN_kuk/TFRKPHN_kuk_reg_chungcheong.png" }
+	spriteType = { name = "GFX_TFRKPHN_kuk_reg_jeolla" texturefile = "gfx/interface/gui/TFRKPHN_kuk/TFRKPHN_kuk_reg_jeolla.png" }
+	spriteType = { name = "GFX_TFRKPHN_kuk_reg_gangwon" texturefile = "gfx/interface/gui/TFRKPHN_kuk/TFRKPHN_kuk_reg_gangwon.png" }
+	spriteType = { name = "GFX_TFRKPHN_kuk_reg_gyeongsang" texturefile = "gfx/interface/gui/TFRKPHN_kuk/TFRKPHN_kuk_reg_gyeongsang.png" }
+	spriteType = { name = "GFX_TFRKPHN_kuk_reg_jeju" texturefile = "gfx/interface/gui/TFRKPHN_kuk/TFRKPHN_kuk_reg_jeju.png" }
+	spriteType = { name = "GFX_TFRKPHN_kuk_tri_rt" texturefile = "gfx/interface/gui/TFRKPHN_kuk/TFRKPHN_kuk_tri_rt.png" noOfFrames = 6 }
+	spriteType = { name = "GFX_TFRKPHN_kuk_tri_lt" texturefile = "gfx/interface/gui/TFRKPHN_kuk/TFRKPHN_kuk_tri_lt.png" noOfFrames = 6 }
+	spriteType = { name = "GFX_TFRKPHN_kuk_tri_lm" texturefile = "gfx/interface/gui/TFRKPHN_kuk/TFRKPHN_kuk_tri_lm.png" noOfFrames = 6 }
+	spriteType = { name = "GFX_TFRKPHN_kuk_tri_lb" texturefile = "gfx/interface/gui/TFRKPHN_kuk/TFRKPHN_kuk_tri_lb.png" noOfFrames = 6 }
+	spriteType = { name = "GFX_TFRKPHN_kuk_tri_rb" texturefile = "gfx/interface/gui/TFRKPHN_kuk/TFRKPHN_kuk_tri_rb.png" noOfFrames = 6 }
+	spriteType = { name = "GFX_TFRKPHN_kuk_tri_rm" texturefile = "gfx/interface/gui/TFRKPHN_kuk/TFRKPHN_kuk_tri_rm.png" noOfFrames = 6 }
+}

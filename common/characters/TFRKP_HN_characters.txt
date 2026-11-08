@@ -1,4 +1,4 @@
-﻿# [안내] 인물 정의 (홍준표, 이인제, 오세훈 등). 초상화는 interface/TFRKP_HN.gfx, 이름은 localisation 파일에서 바꿉니다.
+# [안내] 인물 정의 (홍준표, 이인제, 오세훈 등). 초상화는 interface/TFRKP_HN.gfx, 이름은 localisation 파일에서 바꿉니다.
 # [안내] 수정 방법: 모드 폴더의 TUTORIAL_KO.md 7~9장 참고. 새 이름에는 TFRKPHN_ 접두어를 붙이세요.
 characters = {
 	KOR_hong_joon_pyo_char = {
@@ -27,6 +27,22 @@ characters = {
 		name = KOR_oh_se_hoon_char
 		country_leader = {
 			ideology = korean_conservatism
+			expire = "2065.1.1"
+			id = -1
+		}
+	}
+	# 이북5도위원회 지도자 태영호. Korea Plus의 PD1_tae_yeongho_char 는 PD1 나라에 묶여 있어 다른 나라로 데려올 수 없으므로,
+	# 같은 이름·초상화·설명을 쓰는 인물을 따로 둔다.
+	TFRKPHN_tae_yeongho_char = {
+		name = PD1_tae_yeongho_char
+		portraits = {
+			civilian = {
+				large = GFX_portrait_PD1_tae_yeongho_char_civilian_large
+			}
+		}
+		country_leader = {
+			desc = PD1_tae_yeongho_char_desc
+			ideology = ultra_conservatism
 			expire = "2065.1.1"
 			id = -1
 		}

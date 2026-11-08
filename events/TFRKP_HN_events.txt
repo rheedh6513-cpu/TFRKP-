@@ -1,4 +1,4 @@
-﻿# [안내] 메인 이벤트 (대선, 홍준표 정부). 문구는 TFRKP_HN_story_l_korean.yml 등. 콘솔: event tfrkphn.번호
+# [안내] 메인 이벤트 (대선, 홍준표 정부). 문구는 TFRKP_HN_story_l_korean.yml 등. 콘솔: event tfrkphn.번호
 # [안내] 수정 방법: 모드 폴더의 TUTORIAL_KO.md 7~9장 참고. 새 이름에는 TFRKPHN_ 접두어를 붙이세요.
 add_namespace = tfrkphn
 
@@ -138,7 +138,7 @@ country_event = {
 	id = tfrkphn.20
 	title = tfrkphn.20.t
 	desc = tfrkphn.20.desc
-	picture = GFX_TFRKPHN_hong_temp
+	picture = GFX_TFRKPHN_hong_press
 	fire_only_once = yes
 	is_triggered_only = yes
 
@@ -213,7 +213,7 @@ country_event = {
 	id = tfrkphn.22
 	title = tfrkphn.22.t
 	desc = tfrkphn.22.desc
-	picture = GFX_TFRKPHN_hong_temp
+	picture = GFX_TFRKPHN_happy_family
 	is_triggered_only = yes
 	fire_only_once = yes
 
@@ -272,14 +272,15 @@ country_event = {
 	id = tfrkphn.24
 	title = tfrkphn.24.t
 	desc = tfrkphn.24.desc
-	picture = GFX_TFRKPHN_hong_temp
+	picture = GFX_TFRKPHN_yeonpyeong_ruins
 	is_triggered_only = yes
 	fire_only_once = yes
 
 	option = {
 		name = tfrkphn.24.a
-		set_temp_variable = { military_development_var_temp = 0.10 }
-		add_military_development = yes
+		set_temp_variable = { TFRKPHN_dev_tmp = 0.01 }
+		custom_effect_tooltip = TFRKPHN_dev_m_mil_up_tt
+		hidden_effect = { add_to_variable = { TFRKPHN_dev_m_mil = 0.01 } TFRKPHN_dev_monthly_ensure = yes }
 	}
 }
 
@@ -294,8 +295,9 @@ country_event = {
 
 	option = {
 		name = tfrkphn.25.a
-		set_temp_variable = { poverty_development_var_temp = 0.10 }
-		add_poverty_development = yes
+		set_temp_variable = { TFRKPHN_dev_tmp = 0.01 }
+		custom_effect_tooltip = TFRKPHN_dev_m_pov_up_tt
+		hidden_effect = { add_to_variable = { TFRKPHN_dev_m_pov = 0.01 } TFRKPHN_dev_monthly_ensure = yes }
 	}
 }
 
@@ -304,7 +306,7 @@ country_event = {
 	id = tfrkphn.26
 	title = tfrkphn.26.t
 	desc = tfrkphn.26.desc
-	picture = GFX_TFRKPHN_hong_temp
+	picture = GFX_TFRKPHN_hong_tribute
 	is_triggered_only = yes
 	fire_only_once = yes
 
@@ -319,7 +321,7 @@ country_event = {
 	id = tfrkphn.27
 	title = tfrkphn.27.t
 	desc = tfrkphn.27.desc
-	picture = GFX_TFRKPHN_hong_temp
+	picture = GFX_TFRKPHN_artillery_fire
 	is_triggered_only = yes
 	fire_only_once = yes
 
@@ -333,7 +335,7 @@ country_event = {
 	id = tfrkphn.29
 	title = tfrkphn.29.t
 	desc = tfrkphn.29.desc
-	picture = GFX_TFRKPHN_hong_temp
+	picture = GFX_TFRKPHN_assembly_vote
 	is_triggered_only = yes
 	fire_only_once = yes
 
@@ -352,12 +354,29 @@ country_event = {
 	}
 }
 
+# 2-1b 이벤트: 여론조사 금지 (대만지원법 발의 3일 뒤 자동)
+country_event = {
+	id = tfrkphn.85
+	title = tfrkphn.85.t
+	desc = tfrkphn.85.desc
+	picture = GFX_TFRKPHN_gallup_post
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.85.a
+		set_country_flag = TFRKPHN_poll_ban
+		custom_effect_tooltip = TFRKPHN_poll_ban_tt
+		add_war_support = 0.02
+	}
+}
+
 # 2-2 이벤트: 대한민국의 양안전쟁 참전
 country_event = {
 	id = tfrkphn.30
 	title = tfrkphn.30.t
 	desc = tfrkphn.30.desc
-	picture = GFX_TFRKPHN_hong_temp
+	picture = GFX_TFRKPHN_strait_war
 	is_triggered_only = yes
 	fire_only_once = yes
 
@@ -372,7 +391,7 @@ country_event = {
 	id = tfrkphn.31
 	title = tfrkphn.31.t
 	desc = tfrkphn.31.desc
-	picture = GFX_TFRKPHN_hong_temp
+	picture = GFX_TFRKPHN_ammo_bunker
 	is_triggered_only = yes
 	fire_only_once = yes
 
@@ -386,7 +405,7 @@ country_event = {
 	id = tfrkphn.32
 	title = tfrkphn.32.t
 	desc = tfrkphn.32.desc
-	picture = GFX_TFRKPHN_hong_temp
+	picture = GFX_TFRKPHN_kwangbok
 	is_triggered_only = yes
 	fire_only_once = yes
 
@@ -400,7 +419,7 @@ country_event = {
 	id = tfrkphn.33
 	title = tfrkphn.33.t
 	desc = tfrkphn.33.desc
-	picture = GFX_TFRKPHN_hong_temp
+	picture = GFX_TFRKPHN_hong_speech
 	is_triggered_only = yes
 	fire_only_once = yes
 
@@ -414,7 +433,7 @@ country_event = {
 	id = tfrkphn.34
 	title = tfrkphn.34.t
 	desc = tfrkphn.34.desc
-	picture = GFX_TFRKPHN_hong_temp
+	picture = GFX_TFRKPHN_yeonpyeong
 	is_triggered_only = yes
 	fire_only_once = yes
 
@@ -428,7 +447,7 @@ country_event = {
 	id = tfrkphn.35
 	title = tfrkphn.35.t
 	desc = tfrkphn.35.desc
-	picture = GFX_TFRKPHN_hong_temp
+	picture = GFX_TFRKPHN_nis_stars
 	is_triggered_only = yes
 	fire_only_once = yes
 
@@ -442,7 +461,7 @@ country_event = {
 	id = tfrkphn.36
 	title = tfrkphn.36.t
 	desc = tfrkphn.36.desc
-	picture = GFX_TFRKPHN_hong_temp
+	picture = GFX_TFRKPHN_yeouido_rally
 	is_triggered_only = yes
 	fire_only_once = yes
 
@@ -456,7 +475,7 @@ country_event = {
 	id = tfrkphn.37
 	title = tfrkphn.37.t
 	desc = tfrkphn.37.desc
-	picture = GFX_TFRKPHN_hong_temp
+	picture = GFX_TFRKPHN_shipyard
 	is_triggered_only = yes
 	fire_only_once = yes
 
@@ -470,7 +489,7 @@ country_event = {
 	id = tfrkphn.38
 	title = tfrkphn.38.t
 	desc = tfrkphn.38.desc
-	picture = GFX_TFRKPHN_hong_temp
+	picture = GFX_TFRKPHN_troll
 	is_triggered_only = yes
 	fire_only_once = yes
 
@@ -484,7 +503,7 @@ country_event = {
 	id = tfrkphn.39
 	title = tfrkphn.39.t
 	desc = tfrkphn.39.desc
-	picture = GFX_TFRKPHN_hong_temp
+	picture = GFX_TFRKPHN_un_assembly
 	is_triggered_only = yes
 	fire_only_once = yes
 
@@ -498,7 +517,7 @@ country_event = {
 	id = tfrkphn.40
 	title = tfrkphn.40.t
 	desc = tfrkphn.40.desc
-	picture = GFX_TFRKPHN_hong_temp
+	picture = GFX_TFRKPHN_warsaw_signing
 	is_triggered_only = yes
 	fire_only_once = yes
 
@@ -512,7 +531,7 @@ country_event = {
 	id = tfrkphn.41
 	title = tfrkphn.41.t
 	desc = tfrkphn.41.desc
-	picture = GFX_TFRKPHN_hong_temp
+	picture = GFX_TFRKPHN_shell_loading
 	is_triggered_only = yes
 	fire_only_once = yes
 
@@ -641,208 +660,305 @@ country_event = {
 country_event = {
 	id = tfrkphn.59
 	title = tfrkphn.59.t
-	desc = tfrkphn.59.desc
-	picture = GFX_TFRKPHN_hong_temp
+	desc = tfrkphn.59.story
+	picture = GFX_TFRKPHN_chung
 	is_triggered_only = yes
 	fire_only_once = yes
 
 	option = {
-		name = tfrkphn.59.a
+		name = tfrkphn.59.story_a
 	}
 }
 
 country_event = {
 	id = tfrkphn.60
 	title = tfrkphn.60.t
-	desc = tfrkphn.60.desc
-	picture = GFX_TFRKPHN_hong_temp
+	desc = tfrkphn.60.story
+	picture = GFX_TFRKPHN_facebook
 	is_triggered_only = yes
 	fire_only_once = yes
 
 	option = {
-		name = tfrkphn.60.a
+		name = tfrkphn.60.story_a
 	}
 }
 
 country_event = {
 	id = tfrkphn.61
 	title = tfrkphn.61.t
-	desc = tfrkphn.61.desc
-	picture = GFX_TFRKPHN_hong_temp
+	desc = tfrkphn.61.story
+	picture = GFX_TFRKPHN_women_soldiers
 	is_triggered_only = yes
 	fire_only_once = yes
 
 	option = {
-		name = tfrkphn.61.a
+		name = tfrkphn.61.story_a
 	}
 }
 
 country_event = {
 	id = tfrkphn.62
 	title = tfrkphn.62.t
-	desc = tfrkphn.62.desc
-	picture = GFX_TFRKPHN_hong_temp
+	desc = tfrkphn.62.story
+	picture = GFX_TFRKPHN_hyunmoo
 	is_triggered_only = yes
 	fire_only_once = yes
 
 	option = {
-		name = tfrkphn.62.a
+		name = tfrkphn.62.story_a
 	}
 }
 
 country_event = {
 	id = tfrkphn.63
 	title = tfrkphn.63.t
-	desc = tfrkphn.63.desc
-	picture = GFX_TFRKPHN_hong_temp
+	desc = tfrkphn.63.story
+	picture = GFX_TFRKPHN_nuke_doc
 	is_triggered_only = yes
 	fire_only_once = yes
 
 	option = {
-		name = tfrkphn.63.a
+		name = tfrkphn.63.story_a
 	}
 }
 
 country_event = {
 	id = tfrkphn.64
 	title = tfrkphn.64.t
-	desc = tfrkphn.64.desc
-	picture = GFX_TFRKPHN_hong_temp
+	desc = tfrkphn.64.story
+	picture = GFX_TFRKPHN_jsa_defector
 	is_triggered_only = yes
 	fire_only_once = yes
 
 	option = {
-		name = tfrkphn.64.a
+		name = tfrkphn.64.story_a
 	}
 }
 
 country_event = {
 	id = tfrkphn.65
 	title = tfrkphn.65.t
-	desc = tfrkphn.65.desc
-	picture = GFX_TFRKPHN_hong_temp
+	desc = tfrkphn.65.story
+	picture = GFX_TFRKPHN_kr_cn_ties
 	is_triggered_only = yes
 	fire_only_once = yes
 
 	option = {
-		name = tfrkphn.65.a
+		name = tfrkphn.65.story_a
 	}
 }
 
 country_event = {
 	id = tfrkphn.66
 	title = tfrkphn.66.t
-	desc = tfrkphn.66.desc
-	picture = GFX_TFRKPHN_hong_temp
+	desc = tfrkphn.66.story
+	picture = GFX_TFRKPHN_grass
 	is_triggered_only = yes
 	fire_only_once = yes
 
 	option = {
-		name = tfrkphn.66.a
+		name = tfrkphn.66.story_a
 	}
 }
 
 country_event = {
 	id = tfrkphn.67
 	title = tfrkphn.67.t
-	desc = tfrkphn.67.desc
-	picture = GFX_TFRKPHN_hong_temp
+	desc = tfrkphn.67.story
+	picture = GFX_TFRKPHN_kinmen
 	is_triggered_only = yes
 	fire_only_once = yes
 
 	option = {
-		name = tfrkphn.67.a
+		name = tfrkphn.67.story_a
 	}
 }
 
 country_event = {
 	id = tfrkphn.68
 	title = tfrkphn.68.t
-	desc = tfrkphn.68.desc
-	picture = GFX_TFRKPHN_hong_temp
+	desc = tfrkphn.68.story
+	picture = GFX_TFRKPHN_roc_flag
 	is_triggered_only = yes
 	fire_only_once = yes
 
 	option = {
-		name = tfrkphn.68.a
+		name = tfrkphn.68.story_a
 	}
 }
 
 country_event = {
 	id = tfrkphn.69
 	title = tfrkphn.69.t
-	desc = tfrkphn.69.desc
-	picture = GFX_TFRKPHN_hong_temp
+	desc = tfrkphn.69.story
+	picture = GFX_TFRKPHN_eungbo
 	is_triggered_only = yes
 	fire_only_once = yes
 
 	option = {
-		name = tfrkphn.69.a
+		name = tfrkphn.69.story_a
 	}
 }
 
 country_event = {
 	id = tfrkphn.70
 	title = tfrkphn.70.t
-	desc = tfrkphn.70.desc
-	picture = GFX_TFRKPHN_hong_temp
+	desc = tfrkphn.70.story
+	picture = GFX_TFRKPHN_hmm_ship
 	is_triggered_only = yes
 	fire_only_once = yes
 
 	option = {
-		name = tfrkphn.70.a
+		name = tfrkphn.70.story_a
 	}
 }
 
 country_event = {
 	id = tfrkphn.71
 	title = tfrkphn.71.t
-	desc = tfrkphn.71.desc
-	picture = GFX_TFRKPHN_hong_temp
+	desc = tfrkphn.71.story
+	picture = GFX_TFRKPHN_segyehwa
 	is_triggered_only = yes
 	fire_only_once = yes
 
 	option = {
-		name = tfrkphn.71.a
+		name = tfrkphn.71.story_a
 	}
 }
 
 country_event = {
 	id = tfrkphn.72
 	title = tfrkphn.72.t
-	desc = tfrkphn.72.desc
-	picture = GFX_TFRKPHN_hong_temp
+	desc = tfrkphn.72.story
+	picture = GFX_TFRKPHN_un_cemetery
 	is_triggered_only = yes
 	fire_only_once = yes
 
 	option = {
-		name = tfrkphn.72.a
+		name = tfrkphn.72.story_a
+		country_event = { id = tfrkphn.86 }
+	}
+}
+
+country_event = {
+	id = tfrkphn.86
+	title = tfrkphn.86.t
+	desc = tfrkphn.86.story
+	picture = GFX_TFRKPHN_ys_manners
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.86.story_a
 	}
 }
 
 country_event = {
 	id = tfrkphn.73
-	title = tfrkphn.73.t
-	desc = tfrkphn.73.desc
-	picture = GFX_TFRKPHN_hong_temp
+	title = tfrkphn.73.story_t
+	desc = tfrkphn.73.story
+	picture = GFX_TFRKPHN_footprints
 	is_triggered_only = yes
 	fire_only_once = yes
 
 	option = {
-		name = tfrkphn.73.a
+		name = tfrkphn.73.story_a
+		country_event = { id = tfrkphn.87 }
+	}
+}
+
+country_event = {
+	id = tfrkphn.87
+	title = tfrkphn.87.t
+	desc = tfrkphn.87.story
+	picture = GFX_TFRKPHN_footprints
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.87.story_a
+		country_event = { id = tfrkphn.88 }
+	}
+}
+
+country_event = {
+	id = tfrkphn.88
+	title = tfrkphn.88.t
+	desc = tfrkphn.88.story
+	picture = GFX_TFRKPHN_hong_rest
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.88.story_a
 	}
 }
 
 country_event = {
 	id = tfrkphn.74
 	title = tfrkphn.74.t
-	desc = tfrkphn.74.desc
-	picture = GFX_TFRKPHN_hong_temp
+	desc = tfrkphn.74.story
+	picture = GFX_TFRKPHN_successors
 	is_triggered_only = yes
 	fire_only_once = yes
 
 	option = {
-		name = tfrkphn.74.a
+		name = tfrkphn.74.story_a
+		country_event = { id = tfrkphn.89 }
+	}
+}
+
+# 국민의힘 전당대회: 지지율 50% 이상 이인제, 미만 오세훈
+country_event = {
+	id = tfrkphn.89
+	title = tfrkphn.89.t
+	desc = tfrkphn.89.story
+	picture = GFX_TFRKPHN_empty_desk
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = { hidden_effect = { TFRKPHN_hong_update_support_display = yes } }
+
+	option = {
+		name = tfrkphn.89.story_a
+		custom_effect_tooltip = TFRKPHN_conv_tt
+		if = {
+			limit = { check_variable = { TFRKPHN_support_avg > 49.999 } }
+			country_event = { id = tfrkphn.90 }
+		}
+		else = { country_event = { id = tfrkphn.91 } }
+	}
+}
+
+country_event = {
+	id = tfrkphn.90
+	title = tfrkphn.90.t
+	desc = tfrkphn.90.story
+	picture = GFX_TFRKPHN_lee_in_je
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.90.story_a
+		custom_effect_tooltip = TFRKPHN_conv_lee_tt
+		set_country_flag = TFRKPHN_conv_lee
+		clr_country_flag = TFRKPHN_conv_oh
+	}
+}
+
+country_event = {
+	id = tfrkphn.91
+	title = tfrkphn.91.t
+	desc = tfrkphn.91.story
+	picture = GFX_TFRKPHN_oh_conv
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.91.story_a
+		custom_effect_tooltip = TFRKPHN_conv_oh_tt
+		set_country_flag = TFRKPHN_conv_oh
+		clr_country_flag = TFRKPHN_conv_lee
 	}
 }
 
@@ -852,7 +968,7 @@ country_event = {
 	id = tfrkphn.120
 	title = tfrkphn.120.story_t
 	desc = tfrkphn.120.story
-	picture = GFX_TFRKPHN_hong_temp
+	picture = GFX_TFRKPHN_kuk
 	is_triggered_only = yes
 	fire_only_once = yes
 
@@ -864,65 +980,65 @@ country_event = {
 country_event = {
 	id = tfrkphn.121
 	title = tfrkphn.121.t
-	desc = tfrkphn.121.desc
-	picture = GFX_TFRKPHN_hong_temp
+	desc = tfrkphn.121.story
+	picture = GFX_TFRKPHN_econ_emergency
 	is_triggered_only = yes
 	fire_only_once = yes
 
 	option = {
-		name = tfrkphn.121.a
+		name = tfrkphn.121.story_a
 	}
 }
 
 country_event = {
 	id = tfrkphn.122
 	title = tfrkphn.122.t
-	desc = tfrkphn.122.desc
-	picture = GFX_TFRKPHN_hong_temp
+	desc = tfrkphn.122.story
+	picture = GFX_TFRKPHN_samgyeop
 	is_triggered_only = yes
 	fire_only_once = yes
 
 	option = {
-		name = tfrkphn.122.a
+		name = tfrkphn.122.story_a
 	}
 }
 
 country_event = {
 	id = tfrkphn.123
 	title = tfrkphn.123.t
-	desc = tfrkphn.123.desc
-	picture = GFX_TFRKPHN_hong_temp
+	desc = tfrkphn.123.story
+	picture = GFX_TFRKPHN_gukbap
 	is_triggered_only = yes
 	fire_only_once = yes
 
 	option = {
-		name = tfrkphn.123.a
+		name = tfrkphn.123.story_a
 	}
 }
 
 country_event = {
 	id = tfrkphn.124
 	title = tfrkphn.124.t
-	desc = tfrkphn.124.desc
-	picture = GFX_TFRKPHN_hong_temp
+	desc = tfrkphn.124.story
+	picture = GFX_TFRKPHN_fab
 	is_triggered_only = yes
 	fire_only_once = yes
 
 	option = {
-		name = tfrkphn.124.a
+		name = tfrkphn.124.story_a
 	}
 }
 
 country_event = {
 	id = tfrkphn.125
 	title = tfrkphn.125.t
-	desc = tfrkphn.125.desc
-	picture = GFX_TFRKPHN_hong_temp
+	desc = tfrkphn.125.story
+	picture = GFX_TFRKPHN_bank
 	is_triggered_only = yes
 	fire_only_once = yes
 
 	option = {
-		name = tfrkphn.125.a
+		name = tfrkphn.125.story_a
 	}
 }
 
@@ -945,7 +1061,7 @@ country_event = {
 	id = tfrkphn.130
 	title = tfrkphn.130.t
 	desc = tfrkphn.130.desc
-	picture = GFX_TFRKPHN_hong_temp
+	picture = GFX_TFRKPHN_amend
 	is_triggered_only = yes
 	fire_only_once = yes
 
@@ -958,7 +1074,7 @@ country_event = {
 	id = tfrkphn.131
 	title = tfrkphn.131.t
 	desc = tfrkphn.131.desc
-	picture = GFX_TFRKPHN_hong_temp
+	picture = GFX_TFRKPHN_amend
 	is_triggered_only = yes
 	fire_only_once = yes
 
@@ -973,7 +1089,7 @@ country_event = {
 	id = tfrkphn.132
 	title = tfrkphn.132.t
 	desc = tfrkphn.132.desc
-	picture = GFX_TFRKPHN_hong_temp
+	picture = GFX_TFRKPHN_amend
 	is_triggered_only = yes
 	fire_only_once = yes
 
@@ -986,7 +1102,7 @@ country_event = {
 	id = tfrkphn.133
 	title = tfrkphn.133.t
 	desc = tfrkphn.133.desc
-	picture = GFX_TFRKPHN_hong_temp
+	picture = GFX_TFRKPHN_amend
 	is_triggered_only = yes
 	fire_only_once = yes
 
@@ -999,7 +1115,7 @@ country_event = {
 	id = tfrkphn.134
 	title = tfrkphn.134.t
 	desc = tfrkphn.134.desc
-	picture = GFX_TFRKPHN_hong_temp
+	picture = GFX_TFRKPHN_amend
 	is_triggered_only = yes
 	fire_only_once = yes
 
@@ -1012,7 +1128,7 @@ country_event = {
 	id = tfrkphn.135
 	title = tfrkphn.135.t
 	desc = tfrkphn.135.desc
-	picture = GFX_TFRKPHN_hong_temp
+	picture = GFX_TFRKPHN_amend
 	is_triggered_only = yes
 	fire_only_once = yes
 
@@ -1025,7 +1141,7 @@ country_event = {
 	id = tfrkphn.136
 	title = tfrkphn.136.t
 	desc = tfrkphn.136.desc
-	picture = GFX_TFRKPHN_hong_temp
+	picture = GFX_TFRKPHN_amend
 	is_triggered_only = yes
 	fire_only_once = yes
 
@@ -1038,7 +1154,7 @@ country_event = {
 	id = tfrkphn.137
 	title = tfrkphn.137.t
 	desc = tfrkphn.137.desc
-	picture = GFX_TFRKPHN_hong_temp
+	picture = GFX_TFRKPHN_amend
 	is_triggered_only = yes
 	fire_only_once = yes
 
@@ -1051,7 +1167,7 @@ country_event = {
 	id = tfrkphn.138
 	title = tfrkphn.138.t
 	desc = tfrkphn.138.desc
-	picture = GFX_TFRKPHN_hong_temp
+	picture = GFX_TFRKPHN_amend
 	is_triggered_only = yes
 	fire_only_once = yes
 
@@ -1067,7 +1183,7 @@ country_event = {
 	id = tfrkphn.75
 	title = tfrkphn.75.t
 	desc = tfrkphn.75.desc
-	picture = GFX_TFRKPHN_hong_temp
+	picture = GFX_TFRKPHN_const_court
 	is_triggered_only = yes
 	fire_only_once = yes
 
@@ -1083,7 +1199,7 @@ country_event = {
 	id = tfrkphn.76
 	title = tfrkphn.76.t
 	desc = tfrkphn.76.desc
-	picture = GFX_TFRKPHN_hong_temp
+	picture = GFX_TFRKPHN_hong_bluehouse
 	is_triggered_only = yes
 	fire_only_once = yes
 
@@ -1100,7 +1216,7 @@ country_event = {
 	id = tfrkphn.77
 	title = tfrkphn.77.t
 	desc = tfrkphn.77.desc
-	picture = GFX_TFRKPHN_hong_temp
+	picture = GFX_TFRKPHN_us_congress
 	is_triggered_only = yes
 	fire_only_once = yes
 
@@ -1123,10 +1239,12 @@ country_event = {
 
 	option = {
 		name = tfrkphn.78.a
-		set_temp_variable = { poverty_development_var_temp = 0.03 }
-		add_poverty_development = yes
-		set_temp_variable = { academic_development_var_temp = -0.02 }
-		add_academic_development = yes
+		set_temp_variable = { TFRKPHN_dev_tmp = 0.003 }
+		custom_effect_tooltip = TFRKPHN_dev_m_pov_up_tt
+		hidden_effect = { add_to_variable = { TFRKPHN_dev_m_pov = 0.003 } TFRKPHN_dev_monthly_ensure = yes }
+		set_temp_variable = { TFRKPHN_dev_tmp = -0.002 }
+		custom_effect_tooltip = TFRKPHN_dev_m_aca_down_tt
+		hidden_effect = { add_to_variable = { TFRKPHN_dev_m_aca = -0.002 } TFRKPHN_dev_monthly_ensure = yes }
 		add_stability = -0.01
 		set_country_flag = TFRKPHN_reform_bar_exam
 	}
@@ -1143,8 +1261,9 @@ country_event = {
 
 	option = {
 		name = tfrkphn.79.a
-		set_temp_variable = { academic_development_var_temp = 0.02 }
-		add_academic_development = yes
+		set_temp_variable = { TFRKPHN_dev_tmp = 0.002 }
+		custom_effect_tooltip = TFRKPHN_dev_m_aca_up_tt
+		hidden_effect = { add_to_variable = { TFRKPHN_dev_m_aca = 0.002 } TFRKPHN_dev_monthly_ensure = yes }
 		add_stability = -0.01
 		set_country_flag = TFRKPHN_reform_regular_admission
 	}
@@ -1161,8 +1280,9 @@ country_event = {
 
 	option = {
 		name = tfrkphn.80.a
-		set_temp_variable = { military_development_var_temp = 0.02 }
-		add_military_development = yes
+		set_temp_variable = { TFRKPHN_dev_tmp = 0.002 }
+		custom_effect_tooltip = TFRKPHN_dev_m_mil_up_tt
+		hidden_effect = { add_to_variable = { TFRKPHN_dev_m_mil = 0.002 } TFRKPHN_dev_monthly_ensure = yes }
 		add_war_support = -0.02
 		add_stability = 0.02
 		set_country_flag = TFRKPHN_reform_volunteer_army
@@ -1174,7 +1294,7 @@ country_event = {
 	id = tfrkphn.81
 	title = tfrkphn.81.t
 	desc = tfrkphn.81.desc
-	picture = GFX_TFRKPHN_hong_temp
+	picture = GFX_TFRKPHN_crisis_room
 	is_triggered_only = yes
 	fire_only_once = yes
 
@@ -1197,10 +1317,12 @@ country_event = {
 
 	option = {
 		name = tfrkphn.82.a
-		set_temp_variable = { industrial_development_var_temp = 0.03 }
-		add_industrial_development = yes
-		set_temp_variable = { society_development_var_temp = -0.01 }
-		add_society_development = yes
+		set_temp_variable = { TFRKPHN_dev_tmp = 0.003 }
+		custom_effect_tooltip = TFRKPHN_dev_m_ind_up_tt
+		hidden_effect = { add_to_variable = { TFRKPHN_dev_m_ind = 0.003 } TFRKPHN_dev_monthly_ensure = yes }
+		set_temp_variable = { TFRKPHN_dev_tmp = -0.001 }
+		custom_effect_tooltip = TFRKPHN_dev_m_soc_down_tt
+		hidden_effect = { add_to_variable = { TFRKPHN_dev_m_soc = -0.001 } TFRKPHN_dev_monthly_ensure = yes }
 		add_stability = -0.03
 		set_country_flag = TFRKPHN_reform_labor_flexibility
 	}
@@ -1211,7 +1333,7 @@ country_event = {
 	id = tfrkphn.83
 	title = tfrkphn.83.t
 	desc = tfrkphn.83.desc
-	picture = GFX_TFRKPHN_hong_temp
+	picture = GFX_TFRKPHN_kbs
 	is_triggered_only = yes
 	fire_only_once = yes
 
@@ -1219,8 +1341,9 @@ country_event = {
 		name = tfrkphn.83.a
 		set_temp_variable = { income_var_temp = 6 }
 		add_income_with_inflation = yes
-		set_temp_variable = { society_development_var_temp = -0.01 }
-		add_society_development = yes
+		set_temp_variable = { TFRKPHN_dev_tmp = -0.001 }
+		custom_effect_tooltip = TFRKPHN_dev_m_soc_down_tt
+		hidden_effect = { add_to_variable = { TFRKPHN_dev_m_soc = -0.001 } TFRKPHN_dev_monthly_ensure = yes }
 		add_stability = -0.02
 		set_country_flag = TFRKPHN_reform_public_broadcaster
 	}
@@ -1231,7 +1354,7 @@ country_event = {
 	id = tfrkphn.84
 	title = tfrkphn.84.t
 	desc = tfrkphn.84.desc
-	picture = GFX_TFRKPHN_hong_temp
+	picture = GFX_TFRKPHN_wellbeing_chart
 	is_triggered_only = yes
 	fire_only_once = yes
 
@@ -1567,7 +1690,7 @@ country_event = {
 	id = tfrkphn.201
 	title = tfrkphn.201.t
 	desc = tfrkphn.201.story
-	picture = GFX_TFRKPHN_hong_temp
+	picture = GFX_TFRKPHN_youth_dream_logo
 	is_triggered_only = yes
 	fire_only_once = yes
 
@@ -1580,6 +1703,7 @@ country_event = {
 	id = tfrkphn.202
 	title = tfrkphn.202.t
 	desc = tfrkphn.202.story
+	picture = GFX_TFRKPHN_salute_soldier
 	is_triggered_only = yes
 	fire_only_once = yes
 
@@ -1592,26 +1716,26 @@ country_event = {
 country_event = {
 	id = tfrkphn.203
 	title = tfrkphn.203.t
-	desc = tfrkphn.203.desc
-	picture = GFX_TFRKPHN_hong_temp
+	desc = tfrkphn.203.story
+	picture = GFX_TFRKPHN_empty_frame
 	is_triggered_only = yes
 	fire_only_once = yes
 
 	option = {
-		name = tfrkphn.203.a
+		name = tfrkphn.203.story_a
 	}
 }
 
 country_event = {
 	id = tfrkphn.204
 	title = tfrkphn.204.t
-	desc = tfrkphn.204.desc
-	picture = GFX_TFRKPHN_hong_temp
+	desc = tfrkphn.204.story
+	picture = GFX_TFRKPHN_vet_points
 	is_triggered_only = yes
 	fire_only_once = yes
 
 	option = {
-		name = tfrkphn.204.a
+		name = tfrkphn.204.story_a
 	}
 }
 
@@ -1631,104 +1755,109 @@ country_event = {
 country_event = {
 	id = tfrkphn.206
 	title = tfrkphn.206.t
-	desc = tfrkphn.206.desc
-	picture = GFX_TFRKPHN_hong_temp
+	desc = tfrkphn.206.story
+	picture = GFX_TFRKPHN_gdansk
 	is_triggered_only = yes
 	fire_only_once = yes
 
 	option = {
-		name = tfrkphn.206.a
+		name = tfrkphn.206.story_a
 	}
 }
 
 country_event = {
 	id = tfrkphn.207
 	title = tfrkphn.207.t
-	desc = tfrkphn.207.desc
-	picture = GFX_TFRKPHN_hong_temp
+	desc = tfrkphn.207.story
+	picture = GFX_TFRKPHN_veterans
 	is_triggered_only = yes
 	fire_only_once = yes
 
 	option = {
-		name = tfrkphn.207.a
+		name = tfrkphn.207.story_a
 	}
 }
 
 country_event = {
 	id = tfrkphn.208
 	title = tfrkphn.208.t
-	desc = tfrkphn.208.desc
-	picture = GFX_TFRKPHN_hong_temp
+	desc = tfrkphn.208.story
+	picture = GFX_TFRKPHN_gwanghwamun_night
 	is_triggered_only = yes
 	fire_only_once = yes
 
 	option = {
-		name = tfrkphn.208.a
+		name = tfrkphn.208.story_a
 	}
 }
 
 country_event = {
 	id = tfrkphn.209
 	title = tfrkphn.209.t
-	desc = tfrkphn.209.desc
-	picture = GFX_TFRKPHN_hong_temp
+	desc = tfrkphn.209.story
+	picture = GFX_TFRKPHN_oh
 	is_triggered_only = yes
 	fire_only_once = yes
 
 	option = {
-		name = tfrkphn.209.a
+		name = tfrkphn.209.story_a
 	}
 }
 
 country_event = {
 	id = tfrkphn.210
 	title = tfrkphn.210.t
-	desc = tfrkphn.210.desc
-	picture = GFX_TFRKPHN_hong_temp
+	desc = tfrkphn.210.story
+	picture = GFX_TFRKPHN_kori
 	is_triggered_only = yes
 	fire_only_once = yes
 
 	option = {
-		name = tfrkphn.210.a
+		name = tfrkphn.210.story_a
 	}
 }
 
 country_event = {
 	id = tfrkphn.211
 	title = tfrkphn.211.t
-	desc = tfrkphn.211.desc
-	picture = GFX_TFRKPHN_hong_temp
+	desc = tfrkphn.211.story
+	picture = GFX_TFRKPHN_g7
 	is_triggered_only = yes
 	fire_only_once = yes
 
 	option = {
-		name = tfrkphn.211.a
+		name = tfrkphn.211.story_a
 	}
 }
 
 country_event = {
 	id = tfrkphn.220
 	title = tfrkphn.220.t
-	desc = tfrkphn.220.desc
-	picture = GFX_TFRKPHN_crime_raid
+	desc = { text = tfrkphn.220.seoul trigger = { check_variable = { TFRKPHN_crime_last = 1 } } }
+	desc = { text = tfrkphn.220.busan trigger = { check_variable = { TFRKPHN_crime_last = 2 } } }
+	desc = { text = tfrkphn.220.daegu trigger = { check_variable = { TFRKPHN_crime_last = 3 } } }
+	desc = { text = tfrkphn.220.gwangju trigger = { check_variable = { TFRKPHN_crime_last = 4 } } }
+	desc = { text = tfrkphn.220.daejeon trigger = { check_variable = { TFRKPHN_crime_last = 5 } } }
+	desc = { text = tfrkphn.220.ulsan trigger = { check_variable = { TFRKPHN_crime_last = 6 } } }
+	picture = GFX_TFRKPHN_gang_arrest
 	is_triggered_only = yes
 
 
 	option = {
-		name = tfrkphn.220.a
+		name = tfrkphn.220.story_a
 	}
 }
 
 country_event = {
 	id = tfrkphn.221
 	title = tfrkphn.221.t
-	desc = tfrkphn.221.desc
-	picture = GFX_TFRKPHN_crime_raid
+	desc = tfrkphn.221.story
+	picture = GFX_TFRKPHN_gang_parade
 	is_triggered_only = yes
 	fire_only_once = yes
 
 	option = {
-		name = tfrkphn.221.a
+		name = tfrkphn.221.story_a
 	}
 }
 
@@ -1744,3 +1873,310 @@ country_event = {
 		name = tfrkphn.140.a
 	}
 }
+
+# 양안전쟁 종전: 여론조사 공표 금지 해제 (on_daily_KOR에서 띄운다)
+country_event = {
+	id = tfrkphn.230
+	title = tfrkphn.230.t
+	desc = tfrkphn.230.desc
+	picture = GFX_TFRKPHN_gallup_post
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.230.a
+		custom_effect_tooltip = TFRKPHN_poll_ban_lift_tt
+	}
+}
+
+# ===== 대선 (임기 만료): on_daily_KOR 에서 띄운다. 무조건 보수 정권(이인제/오세훈) =====
+
+country_event = {
+	id = tfrkphn.241
+	title = tfrkphn.241.t
+	desc = tfrkphn.241.desc
+	picture = GFX_report_event_ppp_ge_win
+	is_triggered_only = yes
+
+	option = {
+		name = tfrkphn.241.a
+		# 4년 중임제: 현직 재선 (두 번째 임기, 다음 대선에는 나올 수 없다)
+		if = { limit = { has_country_flag = TFRKPHN_successor_lee_in_je } add_to_variable = { TFRKPHN_lee_terms = 1 } }
+		if = { limit = { has_country_flag = TFRKPHN_successor_oh_se_hoon } add_to_variable = { TFRKPHN_oh_terms = 1 } }
+		set_country_flag = TFRKPHN_pres_term2
+		set_variable = { TFRKPHN_term_days = 1461 }
+		add_stability = 0.05
+		custom_effect_tooltip = TFRKPHN_term2_tt
+	}
+}
+
+country_event = {
+	id = tfrkphn.245
+	title = tfrkphn.245.t
+	desc = tfrkphn.245.desc
+	picture = GFX_TFRKPHN_lee_in_je
+	is_triggered_only = yes
+
+	option = {
+		name = tfrkphn.245.a
+		custom_effect_tooltip = TFRKPHN_ge2027_lee_in_je_tt
+		TFRKPHN_ge2027_lee_in_je_effect = yes
+	}
+}
+
+country_event = {
+	id = tfrkphn.246
+	title = tfrkphn.246.t
+	desc = tfrkphn.246.desc
+	picture = GFX_TFRKPHN_oh_conv
+	is_triggered_only = yes
+
+	option = {
+		name = tfrkphn.246.a
+		custom_effect_tooltip = TFRKPHN_ge2027_oh_se_hoon_tt
+		TFRKPHN_ge2027_oh_se_hoon_effect = yes
+	}
+}
+
+# 김정은 제거 작전 성공 (북한 쪽에서 처리). TFR 원본 nk.2 의 효과를 그대로 하고, 문구만 암살로 바꿨다. 이어서 tfrkphn.254 3분할 내전
+country_event = {
+	id = tfrkphn.250
+	title = tfrkphn.250.t
+	desc = tfrkphn.250.desc
+	picture = GFX_TFRKPHN_kju_target
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		hidden_effect = { news_event = { id = tfrkphn.251 } }	# 김정은 암살 세계 뉴스
+	}
+
+	option = {
+		name = tfrkphn.250.a
+		PRC = {
+			diplomatic_relation = {
+				country = PRK
+				relation = guarantee
+				active = no
+			}
+		}
+		set_country_flag = PRK_Kim_Is_Dead
+		remove_ideas = { PRK_Total_Control_idea }
+		hidden_effect = {
+			remove_dynamic_modifier = { modifier = PRK_economic_sovereignty_modifier }
+			remove_dynamic_modifier = { modifier = PRK_military_preparedness_modifier }
+			retire_character = PRK_kim_jongun
+			# TFR 원본 nk.11(3분할)은 Korea Plus와 함께 쓰면 게임이 튕겨서(부대 배치 파일 불러오기) 쓰지 않는다.
+			# 대신 7일 뒤 tfrkphn.254 에서 게임 기본 내전(start_civil_war)으로 셋으로 나눈다.
+			country_event = { id = tfrkphn.254 days = 7 }
+		}
+	}
+}
+
+# 김정은 암살 뉴스 (전 세계)
+news_event = {
+	id = tfrkphn.251
+	title = tfrkphn.251.t
+	desc = tfrkphn.251.desc
+	picture = GFX_TFRKPHN_kju_target_news
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = tfrkphn.251.a
+		trigger = { OR = { original_tag = KOR is_in_faction_with = KOR } }
+	}
+	option = {
+		name = tfrkphn.251.c
+		trigger = { OR = { original_tag = PRC original_tag = PRK is_in_faction_with = PRC } }
+	}
+	option = {
+		name = tfrkphn.251.b
+		trigger = { NOT = { original_tag = KOR is_in_faction_with = KOR original_tag = PRC original_tag = PRK is_in_faction_with = PRC } }
+	}
+}
+
+# 북한 내전 3일 뒤: 자유조선군(NK3) → 이북5도위원회 (한국의 괴뢰국, 지도자 태영호), 북한(PRK) → 중국의 괴뢰국
+country_event = {
+	id = tfrkphn.252
+	title = tfrkphn.252.t
+	desc = tfrkphn.252.desc
+	picture = GFX_TFRKPHN_ibuk5do
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.252.a
+		custom_effect_tooltip = TFRKPHN_ibuk5do_tt
+		hidden_effect = {
+			random_country = {
+				limit = { has_country_flag = TFRKPHN_free_joseon }
+				set_cosmetic_tag = NK3_TFRKPHN_ibuk5do
+				set_politics = { ruling_party = authoritarian_democrat elections_allowed = no }
+				set_popularities = { authoritarian_democrat = 70 totalitarian_socialist = 30 }
+				set_party_name = { ideology = authoritarian_democrat long_name = TFRKPHN_ibuk5do_party_long name = TFRKPHN_ibuk5do_party }
+				retire_country_leader = yes
+				if = { limit = { NOT = { has_character = TFRKPHN_tae_yeongho_char } } recruit_character = TFRKPHN_tae_yeongho_char }
+				TFRKPHN_tae_yeongho_char = { promote_character = ultra_conservatism }	# 권위주의 민주 그룹
+				add_ideas = TFRKPHN_rok_army_support
+				get_current_government_type = yes
+				ROOT = { puppet = PREV }
+				restore_previous_government_type = yes
+			}
+			if = {
+				limit = { country_exists = PRK PRC = { exists = yes } }
+				PRK = { get_current_government_type = yes }
+				PRC = { puppet = PRK }
+				PRK = { restore_previous_government_type = yes }
+			}
+			# 괴뢰화로 끊긴 내전 다시 잇기: 이북5도 vs 북한(김여정), 이북5도 vs 군사위원회, 군사위원회 vs 북한
+			random_country = {
+				limit = { has_country_flag = TFRKPHN_free_joseon }
+				save_event_target_as = TFRKPHN_ibuk5do_t
+			}
+			random_country = {
+				limit = { has_country_flag = TFRKPHN_kpa_junta exists = yes }
+				save_event_target_as = TFRKPHN_kpa_t
+			}
+			if = {
+				limit = { has_event_target = TFRKPHN_ibuk5do_t country_exists = PRK }
+				event_target:TFRKPHN_ibuk5do_t = {
+					if = { limit = { NOT = { has_war_with = PRK } } declare_war_on = { target = PRK type = annex_everything } }
+				}
+			}
+			if = {
+				limit = { has_event_target = TFRKPHN_ibuk5do_t has_event_target = TFRKPHN_kpa_t }
+				event_target:TFRKPHN_ibuk5do_t = {
+					if = { limit = { NOT = { has_war_with = event_target:TFRKPHN_kpa_t } } declare_war_on = { target = event_target:TFRKPHN_kpa_t type = annex_everything } }
+				}
+			}
+			if = {
+				limit = { has_event_target = TFRKPHN_kpa_t country_exists = PRK }
+				event_target:TFRKPHN_kpa_t = {
+					if = { limit = { NOT = { has_war_with = PRK } } declare_war_on = { target = PRK type = annex_everything } }
+				}
+			}
+		}
+	}
+}
+
+# 대아대전 시작 뉴스
+news_event = {
+	id = tfrkphn.253
+	title = tfrkphn.253.t
+	desc = tfrkphn.253.desc
+	picture = GFX_TFRKPHN_kju_target_news
+	major = yes
+	is_triggered_only = yes
+
+	option = { name = tfrkphn.253.a }
+}
+
+# 북한 3분할 내전 (김정은 암살 7일 뒤, 북한 쪽에서 처리). 게임 기본 내전으로 군대도 자동으로 나뉜다.
+# 평양(북한) / 조선인민군 군부(민족주의) / 자유조선군(권위주의 민주, 3일 뒤 이북5도위원회)
+country_event = {
+	id = tfrkphn.254
+	title = tfrkphn.254.t
+	desc = tfrkphn.254.desc
+	picture = GFX_TFRKPHN_kju_target
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.254.a
+		set_global_flag = PRK_Civil_War
+		set_global_flag = north_korean_civil_war
+		set_global_flag = TFRKPHN_nk_civil_war
+		add_stability = -0.25
+		# 평양 정부 지도자: Korea Plus 원본 김여정 (korea.189 와 같은 방식)
+		PRK_kim_yojong_char = {
+			add_country_leader_role = {
+				country_leader = {
+					desc = PRK_kim_yojong_char_desc
+					ideology = jucheism
+					traits = { hos_cult_of_personality }
+				}
+				promote_leader = yes
+			}
+			add_country_leader_role = {
+				country_leader = {
+					desc = PRK_kim_yojong_char_desc
+					ideology = left_nationalism
+					traits = { hos_cult_of_personality }
+				}
+				promote_leader = yes
+			}
+		}
+		# 내전 세력의 이념 지지율이 너무 낮으면 내전이 일어나지 않으므로 먼저 올린다
+		hidden_effect = {
+			add_popularity = { ideology = authoritarian_democrat popularity = 0.20 }
+			add_popularity = { ideology = nationalist popularity = 0.20 }
+		}
+		# 1) 자유조선군 (서북부)
+		start_civil_war = {
+			ideology = authoritarian_democrat
+			size = 0.25
+			capital = 1042
+			states = { 872 1042 }
+		}
+		hidden_effect = {
+			random_country = {
+				limit = { original_tag = PRK NOT = { tag = PRK } has_government = authoritarian_democrat }
+				set_country_flag = TFRKPHN_free_joseon
+				set_cosmetic_tag = TFRKPHN_free_joseon_ct
+			}
+		}
+		# 2) 조선인민군 군사위원회 (동북부). 한 나라에서 기본 내전은 한 번만 일어나서,
+		#    TFR 원본 NK2 나라에 주를 넘기고 사단을 직접 만들어 세 번째 세력으로 세운다.
+		hidden_effect = {
+			NK2 = {
+				add_state_core = 875
+				add_state_core = 873
+				add_state_core = 874
+			}
+			875 = { if = { limit = { is_owned_by = PRK } NK2 = { transfer_state = 875 } } }
+			873 = { if = { limit = { is_owned_by = PRK } NK2 = { transfer_state = 873 } } }
+			874 = { if = { limit = { is_owned_by = PRK } NK2 = { transfer_state = 874 } } }
+			NK2 = {
+				set_country_flag = TFRKPHN_kpa_junta
+				set_cosmetic_tag = TFRKPHN_kpa_ct
+				set_politics = { ruling_party = nationalist elections_allowed = no }
+				set_popularities = { nationalist = 70 totalitarian_socialist = 30 }
+				set_capital = { state = 875 }
+				add_equipment_to_stockpile = { type = infantry_equipment amount = 6000 producer = PRK }
+				add_equipment_to_stockpile = { type = artillery_equipment amount = 600 producer = PRK }
+				add_manpower = 60000
+				division_template = {
+					name = "Inmingun Bobyeong Sadan"
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+					}
+				}
+				875 = { create_unit = { division = "division_template = \"Inmingun Bobyeong Sadan\" start_experience_factor = 0.3 start_equipment_factor = 0.8" owner = NK2 count = 4 } }
+				873 = { create_unit = { division = "division_template = \"Inmingun Bobyeong Sadan\" start_experience_factor = 0.3 start_equipment_factor = 0.8" owner = NK2 count = 3 } }
+				874 = { create_unit = { division = "division_template = \"Inmingun Bobyeong Sadan\" start_experience_factor = 0.3 start_equipment_factor = 0.8" owner = NK2 count = 3 } }
+				declare_war_on = { target = PRK type = civil_war }
+				add_ideas = TFRKPHN_pdto_bombing
+			}
+			# PDTO 연합국 폭격: 김여정의 북한(PRK)과 최룡해의 군사위원회(NK2)
+			PRK = { add_ideas = TFRKPHN_pdto_bombing }
+			# 북한 내전 슈퍼이벤트 (KP 슈퍼이벤트 창, 모든 플레이어)
+			if = {
+				limit = { NOT = { has_global_flag = super_events_off_flag } }
+				every_country = {
+					limit = { is_ai = no }
+					set_variable = { TFRKP_super_event = token:TFRKPHN_SE_NK_CIVIL_WAR }
+					scoped_play_song = "TFRKP_TFRKPHN_SE_NK_CIVIL_WAR"
+				}
+			}
+			# 3일 뒤 자유조선군 → 이북5도위원회 (한국 쪽 이벤트)
+			KOR = { country_event = { id = tfrkphn.252 days = 3 } }
+		}
+	}
+}
+

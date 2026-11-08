@@ -1,4 +1,4 @@
-﻿# [안내] 국방부 군사 결정 패널. 각 군 마크(버튼)를 누르면 효과가 나갑니다. 동작은 common/scripted_guis/TFRKPHN_scripted_guis.txt의 TFRKPHN_mnd_gui.
+# [안내] 국방부 군사 결정 패널. 각 군 마크는 탭 버튼이고, 오른쪽 위 「인사 명단」 버튼은 장성 명단을 엽니다. 동작은 common/scripted_guis/TFRKPHN_scripted_guis.txt의 TFRKPHN_mnd_gui.
 # [안내] 수정 방법: 모드 폴더의 TUTORIAL_KO.md 7~9장 참고. 새 이름에는 TFRKPHN_ 접두어를 붙이세요.
 spriteTypes = {
 	spriteType = {
@@ -29,6 +29,66 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_TFRKPHN_mnd_btn_marine"
 		texturefile = "gfx/interface/gui/TFRKPHN_mnd/TFRKPHN_mnd_btn_marine.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_mnd_btn_insa"
+		texturefile = "gfx/interface/gui/TFRKPHN_mnd/TFRKPHN_mnd_btn_insa.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_mnd_btn_back"
+		texturefile = "gfx/interface/gui/TFRKPHN_mnd/TFRKPHN_mnd_btn_back.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_mnd_insa_card"
+		texturefile = "gfx/interface/gui/TFRKPHN_mnd/TFRKPHN_mnd_insa_card.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_mnd_insa_army"
+		texturefile = "gfx/interface/gui/TFRKPHN_mnd/TFRKPHN_mnd_insa_army.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_mnd_insa_tab_army_on"
+		texturefile = "gfx/interface/gui/TFRKPHN_mnd/TFRKPHN_mnd_insa_tab_army_on.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_mnd_insa_tab_army_off"
+		texturefile = "gfx/interface/gui/TFRKPHN_mnd/TFRKPHN_mnd_insa_tab_army_off.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_mnd_insa_navy"
+		texturefile = "gfx/interface/gui/TFRKPHN_mnd/TFRKPHN_mnd_insa_navy.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_mnd_insa_tab_navy_on"
+		texturefile = "gfx/interface/gui/TFRKPHN_mnd/TFRKPHN_mnd_insa_tab_navy_on.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_mnd_insa_tab_navy_off"
+		texturefile = "gfx/interface/gui/TFRKPHN_mnd/TFRKPHN_mnd_insa_tab_navy_off.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_mnd_insa_air"
+		texturefile = "gfx/interface/gui/TFRKPHN_mnd/TFRKPHN_mnd_insa_air.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_mnd_insa_tab_air_on"
+		texturefile = "gfx/interface/gui/TFRKPHN_mnd/TFRKPHN_mnd_insa_tab_air_on.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_mnd_insa_tab_air_off"
+		texturefile = "gfx/interface/gui/TFRKPHN_mnd/TFRKPHN_mnd_insa_tab_air_off.png"
 		legacy_lazy_load = no
 	}
 }

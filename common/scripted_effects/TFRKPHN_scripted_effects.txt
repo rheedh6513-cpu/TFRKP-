@@ -1,4 +1,4 @@
-﻿# [안내] 여러 곳에서 같이 쓰는 효과 묶음 (트리 교체, 한일 핵 패널 진행 등). 전역 변수는 set_variable = { global.이름 = 값 }.
+# [안내] 여러 곳에서 같이 쓰는 효과 묶음 (트리 교체, 한일 핵 패널 진행 등). 전역 변수는 set_variable = { global.이름 = 값 }.
 # [안내] 수정 방법: 모드 폴더의 TUTORIAL_KO.md 7~9장 참고. 새 이름에는 TFRKPHN_ 접두어를 붙이세요.
 TFRKPHN_hourglass_init = {
 	if = {
@@ -810,10 +810,27 @@ TFRKPHN_ge2027_lee_in_je_effect = {
 	clr_country_flag = TFRKP_HN_hong_president
 	clr_country_flag = TFRKPHN_amend_busy
 	set_country_flag = TFRKPHN_successor_lee_in_je
+	clr_country_flag = TFRKPHN_successor_oh_se_hoon
+	add_to_variable = { TFRKPHN_lee_terms = 1 }	# 대통령 임기 횟수 (4년 중임제면 최대 2번, 단임제면 1번)
+	# 이인제 정부: 지지도 지도·개헌 탭은 닫고, 국방부·「국」 탭은 이어서 연다
+	# (keep_completed = no 로 트리를 바꾸면 홍준표 트리 중점 완료 기록이 사라지므로 미리 깃발로 남긴다)
+	if = { limit = { has_completed_focus = TFRKPHN_hong_b03_10 } set_country_flag = TFRKPHN_mnd_open }
+	if = { limit = { has_completed_focus = TFRKPHN_hong_b03_11 } set_country_flag = TFRKPHN_mnd_armed_peace_open }
+	if = { limit = { has_completed_focus = TFRKPHN_hong_b03_26 } set_country_flag = TFRKPHN_kuk_open }
+	hidden_effect = {
+		if = { limit = { has_active_mission = TFRKPHN_support_decay_mission } remove_mission = TFRKPHN_support_decay_mission }
+		if = { limit = { has_active_mission = TFRKPHN_amend_opposition_moves } remove_mission = TFRKPHN_amend_opposition_moves }
+		if = { limit = { has_active_mission = TFRKPHN_amend_deadline } remove_mission = TFRKPHN_amend_deadline }
+		clr_country_flag = TFRKPHN_amend_active
+		clr_country_flag = TFRKPHN_amend_ongoing
+	}
 	set_politics = { ruling_party = conservative elections_allowed = yes }
 	add_popularity = { ideology = conservative popularity = 0.15 }
-	if = { limit = { NOT = { has_character = KOR_lee_in_je_char } } recruit_character = KOR_lee_in_je_char }
-	KOR_lee_in_je_char = { promote_character = korean_conservatism }
+	hidden_effect = {
+		if = { limit = { NOT = { has_character = KOR_lee_in_je_char } } recruit_character = KOR_lee_in_je_char }
+		KOR_lee_in_je_char = { promote_character = korean_conservatism }
+	}
+	TFRKPHN_term_start_effect = yes
 	load_focus_tree = { tree = TFRKPHN_lee_in_je_tree keep_completed = no }
 	mark_focus_tree_layout_dirty = yes
 }
@@ -821,10 +838,15 @@ TFRKPHN_ge2027_oh_se_hoon_effect = {
 	clr_country_flag = TFRKP_HN_hong_president
 	clr_country_flag = TFRKPHN_amend_busy
 	set_country_flag = TFRKPHN_successor_oh_se_hoon
+	clr_country_flag = TFRKPHN_successor_lee_in_je
+	add_to_variable = { TFRKPHN_oh_terms = 1 }
 	set_politics = { ruling_party = conservative elections_allowed = yes }
 	add_popularity = { ideology = conservative popularity = 0.15 }
-	if = { limit = { NOT = { has_character = KOR_oh_se_hoon_char } } recruit_character = KOR_oh_se_hoon_char }
-	KOR_oh_se_hoon_char = { promote_character = korean_conservatism }
+	hidden_effect = {
+		if = { limit = { NOT = { has_character = KOR_oh_se_hoon_char } } recruit_character = KOR_oh_se_hoon_char }
+		KOR_oh_se_hoon_char = { promote_character = korean_conservatism }
+	}
+	TFRKPHN_term_start_effect = yes
 	load_focus_tree = { tree = TFRKPHN_oh_se_hoon_tree keep_completed = no }
 	mark_focus_tree_layout_dirty = yes
 }
@@ -835,8 +857,11 @@ TFRKPHN_ge2027_cho_won_jin_effect = {
 	set_politics = { ruling_party = authoritarian_democrat elections_allowed = yes }
 	add_popularity = { ideology = authoritarian_democrat popularity = 0.15 }
 	set_party_name = { ideology = authoritarian_democrat name = TFRKPHN_party_cho_won_jin long_name = TFRKPHN_party_cho_won_jin_long }
-	if = { limit = { NOT = { has_character = KOR_cho_won_jin_char } } recruit_character = KOR_cho_won_jin_char }
-	KOR_cho_won_jin_char = { promote_character = ultra_conservatism }
+	hidden_effect = {
+		if = { limit = { NOT = { has_character = KOR_cho_won_jin_char } } recruit_character = KOR_cho_won_jin_char }
+		KOR_cho_won_jin_char = { promote_character = ultra_conservatism }
+	}
+	TFRKPHN_term_start_effect = yes
 	load_focus_tree = { tree = TFRKPHN_cho_won_jin_tree keep_completed = no }
 	mark_focus_tree_layout_dirty = yes
 }
@@ -847,8 +872,11 @@ TFRKPHN_ge2027_ahn_cheol_soo_effect = {
 	set_politics = { ruling_party = market_liberal elections_allowed = yes }
 	add_popularity = { ideology = market_liberal popularity = 0.15 }
 	set_party_name = { ideology = market_liberal name = TFRKPHN_party_ahn_cheol_soo long_name = TFRKPHN_party_ahn_cheol_soo_long }
-	if = { limit = { NOT = { has_character = KOR_ahn_cheol_soo_char } } recruit_character = KOR_ahn_cheol_soo_char }
-	KOR_ahn_cheol_soo_char = { promote_character = classical_liberalism }
+	hidden_effect = {
+		if = { limit = { NOT = { has_character = KOR_ahn_cheol_soo_char } } recruit_character = KOR_ahn_cheol_soo_char }
+		KOR_ahn_cheol_soo_char = { promote_character = classical_liberalism }
+	}
+	TFRKPHN_term_start_effect = yes
 	load_focus_tree = { tree = TFRKPHN_ahn_cheol_soo_tree keep_completed = no }
 	mark_focus_tree_layout_dirty = yes
 }
@@ -860,13 +888,16 @@ TFRKPHN_ge2027_hwang_kyo_ahn_effect = {
 	set_politics = { ruling_party = authoritarian_democrat elections_allowed = yes }
 	add_popularity = { ideology = authoritarian_democrat popularity = 0.15 }
 	set_party_name = { ideology = authoritarian_democrat name = TFRKPHN_party_hwang_kyo_ahn long_name = TFRKPHN_party_hwang_kyo_ahn_long }
-	if = { limit = { NOT = { has_character = KOR_hwang_kyo_ahn_char } } recruit_character = KOR_hwang_kyo_ahn_char }
-	KOR_hwang_kyo_ahn_char = {
-		add_country_leader_role = {
-			country_leader = { ideology = ultra_conservatism }
-			promote_leader = yes
+	hidden_effect = {
+		if = { limit = { NOT = { has_character = KOR_hwang_kyo_ahn_char } } recruit_character = KOR_hwang_kyo_ahn_char }
+		KOR_hwang_kyo_ahn_char = {
+			add_country_leader_role = {
+				country_leader = { ideology = ultra_conservatism }
+				promote_leader = yes
+			}
 		}
 	}
+	TFRKPHN_term_start_effect = yes
 	load_focus_tree = { tree = TFRKPHN_hwang_kyo_ahn_tree keep_completed = no }
 	mark_focus_tree_layout_dirty = yes
 }
@@ -1565,27 +1596,320 @@ TFRKPHN_kj_daily = {
 
 # 국방부 군사 결정: FA-50 경공격기 40대 (By Blood Alone 있으면 전용 설계, 없으면 근접항공지원기)
 TFRKPHN_mnd_fa50_planes = {
+	# Korea Plus가 게임 시작 때 한국에 주는 「FA-50」 설계(small_plane_cas_airframe_1, history/countries/KOR - Korea.txt)를 그대로 40대 받는다.
+	# 예전에는 따로 FA-50 설계를 만들었지만, 이름이 겹치고 모양이 달라서 TFR 원래 설계를 쓰도록 바꿨다.
 	if = {
 		limit = { has_dlc = "By Blood Alone" }
-		create_equipment_variant = {
-			name = "FA-50"
-			type = small_plane_cas_airframe_1
-			parent_version = 0
-			allow_without_tech = yes
-			modules = {
-				fixed_main_weapon_slot = heavy_mg_2x
-				fixed_auxiliary_weapon_slot_1 = light_mg_4x
-				fixed_auxiliary_weapon_slot_2 = empty
-				fixed_auxiliary_weapon_slot_3 = empty
-				engine_type_slot = engine_2_1x
-				special_type_slot_1 = fuel_tanks_small
-				special_type_slot_2 = empty
-				special_type_slot_3 = empty
-			}
-		}
 		add_equipment_to_stockpile = { type = small_plane_cas_airframe_1 variant_name = "FA-50" amount = 40 producer = KOR }
 	}
 	else = {
 		add_equipment_to_stockpile = { type = CAS_equipment_2 amount = 40 producer = KOR }
+	}
+}
+
+# KDDX 사업: 개선된 순양함 선체(ship_hull_cruiser_3)와 함선 무장 연구를 연다.
+# Man the Guns가 있으면 함선 설계기를, 없으면 옛 구축함 장비를 쓴다.
+TFRKPHN_mnd_kddx_tech = {
+	if = {
+		limit = { has_dlc = "Man the Guns" }
+		if = {
+			limit = { NOT = { has_tech = improved_ship_hull_cruiser } }
+			set_technology = { improved_ship_hull_cruiser = 1 }
+		}
+	}
+	else = {
+		if = {
+			limit = { NOT = { has_tech = improved_light_cruiser } }
+			set_technology = { improved_light_cruiser = 1 }
+		}
+	}
+	add_tech_bonus = {
+		name = TFRKPHN_mnd_kddx
+		bonus = 1.0
+		uses = 3
+		category = ship_modules_tech
+	}
+	add_tech_bonus = {
+		name = TFRKPHN_mnd_kddx
+		bonus = 0.5
+		uses = 1
+		category = cat_torpedoes
+	}
+}
+
+# KDDX 4척 건조. 설계는 실제 KDDX를 따라 통합마스트 레이더, 5인치 함포, 근접방어, 대잠 장비, 함대함 미사일 발사대를 넣었다.
+TFRKPHN_mnd_kddx_ships = {
+	if = {
+		limit = { has_dlc = "Man the Guns" }
+		create_equipment_variant = {
+			name = "KDDX"
+			type = ship_hull_cruiser_3
+			parent_version = 0
+			allow_without_tech = yes
+			modules = {
+				fixed_ship_battery_slot = ship_medium_battery_3
+				fixed_ship_anti_air_slot = ship_anti_air_4
+				fixed_ship_fire_control_system_slot = ship_fire_control_system_2
+				fixed_ship_radar_slot = ship_radar_2
+				fixed_ship_engine_slot = cruiser_ship_engine_3
+				fixed_ship_secondaries_slot = ship_secondaries_1	# 기초 지대지(함대함) 미사일 발사대
+				fixed_ship_armor_slot = ship_armor_cruiser_1
+				front_1_custom_slot = ship_medium_battery_3
+				mid_1_custom_slot = ship_torpedo_3
+				mid_2_custom_slot = ship_anti_air_4
+				rear_1_custom_slot = ship_light_medium_battery_3
+			}
+		}
+		# 독도함처럼 함마다 생산 줄을 따로 만든다 (함명은 Korea Plus 구축함 함명 목록에서)
+		add_equipment_production = {
+			equipment = {
+				type = ship_hull_cruiser_3
+				creator = "KOR"
+				version_name = "KDDX"
+			}
+			name = "ROKS DDG-1001 Gwak Jae-u"
+			requested_factories = 1
+			progress = 0.5
+			amount = 1
+		}
+		add_equipment_production = {
+			equipment = {
+				type = ship_hull_cruiser_3
+				creator = "KOR"
+				version_name = "KDDX"
+			}
+			name = "ROKS DDG-1002 Chungmugong Kim Si-min"
+			requested_factories = 1
+			progress = 0.5
+			amount = 1
+		}
+		add_equipment_production = {
+			equipment = {
+				type = ship_hull_cruiser_3
+				creator = "KOR"
+				version_name = "KDDX"
+			}
+			name = "ROKS DDG-1003 Taejo Yi Seong-gye"
+			requested_factories = 1
+			progress = 0.5
+			amount = 1
+		}
+		add_equipment_production = {
+			equipment = {
+				type = ship_hull_cruiser_3
+				creator = "KOR"
+				version_name = "KDDX"
+			}
+			name = "ROKS DDG-1005 Taejong Yi Bang-won"
+			requested_factories = 1
+			progress = 0.5
+			amount = 1
+		}
+	}
+	else = {
+		add_equipment_production = {
+			equipment = {
+				type = light_cruiser_3
+				creator = "KOR"
+			}
+			requested_factories = 4
+			progress = 0.5
+			amount = 4
+		}
+	}
+}
+
+# ===== 장성 임명 (국방부 임명 결정과 인사 명단 칸 클릭이 같이 쓴다) =====
+TFRKPHN_appoint_park_an_su_effect = {
+	add_command_power = -10
+	set_country_flag = TFRKPHN_appointed_park_an_su
+	if = { limit = { NOT = { has_character = KOR_park_an_soo_char } } recruit_character = KOR_park_an_soo_char }
+	KOR_park_an_soo_char = { if = { limit = { OR = { is_corps_commander = yes is_field_marshal = yes } } add_unit_leader_trait = career_officer add_planning = 1 } }
+	add_tech_bonus = { name = TFRKPHN_appoint_park_an_su bonus = 0.5 uses = 1 category = land_doctrine }
+	custom_effect_tooltip = TFRKP_defreform_progress_add_5_TT
+	hidden_effect = { set_temp_variable = { TFRKP_defreform_progress_change = 5 } TFRKP_defreform_add_progress_effect = yes }
+	country_event = { id = tfrkphn.401 }
+}
+TFRKPHN_appoint_kang_sin_chul_effect = {
+	add_command_power = -10
+	set_country_flag = TFRKPHN_appointed_kang_sin_chul
+	recruit_character = KOR_TFRKPHN_kang_sin_chul
+	KOR_TFRKPHN_kang_sin_chul = { if = { limit = { OR = { is_corps_commander = yes is_field_marshal = yes } } add_unit_leader_trait = infantry_officer add_planning = 1 } }
+	add_tech_bonus = { name = TFRKPHN_appoint_kang_sin_chul bonus = 0.5 uses = 1 category = land_doctrine }
+	custom_effect_tooltip = TFRKP_defreform_progress_add_5_TT
+	hidden_effect = { set_temp_variable = { TFRKP_defreform_progress_change = 5 } TFRKP_defreform_add_progress_effect = yes }
+	country_event = { id = tfrkphn.402 }
+}
+TFRKPHN_appoint_son_sik_effect = {
+	add_command_power = -10
+	set_country_flag = TFRKPHN_appointed_son_sik
+	recruit_character = KOR_TFRKPHN_son_sik
+	KOR_TFRKPHN_son_sik = { if = { limit = { OR = { is_corps_commander = yes is_field_marshal = yes } } add_unit_leader_trait = armor_officer add_attack = 1 } }
+	add_tech_bonus = { name = TFRKPHN_appoint_son_sik bonus = 0.5 uses = 1 category = armor }
+	custom_effect_tooltip = TFRKP_defreform_progress_add_5_TT
+	hidden_effect = { set_temp_variable = { TFRKP_defreform_progress_change = 5 } TFRKP_defreform_add_progress_effect = yes }
+	country_event = { id = tfrkphn.403 }
+}
+TFRKPHN_appoint_ko_chang_jun_effect = {
+	add_command_power = -10
+	set_country_flag = TFRKPHN_appointed_ko_chang_jun
+	recruit_character = KOR_TFRKPHN_ko_chang_jun
+	KOR_TFRKPHN_ko_chang_jun = { if = { limit = { OR = { is_corps_commander = yes is_field_marshal = yes } } add_unit_leader_trait = infantry_officer add_defense = 1 } }
+	add_tech_bonus = { name = TFRKPHN_appoint_ko_chang_jun bonus = 0.5 uses = 1 category = infantry_weapons }
+	custom_effect_tooltip = TFRKP_defreform_progress_add_5_TT
+	hidden_effect = { set_temp_variable = { TFRKP_defreform_progress_change = 5 } TFRKP_defreform_add_progress_effect = yes }
+	country_event = { id = tfrkphn.404 }
+}
+TFRKPHN_appoint_hwang_you_sung_effect = {
+	add_command_power = -10
+	set_country_flag = TFRKPHN_appointed_hwang_you_sung
+	recruit_character = KOR_TFRKPHN_hwang_you_sung
+	KOR_TFRKPHN_hwang_you_sung = { if = { limit = { OR = { is_corps_commander = yes is_field_marshal = yes } } add_unit_leader_trait = career_officer add_planning = 1 } }
+	add_tech_bonus = { name = TFRKPHN_appoint_hwang_you_sung bonus = 0.5 uses = 1 category = electronics }
+	custom_effect_tooltip = TFRKP_defreform_trust_add_5_TT
+	hidden_effect = { set_temp_variable = { TFRKP_defreform_trust_change = 5 } TFRKP_defreform_add_trust_effect = yes }
+	country_event = { id = tfrkphn.405 }
+}
+TFRKPHN_appoint_yeo_in_hyeong_effect = {
+	add_command_power = -10
+	set_country_flag = TFRKPHN_appointed_yeo_in_hyeong
+	if = { limit = { NOT = { has_character = KOR_yeo_inhyung_char } } recruit_character = KOR_yeo_inhyung_char }
+	KOR_yeo_inhyung_char = { if = { limit = { OR = { is_corps_commander = yes is_field_marshal = yes } } add_unit_leader_trait = trickster add_planning = 1 } }
+	add_tech_bonus = { name = TFRKPHN_appoint_yeo_in_hyeong bonus = 0.5 uses = 1 category = artificial_intelligence }
+	custom_effect_tooltip = TFRKP_defreform_trust_add_5_TT
+	hidden_effect = { set_temp_variable = { TFRKP_defreform_trust_change = 5 } TFRKP_defreform_add_trust_effect = yes }
+	country_event = { id = tfrkphn.406 }
+}
+TFRKPHN_appoint_lee_jin_woo_effect = {
+	add_command_power = -10
+	set_country_flag = TFRKPHN_appointed_lee_jin_woo
+	if = { limit = { NOT = { has_character = KOR_lee_jin_woo_char } } recruit_character = KOR_lee_jin_woo_char }
+	KOR_lee_jin_woo_char = { if = { limit = { OR = { is_corps_commander = yes is_field_marshal = yes } } add_unit_leader_trait = urban_assault_specialist add_defense = 1 } }
+	add_tech_bonus = { name = TFRKPHN_appoint_lee_jin_woo bonus = 0.5 uses = 1 category = infantry_weapons }
+	custom_effect_tooltip = TFRKP_defreform_trust_add_5_TT
+	hidden_effect = { set_temp_variable = { TFRKP_defreform_trust_change = 5 } TFRKP_defreform_add_trust_effect = yes }
+	country_event = { id = tfrkphn.407 }
+}
+TFRKPHN_appoint_kwak_jong_keun_effect = {
+	add_command_power = -10
+	set_country_flag = TFRKPHN_appointed_kwak_jong_keun
+	recruit_character = KOR_TFRKPHN_kwak_jong_keun
+	KOR_TFRKPHN_kwak_jong_keun = { if = { limit = { OR = { is_corps_commander = yes is_field_marshal = yes } } add_unit_leader_trait = commando add_attack = 1 } }
+	add_tech_bonus = { name = TFRKPHN_appoint_kwak_jong_keun bonus = 0.5 uses = 1 category = cat_mobile_warfare }
+	custom_effect_tooltip = TFRKP_defreform_trust_add_5_TT
+	hidden_effect = { set_temp_variable = { TFRKP_defreform_trust_change = 5 } TFRKP_defreform_add_trust_effect = yes }
+	country_event = { id = tfrkphn.408 }
+}
+TFRKPHN_appoint_kim_myung_soo_effect = {
+	add_command_power = -10
+	set_country_flag = TFRKPHN_appointed_kim_myung_soo
+	recruit_character = KOR_TFRKPHN_kim_myung_soo
+	KOR_TFRKPHN_kim_myung_soo = { if = { limit = { is_navy_leader = yes } add_unit_leader_trait = superior_tactician add_skill_level = 1 } }
+	add_tech_bonus = { name = TFRKPHN_appoint_kim_myung_soo bonus = 0.5 uses = 1 category = electronics }
+	custom_effect_tooltip = TFRKP_defreform_progress_add_5_TT
+	hidden_effect = { set_temp_variable = { TFRKP_defreform_progress_change = 5 } TFRKP_defreform_add_progress_effect = yes }
+	country_event = { id = tfrkphn.409 }
+}
+TFRKPHN_appoint_yang_yong_mo_effect = {
+	add_command_power = -10
+	set_country_flag = TFRKPHN_appointed_yang_yong_mo
+	recruit_character = KOR_TFRKPHN_yang_yong_mo
+	KOR_TFRKPHN_yang_yong_mo = { if = { limit = { is_navy_leader = yes } add_unit_leader_trait = spotter add_skill_level = 1 } }
+	add_tech_bonus = { name = TFRKPHN_appoint_yang_yong_mo bonus = 0.5 uses = 1 category = naval_doctrine }
+	custom_effect_tooltip = TFRKP_defreform_progress_add_5_TT
+	hidden_effect = { set_temp_variable = { TFRKP_defreform_progress_change = 5 } TFRKP_defreform_add_progress_effect = yes }
+	country_event = { id = tfrkphn.410 }
+}
+TFRKPHN_appoint_kang_dong_gil_effect = {
+	add_command_power = -10
+	set_country_flag = TFRKPHN_appointed_kang_dong_gil
+	recruit_character = KOR_TFRKPHN_kang_dong_gil
+	KOR_TFRKPHN_kang_dong_gil = { if = { limit = { is_navy_leader = yes } add_unit_leader_trait = ironside add_skill_level = 1 } }
+	add_tech_bonus = { name = TFRKPHN_appoint_kang_dong_gil bonus = 0.5 uses = 1 category = cat_torpedoes }
+	custom_effect_tooltip = TFRKP_defreform_trust_add_5_TT
+	hidden_effect = { set_temp_variable = { TFRKP_defreform_trust_change = 5 } TFRKP_defreform_add_trust_effect = yes }
+	country_event = { id = tfrkphn.411 }
+}
+TFRKPHN_appoint_choi_sung_hyeok_effect = {
+	add_command_power = -10
+	set_country_flag = TFRKPHN_appointed_choi_sung_hyeok
+	recruit_character = KOR_TFRKPHN_choi_sung_hyeok
+	KOR_TFRKPHN_choi_sung_hyeok = { if = { limit = { is_navy_leader = yes } add_unit_leader_trait = fly_swatter add_skill_level = 1 } }
+	add_tech_bonus = { name = TFRKPHN_appoint_choi_sung_hyeok bonus = 0.5 uses = 1 category = ship_modules_tech }
+	custom_effect_tooltip = TFRKP_defreform_trust_add_5_TT
+	hidden_effect = { set_temp_variable = { TFRKP_defreform_trust_change = 5 } TFRKP_defreform_add_trust_effect = yes }
+	country_event = { id = tfrkphn.412 }
+}
+TFRKPHN_appoint_lee_young_soo_effect = {
+	add_command_power = -10
+	set_country_flag = TFRKPHN_appointed_lee_young_soo
+	recruit_character = KOR_TFRKPHN_lee_young_soo
+	add_tech_bonus = { name = TFRKPHN_appoint_lee_young_soo bonus = 0.5 uses = 1 category = air_doctrine }
+	custom_effect_tooltip = TFRKP_defreform_progress_add_5_TT
+	hidden_effect = { set_temp_variable = { TFRKP_defreform_progress_change = 5 } TFRKP_defreform_add_progress_effect = yes }
+	country_event = { id = tfrkphn.413 }
+}
+TFRKPHN_appoint_son_sug_rag_effect = {
+	add_command_power = -10
+	set_country_flag = TFRKPHN_appointed_son_sug_rag
+	recruit_character = KOR_TFRKPHN_son_sug_rag
+	add_tech_bonus = { name = TFRKPHN_appoint_son_sug_rag bonus = 0.5 uses = 1 category = plane_modules_tech }
+	custom_effect_tooltip = TFRKP_defreform_trust_add_5_TT
+	hidden_effect = { set_temp_variable = { TFRKP_defreform_trust_change = 5 } TFRKP_defreform_add_trust_effect = yes }
+	country_event = { id = tfrkphn.414 }
+}
+TFRKPHN_appoint_kim_hyoung_soo_effect = {
+	add_command_power = -10
+	set_country_flag = TFRKPHN_appointed_kim_hyoung_soo
+	recruit_character = KOR_TFRKPHN_kim_hyoung_soo
+	add_tech_bonus = { name = TFRKPHN_appoint_kim_hyoung_soo bonus = 0.5 uses = 1 category = radar_tech }
+	custom_effect_tooltip = TFRKP_defreform_trust_add_5_TT
+	hidden_effect = { set_temp_variable = { TFRKP_defreform_trust_change = 5 } TFRKP_defreform_add_trust_effect = yes }
+	country_event = { id = tfrkphn.415 }
+}
+
+# ===== 대통령 임기 (개헌 4년 중임제 / 기존 5년 단임제) =====
+# 헌법 제128조 제2항: 중임변경 개헌은 제안 당시 대통령에게는 효력이 없다.
+# 그래서 홍준표 정부에서 개헌(TFRKPHN_const_term)이 되면, 2027년에 뽑힌 다음 정권부터 4년 중임제가 적용된다.
+TFRKPHN_term_start_effect = {
+	set_country_flag = TFRKPHN_pres_cycle
+	set_country_flag = TFRKPHN_hong_term_over	# 홍준표 임기 끝: 홍준표 트리 안전장치(tfrkphn.12)를 끈다
+	# 홍준표 정부의 지지도 하락·개헌 미션은 새 정권에서 끝낸다
+	hidden_effect = {
+		if = { limit = { has_active_mission = TFRKPHN_support_decay_mission } remove_mission = TFRKPHN_support_decay_mission }
+		if = { limit = { has_active_mission = TFRKPHN_amend_opposition_moves } remove_mission = TFRKPHN_amend_opposition_moves }
+		if = { limit = { has_active_mission = TFRKPHN_amend_deadline } remove_mission = TFRKPHN_amend_deadline }
+		clr_country_flag = TFRKPHN_amend_active
+		clr_country_flag = TFRKPHN_amend_ongoing
+	}
+	clr_country_flag = TFRKPHN_pres_term2
+	if = {
+		limit = { has_country_flag = TFRKPHN_const_term }
+		set_country_flag = TFRKPHN_term4_in_force
+	}
+	if = {
+		limit = { has_country_flag = TFRKPHN_term4_in_force }
+		set_variable = { TFRKPHN_term_days = 1461 }	# 대선일부터 4년 뒤 다음 대선
+		custom_effect_tooltip = TFRKPHN_term4_tt
+	}
+	else = {
+		set_variable = { TFRKPHN_term_days = 1826 }	# 대선일부터 5년 뒤 다음 대선
+		custom_effect_tooltip = TFRKPHN_term5_tt
+	}
+}
+
+# 월간 발전도 국가 보정치가 없으면 붙인다
+TFRKPHN_dev_monthly_ensure = {
+	if = {
+		limit = { NOT = { has_dynamic_modifier = { modifier = TFRKPHN_dev_monthly } } }
+		add_dynamic_modifier = { modifier = TFRKPHN_dev_monthly }
+	}
+}
+
+# 이인제 정부의 국정 국가 보정치가 없으면 붙인다
+TFRKPHN_lee_gov_init = {
+	if = {
+		limit = { NOT = { has_dynamic_modifier = { modifier = TFRKPHN_lee_gov } } }
+		add_dynamic_modifier = { modifier = TFRKPHN_lee_gov }
 	}
 }

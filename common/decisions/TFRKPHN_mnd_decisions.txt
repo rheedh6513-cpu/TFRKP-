@@ -1,14 +1,128 @@
-﻿# [안내] 국방부 결정 목록 (모두 1회). 위쪽 그림 패널은 interface/TFRKPHN_mnd.gui, 동작은 scripted_guis의 TFRKPHN_mnd_gui.
+# [안내] 국방부 결정 목록 (모두 1회). 위쪽 그림 패널은 interface/TFRKPHN_mnd.gui, 동작은 scripted_guis의 TFRKPHN_mnd_gui.
 # [안내] 수정 방법: 모드 폴더의 TUTORIAL_KO.md 7~9장 참고. 새 이름에는 TFRKPHN_ 접두어를 붙이세요.
 TFRKPHN_mnd_category = {
+	# ===== 각 군 개혁 (각 1회). 예전에는 패널 마크를 누르면 바로 됐고, 지금은 탭 안의 결정이다 =====
+	TFRKPHN_mnd_army_reform = {
+		icon = GFX_decision_generic_political_actions
+		cost = 50
+		fire_only_once = yes
+		priority = 300
+		visible = { check_variable = { TFRKPHN_mnd_tab = 1 } }
+		complete_effect = { hidden_effect = { add_to_array = { array = TFRKPHN_mnd_done value = 1 } }
+			army_experience = 25
+			set_country_flag = TFRKPHN_mnd_army_done
+			add_dynamic_modifier = { modifier = TFRKPHN_mnd_army }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	TFRKPHN_mnd_navy_reform = {
+		icon = GFX_decision_generic_political_actions
+		cost = 50
+		fire_only_once = yes
+		priority = 300
+		visible = { check_variable = { TFRKPHN_mnd_tab = 2 } }
+		complete_effect = { hidden_effect = { add_to_array = { array = TFRKPHN_mnd_done value = 2 } }
+			navy_experience = 25
+			set_country_flag = TFRKPHN_mnd_navy_done
+			add_dynamic_modifier = { modifier = TFRKPHN_mnd_navy }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	TFRKPHN_mnd_fa50_buy = {
+		icon = GFX_decision_generic_political_actions
+		cost = 75
+		fire_only_once = yes
+		priority = 300
+		visible = { check_variable = { TFRKPHN_mnd_tab = 3 } }
+		complete_effect = { hidden_effect = { add_to_array = { array = TFRKPHN_mnd_done value = 3 } }
+			air_experience = 25
+			set_country_flag = TFRKPHN_mnd_fa50_done
+			add_dynamic_modifier = { modifier = TFRKPHN_mnd_fa50 }
+			TFRKPHN_mnd_fa50_planes = yes
+		}
+		ai_will_do = { factor = 1 }
+	}
+	TFRKPHN_mnd_f4_retire = {
+		icon = GFX_decision_generic_political_actions
+		cost = 50
+		fire_only_once = yes
+		priority = 299
+		visible = { check_variable = { TFRKPHN_mnd_tab = 3 } }
+		available = { has_country_flag = TFRKPHN_mnd_fa50_done }
+		complete_effect = { hidden_effect = { add_to_array = { array = TFRKPHN_mnd_done value = 4 } }
+			air_experience = 25
+			set_country_flag = TFRKPHN_mnd_f4_done
+			add_dynamic_modifier = { modifier = TFRKPHN_mnd_f4 }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	TFRKPHN_mnd_marine_create = {
+		icon = GFX_decision_generic_political_actions
+		cost = 100
+		fire_only_once = yes
+		priority = 300
+		visible = { check_variable = { TFRKPHN_mnd_tab = 4 } }
+		complete_effect = { hidden_effect = { add_to_array = { array = TFRKPHN_mnd_done value = 5 } }
+			army_experience = 25
+			set_country_flag = TFRKPHN_mnd_marine_done
+			add_dynamic_modifier = { modifier = TFRKPHN_mnd_marine_sof }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	TFRKPHN_mnd_industry = {
+		icon = GFX_decision_generic_political_actions
+		cost = 100
+		fire_only_once = yes
+		priority = 300
+		visible = { check_variable = { TFRKPHN_mnd_tab = 0 } }
+		complete_effect = { hidden_effect = { add_to_array = { array = TFRKPHN_mnd_done value = 6 } }
+			set_country_flag = TFRKPHN_mnd_factory_done
+			every_owned_state = {
+				limit = { is_core_of = ROOT free_building_slots = { building = arms_factory size > 0 include_locked = no } }
+				random_select_amount = 2
+				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+			}
+			if = {
+				limit = { NOT = { any_owned_state = { is_core_of = ROOT free_building_slots = { building = arms_factory size > 0 include_locked = no } } } }
+				capital_scope = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = { type = arms_factory level = 2 instant_build = yes }
+				}
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	TFRKPHN_mnd_space_create = {
+		icon = GFX_decision_generic_political_actions
+		cost = 150
+		fire_only_once = yes
+		priority = 299
+		visible = { check_variable = { TFRKPHN_mnd_tab = 0 } }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = TFRKPHN_mnd_space_req_tt
+				has_country_flag = TFRKPHN_mnd_army_done
+				has_country_flag = TFRKPHN_mnd_navy_done
+				has_country_flag = TFRKPHN_mnd_fa50_done
+				has_country_flag = TFRKPHN_mnd_f4_done
+				has_country_flag = TFRKPHN_mnd_marine_done
+			}
+		}
+		complete_effect = { hidden_effect = { add_to_array = { array = TFRKPHN_mnd_done value = 7 } }
+			set_country_flag = TFRKPHN_mnd_space_done
+			add_dynamic_modifier = { modifier = TFRKPHN_mnd_space }
+		}
+		ai_will_do = { factor = 1 }
+	}
 	TFRKPHN_mnd_k2 = {
 		icon = GFX_decision_generic_political_actions
 		cost = 75
 		days_remove = 90
 		fire_only_once = yes
+		visible = { check_variable = { TFRKPHN_mnd_tab = 1 } }
 		available = { has_country_flag = TFRKPHN_mnd_army_done }
 		complete_effect = { custom_effect_tooltip = TFRKPHN_mnd_after_90_tt }
-		remove_effect = { add_equipment_to_stockpile = { type = modern_tank_equipment_3 amount = 150 producer = KOR } }
+		remove_effect = { hidden_effect = { add_to_array = { array = TFRKPHN_mnd_done value = 8 } } add_equipment_to_stockpile = { type = modern_tank_chassis_2 amount = 150 producer = KOR variant_name = "K-2 'Black Panther'" } }
 		ai_will_do = { factor = 1 }
 	}
 	TFRKPHN_mnd_k9 = {
@@ -16,9 +130,10 @@ TFRKPHN_mnd_category = {
 		cost = 75
 		days_remove = 90
 		fire_only_once = yes
+		visible = { check_variable = { TFRKPHN_mnd_tab = 1 } }
 		available = { has_country_flag = TFRKPHN_mnd_army_done }
 		complete_effect = { custom_effect_tooltip = TFRKPHN_mnd_after_90_tt }
-		remove_effect = { add_equipment_to_stockpile = { type = modern_tank_artillery_equipment_2 amount = 100 producer = KOR } }
+		remove_effect = { hidden_effect = { add_to_array = { array = TFRKPHN_mnd_done value = 9 } } add_equipment_to_stockpile = { type = modern_tank_artillery_equipment_2 amount = 200 producer = KOR } }
 		ai_will_do = { factor = 1 }
 	}
 	TFRKPHN_mnd_reserve = {
@@ -26,15 +141,17 @@ TFRKPHN_mnd_category = {
 		cost = 50
 		days_remove = 60
 		fire_only_once = yes
+		visible = { check_variable = { TFRKPHN_mnd_tab = 1 } }
 		complete_effect = { custom_effect_tooltip = TFRKPHN_mnd_after_60_tt }
-		remove_effect = { add_manpower = 30000 army_experience = 10 }
+		remove_effect = { hidden_effect = { add_to_array = { array = TFRKPHN_mnd_done value = 10 } } add_manpower = 30000 army_experience = 10 }
 		ai_will_do = { factor = 1 }
 	}
 	TFRKPHN_mnd_barracks = {
 		icon = GFX_decision_generic_political_actions
 		cost = 50
 		fire_only_once = yes
-		complete_effect = { add_dynamic_modifier = { modifier = TFRKPHN_mnd_barracks } }
+		visible = { check_variable = { TFRKPHN_mnd_tab = 0 } }
+		complete_effect = { hidden_effect = { add_to_array = { array = TFRKPHN_mnd_done value = 11 } } add_dynamic_modifier = { modifier = TFRKPHN_mnd_barracks } }
 		ai_will_do = { factor = 1 }
 	}
 	TFRKPHN_mnd_export = {
@@ -42,9 +159,10 @@ TFRKPHN_mnd_category = {
 		cost = 50
 		days_remove = 30
 		fire_only_once = yes
+		visible = { check_variable = { TFRKPHN_mnd_tab = 0 } }
 		available = { has_country_flag = TFRKPHN_mnd_factory_done }
 		complete_effect = { custom_effect_tooltip = TFRKPHN_mnd_after_30_tt }
-		remove_effect = { add_dynamic_modifier = { modifier = TFRKPHN_mnd_kdefense_export days = 365 } }
+		remove_effect = { hidden_effect = { add_to_array = { array = TFRKPHN_mnd_done value = 12 } } add_dynamic_modifier = { modifier = TFRKPHN_mnd_kdefense_export days = 365 } }
 		ai_will_do = { factor = 1 }
 	}
 
@@ -55,13 +173,8 @@ TFRKPHN_mnd_category = {
 		custom_cost_text = TFRKPHN_cost_cp10
 		fire_only_once = yes
 		priority = 200
-		visible = { NOT = { date < 2023.10.30 } }
-		complete_effect = {
-			add_command_power = -10
-			if = { limit = { NOT = { has_character = KOR_park_an_soo_char } } recruit_character = KOR_park_an_soo_char }
-			add_dynamic_modifier = { modifier = TFRKPHN_appoint_park_an_su }
-			country_event = { id = tfrkphn.401 }
-		}
+		visible = { check_variable = { TFRKPHN_mnd_tab = 1 } NOT = { date < 2023.10.30 } NOT = { has_country_flag = TFRKPHN_appointed_park_an_su } }
+		complete_effect = { TFRKPHN_appoint_park_an_su_effect = yes }
 		ai_will_do = { factor = 1 }
 	}
 	TFRKPHN_mnd_appoint_kang_sin_chul = {
@@ -70,13 +183,8 @@ TFRKPHN_mnd_category = {
 		custom_cost_text = TFRKPHN_cost_cp10
 		fire_only_once = yes
 		priority = 200
-		visible = { NOT = { date < 2023.10.30 } }
-		complete_effect = {
-			add_command_power = -10
-			recruit_character = KOR_TFRKPHN_kang_sin_chul
-			add_dynamic_modifier = { modifier = TFRKPHN_appoint_kang_sin_chul }
-			country_event = { id = tfrkphn.402 }
-		}
+		visible = { check_variable = { TFRKPHN_mnd_tab = 1 } NOT = { date < 2023.10.30 } NOT = { has_country_flag = TFRKPHN_appointed_kang_sin_chul } }
+		complete_effect = { TFRKPHN_appoint_kang_sin_chul_effect = yes }
 		ai_will_do = { factor = 1 }
 	}
 	TFRKPHN_mnd_appoint_son_sik = {
@@ -85,13 +193,8 @@ TFRKPHN_mnd_category = {
 		custom_cost_text = TFRKPHN_cost_cp10
 		fire_only_once = yes
 		priority = 200
-		visible = { NOT = { date < 2023.10.30 } }
-		complete_effect = {
-			add_command_power = -10
-			recruit_character = KOR_TFRKPHN_son_sik
-			add_dynamic_modifier = { modifier = TFRKPHN_appoint_son_sik }
-			country_event = { id = tfrkphn.403 }
-		}
+		visible = { check_variable = { TFRKPHN_mnd_tab = 1 } NOT = { date < 2023.10.30 } NOT = { has_country_flag = TFRKPHN_appointed_son_sik } }
+		complete_effect = { TFRKPHN_appoint_son_sik_effect = yes }
 		ai_will_do = { factor = 1 }
 	}
 	TFRKPHN_mnd_appoint_ko_chang_jun = {
@@ -100,13 +203,8 @@ TFRKPHN_mnd_category = {
 		custom_cost_text = TFRKPHN_cost_cp10
 		fire_only_once = yes
 		priority = 200
-		visible = { NOT = { date < 2023.10.30 } }
-		complete_effect = {
-			add_command_power = -10
-			recruit_character = KOR_TFRKPHN_ko_chang_jun
-			add_dynamic_modifier = { modifier = TFRKPHN_appoint_ko_chang_jun }
-			country_event = { id = tfrkphn.404 }
-		}
+		visible = { check_variable = { TFRKPHN_mnd_tab = 1 } NOT = { date < 2023.10.30 } NOT = { has_country_flag = TFRKPHN_appointed_ko_chang_jun } }
+		complete_effect = { TFRKPHN_appoint_ko_chang_jun_effect = yes }
 		ai_will_do = { factor = 1 }
 	}
 	TFRKPHN_mnd_appoint_hwang_you_sung = {
@@ -115,13 +213,8 @@ TFRKPHN_mnd_category = {
 		custom_cost_text = TFRKPHN_cost_cp10
 		fire_only_once = yes
 		priority = 200
-		visible = { NOT = { date < 2023.11.6 } }
-		complete_effect = {
-			add_command_power = -10
-			recruit_character = KOR_TFRKPHN_hwang_you_sung
-			add_dynamic_modifier = { modifier = TFRKPHN_appoint_hwang_you_sung }
-			country_event = { id = tfrkphn.405 }
-		}
+		visible = { check_variable = { TFRKPHN_mnd_tab = 1 } NOT = { date < 2023.11.6 } NOT = { has_country_flag = TFRKPHN_appointed_hwang_you_sung } }
+		complete_effect = { TFRKPHN_appoint_hwang_you_sung_effect = yes }
 		ai_will_do = { factor = 1 }
 	}
 	TFRKPHN_mnd_appoint_yeo_in_hyeong = {
@@ -130,13 +223,8 @@ TFRKPHN_mnd_category = {
 		custom_cost_text = TFRKPHN_cost_cp10
 		fire_only_once = yes
 		priority = 200
-		visible = { NOT = { date < 2023.11.6 } }
-		complete_effect = {
-			add_command_power = -10
-			if = { limit = { NOT = { has_character = KOR_yeo_inhyung_char } } recruit_character = KOR_yeo_inhyung_char }
-			add_dynamic_modifier = { modifier = TFRKPHN_appoint_yeo_in_hyeong }
-			country_event = { id = tfrkphn.406 }
-		}
+		visible = { check_variable = { TFRKPHN_mnd_tab = 1 } NOT = { date < 2023.11.6 } NOT = { has_country_flag = TFRKPHN_appointed_yeo_in_hyeong } }
+		complete_effect = { TFRKPHN_appoint_yeo_in_hyeong_effect = yes }
 		ai_will_do = { factor = 1 }
 	}
 	TFRKPHN_mnd_appoint_lee_jin_woo = {
@@ -145,13 +233,8 @@ TFRKPHN_mnd_category = {
 		custom_cost_text = TFRKPHN_cost_cp10
 		fire_only_once = yes
 		priority = 200
-		visible = { NOT = { date < 2023.11.6 } }
-		complete_effect = {
-			add_command_power = -10
-			if = { limit = { NOT = { has_character = KOR_lee_jin_woo_char } } recruit_character = KOR_lee_jin_woo_char }
-			add_dynamic_modifier = { modifier = TFRKPHN_appoint_lee_jin_woo }
-			country_event = { id = tfrkphn.407 }
-		}
+		visible = { check_variable = { TFRKPHN_mnd_tab = 1 } NOT = { date < 2023.11.6 } NOT = { has_country_flag = TFRKPHN_appointed_lee_jin_woo } }
+		complete_effect = { TFRKPHN_appoint_lee_jin_woo_effect = yes }
 		ai_will_do = { factor = 1 }
 	}
 	TFRKPHN_mnd_appoint_kwak_jong_keun = {
@@ -160,13 +243,8 @@ TFRKPHN_mnd_category = {
 		custom_cost_text = TFRKPHN_cost_cp10
 		fire_only_once = yes
 		priority = 200
-		visible = { NOT = { date < 2023.11.6 } }
-		complete_effect = {
-			add_command_power = -10
-			recruit_character = KOR_TFRKPHN_kwak_jong_keun
-			add_dynamic_modifier = { modifier = TFRKPHN_appoint_kwak_jong_keun }
-			country_event = { id = tfrkphn.408 }
-		}
+		visible = { check_variable = { TFRKPHN_mnd_tab = 1 } NOT = { date < 2023.11.6 } NOT = { has_country_flag = TFRKPHN_appointed_kwak_jong_keun } }
+		complete_effect = { TFRKPHN_appoint_kwak_jong_keun_effect = yes }
 		ai_will_do = { factor = 1 }
 	}
 	TFRKPHN_mnd_appoint_kim_myung_soo = {
@@ -175,13 +253,8 @@ TFRKPHN_mnd_category = {
 		custom_cost_text = TFRKPHN_cost_cp10
 		fire_only_once = yes
 		priority = 190
-		visible = { NOT = { date < 2023.10.30 } }
-		complete_effect = {
-			add_command_power = -10
-			recruit_character = KOR_TFRKPHN_kim_myung_soo
-			add_dynamic_modifier = { modifier = TFRKPHN_appoint_kim_myung_soo }
-			country_event = { id = tfrkphn.409 }
-		}
+		visible = { check_variable = { TFRKPHN_mnd_tab = 2 } NOT = { date < 2023.10.30 } NOT = { has_country_flag = TFRKPHN_appointed_kim_myung_soo } }
+		complete_effect = { TFRKPHN_appoint_kim_myung_soo_effect = yes }
 		ai_will_do = { factor = 1 }
 	}
 	TFRKPHN_mnd_appoint_yang_yong_mo = {
@@ -190,13 +263,8 @@ TFRKPHN_mnd_category = {
 		custom_cost_text = TFRKPHN_cost_cp10
 		fire_only_once = yes
 		priority = 190
-		visible = { NOT = { date < 2023.10.30 } }
-		complete_effect = {
-			add_command_power = -10
-			recruit_character = KOR_TFRKPHN_yang_yong_mo
-			add_dynamic_modifier = { modifier = TFRKPHN_appoint_yang_yong_mo }
-			country_event = { id = tfrkphn.410 }
-		}
+		visible = { check_variable = { TFRKPHN_mnd_tab = 2 } NOT = { date < 2023.10.30 } NOT = { has_country_flag = TFRKPHN_appointed_yang_yong_mo } }
+		complete_effect = { TFRKPHN_appoint_yang_yong_mo_effect = yes }
 		ai_will_do = { factor = 1 }
 	}
 	TFRKPHN_mnd_appoint_kang_dong_gil = {
@@ -205,13 +273,8 @@ TFRKPHN_mnd_category = {
 		custom_cost_text = TFRKPHN_cost_cp10
 		fire_only_once = yes
 		priority = 190
-		visible = { NOT = { date < 2023.11.6 } }
-		complete_effect = {
-			add_command_power = -10
-			recruit_character = KOR_TFRKPHN_kang_dong_gil
-			add_dynamic_modifier = { modifier = TFRKPHN_appoint_kang_dong_gil }
-			country_event = { id = tfrkphn.411 }
-		}
+		visible = { check_variable = { TFRKPHN_mnd_tab = 2 } NOT = { date < 2023.11.6 } NOT = { has_country_flag = TFRKPHN_appointed_kang_dong_gil } }
+		complete_effect = { TFRKPHN_appoint_kang_dong_gil_effect = yes }
 		ai_will_do = { factor = 1 }
 	}
 	TFRKPHN_mnd_appoint_choi_sung_hyeok = {
@@ -220,13 +283,8 @@ TFRKPHN_mnd_category = {
 		custom_cost_text = TFRKPHN_cost_cp10
 		fire_only_once = yes
 		priority = 190
-		visible = { NOT = { date < 2023.11.6 } }
-		complete_effect = {
-			add_command_power = -10
-			recruit_character = KOR_TFRKPHN_choi_sung_hyeok
-			add_dynamic_modifier = { modifier = TFRKPHN_appoint_choi_sung_hyeok }
-			country_event = { id = tfrkphn.412 }
-		}
+		visible = { check_variable = { TFRKPHN_mnd_tab = 2 } NOT = { date < 2023.11.6 } NOT = { has_country_flag = TFRKPHN_appointed_choi_sung_hyeok } }
+		complete_effect = { TFRKPHN_appoint_choi_sung_hyeok_effect = yes }
 		ai_will_do = { factor = 1 }
 	}
 	TFRKPHN_mnd_appoint_lee_young_soo = {
@@ -235,13 +293,8 @@ TFRKPHN_mnd_category = {
 		custom_cost_text = TFRKPHN_cost_cp10
 		fire_only_once = yes
 		priority = 180
-		visible = { NOT = { date < 2023.10.30 } }
-		complete_effect = {
-			add_command_power = -10
-			recruit_character = KOR_TFRKPHN_lee_young_soo
-			add_dynamic_modifier = { modifier = TFRKPHN_appoint_lee_young_soo }
-			country_event = { id = tfrkphn.413 }
-		}
+		visible = { check_variable = { TFRKPHN_mnd_tab = 3 } NOT = { date < 2023.10.30 } NOT = { has_country_flag = TFRKPHN_appointed_lee_young_soo } }
+		complete_effect = { TFRKPHN_appoint_lee_young_soo_effect = yes }
 		ai_will_do = { factor = 1 }
 	}
 	TFRKPHN_mnd_appoint_son_sug_rag = {
@@ -250,13 +303,8 @@ TFRKPHN_mnd_category = {
 		custom_cost_text = TFRKPHN_cost_cp10
 		fire_only_once = yes
 		priority = 180
-		visible = { NOT = { date < 2023.11.6 } }
-		complete_effect = {
-			add_command_power = -10
-			recruit_character = KOR_TFRKPHN_son_sug_rag
-			add_dynamic_modifier = { modifier = TFRKPHN_appoint_son_sug_rag }
-			country_event = { id = tfrkphn.414 }
-		}
+		visible = { check_variable = { TFRKPHN_mnd_tab = 3 } NOT = { date < 2023.11.6 } NOT = { has_country_flag = TFRKPHN_appointed_son_sug_rag } }
+		complete_effect = { TFRKPHN_appoint_son_sug_rag_effect = yes }
 		ai_will_do = { factor = 1 }
 	}
 	TFRKPHN_mnd_appoint_kim_hyoung_soo = {
@@ -265,13 +313,8 @@ TFRKPHN_mnd_category = {
 		custom_cost_text = TFRKPHN_cost_cp10
 		fire_only_once = yes
 		priority = 180
-		visible = { NOT = { date < 2023.11.6 } }
-		complete_effect = {
-			add_command_power = -10
-			recruit_character = KOR_TFRKPHN_kim_hyoung_soo
-			add_dynamic_modifier = { modifier = TFRKPHN_appoint_kim_hyoung_soo }
-			country_event = { id = tfrkphn.415 }
-		}
+		visible = { check_variable = { TFRKPHN_mnd_tab = 3 } NOT = { date < 2023.11.6 } NOT = { has_country_flag = TFRKPHN_appointed_kim_hyoung_soo } }
+		complete_effect = { TFRKPHN_appoint_kim_hyoung_soo_effect = yes }
 		ai_will_do = { factor = 1 }
 	}
 	# ===== 신규 참모총장 임명 (각 1회, 지휘력 20): 후보 중 한 명을 골라 참모총장으로 =====
@@ -281,7 +324,7 @@ TFRKPHN_mnd_category = {
 		custom_cost_text = TFRKPHN_cost_cp20
 		fire_only_once = yes
 		priority = 250
-		visible = { NOT = { date < 2023.10.30 } }
+		visible = { check_variable = { TFRKPHN_mnd_tab = 1 } NOT = { date < 2023.10.30 } }
 		complete_effect = {
 			add_command_power = -20
 			country_event = { id = tfrkphn.421 }
@@ -294,7 +337,7 @@ TFRKPHN_mnd_category = {
 		custom_cost_text = TFRKPHN_cost_cp20
 		fire_only_once = yes
 		priority = 250
-		visible = { NOT = { date < 2023.10.30 } }
+		visible = { check_variable = { TFRKPHN_mnd_tab = 2 } NOT = { date < 2023.10.30 } }
 		complete_effect = {
 			add_command_power = -20
 			country_event = { id = tfrkphn.422 }
@@ -307,7 +350,7 @@ TFRKPHN_mnd_category = {
 		custom_cost_text = TFRKPHN_cost_cp20
 		fire_only_once = yes
 		priority = 250
-		visible = { NOT = { date < 2023.10.30 } }
+		visible = { check_variable = { TFRKPHN_mnd_tab = 3 } NOT = { date < 2023.10.30 } }
 		complete_effect = {
 			add_command_power = -20
 			country_event = { id = tfrkphn.423 }
@@ -321,9 +364,9 @@ TFRKPHN_mnd_category = {
 		days_remove = 90
 		fire_only_once = yes
 		priority = 260
-		visible = { has_completed_focus = TFRKPHN_hong_b03_11 }
+		visible = { check_variable = { TFRKPHN_mnd_tab = 0 } OR = { has_completed_focus = TFRKPHN_hong_b03_11 has_country_flag = TFRKPHN_mnd_armed_peace_open } }
 		complete_effect = { custom_effect_tooltip = TFRKPHN_mnd_after_90_tt }
-		remove_effect = {
+		remove_effect = { hidden_effect = { add_to_array = { array = TFRKPHN_mnd_done value = 13 } }
 			every_owned_state = {
 				limit = { is_core_of = ROOT free_building_slots = { building = arms_factory size > 0 include_locked = no } }
 				random_select_amount = 3
@@ -342,10 +385,10 @@ TFRKPHN_mnd_category = {
 		days_remove = 90
 		fire_only_once = yes
 		priority = 260
-		visible = { has_completed_focus = TFRKPHN_hong_b03_11 }
+		visible = { check_variable = { TFRKPHN_mnd_tab = 0 } OR = { has_completed_focus = TFRKPHN_hong_b03_11 has_country_flag = TFRKPHN_mnd_armed_peace_open } }
 		available = { any_owned_state = { is_core_of = ROOT is_coastal = yes } }
 		complete_effect = { custom_effect_tooltip = TFRKPHN_mnd_after_90_tt }
-		remove_effect = {
+		remove_effect = { hidden_effect = { add_to_array = { array = TFRKPHN_mnd_done value = 14 } }
 			every_owned_state = {
 				limit = { is_core_of = ROOT is_coastal = yes free_building_slots = { building = dockyard size > 0 include_locked = no } }
 				random_select_amount = 2
@@ -359,6 +402,194 @@ TFRKPHN_mnd_category = {
 					add_building_construction = { type = dockyard level = 2 instant_build = yes }
 				}
 			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	# ===== KDDX 선행 개발 3종 (각 1회): 셋을 모두 끝내야 KDDX 건조를 할 수 있다 =====
+	TFRKPHN_mnd_kvls = {
+		icon = GFX_decision_generic_political_actions
+		cost = 50
+		days_remove = 90
+		fire_only_once = yes
+		priority = 245
+		visible = { check_variable = { TFRKPHN_mnd_tab = 2 } has_country_flag = TFRKPHN_mnd_navy_done }
+		complete_effect = { custom_effect_tooltip = TFRKPHN_mnd_after_90_tt }
+		remove_effect = { hidden_effect = { add_to_array = { array = TFRKPHN_mnd_done value = 15 } }
+			navy_experience = 15
+			set_country_flag = TFRKPHN_mnd_kvls_done
+			add_tech_bonus = { name = TFRKPHN_mnd_kvls bonus = 1.0 uses = 1 category = ship_modules_tech }
+			add_tech_bonus = { name = TFRKPHN_mnd_kvls bonus = 0.5 uses = 1 category = rocketry }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	TFRKPHN_mnd_ciws2 = {
+		icon = GFX_decision_generic_political_actions
+		cost = 50
+		days_remove = 90
+		fire_only_once = yes
+		priority = 245
+		visible = { check_variable = { TFRKPHN_mnd_tab = 2 } has_country_flag = TFRKPHN_mnd_navy_done }
+		complete_effect = { custom_effect_tooltip = TFRKPHN_mnd_after_90_tt }
+		remove_effect = { hidden_effect = { add_to_array = { array = TFRKPHN_mnd_done value = 16 } }
+			navy_experience = 15
+			set_country_flag = TFRKPHN_mnd_ciws2_done
+			add_tech_bonus = { name = TFRKPHN_mnd_ciws2 bonus = 1.0 uses = 2 category = ship_modules_tech }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	TFRKPHN_mnd_saam2 = {
+		icon = GFX_decision_generic_political_actions
+		cost = 75
+		days_remove = 120
+		fire_only_once = yes
+		priority = 245
+		visible = { check_variable = { TFRKPHN_mnd_tab = 2 } has_country_flag = TFRKPHN_mnd_navy_done }
+		available = { has_country_flag = TFRKPHN_mnd_kvls_done }
+		complete_effect = { custom_effect_tooltip = TFRKPHN_mnd_after_120_tt }
+		remove_effect = { hidden_effect = { add_to_array = { array = TFRKPHN_mnd_done value = 17 } }
+			navy_experience = 15
+			set_country_flag = TFRKPHN_mnd_saam2_done
+			add_tech_bonus = { name = TFRKPHN_mnd_saam2 bonus = 1.0 uses = 1 category = ship_modules_tech }
+			add_tech_bonus = { name = TFRKPHN_mnd_saam2 bonus = 0.5 uses = 1 category = rocketry }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	# ===== KDDX 사업 최종선정 (1회): 기동함대 창설 + 선행 개발 3종 뒤 =====
+	TFRKPHN_mnd_kddx = {
+		icon = GFX_decision_generic_political_actions
+		cost = 100
+		days_remove = 180
+		fire_only_once = yes
+		priority = 240
+		visible = { check_variable = { TFRKPHN_mnd_tab = 2 } has_country_flag = TFRKPHN_mnd_navy_done }
+		available = {
+			any_owned_state = { is_core_of = ROOT is_coastal = yes }
+			custom_trigger_tooltip = {
+				tooltip = TFRKPHN_mnd_kddx_req_tt
+				has_country_flag = TFRKPHN_mnd_kvls_done
+				has_country_flag = TFRKPHN_mnd_ciws2_done
+				has_country_flag = TFRKPHN_mnd_saam2_done
+			}
+		}
+		complete_effect = {
+			navy_experience = 25
+			TFRKPHN_mnd_kddx_tech = yes
+			country_event = { id = tfrkphn.431 }
+			custom_effect_tooltip = TFRKPHN_mnd_kddx_ships_tt
+			custom_effect_tooltip = TFRKPHN_mnd_after_180_tt
+		}
+		remove_effect = { hidden_effect = { add_to_array = { array = TFRKPHN_mnd_done value = 18 } } TFRKPHN_mnd_kddx_ships = yes }
+		ai_will_do = { factor = 1 }
+	}
+	# ===== 해병대 탭 추가 결정 (해병특수작전군 창설 뒤) =====
+	TFRKPHN_mnd_marineon = {
+		icon = GFX_decision_generic_political_actions
+		cost = 50
+		days_remove = 90
+		fire_only_once = yes
+		priority = 295
+		visible = { check_variable = { TFRKPHN_mnd_tab = 4 } }
+		available = { has_country_flag = TFRKPHN_mnd_marine_done }
+		complete_effect = { custom_effect_tooltip = TFRKPHN_mnd_after_90_tt }
+		remove_effect = { hidden_effect = { add_to_array = { array = TFRKPHN_mnd_done value = 19 } }
+			army_experience = 15
+			add_dynamic_modifier = { modifier = TFRKPHN_mnd_marineon }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	TFRKPHN_mnd_nwi_command = {
+		icon = GFX_decision_generic_political_actions
+		cost = 75
+		fire_only_once = yes
+		priority = 294
+		visible = { check_variable = { TFRKPHN_mnd_tab = 4 } }
+		available = { has_country_flag = TFRKPHN_mnd_marine_done }
+		complete_effect = { hidden_effect = { add_to_array = { array = TFRKPHN_mnd_done value = 20 } }
+			army_experience = 15
+			add_dynamic_modifier = { modifier = TFRKPHN_mnd_nwi_command }
+			random_owned_state = {
+				limit = { is_core_of = ROOT is_coastal = yes }
+				add_building_construction = { type = coastal_bunker level = 2 province = { all_provinces = yes limit_to_coastal = yes } instant_build = yes }
+				add_building_construction = { type = anti_air_building level = 2 instant_build = yes }
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	# ===== 공군 탭 추가 결정 =====
+	TFRKPHN_mnd_kc330 = {
+		icon = GFX_decision_generic_political_actions
+		cost = 75
+		days_remove = 90
+		fire_only_once = yes
+		priority = 290
+		visible = { check_variable = { TFRKPHN_mnd_tab = 3 } }
+		complete_effect = { custom_effect_tooltip = TFRKPHN_mnd_after_90_tt }
+		remove_effect = { hidden_effect = { add_to_array = { array = TFRKPHN_mnd_done value = 21 } }
+			air_experience = 15
+			add_dynamic_modifier = { modifier = TFRKPHN_mnd_kc330 }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	TFRKPHN_mnd_global_hawk = {
+		icon = GFX_decision_generic_political_actions
+		cost = 75
+		days_remove = 90
+		fire_only_once = yes
+		priority = 289
+		visible = { check_variable = { TFRKPHN_mnd_tab = 3 } }
+		complete_effect = { custom_effect_tooltip = TFRKPHN_mnd_after_90_tt }
+		remove_effect = { hidden_effect = { add_to_array = { array = TFRKPHN_mnd_done value = 22 } }
+			air_experience = 15
+			add_dynamic_modifier = { modifier = TFRKPHN_mnd_global_hawk }
+			add_tech_bonus = { name = TFRKPHN_mnd_global_hawk bonus = 0.5 uses = 1 category = radar_tech }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	TFRKPHN_mnd_sat425 = {
+		icon = GFX_decision_generic_political_actions
+		cost = 100
+		days_remove = 120
+		fire_only_once = yes
+		priority = 288
+		visible = { check_variable = { TFRKPHN_mnd_tab = 3 } }
+		available = { has_country_flag = TFRKPHN_mnd_space_done }
+		complete_effect = { custom_effect_tooltip = TFRKPHN_mnd_after_120_tt }
+		remove_effect = { hidden_effect = { add_to_array = { array = TFRKPHN_mnd_done value = 23 } }
+			air_experience = 25
+			add_dynamic_modifier = { modifier = TFRKPHN_mnd_sat425 }
+			add_tech_bonus = { name = TFRKPHN_mnd_sat425 bonus = 1.0 uses = 1 category = electronics }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	# ===== 육군 탭 추가 결정 =====
+	TFRKPHN_mnd_drone_command = {
+		icon = GFX_decision_generic_political_actions
+		cost = 75
+		days_remove = 90
+		fire_only_once = yes
+		priority = 290
+		visible = { check_variable = { TFRKPHN_mnd_tab = 1 } }
+		complete_effect = { custom_effect_tooltip = TFRKPHN_mnd_after_90_tt }
+		remove_effect = { hidden_effect = { add_to_array = { array = TFRKPHN_mnd_done value = 24 } }
+			army_experience = 15
+			add_dynamic_modifier = { modifier = TFRKPHN_mnd_drone_command }
+			add_tech_bonus = { name = TFRKPHN_mnd_drone_command bonus = 0.5 uses = 1 category = artificial_intelligence }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	TFRKPHN_mnd_army_tiger = {
+		icon = GFX_decision_generic_political_actions
+		cost = 100
+		days_remove = 120
+		fire_only_once = yes
+		priority = 289
+		visible = { check_variable = { TFRKPHN_mnd_tab = 1 } }
+		available = { has_country_flag = TFRKPHN_mnd_army_done }
+		complete_effect = { custom_effect_tooltip = TFRKPHN_mnd_after_120_tt }
+		remove_effect = { hidden_effect = { add_to_array = { array = TFRKPHN_mnd_done value = 25 } }
+			army_experience = 25
+			add_dynamic_modifier = { modifier = TFRKPHN_mnd_army_tiger }
+			add_tech_bonus = { name = TFRKPHN_mnd_army_tiger bonus = 0.5 uses = 1 category = cat_mobile_warfare }
 		}
 		ai_will_do = { factor = 1 }
 	}

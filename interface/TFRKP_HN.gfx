@@ -1,4 +1,4 @@
-﻿# [안내] 그림 등록부. 새 그림은 spriteType = { name = "GFX_..." texturefile = "gfx/...png" } 한 덩어리를 추가.
+# [안내] 그림 등록부. 새 그림은 spriteType = { name = "GFX_..." texturefile = "gfx/...png" } 한 덩어리를 추가.
 # [안내] 수정 방법: 모드 폴더의 TUTORIAL_KO.md 7~9장 참고. 새 이름에는 TFRKPHN_ 접두어를 붙이세요.
 spriteTypes = {
 	spriteType = {
@@ -250,6 +250,290 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/TFRKPHN_hong_elected_news.png"
 	}
 	spriteType = {
+		name = "GFX_TFRKPHN_chung"
+		texturefile = "gfx/event_pictures/TFRKPHN_chung.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_facebook"
+		texturefile = "gfx/event_pictures/TFRKPHN_facebook.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_women_soldiers"
+		texturefile = "gfx/event_pictures/TFRKPHN_women_soldiers.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_hyunmoo"
+		texturefile = "gfx/event_pictures/TFRKPHN_hyunmoo.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_nuke_doc"
+		texturefile = "gfx/event_pictures/TFRKPHN_nuke_doc.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_jsa_defector"
+		texturefile = "gfx/event_pictures/TFRKPHN_jsa_defector.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_kr_cn_ties"
+		texturefile = "gfx/event_pictures/TFRKPHN_kr_cn_ties.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_empty_frame"
+		texturefile = "gfx/event_pictures/TFRKPHN_empty_frame.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_vet_points"
+		texturefile = "gfx/event_pictures/TFRKPHN_vet_points.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_gukbap"
+		texturefile = "gfx/event_pictures/TFRKPHN_gukbap.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_bank"
+		texturefile = "gfx/event_pictures/TFRKPHN_bank.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_oh"
+		texturefile = "gfx/event_pictures/TFRKPHN_oh.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_kori"
+		texturefile = "gfx/event_pictures/TFRKPHN_kori.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_g7"
+		texturefile = "gfx/event_pictures/TFRKPHN_g7.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_kuk"
+		texturefile = "gfx/event_pictures/TFRKPHN_kuk.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_fab"
+		texturefile = "gfx/event_pictures/TFRKPHN_fab.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_econ_emergency"
+		texturefile = "gfx/event_pictures/TFRKPHN_econ_emergency.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_grass"
+		texturefile = "gfx/event_pictures/TFRKPHN_grass.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_roc_flag"
+		texturefile = "gfx/event_pictures/TFRKPHN_roc_flag.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_kinmen"
+		texturefile = "gfx/event_pictures/TFRKPHN_kinmen.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_eungbo"
+		texturefile = "gfx/event_pictures/TFRKPHN_eungbo.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_segyehwa"
+		texturefile = "gfx/event_pictures/TFRKPHN_segyehwa.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_ys_manners"
+		texturefile = "gfx/event_pictures/TFRKPHN_ys_manners.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_un_cemetery"
+		texturefile = "gfx/event_pictures/TFRKPHN_un_cemetery.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_gdansk"
+		texturefile = "gfx/event_pictures/TFRKPHN_gdansk.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_veterans"
+		texturefile = "gfx/event_pictures/TFRKPHN_veterans.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_gwanghwamun_night"
+		texturefile = "gfx/event_pictures/TFRKPHN_gwanghwamun_night.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_hong_rest"
+		texturefile = "gfx/event_pictures/TFRKPHN_hong_rest.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_footprints"
+		texturefile = "gfx/event_pictures/TFRKPHN_footprints.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_lee_in_je"
+		texturefile = "gfx/event_pictures/TFRKPHN_lee_in_je.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_oh_conv"
+		texturefile = "gfx/event_pictures/TFRKPHN_oh_conv.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_successors"
+		texturefile = "gfx/event_pictures/TFRKPHN_successors.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_empty_desk"
+		texturefile = "gfx/event_pictures/TFRKPHN_empty_desk.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_amend"
+		texturefile = "gfx/event_pictures/TFRKPHN_amend.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_strait_war"
+		texturefile = "gfx/event_pictures/TFRKPHN_strait_war.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_ammo_bunker"
+		texturefile = "gfx/event_pictures/TFRKPHN_ammo_bunker.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_kwangbok"
+		texturefile = "gfx/event_pictures/TFRKPHN_kwangbok.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_hong_speech"
+		texturefile = "gfx/event_pictures/TFRKPHN_hong_speech.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_yeonpyeong"
+		texturefile = "gfx/event_pictures/TFRKPHN_yeonpyeong.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_nis_stars"
+		texturefile = "gfx/event_pictures/TFRKPHN_nis_stars.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_hong_press"
+		texturefile = "gfx/event_pictures/TFRKPHN_hong_press.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_happy_family"
+		texturefile = "gfx/event_pictures/TFRKPHN_happy_family.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_yeonpyeong_ruins"
+		texturefile = "gfx/event_pictures/TFRKPHN_yeonpyeong_ruins.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_hong_tribute"
+		texturefile = "gfx/event_pictures/TFRKPHN_hong_tribute.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_artillery_fire"
+		texturefile = "gfx/event_pictures/TFRKPHN_artillery_fire.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_assembly_vote"
+		texturefile = "gfx/event_pictures/TFRKPHN_assembly_vote.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_gallup_post"
+		texturefile = "gfx/event_pictures/TFRKPHN_gallup_post.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_youth_dream_logo"
+		texturefile = "gfx/event_pictures/TFRKPHN_youth_dream_logo.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_const_court"
+		texturefile = "gfx/event_pictures/TFRKPHN_const_court.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_hong_bluehouse"
+		texturefile = "gfx/event_pictures/TFRKPHN_hong_bluehouse.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_us_congress"
+		texturefile = "gfx/event_pictures/TFRKPHN_us_congress.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_crisis_room"
+		texturefile = "gfx/event_pictures/TFRKPHN_crisis_room.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_kbs"
+		texturefile = "gfx/event_pictures/TFRKPHN_kbs.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_wellbeing_chart"
+		texturefile = "gfx/event_pictures/TFRKPHN_wellbeing_chart.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_salute_soldier"
+		texturefile = "gfx/event_pictures/TFRKPHN_salute_soldier.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_hwagae"
+		texturefile = "gfx/event_pictures/TFRKPHN_hwagae.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_hmm_ship"
+		texturefile = "gfx/event_pictures/TFRKPHN_hmm_ship.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_yeouido_rally"
+		texturefile = "gfx/event_pictures/TFRKPHN_yeouido_rally.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_shipyard"
+		texturefile = "gfx/event_pictures/TFRKPHN_shipyard.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_troll"
+		texturefile = "gfx/event_pictures/TFRKPHN_troll.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_un_assembly"
+		texturefile = "gfx/event_pictures/TFRKPHN_un_assembly.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_warsaw_signing"
+		texturefile = "gfx/event_pictures/TFRKPHN_warsaw_signing.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_shell_loading"
+		texturefile = "gfx/event_pictures/TFRKPHN_shell_loading.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_gang_arrest"
+		texturefile = "gfx/event_pictures/TFRKPHN_gang_arrest.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_gang_parade"
+		texturefile = "gfx/event_pictures/TFRKPHN_gang_parade.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_kju_target"
+		texturefile = "gfx/event_pictures/TFRKPHN_kju_target.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_kju_target_news"
+		texturefile = "gfx/event_pictures/TFRKPHN_kju_target_news.png"
+	}
+	spriteType = {
+		name = "GFX_decision_TFRKPHN_kju_target"
+		texturefile = "gfx/interface/decisions/TFRKPHN_decision_kju_target.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_ibuk5do"
+		texturefile = "gfx/event_pictures/TFRKPHN_ibuk5do.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_kju_cat_picture"
+		texturefile = "gfx/interface/decisions/TFRKPHN_kju_cat_picture.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_samgyeop"
+		texturefile = "gfx/event_pictures/TFRKPHN_samgyeop.png"
+	}
+	spriteType = {
 		name = "GFX_TFRKPHN_jin"
 		texturefile = "gfx/event_pictures/TFRKPHN_jin.png"
 	}
@@ -414,5 +698,165 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_TFRKPHN_taegukgi"
 		texturefile = "gfx/event_pictures/TFRKPHN_taegukgi.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_kddx"
+		texturefile = "gfx/event_pictures/TFRKPHN_kddx.png"
+	}
+	spriteType = {
+		name = "GFX_focus_TFRKPHN_after_storm"
+		texturefile = "gfx/interface/goals/TFRKPHN_after_storm.png"
+	}
+	spriteType = {
+		name = "GFX_focus_TFRKPHN_bar_exam"
+		texturefile = "gfx/interface/goals/TFRKPHN_bar_exam.png"
+	}
+	spriteType = {
+		name = "GFX_focus_TFRKPHN_labor_flex"
+		texturefile = "gfx/interface/goals/TFRKPHN_labor_flex.png"
+	}
+	spriteType = {
+		name = "GFX_focus_TFRKPHN_phased_volunteer"
+		texturefile = "gfx/interface/goals/TFRKPHN_phased_volunteer.png"
+	}
+	spriteType = {
+		name = "GFX_focus_TFRKPHN_suneung_expand"
+		texturefile = "gfx/interface/goals/TFRKPHN_suneung_expand.png"
+	}
+	spriteType = {
+		name = "GFX_focus_TFRKPHN_broadcast_private"
+		texturefile = "gfx/interface/goals/TFRKPHN_broadcast_private.png"
+	}
+	spriteType = {
+		name = "GFX_focus_TFRKPHN_police_bureau"
+		texturefile = "gfx/interface/goals/TFRKPHN_police_bureau.png"
+	}
+	spriteType = {
+		name = "GFX_focus_TFRKPHN_livelihood_conservative"
+		texturefile = "gfx/interface/goals/TFRKPHN_livelihood_conservative.png"
+	}
+	spriteType = {
+		name = "GFX_focus_TFRKPHN_security_conservative"
+		texturefile = "gfx/interface/goals/TFRKPHN_security_conservative.png"
+	}
+	spriteType = {
+		name = "GFX_focus_TFRKPHN_burning_flame"
+		texturefile = "gfx/interface/goals/TFRKPHN_burning_flame.png"
+	}
+	spriteType = {
+		name = "GFX_focus_TFRKPHN_nuclear_sharing"
+		texturefile = "gfx/interface/goals/TFRKPHN_nuclear_sharing.png"
+	}
+	spriteType = {
+		name = "GFX_focus_TFRKPHN_taiwan_bill"
+		texturefile = "gfx/interface/goals/TFRKPHN_taiwan_bill.png"
+	}
+	spriteType = {
+		name = "GFX_focus_TFRKPHN_ammo_support"
+		texturefile = "gfx/interface/goals/TFRKPHN_ammo_support.png"
+	}
+	spriteType = {
+		name = "GFX_focus_TFRKPHN_rear_fight"
+		texturefile = "gfx/interface/goals/TFRKPHN_rear_fight.png"
+	}
+	spriteType = {
+		name = "GFX_focus_TFRKPHN_reassure_people"
+		texturefile = "gfx/interface/goals/TFRKPHN_reassure_people.png"
+	}
+	spriteType = {
+		name = "GFX_focus_TFRKPHN_hardline_north"
+		texturefile = "gfx/interface/goals/TFRKPHN_hardline_north.png"
+	}
+	spriteType = {
+		name = "GFX_focus_TFRKPHN_troop_dispatch"
+		texturefile = "gfx/interface/goals/TFRKPHN_troop_dispatch.png"
+	}
+	spriteType = {
+		name = "GFX_focus_TFRKPHN_taiwan_bill_rejected"
+		texturefile = "gfx/interface/goals/TFRKPHN_taiwan_bill_rejected.png"
+	}
+	spriteType = {
+		name = "GFX_focus_TFRKPHN_sea_supply"
+		texturefile = "gfx/interface/goals/TFRKPHN_sea_supply.png"
+	}
+	spriteType = {
+		name = "GFX_focus_TFRKPHN_condemn_china"
+		texturefile = "gfx/interface/goals/TFRKPHN_condemn_china.png"
+	}
+	spriteType = {
+		name = "GFX_focus_TFRKPHN_still_must_act"
+		texturefile = "gfx/interface/goals/TFRKPHN_still_must_act.png"
+	}
+	spriteType = {
+		name = "GFX_focus_TFRKPHN_kdefense_europe"
+		texturefile = "gfx/interface/goals/TFRKPHN_kdefense_europe.png"
+	}
+	spriteType = {
+		name = "GFX_focus_TFRKPHN_secret_support"
+		texturefile = "gfx/interface/goals/TFRKPHN_secret_support.png"
+	}
+	spriteType = {
+		name = "GFX_focus_TFRKPHN_volunteer_army"
+		texturefile = "gfx/interface/goals/TFRKPHN_volunteer_army.png"
+	}
+	spriteType = {
+		name = "GFX_focus_TFRKPHN_future_fund"
+		texturefile = "gfx/interface/goals/TFRKPHN_future_fund.png"
+	}
+	spriteType = {
+		name = "GFX_focus_TFRKPHN_taiwan_law"
+		texturefile = "gfx/interface/goals/TFRKPHN_taiwan_law.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TFRKPHN_adv_kim_myung_soo"
+		texturefile = "gfx/interface/ideas/TFRKPHN_advisors/TFRKPHN_kim_myung_soo.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TFRKPHN_adv_yang_yong_mo"
+		texturefile = "gfx/interface/ideas/TFRKPHN_advisors/TFRKPHN_yang_yong_mo.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TFRKPHN_adv_lee_young_soo"
+		texturefile = "gfx/interface/ideas/TFRKPHN_advisors/TFRKPHN_lee_young_soo.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TFRKPHN_adv_kang_sin_chul"
+		texturefile = "gfx/interface/ideas/TFRKPHN_advisors/TFRKPHN_kang_sin_chul.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TFRKPHN_adv_son_sik"
+		texturefile = "gfx/interface/ideas/TFRKPHN_advisors/TFRKPHN_son_sik.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TFRKPHN_adv_ko_chang_jun"
+		texturefile = "gfx/interface/ideas/TFRKPHN_advisors/TFRKPHN_ko_chang_jun.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TFRKPHN_adv_hwang_you_sung"
+		texturefile = "gfx/interface/ideas/TFRKPHN_advisors/TFRKPHN_hwang_you_sung.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TFRKPHN_adv_kang_dong_gil"
+		texturefile = "gfx/interface/ideas/TFRKPHN_advisors/TFRKPHN_kang_dong_gil.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TFRKPHN_adv_son_sug_rag"
+		texturefile = "gfx/interface/ideas/TFRKPHN_advisors/TFRKPHN_son_sug_rag.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TFRKPHN_adv_kwak_jong_keun"
+		texturefile = "gfx/interface/ideas/TFRKPHN_advisors/TFRKPHN_kwak_jong_keun.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TFRKPHN_adv_choi_sung_hyeok"
+		texturefile = "gfx/interface/ideas/TFRKPHN_advisors/TFRKPHN_choi_sung_hyeok.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TFRKPHN_adv_kim_hyoung_soo"
+		texturefile = "gfx/interface/ideas/TFRKPHN_advisors/TFRKPHN_kim_hyoung_soo.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_SE_NK_CIVIL_WAR"
+		texturefile = "gfx/super_events/TFRKPHN_se_nk_civil_war.png"
 	}
 }

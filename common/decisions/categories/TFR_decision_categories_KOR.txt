@@ -1,4 +1,4 @@
-﻿########################################
+########################################
 ## Category priority Guide
 ## 100 = TFR Debug decisions
 ## 99 = National Assembly of Korea

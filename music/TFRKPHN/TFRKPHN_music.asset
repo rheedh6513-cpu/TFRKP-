@@ -1,0 +1,5 @@
+music = {
+	name = "TFRKP_TFRKPHN_SE_NK_CIVIL_WAR"
+	file = "TFRKPHN_se_nk_civil_war.ogg"
+	volume = 0.8
+}

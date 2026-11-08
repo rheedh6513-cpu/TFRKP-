@@ -1,0 +1,196 @@
+# [안내] 「국 - 나라 국」 6각형 패널의 회사 결정 12개. 패널에서 명판을 누르면 그 회사 결정만 보입니다.
+# [안내] 건설사: 그 도의 건물 칸 +2, 지역 등급 한 단계 발전(increase_state_category), 기반시설 +1 + 지지도 +3. 향토기업: 그 도에 민간 공장 또는 오피스 단지 중 무작위 1개 + 건물 칸 +1, 지지도 +5.
+TFRKPHN_hong_kuk_category = {
+	TFRKPHN_kuk_seohee = {
+		icon = GFX_decision_generic_construction
+		cost = 150
+		days_remove = 60
+		fire_only_once = yes
+		visible = { OR = { check_variable = { TFRKPHN_kuk_sel = 0 } check_variable = { TFRKPHN_kuk_sel = 1 } } }
+		complete_effect = { hidden_effect = { add_to_variable = { TFRKPHN_kuk_lv_gyeonggi = 1 } set_variable = { TFRKPHN_kuk_fr_gyeonggi = TFRKPHN_kuk_lv_gyeonggi } add_to_variable = { TFRKPHN_kuk_fr_gyeonggi = 1 } } custom_effect_tooltip = TFRKPHN_kuk_after_60_tt }
+		remove_effect = {
+			set_country_flag = TFRKPHN_kuk_done_seohee
+			
+			custom_effect_tooltip = TFRKPHN_kuk_eff_seohee_tt
+			hidden_effect = { add_to_variable = { TFRKPHN_support_gyeonggi = 3 } clamp_variable = { var = TFRKPHN_support_gyeonggi min = 0 max = 100 } TFRKPHN_hong_update_support_display = yes }
+			1041 = { if = { limit = { is_owned_by = ROOT } add_extra_state_shared_building_slots = 2 increase_state_category = yes add_building_construction = { type = infrastructure level = 1 instant_build = yes } } }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	TFRKPHN_kuk_ottogi = {
+		icon = GFX_decision_generic_construction
+		cost = 75
+		days_remove = 30
+		fire_only_once = yes
+		visible = { OR = { check_variable = { TFRKPHN_kuk_sel = 0 } check_variable = { TFRKPHN_kuk_sel = 2 } } }
+		complete_effect = { hidden_effect = { add_to_variable = { TFRKPHN_kuk_lv_gyeonggi = 1 } set_variable = { TFRKPHN_kuk_fr_gyeonggi = TFRKPHN_kuk_lv_gyeonggi } add_to_variable = { TFRKPHN_kuk_fr_gyeonggi = 1 } } custom_effect_tooltip = TFRKPHN_kuk_after_30_tt }
+		remove_effect = {
+			set_country_flag = TFRKPHN_kuk_done_ottogi
+			
+			custom_effect_tooltip = TFRKPHN_kuk_eff_ottogi_tt
+			hidden_effect = { add_to_variable = { TFRKPHN_support_gyeonggi = 5 } clamp_variable = { var = TFRKPHN_support_gyeonggi min = 0 max = 100 } TFRKPHN_hong_update_support_display = yes }
+			1041 = { if = { limit = { is_owned_by = ROOT } add_extra_state_shared_building_slots = 1 random_list = { 50 = { add_building_construction = { type = industrial_complex level = 1 instant_build = yes } } 50 = { add_building_construction = { type = office_park level = 1 instant_build = yes } } } } }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	TFRKPHN_kuk_kyeryong = {
+		icon = GFX_decision_generic_construction
+		cost = 150
+		days_remove = 60
+		fire_only_once = yes
+		visible = { OR = { check_variable = { TFRKPHN_kuk_sel = 0 } check_variable = { TFRKPHN_kuk_sel = 3 } } }
+		complete_effect = { hidden_effect = { add_to_variable = { TFRKPHN_kuk_lv_chungcheong = 1 } set_variable = { TFRKPHN_kuk_fr_chungcheong = TFRKPHN_kuk_lv_chungcheong } add_to_variable = { TFRKPHN_kuk_fr_chungcheong = 1 } } custom_effect_tooltip = TFRKPHN_kuk_after_60_tt }
+		remove_effect = {
+			set_country_flag = TFRKPHN_kuk_done_kyeryong
+			
+			custom_effect_tooltip = TFRKPHN_kuk_eff_kyeryong_tt
+			hidden_effect = { add_to_variable = { TFRKPHN_support_chungcheong = 3 } clamp_variable = { var = TFRKPHN_support_chungcheong min = 0 max = 100 } TFRKPHN_hong_update_support_display = yes }
+			525 = { if = { limit = { is_owned_by = ROOT } add_extra_state_shared_building_slots = 2 increase_state_category = yes add_building_construction = { type = infrastructure level = 1 instant_build = yes } } }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	TFRKPHN_kuk_mackis = {
+		icon = GFX_decision_generic_construction
+		cost = 75
+		days_remove = 30
+		fire_only_once = yes
+		visible = { OR = { check_variable = { TFRKPHN_kuk_sel = 0 } check_variable = { TFRKPHN_kuk_sel = 4 } } }
+		complete_effect = { hidden_effect = { add_to_variable = { TFRKPHN_kuk_lv_chungcheong = 1 } set_variable = { TFRKPHN_kuk_fr_chungcheong = TFRKPHN_kuk_lv_chungcheong } add_to_variable = { TFRKPHN_kuk_fr_chungcheong = 1 } } custom_effect_tooltip = TFRKPHN_kuk_after_30_tt }
+		remove_effect = {
+			set_country_flag = TFRKPHN_kuk_done_mackis
+			
+			custom_effect_tooltip = TFRKPHN_kuk_eff_mackis_tt
+			hidden_effect = { add_to_variable = { TFRKPHN_support_chungcheong = 5 } clamp_variable = { var = TFRKPHN_support_chungcheong min = 0 max = 100 } TFRKPHN_hong_update_support_display = yes }
+			525 = { if = { limit = { is_owned_by = ROOT } add_extra_state_shared_building_slots = 1 random_list = { 50 = { add_building_construction = { type = industrial_complex level = 1 instant_build = yes } } 50 = { add_building_construction = { type = office_park level = 1 instant_build = yes } } } } }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	TFRKPHN_kuk_woomi = {
+		icon = GFX_decision_generic_construction
+		cost = 150
+		days_remove = 60
+		fire_only_once = yes
+		visible = { OR = { check_variable = { TFRKPHN_kuk_sel = 0 } check_variable = { TFRKPHN_kuk_sel = 5 } } }
+		complete_effect = { hidden_effect = { add_to_variable = { TFRKPHN_kuk_lv_jeolla = 1 } set_variable = { TFRKPHN_kuk_fr_jeolla = TFRKPHN_kuk_lv_jeolla } add_to_variable = { TFRKPHN_kuk_fr_jeolla = 1 } } custom_effect_tooltip = TFRKPHN_kuk_after_60_tt }
+		remove_effect = {
+			set_country_flag = TFRKPHN_kuk_done_woomi
+			
+			custom_effect_tooltip = TFRKPHN_kuk_eff_woomi_tt
+			hidden_effect = { add_to_variable = { TFRKPHN_support_jeonbuk = 3 } clamp_variable = { var = TFRKPHN_support_jeonbuk min = 0 max = 100 } add_to_variable = { TFRKPHN_support_jeonnam = 3 } clamp_variable = { var = TFRKPHN_support_jeonnam min = 0 max = 100 } TFRKPHN_hong_update_support_display = yes }
+			869 = { if = { limit = { is_owned_by = ROOT } add_extra_state_shared_building_slots = 2 increase_state_category = yes add_building_construction = { type = infrastructure level = 1 instant_build = yes } } }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	TFRKPHN_kuk_bohae = {
+		icon = GFX_decision_generic_construction
+		cost = 75
+		days_remove = 30
+		fire_only_once = yes
+		visible = { OR = { check_variable = { TFRKPHN_kuk_sel = 0 } check_variable = { TFRKPHN_kuk_sel = 6 } } }
+		complete_effect = { hidden_effect = { add_to_variable = { TFRKPHN_kuk_lv_jeolla = 1 } set_variable = { TFRKPHN_kuk_fr_jeolla = TFRKPHN_kuk_lv_jeolla } add_to_variable = { TFRKPHN_kuk_fr_jeolla = 1 } } custom_effect_tooltip = TFRKPHN_kuk_after_30_tt }
+		remove_effect = {
+			set_country_flag = TFRKPHN_kuk_done_bohae
+			
+			custom_effect_tooltip = TFRKPHN_kuk_eff_bohae_tt
+			hidden_effect = { add_to_variable = { TFRKPHN_support_jeonbuk = 5 } clamp_variable = { var = TFRKPHN_support_jeonbuk min = 0 max = 100 } add_to_variable = { TFRKPHN_support_jeonnam = 5 } clamp_variable = { var = TFRKPHN_support_jeonnam min = 0 max = 100 } TFRKPHN_hong_update_support_display = yes }
+			869 = { if = { limit = { is_owned_by = ROOT } add_extra_state_shared_building_slots = 1 random_list = { 50 = { add_building_construction = { type = industrial_complex level = 1 instant_build = yes } } 50 = { add_building_construction = { type = office_park level = 1 instant_build = yes } } } } }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	TFRKPHN_kuk_daemyung = {
+		icon = GFX_decision_generic_construction
+		cost = 150
+		days_remove = 60
+		fire_only_once = yes
+		visible = { OR = { check_variable = { TFRKPHN_kuk_sel = 0 } check_variable = { TFRKPHN_kuk_sel = 7 } } }
+		complete_effect = { hidden_effect = { add_to_variable = { TFRKPHN_kuk_lv_gangwon = 1 } set_variable = { TFRKPHN_kuk_fr_gangwon = TFRKPHN_kuk_lv_gangwon } add_to_variable = { TFRKPHN_kuk_fr_gangwon = 1 } } custom_effect_tooltip = TFRKPHN_kuk_after_60_tt }
+		remove_effect = {
+			set_country_flag = TFRKPHN_kuk_done_daemyung
+			
+			custom_effect_tooltip = TFRKPHN_kuk_eff_daemyung_tt
+			hidden_effect = { add_to_variable = { TFRKPHN_support_gangwon = 3 } clamp_variable = { var = TFRKPHN_support_gangwon min = 0 max = 100 } TFRKPHN_hong_update_support_display = yes }
+			871 = { if = { limit = { is_owned_by = ROOT } add_extra_state_shared_building_slots = 2 increase_state_category = yes add_building_construction = { type = infrastructure level = 1 instant_build = yes } } }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	TFRKPHN_kuk_douzone = {
+		icon = GFX_decision_generic_construction
+		cost = 75
+		days_remove = 30
+		fire_only_once = yes
+		visible = { OR = { check_variable = { TFRKPHN_kuk_sel = 0 } check_variable = { TFRKPHN_kuk_sel = 8 } } }
+		complete_effect = { hidden_effect = { add_to_variable = { TFRKPHN_kuk_lv_gangwon = 1 } set_variable = { TFRKPHN_kuk_fr_gangwon = TFRKPHN_kuk_lv_gangwon } add_to_variable = { TFRKPHN_kuk_fr_gangwon = 1 } } custom_effect_tooltip = TFRKPHN_kuk_after_30_tt }
+		remove_effect = {
+			set_country_flag = TFRKPHN_kuk_done_douzone
+			
+			custom_effect_tooltip = TFRKPHN_kuk_eff_douzone_tt
+			hidden_effect = { add_to_variable = { TFRKPHN_support_gangwon = 5 } clamp_variable = { var = TFRKPHN_support_gangwon min = 0 max = 100 } TFRKPHN_hong_update_support_display = yes }
+			871 = { if = { limit = { is_owned_by = ROOT } add_extra_state_shared_building_slots = 1 random_list = { 50 = { add_building_construction = { type = industrial_complex level = 1 instant_build = yes } } 50 = { add_building_construction = { type = office_park level = 1 instant_build = yes } } } } }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	TFRKPHN_kuk_hshwasung = {
+		icon = GFX_decision_generic_construction
+		cost = 150
+		days_remove = 60
+		fire_only_once = yes
+		visible = { OR = { check_variable = { TFRKPHN_kuk_sel = 0 } check_variable = { TFRKPHN_kuk_sel = 9 } } }
+		complete_effect = { hidden_effect = { add_to_variable = { TFRKPHN_kuk_lv_gyeongsang = 1 } set_variable = { TFRKPHN_kuk_fr_gyeongsang = TFRKPHN_kuk_lv_gyeongsang } add_to_variable = { TFRKPHN_kuk_fr_gyeongsang = 1 } } custom_effect_tooltip = TFRKPHN_kuk_after_60_tt }
+		remove_effect = {
+			set_country_flag = TFRKPHN_kuk_done_hshwasung
+			
+			custom_effect_tooltip = TFRKPHN_kuk_eff_hshwasung_tt
+			hidden_effect = { add_to_variable = { TFRKPHN_support_gyeongbuk = 3 } clamp_variable = { var = TFRKPHN_support_gyeongbuk min = 0 max = 100 } add_to_variable = { TFRKPHN_support_gyeongnam = 3 } clamp_variable = { var = TFRKPHN_support_gyeongnam min = 0 max = 100 } TFRKPHN_hong_update_support_display = yes }
+			870 = { if = { limit = { is_owned_by = ROOT } add_extra_state_shared_building_slots = 2 increase_state_category = yes add_building_construction = { type = infrastructure level = 1 instant_build = yes } } }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	TFRKPHN_kuk_muhak = {
+		icon = GFX_decision_generic_construction
+		cost = 75
+		days_remove = 30
+		fire_only_once = yes
+		visible = { OR = { check_variable = { TFRKPHN_kuk_sel = 0 } check_variable = { TFRKPHN_kuk_sel = 10 } } }
+		complete_effect = { hidden_effect = { add_to_variable = { TFRKPHN_kuk_lv_gyeongsang = 1 } set_variable = { TFRKPHN_kuk_fr_gyeongsang = TFRKPHN_kuk_lv_gyeongsang } add_to_variable = { TFRKPHN_kuk_fr_gyeongsang = 1 } } custom_effect_tooltip = TFRKPHN_kuk_after_30_tt }
+		remove_effect = {
+			set_country_flag = TFRKPHN_kuk_done_muhak
+			
+			custom_effect_tooltip = TFRKPHN_kuk_eff_muhak_tt
+			hidden_effect = { add_to_variable = { TFRKPHN_support_gyeongbuk = 5 } clamp_variable = { var = TFRKPHN_support_gyeongbuk min = 0 max = 100 } add_to_variable = { TFRKPHN_support_gyeongnam = 5 } clamp_variable = { var = TFRKPHN_support_gyeongnam min = 0 max = 100 } TFRKPHN_hong_update_support_display = yes }
+			870 = { if = { limit = { is_owned_by = ROOT } add_extra_state_shared_building_slots = 1 random_list = { 50 = { add_building_construction = { type = industrial_complex level = 1 instant_build = yes } } 50 = { add_building_construction = { type = office_park level = 1 instant_build = yes } } } } }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	TFRKPHN_kuk_raon = {
+		icon = GFX_decision_generic_construction
+		cost = 150
+		days_remove = 60
+		fire_only_once = yes
+		visible = { OR = { check_variable = { TFRKPHN_kuk_sel = 0 } check_variable = { TFRKPHN_kuk_sel = 11 } } }
+		complete_effect = { hidden_effect = { add_to_variable = { TFRKPHN_kuk_lv_jeju = 1 } set_variable = { TFRKPHN_kuk_fr_jeju = TFRKPHN_kuk_lv_jeju } add_to_variable = { TFRKPHN_kuk_fr_jeju = 1 } } custom_effect_tooltip = TFRKPHN_kuk_after_60_tt }
+		remove_effect = {
+			set_country_flag = TFRKPHN_kuk_done_raon
+			
+			custom_effect_tooltip = TFRKPHN_kuk_eff_raon_tt
+			hidden_effect = { add_to_variable = { TFRKPHN_support_jeju = 3 } clamp_variable = { var = TFRKPHN_support_jeju min = 0 max = 100 } TFRKPHN_hong_update_support_display = yes }
+			869 = { if = { limit = { is_owned_by = ROOT } add_extra_state_shared_building_slots = 2 increase_state_category = yes add_building_construction = { type = infrastructure level = 1 instant_build = yes } } }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	TFRKPHN_kuk_jpdc = {
+		icon = GFX_decision_generic_construction
+		cost = 75
+		days_remove = 30
+		fire_only_once = yes
+		visible = { OR = { check_variable = { TFRKPHN_kuk_sel = 0 } check_variable = { TFRKPHN_kuk_sel = 12 } } }
+		complete_effect = { hidden_effect = { add_to_variable = { TFRKPHN_kuk_lv_jeju = 1 } set_variable = { TFRKPHN_kuk_fr_jeju = TFRKPHN_kuk_lv_jeju } add_to_variable = { TFRKPHN_kuk_fr_jeju = 1 } } custom_effect_tooltip = TFRKPHN_kuk_after_30_tt }
+		remove_effect = {
+			set_country_flag = TFRKPHN_kuk_done_jpdc
+			
+			custom_effect_tooltip = TFRKPHN_kuk_eff_jpdc_tt
+			hidden_effect = { add_to_variable = { TFRKPHN_support_jeju = 5 } clamp_variable = { var = TFRKPHN_support_jeju min = 0 max = 100 } TFRKPHN_hong_update_support_display = yes }
+			869 = { if = { limit = { is_owned_by = ROOT } add_extra_state_shared_building_slots = 1 random_list = { 50 = { add_building_construction = { type = industrial_complex level = 1 instant_build = yes } } 50 = { add_building_construction = { type = office_park level = 1 instant_build = yes } } } } }
+		}
+		ai_will_do = { factor = 1 }
+	}
+}

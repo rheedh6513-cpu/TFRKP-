@@ -1,0 +1,27 @@
+# [안내] 2027년 이후 대선 조건. 대선은 무조건 보수 정권(이인제 또는 오세훈)이 이긴다.
+# 4년 중임제(TFRKPHN_term4_in_force)면 한 사람이 최대 2번, 5년 단임제면 1번까지 대통령을 할 수 있다.
+
+# 현직(이인제/오세훈)이 다시 출마할 수 있는가 (4년 중임제 첫 임기)
+TFRKPHN_incumbent_can_run = {
+	has_country_flag = TFRKPHN_term4_in_force
+	OR = {
+		AND = { has_country_flag = TFRKPHN_successor_lee_in_je check_variable = { TFRKPHN_lee_terms < 2 } }
+		AND = { has_country_flag = TFRKPHN_successor_oh_se_hoon check_variable = { TFRKPHN_oh_terms < 2 } }
+	}
+}
+# 현직이 아닌 이인제가 새로 당선될 수 있는가
+TFRKPHN_lee_can_take = {
+	NOT = { has_country_flag = TFRKPHN_successor_lee_in_je }
+	OR = {
+		AND = { has_country_flag = TFRKPHN_term4_in_force check_variable = { TFRKPHN_lee_terms < 2 } }
+		AND = { NOT = { has_country_flag = TFRKPHN_term4_in_force } check_variable = { TFRKPHN_lee_terms < 1 } }
+	}
+}
+# 현직이 아닌 오세훈이 새로 당선될 수 있는가
+TFRKPHN_oh_can_take = {
+	NOT = { has_country_flag = TFRKPHN_successor_oh_se_hoon }
+	OR = {
+		AND = { has_country_flag = TFRKPHN_term4_in_force check_variable = { TFRKPHN_oh_terms < 2 } }
+		AND = { NOT = { has_country_flag = TFRKPHN_term4_in_force } check_variable = { TFRKPHN_oh_terms < 1 } }
+	}
+}

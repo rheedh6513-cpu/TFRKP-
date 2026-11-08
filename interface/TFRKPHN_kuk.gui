@@ -1,0 +1,78 @@
+# [안내] 「국 - 나라 국」 6각형 패널. 도 이름을 누르면 그 도의 건설사업 결정이, 회사 로고를 누르면 그 회사 결정이 아래에 보입니다. 동작은 common/scripted_guis/TFRKPHN_scripted_guis.txt의 TFRKPHN_kuk_gui.
+guiTypes = {
+	containerWindowType = {
+		name = "TFRKPHN_kuk_container"
+		size = { width = 100%% height = 464 }
+		containerWindowType = {
+			name = "TFRKPHN_kuk_panel"
+			position = { x = 0 y = 0 }
+			size = { width = 500 height = 462 }
+			clipping = yes
+			background = { name = "background" spriteType = "GFX_tiled_decisions_bg_small" alwaystransparent = yes }
+			containerWindowType = {
+				name = "TFRKPHN_kuk_title_container"
+				position = { x = 1 y = 0 }
+				size = { width = 498 height = 30 }
+				background = { name = "background" spriteType = "GFX_tiled_header_1" alwaystransparent = yes }
+				instantTextBoxType = { name = "TFRKPHN_kuk_title_text" position = { x = 4 y = 4 } text = "TFRKPHN_kuk_title" font = "hoi_16mbs" format = center maxWidth = 490 alwaystransparent = yes }
+			}
+			iconType = { name = "TFRKPHN_kuk_bg" position = { x = 0 y = 34 } spriteType = "GFX_TFRKPHN_kuk_bg" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_kuk_tri_gyeonggi" position = { x = 0 y = 34 } spriteType = "GFX_TFRKPHN_kuk_tri_lt" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_kuk_tri_chungcheong" position = { x = 0 y = 34 } spriteType = "GFX_TFRKPHN_kuk_tri_lm" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_kuk_tri_jeolla" position = { x = 0 y = 34 } spriteType = "GFX_TFRKPHN_kuk_tri_lb" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_kuk_tri_gangwon" position = { x = 0 y = 34 } spriteType = "GFX_TFRKPHN_kuk_tri_rt" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_kuk_tri_gyeongsang" position = { x = 0 y = 34 } spriteType = "GFX_TFRKPHN_kuk_tri_rm" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_kuk_tri_jeju" position = { x = 0 y = 34 } spriteType = "GFX_TFRKPHN_kuk_tri_rb" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_kuk_center" position = { x = 210 y = 206 } spriteType = "GFX_TFRKPHN_kuk_center" pdx_tooltip = "TFRKPHN_kuk_center_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_kuk_center_glow" position = { x = 210 y = 206 } spriteType = "GFX_TFRKPHN_kuk_center_glow" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_kuk_reg_gyeonggi" position = { x = 113 y = 41 } spriteType = "GFX_TFRKPHN_kuk_reg_gyeonggi" pdx_tooltip = "TFRKPHN_kuk_regtt_gyeonggi" clicksound = click_default }
+			iconType = { name = "TFRKPHN_kuk_regsel_gyeonggi" position = { x = 110 y = 38 } spriteType = "GFX_TFRKPHN_kuk_regsel" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_kuk_reg_chungcheong" position = { x = 42 y = 195 } spriteType = "GFX_TFRKPHN_kuk_reg_chungcheong" pdx_tooltip = "TFRKPHN_kuk_regtt_chungcheong" clicksound = click_default }
+			iconType = { name = "TFRKPHN_kuk_regsel_chungcheong" position = { x = 39 y = 192 } spriteType = "GFX_TFRKPHN_kuk_regsel" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_kuk_reg_jeolla" position = { x = 113 y = 349 } spriteType = "GFX_TFRKPHN_kuk_reg_jeolla" pdx_tooltip = "TFRKPHN_kuk_regtt_jeolla" clicksound = click_default }
+			iconType = { name = "TFRKPHN_kuk_regsel_jeolla" position = { x = 110 y = 346 } spriteType = "GFX_TFRKPHN_kuk_regsel" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_kuk_reg_gangwon" position = { x = 291 y = 41 } spriteType = "GFX_TFRKPHN_kuk_reg_gangwon" pdx_tooltip = "TFRKPHN_kuk_regtt_gangwon" clicksound = click_default }
+			iconType = { name = "TFRKPHN_kuk_regsel_gangwon" position = { x = 288 y = 38 } spriteType = "GFX_TFRKPHN_kuk_regsel" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_kuk_reg_gyeongsang" position = { x = 362 y = 195 } spriteType = "GFX_TFRKPHN_kuk_reg_gyeongsang" pdx_tooltip = "TFRKPHN_kuk_regtt_gyeongsang" clicksound = click_default }
+			iconType = { name = "TFRKPHN_kuk_regsel_gyeongsang" position = { x = 359 y = 192 } spriteType = "GFX_TFRKPHN_kuk_regsel" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_kuk_reg_jeju" position = { x = 291 y = 349 } spriteType = "GFX_TFRKPHN_kuk_reg_jeju" pdx_tooltip = "TFRKPHN_kuk_regtt_jeju" clicksound = click_default }
+			iconType = { name = "TFRKPHN_kuk_regsel_jeju" position = { x = 288 y = 346 } spriteType = "GFX_TFRKPHN_kuk_regsel" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_kuk_btn_seohee" position = { x = 113 y = 71 } spriteType = "GFX_TFRKPHN_kuk_seohee" pdx_tooltip = "TFRKPHN_kuk_tt_seohee" clicksound = click_default }
+			iconType = { name = "TFRKPHN_kuk_done_seohee" position = { x = 113 y = 71 } spriteType = "GFX_TFRKPHN_kuk_done" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_kuk_sel_seohee" position = { x = 110 y = 68 } spriteType = "GFX_TFRKPHN_kuk_sel" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_kuk_btn_ottogi" position = { x = 113 y = 109 } spriteType = "GFX_TFRKPHN_kuk_ottogi" pdx_tooltip = "TFRKPHN_kuk_tt_ottogi" clicksound = click_default }
+			iconType = { name = "TFRKPHN_kuk_done_ottogi" position = { x = 113 y = 109 } spriteType = "GFX_TFRKPHN_kuk_done" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_kuk_sel_ottogi" position = { x = 110 y = 106 } spriteType = "GFX_TFRKPHN_kuk_sel" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_kuk_btn_kyeryong" position = { x = 42 y = 225 } spriteType = "GFX_TFRKPHN_kuk_kyeryong" pdx_tooltip = "TFRKPHN_kuk_tt_kyeryong" clicksound = click_default }
+			iconType = { name = "TFRKPHN_kuk_done_kyeryong" position = { x = 42 y = 225 } spriteType = "GFX_TFRKPHN_kuk_done" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_kuk_sel_kyeryong" position = { x = 39 y = 222 } spriteType = "GFX_TFRKPHN_kuk_sel" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_kuk_btn_mackis" position = { x = 42 y = 263 } spriteType = "GFX_TFRKPHN_kuk_mackis" pdx_tooltip = "TFRKPHN_kuk_tt_mackis" clicksound = click_default }
+			iconType = { name = "TFRKPHN_kuk_done_mackis" position = { x = 42 y = 263 } spriteType = "GFX_TFRKPHN_kuk_done" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_kuk_sel_mackis" position = { x = 39 y = 260 } spriteType = "GFX_TFRKPHN_kuk_sel" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_kuk_btn_woomi" position = { x = 113 y = 379 } spriteType = "GFX_TFRKPHN_kuk_woomi" pdx_tooltip = "TFRKPHN_kuk_tt_woomi" clicksound = click_default }
+			iconType = { name = "TFRKPHN_kuk_done_woomi" position = { x = 113 y = 379 } spriteType = "GFX_TFRKPHN_kuk_done" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_kuk_sel_woomi" position = { x = 110 y = 376 } spriteType = "GFX_TFRKPHN_kuk_sel" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_kuk_btn_bohae" position = { x = 113 y = 417 } spriteType = "GFX_TFRKPHN_kuk_bohae" pdx_tooltip = "TFRKPHN_kuk_tt_bohae" clicksound = click_default }
+			iconType = { name = "TFRKPHN_kuk_done_bohae" position = { x = 113 y = 417 } spriteType = "GFX_TFRKPHN_kuk_done" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_kuk_sel_bohae" position = { x = 110 y = 414 } spriteType = "GFX_TFRKPHN_kuk_sel" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_kuk_btn_daemyung" position = { x = 291 y = 71 } spriteType = "GFX_TFRKPHN_kuk_daemyung" pdx_tooltip = "TFRKPHN_kuk_tt_daemyung" clicksound = click_default }
+			iconType = { name = "TFRKPHN_kuk_done_daemyung" position = { x = 291 y = 71 } spriteType = "GFX_TFRKPHN_kuk_done" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_kuk_sel_daemyung" position = { x = 288 y = 68 } spriteType = "GFX_TFRKPHN_kuk_sel" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_kuk_btn_douzone" position = { x = 291 y = 109 } spriteType = "GFX_TFRKPHN_kuk_douzone" pdx_tooltip = "TFRKPHN_kuk_tt_douzone" clicksound = click_default }
+			iconType = { name = "TFRKPHN_kuk_done_douzone" position = { x = 291 y = 109 } spriteType = "GFX_TFRKPHN_kuk_done" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_kuk_sel_douzone" position = { x = 288 y = 106 } spriteType = "GFX_TFRKPHN_kuk_sel" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_kuk_btn_hshwasung" position = { x = 362 y = 225 } spriteType = "GFX_TFRKPHN_kuk_hshwasung" pdx_tooltip = "TFRKPHN_kuk_tt_hshwasung" clicksound = click_default }
+			iconType = { name = "TFRKPHN_kuk_done_hshwasung" position = { x = 362 y = 225 } spriteType = "GFX_TFRKPHN_kuk_done" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_kuk_sel_hshwasung" position = { x = 359 y = 222 } spriteType = "GFX_TFRKPHN_kuk_sel" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_kuk_btn_muhak" position = { x = 362 y = 263 } spriteType = "GFX_TFRKPHN_kuk_muhak" pdx_tooltip = "TFRKPHN_kuk_tt_muhak" clicksound = click_default }
+			iconType = { name = "TFRKPHN_kuk_done_muhak" position = { x = 362 y = 263 } spriteType = "GFX_TFRKPHN_kuk_done" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_kuk_sel_muhak" position = { x = 359 y = 260 } spriteType = "GFX_TFRKPHN_kuk_sel" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_kuk_btn_raon" position = { x = 291 y = 379 } spriteType = "GFX_TFRKPHN_kuk_raon" pdx_tooltip = "TFRKPHN_kuk_tt_raon" clicksound = click_default }
+			iconType = { name = "TFRKPHN_kuk_done_raon" position = { x = 291 y = 379 } spriteType = "GFX_TFRKPHN_kuk_done" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_kuk_sel_raon" position = { x = 288 y = 376 } spriteType = "GFX_TFRKPHN_kuk_sel" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_kuk_btn_jpdc" position = { x = 291 y = 417 } spriteType = "GFX_TFRKPHN_kuk_jpdc" pdx_tooltip = "TFRKPHN_kuk_tt_jpdc" clicksound = click_default }
+			iconType = { name = "TFRKPHN_kuk_done_jpdc" position = { x = 291 y = 417 } spriteType = "GFX_TFRKPHN_kuk_done" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_kuk_sel_jpdc" position = { x = 288 y = 414 } spriteType = "GFX_TFRKPHN_kuk_sel" alwaystransparent = yes }
+		}
+	}
+}

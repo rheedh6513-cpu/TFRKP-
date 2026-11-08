@@ -1,4 +1,4 @@
-﻿# [안내] 모래시계 개혁 결정. 화면은 interface/TFRKPHN_hourglass.gui.
+# [안내] 모래시계 개혁 결정. 화면은 interface/TFRKPHN_hourglass.gui.
 # [안내] 수정 방법: 모드 폴더의 TUTORIAL_KO.md 7~9장 참고. 새 이름에는 TFRKPHN_ 접두어를 붙이세요.
 # TFRKP Hong Nak: 모래시계 검사 (사법부 개혁 5 + 검찰 개혁 5 + 마무리 선언 1)
 # 개혁을 시행할 때마다 모래시계의 모래가 한 단계씩 떨어진다. (TFRKPHN_hourglass_step 0~11)
