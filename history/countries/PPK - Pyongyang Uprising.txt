@@ -1,0 +1,17 @@
+# 평양 인민봉기위원회 (박현준, 북한 내전 때 tfrkphn.254 에서 생김)
+capital = 1043
+
+set_research_slots = 3
+set_stability = 0.4
+set_war_support = 0.6
+
+set_politics = {
+	ruling_party = conservative
+	last_election = "2020.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	conservative = 60
+	totalitarian_socialist = 40
+}

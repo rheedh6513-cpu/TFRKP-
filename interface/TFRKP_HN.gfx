@@ -859,4 +859,197 @@ spriteTypes = {
 		name = "GFX_TFRKPHN_SE_NK_CIVIL_WAR"
 		texturefile = "gfx/super_events/TFRKPHN_se_nk_civil_war.png"
 	}
+	spriteType = {
+		name = "GFX_portrait_TFRKPHN_adrian_hong_chang"
+		texturefile = "gfx/leaders/KOR/TFRKPHN_adrian_hong_chang.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_premier_park_choong_kwon"
+		texturefile = "gfx/leaders/KOR/TFRKPHN_park_choong_kwon_premier.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_bullet_hole"
+		texturefile = "gfx/interface/decisions/TFRKPHN_bullet_hole.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_crosshair"
+		texturefile = "gfx/interface/decisions/TFRKPHN_crosshair.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_kaesong"
+		texturefile = "gfx/event_pictures/TFRKPHN_kaesong.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_premier_park_choong_kwon_icon"
+		texturefile = "gfx/leaders/KOR/TFRKPHN_park_choong_kwon_icon.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_free_joseon_emblem_icon"
+		texturefile = "gfx/leaders/KOR/TFRKPHN_free_joseon_emblem_icon.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_TFRKPHN_hwang_jeong_yeop"
+		texturefile = "gfx/leaders/KOR/TFRKPHN_hwang_jeong_yeop.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_KOR_hong_joon_pyo_victory"
+		texturefile = "gfx/leaders/KOR/TFRKPHN_hong_joon_pyo_victory.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_sim_seclusion"
+		texturefile = "gfx/event_pictures/TFRKPHN_sim_seclusion.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_lee_temp"
+		texturefile = "gfx/event_pictures/TFRKPHN_lee_temp.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TFRKPHN_cho_tae_yong"
+		texturefile = "gfx/interface/ideas/TFRKPHN_cho_tae_yong.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TFRKPHN_kim_tae_heum"
+		texturefile = "gfx/interface/ideas/TFRKPHN_kim_tae_heum.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TFRKPHN_lee_jung_sik"
+		texturefile = "gfx/interface/ideas/TFRKPHN_lee_jung_sik.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TFRKPHN_chung_jin_suk"
+		texturefile = "gfx/interface/ideas/TFRKPHN_chung_jin_suk.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TFRKPHN_cho_hyun_dong"
+		texturefile = "gfx/interface/ideas/TFRKPHN_cho_hyun_dong.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TFRKPHN_bang_ki_sun"
+		texturefile = "gfx/interface/ideas/TFRKPHN_bang_ki_sun.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TFRKPHN_lee_myoung_su"
+		texturefile = "gfx/interface/ideas/TFRKPHN_lee_myoung_su.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TFRKPHN_kim_hong_kyun"
+		texturefile = "gfx/interface/ideas/TFRKPHN_kim_hong_kyun.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TFRKPHN_shin_beom_chul"
+		texturefile = "gfx/interface/ideas/TFRKPHN_shin_beom_chul.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TFRKPHN_jang_ho_jin"
+		texturefile = "gfx/interface/ideas/TFRKPHN_jang_ho_jin.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TFRKPHN_chun_young_woo"
+		texturefile = "gfx/interface/ideas/TFRKPHN_chun_young_woo.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TFRKPHN_lee_do_hoon"
+		texturefile = "gfx/interface/ideas/TFRKPHN_lee_do_hoon.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TFRKPHN_park_cheol_hee"
+		texturefile = "gfx/interface/ideas/TFRKPHN_park_cheol_hee.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TFRKPHN_lee_yang_soo"
+		texturefile = "gfx/interface/ideas/TFRKPHN_lee_yang_soo.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TFRKPHN_lee_dong_phil"
+		texturefile = "gfx/interface/ideas/TFRKPHN_lee_dong_phil.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TFRKPHN_song_mi_ryung"
+		texturefile = "gfx/interface/ideas/TFRKPHN_song_mi_ryung.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TFRKPHN_chung_hwang_keun"
+		texturefile = "gfx/interface/ideas/TFRKPHN_chung_hwang_keun.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TFRKPHN_lim_i_ja"
+		texturefile = "gfx/interface/ideas/TFRKPHN_lim_i_ja.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TFRKPHN_kwon_ki_seop"
+		texturefile = "gfx/interface/ideas/TFRKPHN_kwon_ki_seop.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TFRKPHN_lee_ki_kweon"
+		texturefile = "gfx/interface/ideas/TFRKPHN_lee_ki_kweon.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TFRKPHN_bang_ha_nam"
+		texturefile = "gfx/interface/ideas/TFRKPHN_bang_ha_nam.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TFRKPHN_kim_yung_ho"
+		texturefile = "gfx/interface/ideas/TFRKPHN_kim_yung_ho.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TFRKPHN_hong_yong_pyo"
+		texturefile = "gfx/interface/ideas/TFRKPHN_hong_yong_pyo.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TFRKPHN_ryoo_kihl_jae"
+		texturefile = "gfx/interface/ideas/TFRKPHN_ryoo_kihl_jae.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TFRKPHN_kim_gi_woong"
+		texturefile = "gfx/interface/ideas/TFRKPHN_kim_gi_woong.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TFRKPHN_jo_gun_shik"
+		texturefile = "gfx/interface/ideas/TFRKPHN_jo_gun_shik.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TFRKPHN_shim_woo_jung"
+		texturefile = "gfx/interface/ideas/TFRKPHN_shim_woo_jung.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TFRKPHN_lee_noh_kong"
+		texturefile = "gfx/interface/ideas/TFRKPHN_lee_noh_kong.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TFRKPHN_kim_do_eup"
+		texturefile = "gfx/interface/ideas/TFRKPHN_kim_do_eup.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TFRKPHN_jeong_jeom_sig"
+		texturefile = "gfx/interface/ideas/TFRKPHN_jeong_jeom_sig.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TFRKPHN_yoo_sang_bum"
+		texturefile = "gfx/interface/ideas/TFRKPHN_yoo_sang_bum.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TFRKPHN_lee_chang_yang"
+		texturefile = "gfx/interface/ideas/TFRKPHN_lee_chang_yang.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TFRKPHN_bang_moon_kyu"
+		texturefile = "gfx/interface/ideas/TFRKPHN_bang_moon_kyu.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TFRKPHN_ahn_duk_geun"
+		texturefile = "gfx/interface/ideas/TFRKPHN_ahn_duk_geun.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TFRKPHN_yoon_suk_yeol"
+		texturefile = "gfx/interface/ideas/TFRKPHN_yoon_suk_yeol.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TFRKPHN_yoon_sang_jick"
+		texturefile = "gfx/interface/ideas/TFRKPHN_yoon_sang_jick.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TFRKPHN_joo_hyung_hwan"
+		texturefile = "gfx/interface/ideas/TFRKPHN_joo_hyung_hwan.png"
+	}
 }

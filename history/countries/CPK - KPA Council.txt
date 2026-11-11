@@ -1,0 +1,17 @@
+# 조선인민군 군사위원회 (최룡해, 북한 내전 때 tfrkphn.254 에서 생김)
+capital = 875
+
+set_research_slots = 3
+set_stability = 0.5
+set_war_support = 0.8
+
+set_politics = {
+	ruling_party = nationalist
+	last_election = "2020.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	nationalist = 70
+	totalitarian_socialist = 30
+}

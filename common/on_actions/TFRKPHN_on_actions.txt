@@ -2,6 +2,33 @@
 # [안내] 수정 방법: 모드 폴더의 TUTORIAL_KO.md 7~9장 참고. 새 이름에는 TFRKPHN_ 접두어를 붙이세요.
 # TFRKP Hong Nak: 전당대회 이벤트를 실제 날짜에 정확히 띄우기
 on_actions = {
+	# 김정은 사망 뒤 다른 스크립트(괴뢰화, 정부 형태 복원 등)가 김정은을 다시 지도자로 세우면 바로 되돌린다
+	on_daily_PRK = {
+		# 군사위원회(CPK)가 있는 동안 최룡해는 평양 쪽에 있을 수 없다
+		if = {
+			limit = {
+				country_exists = CPK
+				has_character = PRK_cho_ryong_hae
+			}
+			hidden_effect = { retire_character = PRK_cho_ryong_hae }
+		}
+		if = {
+			limit = {
+				has_country_flag = PRK_Kim_Is_Dead
+				OR = {
+					has_country_leader = { character = PRK_kim_jongun ruling_only = yes }
+					has_character = PRK_kim_jongun
+				}
+			}
+			hidden_effect = {
+				retire_character = PRK_kim_jongun
+				if = {
+					limit = { has_character = PRK_kim_yojong_char }
+					PRK_kim_yojong_char = { promote_character = jucheism }
+				}
+			}
+		}
+	}
 	on_daily_KOR = {
 		effect = {
 			if = { limit = { has_global_flag = TFRKPHN_kj_nuke_open } TFRKPHN_kj_daily = yes }
@@ -77,6 +104,19 @@ if = {
 	activate_mission = TFRKPHN_support_decay_mission
 }
 
+# 이인제 정부 부처 신임: 중점 「임기를 함께하는 내각」 뒤에 시작하고, 국무회의 미션을 무한 반복한다
+if = {
+	limit = {
+		has_country_flag = TFRKPHN_successor_lee_in_je
+		has_completed_focus = TFRKPHN_lee_in_je_a3
+	}
+	TFRKPHN_dept_start = yes
+	if = {
+		limit = { NOT = { has_active_mission = TFRKPHN_dept_meeting_mission } }
+		activate_mission = TFRKPHN_dept_meeting_mission
+	}
+}
+
 # 개헌 논의: 남은 기간 표시, 2주마다 반대파 움직임 미션 재가동, 300일 만료 처리
 if = {
 	limit = { has_country_flag = TFRKPHN_amend_active }
@@ -97,6 +137,24 @@ if = {
 
 # 개헌안 가결 후에는 결정 탭의 개헌 결정으로 진행한다 (자동 완료 없음)
 
+# 양안전쟁 승전(중국 패배): 홍준표 초상화를 웃는 얼굴로 (참전 여부와 상관없이 한 번)
+if = {
+	limit = {
+		has_global_flag = PRC_taiwan_war_lost
+		NOT = { has_country_flag = TFRKPHN_hong_victory_portrait }
+	}
+	set_country_flag = TFRKPHN_hong_victory_portrait
+	KOR_hong_joon_pyo_char = {
+		set_portraits = {
+			civilian = { large = GFX_portrait_KOR_hong_joon_pyo_victory }
+		}
+	}
+	# 홍준표가 대통령이면 지도자 특성도 「승전 대통령」으로 바꾼다
+	if = {
+		limit = { has_country_leader = { character = KOR_hong_joon_pyo_char ruling_only = yes } }
+		swap_ruler_traits = { remove = TFRKPHN_trait_leader_dokgodai add = TFRKPHN_trait_leader_victor }
+	}
+}
 # 양철 인간: 참전한 홍준표 대통령, 양안전쟁이 끝나고 7일 뒤 (패전 310 / 승전 311)
 if = {
 	limit = {
@@ -259,6 +317,19 @@ if = {
 				}
 				set_global_flag = TFRKPHN_ppp_convention_fired
 				country_event = { id = tfrkphn.1 }
+			}
+
+			# 2022.1.14 심상정 칩거
+			if = {
+				limit = {
+					NOT = { date < 2022.1.14 }
+					date < 2022.3.9
+					has_country_flag = TFRKP_HN_PPP_hong
+					has_country_flag = TFRKP_HN_DPK_lee_nakyeon
+					NOT = { has_global_flag = TFRKPHN_sim_seclusion }
+				}
+				set_global_flag = TFRKPHN_sim_seclusion
+				country_event = { id = tfrkphn.152 }
 			}
 
 			# 2022.2.20 이낙연 유세 말실수

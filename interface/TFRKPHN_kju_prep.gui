@@ -1,0 +1,40 @@
+guiTypes = {
+	# 김정은 참수 준비 결정 탭: 표적지 + 단계마다 총알구멍
+	containerWindowType = {
+		name = "TFRKPHN_kju_prep_window"
+		position = { x = 0 y = 0 }
+		size = { width = 455 height = 537 }
+		clipping = no
+
+		iconType = {
+			name = "TFRKPHN_kju_target_sheet"
+			spriteType = "GFX_TFRKPHN_kju_cat_picture"
+			position = { x = 0 y = 0 }
+		}
+		iconType = {
+			name = "TFRKPHN_kju_hole_1"
+			spriteType = "GFX_TFRKPHN_bullet_hole"
+			position = { x = 201 y = 128 }
+		}
+		iconType = {
+			name = "TFRKPHN_kju_hole_2"
+			spriteType = "GFX_TFRKPHN_bullet_hole"
+			position = { x = 178 y = 221 }
+		}
+		iconType = {
+			name = "TFRKPHN_kju_hole_3"
+			spriteType = "GFX_TFRKPHN_bullet_hole"
+			position = { x = 228 y = 221 }
+		}
+		iconType = {
+			name = "TFRKPHN_kju_hole_4"
+			spriteType = "GFX_TFRKPHN_bullet_hole"
+			position = { x = 204 y = 274 }
+		}
+		iconType = {
+			name = "TFRKPHN_kju_crosshair"
+			spriteType = "GFX_TFRKPHN_crosshair"
+			position = { x = 136 y = 175 }
+		}
+	}
+}

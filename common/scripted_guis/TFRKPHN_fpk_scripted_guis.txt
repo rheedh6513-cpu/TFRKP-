@@ -1,0 +1,45 @@
+# 자유조선(FPK)도 KP의 영원한 수령·내각총리 칸을 보이게 (KP 원본은 original_tag = PRK 만)
+scripted_gui = {
+	TFRKPHN_fpk_eternal_leader_tt = {
+		context_type = player_context
+		parent_window_token = politics_tab
+		window_name = "TFRKPHN_fpk_eternal_leader_tt_container"
+		visible = { tag = FPK }
+		triggers = { view_click_enabled = { always = no } }
+	}
+	TFRKPHN_fpk_eternal_leader_tt_diplo = {
+		context_type = selected_country_context
+		parent_window_token = selected_country_view_diplomacy
+		window_name = "TFRKPHN_fpk_eternal_leader_tt_diplo_container"
+		visible = { tag = FPK }
+		triggers = { view_click_enabled = { always = no } }
+	}
+	TFRKPHN_fpk_kim_jong_il_tt = {
+		context_type = player_context
+		parent_window_token = politics_tab
+		window_name = "TFRKPHN_fpk_eternal_leader_kim_jong_il_tt_container"
+		visible = { tag = FPK }
+		triggers = { view_click_enabled = { always = no } }
+	}
+	TFRKPHN_fpk_kim_jong_il_tt_diplo = {
+		context_type = selected_country_context
+		parent_window_token = selected_country_view_diplomacy
+		window_name = "TFRKPHN_fpk_eternal_leader_kim_jong_il_tt_diplo_container"
+		visible = { tag = FPK }
+		triggers = { view_click_enabled = { always = no } }
+	}
+	TFRKPHN_fpk_premier_tt = {
+		context_type = player_context
+		parent_window_token = politics_tab
+		window_name = "TFRKPHN_fpk_cabinet_premier_kim_jae_ryong_tt_container"
+		visible = { tag = FPK }
+		triggers = { view_click_enabled = { always = no } }
+	}
+	TFRKPHN_fpk_premier_tt_diplo = {
+		context_type = selected_country_context
+		parent_window_token = selected_country_view_diplomacy
+		window_name = "TFRKPHN_fpk_cabinet_premier_kim_jae_ryong_tt_diplo_container"
+		visible = { tag = FPK }
+		triggers = { view_click_enabled = { always = no } }
+	}
+}

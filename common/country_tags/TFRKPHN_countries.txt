@@ -1,0 +1,4 @@
+# 홍낙 전용 국가
+FPK = "countries/TFRKPHN_Free_Joseon.txt"
+CPK = "countries/TFRKPHN_KPA_Council.txt"
+PPK = "countries/TFRKPHN_Pyongyang_Uprising.txt"

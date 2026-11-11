@@ -76,6 +76,8 @@ TFRKPHN_senate_category = {
 TFRKPHN_crime_category = {
 	icon = generic_political_actions
 	priority = 205
+	scripted_gui = TFRKPHN_cab_gui
+	visible_when_empty = yes
 	allowed = { original_tag = KOR }
 	visible_when_empty = yes
 	visible = {
@@ -138,11 +140,23 @@ TFRKPHN_hong_kuk_category = {
 TFRKPHN_lee_north_category = {
 	icon = GFX_decision_TFRKPHN_kju_target
 	priority = 210
-	picture = GFX_TFRKPHN_kju_cat_picture
+	scripted_gui = TFRKPHN_kju_prep_gui	# 표적지 그림 + 총알구멍 (picture 대신)
 	allowed = { original_tag = KOR }
 	visible = {
 		has_country_flag = TFRKPHN_lee_tree_done
-		NOT = { has_country_flag = TFRKPHN_kju_op_done }
+		OR = {
+			NOT = { has_country_flag = TFRKPHN_kju_op_done }
+			has_country_flag = TFRKPHN_kju_op_recent	# 암살 뒤 30일 동안 조준선 그림을 보여 준다
+		}
 	}
 }
 
+# 이인제 정부: 장관 칸이 없는 부처의 장관을 고른다
+TFRKPHN_lee_cabinet_category = {
+	icon = generic_political_actions
+	priority = 205
+	scripted_gui = TFRKPHN_cab_gui
+	visible_when_empty = yes
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_successor_lee_in_je }
+}

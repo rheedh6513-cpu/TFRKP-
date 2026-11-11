@@ -41,3 +41,18 @@ country_event = {
 		}
 	}
 }
+
+# 칩거: 2022.1.14 제20대 대선 중, 홍준표 대 이낙연 판에서 심상정 후보가 칩거에 들어간다
+country_event = {
+	id = tfrkphn.152
+	title = tfrkphn.152.t
+	desc = tfrkphn.152.desc
+	picture = GFX_TFRKPHN_sim_seclusion
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tfrkphn.152.a
+		custom_effect_tooltip = tfrkphn.152.a.tt
+	}
+}

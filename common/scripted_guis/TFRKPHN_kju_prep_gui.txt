@@ -1,0 +1,15 @@
+# 김정은 참수 준비 결정 탭: 준비도 25%마다 표적지에 총알구멍 하나씩
+scripted_gui = {
+	TFRKPHN_kju_prep_gui = {
+		context_type = decision_category
+		window_name = "TFRKPHN_kju_prep_window"
+		visible = { always = yes }
+		triggers = {
+			TFRKPHN_kju_hole_1_visible = { check_variable = { TFRKPHN_kju_prep > 24 } }
+			TFRKPHN_kju_hole_2_visible = { check_variable = { TFRKPHN_kju_prep > 49 } }
+			TFRKPHN_kju_hole_3_visible = { check_variable = { TFRKPHN_kju_prep > 74 } }
+			TFRKPHN_kju_hole_4_visible = { check_variable = { TFRKPHN_kju_prep > 99 } }
+			TFRKPHN_kju_crosshair_visible = { has_country_flag = TFRKPHN_kju_op_done }	# 암살 성공
+		}
+	}
+}

@@ -1,4 +1,4 @@
-music_station = "TFRKPHN_super_events"
+music_station = "tfrkp_superevents"
 
 music = {
 	song = "TFRKP_TFRKPHN_SE_NK_CIVIL_WAR"

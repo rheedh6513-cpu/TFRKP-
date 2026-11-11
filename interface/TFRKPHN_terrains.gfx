@@ -1,0 +1,59 @@
+spriteTypes = {
+	# 광주·인천 전용 지형 사진 (TFR 서울·부산 전용 지형과 같은 방식)
+	spriteType = {
+		name = "GFX_terrain_gwangju"
+		textureFile = "gfx/interface/terrains/gwangju.png"
+	}
+	spriteType = {
+		name = "GFX_terrain_gwangju_winter"
+		textureFile = "gfx/interface/terrains/gwangju_winter.png"
+	}
+	spriteType = {
+		name = "GFX_terrain_incheon"
+		textureFile = "gfx/interface/terrains/incheon.png"
+	}
+	spriteType = {
+		name = "GFX_terrain_incheon_winter"
+		textureFile = "gfx/interface/terrains/incheon_winter.png"
+	}
+	spriteType = {
+		name = "GFX_terrain_jeju"
+		textureFile = "gfx/interface/terrains/jeju.png"
+	}
+	spriteType = {
+		name = "GFX_terrain_jeju_winter"
+		textureFile = "gfx/interface/terrains/jeju_winter.png"
+	}
+	spriteType = {
+		name = "GFX_terrain_ulsan"
+		textureFile = "gfx/interface/terrains/ulsan.png"
+	}
+	spriteType = {
+		name = "GFX_terrain_ulsan_winter"
+		textureFile = "gfx/interface/terrains/ulsan_winter.png"
+	}
+	spriteType = {
+		name = "GFX_terrain_daejeon"
+		textureFile = "gfx/interface/terrains/daejeon.png"
+	}
+	spriteType = {
+		name = "GFX_terrain_daejeon_winter"
+		textureFile = "gfx/interface/terrains/daejeon_winter.png"
+	}
+	spriteType = {
+		name = "GFX_terrain_daegu"
+		textureFile = "gfx/interface/terrains/daegu.png"
+	}
+	spriteType = {
+		name = "GFX_terrain_daegu_winter"
+		textureFile = "gfx/interface/terrains/daegu_winter.png"
+	}
+	spriteType = {
+		name = "GFX_terrain_sejong"
+		textureFile = "gfx/interface/terrains/sejong.png"
+	}
+	spriteType = {
+		name = "GFX_terrain_sejong_winter"
+		textureFile = "gfx/interface/terrains/sejong_winter.png"
+	}
+}

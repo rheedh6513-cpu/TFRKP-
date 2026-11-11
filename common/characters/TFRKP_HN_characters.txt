@@ -11,14 +11,22 @@ characters = {
 		country_leader = {
 			desc = KOR_hong_joon_pyo_char_desc
 			ideology = judicial_conservatism
+			traits = { TFRKPHN_trait_leader_dokgodai }
 			expire = "2065.1.1"
 			id = -1
 		}
 	}
 	KOR_lee_in_je_char = {
 		name = KOR_lee_in_je_char
+		portraits = {
+			civilian = {
+				large = GFX_portrait_KOR_lee_in_je
+			}
+		}
 		country_leader = {
 			ideology = korean_conservatism
+			desc = KOR_lee_in_je_char_desc
+			traits = { TFRKPHN_trait_leader_phoenix }
 			expire = "2065.1.1"
 			id = -1
 		}
@@ -41,8 +49,54 @@ characters = {
 			}
 		}
 		country_leader = {
-			desc = PD1_tae_yeongho_char_desc
+			desc = TFRKPHN_tae_yeongho_char_desc
 			ideology = ultra_conservatism
+			expire = "2065.1.1"
+			id = -1
+		}
+	}
+	# 자유조선군 지도자 (3일 뒤 이북5도위원회로 바뀌면 태영호로 교체)
+	TFRKPHN_adrian_hong_chang_char = {
+		name = TFRKPHN_adrian_hong_chang_char
+		portraits = {
+			civilian = {
+				large = GFX_portrait_TFRKPHN_adrian_hong_chang
+			}
+		}
+		country_leader = {
+			desc = TFRKPHN_adrian_hong_chang_char_desc
+			ideology = interim_democracy_authoritarioan
+			expire = "2065.1.1"
+			id = -1
+		}
+	}
+	# 조선인민군 군사위원회(CPK) 지도자: TFR 원본 최룡해 초상화와 이름을 그대로 쓴다
+	TFRKPHN_cho_ryong_hae_char = {
+		name = NK3_cho_ryong_hae
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/NK2/cho_ryong Hae.png"
+			}
+		}
+		can_be_captured = no
+		country_leader = {
+			desc = TFRKPHN_cho_ryong_hae_char_desc
+			ideology = military_junta
+			expire = "2065.1.1"
+			id = -1
+		}
+	}
+	# 평양 인민봉기위원회(PPK) 지도자 박현준
+	TFRKPHN_hwang_jeong_yeop_char = {
+		name = TFRKPHN_hwang_jeong_yeop_char
+		portraits = {
+			civilian = {
+				large = GFX_portrait_TFRKPHN_hwang_jeong_yeop
+			}
+		}
+		country_leader = {
+			desc = TFRKPHN_hwang_jeong_yeop_char_desc
+			ideology = korean_conservatism
 			expire = "2065.1.1"
 			id = -1
 		}

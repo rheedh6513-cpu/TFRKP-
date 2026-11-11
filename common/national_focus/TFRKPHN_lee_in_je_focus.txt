@@ -1,6 +1,6 @@
 # [안내] 2027 대선 후임 이인제 트리 (38개 중점, 35일 기준 약 3년 7개월).
 # [안내] 수정 방법: 모드 폴더의 TUTORIAL_KO.md 7~9장 참고. 새 이름에는 TFRKPHN_ 접두어를 붙이세요.
-# 근거: 2017 강원일보 인터뷰·출마선언, 1997 대선 수락연설·TV토론. 「한라에서」를 완료하면 결정 「김정은 참수 준비」(TFRKPHN_lee_north_decisions.txt)가 열리고, 준비 100% 뒤 「백두를 보네」를 완료하면 김정은 암살 뉴스와 북한 3분할 내전(tfrkphn.250 →7일 뒤 tfrkphn.254)이 이어진다.
+# 근거: 1993 노동부 장관(무노동 부분임금, 고용보험), 1997 대선 공약, 2007 대선 공약, 2015 노동시장선진화특위, 2017 출마선언과 경선 토론, 2018 충남지사 공약을 TFR 세계관(미국 붕괴, 양안전쟁 승전, PDTO)에 맞게 옮김. 「한라에서」를 완료하면 결정 「김정은 참수 준비」(TFRKPHN_lee_north_decisions.txt)가 열리고, 준비 100% 뒤 「백두를 보네」를 완료하면 김정은 암살 뉴스와 북한 3분할 내전(tfrkphn.250 →7일 뒤 tfrkphn.254)이 이어진다.
 focus_tree = {
 	id = TFRKPHN_lee_in_je_tree
 
@@ -20,8 +20,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.03
+			country_event = { id = tfrkphn.260 }
 			TFRKPHN_lee_gov_init = yes
 		}
 	}
@@ -36,14 +35,15 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			country_event = { id = tfrkphn.261 }
+			add_stability = 0.04
 			add_popularity = { ideology = conservative popularity = 0.03 }
-			add_stability = 0.02
 		}
 	}
 
 	focus = {
 		id = TFRKPHN_lee_in_je_a2
-		icon = GFX_goal_generic_construct_infrastructure
+		icon = GFX_goal_generic_political_pressure
 		x = 0
 		y = 2
 		cost = 5
@@ -52,6 +52,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			country_event = { id = tfrkphn.263 }
 			add_to_variable = { TFRKPHN_lee_stab = 0.03 }
 			TFRKPHN_lee_gov_init = yes
 			custom_effect_tooltip = TFRKPHN_lee_tt_stab3
@@ -60,7 +61,7 @@ focus_tree = {
 
 	focus = {
 		id = TFRKPHN_lee_in_je_a2b
-		icon = GFX_goal_generic_construct_infrastructure
+		icon = GFX_goal_generic_political_pressure
 		x = 2
 		y = 2
 		cost = 5
@@ -69,6 +70,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			country_event = { id = tfrkphn.264 }
 			add_to_variable = { TFRKPHN_lee_pp = 0.05 }
 			TFRKPHN_lee_gov_init = yes
 			custom_effect_tooltip = TFRKPHN_lee_tt_pp5
@@ -85,15 +87,17 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			add_to_variable = { TFRKPHN_lee_build = 0.05 }
+			country_event = { id = tfrkphn.265 }
+			add_to_variable = { TFRKPHN_lee_pp = 0.05 }
 			TFRKPHN_lee_gov_init = yes
-			custom_effect_tooltip = TFRKPHN_lee_tt_build5
+			custom_effect_tooltip = TFRKPHN_lee_tt_pp5
+			custom_effect_tooltip = TFRKPHN_dept_start_tt
 		}
 	}
 
 	focus = {
 		id = TFRKPHN_lee_in_je_a4
-		icon = GFX_goal_generic_scientific_exchange
+		icon = GFX_goal_generic_propaganda
 		x = 0
 		y = 4
 		cost = 5
@@ -101,15 +105,14 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			set_temp_variable = { TFRKPHN_dev_tmp = 0.01 }
-			custom_effect_tooltip = TFRKPHN_dev_m_aca_up_tt
-			hidden_effect = { add_to_variable = { TFRKPHN_dev_m_aca = 0.01 } TFRKPHN_dev_monthly_ensure = yes }
+			add_political_power = 75
+			add_stability = 0.02
 		}
 	}
 
 	focus = {
 		id = TFRKPHN_lee_in_je_a4b
-		icon = GFX_goal_generic_scientific_exchange
+		icon = GFX_goal_generic_political_pressure
 		x = 2
 		y = 4
 		cost = 5
@@ -117,15 +120,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			add_to_variable = { TFRKPHN_lee_res = 0.03 }
-			TFRKPHN_lee_gov_init = yes
-			custom_effect_tooltip = TFRKPHN_lee_tt_res3
+			add_stability = 0.03
 		}
 	}
 
 	focus = {
 		id = TFRKPHN_lee_in_je_a5
-		icon = GFX_goal_generic_construct_civ_factory
+		icon = GFX_goal_generic_trade
 		x = 0
 		y = 5
 		cost = 5
@@ -133,14 +134,16 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			random_owned_controlled_state = { limit = { is_core_of = ROOT NOT = { is_capital = yes } } add_extra_state_shared_building_slots = 2 add_building_construction = { type = industrial_complex level = 2 instant_build = yes } }
-			custom_effect_tooltip = TFRKPHN_lee_tt_civ2
+			add_political_power = 50
+			add_to_variable = { TFRKPHN_lee_ind = 0.03 }
+			TFRKPHN_lee_gov_init = yes
+			custom_effect_tooltip = TFRKPHN_lee_tt_ind3
 		}
 	}
 
 	focus = {
 		id = TFRKPHN_lee_in_je_a6
-		icon = GFX_goal_generic_national_unity
+		icon = GFX_goal_generic_trade
 		x = 0
 		y = 6
 		cost = 5
@@ -148,10 +151,10 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			add_stability = 0.05
-			add_to_variable = { TFRKPHN_lee_build = 0.05 }
+			add_stability = 0.03
+			add_to_variable = { TFRKPHN_lee_cg = -0.02 }
 			TFRKPHN_lee_gov_init = yes
-			custom_effect_tooltip = TFRKPHN_lee_tt_build5
+			custom_effect_tooltip = TFRKPHN_lee_tt_cg2
 		}
 	}
 
@@ -165,6 +168,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			country_event = { id = tfrkphn.262 }
 			add_political_power = 75
 		}
 	}
@@ -187,7 +191,7 @@ focus_tree = {
 
 	focus = {
 		id = TFRKPHN_lee_in_je_b3
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_goal_generic_construct_civ_factory
 		x = 10
 		y = 2
 		cost = 5
@@ -195,8 +199,9 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			add_stability = 0.03
-			add_political_power = 50
+			add_to_variable = { TFRKPHN_lee_build = 0.05 }
+			TFRKPHN_lee_gov_init = yes
+			custom_effect_tooltip = TFRKPHN_lee_tt_build5
 		}
 	}
 
@@ -235,7 +240,7 @@ focus_tree = {
 
 	focus = {
 		id = TFRKPHN_lee_in_je_b7
-		icon = GFX_goal_generic_production
+		icon = GFX_goal_generic_consumer_goods
 		x = 6
 		y = 4
 		cost = 5
@@ -243,15 +248,15 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			add_to_variable = { TFRKPHN_lee_eff = 0.05 }
-			TFRKPHN_lee_gov_init = yes
-			custom_effect_tooltip = TFRKPHN_lee_tt_eff5
+			set_temp_variable = { TFRKPHN_dev_tmp = 0.01 }
+			custom_effect_tooltip = TFRKPHN_dev_m_soc_up_tt
+			hidden_effect = { add_to_variable = { TFRKPHN_dev_m_soc = 0.01 } TFRKPHN_dev_monthly_ensure = yes }
 		}
 	}
 
 	focus = {
 		id = TFRKPHN_lee_in_je_b4
-		icon = GFX_goal_generic_consumer_goods
+		icon = GFX_goal_generic_construct_civ_factory
 		x = 10
 		y = 4
 		cost = 5
@@ -259,9 +264,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			set_temp_variable = { TFRKPHN_dev_tmp = 0.01 }
-			custom_effect_tooltip = TFRKPHN_dev_m_soc_up_tt
-			hidden_effect = { add_to_variable = { TFRKPHN_dev_m_soc = 0.01 } TFRKPHN_dev_monthly_ensure = yes }
+			random_owned_controlled_state = { limit = { is_core_of = ROOT NOT = { is_capital = yes } } add_extra_state_shared_building_slots = 2 add_building_construction = { type = industrial_complex level = 2 instant_build = yes } }
+			custom_effect_tooltip = TFRKPHN_lee_tt_civ2
 		}
 	}
 
@@ -340,7 +344,7 @@ focus_tree = {
 
 	focus = {
 		id = TFRKPHN_lee_in_je_c7
-		icon = GFX_goal_generic_army_doctrines
+		icon = GFX_goal_generic_major_alliance
 		x = 16
 		y = 4
 		cost = 5
@@ -349,10 +353,9 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			army_experience = 25
-			add_to_variable = { TFRKPHN_lee_army = 0.05 }
-			TFRKPHN_lee_gov_init = yes
-			custom_effect_tooltip = TFRKPHN_lee_tt_army5
+			add_political_power = 75
+			JAP = { add_opinion_modifier = { target = ROOT modifier = TFRKPHN_lee_alliance } }
+			ROOT = { add_opinion_modifier = { target = JAP modifier = TFRKPHN_lee_alliance } }
 		}
 	}
 
@@ -369,6 +372,9 @@ focus_tree = {
 			set_temp_variable = { var = income_var_temp value = -10 }
 			add_income = yes
 			add_political_power = 50
+			add_to_variable = { TFRKPHN_lee_army = 0.05 }
+			TFRKPHN_lee_gov_init = yes
+			custom_effect_tooltip = TFRKPHN_lee_tt_army5
 		}
 	}
 
@@ -405,7 +411,7 @@ focus_tree = {
 
 	focus = {
 		id = TFRKPHN_lee_in_je_d2
-		icon = GFX_goal_generic_major_alliance
+		icon = GFX_goal_generic_trade
 		x = 22
 		y = 2
 		cost = 5
@@ -415,6 +421,9 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_stability = 0.05
+			add_to_variable = { TFRKPHN_lee_cg = -0.02 }
+			TFRKPHN_lee_gov_init = yes
+			custom_effect_tooltip = TFRKPHN_lee_tt_cg2
 		}
 	}
 
@@ -438,7 +447,7 @@ focus_tree = {
 
 	focus = {
 		id = TFRKPHN_lee_in_je_d3
-		icon = GFX_goal_generic_national_unity
+		icon = GFX_goal_generic_production
 		x = 22
 		y = 3
 		cost = 5
@@ -446,13 +455,15 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			add_stability = 0.05
+			add_to_variable = { TFRKPHN_lee_eff = 0.05 }
+			TFRKPHN_lee_gov_init = yes
+			custom_effect_tooltip = TFRKPHN_lee_tt_eff5
 		}
 	}
 
 	focus = {
 		id = TFRKPHN_lee_in_je_d4
-		icon = GFX_goal_generic_trade
+		icon = GFX_goal_generic_production
 		x = 22
 		y = 4
 		cost = 5
@@ -461,16 +472,16 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			add_stability = 0.05
-			add_to_variable = { TFRKPHN_lee_cg = -0.02 }
+			add_to_variable = { TFRKPHN_lee_ind = 0.05 }
 			TFRKPHN_lee_gov_init = yes
-			custom_effect_tooltip = TFRKPHN_lee_tt_cg2
+			add_stability = -0.02
+			custom_effect_tooltip = TFRKPHN_lee_tt_ind5
 		}
 	}
 
 	focus = {
 		id = TFRKPHN_lee_in_je_d4b
-		icon = GFX_goal_generic_production
+		icon = GFX_goal_generic_consumer_goods
 		x = 24
 		y = 4
 		cost = 5
@@ -479,16 +490,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			add_to_variable = { TFRKPHN_lee_eff = 0.05 }
-			TFRKPHN_lee_gov_init = yes
-			add_stability = -0.03
-			custom_effect_tooltip = TFRKPHN_lee_tt_eff5
+			add_stability = 0.05
 		}
 	}
 
 	focus = {
 		id = TFRKPHN_lee_in_je_e1
-		icon = GFX_goal_generic_construct_infrastructure
+		icon = GFX_goal_generic_political_pressure
 		x = 28
 		y = 1
 		cost = 5
@@ -497,12 +505,15 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_political_power = 50
+			add_to_variable = { TFRKPHN_lee_ind = 0.03 }
+			TFRKPHN_lee_gov_init = yes
+			custom_effect_tooltip = TFRKPHN_lee_tt_ind3
 		}
 	}
 
 	focus = {
 		id = TFRKPHN_lee_in_je_e2
-		icon = GFX_goal_generic_construct_civ_factory
+		icon = GFX_goal_generic_construct_infrastructure
 		x = 28
 		y = 2
 		cost = 5
@@ -510,14 +521,15 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			1041 = { if = { limit = { is_owned_by = ROOT } add_extra_state_shared_building_slots = 2 add_building_construction = { type = industrial_complex level = 2 instant_build = yes } } }
-			custom_effect_tooltip = TFRKPHN_lee_tt_gyeonggi
+			add_to_variable = { TFRKPHN_lee_build = 0.05 }
+			TFRKPHN_lee_gov_init = yes
+			custom_effect_tooltip = TFRKPHN_lee_tt_build5
 		}
 	}
 
 	focus = {
 		id = TFRKPHN_lee_in_je_e3
-		icon = GFX_goal_generic_trade
+		icon = GFX_goal_generic_consumer_goods
 		x = 28
 		y = 3
 		cost = 5
@@ -525,15 +537,15 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			add_to_variable = { TFRKPHN_lee_ind = 0.05 }
-			TFRKPHN_lee_gov_init = yes
-			custom_effect_tooltip = TFRKPHN_lee_tt_ind5
+			set_temp_variable = { TFRKPHN_dev_tmp = 0.01 }
+			custom_effect_tooltip = TFRKPHN_dev_m_soc_up_tt
+			hidden_effect = { add_to_variable = { TFRKPHN_dev_m_soc = 0.01 } TFRKPHN_dev_monthly_ensure = yes }
 		}
 	}
 
 	focus = {
 		id = TFRKPHN_lee_in_je_e4
-		icon = GFX_goal_generic_consumer_goods
+		icon = GFX_goal_generic_national_unity
 		x = 28
 		y = 4
 		cost = 5
@@ -541,10 +553,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			add_stability = 0.03
-			add_to_variable = { TFRKPHN_lee_cg = -0.02 }
-			TFRKPHN_lee_gov_init = yes
-			custom_effect_tooltip = TFRKPHN_lee_tt_cg2
+			add_stability = 0.04
 		}
 	}
 
@@ -565,7 +574,7 @@ focus_tree = {
 
 	focus = {
 		id = TFRKPHN_lee_in_je_h2
-		icon = GFX_goal_generic_major_alliance
+		icon = GFX_goal_generic_national_unity
 		x = 32
 		y = 2
 		cost = 5
@@ -574,8 +583,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			USA = { add_opinion_modifier = { target = ROOT modifier = TFRKPHN_lee_alliance } }
-			ROOT = { add_opinion_modifier = { target = USA modifier = TFRKPHN_lee_alliance } }
+			add_stability = 0.03
+			add_political_power = 50
 		}
 	}
 
@@ -698,6 +707,7 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = TFRKPHN_kju_op_done_tt
 			set_country_flag = TFRKPHN_kju_op_done
+			set_country_flag = { flag = TFRKPHN_kju_op_recent days = 30 }
 			hidden_effect = { PRK = { country_event = { id = tfrkphn.250 } } }
 		}
 	}

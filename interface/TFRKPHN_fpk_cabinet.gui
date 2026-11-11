@@ -1,0 +1,93 @@
+guiTypes = {
+	# 자유조선(FPK) 전용: KP 영원한 수령·내각총리 칸과 같은 자리, 설명만 자유조선용
+	containerWindowType = {
+		name = "TFRKPHN_fpk_cabinet_premier_kim_jae_ryong_tt_container"
+		position = { x = 110 y = 290 }
+		size = { width = 40 height = 40 }
+		margin = { top = 1 left = 1 right = 1 bottom = 1 }
+		clipping = yes
+		scale = 0.5
+		iconType = {
+			name = "TFRKPHN_fpk_cabinet_premier_kim_jae_ryong_tt_icon"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_TFRKPHN_free_joseon_emblem_icon"
+			pdx_tooltip = "TFRKPHN_PREMIER_TT1_FJ"
+			pdx_tooltip_delayed = "TFRKPHN_PREMIER_TT_FJ"
+		}
+	}
+	containerWindowType = {
+		name = "TFRKPHN_fpk_cabinet_premier_kim_jae_ryong_tt_diplo_container"
+		position = { x = 450 y = 117 }
+		size = { width = 40 height = 40 }
+		margin = { top = 1 left = 1 right = 1 bottom = 1 }
+		clipping = yes
+		scale = 0.5
+		iconType = {
+			name = "TFRKPHN_fpk_cabinet_premier_kim_jae_ryong_tt_diplo_icon"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_TFRKPHN_free_joseon_emblem_icon"
+			pdx_tooltip = "TFRKPHN_PREMIER_TT1_FJ"
+			pdx_tooltip_delayed = "TFRKPHN_PREMIER_TT_FJ"
+		}
+	}
+	containerWindowType = {
+		name = "TFRKPHN_fpk_eternal_leader_tt_container"
+		position = { x = 150 y = 290 }
+		size = { width = 40 height = 40 }
+		margin = { top = 1 left = 1 right = 1 bottom = 1 }
+		clipping = yes
+		scale = 0.5
+		iconType = {
+			name = "TFRKPHN_fpk_eternal_leader_tt_icon"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_PRK_eternal_leader_kim_il_sung_icon"
+			pdx_tooltip = "TFRKPHN_EL_KIS_TT1_FJ"
+			pdx_tooltip_delayed = "TFRKPHN_EL_KIS_TT_FJ"
+		}
+	}
+	containerWindowType = {
+		name = "TFRKPHN_fpk_eternal_leader_tt_diplo_container"
+		position = { x = 490 y = 117 }
+		size = { width = 40 height = 40 }
+		margin = { top = 1 left = 1 right = 1 bottom = 1 }
+		clipping = yes
+		scale = 0.5
+		iconType = {
+			name = "TFRKPHN_fpk_eternal_leader_tt_diplo_icon"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_PRK_eternal_leader_kim_il_sung_icon"
+			pdx_tooltip = "TFRKPHN_EL_KIS_TT1_FJ"
+			pdx_tooltip_delayed = "TFRKPHN_EL_KIS_TT_FJ"
+		}
+	}
+	containerWindowType = {
+		name = "TFRKPHN_fpk_eternal_leader_kim_jong_il_tt_container"
+		position = { x = 150 y = 330 }
+		size = { width = 40 height = 40 }
+		margin = { top = 1 left = 1 right = 1 bottom = 1 }
+		clipping = yes
+		scale = 0.5
+		iconType = {
+			name = "TFRKPHN_fpk_eternal_leader_kim_jong_il_tt_icon"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_PRK_eternal_leader_kim_jong_il_icon"
+			pdx_tooltip = "TFRKPHN_EL_KJI_TT1_FJ"
+			pdx_tooltip_delayed = "TFRKPHN_EL_KJI_TT_FJ"
+		}
+	}
+	containerWindowType = {
+		name = "TFRKPHN_fpk_eternal_leader_kim_jong_il_tt_diplo_container"
+		position = { x = 490 y = 157 }
+		size = { width = 40 height = 40 }
+		margin = { top = 1 left = 1 right = 1 bottom = 1 }
+		clipping = yes
+		scale = 0.5
+		iconType = {
+			name = "TFRKPHN_fpk_eternal_leader_kim_jong_il_tt_diplo_icon"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_PRK_eternal_leader_kim_jong_il_icon"
+			pdx_tooltip = "TFRKPHN_EL_KJI_TT1_FJ"
+			pdx_tooltip_delayed = "TFRKPHN_EL_KJI_TT_FJ"
+		}
+	}
+}
