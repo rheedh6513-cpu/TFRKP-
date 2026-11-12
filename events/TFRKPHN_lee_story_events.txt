@@ -1,0 +1,94 @@
+# [안내] 이인제 정부 이야기 이벤트 (효과 없음). 문구는 localisation/korean/TFRKPHN_lee_story_l_korean.yml. leestory_build.py가 만든다.
+add_namespace = tfrkphn
+
+# 중점 「실업과의 전쟁」 다음 날: 민주노총 조합원이 이인제를 찍은 까닭
+country_event = {
+	id = tfrkphn.476
+	title = tfrkphn.476.t
+	desc = tfrkphn.476.story
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.476.a
+	}
+}
+
+# 돌아오는 기업 첫 이벤트(tfrkphn.483)에서 터를 정하고 40일 뒤: 이정훈 부장(tfrkphn.320)의 첫 출근 (게임 속 이야기). uturn_build.py의 483이 부른다
+country_event = {
+	id = tfrkphn.482
+	title = tfrkphn.482.t
+	desc = tfrkphn.482.story
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.482.a
+		custom_effect_tooltip = tfrkphn.482.tt
+	}
+}
+
+# 중점 「실업과의 전쟁」을 끝내면: 이인제의 독백
+country_event = {
+	id = tfrkphn.477
+	title = tfrkphn.477.t
+	desc = tfrkphn.477.story
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.477.a
+	}
+}
+
+# 중점 「좋은 일자리 100만 개」을 끝내면: 이인제의 독백
+country_event = {
+	id = tfrkphn.478
+	title = tfrkphn.478.t
+	desc = tfrkphn.478.story
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.478.a
+	}
+}
+
+# 중점 「고용보험 2.0」을 끝내면: 이인제의 독백
+country_event = {
+	id = tfrkphn.479
+	title = tfrkphn.479.t
+	desc = tfrkphn.479.story
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.479.a
+	}
+}
+
+# 중점 「기업하기 좋은 나라」을 끝내면: 이인제의 독백
+country_event = {
+	id = tfrkphn.480
+	title = tfrkphn.480.t
+	desc = tfrkphn.480.story
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.480.a
+	}
+}
+
+# 중점 「벤처 대국」을 끝내면: 이인제의 독백
+country_event = {
+	id = tfrkphn.481
+	title = tfrkphn.481.t
+	desc = tfrkphn.481.story
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.481.a
+	}
+}

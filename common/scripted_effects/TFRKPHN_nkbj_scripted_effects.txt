@@ -1,0 +1,7 @@
+# [안내] 「북진통일 고토회복」 한반도 전체 보기: 북쪽 색 단계를 민간 평균 이반도에서 계산한다. 날마다 불린다. nkbj_merge.py가 만든다.
+TFRKPHN_nkbj_update = {
+	set_variable = { TFRKPHN_nkbj_fn = TFRKPHN_nk_avg }
+	multiply_variable = { TFRKPHN_nkbj_fn = 0.06 }
+	round_variable = TFRKPHN_nkbj_fn
+	add_to_variable = { TFRKPHN_nkbj_fn = 1 }
+}

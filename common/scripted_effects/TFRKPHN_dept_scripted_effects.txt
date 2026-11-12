@@ -1,0 +1,298 @@
+# [안내] 이인제 정부 「임기를 함께하는 내각」. 부처 신임(0~100)과 현안. dept_build.py가 만든다.
+
+# 신임을 0~100으로 묶고, 막대 그림과 보정치를 다시 계산한다
+TFRKPHN_dept_update = {
+	clamp_variable = { var = TFRKPHN_dept_t_pm min = 0 max = 100 }
+	set_variable = { TFRKPHN_dept_f_pm = TFRKPHN_dept_t_pm }
+	divide_variable = { TFRKPHN_dept_f_pm = 5 }
+	round_variable = TFRKPHN_dept_f_pm
+	add_to_variable = { TFRKPHN_dept_f_pm = 1 }
+	set_variable = { TFRKPHN_dept_m_pm = 0 }
+	if = { limit = { check_variable = { TFRKPHN_dept_t_pm > 69 } } set_variable = { TFRKPHN_dept_m_pm = 0.1 } }
+	if = { limit = { check_variable = { TFRKPHN_dept_t_pm < 31 } } set_variable = { TFRKPHN_dept_m_pm = -0.05 } }
+	clamp_variable = { var = TFRKPHN_dept_t_fm min = 0 max = 100 }
+	set_variable = { TFRKPHN_dept_f_fm = TFRKPHN_dept_t_fm }
+	divide_variable = { TFRKPHN_dept_f_fm = 5 }
+	round_variable = TFRKPHN_dept_f_fm
+	add_to_variable = { TFRKPHN_dept_f_fm = 1 }
+	set_variable = { TFRKPHN_dept_m_fm = 0 }
+	if = { limit = { check_variable = { TFRKPHN_dept_t_fm > 69 } } set_variable = { TFRKPHN_dept_m_fm = 0.2 } }
+	if = { limit = { check_variable = { TFRKPHN_dept_t_fm < 31 } } set_variable = { TFRKPHN_dept_m_fm = -0.1 } }
+	clamp_variable = { var = TFRKPHN_dept_t_em min = 0 max = 100 }
+	set_variable = { TFRKPHN_dept_f_em = TFRKPHN_dept_t_em }
+	divide_variable = { TFRKPHN_dept_f_em = 5 }
+	round_variable = TFRKPHN_dept_f_em
+	add_to_variable = { TFRKPHN_dept_f_em = 1 }
+	set_variable = { TFRKPHN_dept_m_em = 0 }
+	if = { limit = { check_variable = { TFRKPHN_dept_t_em > 69 } } set_variable = { TFRKPHN_dept_m_em = -0.05 } }
+	if = { limit = { check_variable = { TFRKPHN_dept_t_em < 31 } } set_variable = { TFRKPHN_dept_m_em = 0.02 } }
+	clamp_variable = { var = TFRKPHN_dept_t_im min = 0 max = 100 }
+	set_variable = { TFRKPHN_dept_f_im = TFRKPHN_dept_t_im }
+	divide_variable = { TFRKPHN_dept_f_im = 5 }
+	round_variable = TFRKPHN_dept_f_im
+	add_to_variable = { TFRKPHN_dept_f_im = 1 }
+	set_variable = { TFRKPHN_dept_m_im = 0 }
+	if = { limit = { check_variable = { TFRKPHN_dept_t_im > 69 } } set_variable = { TFRKPHN_dept_m_im = 0.05 } }
+	if = { limit = { check_variable = { TFRKPHN_dept_t_im < 31 } } set_variable = { TFRKPHN_dept_m_im = -0.03 } }
+	clamp_variable = { var = TFRKPHN_dept_t_nis min = 0 max = 100 }
+	set_variable = { TFRKPHN_dept_f_nis = TFRKPHN_dept_t_nis }
+	divide_variable = { TFRKPHN_dept_f_nis = 5 }
+	round_variable = TFRKPHN_dept_f_nis
+	add_to_variable = { TFRKPHN_dept_f_nis = 1 }
+	set_variable = { TFRKPHN_dept_m_nis = 0 }
+	if = { limit = { check_variable = { TFRKPHN_dept_t_nis > 69 } } set_variable = { TFRKPHN_dept_m_nis = -0.2 } }
+	if = { limit = { check_variable = { TFRKPHN_dept_t_nis < 31 } } set_variable = { TFRKPHN_dept_m_nis = 0.1 } }
+	clamp_variable = { var = TFRKPHN_dept_t_dm min = 0 max = 100 }
+	set_variable = { TFRKPHN_dept_f_dm = TFRKPHN_dept_t_dm }
+	divide_variable = { TFRKPHN_dept_f_dm = 5 }
+	round_variable = TFRKPHN_dept_f_dm
+	add_to_variable = { TFRKPHN_dept_f_dm = 1 }
+	set_variable = { TFRKPHN_dept_m_dm = 0 }
+	if = { limit = { check_variable = { TFRKPHN_dept_t_dm > 69 } } set_variable = { TFRKPHN_dept_m_dm = 0.15 } }
+	if = { limit = { check_variable = { TFRKPHN_dept_t_dm < 31 } } set_variable = { TFRKPHN_dept_m_dm = -0.1 } }
+	force_update_dynamic_modifier = yes
+	# 신임이 바닥난 부처의 사건 (국무회의가 돌기 시작한 뒤, 한 번에 하나만)
+	if = {
+		limit = { has_country_flag = TFRKPHN_dept_running NOT = { has_country_flag = TFRKPHN_dept_ev } }
+		set_temp_variable = { TFRKPHN_dept_lowcount = 0 }
+		if = { limit = { check_variable = { TFRKPHN_dept_t_pm < 31 } } add_to_temp_variable = { TFRKPHN_dept_lowcount = 1 } }
+		if = { limit = { check_variable = { TFRKPHN_dept_t_fm < 31 } } add_to_temp_variable = { TFRKPHN_dept_lowcount = 1 } }
+		if = { limit = { check_variable = { TFRKPHN_dept_t_em < 31 } } add_to_temp_variable = { TFRKPHN_dept_lowcount = 1 } }
+		if = { limit = { check_variable = { TFRKPHN_dept_t_im < 31 } } add_to_temp_variable = { TFRKPHN_dept_lowcount = 1 } }
+		if = { limit = { check_variable = { TFRKPHN_dept_t_nis < 31 } } add_to_temp_variable = { TFRKPHN_dept_lowcount = 1 } }
+		if = { limit = { check_variable = { TFRKPHN_dept_t_dm < 31 } } add_to_temp_variable = { TFRKPHN_dept_lowcount = 1 } }
+		if = { limit = { check_variable = { TFRKPHN_dept_t_pm < 11 } NOT = { has_country_flag = TFRKPHN_dept_cd_fire_pm } } set_country_flag = TFRKPHN_dept_ev set_country_flag = { flag = TFRKPHN_dept_cd_fire_pm days = 365 value = 1 } set_variable = { TFRKPHN_dept_who = 1 } country_event = { id = tfrkphn.295 } }
+		else_if = { limit = { check_variable = { TFRKPHN_dept_t_fm < 11 } NOT = { has_country_flag = TFRKPHN_dept_cd_fire_fm } } set_country_flag = TFRKPHN_dept_ev set_country_flag = { flag = TFRKPHN_dept_cd_fire_fm days = 365 value = 1 } set_variable = { TFRKPHN_dept_who = 2 } country_event = { id = tfrkphn.295 } }
+		else_if = { limit = { check_variable = { TFRKPHN_dept_t_em < 11 } NOT = { has_country_flag = TFRKPHN_dept_cd_fire_em } } set_country_flag = TFRKPHN_dept_ev set_country_flag = { flag = TFRKPHN_dept_cd_fire_em days = 365 value = 1 } set_variable = { TFRKPHN_dept_who = 3 } country_event = { id = tfrkphn.295 } }
+		else_if = { limit = { check_variable = { TFRKPHN_dept_t_im < 11 } NOT = { has_country_flag = TFRKPHN_dept_cd_fire_im } } set_country_flag = TFRKPHN_dept_ev set_country_flag = { flag = TFRKPHN_dept_cd_fire_im days = 365 value = 1 } set_variable = { TFRKPHN_dept_who = 4 } country_event = { id = tfrkphn.295 } }
+		else_if = { limit = { check_variable = { TFRKPHN_dept_t_dm < 11 } NOT = { has_country_flag = TFRKPHN_dept_cd_fire_dm } } set_country_flag = TFRKPHN_dept_ev set_country_flag = { flag = TFRKPHN_dept_cd_fire_dm days = 365 value = 1 } set_variable = { TFRKPHN_dept_who = 6 } country_event = { id = tfrkphn.295 } }
+		else_if = { limit = { check_variable = { TFRKPHN_dept_lowcount > 1 } NOT = { has_country_flag = TFRKPHN_dept_cd_clash } } set_country_flag = TFRKPHN_dept_ev set_country_flag = { flag = TFRKPHN_dept_cd_clash days = 180 value = 1 } country_event = { id = tfrkphn.296 } }
+		else_if = { limit = { check_variable = { TFRKPHN_dept_t_pm < 31 } NOT = { has_country_flag = TFRKPHN_dept_cd_resign_pm } } set_country_flag = TFRKPHN_dept_ev set_country_flag = { flag = TFRKPHN_dept_cd_resign_pm days = 240 value = 1 } country_event = { id = tfrkphn.286 } }
+		else_if = { limit = { check_variable = { TFRKPHN_dept_t_fm < 31 } NOT = { has_country_flag = TFRKPHN_dept_cd_resign_fm } } set_country_flag = TFRKPHN_dept_ev set_country_flag = { flag = TFRKPHN_dept_cd_resign_fm days = 240 value = 1 } country_event = { id = tfrkphn.287 } }
+		else_if = { limit = { check_variable = { TFRKPHN_dept_t_em < 31 } NOT = { has_country_flag = TFRKPHN_dept_cd_resign_em } } set_country_flag = TFRKPHN_dept_ev set_country_flag = { flag = TFRKPHN_dept_cd_resign_em days = 240 value = 1 } country_event = { id = tfrkphn.288 } }
+		else_if = { limit = { check_variable = { TFRKPHN_dept_t_im < 31 } NOT = { has_country_flag = TFRKPHN_dept_cd_resign_im } } set_country_flag = TFRKPHN_dept_ev set_country_flag = { flag = TFRKPHN_dept_cd_resign_im days = 240 value = 1 } country_event = { id = tfrkphn.289 } }
+		else_if = { limit = { check_variable = { TFRKPHN_dept_t_nis < 31 } NOT = { has_country_flag = TFRKPHN_dept_cd_resign_nis } } set_country_flag = TFRKPHN_dept_ev set_country_flag = { flag = TFRKPHN_dept_cd_resign_nis days = 240 value = 1 } country_event = { id = tfrkphn.290 } }
+		else_if = { limit = { check_variable = { TFRKPHN_dept_t_dm < 31 } NOT = { has_country_flag = TFRKPHN_dept_cd_resign_dm } } set_country_flag = TFRKPHN_dept_ev set_country_flag = { flag = TFRKPHN_dept_cd_resign_dm days = 240 value = 1 } country_event = { id = tfrkphn.291 } }
+	}
+}
+
+# 현안 하나를 뽑는다 (이미 현안이 걸린 부처는 빼고)
+TFRKPHN_dept_draw = {
+	random_list = {
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_pm } modifier = { factor = 0 has_country_flag = TFRKPHN_mof_renamed } set_country_flag = TFRKPHN_dept_req_pm1 set_country_flag = TFRKPHN_dept_pend_pm }
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_pm } set_country_flag = TFRKPHN_dept_req_pm2 set_country_flag = TFRKPHN_dept_pend_pm }
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_pm } set_country_flag = TFRKPHN_dept_req_pm3 set_country_flag = TFRKPHN_dept_pend_pm }
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_fm } set_country_flag = TFRKPHN_dept_req_fm1 set_country_flag = TFRKPHN_dept_pend_fm }
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_fm } set_country_flag = TFRKPHN_dept_req_fm2 set_country_flag = TFRKPHN_dept_pend_fm }
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_fm } set_country_flag = TFRKPHN_dept_req_fm3 set_country_flag = TFRKPHN_dept_pend_fm }
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_em } set_country_flag = TFRKPHN_dept_req_em1 set_country_flag = TFRKPHN_dept_pend_em }
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_em } set_country_flag = TFRKPHN_dept_req_em2 set_country_flag = TFRKPHN_dept_pend_em }
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_em } set_country_flag = TFRKPHN_dept_req_em3 set_country_flag = TFRKPHN_dept_pend_em }
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_im } set_country_flag = TFRKPHN_dept_req_im1 set_country_flag = TFRKPHN_dept_pend_im }
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_im } set_country_flag = TFRKPHN_dept_req_im2 set_country_flag = TFRKPHN_dept_pend_im }
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_im } set_country_flag = TFRKPHN_dept_req_im3 set_country_flag = TFRKPHN_dept_pend_im }
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_nis } set_country_flag = TFRKPHN_dept_req_nis1 set_country_flag = TFRKPHN_dept_pend_nis }
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_nis } set_country_flag = TFRKPHN_dept_req_nis2 set_country_flag = TFRKPHN_dept_pend_nis }
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_nis } set_country_flag = TFRKPHN_dept_req_nis3 set_country_flag = TFRKPHN_dept_pend_nis }
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_dm } set_country_flag = TFRKPHN_dept_req_dm1 set_country_flag = TFRKPHN_dept_pend_dm }
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_dm } set_country_flag = TFRKPHN_dept_req_dm2 set_country_flag = TFRKPHN_dept_pend_dm }
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_dm } set_country_flag = TFRKPHN_dept_req_dm3 set_country_flag = TFRKPHN_dept_pend_dm }
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_pm } set_country_flag = TFRKPHN_dept_req_pm4 set_country_flag = TFRKPHN_dept_pend_pm }
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_pm } set_country_flag = TFRKPHN_dept_req_pm5 set_country_flag = TFRKPHN_dept_pend_pm }
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_pm } set_country_flag = TFRKPHN_dept_req_pm6 set_country_flag = TFRKPHN_dept_pend_pm }
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_pm } set_country_flag = TFRKPHN_dept_req_pm7 set_country_flag = TFRKPHN_dept_pend_pm }
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_pm } set_country_flag = TFRKPHN_dept_req_pm8 set_country_flag = TFRKPHN_dept_pend_pm }
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_pm } set_country_flag = TFRKPHN_dept_req_pm9 set_country_flag = TFRKPHN_dept_pend_pm }
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_fm } set_country_flag = TFRKPHN_dept_req_fm4 set_country_flag = TFRKPHN_dept_pend_fm }
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_fm } set_country_flag = TFRKPHN_dept_req_fm5 set_country_flag = TFRKPHN_dept_pend_fm }
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_fm } set_country_flag = TFRKPHN_dept_req_fm6 set_country_flag = TFRKPHN_dept_pend_fm }
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_fm } set_country_flag = TFRKPHN_dept_req_fm7 set_country_flag = TFRKPHN_dept_pend_fm }
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_fm } set_country_flag = TFRKPHN_dept_req_fm8 set_country_flag = TFRKPHN_dept_pend_fm }
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_em } set_country_flag = TFRKPHN_dept_req_em4 set_country_flag = TFRKPHN_dept_pend_em }
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_em } set_country_flag = TFRKPHN_dept_req_em5 set_country_flag = TFRKPHN_dept_pend_em }
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_em } set_country_flag = TFRKPHN_dept_req_em6 set_country_flag = TFRKPHN_dept_pend_em }
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_em } set_country_flag = TFRKPHN_dept_req_em7 set_country_flag = TFRKPHN_dept_pend_em }
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_em } set_country_flag = TFRKPHN_dept_req_em8 set_country_flag = TFRKPHN_dept_pend_em }
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_em } set_country_flag = TFRKPHN_dept_req_em9 set_country_flag = TFRKPHN_dept_pend_em }
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_im } set_country_flag = TFRKPHN_dept_req_im4 set_country_flag = TFRKPHN_dept_pend_im }
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_im } set_country_flag = TFRKPHN_dept_req_im5 set_country_flag = TFRKPHN_dept_pend_im }
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_im } set_country_flag = TFRKPHN_dept_req_im6 set_country_flag = TFRKPHN_dept_pend_im }
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_im } set_country_flag = TFRKPHN_dept_req_im7 set_country_flag = TFRKPHN_dept_pend_im }
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_im } set_country_flag = TFRKPHN_dept_req_im8 set_country_flag = TFRKPHN_dept_pend_im }
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_im } set_country_flag = TFRKPHN_dept_req_im9 set_country_flag = TFRKPHN_dept_pend_im }
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_nis } set_country_flag = TFRKPHN_dept_req_nis4 set_country_flag = TFRKPHN_dept_pend_nis }
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_nis } set_country_flag = TFRKPHN_dept_req_nis5 set_country_flag = TFRKPHN_dept_pend_nis }
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_nis } set_country_flag = TFRKPHN_dept_req_nis6 set_country_flag = TFRKPHN_dept_pend_nis }
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_nis } set_country_flag = TFRKPHN_dept_req_nis7 set_country_flag = TFRKPHN_dept_pend_nis }
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_nis } set_country_flag = TFRKPHN_dept_req_nis8 set_country_flag = TFRKPHN_dept_pend_nis }
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_nis } set_country_flag = TFRKPHN_dept_req_nis9 set_country_flag = TFRKPHN_dept_pend_nis }
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_dm } set_country_flag = TFRKPHN_dept_req_dm4 set_country_flag = TFRKPHN_dept_pend_dm }
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_dm } set_country_flag = TFRKPHN_dept_req_dm5 set_country_flag = TFRKPHN_dept_pend_dm }
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_dm } set_country_flag = TFRKPHN_dept_req_dm6 set_country_flag = TFRKPHN_dept_pend_dm }
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_dm } set_country_flag = TFRKPHN_dept_req_dm7 set_country_flag = TFRKPHN_dept_pend_dm }
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_dm } set_country_flag = TFRKPHN_dept_req_dm8 set_country_flag = TFRKPHN_dept_pend_dm }
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_dm } set_country_flag = TFRKPHN_dept_req_dm9 set_country_flag = TFRKPHN_dept_pend_dm }
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_pm } set_country_flag = TFRKPHN_dept_req_pm10 set_country_flag = TFRKPHN_dept_pend_pm }
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_pm } set_country_flag = TFRKPHN_dept_req_pm11 set_country_flag = TFRKPHN_dept_pend_pm }
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_pm } set_country_flag = TFRKPHN_dept_req_pm12 set_country_flag = TFRKPHN_dept_pend_pm }
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_pm } set_country_flag = TFRKPHN_dept_req_pm13 set_country_flag = TFRKPHN_dept_pend_pm }
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_fm } set_country_flag = TFRKPHN_dept_req_fm9 set_country_flag = TFRKPHN_dept_pend_fm }
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_fm } set_country_flag = TFRKPHN_dept_req_fm10 set_country_flag = TFRKPHN_dept_pend_fm }
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_fm } set_country_flag = TFRKPHN_dept_req_fm11 set_country_flag = TFRKPHN_dept_pend_fm }
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_fm } set_country_flag = TFRKPHN_dept_req_fm12 set_country_flag = TFRKPHN_dept_pend_fm }
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_fm } set_country_flag = TFRKPHN_dept_req_fm13 set_country_flag = TFRKPHN_dept_pend_fm }
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_fm } set_country_flag = TFRKPHN_dept_req_fm14 set_country_flag = TFRKPHN_dept_pend_fm }
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_em } set_country_flag = TFRKPHN_dept_req_em10 set_country_flag = TFRKPHN_dept_pend_em }
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_em } set_country_flag = TFRKPHN_dept_req_em11 set_country_flag = TFRKPHN_dept_pend_em }
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_em } set_country_flag = TFRKPHN_dept_req_em12 set_country_flag = TFRKPHN_dept_pend_em }
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_em } set_country_flag = TFRKPHN_dept_req_em13 set_country_flag = TFRKPHN_dept_pend_em }
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_im } set_country_flag = TFRKPHN_dept_req_im10 set_country_flag = TFRKPHN_dept_pend_im }
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_im } set_country_flag = TFRKPHN_dept_req_im11 set_country_flag = TFRKPHN_dept_pend_im }
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_im } set_country_flag = TFRKPHN_dept_req_im12 set_country_flag = TFRKPHN_dept_pend_im }
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_im } set_country_flag = TFRKPHN_dept_req_im13 set_country_flag = TFRKPHN_dept_pend_im }
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_nis } set_country_flag = TFRKPHN_dept_req_nis10 set_country_flag = TFRKPHN_dept_pend_nis }
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_nis } set_country_flag = TFRKPHN_dept_req_nis11 set_country_flag = TFRKPHN_dept_pend_nis }
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_nis } set_country_flag = TFRKPHN_dept_req_nis12 set_country_flag = TFRKPHN_dept_pend_nis }
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_nis } set_country_flag = TFRKPHN_dept_req_nis13 set_country_flag = TFRKPHN_dept_pend_nis }
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_dm } set_country_flag = TFRKPHN_dept_req_dm10 set_country_flag = TFRKPHN_dept_pend_dm }
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_dm } set_country_flag = TFRKPHN_dept_req_dm11 set_country_flag = TFRKPHN_dept_pend_dm }
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_dm } set_country_flag = TFRKPHN_dept_req_dm12 set_country_flag = TFRKPHN_dept_pend_dm }
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_dm } set_country_flag = TFRKPHN_dept_req_dm13 set_country_flag = TFRKPHN_dept_pend_dm }
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_dm } set_country_flag = TFRKPHN_dept_req_dm14 set_country_flag = TFRKPHN_dept_pend_dm }
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_pm } set_country_flag = TFRKPHN_dept_req_pm14 set_country_flag = TFRKPHN_dept_pend_pm }
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_em } set_country_flag = TFRKPHN_dept_req_em14 set_country_flag = TFRKPHN_dept_pend_em }
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_im } set_country_flag = TFRKPHN_dept_req_im14 set_country_flag = TFRKPHN_dept_pend_im }
+		10 = { modifier = { factor = 0 has_country_flag = TFRKPHN_dept_pend_nis } set_country_flag = TFRKPHN_dept_req_nis14 set_country_flag = TFRKPHN_dept_pend_nis }
+	}
+}
+
+# 국무회의가 열릴 때: 들어주지 않은 현안은 사라지고 그 부처 신임이 내려간다. 그 뒤 새 현안 두 건
+TFRKPHN_dept_meeting = {
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_pm1 } clr_country_flag = TFRKPHN_dept_req_pm1 clr_country_flag = TFRKPHN_dept_pend_pm subtract_from_variable = { TFRKPHN_dept_t_pm = 6 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_pm2 } clr_country_flag = TFRKPHN_dept_req_pm2 clr_country_flag = TFRKPHN_dept_pend_pm subtract_from_variable = { TFRKPHN_dept_t_pm = 6 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_pm3 } clr_country_flag = TFRKPHN_dept_req_pm3 clr_country_flag = TFRKPHN_dept_pend_pm subtract_from_variable = { TFRKPHN_dept_t_pm = 6 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_fm1 } clr_country_flag = TFRKPHN_dept_req_fm1 clr_country_flag = TFRKPHN_dept_pend_fm subtract_from_variable = { TFRKPHN_dept_t_fm = 6 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_fm2 } clr_country_flag = TFRKPHN_dept_req_fm2 clr_country_flag = TFRKPHN_dept_pend_fm subtract_from_variable = { TFRKPHN_dept_t_fm = 6 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_fm3 } clr_country_flag = TFRKPHN_dept_req_fm3 clr_country_flag = TFRKPHN_dept_pend_fm subtract_from_variable = { TFRKPHN_dept_t_fm = 6 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_em1 } clr_country_flag = TFRKPHN_dept_req_em1 clr_country_flag = TFRKPHN_dept_pend_em subtract_from_variable = { TFRKPHN_dept_t_em = 6 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_em2 } clr_country_flag = TFRKPHN_dept_req_em2 clr_country_flag = TFRKPHN_dept_pend_em subtract_from_variable = { TFRKPHN_dept_t_em = 6 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_em3 } clr_country_flag = TFRKPHN_dept_req_em3 clr_country_flag = TFRKPHN_dept_pend_em subtract_from_variable = { TFRKPHN_dept_t_em = 6 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_im1 } clr_country_flag = TFRKPHN_dept_req_im1 clr_country_flag = TFRKPHN_dept_pend_im subtract_from_variable = { TFRKPHN_dept_t_im = 6 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_im2 } clr_country_flag = TFRKPHN_dept_req_im2 clr_country_flag = TFRKPHN_dept_pend_im subtract_from_variable = { TFRKPHN_dept_t_im = 6 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_im3 } clr_country_flag = TFRKPHN_dept_req_im3 clr_country_flag = TFRKPHN_dept_pend_im subtract_from_variable = { TFRKPHN_dept_t_im = 6 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_nis1 } clr_country_flag = TFRKPHN_dept_req_nis1 clr_country_flag = TFRKPHN_dept_pend_nis subtract_from_variable = { TFRKPHN_dept_t_nis = 6 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_nis2 } clr_country_flag = TFRKPHN_dept_req_nis2 clr_country_flag = TFRKPHN_dept_pend_nis subtract_from_variable = { TFRKPHN_dept_t_nis = 6 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_nis3 } clr_country_flag = TFRKPHN_dept_req_nis3 clr_country_flag = TFRKPHN_dept_pend_nis subtract_from_variable = { TFRKPHN_dept_t_nis = 6 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_dm1 } clr_country_flag = TFRKPHN_dept_req_dm1 clr_country_flag = TFRKPHN_dept_pend_dm subtract_from_variable = { TFRKPHN_dept_t_dm = 6 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_dm2 } clr_country_flag = TFRKPHN_dept_req_dm2 clr_country_flag = TFRKPHN_dept_pend_dm subtract_from_variable = { TFRKPHN_dept_t_dm = 6 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_dm3 } clr_country_flag = TFRKPHN_dept_req_dm3 clr_country_flag = TFRKPHN_dept_pend_dm subtract_from_variable = { TFRKPHN_dept_t_dm = 6 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_pm4 } clr_country_flag = TFRKPHN_dept_req_pm4 clr_country_flag = TFRKPHN_dept_pend_pm subtract_from_variable = { TFRKPHN_dept_t_pm = 6 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_pm5 } clr_country_flag = TFRKPHN_dept_req_pm5 clr_country_flag = TFRKPHN_dept_pend_pm subtract_from_variable = { TFRKPHN_dept_t_pm = 6 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_pm6 } clr_country_flag = TFRKPHN_dept_req_pm6 clr_country_flag = TFRKPHN_dept_pend_pm subtract_from_variable = { TFRKPHN_dept_t_pm = 6 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_pm7 } clr_country_flag = TFRKPHN_dept_req_pm7 clr_country_flag = TFRKPHN_dept_pend_pm subtract_from_variable = { TFRKPHN_dept_t_pm = 6 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_pm8 } clr_country_flag = TFRKPHN_dept_req_pm8 clr_country_flag = TFRKPHN_dept_pend_pm subtract_from_variable = { TFRKPHN_dept_t_pm = 6 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_pm9 } clr_country_flag = TFRKPHN_dept_req_pm9 clr_country_flag = TFRKPHN_dept_pend_pm subtract_from_variable = { TFRKPHN_dept_t_pm = 6 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_fm4 } clr_country_flag = TFRKPHN_dept_req_fm4 clr_country_flag = TFRKPHN_dept_pend_fm subtract_from_variable = { TFRKPHN_dept_t_fm = 6 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_fm5 } clr_country_flag = TFRKPHN_dept_req_fm5 clr_country_flag = TFRKPHN_dept_pend_fm subtract_from_variable = { TFRKPHN_dept_t_fm = 6 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_fm6 } clr_country_flag = TFRKPHN_dept_req_fm6 clr_country_flag = TFRKPHN_dept_pend_fm subtract_from_variable = { TFRKPHN_dept_t_fm = 6 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_fm7 } clr_country_flag = TFRKPHN_dept_req_fm7 clr_country_flag = TFRKPHN_dept_pend_fm subtract_from_variable = { TFRKPHN_dept_t_fm = 6 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_fm8 } clr_country_flag = TFRKPHN_dept_req_fm8 clr_country_flag = TFRKPHN_dept_pend_fm subtract_from_variable = { TFRKPHN_dept_t_fm = 6 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_em4 } clr_country_flag = TFRKPHN_dept_req_em4 clr_country_flag = TFRKPHN_dept_pend_em subtract_from_variable = { TFRKPHN_dept_t_em = 6 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_em5 } clr_country_flag = TFRKPHN_dept_req_em5 clr_country_flag = TFRKPHN_dept_pend_em subtract_from_variable = { TFRKPHN_dept_t_em = 6 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_em6 } clr_country_flag = TFRKPHN_dept_req_em6 clr_country_flag = TFRKPHN_dept_pend_em subtract_from_variable = { TFRKPHN_dept_t_em = 6 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_em7 } clr_country_flag = TFRKPHN_dept_req_em7 clr_country_flag = TFRKPHN_dept_pend_em subtract_from_variable = { TFRKPHN_dept_t_em = 6 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_em8 } clr_country_flag = TFRKPHN_dept_req_em8 clr_country_flag = TFRKPHN_dept_pend_em subtract_from_variable = { TFRKPHN_dept_t_em = 6 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_em9 } clr_country_flag = TFRKPHN_dept_req_em9 clr_country_flag = TFRKPHN_dept_pend_em subtract_from_variable = { TFRKPHN_dept_t_em = 6 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_im4 } clr_country_flag = TFRKPHN_dept_req_im4 clr_country_flag = TFRKPHN_dept_pend_im subtract_from_variable = { TFRKPHN_dept_t_im = 6 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_im5 } clr_country_flag = TFRKPHN_dept_req_im5 clr_country_flag = TFRKPHN_dept_pend_im subtract_from_variable = { TFRKPHN_dept_t_im = 6 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_im6 } clr_country_flag = TFRKPHN_dept_req_im6 clr_country_flag = TFRKPHN_dept_pend_im subtract_from_variable = { TFRKPHN_dept_t_im = 6 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_im7 } clr_country_flag = TFRKPHN_dept_req_im7 clr_country_flag = TFRKPHN_dept_pend_im subtract_from_variable = { TFRKPHN_dept_t_im = 6 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_im8 } clr_country_flag = TFRKPHN_dept_req_im8 clr_country_flag = TFRKPHN_dept_pend_im subtract_from_variable = { TFRKPHN_dept_t_im = 6 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_im9 } clr_country_flag = TFRKPHN_dept_req_im9 clr_country_flag = TFRKPHN_dept_pend_im subtract_from_variable = { TFRKPHN_dept_t_im = 6 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_nis4 } clr_country_flag = TFRKPHN_dept_req_nis4 clr_country_flag = TFRKPHN_dept_pend_nis subtract_from_variable = { TFRKPHN_dept_t_nis = 6 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_nis5 } clr_country_flag = TFRKPHN_dept_req_nis5 clr_country_flag = TFRKPHN_dept_pend_nis subtract_from_variable = { TFRKPHN_dept_t_nis = 6 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_nis6 } clr_country_flag = TFRKPHN_dept_req_nis6 clr_country_flag = TFRKPHN_dept_pend_nis subtract_from_variable = { TFRKPHN_dept_t_nis = 6 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_nis7 } clr_country_flag = TFRKPHN_dept_req_nis7 clr_country_flag = TFRKPHN_dept_pend_nis subtract_from_variable = { TFRKPHN_dept_t_nis = 6 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_nis8 } clr_country_flag = TFRKPHN_dept_req_nis8 clr_country_flag = TFRKPHN_dept_pend_nis subtract_from_variable = { TFRKPHN_dept_t_nis = 6 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_nis9 } clr_country_flag = TFRKPHN_dept_req_nis9 clr_country_flag = TFRKPHN_dept_pend_nis subtract_from_variable = { TFRKPHN_dept_t_nis = 6 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_dm4 } clr_country_flag = TFRKPHN_dept_req_dm4 clr_country_flag = TFRKPHN_dept_pend_dm subtract_from_variable = { TFRKPHN_dept_t_dm = 6 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_dm5 } clr_country_flag = TFRKPHN_dept_req_dm5 clr_country_flag = TFRKPHN_dept_pend_dm subtract_from_variable = { TFRKPHN_dept_t_dm = 6 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_dm6 } clr_country_flag = TFRKPHN_dept_req_dm6 clr_country_flag = TFRKPHN_dept_pend_dm subtract_from_variable = { TFRKPHN_dept_t_dm = 6 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_dm7 } clr_country_flag = TFRKPHN_dept_req_dm7 clr_country_flag = TFRKPHN_dept_pend_dm subtract_from_variable = { TFRKPHN_dept_t_dm = 6 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_dm8 } clr_country_flag = TFRKPHN_dept_req_dm8 clr_country_flag = TFRKPHN_dept_pend_dm subtract_from_variable = { TFRKPHN_dept_t_dm = 6 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_dm9 } clr_country_flag = TFRKPHN_dept_req_dm9 clr_country_flag = TFRKPHN_dept_pend_dm subtract_from_variable = { TFRKPHN_dept_t_dm = 6 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_pm10 } clr_country_flag = TFRKPHN_dept_req_pm10 clr_country_flag = TFRKPHN_dept_pend_pm subtract_from_variable = { TFRKPHN_dept_t_pm = 6 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_pm11 } clr_country_flag = TFRKPHN_dept_req_pm11 clr_country_flag = TFRKPHN_dept_pend_pm subtract_from_variable = { TFRKPHN_dept_t_pm = 6 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_pm12 } clr_country_flag = TFRKPHN_dept_req_pm12 clr_country_flag = TFRKPHN_dept_pend_pm subtract_from_variable = { TFRKPHN_dept_t_pm = 6 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_pm13 } clr_country_flag = TFRKPHN_dept_req_pm13 clr_country_flag = TFRKPHN_dept_pend_pm subtract_from_variable = { TFRKPHN_dept_t_pm = 6 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_fm9 } clr_country_flag = TFRKPHN_dept_req_fm9 clr_country_flag = TFRKPHN_dept_pend_fm subtract_from_variable = { TFRKPHN_dept_t_fm = 6 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_fm10 } clr_country_flag = TFRKPHN_dept_req_fm10 clr_country_flag = TFRKPHN_dept_pend_fm subtract_from_variable = { TFRKPHN_dept_t_fm = 6 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_fm11 } clr_country_flag = TFRKPHN_dept_req_fm11 clr_country_flag = TFRKPHN_dept_pend_fm subtract_from_variable = { TFRKPHN_dept_t_fm = 6 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_fm12 } clr_country_flag = TFRKPHN_dept_req_fm12 clr_country_flag = TFRKPHN_dept_pend_fm subtract_from_variable = { TFRKPHN_dept_t_fm = 6 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_fm13 } clr_country_flag = TFRKPHN_dept_req_fm13 clr_country_flag = TFRKPHN_dept_pend_fm subtract_from_variable = { TFRKPHN_dept_t_fm = 6 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_fm14 } clr_country_flag = TFRKPHN_dept_req_fm14 clr_country_flag = TFRKPHN_dept_pend_fm subtract_from_variable = { TFRKPHN_dept_t_fm = 6 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_em10 } clr_country_flag = TFRKPHN_dept_req_em10 clr_country_flag = TFRKPHN_dept_pend_em subtract_from_variable = { TFRKPHN_dept_t_em = 6 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_em11 } clr_country_flag = TFRKPHN_dept_req_em11 clr_country_flag = TFRKPHN_dept_pend_em subtract_from_variable = { TFRKPHN_dept_t_em = 6 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_em12 } clr_country_flag = TFRKPHN_dept_req_em12 clr_country_flag = TFRKPHN_dept_pend_em subtract_from_variable = { TFRKPHN_dept_t_em = 6 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_em13 } clr_country_flag = TFRKPHN_dept_req_em13 clr_country_flag = TFRKPHN_dept_pend_em subtract_from_variable = { TFRKPHN_dept_t_em = 6 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_im10 } clr_country_flag = TFRKPHN_dept_req_im10 clr_country_flag = TFRKPHN_dept_pend_im subtract_from_variable = { TFRKPHN_dept_t_im = 6 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_im11 } clr_country_flag = TFRKPHN_dept_req_im11 clr_country_flag = TFRKPHN_dept_pend_im subtract_from_variable = { TFRKPHN_dept_t_im = 6 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_im12 } clr_country_flag = TFRKPHN_dept_req_im12 clr_country_flag = TFRKPHN_dept_pend_im subtract_from_variable = { TFRKPHN_dept_t_im = 6 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_im13 } clr_country_flag = TFRKPHN_dept_req_im13 clr_country_flag = TFRKPHN_dept_pend_im subtract_from_variable = { TFRKPHN_dept_t_im = 6 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_nis10 } clr_country_flag = TFRKPHN_dept_req_nis10 clr_country_flag = TFRKPHN_dept_pend_nis subtract_from_variable = { TFRKPHN_dept_t_nis = 6 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_nis11 } clr_country_flag = TFRKPHN_dept_req_nis11 clr_country_flag = TFRKPHN_dept_pend_nis subtract_from_variable = { TFRKPHN_dept_t_nis = 6 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_nis12 } clr_country_flag = TFRKPHN_dept_req_nis12 clr_country_flag = TFRKPHN_dept_pend_nis subtract_from_variable = { TFRKPHN_dept_t_nis = 6 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_nis13 } clr_country_flag = TFRKPHN_dept_req_nis13 clr_country_flag = TFRKPHN_dept_pend_nis subtract_from_variable = { TFRKPHN_dept_t_nis = 6 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_dm10 } clr_country_flag = TFRKPHN_dept_req_dm10 clr_country_flag = TFRKPHN_dept_pend_dm subtract_from_variable = { TFRKPHN_dept_t_dm = 6 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_dm11 } clr_country_flag = TFRKPHN_dept_req_dm11 clr_country_flag = TFRKPHN_dept_pend_dm subtract_from_variable = { TFRKPHN_dept_t_dm = 6 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_dm12 } clr_country_flag = TFRKPHN_dept_req_dm12 clr_country_flag = TFRKPHN_dept_pend_dm subtract_from_variable = { TFRKPHN_dept_t_dm = 6 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_dm13 } clr_country_flag = TFRKPHN_dept_req_dm13 clr_country_flag = TFRKPHN_dept_pend_dm subtract_from_variable = { TFRKPHN_dept_t_dm = 6 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_dm14 } clr_country_flag = TFRKPHN_dept_req_dm14 clr_country_flag = TFRKPHN_dept_pend_dm subtract_from_variable = { TFRKPHN_dept_t_dm = 6 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_pm14 } clr_country_flag = TFRKPHN_dept_req_pm14 clr_country_flag = TFRKPHN_dept_pend_pm subtract_from_variable = { TFRKPHN_dept_t_pm = 6 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_em14 } clr_country_flag = TFRKPHN_dept_req_em14 clr_country_flag = TFRKPHN_dept_pend_em subtract_from_variable = { TFRKPHN_dept_t_em = 6 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_im14 } clr_country_flag = TFRKPHN_dept_req_im14 clr_country_flag = TFRKPHN_dept_pend_im subtract_from_variable = { TFRKPHN_dept_t_im = 6 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_req_nis14 } clr_country_flag = TFRKPHN_dept_req_nis14 clr_country_flag = TFRKPHN_dept_pend_nis subtract_from_variable = { TFRKPHN_dept_t_nis = 6 } }
+	TFRKPHN_dept_draw = yes
+	TFRKPHN_dept_draw = yes
+	TFRKPHN_dept_update = yes
+}
+
+# 시작: 신임 50에서 출발한다 (현안은 TFRKPHN_dept_begin에서)
+TFRKPHN_dept_start = {
+	if = {
+		limit = { NOT = { has_country_flag = TFRKPHN_dept_started } }
+		set_country_flag = TFRKPHN_dept_started
+		set_variable = { TFRKPHN_dept_t_pm = 50 }
+		set_variable = { TFRKPHN_dept_t_fm = 50 }
+		set_variable = { TFRKPHN_dept_t_em = 50 }
+		set_variable = { TFRKPHN_dept_t_im = 50 }
+		set_variable = { TFRKPHN_dept_t_nis = 50 }
+		set_variable = { TFRKPHN_dept_t_dm = 50 }
+		# 기획재정부가 이미 재정경제부로 나뉘었으면 예산을 넘겨받은 총리실이 높게, 재정경제부가 낮게 출발한다
+		if = { limit = { has_country_flag = TFRKPHN_mof_renamed } add_to_variable = { TFRKPHN_dept_t_pm = 10 } subtract_from_variable = { TFRKPHN_dept_t_em = 10 } }
+		add_dynamic_modifier = { modifier = TFRKPHN_dept_trust }
+		TFRKPHN_dept_update = yes
+	}
+}
+
+# 국무회의 개시: 기타 장관 여섯 자리를 모두 임명한 뒤 한 번. 첫 현안 두 건을 뽑고 국무회의 미션이 돌기 시작한다
+TFRKPHN_dept_begin = {
+	if = {
+		limit = { has_country_flag = TFRKPHN_dept_started NOT = { has_country_flag = TFRKPHN_dept_running } }
+		set_country_flag = TFRKPHN_dept_running
+		TFRKPHN_dept_draw = yes
+		TFRKPHN_dept_draw = yes
+		TFRKPHN_dept_update = yes
+	}
+}
+
+# 기타 장관으로 뽑은 사람의 출신 부처는 신임이 오른다 (탭이 열린 뒤 한 번씩, on_daily_KOR에서 부른다)
+TFRKPHN_dept_home = {
+	if = { limit = { has_country_flag = TFRKPHN_cab_has_cho_tae_yong NOT = { has_country_flag = TFRKPHN_dept_home_cho_tae_yong } } set_country_flag = TFRKPHN_dept_home_cho_tae_yong add_to_variable = { TFRKPHN_dept_t_fm = 5 } TFRKPHN_dept_update = yes }
+	if = { limit = { has_country_flag = TFRKPHN_cab_has_jang_ho_jin NOT = { has_country_flag = TFRKPHN_dept_home_jang_ho_jin } } set_country_flag = TFRKPHN_dept_home_jang_ho_jin add_to_variable = { TFRKPHN_dept_t_fm = 5 } TFRKPHN_dept_update = yes }
+	if = { limit = { has_country_flag = TFRKPHN_cab_has_chun_young_woo NOT = { has_country_flag = TFRKPHN_dept_home_chun_young_woo } } set_country_flag = TFRKPHN_dept_home_chun_young_woo add_to_variable = { TFRKPHN_dept_t_fm = 5 } TFRKPHN_dept_update = yes }
+	if = { limit = { has_country_flag = TFRKPHN_cab_has_lee_do_hoon NOT = { has_country_flag = TFRKPHN_dept_home_lee_do_hoon } } set_country_flag = TFRKPHN_dept_home_lee_do_hoon add_to_variable = { TFRKPHN_dept_t_fm = 5 } TFRKPHN_dept_update = yes }
+	if = { limit = { has_country_flag = TFRKPHN_cab_has_bang_moon_kyu NOT = { has_country_flag = TFRKPHN_dept_home_bang_moon_kyu } } set_country_flag = TFRKPHN_dept_home_bang_moon_kyu add_to_variable = { TFRKPHN_dept_t_em = 8 } TFRKPHN_dept_update = yes }
+	if = { limit = { has_country_flag = TFRKPHN_cab_has_joo_hyung_hwan NOT = { has_country_flag = TFRKPHN_dept_home_joo_hyung_hwan } } set_country_flag = TFRKPHN_dept_home_joo_hyung_hwan add_to_variable = { TFRKPHN_dept_t_em = 8 } TFRKPHN_dept_update = yes }
+	if = { limit = { has_country_flag = TFRKPHN_cab_has_kim_tae_heum NOT = { has_country_flag = TFRKPHN_dept_home_kim_tae_heum } } set_country_flag = TFRKPHN_dept_home_kim_tae_heum add_to_variable = { TFRKPHN_dept_t_im = 5 } TFRKPHN_dept_update = yes }
+}

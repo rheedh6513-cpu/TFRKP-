@@ -1,0 +1,9 @@
+# [안내] 이인제 정부: 일자리 대타협. 중점 「일자리 만드는 대통령」을 끝내면 열린다. 노선 중점(하르츠, 국회 입법)을 찍으면 비용과 배수가 바뀐다.
+TFRKPHN_lee_jobs_category = {
+	icon = generic_political_actions
+	priority = 203
+	scripted_gui = TFRKPHN_job_gui
+	visible_when_empty = yes
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_successor_lee_in_je has_completed_focus = TFRKPHN_lee_in_je_b1 }
+}

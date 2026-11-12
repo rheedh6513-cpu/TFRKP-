@@ -1,0 +1,138 @@
+# [안내] 이인제 정부 재벌 개혁 이벤트. 문구는 localisation/korean/TFRKPHN_chaebol_l_korean.yml. chaebol_build.py가 만든다.
+add_namespace = tfrkphn
+
+# 중점 「수레의 양바퀴」를 끝내면: 유승민과의 만남 (만남은 게임 속 이야기)
+country_event = {
+	id = tfrkphn.466
+	title = tfrkphn.466.t
+	desc = tfrkphn.466.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.466.a
+		set_country_flag = TFRKPHN_chb_open
+		custom_effect_tooltip = tfrkphn.466.open_tt
+		custom_effect_tooltip = tfrkphn.466.a_tt
+		hidden_effect = { TFRKPHN_job_start = yes add_to_variable = { TFRKPHN_job_lab = 5 } TFRKPHN_job_update = yes TFRKPHN_chb_check = yes country_event = { id = tfrkphn.469 days = 3 } }
+	}
+	option = {
+		name = tfrkphn.466.b
+		set_country_flag = TFRKPHN_chb_open
+		custom_effect_tooltip = tfrkphn.466.open_tt
+		custom_effect_tooltip = tfrkphn.466.b_tt
+		hidden_effect = { TFRKPHN_job_start = yes add_to_variable = { TFRKPHN_job_biz = 5 } TFRKPHN_job_update = yes TFRKPHN_chb_check = yes country_event = { id = tfrkphn.469 days = 3 } }
+	}
+}
+
+# 만남 사흘 뒤: 홍준표 전 대통령의 비판 (게임 속 이야기)
+country_event = {
+	id = tfrkphn.469
+	title = tfrkphn.469.t
+	desc = tfrkphn.469.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.469.a
+		add_political_power = -15
+		add_stability = 0.01
+	}
+	option = {
+		name = tfrkphn.469.b
+		add_political_power = 15
+		add_stability = -0.01
+	}
+}
+
+# 개혁 카드를 다 통과시켰을 때: 유승민의 독백 (게임 속 이야기. 2017년 공약, 득표율 6.8%, KDI 13년은 사실). 타협한 수에 따라 끝이 다르다
+country_event = {
+	id = tfrkphn.467
+	title = tfrkphn.467.t
+	desc = { text = tfrkphn.467.d0 trigger = { check_variable = { TFRKPHN_chb_nc < 0.5 } } }
+	desc = { text = tfrkphn.467.d1 trigger = { check_variable = { TFRKPHN_chb_nc > 0.5 } check_variable = { TFRKPHN_chb_nc < 3.5 } } }
+	desc = { text = tfrkphn.467.d2 trigger = { check_variable = { TFRKPHN_chb_nc > 3.5 } } }
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.467.a
+		hidden_effect = { remove_ideas = KOR_dominance_of_chaebols remove_ideas = KOR_dominance_of_chaebols_2 }
+		custom_effect_tooltip = tfrkphn.467.idea_tt
+		if = { limit = { check_variable = { TFRKPHN_chb_nc > 3.5 } } add_ideas = TFRKPHN_chb_half }
+		else_if = { limit = { check_variable = { TFRKPHN_chb_nc < 0.5 } } add_ideas = TFRKPHN_chb_sme }
+		else_if = { limit = { NOT = { has_idea = KOR_copreation_of_chaebols } } add_ideas = KOR_copreation_of_chaebols }
+		add_stability = 0.05
+		custom_effect_tooltip = tfrkphn.467.tt
+		hidden_effect = { add_to_variable = { TFRKPHN_job_n = TFRKPHN_chb_reward } TFRKPHN_job_update = yes }
+		hidden_effect = { if = { limit = { check_variable = { TFRKPHN_chb_nc < 0.5 } } country_event = { id = tfrkphn.470 days = 2 } } country_event = { id = tfrkphn.495 days = 10 } }
+	}
+}
+
+# 타협 없이 여덟 장을 다 통과시켰을 때는 467 이틀 뒤에 이것도 뜬다 (효과 없는 이야기): 홍준표 루트 이야기(tfrkphn.122)의 시화공단 금형 공장 사장 김씨가 다시 나온다 (게임 속 이야기)
+country_event = {
+	id = tfrkphn.470
+	title = tfrkphn.470.t
+	desc = tfrkphn.470.story
+	picture = GFX_TFRKPHN_samgyeop
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.470.a
+	}
+}
+
+# 정경유착 수사 3단계(소환) 이틀 뒤: 압수한 장부에 여당 의원 이름 (게임 속 이야기)
+country_event = {
+	id = tfrkphn.474
+	title = tfrkphn.474.t
+	desc = tfrkphn.474.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.474.a
+		add_political_power = -40
+		add_stability = 0.03
+		custom_effect_tooltip = tfrkphn.474.a_tt
+		hidden_effect = { add_to_variable = { TFRKPHN_job_lab = 5 } TFRKPHN_job_update = yes country_event = { id = tfrkphn.494 days = 3 } }
+	}
+	option = {
+		name = tfrkphn.474.b
+		add_political_power = 20
+		add_stability = -0.03
+		custom_effect_tooltip = tfrkphn.474.b_tt
+		hidden_effect = { add_to_variable = { TFRKPHN_chb_inv = -1 } add_to_variable = { TFRKPHN_job_lab = -5 } TFRKPHN_job_update = yes TFRKPHN_chb_check = yes }
+	}
+}
+
+# 정경유착 수사 네 단계를 다 마쳤을 때
+country_event = {
+	id = tfrkphn.475
+	title = tfrkphn.475.t
+	desc = tfrkphn.475.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.475.a
+		add_political_power = 50
+		add_stability = 0.03
+		custom_effect_tooltip = tfrkphn.475.tt
+	}
+}
+
+# 재계의 저항이 60에 닿았을 때 (되풀이해서 뜸, 120일에 한 번)
+country_event = {
+	id = tfrkphn.468
+	title = tfrkphn.468.t
+	desc = tfrkphn.468.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.468.a
+		add_stability = -0.02
+		custom_effect_tooltip = tfrkphn.468.tt
+		hidden_effect = { add_to_variable = { TFRKPHN_job_biz = -5 } TFRKPHN_job_update = yes }
+	}
+}

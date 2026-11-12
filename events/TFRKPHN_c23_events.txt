@@ -1,0 +1,67 @@
+# [안내] 이인제 정부 통일 가지 이벤트. 문구는 localisation/korean/TFRKPHN_c23_l_korean.yml. c23_build.py가 만든다.
+add_namespace = tfrkphn
+
+# 중점 「주민에게 진실을」을 끝내면
+country_event = {
+	id = tfrkphn.505
+	title = tfrkphn.505.t
+	desc = tfrkphn.505.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.505.a
+	}
+}
+
+# 중점 「통일을 받아들이는 주변국」을 끝내면: PDTO 공동성명과 야당 친이재명계의 반발
+country_event = {
+	id = tfrkphn.506
+	title = tfrkphn.506.t
+	desc = tfrkphn.506.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.506.a
+		custom_effect_tooltip = TFRKPHN_bamboo_tt
+		hidden_effect = { every_country = { limit = { OR = { tag = AST tag = JAP tag = KOR tag = RAJ tag = PRC tag = PAK } NOT = { has_idea = TFRKPHN_bamboo_curtain } } add_ideas = TFRKPHN_bamboo_curtain } }
+		add_war_support = 0.03
+		add_stability = -0.01
+	}
+	option = {
+		name = tfrkphn.506.b
+		custom_effect_tooltip = TFRKPHN_bamboo_tt
+		hidden_effect = { every_country = { limit = { OR = { tag = AST tag = JAP tag = KOR tag = RAJ tag = PRC tag = PAK } NOT = { has_idea = TFRKPHN_bamboo_curtain } } add_ideas = TFRKPHN_bamboo_curtain } }
+		add_political_power = -15
+		add_stability = 0.01
+	}
+}
+
+# 중점 「통일의 물적 기반」을 끝내면: 통일세 발표와 반발. 고른 안에 따라 통일 때(tfrkphn.473) 안정도가 더 붙는다
+country_event = {
+	id = tfrkphn.507
+	title = tfrkphn.507.t
+	desc = tfrkphn.507.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.507.a
+		add_stability = -0.03
+		set_country_flag = TFRKPHN_unitax_full
+		custom_effect_tooltip = tfrkphn.507.a_tt
+	}
+	option = {
+		name = tfrkphn.507.b
+		add_stability = -0.01
+		add_political_power = -10
+		set_country_flag = TFRKPHN_unitax_half
+		custom_effect_tooltip = tfrkphn.507.b_tt
+	}
+	option = {
+		name = tfrkphn.507.c
+		add_political_power = -20
+		custom_effect_tooltip = tfrkphn.507.c_tt
+	}
+}

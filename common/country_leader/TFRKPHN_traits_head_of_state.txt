@@ -1,0 +1,28 @@
+# [안내] 대통령(국가 지도자) 특성. 인물에 붙이는 곳은 common/characters/TFRKP_HN_characters.txt.
+# [안내] 홍준표는 양안전쟁 승전 때 on_daily_KOR에서 「독고다이」가 「승전 대통령」으로 바뀐다.
+leader_traits = {
+	# 홍준표: 기본
+	TFRKPHN_trait_leader_dokgodai = {
+		random = no
+		political_power_factor = 0.10
+		war_support_factor = 0.03
+		ai_will_do = { factor = 1 }
+	}
+	# 홍준표: 양안전쟁 승전 뒤
+	TFRKPHN_trait_leader_victor = {
+		random = no
+		political_power_factor = 0.15
+		war_support_factor = 0.05
+		stability_factor = 0.05
+		ai_will_do = { factor = 1 }
+	}
+	# 이인제
+	TFRKPHN_trait_leader_phoenix = {
+		random = no
+		stability_factor = 0.07
+		political_power_factor = 0.30
+		political_power_gain = 0.50
+		production_speed_buildings_factor = 0.03
+		ai_will_do = { factor = 1 }
+	}
+}

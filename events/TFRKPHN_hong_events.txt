@@ -1,0 +1,174 @@
+# [안내] 이인제 정부: 홍준표 전 대통령과의 관계 이벤트. 문구는 localisation/korean/TFRKPHN_hong_l_korean.yml. hong_build.py가 만든다.
+add_namespace = tfrkphn
+
+# 재벌 개혁 넷을 통과시킨 이틀 뒤: 홍준표의 두 번째 글
+country_event = {
+	id = tfrkphn.493
+	title = tfrkphn.493.t
+	desc = tfrkphn.493.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.493.a
+		custom_effect_tooltip = tfrkphn.493.a_tt
+		hidden_effect = { TFRKPHN_job_start = yes add_to_variable = { TFRKPHN_job_biz = 3 } add_to_variable = { TFRKPHN_job_lab = -3 } TFRKPHN_job_update = yes }
+	}
+	option = {
+		name = tfrkphn.493.b
+		add_political_power = 20
+	}
+}
+
+# 정경유착 수사에서 성역은 없다고 한 사흘 뒤: 홍준표의 전화
+country_event = {
+	id = tfrkphn.494
+	title = tfrkphn.494.t
+	desc = tfrkphn.494.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.494.a
+		add_stability = 0.02
+	}
+	option = {
+		name = tfrkphn.494.b
+		add_stability = -0.02
+	}
+}
+
+# 재벌 개혁을 다 마친 열흘 뒤: 막걸리 두 병
+country_event = {
+	id = tfrkphn.495
+	title = tfrkphn.495.t
+	desc = tfrkphn.495.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.495.a
+		add_political_power = 50
+		add_stability = 0.03
+	}
+}
+
+# 일자리 50만 개를 넘긴 이틀 뒤: 홍준표가 숫자를 묻다 (jobs_build.py가 부른다)
+country_event = {
+	id = tfrkphn.496
+	title = tfrkphn.496.t
+	desc = tfrkphn.496.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.496.a
+		add_political_power = -10
+		add_stability = 0.01
+	}
+	option = {
+		name = tfrkphn.496.b
+		add_political_power = 10
+	}
+}
+
+# 북진 준비 완료(462) 사흘 뒤: 전쟁을 해 본 사람 (sk_build.py가 부른다)
+country_event = {
+	id = tfrkphn.497
+	title = tfrkphn.497.t
+	desc = tfrkphn.497.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.497.a
+		add_war_support = 0.03
+	}
+}
+
+# 통일(473) 닷새 뒤: 홍준표의 짧은 글 (fin_build.py가 부른다)
+country_event = {
+	id = tfrkphn.500
+	title = tfrkphn.500.t
+	desc = tfrkphn.500.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.500.a
+		add_stability = 0.02
+	}
+}
+
+# 중점 「핵 없는 한반도」 이틀 뒤: 핵에는 핵
+country_event = {
+	id = tfrkphn.501
+	title = tfrkphn.501.t
+	desc = tfrkphn.501.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.501.a
+		add_political_power = -10
+		add_stability = 0.01
+	}
+	option = {
+		name = tfrkphn.501.b
+		add_political_power = 10
+	}
+}
+
+# 중점 「책임총리제」나 「강력한 리더십」 이틀 뒤: 어느 쪽을 골랐느냐에 따라 글이 다르다
+country_event = {
+	id = tfrkphn.502
+	title = { text = tfrkphn.502.t_pm trigger = { has_completed_focus = TFRKPHN_lee_in_je_a2 } }
+	title = { text = tfrkphn.502.t_st trigger = { NOT = { has_completed_focus = TFRKPHN_lee_in_je_a2 } } }
+	desc = { text = tfrkphn.502.d_pm trigger = { has_completed_focus = TFRKPHN_lee_in_je_a2 } }
+	desc = { text = tfrkphn.502.d_st trigger = { NOT = { has_completed_focus = TFRKPHN_lee_in_je_a2 } } }
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.502.a_pm
+		trigger = { has_completed_focus = TFRKPHN_lee_in_je_a2 }
+		add_political_power = 10
+	}
+	option = {
+		name = tfrkphn.502.a_st
+		trigger = { NOT = { has_completed_focus = TFRKPHN_lee_in_je_a2 } }
+		add_political_power = 10
+	}
+}
+
+# 중점 「양안전쟁 참전용사 예우」 이틀 뒤: 맨 뒷줄
+country_event = {
+	id = tfrkphn.503
+	title = tfrkphn.503.t
+	desc = tfrkphn.503.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.503.a
+		add_stability = 0.02
+	}
+}
+
+# 중점 「보복 없는 통일」 이틀 뒤: 재판이 먼저다
+country_event = {
+	id = tfrkphn.504
+	title = tfrkphn.504.t
+	desc = tfrkphn.504.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.504.a
+		add_stability = 0.01
+	}
+	option = {
+		name = tfrkphn.504.b
+		add_war_support = 0.02
+	}
+}

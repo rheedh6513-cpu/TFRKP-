@@ -1,0 +1,109 @@
+# [안내] 이인제 정부 북진 통일 마무리 이벤트. 문구는 localisation/korean/TFRKPHN_fin_l_korean.yml. fin_build.py가 만든다.
+add_namespace = tfrkphn
+
+# 평양 정부와 군사위원회가 모두 무너졌을 때 (on_daily_KOR 에서 부른다)
+country_event = {
+	id = tfrkphn.471
+	title = tfrkphn.471.t
+	desc = tfrkphn.471.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.471.a
+		add_war_support = 0.05
+		add_political_power = 50
+		hidden_effect = { country_event = { id = tfrkphn.472 days = 5 } }
+	}
+}
+
+# 이북5도위원회가 땅과 군대를 대한민국에 넘긴다
+country_event = {
+	id = tfrkphn.472
+	title = tfrkphn.472.t
+	desc = tfrkphn.472.d
+	picture = GFX_TFRKPHN_ibuk5do
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.472.a
+		custom_effect_tooltip = tfrkphn.472.tt
+		hidden_effect = {
+			random_country = {
+				limit = { has_country_flag = TFRKPHN_free_joseon exists = yes }
+				every_owned_state = { KOR = { add_state_core = PREV } }
+				KOR = { annex_country = { target = PREV transfer_troops = yes } }
+			}
+			every_owned_state = { limit = { OR = { is_core_of = PRK is_claimed_by = PRK } NOT = { is_core_of = KOR } } add_core_of = KOR }
+			country_event = { id = tfrkphn.490 days = 3 }
+		}
+	}
+}
+
+# 통일
+country_event = {
+	id = tfrkphn.473
+	title = tfrkphn.473.t
+	desc = tfrkphn.473.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.473.a
+		set_country_flag = TFRKPHN_unified
+		add_stability = 0.10
+		add_war_support = 0.10
+		add_political_power = 150
+		if = { limit = { has_country_flag = TFRKPHN_unitax_full } add_stability = 0.05 custom_effect_tooltip = tfrkphn.473.tax_tt }
+		else_if = { limit = { has_country_flag = TFRKPHN_unitax_half } add_stability = 0.02 custom_effect_tooltip = tfrkphn.473.tax_tt }
+		hidden_effect = {
+			country_event = { id = tfrkphn.492 days = 30 }
+			country_event = { id = tfrkphn.500 days = 5 }	# 홍준표의 짧은 글 (hong_build.py)
+			clr_global_flag = PRK_Civil_War
+			clr_global_flag = north_korean_civil_war
+			clr_global_flag = TFRKPHN_nk_civil_war
+		}
+	}
+}
+
+# ---- 김지원 (홍준표 루트 tfrkphn.204, 205의 일병) 이야기 세 편. 게임 속 이야기 ----
+# 국군 준비도 75 이벤트(tfrkphn.461) 이틀 뒤: 전방 사단의 탄약 지급
+country_event = {
+	id = tfrkphn.491
+	title = tfrkphn.491.t
+	desc = tfrkphn.491.story
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.491.a
+	}
+}
+
+# 이북5도위원회를 넘겨받고 사흘 뒤: 압록강 수통. 이 선택지 사흘 뒤 통일 이벤트
+country_event = {
+	id = tfrkphn.490
+	title = tfrkphn.490.t
+	desc = tfrkphn.490.story
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.490.a
+		add_war_support = 0.05
+		hidden_effect = { country_event = { id = tfrkphn.473 days = 3 } }
+	}
+}
+
+# 통일 30일 뒤: 북쪽으로 올라가는 공무원 3천 명. 전역한 김지원과 독서실의 이준호
+country_event = {
+	id = tfrkphn.492
+	title = tfrkphn.492.t
+	desc = tfrkphn.492.story
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.492.a
+	}
+}

@@ -1,0 +1,6 @@
+# [안내] 일자리 대타협: 노동계나 경영계가 너무 내려갔을 때의 벌칙. 값은 scripted effect TFRKPHN_job_update가 정한다. jobs_build.py가 만든다.
+TFRKPHN_job_mood = {
+	icon = GFX_idea_KOR_yoon_common_conservatism_dynamic_modifir_idea
+	stability_factor = TFRKPHN_job_pen_stab
+	production_speed_industrial_complex_factor = TFRKPHN_job_pen_build
+}

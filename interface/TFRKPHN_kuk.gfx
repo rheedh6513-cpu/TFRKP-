@@ -1,5 +1,6 @@
 # [안내] 「국 - 나라 국」 6각형 패널 그림. 회사 로고 명판은 96x34, 도 이름 버튼은 96x26.
 spriteTypes = {
+	spriteType = { name = "GFX_TFRKPHN_kuk_title" texturefile = "gfx/interface/gui/TFRKPHN_kuk/TFRKPHN_kuk_title.png" }
 	spriteType = { name = "GFX_TFRKPHN_kuk_bg" texturefile = "gfx/interface/gui/TFRKPHN_kuk/TFRKPHN_kuk_bg.png" }
 	spriteType = { name = "GFX_TFRKPHN_kuk_sel" texturefile = "gfx/interface/gui/TFRKPHN_kuk/TFRKPHN_kuk_sel.png" }
 	spriteType = { name = "GFX_TFRKPHN_kuk_done" texturefile = "gfx/interface/gui/TFRKPHN_kuk/TFRKPHN_kuk_done.png" }

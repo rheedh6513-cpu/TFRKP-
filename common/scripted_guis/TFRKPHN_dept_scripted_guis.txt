@@ -1,0 +1,59 @@
+# [안내] 이인제 정부 「임기를 함께하는 내각」 패널의 동작. dept_build.py가 만든다.
+scripted_gui = {
+	TFRKPHN_dept_gui = {
+		context_type = decision_category
+		window_name = TFRKPHN_dept_container
+		properties = {
+			TFRKPHN_dept_bar_pm = { frame = TFRKPHN_dept_f_pm }
+			TFRKPHN_dept_bar_fm = { frame = TFRKPHN_dept_f_fm }
+			TFRKPHN_dept_bar_em = { frame = TFRKPHN_dept_f_em }
+			TFRKPHN_dept_bar_im = { frame = TFRKPHN_dept_f_im }
+			TFRKPHN_dept_bar_nis = { frame = TFRKPHN_dept_f_nis }
+			TFRKPHN_dept_bar_dm = { frame = TFRKPHN_dept_f_dm }
+		}
+		triggers = {
+			TFRKPHN_dept_st_hi_pm_visible = { check_variable = { TFRKPHN_dept_t_pm > 69 } }
+			TFRKPHN_dept_fr_hi_pm_visible = { check_variable = { TFRKPHN_dept_t_pm > 69 } }
+			TFRKPHN_dept_st_lo_pm_visible = { check_variable = { TFRKPHN_dept_t_pm < 31 } }
+			TFRKPHN_dept_fr_lo_pm_visible = { check_variable = { TFRKPHN_dept_t_pm < 31 } }
+			TFRKPHN_dept_st_mid_pm_visible = { check_variable = { TFRKPHN_dept_t_pm > 30 } check_variable = { TFRKPHN_dept_t_pm < 70 } }
+			TFRKPHN_dept_bd_pm_visible = { has_country_flag = TFRKPHN_dept_pend_pm }
+			TFRKPHN_dept_st_hi_fm_visible = { check_variable = { TFRKPHN_dept_t_fm > 69 } }
+			TFRKPHN_dept_fr_hi_fm_visible = { check_variable = { TFRKPHN_dept_t_fm > 69 } }
+			TFRKPHN_dept_st_lo_fm_visible = { check_variable = { TFRKPHN_dept_t_fm < 31 } }
+			TFRKPHN_dept_fr_lo_fm_visible = { check_variable = { TFRKPHN_dept_t_fm < 31 } }
+			TFRKPHN_dept_st_mid_fm_visible = { check_variable = { TFRKPHN_dept_t_fm > 30 } check_variable = { TFRKPHN_dept_t_fm < 70 } }
+			TFRKPHN_dept_bd_fm_visible = { has_country_flag = TFRKPHN_dept_pend_fm }
+			TFRKPHN_dept_card_em_visible = { NOT = { has_country_flag = TFRKPHN_mof_renamed } }
+			TFRKPHN_dept_card_em2_visible = { has_country_flag = TFRKPHN_mof_renamed }
+			TFRKPHN_dept_dn_em_visible = { NOT = { has_country_flag = TFRKPHN_mof_renamed } }
+			TFRKPHN_dept_dn_em2_visible = { has_country_flag = TFRKPHN_mof_renamed }
+			TFRKPHN_dept_st_hi_em_visible = { check_variable = { TFRKPHN_dept_t_em > 69 } }
+			TFRKPHN_dept_fr_hi_em_visible = { check_variable = { TFRKPHN_dept_t_em > 69 } }
+			TFRKPHN_dept_st_lo_em_visible = { check_variable = { TFRKPHN_dept_t_em < 31 } }
+			TFRKPHN_dept_fr_lo_em_visible = { check_variable = { TFRKPHN_dept_t_em < 31 } }
+			TFRKPHN_dept_st_mid_em_visible = { check_variable = { TFRKPHN_dept_t_em > 30 } check_variable = { TFRKPHN_dept_t_em < 70 } }
+			TFRKPHN_dept_bd_em_visible = { has_country_flag = TFRKPHN_dept_pend_em }
+			TFRKPHN_dept_st_hi_im_visible = { check_variable = { TFRKPHN_dept_t_im > 69 } }
+			TFRKPHN_dept_fr_hi_im_visible = { check_variable = { TFRKPHN_dept_t_im > 69 } }
+			TFRKPHN_dept_st_lo_im_visible = { check_variable = { TFRKPHN_dept_t_im < 31 } }
+			TFRKPHN_dept_fr_lo_im_visible = { check_variable = { TFRKPHN_dept_t_im < 31 } }
+			TFRKPHN_dept_st_mid_im_visible = { check_variable = { TFRKPHN_dept_t_im > 30 } check_variable = { TFRKPHN_dept_t_im < 70 } }
+			TFRKPHN_dept_bd_im_visible = { has_country_flag = TFRKPHN_dept_pend_im }
+			TFRKPHN_dept_st_hi_nis_visible = { check_variable = { TFRKPHN_dept_t_nis > 69 } }
+			TFRKPHN_dept_fr_hi_nis_visible = { check_variable = { TFRKPHN_dept_t_nis > 69 } }
+			TFRKPHN_dept_st_lo_nis_visible = { check_variable = { TFRKPHN_dept_t_nis < 31 } }
+			TFRKPHN_dept_fr_lo_nis_visible = { check_variable = { TFRKPHN_dept_t_nis < 31 } }
+			TFRKPHN_dept_st_mid_nis_visible = { check_variable = { TFRKPHN_dept_t_nis > 30 } check_variable = { TFRKPHN_dept_t_nis < 70 } }
+			TFRKPHN_dept_bd_nis_visible = { has_country_flag = TFRKPHN_dept_pend_nis }
+			TFRKPHN_dept_st_hi_dm_visible = { check_variable = { TFRKPHN_dept_t_dm > 69 } }
+			TFRKPHN_dept_fr_hi_dm_visible = { check_variable = { TFRKPHN_dept_t_dm > 69 } }
+			TFRKPHN_dept_st_lo_dm_visible = { check_variable = { TFRKPHN_dept_t_dm < 31 } }
+			TFRKPHN_dept_fr_lo_dm_visible = { check_variable = { TFRKPHN_dept_t_dm < 31 } }
+			TFRKPHN_dept_st_mid_dm_visible = { check_variable = { TFRKPHN_dept_t_dm > 30 } check_variable = { TFRKPHN_dept_t_dm < 70 } }
+			TFRKPHN_dept_bd_dm_visible = { has_country_flag = TFRKPHN_dept_pend_dm }
+			TFRKPHN_dept_hint_visible = { has_country_flag = TFRKPHN_dept_running }
+			TFRKPHN_dept_wait_visible = { NOT = { has_country_flag = TFRKPHN_dept_running } }
+		}
+	}
+}

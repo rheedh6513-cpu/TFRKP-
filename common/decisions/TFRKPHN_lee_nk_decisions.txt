@@ -1,0 +1,31 @@
+# [안내] 이인제 정부 「북한 체제의 근본적 변화」: 보위부 단속 미션. 작전은 패널의 단추로 한다. nk_build.py가 만든다.
+TFRKPHN_lee_nk_category = {
+	# 30일마다 무한 반복 (탭이 열려 있는 동안 스스로 다시 켜진다)
+	TFRKPHN_nk_crackdown_mission = {
+		icon = generic_political_actions
+		allowed = { original_tag = KOR }
+		activation = { has_country_flag = TFRKPHN_nk_started NOT = { has_country_flag = TFRKPHN_kju_op_done } }
+		available = { always = no }
+		selectable_mission = no
+		is_good = no
+		days_mission_timeout = 30
+		timeout_effect = {
+			custom_effect_tooltip = TFRKPHN_nk_crackdown_tt
+			hidden_effect = { TFRKPHN_nk_crackdown = yes }
+		}
+	}
+	# 군 쪽: 30일마다 무한 반복
+	TFRKPHN_nk_purge_mission = {
+		icon = generic_political_actions
+		allowed = { original_tag = KOR }
+		activation = { has_country_flag = TFRKPHN_nk_started NOT = { has_country_flag = TFRKPHN_kju_op_done } }
+		available = { always = no }
+		selectable_mission = no
+		is_good = no
+		days_mission_timeout = 30
+		timeout_effect = {
+			custom_effect_tooltip = TFRKPHN_nk_purge_tt
+			hidden_effect = { TFRKPHN_nk_purge = yes }
+		}
+	}
+}

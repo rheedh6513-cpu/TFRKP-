@@ -1,0 +1,205 @@
+# [안내] 이인제 정부 「기타 장관 임명」 패널. 위쪽 직책 단추를 누르면 아래에 그 자리 후보가 나오고, 후보 그림을 누르면 임명된다.
+# [안내] 동작은 common/scripted_guis/TFRKPHN_scripted_guis.txt의 TFRKPHN_cab_gui. 이 파일은 cab_build.py가 만든다.
+guiTypes = {
+	containerWindowType = {
+		name = "TFRKPHN_cab_container"
+		size = { width = 100%% height = 530 }
+		containerWindowType = {
+			name = "TFRKPHN_cab_panel"
+			position = { x = 0 y = 0 }
+			size = { width = 500 height = 528 }
+			clipping = yes
+			background = { name = "background" spriteType = "GFX_tiled_decisions_bg_small" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_cab_tray" position = { x = 8 y = 200 } spriteType = "GFX_TFRKPHN_cab_tray" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_cab_post_nso" position = { x = 8 y = 8 } spriteType = "GFX_TFRKPHN_cab_post_nso" pdx_tooltip = "TFRKPHN_cab_post_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_cab_psel_nso" position = { x = 5 y = 5 } spriteType = "GFX_TFRKPHN_cab_sel" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_vac_nso" position = { x = 8 y = 76 } text = "TFRKPHN_cab_vacant" font = "hoi_16mbs" format = center maxWidth = 156 maxHeight = 20 alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_cab_btn_cho_tae_yong" position = { x = 19 y = 206 } spriteType = "GFX_idea_TFRKPHN_cho_tae_yong" pdx_tooltip = "TFRKPHN_cab_tt_cho_tae_yong" pdx_tooltip_delayed = "TFRKPHN_cab_ttd_cho_tae_yong" clicksound = click_default }
+			iconType = { name = "TFRKPHN_cab_done_cho_tae_yong" position = { x = 19 y = 206 } spriteType = "GFX_TFRKPHN_cab_done" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_cn_cho_tae_yong" position = { x = 12 y = 276 } text = "TFRKPHN_cab_name_cho_tae_yong" font = "hoi_16mbs" format = center maxWidth = 76 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_who_cho_tae_yong" position = { x = 8 y = 76 } text = "TFRKPHN_cab_who_cho_tae_yong" font = "hoi_16mbs" format = center maxWidth = 156 maxHeight = 20 alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_cab_btn_jang_ho_jin" position = { x = 115 y = 206 } spriteType = "GFX_idea_TFRKPHN_jang_ho_jin" pdx_tooltip = "TFRKPHN_cab_tt_jang_ho_jin" pdx_tooltip_delayed = "TFRKPHN_cab_ttd_jang_ho_jin" clicksound = click_default }
+			iconType = { name = "TFRKPHN_cab_done_jang_ho_jin" position = { x = 115 y = 206 } spriteType = "GFX_TFRKPHN_cab_done" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_cn_jang_ho_jin" position = { x = 108 y = 276 } text = "TFRKPHN_cab_name_jang_ho_jin" font = "hoi_16mbs" format = center maxWidth = 76 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_who_jang_ho_jin" position = { x = 8 y = 76 } text = "TFRKPHN_cab_who_jang_ho_jin" font = "hoi_16mbs" format = center maxWidth = 156 maxHeight = 20 alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_cab_btn_chun_young_woo" position = { x = 211 y = 206 } spriteType = "GFX_idea_TFRKPHN_chun_young_woo" pdx_tooltip = "TFRKPHN_cab_tt_chun_young_woo" pdx_tooltip_delayed = "TFRKPHN_cab_ttd_chun_young_woo" clicksound = click_default }
+			iconType = { name = "TFRKPHN_cab_done_chun_young_woo" position = { x = 211 y = 206 } spriteType = "GFX_TFRKPHN_cab_done" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_cn_chun_young_woo" position = { x = 204 y = 276 } text = "TFRKPHN_cab_name_chun_young_woo" font = "hoi_16mbs" format = center maxWidth = 76 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_who_chun_young_woo" position = { x = 8 y = 76 } text = "TFRKPHN_cab_who_chun_young_woo" font = "hoi_16mbs" format = center maxWidth = 156 maxHeight = 20 alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_cab_btn_lee_do_hoon" position = { x = 307 y = 206 } spriteType = "GFX_idea_TFRKPHN_lee_do_hoon" pdx_tooltip = "TFRKPHN_cab_tt_lee_do_hoon" pdx_tooltip_delayed = "TFRKPHN_cab_ttd_lee_do_hoon" clicksound = click_default }
+			iconType = { name = "TFRKPHN_cab_done_lee_do_hoon" position = { x = 307 y = 206 } spriteType = "GFX_TFRKPHN_cab_done" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_cn_lee_do_hoon" position = { x = 300 y = 276 } text = "TFRKPHN_cab_name_lee_do_hoon" font = "hoi_16mbs" format = center maxWidth = 76 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_who_lee_do_hoon" position = { x = 8 y = 76 } text = "TFRKPHN_cab_who_lee_do_hoon" font = "hoi_16mbs" format = center maxWidth = 156 maxHeight = 20 alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_cab_btn_park_cheol_hee" position = { x = 403 y = 206 } spriteType = "GFX_idea_TFRKPHN_park_cheol_hee" pdx_tooltip = "TFRKPHN_cab_tt_park_cheol_hee" pdx_tooltip_delayed = "TFRKPHN_cab_ttd_park_cheol_hee" clicksound = click_default }
+			iconType = { name = "TFRKPHN_cab_done_park_cheol_hee" position = { x = 403 y = 206 } spriteType = "GFX_TFRKPHN_cab_done" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_cn_park_cheol_hee" position = { x = 396 y = 276 } text = "TFRKPHN_cab_name_park_cheol_hee" font = "hoi_16mbs" format = center maxWidth = 76 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_who_park_cheol_hee" position = { x = 8 y = 76 } text = "TFRKPHN_cab_who_park_cheol_hee" font = "hoi_16mbs" format = center maxWidth = 156 maxHeight = 20 alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_cab_post_agri" position = { x = 170 y = 8 } spriteType = "GFX_TFRKPHN_cab_post_agri" pdx_tooltip = "TFRKPHN_cab_post_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_cab_psel_agri" position = { x = 167 y = 5 } spriteType = "GFX_TFRKPHN_cab_sel" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_vac_agri" position = { x = 170 y = 76 } text = "TFRKPHN_cab_vacant" font = "hoi_16mbs" format = center maxWidth = 156 maxHeight = 20 alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_cab_btn_kim_tae_heum" position = { x = 19 y = 206 } spriteType = "GFX_idea_TFRKPHN_kim_tae_heum" pdx_tooltip = "TFRKPHN_cab_tt_kim_tae_heum" pdx_tooltip_delayed = "TFRKPHN_cab_ttd_kim_tae_heum" clicksound = click_default }
+			iconType = { name = "TFRKPHN_cab_done_kim_tae_heum" position = { x = 19 y = 206 } spriteType = "GFX_TFRKPHN_cab_done" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_cn_kim_tae_heum" position = { x = 12 y = 276 } text = "TFRKPHN_cab_name_kim_tae_heum" font = "hoi_16mbs" format = center maxWidth = 76 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_who_kim_tae_heum" position = { x = 170 y = 76 } text = "TFRKPHN_cab_who_kim_tae_heum" font = "hoi_16mbs" format = center maxWidth = 156 maxHeight = 20 alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_cab_btn_chung_hwang_keun" position = { x = 115 y = 206 } spriteType = "GFX_idea_TFRKPHN_chung_hwang_keun" pdx_tooltip = "TFRKPHN_cab_tt_chung_hwang_keun" pdx_tooltip_delayed = "TFRKPHN_cab_ttd_chung_hwang_keun" clicksound = click_default }
+			iconType = { name = "TFRKPHN_cab_done_chung_hwang_keun" position = { x = 115 y = 206 } spriteType = "GFX_TFRKPHN_cab_done" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_cn_chung_hwang_keun" position = { x = 108 y = 276 } text = "TFRKPHN_cab_name_chung_hwang_keun" font = "hoi_16mbs" format = center maxWidth = 76 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_who_chung_hwang_keun" position = { x = 170 y = 76 } text = "TFRKPHN_cab_who_chung_hwang_keun" font = "hoi_16mbs" format = center maxWidth = 156 maxHeight = 20 alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_cab_btn_song_mi_ryung" position = { x = 211 y = 206 } spriteType = "GFX_idea_TFRKPHN_song_mi_ryung" pdx_tooltip = "TFRKPHN_cab_tt_song_mi_ryung" pdx_tooltip_delayed = "TFRKPHN_cab_ttd_song_mi_ryung" clicksound = click_default }
+			iconType = { name = "TFRKPHN_cab_done_song_mi_ryung" position = { x = 211 y = 206 } spriteType = "GFX_TFRKPHN_cab_done" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_cn_song_mi_ryung" position = { x = 204 y = 276 } text = "TFRKPHN_cab_name_song_mi_ryung" font = "hoi_16mbs" format = center maxWidth = 76 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_who_song_mi_ryung" position = { x = 170 y = 76 } text = "TFRKPHN_cab_who_song_mi_ryung" font = "hoi_16mbs" format = center maxWidth = 156 maxHeight = 20 alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_cab_btn_lee_dong_phil" position = { x = 307 y = 206 } spriteType = "GFX_idea_TFRKPHN_lee_dong_phil" pdx_tooltip = "TFRKPHN_cab_tt_lee_dong_phil" pdx_tooltip_delayed = "TFRKPHN_cab_ttd_lee_dong_phil" clicksound = click_default }
+			iconType = { name = "TFRKPHN_cab_done_lee_dong_phil" position = { x = 307 y = 206 } spriteType = "GFX_TFRKPHN_cab_done" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_cn_lee_dong_phil" position = { x = 300 y = 276 } text = "TFRKPHN_cab_name_lee_dong_phil" font = "hoi_16mbs" format = center maxWidth = 76 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_who_lee_dong_phil" position = { x = 170 y = 76 } text = "TFRKPHN_cab_who_lee_dong_phil" font = "hoi_16mbs" format = center maxWidth = 156 maxHeight = 20 alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_cab_btn_lee_yang_soo" position = { x = 403 y = 206 } spriteType = "GFX_idea_TFRKPHN_lee_yang_soo" pdx_tooltip = "TFRKPHN_cab_tt_lee_yang_soo" pdx_tooltip_delayed = "TFRKPHN_cab_ttd_lee_yang_soo" clicksound = click_default }
+			iconType = { name = "TFRKPHN_cab_done_lee_yang_soo" position = { x = 403 y = 206 } spriteType = "GFX_TFRKPHN_cab_done" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_cn_lee_yang_soo" position = { x = 396 y = 276 } text = "TFRKPHN_cab_name_lee_yang_soo" font = "hoi_16mbs" format = center maxWidth = 76 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_who_lee_yang_soo" position = { x = 170 y = 76 } text = "TFRKPHN_cab_who_lee_yang_soo" font = "hoi_16mbs" format = center maxWidth = 156 maxHeight = 20 alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_cab_post_labor" position = { x = 332 y = 8 } spriteType = "GFX_TFRKPHN_cab_post_labor" pdx_tooltip = "TFRKPHN_cab_post_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_cab_psel_labor" position = { x = 329 y = 5 } spriteType = "GFX_TFRKPHN_cab_sel" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_vac_labor" position = { x = 332 y = 76 } text = "TFRKPHN_cab_vacant" font = "hoi_16mbs" format = center maxWidth = 156 maxHeight = 20 alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_cab_btn_lee_jung_sik" position = { x = 19 y = 206 } spriteType = "GFX_idea_TFRKPHN_lee_jung_sik" pdx_tooltip = "TFRKPHN_cab_tt_lee_jung_sik" pdx_tooltip_delayed = "TFRKPHN_cab_ttd_lee_jung_sik" clicksound = click_default }
+			iconType = { name = "TFRKPHN_cab_done_lee_jung_sik" position = { x = 19 y = 206 } spriteType = "GFX_TFRKPHN_cab_done" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_cn_lee_jung_sik" position = { x = 12 y = 276 } text = "TFRKPHN_cab_name_lee_jung_sik" font = "hoi_16mbs" format = center maxWidth = 76 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_who_lee_jung_sik" position = { x = 332 y = 76 } text = "TFRKPHN_cab_who_lee_jung_sik" font = "hoi_16mbs" format = center maxWidth = 156 maxHeight = 20 alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_cab_btn_lim_i_ja" position = { x = 115 y = 206 } spriteType = "GFX_idea_TFRKPHN_lim_i_ja" pdx_tooltip = "TFRKPHN_cab_tt_lim_i_ja" pdx_tooltip_delayed = "TFRKPHN_cab_ttd_lim_i_ja" clicksound = click_default }
+			iconType = { name = "TFRKPHN_cab_done_lim_i_ja" position = { x = 115 y = 206 } spriteType = "GFX_TFRKPHN_cab_done" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_cn_lim_i_ja" position = { x = 108 y = 276 } text = "TFRKPHN_cab_name_lim_i_ja" font = "hoi_16mbs" format = center maxWidth = 76 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_who_lim_i_ja" position = { x = 332 y = 76 } text = "TFRKPHN_cab_who_lim_i_ja" font = "hoi_16mbs" format = center maxWidth = 156 maxHeight = 20 alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_cab_btn_kwon_ki_seop" position = { x = 211 y = 206 } spriteType = "GFX_idea_TFRKPHN_kwon_ki_seop" pdx_tooltip = "TFRKPHN_cab_tt_kwon_ki_seop" pdx_tooltip_delayed = "TFRKPHN_cab_ttd_kwon_ki_seop" clicksound = click_default }
+			iconType = { name = "TFRKPHN_cab_done_kwon_ki_seop" position = { x = 211 y = 206 } spriteType = "GFX_TFRKPHN_cab_done" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_cn_kwon_ki_seop" position = { x = 204 y = 276 } text = "TFRKPHN_cab_name_kwon_ki_seop" font = "hoi_16mbs" format = center maxWidth = 76 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_who_kwon_ki_seop" position = { x = 332 y = 76 } text = "TFRKPHN_cab_who_kwon_ki_seop" font = "hoi_16mbs" format = center maxWidth = 156 maxHeight = 20 alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_cab_btn_lee_ki_kweon" position = { x = 307 y = 206 } spriteType = "GFX_idea_TFRKPHN_lee_ki_kweon" pdx_tooltip = "TFRKPHN_cab_tt_lee_ki_kweon" pdx_tooltip_delayed = "TFRKPHN_cab_ttd_lee_ki_kweon" clicksound = click_default }
+			iconType = { name = "TFRKPHN_cab_done_lee_ki_kweon" position = { x = 307 y = 206 } spriteType = "GFX_TFRKPHN_cab_done" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_cn_lee_ki_kweon" position = { x = 300 y = 276 } text = "TFRKPHN_cab_name_lee_ki_kweon" font = "hoi_16mbs" format = center maxWidth = 76 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_who_lee_ki_kweon" position = { x = 332 y = 76 } text = "TFRKPHN_cab_who_lee_ki_kweon" font = "hoi_16mbs" format = center maxWidth = 156 maxHeight = 20 alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_cab_btn_bang_ha_nam" position = { x = 403 y = 206 } spriteType = "GFX_idea_TFRKPHN_bang_ha_nam" pdx_tooltip = "TFRKPHN_cab_tt_bang_ha_nam" pdx_tooltip_delayed = "TFRKPHN_cab_ttd_bang_ha_nam" clicksound = click_default }
+			iconType = { name = "TFRKPHN_cab_done_bang_ha_nam" position = { x = 403 y = 206 } spriteType = "GFX_TFRKPHN_cab_done" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_cn_bang_ha_nam" position = { x = 396 y = 276 } text = "TFRKPHN_cab_name_bang_ha_nam" font = "hoi_16mbs" format = center maxWidth = 76 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_who_bang_ha_nam" position = { x = 332 y = 76 } text = "TFRKPHN_cab_who_bang_ha_nam" font = "hoi_16mbs" format = center maxWidth = 156 maxHeight = 20 alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_cab_post_unif" position = { x = 8 y = 100 } spriteType = "GFX_TFRKPHN_cab_post_unif" pdx_tooltip = "TFRKPHN_cab_post_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_cab_psel_unif" position = { x = 5 y = 97 } spriteType = "GFX_TFRKPHN_cab_sel" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_vac_unif" position = { x = 8 y = 168 } text = "TFRKPHN_cab_vacant" font = "hoi_16mbs" format = center maxWidth = 156 maxHeight = 20 alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_cab_btn_kim_yung_ho" position = { x = 19 y = 206 } spriteType = "GFX_idea_TFRKPHN_kim_yung_ho" pdx_tooltip = "TFRKPHN_cab_tt_kim_yung_ho" pdx_tooltip_delayed = "TFRKPHN_cab_ttd_kim_yung_ho" clicksound = click_default }
+			iconType = { name = "TFRKPHN_cab_done_kim_yung_ho" position = { x = 19 y = 206 } spriteType = "GFX_TFRKPHN_cab_done" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_cn_kim_yung_ho" position = { x = 12 y = 276 } text = "TFRKPHN_cab_name_kim_yung_ho" font = "hoi_16mbs" format = center maxWidth = 76 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_who_kim_yung_ho" position = { x = 8 y = 168 } text = "TFRKPHN_cab_who_kim_yung_ho" font = "hoi_16mbs" format = center maxWidth = 156 maxHeight = 20 alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_cab_btn_hong_yong_pyo" position = { x = 115 y = 206 } spriteType = "GFX_idea_TFRKPHN_hong_yong_pyo" pdx_tooltip = "TFRKPHN_cab_tt_hong_yong_pyo" pdx_tooltip_delayed = "TFRKPHN_cab_ttd_hong_yong_pyo" clicksound = click_default }
+			iconType = { name = "TFRKPHN_cab_done_hong_yong_pyo" position = { x = 115 y = 206 } spriteType = "GFX_TFRKPHN_cab_done" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_cn_hong_yong_pyo" position = { x = 108 y = 276 } text = "TFRKPHN_cab_name_hong_yong_pyo" font = "hoi_16mbs" format = center maxWidth = 76 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_who_hong_yong_pyo" position = { x = 8 y = 168 } text = "TFRKPHN_cab_who_hong_yong_pyo" font = "hoi_16mbs" format = center maxWidth = 156 maxHeight = 20 alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_cab_btn_ryoo_kihl_jae" position = { x = 211 y = 206 } spriteType = "GFX_idea_TFRKPHN_ryoo_kihl_jae" pdx_tooltip = "TFRKPHN_cab_tt_ryoo_kihl_jae" pdx_tooltip_delayed = "TFRKPHN_cab_ttd_ryoo_kihl_jae" clicksound = click_default }
+			iconType = { name = "TFRKPHN_cab_done_ryoo_kihl_jae" position = { x = 211 y = 206 } spriteType = "GFX_TFRKPHN_cab_done" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_cn_ryoo_kihl_jae" position = { x = 204 y = 276 } text = "TFRKPHN_cab_name_ryoo_kihl_jae" font = "hoi_16mbs" format = center maxWidth = 76 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_who_ryoo_kihl_jae" position = { x = 8 y = 168 } text = "TFRKPHN_cab_who_ryoo_kihl_jae" font = "hoi_16mbs" format = center maxWidth = 156 maxHeight = 20 alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_cab_btn_kim_gi_woong" position = { x = 307 y = 206 } spriteType = "GFX_idea_TFRKPHN_kim_gi_woong" pdx_tooltip = "TFRKPHN_cab_tt_kim_gi_woong" pdx_tooltip_delayed = "TFRKPHN_cab_ttd_kim_gi_woong" clicksound = click_default }
+			iconType = { name = "TFRKPHN_cab_done_kim_gi_woong" position = { x = 307 y = 206 } spriteType = "GFX_TFRKPHN_cab_done" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_cn_kim_gi_woong" position = { x = 300 y = 276 } text = "TFRKPHN_cab_name_kim_gi_woong" font = "hoi_16mbs" format = center maxWidth = 76 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_who_kim_gi_woong" position = { x = 8 y = 168 } text = "TFRKPHN_cab_who_kim_gi_woong" font = "hoi_16mbs" format = center maxWidth = 156 maxHeight = 20 alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_cab_btn_jo_gun_shik" position = { x = 403 y = 206 } spriteType = "GFX_idea_TFRKPHN_jo_gun_shik" pdx_tooltip = "TFRKPHN_cab_tt_jo_gun_shik" pdx_tooltip_delayed = "TFRKPHN_cab_ttd_jo_gun_shik" clicksound = click_default }
+			iconType = { name = "TFRKPHN_cab_done_jo_gun_shik" position = { x = 403 y = 206 } spriteType = "GFX_TFRKPHN_cab_done" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_cn_jo_gun_shik" position = { x = 396 y = 276 } text = "TFRKPHN_cab_name_jo_gun_shik" font = "hoi_16mbs" format = center maxWidth = 76 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_who_jo_gun_shik" position = { x = 8 y = 168 } text = "TFRKPHN_cab_who_jo_gun_shik" font = "hoi_16mbs" format = center maxWidth = 156 maxHeight = 20 alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_cab_post_justice" position = { x = 170 y = 100 } spriteType = "GFX_TFRKPHN_cab_post_justice" pdx_tooltip = "TFRKPHN_cab_post_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_cab_psel_justice" position = { x = 167 y = 97 } spriteType = "GFX_TFRKPHN_cab_sel" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_vac_justice" position = { x = 170 y = 168 } text = "TFRKPHN_cab_vacant" font = "hoi_16mbs" format = center maxWidth = 156 maxHeight = 20 alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_cab_btn_shim_woo_jung" position = { x = 19 y = 206 } spriteType = "GFX_idea_TFRKPHN_shim_woo_jung" pdx_tooltip = "TFRKPHN_cab_tt_shim_woo_jung" pdx_tooltip_delayed = "TFRKPHN_cab_ttd_shim_woo_jung" clicksound = click_default }
+			iconType = { name = "TFRKPHN_cab_done_shim_woo_jung" position = { x = 19 y = 206 } spriteType = "GFX_TFRKPHN_cab_done" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_cn_shim_woo_jung" position = { x = 12 y = 276 } text = "TFRKPHN_cab_name_shim_woo_jung" font = "hoi_16mbs" format = center maxWidth = 76 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_who_shim_woo_jung" position = { x = 170 y = 168 } text = "TFRKPHN_cab_who_shim_woo_jung" font = "hoi_16mbs" format = center maxWidth = 156 maxHeight = 20 alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_cab_btn_lee_noh_kong" position = { x = 99 y = 206 } spriteType = "GFX_idea_TFRKPHN_lee_noh_kong" pdx_tooltip = "TFRKPHN_cab_tt_lee_noh_kong" pdx_tooltip_delayed = "TFRKPHN_cab_ttd_lee_noh_kong" clicksound = click_default }
+			iconType = { name = "TFRKPHN_cab_done_lee_noh_kong" position = { x = 99 y = 206 } spriteType = "GFX_TFRKPHN_cab_done" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_cn_lee_noh_kong" position = { x = 92 y = 276 } text = "TFRKPHN_cab_name_lee_noh_kong" font = "hoi_16mbs" format = center maxWidth = 76 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_who_lee_noh_kong" position = { x = 170 y = 168 } text = "TFRKPHN_cab_who_lee_noh_kong" font = "hoi_16mbs" format = center maxWidth = 156 maxHeight = 20 alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_cab_btn_kim_do_eup" position = { x = 179 y = 206 } spriteType = "GFX_idea_TFRKPHN_kim_do_eup" pdx_tooltip = "TFRKPHN_cab_tt_kim_do_eup" pdx_tooltip_delayed = "TFRKPHN_cab_ttd_kim_do_eup" clicksound = click_default }
+			iconType = { name = "TFRKPHN_cab_done_kim_do_eup" position = { x = 179 y = 206 } spriteType = "GFX_TFRKPHN_cab_done" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_cn_kim_do_eup" position = { x = 172 y = 276 } text = "TFRKPHN_cab_name_kim_do_eup" font = "hoi_16mbs" format = center maxWidth = 76 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_who_kim_do_eup" position = { x = 170 y = 168 } text = "TFRKPHN_cab_who_kim_do_eup" font = "hoi_16mbs" format = center maxWidth = 156 maxHeight = 20 alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_cab_btn_jeong_jeom_sig" position = { x = 259 y = 206 } spriteType = "GFX_idea_TFRKPHN_jeong_jeom_sig" pdx_tooltip = "TFRKPHN_cab_tt_jeong_jeom_sig" pdx_tooltip_delayed = "TFRKPHN_cab_ttd_jeong_jeom_sig" clicksound = click_default }
+			iconType = { name = "TFRKPHN_cab_done_jeong_jeom_sig" position = { x = 259 y = 206 } spriteType = "GFX_TFRKPHN_cab_done" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_cn_jeong_jeom_sig" position = { x = 252 y = 276 } text = "TFRKPHN_cab_name_jeong_jeom_sig" font = "hoi_16mbs" format = center maxWidth = 76 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_who_jeong_jeom_sig" position = { x = 170 y = 168 } text = "TFRKPHN_cab_who_jeong_jeom_sig" font = "hoi_16mbs" format = center maxWidth = 156 maxHeight = 20 alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_cab_btn_yoo_sang_bum" position = { x = 339 y = 206 } spriteType = "GFX_idea_TFRKPHN_yoo_sang_bum" pdx_tooltip = "TFRKPHN_cab_tt_yoo_sang_bum" pdx_tooltip_delayed = "TFRKPHN_cab_ttd_yoo_sang_bum" clicksound = click_default }
+			iconType = { name = "TFRKPHN_cab_done_yoo_sang_bum" position = { x = 339 y = 206 } spriteType = "GFX_TFRKPHN_cab_done" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_cn_yoo_sang_bum" position = { x = 332 y = 276 } text = "TFRKPHN_cab_name_yoo_sang_bum" font = "hoi_16mbs" format = center maxWidth = 76 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_who_yoo_sang_bum" position = { x = 170 y = 168 } text = "TFRKPHN_cab_who_yoo_sang_bum" font = "hoi_16mbs" format = center maxWidth = 156 maxHeight = 20 alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_cab_btn_yoon_suk_yeol" position = { x = 419 y = 206 } spriteType = "GFX_idea_TFRKPHN_yoon_suk_yeol" pdx_tooltip = "TFRKPHN_cab_tt_yoon_suk_yeol" pdx_tooltip_delayed = "TFRKPHN_cab_ttd_yoon_suk_yeol" clicksound = click_default }
+			iconType = { name = "TFRKPHN_cab_done_yoon_suk_yeol" position = { x = 419 y = 206 } spriteType = "GFX_TFRKPHN_cab_done" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_cn_yoon_suk_yeol" position = { x = 412 y = 276 } text = "TFRKPHN_cab_name_yoon_suk_yeol" font = "hoi_16mbs" format = center maxWidth = 76 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_who_yoon_suk_yeol" position = { x = 170 y = 168 } text = "TFRKPHN_cab_who_yoon_suk_yeol" font = "hoi_16mbs" format = center maxWidth = 156 maxHeight = 20 alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_cab_post_trade" position = { x = 332 y = 100 } spriteType = "GFX_TFRKPHN_cab_post_trade" pdx_tooltip = "TFRKPHN_cab_post_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_cab_psel_trade" position = { x = 329 y = 97 } spriteType = "GFX_TFRKPHN_cab_sel" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_vac_trade" position = { x = 332 y = 168 } text = "TFRKPHN_cab_vacant" font = "hoi_16mbs" format = center maxWidth = 156 maxHeight = 20 alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_cab_btn_lee_chang_yang" position = { x = 19 y = 206 } spriteType = "GFX_idea_TFRKPHN_lee_chang_yang" pdx_tooltip = "TFRKPHN_cab_tt_lee_chang_yang" pdx_tooltip_delayed = "TFRKPHN_cab_ttd_lee_chang_yang" clicksound = click_default }
+			iconType = { name = "TFRKPHN_cab_done_lee_chang_yang" position = { x = 19 y = 206 } spriteType = "GFX_TFRKPHN_cab_done" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_cn_lee_chang_yang" position = { x = 12 y = 276 } text = "TFRKPHN_cab_name_lee_chang_yang" font = "hoi_16mbs" format = center maxWidth = 76 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_who_lee_chang_yang" position = { x = 332 y = 168 } text = "TFRKPHN_cab_who_lee_chang_yang" font = "hoi_16mbs" format = center maxWidth = 156 maxHeight = 20 alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_cab_btn_bang_moon_kyu" position = { x = 115 y = 206 } spriteType = "GFX_idea_TFRKPHN_bang_moon_kyu" pdx_tooltip = "TFRKPHN_cab_tt_bang_moon_kyu" pdx_tooltip_delayed = "TFRKPHN_cab_ttd_bang_moon_kyu" clicksound = click_default }
+			iconType = { name = "TFRKPHN_cab_done_bang_moon_kyu" position = { x = 115 y = 206 } spriteType = "GFX_TFRKPHN_cab_done" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_cn_bang_moon_kyu" position = { x = 108 y = 276 } text = "TFRKPHN_cab_name_bang_moon_kyu" font = "hoi_16mbs" format = center maxWidth = 76 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_who_bang_moon_kyu" position = { x = 332 y = 168 } text = "TFRKPHN_cab_who_bang_moon_kyu" font = "hoi_16mbs" format = center maxWidth = 156 maxHeight = 20 alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_cab_btn_ahn_duk_geun" position = { x = 211 y = 206 } spriteType = "GFX_idea_TFRKPHN_ahn_duk_geun" pdx_tooltip = "TFRKPHN_cab_tt_ahn_duk_geun" pdx_tooltip_delayed = "TFRKPHN_cab_ttd_ahn_duk_geun" clicksound = click_default }
+			iconType = { name = "TFRKPHN_cab_done_ahn_duk_geun" position = { x = 211 y = 206 } spriteType = "GFX_TFRKPHN_cab_done" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_cn_ahn_duk_geun" position = { x = 204 y = 276 } text = "TFRKPHN_cab_name_ahn_duk_geun" font = "hoi_16mbs" format = center maxWidth = 76 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_who_ahn_duk_geun" position = { x = 332 y = 168 } text = "TFRKPHN_cab_who_ahn_duk_geun" font = "hoi_16mbs" format = center maxWidth = 156 maxHeight = 20 alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_cab_btn_yoon_sang_jick" position = { x = 307 y = 206 } spriteType = "GFX_idea_TFRKPHN_yoon_sang_jick" pdx_tooltip = "TFRKPHN_cab_tt_yoon_sang_jick" pdx_tooltip_delayed = "TFRKPHN_cab_ttd_yoon_sang_jick" clicksound = click_default }
+			iconType = { name = "TFRKPHN_cab_done_yoon_sang_jick" position = { x = 307 y = 206 } spriteType = "GFX_TFRKPHN_cab_done" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_cn_yoon_sang_jick" position = { x = 300 y = 276 } text = "TFRKPHN_cab_name_yoon_sang_jick" font = "hoi_16mbs" format = center maxWidth = 76 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_who_yoon_sang_jick" position = { x = 332 y = 168 } text = "TFRKPHN_cab_who_yoon_sang_jick" font = "hoi_16mbs" format = center maxWidth = 156 maxHeight = 20 alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_cab_btn_joo_hyung_hwan" position = { x = 403 y = 206 } spriteType = "GFX_idea_TFRKPHN_joo_hyung_hwan" pdx_tooltip = "TFRKPHN_cab_tt_joo_hyung_hwan" pdx_tooltip_delayed = "TFRKPHN_cab_ttd_joo_hyung_hwan" clicksound = click_default }
+			iconType = { name = "TFRKPHN_cab_done_joo_hyung_hwan" position = { x = 403 y = 206 } spriteType = "GFX_TFRKPHN_cab_done" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_cn_joo_hyung_hwan" position = { x = 396 y = 276 } text = "TFRKPHN_cab_name_joo_hyung_hwan" font = "hoi_16mbs" format = center maxWidth = 76 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_who_joo_hyung_hwan" position = { x = 332 y = 168 } text = "TFRKPHN_cab_who_joo_hyung_hwan" font = "hoi_16mbs" format = center maxWidth = 156 maxHeight = 20 alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_cab_line" position = { x = 8 y = 191 } spriteType = "GFX_TFRKPHN_cab_line" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_hint" position = { x = 12 y = 230 } text = "TFRKPHN_cab_hint" font = "hoi_16mbs" format = left maxWidth = 476 maxHeight = 30 alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_cab_card" position = { x = 8 y = 304 } spriteType = "GFX_TFRKPHN_cab_card" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_st_title" position = { x = 20 y = 316 } text = "TFRKPHN_cab_st_title" font = "hoi_16mbs" format = left maxWidth = 300 maxHeight = 24 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_st_s" position = { x = 24 y = 350 } text = "TFRKPHN_cab_st_s" font = "hoi_16mbs" format = left maxWidth = 150 maxHeight = 24 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_st_p" position = { x = 180 y = 350 } text = "TFRKPHN_cab_st_p" font = "hoi_16mbs" format = left maxWidth = 150 maxHeight = 24 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_st_w" position = { x = 336 y = 350 } text = "TFRKPHN_cab_st_w" font = "hoi_16mbs" format = left maxWidth = 150 maxHeight = 24 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_st_i" position = { x = 24 y = 376 } text = "TFRKPHN_cab_st_i" font = "hoi_16mbs" format = left maxWidth = 150 maxHeight = 24 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_st_e" position = { x = 180 y = 376 } text = "TFRKPHN_cab_st_e" font = "hoi_16mbs" format = left maxWidth = 150 maxHeight = 24 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_st_c" position = { x = 336 y = 376 } text = "TFRKPHN_cab_st_c" font = "hoi_16mbs" format = left maxWidth = 150 maxHeight = 24 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_st_b" position = { x = 24 y = 402 } text = "TFRKPHN_cab_st_b" font = "hoi_16mbs" format = left maxWidth = 150 maxHeight = 24 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_st_r" position = { x = 180 y = 402 } text = "TFRKPHN_cab_st_r" font = "hoi_16mbs" format = left maxWidth = 150 maxHeight = 24 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_st_a" position = { x = 336 y = 402 } text = "TFRKPHN_cab_st_a" font = "hoi_16mbs" format = left maxWidth = 150 maxHeight = 24 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_st_note" position = { x = 20 y = 442 } text = "TFRKPHN_cab_st_note" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 60 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_cf_cho_tae_yong" position = { x = 20 y = 318 } text = "TFRKPHN_cab_cf_cho_tae_yong" font = "hoi_16mbs" format = center maxWidth = 460 maxHeight = 152 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_cf_jang_ho_jin" position = { x = 20 y = 318 } text = "TFRKPHN_cab_cf_jang_ho_jin" font = "hoi_16mbs" format = center maxWidth = 460 maxHeight = 152 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_cf_chun_young_woo" position = { x = 20 y = 318 } text = "TFRKPHN_cab_cf_chun_young_woo" font = "hoi_16mbs" format = center maxWidth = 460 maxHeight = 152 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_cf_lee_do_hoon" position = { x = 20 y = 318 } text = "TFRKPHN_cab_cf_lee_do_hoon" font = "hoi_16mbs" format = center maxWidth = 460 maxHeight = 152 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_cf_park_cheol_hee" position = { x = 20 y = 318 } text = "TFRKPHN_cab_cf_park_cheol_hee" font = "hoi_16mbs" format = center maxWidth = 460 maxHeight = 152 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_cf_kim_tae_heum" position = { x = 20 y = 318 } text = "TFRKPHN_cab_cf_kim_tae_heum" font = "hoi_16mbs" format = center maxWidth = 460 maxHeight = 152 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_cf_chung_hwang_keun" position = { x = 20 y = 318 } text = "TFRKPHN_cab_cf_chung_hwang_keun" font = "hoi_16mbs" format = center maxWidth = 460 maxHeight = 152 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_cf_song_mi_ryung" position = { x = 20 y = 318 } text = "TFRKPHN_cab_cf_song_mi_ryung" font = "hoi_16mbs" format = center maxWidth = 460 maxHeight = 152 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_cf_lee_dong_phil" position = { x = 20 y = 318 } text = "TFRKPHN_cab_cf_lee_dong_phil" font = "hoi_16mbs" format = center maxWidth = 460 maxHeight = 152 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_cf_lee_yang_soo" position = { x = 20 y = 318 } text = "TFRKPHN_cab_cf_lee_yang_soo" font = "hoi_16mbs" format = center maxWidth = 460 maxHeight = 152 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_cf_lee_jung_sik" position = { x = 20 y = 318 } text = "TFRKPHN_cab_cf_lee_jung_sik" font = "hoi_16mbs" format = center maxWidth = 460 maxHeight = 152 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_cf_lim_i_ja" position = { x = 20 y = 318 } text = "TFRKPHN_cab_cf_lim_i_ja" font = "hoi_16mbs" format = center maxWidth = 460 maxHeight = 152 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_cf_kwon_ki_seop" position = { x = 20 y = 318 } text = "TFRKPHN_cab_cf_kwon_ki_seop" font = "hoi_16mbs" format = center maxWidth = 460 maxHeight = 152 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_cf_lee_ki_kweon" position = { x = 20 y = 318 } text = "TFRKPHN_cab_cf_lee_ki_kweon" font = "hoi_16mbs" format = center maxWidth = 460 maxHeight = 152 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_cf_bang_ha_nam" position = { x = 20 y = 318 } text = "TFRKPHN_cab_cf_bang_ha_nam" font = "hoi_16mbs" format = center maxWidth = 460 maxHeight = 152 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_cf_kim_yung_ho" position = { x = 20 y = 318 } text = "TFRKPHN_cab_cf_kim_yung_ho" font = "hoi_16mbs" format = center maxWidth = 460 maxHeight = 152 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_cf_hong_yong_pyo" position = { x = 20 y = 318 } text = "TFRKPHN_cab_cf_hong_yong_pyo" font = "hoi_16mbs" format = center maxWidth = 460 maxHeight = 152 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_cf_ryoo_kihl_jae" position = { x = 20 y = 318 } text = "TFRKPHN_cab_cf_ryoo_kihl_jae" font = "hoi_16mbs" format = center maxWidth = 460 maxHeight = 152 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_cf_kim_gi_woong" position = { x = 20 y = 318 } text = "TFRKPHN_cab_cf_kim_gi_woong" font = "hoi_16mbs" format = center maxWidth = 460 maxHeight = 152 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_cf_jo_gun_shik" position = { x = 20 y = 318 } text = "TFRKPHN_cab_cf_jo_gun_shik" font = "hoi_16mbs" format = center maxWidth = 460 maxHeight = 152 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_cf_shim_woo_jung" position = { x = 20 y = 318 } text = "TFRKPHN_cab_cf_shim_woo_jung" font = "hoi_16mbs" format = center maxWidth = 460 maxHeight = 152 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_cf_lee_noh_kong" position = { x = 20 y = 318 } text = "TFRKPHN_cab_cf_lee_noh_kong" font = "hoi_16mbs" format = center maxWidth = 460 maxHeight = 152 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_cf_kim_do_eup" position = { x = 20 y = 318 } text = "TFRKPHN_cab_cf_kim_do_eup" font = "hoi_16mbs" format = center maxWidth = 460 maxHeight = 152 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_cf_jeong_jeom_sig" position = { x = 20 y = 318 } text = "TFRKPHN_cab_cf_jeong_jeom_sig" font = "hoi_16mbs" format = center maxWidth = 460 maxHeight = 152 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_cf_yoo_sang_bum" position = { x = 20 y = 318 } text = "TFRKPHN_cab_cf_yoo_sang_bum" font = "hoi_16mbs" format = center maxWidth = 460 maxHeight = 152 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_cf_yoon_suk_yeol" position = { x = 20 y = 318 } text = "TFRKPHN_cab_cf_yoon_suk_yeol" font = "hoi_16mbs" format = center maxWidth = 460 maxHeight = 152 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_cf_lee_chang_yang" position = { x = 20 y = 318 } text = "TFRKPHN_cab_cf_lee_chang_yang" font = "hoi_16mbs" format = center maxWidth = 460 maxHeight = 152 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_cf_bang_moon_kyu" position = { x = 20 y = 318 } text = "TFRKPHN_cab_cf_bang_moon_kyu" font = "hoi_16mbs" format = center maxWidth = 460 maxHeight = 152 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_cf_ahn_duk_geun" position = { x = 20 y = 318 } text = "TFRKPHN_cab_cf_ahn_duk_geun" font = "hoi_16mbs" format = center maxWidth = 460 maxHeight = 152 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_cf_yoon_sang_jick" position = { x = 20 y = 318 } text = "TFRKPHN_cab_cf_yoon_sang_jick" font = "hoi_16mbs" format = center maxWidth = 460 maxHeight = 152 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_cab_cf_joo_hyung_hwan" position = { x = 20 y = 318 } text = "TFRKPHN_cab_cf_joo_hyung_hwan" font = "hoi_16mbs" format = center maxWidth = 460 maxHeight = 152 alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_cab_yes" position = { x = 96 y = 474 } quadTextureSprite = "GFX_button_148x34" buttonText = "TFRKPHN_cab_yes" buttonFont = "hoi_16mbs" pdx_tooltip = "TFRKPHN_cab_yes_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_cab_no" position = { x = 256 y = 474 } quadTextureSprite = "GFX_button_148x34" buttonText = "TFRKPHN_cab_no" buttonFont = "hoi_16mbs" clicksound = click_default }
+		}
+	}
+}

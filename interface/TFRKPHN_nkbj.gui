@@ -1,0 +1,483 @@
+# [안내] 이인제 정부 「북진통일 고토회복」 탭. 위의 단추로 북한 패널과 남한 패널을 바꾼다. nkbj_merge.py가 nk_build.py와 sk_build.py의 결과를 합쳐 만든다.
+# [안내] 동작은 common/scripted_guis/TFRKPHN_nkbj_scripted_guis.txt.
+guiTypes = {
+	containerWindowType = {
+		name = "TFRKPHN_nkbj_container"
+		size = { width = 100%% height = 626 }
+		containerWindowType = {
+			name = "TFRKPHN_nkbj_panel"
+			position = { x = 0 y = 0 }
+			size = { width = 500 height = 624 }
+			clipping = yes
+			background = { name = "background" spriteType = "GFX_tiled_decisions_bg_small" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_nkbj_ov_bg" position = { x = 4 y = 38 } spriteType = "GFX_TFRKPHN_nkbj_ov_bg" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_nkbj_ov_n" position = { x = 8 y = 42 } spriteType = "GFX_TFRKPHN_nkbj_ov_n" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_nkbj_ov_s" position = { x = 8 y = 42 } spriteType = "GFX_TFRKPHN_nkbj_ov_s" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_nkbj_ov_plan2" position = { x = 8 y = 42 } spriteType = "GFX_TFRKPHN_nkbj_ov_plan2" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_nkbj_ov_plan3" position = { x = 8 y = 42 } spriteType = "GFX_TFRKPHN_nkbj_ov_plan3" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_nkbj_ov_plan4" position = { x = 8 y = 42 } spriteType = "GFX_TFRKPHN_nkbj_ov_plan4" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_nkbj_ov_plan5" position = { x = 8 y = 42 } spriteType = "GFX_TFRKPHN_nkbj_ov_plan5" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_nkbj_ov_front1" position = { x = 8 y = 42 } spriteType = "GFX_TFRKPHN_nkbj_ov_front1" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_nkbj_ov_front3" position = { x = 8 y = 42 } spriteType = "GFX_TFRKPHN_nkbj_ov_front3" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_nkbj_ov_front4" position = { x = 8 y = 42 } spriteType = "GFX_TFRKPHN_nkbj_ov_front4" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_nkbj_ov_front5" position = { x = 8 y = 42 } spriteType = "GFX_TFRKPHN_nkbj_ov_front5" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_nkbj_ov_click_n" position = { x = 8 y = 42 } spriteType = "GFX_TFRKPHN_nkbj_ov_click_n" pdx_tooltip = "TFRKPHN_nkbj_ov_click_n_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_nkbj_ov_click_s" position = { x = 8 y = 323 } spriteType = "GFX_TFRKPHN_nkbj_ov_click_s" pdx_tooltip = "TFRKPHN_nkbj_ov_click_s_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_nkbj_ov_side" position = { x = 307 y = 38 } spriteType = "GFX_TFRKPHN_nkbj_ov_side" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nkbj_ov_t1" position = { x = 317 y = 48 } text = "TFRKPHN_nkbj_ov_t1" font = "hoi_16mbs" format = left maxWidth = 165 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nkbj_ov_n1" position = { x = 317 y = 70 } text = "TFRKPHN_nkbj_ov_n1" font = "hoi_16mbs" format = left maxWidth = 165 maxHeight = 84 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nkbj_ov_t2" position = { x = 317 y = 166 } text = "TFRKPHN_nkbj_ov_t2" font = "hoi_16mbs" format = left maxWidth = 165 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nkbj_ov_s1" position = { x = 317 y = 188 } text = "TFRKPHN_nkbj_ov_s1" font = "hoi_16mbs" format = left maxWidth = 165 maxHeight = 84 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nkbj_ov_t3" position = { x = 317 y = 286 } text = "TFRKPHN_nkbj_ov_t3" font = "hoi_16mbs" format = left maxWidth = 165 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nkbj_ov_p1" position = { x = 317 y = 308 } text = "TFRKPHN_nkbj_ov_p1" font = "hoi_16mbs" format = left maxWidth = 165 maxHeight = 150 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nkbj_ov_hint" position = { x = 317 y = 532 } text = "TFRKPHN_nkbj_ov_hint" font = "hoi_16mbs" format = left maxWidth = 165 maxHeight = 60 alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_nkbj_tab_ov" position = { x = 8 y = 4 } spriteType = "GFX_TFRKPHN_nkbj_tab_ov" pdx_tooltip = "TFRKPHN_nkbj_tab_ov_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_nkbj_sel_ov" position = { x = 8 y = 4 } spriteType = "GFX_TFRKPHN_nkbj_tab_sel" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_nkbj_tab_nk" position = { x = 172 y = 4 } spriteType = "GFX_TFRKPHN_nkbj_tab_nk" pdx_tooltip = "TFRKPHN_nkbj_tab_nk_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_nkbj_sel_nk" position = { x = 172 y = 4 } spriteType = "GFX_TFRKPHN_nkbj_tab_sel" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_nkbj_tab_bj" position = { x = 336 y = 4 } spriteType = "GFX_TFRKPHN_nkbj_tab_bj" pdx_tooltip = "TFRKPHN_nkbj_tab_bj_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_nkbj_sel_bj" position = { x = 336 y = 4 } spriteType = "GFX_TFRKPHN_nkbj_tab_sel" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_nk_mapbg" position = { x = 4 y = 38 } spriteType = "GFX_TFRKPHN_nk_mapbg" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_nk_r_hb" position = { x = 243 y = 43 } spriteType = "GFX_TFRKPHN_nk_r_hb" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_nk_r_ns" position = { x = 318 y = 71 } spriteType = "GFX_TFRKPHN_nk_r_ns" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_nk_r_yg" position = { x = 147 y = 98 } spriteType = "GFX_TFRKPHN_nk_r_yg" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_nk_r_jg" position = { x = 72 y = 116 } spriteType = "GFX_TFRKPHN_nk_r_jg" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_nk_r_pb" position = { x = 16 y = 185 } spriteType = "GFX_TFRKPHN_nk_r_pb" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_nk_r_hn" position = { x = 135 y = 154 } spriteType = "GFX_TFRKPHN_nk_r_hn" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_nk_r_pn" position = { x = 57 y = 204 } spriteType = "GFX_TFRKPHN_nk_r_pn" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_nk_r_py" position = { x = 77 y = 269 } spriteType = "GFX_TFRKPHN_nk_r_py" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_nk_r_hwb" position = { x = 79 y = 275 } spriteType = "GFX_TFRKPHN_nk_r_hwb" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_nk_r_hwn" position = { x = 19 y = 213 } spriteType = "GFX_TFRKPHN_nk_r_hwn" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_nk_r_gw" position = { x = 135 y = 260 } spriteType = "GFX_TFRKPHN_nk_r_gw" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_nk_r_ks" position = { x = 119 y = 332 } spriteType = "GFX_TFRKPHN_nk_r_ks" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_nk_pin_hb" position = { x = 246 y = 95 } spriteType = "GFX_TFRKPHN_nk_chip" pdx_tooltip = "TFRKPHN_nk_tt_hb" clicksound = click_default }
+			iconType = { name = "TFRKPHN_nk_psel_hb" position = { x = 246 y = 95 } spriteType = "GFX_TFRKPHN_nk_chip_sel" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_pn_hb" position = { x = 246 y = 96 } text = "TFRKPHN_nk_pn_hb" font = "hoi_16mbs" format = center maxWidth = 40 maxHeight = 34 alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_nk_pin_ns" position = { x = 295 y = 59 } spriteType = "GFX_TFRKPHN_nk_chip" pdx_tooltip = "TFRKPHN_nk_tt_ns" clicksound = click_default }
+			iconType = { name = "TFRKPHN_nk_psel_ns" position = { x = 295 y = 59 } spriteType = "GFX_TFRKPHN_nk_chip_sel" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_pn_ns" position = { x = 295 y = 60 } text = "TFRKPHN_nk_pn_ns" font = "hoi_16mbs" format = center maxWidth = 40 maxHeight = 34 alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_nk_pin_yg" position = { x = 212 y = 120 } spriteType = "GFX_TFRKPHN_nk_chip" pdx_tooltip = "TFRKPHN_nk_tt_yg" clicksound = click_default }
+			iconType = { name = "TFRKPHN_nk_psel_yg" position = { x = 212 y = 120 } spriteType = "GFX_TFRKPHN_nk_chip_sel" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_pn_yg" position = { x = 212 y = 121 } text = "TFRKPHN_nk_pn_yg" font = "hoi_16mbs" format = center maxWidth = 40 maxHeight = 34 alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_nk_pin_jg" position = { x = 100 y = 173 } spriteType = "GFX_TFRKPHN_nk_chip" pdx_tooltip = "TFRKPHN_nk_tt_jg" clicksound = click_default }
+			iconType = { name = "TFRKPHN_nk_psel_jg" position = { x = 100 y = 173 } spriteType = "GFX_TFRKPHN_nk_chip_sel" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_pn_jg" position = { x = 100 y = 174 } text = "TFRKPHN_nk_pn_jg" font = "hoi_16mbs" format = center maxWidth = 40 maxHeight = 34 alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_nk_pin_pb" position = { x = 41 y = 204 } spriteType = "GFX_TFRKPHN_nk_chip" pdx_tooltip = "TFRKPHN_nk_tt_pb" clicksound = click_default }
+			iconType = { name = "TFRKPHN_nk_psel_pb" position = { x = 41 y = 204 } spriteType = "GFX_TFRKPHN_nk_chip_sel" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_pn_pb" position = { x = 41 y = 205 } text = "TFRKPHN_nk_pn_pb" font = "hoi_16mbs" format = center maxWidth = 40 maxHeight = 34 alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_nk_pin_hn" position = { x = 159 y = 199 } spriteType = "GFX_TFRKPHN_nk_chip" pdx_tooltip = "TFRKPHN_nk_tt_hn" clicksound = click_default }
+			iconType = { name = "TFRKPHN_nk_psel_hn" position = { x = 159 y = 199 } spriteType = "GFX_TFRKPHN_nk_chip_sel" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_pn_hn" position = { x = 159 y = 200 } text = "TFRKPHN_nk_pn_hn" font = "hoi_16mbs" format = center maxWidth = 40 maxHeight = 34 alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_nk_pin_pn" position = { x = 106 y = 223 } spriteType = "GFX_TFRKPHN_nk_chip" pdx_tooltip = "TFRKPHN_nk_tt_pn" clicksound = click_default }
+			iconType = { name = "TFRKPHN_nk_psel_pn" position = { x = 106 y = 223 } spriteType = "GFX_TFRKPHN_nk_chip_sel" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_pn_pn" position = { x = 106 y = 224 } text = "TFRKPHN_nk_pn_pn" font = "hoi_16mbs" format = center maxWidth = 40 maxHeight = 34 alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_nk_pin_py" position = { x = 76 y = 264 } spriteType = "GFX_TFRKPHN_nk_chip" pdx_tooltip = "TFRKPHN_nk_tt_py" clicksound = click_default }
+			iconType = { name = "TFRKPHN_nk_psel_py" position = { x = 76 y = 264 } spriteType = "GFX_TFRKPHN_nk_chip_sel" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_pn_py" position = { x = 76 y = 265 } text = "TFRKPHN_nk_pn_py" font = "hoi_16mbs" format = center maxWidth = 40 maxHeight = 34 alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_nk_pin_hwb" position = { x = 98 y = 297 } spriteType = "GFX_TFRKPHN_nk_chip" pdx_tooltip = "TFRKPHN_nk_tt_hwb" clicksound = click_default }
+			iconType = { name = "TFRKPHN_nk_psel_hwb" position = { x = 98 y = 297 } spriteType = "GFX_TFRKPHN_nk_chip_sel" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_pn_hwb" position = { x = 98 y = 298 } text = "TFRKPHN_nk_pn_hwb" font = "hoi_16mbs" format = center maxWidth = 40 maxHeight = 34 alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_nk_pin_hwn" position = { x = 47 y = 308 } spriteType = "GFX_TFRKPHN_nk_chip" pdx_tooltip = "TFRKPHN_nk_tt_hwn" clicksound = click_default }
+			iconType = { name = "TFRKPHN_nk_psel_hwn" position = { x = 47 y = 308 } spriteType = "GFX_TFRKPHN_nk_chip_sel" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_pn_hwn" position = { x = 47 y = 309 } text = "TFRKPHN_nk_pn_hwn" font = "hoi_16mbs" format = center maxWidth = 40 maxHeight = 34 alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_nk_pin_gw" position = { x = 148 y = 285 } spriteType = "GFX_TFRKPHN_nk_chip" pdx_tooltip = "TFRKPHN_nk_tt_gw" clicksound = click_default }
+			iconType = { name = "TFRKPHN_nk_psel_gw" position = { x = 148 y = 285 } spriteType = "GFX_TFRKPHN_nk_chip_sel" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_pn_gw" position = { x = 148 y = 286 } text = "TFRKPHN_nk_pn_gw" font = "hoi_16mbs" format = center maxWidth = 40 maxHeight = 34 alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_nk_pin_ks" position = { x = 136 y = 343 } spriteType = "GFX_TFRKPHN_nk_chip" pdx_tooltip = "TFRKPHN_nk_tt_ks" clicksound = click_default }
+			iconType = { name = "TFRKPHN_nk_psel_ks" position = { x = 136 y = 343 } spriteType = "GFX_TFRKPHN_nk_chip_sel" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_pn_ks" position = { x = 136 y = 344 } text = "TFRKPHN_nk_pn_ks" font = "hoi_16mbs" format = center maxWidth = 40 maxHeight = 34 alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_nk_nfront1" position = { x = 0 y = 34 } spriteType = "GFX_TFRKPHN_nk_nfront1" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_nk_nfront3" position = { x = 0 y = 34 } spriteType = "GFX_TFRKPHN_nk_nfront3" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_nk_nfront4" position = { x = 0 y = 34 } spriteType = "GFX_TFRKPHN_nk_nfront4" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_nk_nfront5" position = { x = 0 y = 34 } spriteType = "GFX_TFRKPHN_nk_nfront5" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_nk_plan2" position = { x = 0 y = 34 } spriteType = "GFX_TFRKPHN_nk_plan2" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_nk_plan3" position = { x = 0 y = 34 } spriteType = "GFX_TFRKPHN_nk_plan3" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_nk_plan4" position = { x = 0 y = 34 } spriteType = "GFX_TFRKPHN_nk_plan4" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_nk_plan5" position = { x = 0 y = 34 } spriteType = "GFX_TFRKPHN_nk_plan5" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_nk_mk_c9" position = { x = 267 y = 108 } spriteType = "GFX_TFRKPHN_nk_mk_c9" pdx_tooltip = "TFRKPHN_nk_mk_c9_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_nk_ms_c9" position = { x = 265 y = 106 } spriteType = "GFX_TFRKPHN_nk_mk_sel" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_nk_mk_c12" position = { x = 167 y = 129 } spriteType = "GFX_TFRKPHN_nk_mk_c12" pdx_tooltip = "TFRKPHN_nk_mk_c12_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_nk_ms_c12" position = { x = 165 y = 127 } spriteType = "GFX_TFRKPHN_nk_mk_sel" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_nk_mk_c7" position = { x = 162 y = 211 } spriteType = "GFX_TFRKPHN_nk_mk_c7" pdx_tooltip = "TFRKPHN_nk_mk_c7_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_nk_ms_c7" position = { x = 160 y = 209 } spriteType = "GFX_TFRKPHN_nk_mk_sel" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_nk_mk_c8" position = { x = 41 y = 221 } spriteType = "GFX_TFRKPHN_nk_mk_c8" pdx_tooltip = "TFRKPHN_nk_mk_c8_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_nk_ms_c8" position = { x = 39 y = 219 } spriteType = "GFX_TFRKPHN_nk_mk_sel" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_nk_mk_c11" position = { x = 118 y = 229 } spriteType = "GFX_TFRKPHN_nk_mk_c11" pdx_tooltip = "TFRKPHN_nk_mk_c11_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_nk_ms_c11" position = { x = 116 y = 227 } spriteType = "GFX_TFRKPHN_nk_mk_sel" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_nk_mk_c10" position = { x = 162 y = 274 } spriteType = "GFX_TFRKPHN_nk_mk_c10" pdx_tooltip = "TFRKPHN_nk_mk_c10_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_nk_ms_c10" position = { x = 160 y = 272 } spriteType = "GFX_TFRKPHN_nk_mk_sel" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_nk_mk_c1" position = { x = 180 y = 291 } spriteType = "GFX_TFRKPHN_nk_mk_c1" pdx_tooltip = "TFRKPHN_nk_mk_c1_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_nk_ms_c1" position = { x = 178 y = 289 } spriteType = "GFX_TFRKPHN_nk_mk_sel" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_nk_mk_c5" position = { x = 149 y = 310 } spriteType = "GFX_TFRKPHN_nk_mk_c5" pdx_tooltip = "TFRKPHN_nk_mk_c5_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_nk_ms_c5" position = { x = 147 y = 308 } spriteType = "GFX_TFRKPHN_nk_mk_sel" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_nk_mk_c2" position = { x = 114 y = 310 } spriteType = "GFX_TFRKPHN_nk_mk_c2" pdx_tooltip = "TFRKPHN_nk_mk_c2_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_nk_ms_c2" position = { x = 112 y = 308 } spriteType = "GFX_TFRKPHN_nk_mk_sel" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_nk_mk_c4" position = { x = 74 y = 327 } spriteType = "GFX_TFRKPHN_nk_mk_c4" pdx_tooltip = "TFRKPHN_nk_mk_c4_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_nk_ms_c4" position = { x = 72 y = 325 } spriteType = "GFX_TFRKPHN_nk_mk_sel" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_nk_mk_c3" position = { x = 55 y = 279 } spriteType = "GFX_TFRKPHN_nk_mk_c3" pdx_tooltip = "TFRKPHN_nk_mk_c3_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_nk_ms_c3" position = { x = 53 y = 277 } spriteType = "GFX_TFRKPHN_nk_mk_sel" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_nk_mk_cp" position = { x = 83 y = 271 } spriteType = "GFX_TFRKPHN_nk_mk_cp" pdx_tooltip = "TFRKPHN_nk_mk_cp_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_nk_ms_cp" position = { x = 81 y = 269 } spriteType = "GFX_TFRKPHN_nk_mk_sel" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_nk_a_orang" position = { x = 264 y = 134 } spriteType = "GFX_TFRKPHN_nk_mk_air_hq" pdx_tooltip = "TFRKPHN_nk_a_orang_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_nk_bs_a_orang" position = { x = 262 y = 132 } spriteType = "GFX_TFRKPHN_nk_mk_sel" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_nk_a_samjiyon" position = { x = 218 y = 108 } spriteType = "GFX_TFRKPHN_nk_mk_air" pdx_tooltip = "TFRKPHN_nk_a_samjiyon_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_nk_bs_a_samjiyon" position = { x = 216 y = 106 } spriteType = "GFX_TFRKPHN_nk_mk_sel" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_nk_a_changjin" position = { x = 152 y = 176 } spriteType = "GFX_TFRKPHN_nk_mk_air" pdx_tooltip = "TFRKPHN_nk_a_changjin_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_nk_bs_a_changjin" position = { x = 150 y = 174 } spriteType = "GFX_TFRKPHN_nk_mk_sel" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_nk_a_toksan" position = { x = 164 y = 215 } spriteType = "GFX_TFRKPHN_nk_mk_air_hq" pdx_tooltip = "TFRKPHN_nk_a_toksan_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_nk_bs_a_toksan" position = { x = 162 y = 213 } spriteType = "GFX_TFRKPHN_nk_mk_sel" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_nk_a_riwon" position = { x = 216 y = 196 } spriteType = "GFX_TFRKPHN_nk_mk_air" pdx_tooltip = "TFRKPHN_nk_a_riwon_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_nk_bs_a_riwon" position = { x = 214 y = 194 } spriteType = "GFX_TFRKPHN_nk_mk_sel" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_nk_a_wonsan" position = { x = 167 y = 270 } spriteType = "GFX_TFRKPHN_nk_mk_air" pdx_tooltip = "TFRKPHN_nk_a_wonsan_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_nk_bs_a_wonsan" position = { x = 165 y = 268 } spriteType = "GFX_TFRKPHN_nk_mk_sel" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_nk_a_tongchon" position = { x = 192 y = 289 } spriteType = "GFX_TFRKPHN_nk_mk_air" pdx_tooltip = "TFRKPHN_nk_a_tongchon_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_nk_bs_a_tongchon" position = { x = 190 y = 287 } spriteType = "GFX_TFRKPHN_nk_mk_sel" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_nk_a_sepo" position = { x = 151 y = 300 } spriteType = "GFX_TFRKPHN_nk_mk_air" pdx_tooltip = "TFRKPHN_nk_a_sepo_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_nk_bs_a_sepo" position = { x = 149 y = 298 } spriteType = "GFX_TFRKPHN_nk_mk_sel" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_nk_a_uiju" position = { x = 23 y = 205 } spriteType = "GFX_TFRKPHN_nk_mk_air" pdx_tooltip = "TFRKPHN_nk_a_uiju_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_nk_bs_a_uiju" position = { x = 21 y = 203 } spriteType = "GFX_TFRKPHN_nk_mk_sel" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_nk_a_panghyon" position = { x = 57 y = 212 } spriteType = "GFX_TFRKPHN_nk_mk_air" pdx_tooltip = "TFRKPHN_nk_a_panghyon_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_nk_bs_a_panghyon" position = { x = 55 y = 210 } spriteType = "GFX_TFRKPHN_nk_mk_sel" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_nk_a_kaechon" position = { x = 100 y = 225 } spriteType = "GFX_TFRKPHN_nk_mk_air_hq" pdx_tooltip = "TFRKPHN_nk_a_kaechon_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_nk_bs_a_kaechon" position = { x = 98 y = 223 } spriteType = "GFX_TFRKPHN_nk_mk_sel" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_nk_a_hq" position = { x = 90 y = 278 } spriteType = "GFX_TFRKPHN_nk_mk_air_hq" pdx_tooltip = "TFRKPHN_nk_a_hq_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_nk_bs_a_hq" position = { x = 88 y = 276 } spriteType = "GFX_TFRKPHN_nk_mk_sel" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_nk_a_hwangju" position = { x = 82 y = 300 } spriteType = "GFX_TFRKPHN_nk_mk_air_hq" pdx_tooltip = "TFRKPHN_nk_a_hwangju_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_nk_bs_a_hwangju" position = { x = 80 y = 298 } spriteType = "GFX_TFRKPHN_nk_mk_sel" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_nk_a_koksan" position = { x = 120 y = 292 } spriteType = "GFX_TFRKPHN_nk_mk_air" pdx_tooltip = "TFRKPHN_nk_a_koksan_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_nk_bs_a_koksan" position = { x = 118 y = 290 } spriteType = "GFX_TFRKPHN_nk_mk_sel" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_nk_a_taetan" position = { x = 45 y = 328 } spriteType = "GFX_TFRKPHN_nk_mk_air" pdx_tooltip = "TFRKPHN_nk_a_taetan_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_nk_bs_a_taetan" position = { x = 43 y = 326 } spriteType = "GFX_TFRKPHN_nk_mk_sel" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_nk_n_najin" position = { x = 310 y = 72 } spriteType = "GFX_TFRKPHN_nk_mk_navy" pdx_tooltip = "TFRKPHN_nk_n_najin_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_nk_bs_n_najin" position = { x = 308 y = 70 } spriteType = "GFX_TFRKPHN_nk_mk_sel" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_nk_n_chongjin" position = { x = 276 y = 107 } spriteType = "GFX_TFRKPHN_nk_mk_navy" pdx_tooltip = "TFRKPHN_nk_n_chongjin_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_nk_bs_n_chongjin" position = { x = 274 y = 105 } spriteType = "GFX_TFRKPHN_nk_mk_sel" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_nk_n_kimchaek" position = { x = 248 y = 171 } spriteType = "GFX_TFRKPHN_nk_mk_navy" pdx_tooltip = "TFRKPHN_nk_n_kimchaek_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_nk_bs_n_kimchaek" position = { x = 246 y = 169 } spriteType = "GFX_TFRKPHN_nk_mk_sel" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_nk_n_chaho" position = { x = 223 y = 192 } spriteType = "GFX_TFRKPHN_nk_mk_navy" pdx_tooltip = "TFRKPHN_nk_n_chaho_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_nk_bs_n_chaho" position = { x = 221 y = 190 } spriteType = "GFX_TFRKPHN_nk_mk_sel" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_nk_n_mayang" position = { x = 203 y = 208 } spriteType = "GFX_TFRKPHN_nk_mk_navy" pdx_tooltip = "TFRKPHN_nk_n_mayang_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_nk_bs_n_mayang" position = { x = 201 y = 206 } spriteType = "GFX_TFRKPHN_nk_mk_sel" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_nk_n_toejo" position = { x = 181 y = 220 } spriteType = "GFX_TFRKPHN_nk_mk_navy" pdx_tooltip = "TFRKPHN_nk_n_toejo_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_nk_bs_n_toejo" position = { x = 179 y = 218 } spriteType = "GFX_TFRKPHN_nk_mk_sel" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_nk_n_wonsan" position = { x = 164 y = 266 } spriteType = "GFX_TFRKPHN_nk_mk_navy" pdx_tooltip = "TFRKPHN_nk_n_wonsan_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_nk_bs_n_wonsan" position = { x = 162 y = 264 } spriteType = "GFX_TFRKPHN_nk_mk_sel" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_nk_n_changjon" position = { x = 204 y = 300 } spriteType = "GFX_TFRKPHN_nk_mk_navy" pdx_tooltip = "TFRKPHN_nk_n_changjon_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_nk_bs_n_changjon" position = { x = 202 y = 298 } spriteType = "GFX_TFRKPHN_nk_mk_sel" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_nk_n_tasado" position = { x = 14 y = 216 } spriteType = "GFX_TFRKPHN_nk_mk_navy" pdx_tooltip = "TFRKPHN_nk_n_tasado_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_nk_bs_n_tasado" position = { x = 12 y = 214 } spriteType = "GFX_TFRKPHN_nk_mk_sel" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_nk_n_nampo" position = { x = 52 y = 283 } spriteType = "GFX_TFRKPHN_nk_mk_navy" pdx_tooltip = "TFRKPHN_nk_n_nampo_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_nk_bs_n_nampo" position = { x = 50 y = 281 } spriteType = "GFX_TFRKPHN_nk_mk_sel" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_nk_n_pipagot" position = { x = 36 y = 312 } spriteType = "GFX_TFRKPHN_nk_mk_navy" pdx_tooltip = "TFRKPHN_nk_n_pipagot_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_nk_bs_n_pipagot" position = { x = 34 y = 310 } spriteType = "GFX_TFRKPHN_nk_mk_sel" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_nk_n_haeju" position = { x = 79 y = 333 } spriteType = "GFX_TFRKPHN_nk_mk_navy" pdx_tooltip = "TFRKPHN_nk_n_haeju_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_nk_bs_n_haeju" position = { x = 77 y = 331 } spriteType = "GFX_TFRKPHN_nk_mk_sel" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_nk_n_sagot" position = { x = 40 y = 339 } spriteType = "GFX_TFRKPHN_nk_mk_navy" pdx_tooltip = "TFRKPHN_nk_n_sagot_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_nk_bs_n_sagot" position = { x = 38 y = 337 } spriteType = "GFX_TFRKPHN_nk_mk_sel" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_nk_side" position = { x = 354 y = 38 } spriteType = "GFX_TFRKPHN_nk_side" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_t_avg" position = { x = 354 y = 48 } text = "TFRKPHN_nk_t_avg" font = "hoi_16mbs" format = center maxWidth = 138 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_v_avg" position = { x = 354 y = 68 } text = "TFRKPHN_nk_v_avg" font = "hoi_18mbs" format = center maxWidth = 138 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_t_mavg" position = { x = 354 y = 48 } text = "TFRKPHN_nk_t_mavg" font = "hoi_16mbs" format = center maxWidth = 138 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_v_mavg" position = { x = 354 y = 68 } text = "TFRKPHN_nk_v_mavg" font = "hoi_18mbs" format = center maxWidth = 138 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_t_air" position = { x = 354 y = 48 } text = "TFRKPHN_nk_t_air" font = "hoi_16mbs" format = center maxWidth = 138 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_val_air" position = { x = 354 y = 68 } text = "TFRKPHN_nk_val_air" font = "hoi_18mbs" format = center maxWidth = 138 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_t_sea" position = { x = 354 y = 48 } text = "TFRKPHN_nk_t_sea" font = "hoi_16mbs" format = center maxWidth = 138 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_val_sea" position = { x = 354 y = 68 } text = "TFRKPHN_nk_val_sea" font = "hoi_18mbs" format = center maxWidth = 138 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_t_leg" position = { x = 354 y = 104 } text = "TFRKPHN_nk_t_leg" font = "hoi_16mbs" format = center maxWidth = 138 maxHeight = 20 alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_nk_legend" position = { x = 366 y = 126 } spriteType = "GFX_TFRKPHN_nk_legend" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_leg_lo" position = { x = 362 y = 140 } text = "TFRKPHN_nk_leg_lo" font = "hoi_16mbs" format = left maxWidth = 50 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_leg_hi" position = { x = 434 y = 140 } text = "TFRKPHN_nk_leg_hi" font = "hoi_16mbs" format = right maxWidth = 50 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_link" position = { x = 360 y = 166 } text = "TFRKPHN_nk_link" font = "hoi_16mbs" format = center maxWidth = 126 maxHeight = 80 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_mlink" position = { x = 360 y = 166 } text = "TFRKPHN_nk_mlink" font = "hoi_16mbs" format = center maxWidth = 126 maxHeight = 80 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_alink" position = { x = 360 y = 166 } text = "TFRKPHN_nk_alink" font = "hoi_16mbs" format = center maxWidth = 126 maxHeight = 80 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_slink" position = { x = 360 y = 166 } text = "TFRKPHN_nk_slink" font = "hoi_16mbs" format = center maxWidth = 126 maxHeight = 80 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_decay" position = { x = 360 y = 242 } text = "TFRKPHN_nk_decay" font = "hoi_16mbs" format = center maxWidth = 126 maxHeight = 60 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_mdecay" position = { x = 360 y = 242 } text = "TFRKPHN_nk_mdecay" font = "hoi_16mbs" format = center maxWidth = 126 maxHeight = 60 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_bdecay" position = { x = 360 y = 242 } text = "TFRKPHN_nk_bdecay" font = "hoi_16mbs" format = center maxWidth = 126 maxHeight = 60 alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_nk_v_map" position = { x = 362 y = 318 } spriteType = "GFX_TFRKPHN_nk_v_map" pdx_tooltip = "TFRKPHN_nk_v_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_nk_vs_map" position = { x = 362 y = 318 } spriteType = "GFX_TFRKPHN_nk_v_sel" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_nk_v_army" position = { x = 425 y = 318 } spriteType = "GFX_TFRKPHN_nk_v_army" pdx_tooltip = "TFRKPHN_nk_v_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_nk_vs_army" position = { x = 425 y = 318 } spriteType = "GFX_TFRKPHN_nk_v_sel" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_nk_v_air" position = { x = 362 y = 346 } spriteType = "GFX_TFRKPHN_nk_v_air" pdx_tooltip = "TFRKPHN_nk_v_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_nk_vs_air" position = { x = 362 y = 346 } spriteType = "GFX_TFRKPHN_nk_v_sel" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_nk_v_navy" position = { x = 425 y = 346 } spriteType = "GFX_TFRKPHN_nk_v_navy" pdx_tooltip = "TFRKPHN_nk_v_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_nk_vs_navy" position = { x = 425 y = 346 } spriteType = "GFX_TFRKPHN_nk_v_sel" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_nk_info" position = { x = 8 y = 388 } spriteType = "GFX_TFRKPHN_nk_info" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_in_hb" position = { x = 20 y = 396 } text = "TFRKPHN_nk_in_hb" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_lt_hb" position = { x = 330 y = 396 } text = "TFRKPHN_nk_lt_hb" font = "hoi_16mbs" format = right maxWidth = 150 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_id_hb" position = { x = 20 y = 418 } text = "TFRKPHN_nk_id_hb" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 60 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_in_ns" position = { x = 20 y = 396 } text = "TFRKPHN_nk_in_ns" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_lt_ns" position = { x = 330 y = 396 } text = "TFRKPHN_nk_lt_ns" font = "hoi_16mbs" format = right maxWidth = 150 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_id_ns" position = { x = 20 y = 418 } text = "TFRKPHN_nk_id_ns" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 60 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_in_yg" position = { x = 20 y = 396 } text = "TFRKPHN_nk_in_yg" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_lt_yg" position = { x = 330 y = 396 } text = "TFRKPHN_nk_lt_yg" font = "hoi_16mbs" format = right maxWidth = 150 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_id_yg" position = { x = 20 y = 418 } text = "TFRKPHN_nk_id_yg" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 60 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_in_jg" position = { x = 20 y = 396 } text = "TFRKPHN_nk_in_jg" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_lt_jg" position = { x = 330 y = 396 } text = "TFRKPHN_nk_lt_jg" font = "hoi_16mbs" format = right maxWidth = 150 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_id_jg" position = { x = 20 y = 418 } text = "TFRKPHN_nk_id_jg" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 60 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_in_pb" position = { x = 20 y = 396 } text = "TFRKPHN_nk_in_pb" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_lt_pb" position = { x = 330 y = 396 } text = "TFRKPHN_nk_lt_pb" font = "hoi_16mbs" format = right maxWidth = 150 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_id_pb" position = { x = 20 y = 418 } text = "TFRKPHN_nk_id_pb" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 60 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_in_hn" position = { x = 20 y = 396 } text = "TFRKPHN_nk_in_hn" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_lt_hn" position = { x = 330 y = 396 } text = "TFRKPHN_nk_lt_hn" font = "hoi_16mbs" format = right maxWidth = 150 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_id_hn" position = { x = 20 y = 418 } text = "TFRKPHN_nk_id_hn" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 60 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_in_pn" position = { x = 20 y = 396 } text = "TFRKPHN_nk_in_pn" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_lt_pn" position = { x = 330 y = 396 } text = "TFRKPHN_nk_lt_pn" font = "hoi_16mbs" format = right maxWidth = 150 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_id_pn" position = { x = 20 y = 418 } text = "TFRKPHN_nk_id_pn" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 60 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_in_py" position = { x = 20 y = 396 } text = "TFRKPHN_nk_in_py" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_lt_py" position = { x = 330 y = 396 } text = "TFRKPHN_nk_lt_py" font = "hoi_16mbs" format = right maxWidth = 150 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_id_py" position = { x = 20 y = 418 } text = "TFRKPHN_nk_id_py" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 60 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_in_hwb" position = { x = 20 y = 396 } text = "TFRKPHN_nk_in_hwb" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_lt_hwb" position = { x = 330 y = 396 } text = "TFRKPHN_nk_lt_hwb" font = "hoi_16mbs" format = right maxWidth = 150 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_id_hwb" position = { x = 20 y = 418 } text = "TFRKPHN_nk_id_hwb" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 60 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_in_hwn" position = { x = 20 y = 396 } text = "TFRKPHN_nk_in_hwn" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_lt_hwn" position = { x = 330 y = 396 } text = "TFRKPHN_nk_lt_hwn" font = "hoi_16mbs" format = right maxWidth = 150 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_id_hwn" position = { x = 20 y = 418 } text = "TFRKPHN_nk_id_hwn" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 60 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_in_gw" position = { x = 20 y = 396 } text = "TFRKPHN_nk_in_gw" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_lt_gw" position = { x = 330 y = 396 } text = "TFRKPHN_nk_lt_gw" font = "hoi_16mbs" format = right maxWidth = 150 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_id_gw" position = { x = 20 y = 418 } text = "TFRKPHN_nk_id_gw" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 60 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_in_ks" position = { x = 20 y = 396 } text = "TFRKPHN_nk_in_ks" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_lt_ks" position = { x = 330 y = 396 } text = "TFRKPHN_nk_lt_ks" font = "hoi_16mbs" format = right maxWidth = 150 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_id_ks" position = { x = 20 y = 418 } text = "TFRKPHN_nk_id_ks" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 60 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_mn_c9" position = { x = 20 y = 396 } text = "TFRKPHN_nk_mn_c9" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_md_c9" position = { x = 20 y = 418 } text = "TFRKPHN_nk_md_c9" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 60 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_mn_c12" position = { x = 20 y = 396 } text = "TFRKPHN_nk_mn_c12" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_md_c12" position = { x = 20 y = 418 } text = "TFRKPHN_nk_md_c12" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 60 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_mn_c7" position = { x = 20 y = 396 } text = "TFRKPHN_nk_mn_c7" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_md_c7" position = { x = 20 y = 418 } text = "TFRKPHN_nk_md_c7" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 60 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_mn_c8" position = { x = 20 y = 396 } text = "TFRKPHN_nk_mn_c8" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_md_c8" position = { x = 20 y = 418 } text = "TFRKPHN_nk_md_c8" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 60 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_mn_c11" position = { x = 20 y = 396 } text = "TFRKPHN_nk_mn_c11" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_md_c11" position = { x = 20 y = 418 } text = "TFRKPHN_nk_md_c11" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 60 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_mn_c10" position = { x = 20 y = 396 } text = "TFRKPHN_nk_mn_c10" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_md_c10" position = { x = 20 y = 418 } text = "TFRKPHN_nk_md_c10" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 60 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_mn_c1" position = { x = 20 y = 396 } text = "TFRKPHN_nk_mn_c1" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_md_c1" position = { x = 20 y = 418 } text = "TFRKPHN_nk_md_c1" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 60 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_mn_c5" position = { x = 20 y = 396 } text = "TFRKPHN_nk_mn_c5" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_md_c5" position = { x = 20 y = 418 } text = "TFRKPHN_nk_md_c5" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 60 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_mn_c2" position = { x = 20 y = 396 } text = "TFRKPHN_nk_mn_c2" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_md_c2" position = { x = 20 y = 418 } text = "TFRKPHN_nk_md_c2" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 60 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_mn_c4" position = { x = 20 y = 396 } text = "TFRKPHN_nk_mn_c4" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_md_c4" position = { x = 20 y = 418 } text = "TFRKPHN_nk_md_c4" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 60 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_mn_c3" position = { x = 20 y = 396 } text = "TFRKPHN_nk_mn_c3" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_md_c3" position = { x = 20 y = 418 } text = "TFRKPHN_nk_md_c3" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 60 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_mn_cp" position = { x = 20 y = 396 } text = "TFRKPHN_nk_mn_cp" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_md_cp" position = { x = 20 y = 418 } text = "TFRKPHN_nk_md_cp" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 60 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_bn_a_orang" position = { x = 20 y = 396 } text = "TFRKPHN_nk_bn_a_orang" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_bd_a_orang" position = { x = 20 y = 418 } text = "TFRKPHN_nk_bd_a_orang" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 60 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_bn_a_samjiyon" position = { x = 20 y = 396 } text = "TFRKPHN_nk_bn_a_samjiyon" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_bd_a_samjiyon" position = { x = 20 y = 418 } text = "TFRKPHN_nk_bd_a_samjiyon" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 60 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_bn_a_changjin" position = { x = 20 y = 396 } text = "TFRKPHN_nk_bn_a_changjin" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_bd_a_changjin" position = { x = 20 y = 418 } text = "TFRKPHN_nk_bd_a_changjin" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 60 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_bn_a_toksan" position = { x = 20 y = 396 } text = "TFRKPHN_nk_bn_a_toksan" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_bd_a_toksan" position = { x = 20 y = 418 } text = "TFRKPHN_nk_bd_a_toksan" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 60 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_bn_a_riwon" position = { x = 20 y = 396 } text = "TFRKPHN_nk_bn_a_riwon" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_bd_a_riwon" position = { x = 20 y = 418 } text = "TFRKPHN_nk_bd_a_riwon" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 60 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_bn_a_wonsan" position = { x = 20 y = 396 } text = "TFRKPHN_nk_bn_a_wonsan" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_bd_a_wonsan" position = { x = 20 y = 418 } text = "TFRKPHN_nk_bd_a_wonsan" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 60 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_bn_a_tongchon" position = { x = 20 y = 396 } text = "TFRKPHN_nk_bn_a_tongchon" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_bd_a_tongchon" position = { x = 20 y = 418 } text = "TFRKPHN_nk_bd_a_tongchon" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 60 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_bn_a_sepo" position = { x = 20 y = 396 } text = "TFRKPHN_nk_bn_a_sepo" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_bd_a_sepo" position = { x = 20 y = 418 } text = "TFRKPHN_nk_bd_a_sepo" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 60 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_bn_a_uiju" position = { x = 20 y = 396 } text = "TFRKPHN_nk_bn_a_uiju" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_bd_a_uiju" position = { x = 20 y = 418 } text = "TFRKPHN_nk_bd_a_uiju" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 60 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_bn_a_panghyon" position = { x = 20 y = 396 } text = "TFRKPHN_nk_bn_a_panghyon" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_bd_a_panghyon" position = { x = 20 y = 418 } text = "TFRKPHN_nk_bd_a_panghyon" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 60 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_bn_a_kaechon" position = { x = 20 y = 396 } text = "TFRKPHN_nk_bn_a_kaechon" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_bd_a_kaechon" position = { x = 20 y = 418 } text = "TFRKPHN_nk_bd_a_kaechon" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 60 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_bn_a_hq" position = { x = 20 y = 396 } text = "TFRKPHN_nk_bn_a_hq" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_bd_a_hq" position = { x = 20 y = 418 } text = "TFRKPHN_nk_bd_a_hq" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 60 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_bn_a_hwangju" position = { x = 20 y = 396 } text = "TFRKPHN_nk_bn_a_hwangju" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_bd_a_hwangju" position = { x = 20 y = 418 } text = "TFRKPHN_nk_bd_a_hwangju" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 60 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_bn_a_koksan" position = { x = 20 y = 396 } text = "TFRKPHN_nk_bn_a_koksan" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_bd_a_koksan" position = { x = 20 y = 418 } text = "TFRKPHN_nk_bd_a_koksan" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 60 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_bn_a_taetan" position = { x = 20 y = 396 } text = "TFRKPHN_nk_bn_a_taetan" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_bd_a_taetan" position = { x = 20 y = 418 } text = "TFRKPHN_nk_bd_a_taetan" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 60 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_bn_n_najin" position = { x = 20 y = 396 } text = "TFRKPHN_nk_bn_n_najin" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_bd_n_najin" position = { x = 20 y = 418 } text = "TFRKPHN_nk_bd_n_najin" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 60 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_bn_n_chongjin" position = { x = 20 y = 396 } text = "TFRKPHN_nk_bn_n_chongjin" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_bd_n_chongjin" position = { x = 20 y = 418 } text = "TFRKPHN_nk_bd_n_chongjin" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 60 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_bn_n_kimchaek" position = { x = 20 y = 396 } text = "TFRKPHN_nk_bn_n_kimchaek" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_bd_n_kimchaek" position = { x = 20 y = 418 } text = "TFRKPHN_nk_bd_n_kimchaek" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 60 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_bn_n_chaho" position = { x = 20 y = 396 } text = "TFRKPHN_nk_bn_n_chaho" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_bd_n_chaho" position = { x = 20 y = 418 } text = "TFRKPHN_nk_bd_n_chaho" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 60 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_bn_n_mayang" position = { x = 20 y = 396 } text = "TFRKPHN_nk_bn_n_mayang" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_bd_n_mayang" position = { x = 20 y = 418 } text = "TFRKPHN_nk_bd_n_mayang" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 60 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_bn_n_toejo" position = { x = 20 y = 396 } text = "TFRKPHN_nk_bn_n_toejo" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_bd_n_toejo" position = { x = 20 y = 418 } text = "TFRKPHN_nk_bd_n_toejo" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 60 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_bn_n_wonsan" position = { x = 20 y = 396 } text = "TFRKPHN_nk_bn_n_wonsan" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_bd_n_wonsan" position = { x = 20 y = 418 } text = "TFRKPHN_nk_bd_n_wonsan" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 60 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_bn_n_changjon" position = { x = 20 y = 396 } text = "TFRKPHN_nk_bn_n_changjon" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_bd_n_changjon" position = { x = 20 y = 418 } text = "TFRKPHN_nk_bd_n_changjon" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 60 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_bn_n_tasado" position = { x = 20 y = 396 } text = "TFRKPHN_nk_bn_n_tasado" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_bd_n_tasado" position = { x = 20 y = 418 } text = "TFRKPHN_nk_bd_n_tasado" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 60 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_bn_n_nampo" position = { x = 20 y = 396 } text = "TFRKPHN_nk_bn_n_nampo" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_bd_n_nampo" position = { x = 20 y = 418 } text = "TFRKPHN_nk_bd_n_nampo" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 60 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_bn_n_pipagot" position = { x = 20 y = 396 } text = "TFRKPHN_nk_bn_n_pipagot" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_bd_n_pipagot" position = { x = 20 y = 418 } text = "TFRKPHN_nk_bd_n_pipagot" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 60 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_bn_n_haeju" position = { x = 20 y = 396 } text = "TFRKPHN_nk_bn_n_haeju" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_bd_n_haeju" position = { x = 20 y = 418 } text = "TFRKPHN_nk_bd_n_haeju" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 60 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_bn_n_sagot" position = { x = 20 y = 396 } text = "TFRKPHN_nk_bn_n_sagot" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_bd_n_sagot" position = { x = 20 y = 418 } text = "TFRKPHN_nk_bd_n_sagot" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 60 alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_nk_op_radio" position = { x = 60 y = 488 } quadTextureSprite = "GFX_button_148x34" buttonText = "TFRKPHN_nk_op_radio" buttonFont = "hoi_16mbs" pdx_tooltip = "TFRKPHN_nk_op_radio_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_nk_op_leaflet" position = { x = 260 y = 488 } quadTextureSprite = "GFX_button_148x34" buttonText = "TFRKPHN_nk_op_leaflet" buttonFont = "hoi_16mbs" pdx_tooltip = "TFRKPHN_nk_op_leaflet_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_nk_op_route" position = { x = 60 y = 530 } quadTextureSprite = "GFX_button_148x34" buttonText = "TFRKPHN_nk_op_route" buttonFont = "hoi_16mbs" pdx_tooltip = "TFRKPHN_nk_op_route_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_nk_op_market" position = { x = 260 y = 530 } quadTextureSprite = "GFX_button_148x34" buttonText = "TFRKPHN_nk_op_market" buttonFont = "hoi_16mbs" pdx_tooltip = "TFRKPHN_nk_op_market_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_nk_mop_officer" position = { x = 60 y = 488 } quadTextureSprite = "GFX_button_148x34" buttonText = "TFRKPHN_nk_mop_officer" buttonFont = "hoi_16mbs" pdx_tooltip = "TFRKPHN_nk_mop_officer_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_nk_mop_speaker" position = { x = 260 y = 488 } quadTextureSprite = "GFX_button_148x34" buttonText = "TFRKPHN_nk_mop_speaker" buttonFont = "hoi_16mbs" pdx_tooltip = "TFRKPHN_nk_mop_speaker_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_nk_mop_defect" position = { x = 60 y = 530 } quadTextureSprite = "GFX_button_148x34" buttonText = "TFRKPHN_nk_mop_defect" buttonFont = "hoi_16mbs" pdx_tooltip = "TFRKPHN_nk_mop_defect_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_nk_mop_supply" position = { x = 260 y = 530 } quadTextureSprite = "GFX_button_148x34" buttonText = "TFRKPHN_nk_mop_supply" buttonFont = "hoi_16mbs" pdx_tooltip = "TFRKPHN_nk_mop_supply_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_nk_bop_pilot" position = { x = 60 y = 488 } quadTextureSprite = "GFX_button_148x34" buttonText = "TFRKPHN_nk_bop_pilot" buttonFont = "hoi_16mbs" pdx_tooltip = "TFRKPHN_nk_bop_pilot_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_nk_bop_fuel" position = { x = 260 y = 488 } quadTextureSprite = "GFX_button_148x34" buttonText = "TFRKPHN_nk_bop_fuel" buttonFont = "hoi_16mbs" pdx_tooltip = "TFRKPHN_nk_bop_fuel_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_nk_bop_captain" position = { x = 60 y = 488 } quadTextureSprite = "GFX_button_148x34" buttonText = "TFRKPHN_nk_bop_captain" buttonFont = "hoi_16mbs" pdx_tooltip = "TFRKPHN_nk_bop_captain_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_nk_bop_route" position = { x = 260 y = 488 } quadTextureSprite = "GFX_button_148x34" buttonText = "TFRKPHN_nk_bop_route" buttonFont = "hoi_16mbs" pdx_tooltip = "TFRKPHN_nk_bop_route_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_nk_line" position = { x = 8 y = 576 } spriteType = "GFX_TFRKPHN_nk_line" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nk_hint" position = { x = 8 y = 592 } text = "TFRKPHN_nk_hint" font = "hoi_16mbs" format = center maxWidth = 484 maxHeight = 20 alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_bj_mapbg" position = { x = 4 y = 38 } spriteType = "GFX_TFRKPHN_bj_mapbg" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_bj_land" position = { x = 8 y = 42 } spriteType = "GFX_TFRKPHN_bj_land" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_bj_mk_c1" position = { x = 47 y = 84 } spriteType = "GFX_TFRKPHN_bj_mk_c1" pdx_tooltip = "TFRKPHN_bj_mk_c1_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_bj_rg_mk_c1" position = { x = 45 y = 82 } spriteType = "GFX_TFRKPHN_bj_ring32" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_bj_mk_c5" position = { x = 77 y = 65 } spriteType = "GFX_TFRKPHN_bj_mk_c5" pdx_tooltip = "TFRKPHN_bj_mk_c5_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_bj_rg_mk_c5" position = { x = 75 y = 63 } spriteType = "GFX_TFRKPHN_bj_ring32" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_bj_mk_c2" position = { x = 102 y = 74 } spriteType = "GFX_TFRKPHN_bj_mk_c2" pdx_tooltip = "TFRKPHN_bj_mk_c2_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_bj_rg_mk_c2" position = { x = 100 y = 72 } spriteType = "GFX_TFRKPHN_bj_ring32" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_bj_mk_c3" position = { x = 129 y = 62 } spriteType = "GFX_TFRKPHN_bj_mk_c3" pdx_tooltip = "TFRKPHN_bj_mk_c3_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_bj_rg_mk_c3" position = { x = 127 y = 60 } spriteType = "GFX_TFRKPHN_bj_ring32" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_bj_mk_cs" position = { x = 61 y = 101 } spriteType = "GFX_TFRKPHN_bj_mk_cs" pdx_tooltip = "TFRKPHN_bj_mk_cs_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_bj_rg_mk_cs" position = { x = 59 y = 99 } spriteType = "GFX_TFRKPHN_bj_ring32" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_bj_mk_cc" position = { x = 47 y = 117 } spriteType = "GFX_TFRKPHN_bj_mk_cc" pdx_tooltip = "TFRKPHN_bj_mk_cc_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_bj_rg_mk_cc" position = { x = 45 y = 115 } spriteType = "GFX_TFRKPHN_bj_ring32" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_bj_mk_c7" position = { x = 86 y = 118 } spriteType = "GFX_TFRKPHN_bj_mk_c7" pdx_tooltip = "TFRKPHN_bj_mk_c7_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_bj_rg_mk_c7" position = { x = 84 y = 116 } spriteType = "GFX_TFRKPHN_bj_ring32" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_bj_mk_c0" position = { x = 148 y = 217 } spriteType = "GFX_TFRKPHN_bj_mk_c0" pdx_tooltip = "TFRKPHN_bj_mk_c0_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_bj_rg_mk_c0" position = { x = 146 y = 215 } spriteType = "GFX_TFRKPHN_bj_ring32" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_bj_mk_f_gr" position = { x = 77 y = 188 } spriteType = "GFX_TFRKPHN_bj_mk_f_gr" pdx_tooltip = "TFRKPHN_bj_mk_f_gr_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_bj_rg_mk_f_gr" position = { x = 75 y = 186 } spriteType = "GFX_TFRKPHN_bj_ring32" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_bj_mk_f_sm" position = { x = 46 y = 259 } spriteType = "GFX_TFRKPHN_bj_mk_f_sm" pdx_tooltip = "TFRKPHN_bj_mk_f_sm_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_bj_rg_mk_f_sm" position = { x = 44 y = 257 } spriteType = "GFX_TFRKPHN_bj_ring32" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_bj_mk_f_tr" position = { x = 60 y = 205 } spriteType = "GFX_TFRKPHN_bj_mk_f_tr" pdx_tooltip = "TFRKPHN_bj_mk_f_tr_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_bj_rg_mk_f_tr" position = { x = 58 y = 203 } spriteType = "GFX_TFRKPHN_bj_ring32" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_bj_nv_0" position = { x = 179 y = 107 } spriteType = "GFX_TFRKPHN_bj_mk_navy" pdx_tooltip = "TFRKPHN_bj_nv_0_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_bj_rg_nv_0" position = { x = 177 y = 105 } spriteType = "GFX_TFRKPHN_bj_ring28" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_bj_nv_1" position = { x = 52 y = 141 } spriteType = "GFX_TFRKPHN_bj_mk_navy" pdx_tooltip = "TFRKPHN_bj_nv_1_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_bj_rg_nv_1" position = { x = 50 y = 139 } spriteType = "GFX_TFRKPHN_bj_ring28" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_bj_nv_2" position = { x = 29 y = 297 } spriteType = "GFX_TFRKPHN_bj_mk_navy" pdx_tooltip = "TFRKPHN_bj_nv_2_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_bj_rg_nv_2" position = { x = 27 y = 295 } spriteType = "GFX_TFRKPHN_bj_ring28" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_bj_nv_3" position = { x = 41 y = 110 } spriteType = "GFX_TFRKPHN_bj_mk_navy" pdx_tooltip = "TFRKPHN_bj_nv_3_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_bj_rg_nv_3" position = { x = 39 y = 108 } spriteType = "GFX_TFRKPHN_bj_ring28" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_bj_nv_4" position = { x = 77 y = 192 } spriteType = "GFX_TFRKPHN_bj_mk_navy" pdx_tooltip = "TFRKPHN_bj_nv_4_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_bj_rg_nv_4" position = { x = 75 y = 190 } spriteType = "GFX_TFRKPHN_bj_ring28" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_bj_nv_5" position = { x = 194 y = 210 } spriteType = "GFX_TFRKPHN_bj_mk_navy" pdx_tooltip = "TFRKPHN_bj_nv_5_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_bj_rg_nv_5" position = { x = 192 y = 208 } spriteType = "GFX_TFRKPHN_bj_ring28" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_bj_nv_6" position = { x = 178 y = 272 } spriteType = "GFX_TFRKPHN_bj_mk_navy" pdx_tooltip = "TFRKPHN_bj_nv_6_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_bj_rg_nv_6" position = { x = 176 y = 270 } spriteType = "GFX_TFRKPHN_bj_ring28" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_bj_nv_7" position = { x = 156 y = 270 } spriteType = "GFX_TFRKPHN_bj_mk_navy" pdx_tooltip = "TFRKPHN_bj_nv_7_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_bj_rg_nv_7" position = { x = 154 y = 268 } spriteType = "GFX_TFRKPHN_bj_ring28" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_bj_nv_8" position = { x = 36 y = 400 } spriteType = "GFX_TFRKPHN_bj_mk_navy" pdx_tooltip = "TFRKPHN_bj_nv_8_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_bj_rg_nv_8" position = { x = 34 y = 398 } spriteType = "GFX_TFRKPHN_bj_ring28" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_bj_ab_0" position = { x = 169 y = 89 } spriteType = "GFX_TFRKPHN_bj_mk_ab0" pdx_tooltip = "TFRKPHN_bj_ab_0_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_bj_rg_ab_0" position = { x = 167 y = 87 } spriteType = "GFX_TFRKPHN_bj_ring28" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_bj_ab_1" position = { x = 115 y = 111 } spriteType = "GFX_TFRKPHN_bj_mk_ab1" pdx_tooltip = "TFRKPHN_bj_ab_1_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_bj_rg_ab_1" position = { x = 113 y = 109 } spriteType = "GFX_TFRKPHN_bj_ring28" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_bj_ab_2" position = { x = 112 y = 139 } spriteType = "GFX_TFRKPHN_bj_mk_ab2" pdx_tooltip = "TFRKPHN_bj_ab_2_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_bj_rg_ab_2" position = { x = 110 y = 137 } spriteType = "GFX_TFRKPHN_bj_ring28" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_bj_ab_3" position = { x = 137 y = 167 } spriteType = "GFX_TFRKPHN_bj_mk_ab3" pdx_tooltip = "TFRKPHN_bj_ab_3_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_bj_rg_ab_3" position = { x = 135 y = 165 } spriteType = "GFX_TFRKPHN_bj_ring28" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_bj_ab_4" position = { x = 195 y = 211 } spriteType = "GFX_TFRKPHN_bj_mk_air" pdx_tooltip = "TFRKPHN_bj_ab_4_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_bj_rg_ab_4" position = { x = 193 y = 209 } spriteType = "GFX_TFRKPHN_bj_ring28" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_bj_ab_5" position = { x = 154 y = 218 } spriteType = "GFX_TFRKPHN_bj_mk_ab5" pdx_tooltip = "TFRKPHN_bj_ab_5_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_bj_rg_ab_5" position = { x = 152 y = 216 } spriteType = "GFX_TFRKPHN_bj_ring28" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_bj_ab_6" position = { x = 169 y = 267 } spriteType = "GFX_TFRKPHN_bj_mk_air" pdx_tooltip = "TFRKPHN_bj_ab_6_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_bj_rg_ab_6" position = { x = 167 y = 265 } spriteType = "GFX_TFRKPHN_bj_ring28" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_bj_ab_7" position = { x = 121 y = 273 } spriteType = "GFX_TFRKPHN_bj_mk_ab7" pdx_tooltip = "TFRKPHN_bj_ab_7_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_bj_rg_ab_7" position = { x = 119 y = 271 } spriteType = "GFX_TFRKPHN_bj_ring28" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_bj_ab_8" position = { x = 53 y = 271 } spriteType = "GFX_TFRKPHN_bj_mk_ab8" pdx_tooltip = "TFRKPHN_bj_ab_8_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_bj_rg_ab_8" position = { x = 51 y = 269 } spriteType = "GFX_TFRKPHN_bj_ring28" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_bj_ab_9" position = { x = 42 y = 217 } spriteType = "GFX_TFRKPHN_bj_mk_air" pdx_tooltip = "TFRKPHN_bj_ab_9_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_bj_rg_ab_9" position = { x = 40 y = 215 } spriteType = "GFX_TFRKPHN_bj_ring28" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_bj_ab_10" position = { x = 90 y = 161 } spriteType = "GFX_TFRKPHN_bj_mk_ab10" pdx_tooltip = "TFRKPHN_bj_ab_10_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_bj_rg_ab_10" position = { x = 88 y = 159 } spriteType = "GFX_TFRKPHN_bj_ring28" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_bj_ab_11" position = { x = 35 y = 162 } spriteType = "GFX_TFRKPHN_bj_mk_ab11" pdx_tooltip = "TFRKPHN_bj_ab_11_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_bj_rg_ab_11" position = { x = 33 y = 160 } spriteType = "GFX_TFRKPHN_bj_ring28" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_bj_ab_12" position = { x = 65 y = 141 } spriteType = "GFX_TFRKPHN_bj_mk_air" pdx_tooltip = "TFRKPHN_bj_ab_12_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_bj_rg_ab_12" position = { x = 63 y = 139 } spriteType = "GFX_TFRKPHN_bj_ring28" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_bj_ab_13" position = { x = 64 y = 125 } spriteType = "GFX_TFRKPHN_bj_mk_ab13" pdx_tooltip = "TFRKPHN_bj_ab_13_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_bj_rg_ab_13" position = { x = 62 y = 123 } spriteType = "GFX_TFRKPHN_bj_ring28" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_bj_ab_14" position = { x = 74 y = 109 } spriteType = "GFX_TFRKPHN_bj_mk_ab14" pdx_tooltip = "TFRKPHN_bj_ab_14_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_bj_rg_ab_14" position = { x = 72 y = 107 } spriteType = "GFX_TFRKPHN_bj_ring28" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_bj_side" position = { x = 238 y = 38 } spriteType = "GFX_TFRKPHN_bj_side" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_bj_t_rd" position = { x = 238 y = 46 } text = "TFRKPHN_bj_t_rd" font = "hoi_16mbs" format = center maxWidth = 254 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_bj_l_a" position = { x = 248 y = 72 } text = "TFRKPHN_bj_l_a" font = "hoi_16mbs" format = left maxWidth = 34 maxHeight = 20 alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_bj_bar_a" position = { x = 284 y = 77 } spriteType = "GFX_TFRKPHN_bj_bar" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_bj_n_a" position = { x = 456 y = 72 } text = "TFRKPHN_bj_n_a" font = "hoi_16mbs" format = right maxWidth = 28 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_bj_l_n" position = { x = 248 y = 96 } text = "TFRKPHN_bj_l_n" font = "hoi_16mbs" format = left maxWidth = 34 maxHeight = 20 alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_bj_bar_n" position = { x = 284 y = 101 } spriteType = "GFX_TFRKPHN_bj_bar" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_bj_n_n" position = { x = 456 y = 96 } text = "TFRKPHN_bj_n_n" font = "hoi_16mbs" format = right maxWidth = 28 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_bj_l_f" position = { x = 248 y = 120 } text = "TFRKPHN_bj_l_f" font = "hoi_16mbs" format = left maxWidth = 34 maxHeight = 20 alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_bj_bar_f" position = { x = 284 y = 125 } spriteType = "GFX_TFRKPHN_bj_bar" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_bj_n_f" position = { x = 456 y = 120 } text = "TFRKPHN_bj_n_f" font = "hoi_16mbs" format = right maxWidth = 28 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_bj_avg" position = { x = 246 y = 150 } text = "TFRKPHN_bj_avg" font = "hoi_16mbs" format = center maxWidth = 238 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_bj_now" position = { x = 246 y = 178 } text = "TFRKPHN_bj_now" font = "hoi_16mbs" format = center maxWidth = 238 maxHeight = 64 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_bj_rule" position = { x = 246 y = 248 } text = "TFRKPHN_bj_rule" font = "hoi_16mbs" format = center maxWidth = 238 maxHeight = 60 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_bj_bn_a" position = { x = 246 y = 318 } text = "TFRKPHN_bj_bn_a" font = "hoi_16mbs" format = center maxWidth = 238 maxHeight = 64 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_bj_bn_n" position = { x = 246 y = 318 } text = "TFRKPHN_bj_bn_n" font = "hoi_16mbs" format = center maxWidth = 238 maxHeight = 64 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_bj_bn_f" position = { x = 246 y = 318 } text = "TFRKPHN_bj_bn_f" font = "hoi_16mbs" format = center maxWidth = 238 maxHeight = 64 alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_bj_vb_a" position = { x = 246 y = 390 } spriteType = "GFX_TFRKPHN_bj_vb_a" pdx_tooltip = "TFRKPHN_bj_v_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_bj_vs_a" position = { x = 246 y = 390 } spriteType = "GFX_TFRKPHN_bj_vsel" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_bj_vb_n" position = { x = 326 y = 390 } spriteType = "GFX_TFRKPHN_bj_vb_n" pdx_tooltip = "TFRKPHN_bj_v_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_bj_vs_n" position = { x = 326 y = 390 } spriteType = "GFX_TFRKPHN_bj_vsel" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_bj_vb_f" position = { x = 406 y = 390 } spriteType = "GFX_TFRKPHN_bj_vb_f" pdx_tooltip = "TFRKPHN_bj_v_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_bj_vs_f" position = { x = 406 y = 390 } spriteType = "GFX_TFRKPHN_bj_vsel" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_bj_info" position = { x = 8 y = 438 } spriteType = "GFX_TFRKPHN_bj_info" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_bj_ut_mk_c1" position = { x = 20 y = 446 } text = "TFRKPHN_bj_ut_mk_c1" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_bj_ut_mk_c5" position = { x = 20 y = 446 } text = "TFRKPHN_bj_ut_mk_c5" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_bj_ut_mk_c2" position = { x = 20 y = 446 } text = "TFRKPHN_bj_ut_mk_c2" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_bj_ut_mk_c3" position = { x = 20 y = 446 } text = "TFRKPHN_bj_ut_mk_c3" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_bj_ut_mk_cs" position = { x = 20 y = 446 } text = "TFRKPHN_bj_ut_mk_cs" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_bj_ut_mk_cc" position = { x = 20 y = 446 } text = "TFRKPHN_bj_ut_mk_cc" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_bj_ut_mk_c7" position = { x = 20 y = 446 } text = "TFRKPHN_bj_ut_mk_c7" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_bj_ut_mk_c0" position = { x = 20 y = 446 } text = "TFRKPHN_bj_ut_mk_c0" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_bj_ut_mk_f_gr" position = { x = 20 y = 446 } text = "TFRKPHN_bj_ut_mk_f_gr" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_bj_ut_mk_f_sm" position = { x = 20 y = 446 } text = "TFRKPHN_bj_ut_mk_f_sm" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_bj_ut_mk_f_tr" position = { x = 20 y = 446 } text = "TFRKPHN_bj_ut_mk_f_tr" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_bj_id_a" position = { x = 20 y = 468 } text = "TFRKPHN_bj_id_a" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 40 alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_bj_op_front" position = { x = 12 y = 522 } quadTextureSprite = "GFX_button_148x34" buttonText = "TFRKPHN_bj_op_front" buttonFont = "hoi_16mbs" pdx_tooltip = "TFRKPHN_bj_op_front_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_bj_op_mech" position = { x = 174 y = 522 } quadTextureSprite = "GFX_button_148x34" buttonText = "TFRKPHN_bj_op_mech" buttonFont = "hoi_16mbs" pdx_tooltip = "TFRKPHN_bj_op_mech_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_bj_op_reserve" position = { x = 336 y = 522 } quadTextureSprite = "GFX_button_148x34" buttonText = "TFRKPHN_bj_op_reserve" buttonFont = "hoi_16mbs" pdx_tooltip = "TFRKPHN_bj_op_reserve_tt" clicksound = click_default }
+			instantTextBoxType = { name = "TFRKPHN_bj_ut_nv_0" position = { x = 20 y = 446 } text = "TFRKPHN_bj_ut_nv_0" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_bj_ut_nv_1" position = { x = 20 y = 446 } text = "TFRKPHN_bj_ut_nv_1" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_bj_ut_nv_2" position = { x = 20 y = 446 } text = "TFRKPHN_bj_ut_nv_2" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_bj_ut_nv_3" position = { x = 20 y = 446 } text = "TFRKPHN_bj_ut_nv_3" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_bj_ut_nv_4" position = { x = 20 y = 446 } text = "TFRKPHN_bj_ut_nv_4" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_bj_ut_nv_5" position = { x = 20 y = 446 } text = "TFRKPHN_bj_ut_nv_5" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_bj_ut_nv_6" position = { x = 20 y = 446 } text = "TFRKPHN_bj_ut_nv_6" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_bj_ut_nv_7" position = { x = 20 y = 446 } text = "TFRKPHN_bj_ut_nv_7" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_bj_ut_nv_8" position = { x = 20 y = 446 } text = "TFRKPHN_bj_ut_nv_8" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_bj_id_n" position = { x = 20 y = 468 } text = "TFRKPHN_bj_id_n" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 40 alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_bj_op_fleet" position = { x = 12 y = 522 } quadTextureSprite = "GFX_button_148x34" buttonText = "TFRKPHN_bj_op_fleet" buttonFont = "hoi_16mbs" pdx_tooltip = "TFRKPHN_bj_op_fleet_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_bj_op_sub" position = { x = 174 y = 522 } quadTextureSprite = "GFX_button_148x34" buttonText = "TFRKPHN_bj_op_sub" buttonFont = "hoi_16mbs" pdx_tooltip = "TFRKPHN_bj_op_sub_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_bj_op_landing" position = { x = 336 y = 522 } quadTextureSprite = "GFX_button_148x34" buttonText = "TFRKPHN_bj_op_landing" buttonFont = "hoi_16mbs" pdx_tooltip = "TFRKPHN_bj_op_landing_tt" clicksound = click_default }
+			instantTextBoxType = { name = "TFRKPHN_bj_ut_ab_0" position = { x = 20 y = 446 } text = "TFRKPHN_bj_ut_ab_0" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_bj_ut_ab_1" position = { x = 20 y = 446 } text = "TFRKPHN_bj_ut_ab_1" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_bj_ut_ab_2" position = { x = 20 y = 446 } text = "TFRKPHN_bj_ut_ab_2" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_bj_ut_ab_3" position = { x = 20 y = 446 } text = "TFRKPHN_bj_ut_ab_3" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_bj_ut_ab_4" position = { x = 20 y = 446 } text = "TFRKPHN_bj_ut_ab_4" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_bj_ut_ab_5" position = { x = 20 y = 446 } text = "TFRKPHN_bj_ut_ab_5" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_bj_ut_ab_6" position = { x = 20 y = 446 } text = "TFRKPHN_bj_ut_ab_6" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_bj_ut_ab_7" position = { x = 20 y = 446 } text = "TFRKPHN_bj_ut_ab_7" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_bj_ut_ab_8" position = { x = 20 y = 446 } text = "TFRKPHN_bj_ut_ab_8" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_bj_ut_ab_9" position = { x = 20 y = 446 } text = "TFRKPHN_bj_ut_ab_9" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_bj_ut_ab_10" position = { x = 20 y = 446 } text = "TFRKPHN_bj_ut_ab_10" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_bj_ut_ab_11" position = { x = 20 y = 446 } text = "TFRKPHN_bj_ut_ab_11" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_bj_ut_ab_12" position = { x = 20 y = 446 } text = "TFRKPHN_bj_ut_ab_12" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_bj_ut_ab_13" position = { x = 20 y = 446 } text = "TFRKPHN_bj_ut_ab_13" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_bj_ut_ab_14" position = { x = 20 y = 446 } text = "TFRKPHN_bj_ut_ab_14" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_bj_id_f" position = { x = 20 y = 468 } text = "TFRKPHN_bj_id_f" font = "hoi_16mbs" format = left maxWidth = 460 maxHeight = 40 alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_bj_op_sortie" position = { x = 12 y = 522 } quadTextureSprite = "GFX_button_148x34" buttonText = "TFRKPHN_bj_op_sortie" buttonFont = "hoi_16mbs" pdx_tooltip = "TFRKPHN_bj_op_sortie_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_bj_op_strike" position = { x = 174 y = 522 } quadTextureSprite = "GFX_button_148x34" buttonText = "TFRKPHN_bj_op_strike" buttonFont = "hoi_16mbs" pdx_tooltip = "TFRKPHN_bj_op_strike_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_bj_op_runway" position = { x = 336 y = 522 } quadTextureSprite = "GFX_button_148x34" buttonText = "TFRKPHN_bj_op_runway" buttonFont = "hoi_16mbs" pdx_tooltip = "TFRKPHN_bj_op_runway_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_bj_line" position = { x = 8 y = 564 } spriteType = "GFX_TFRKPHN_bj_line" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_bj_hint" position = { x = 8 y = 576 } text = "TFRKPHN_bj_hint" font = "hoi_16mbs" format = center maxWidth = 484 maxHeight = 20 alwaystransparent = yes }
+		}
+	}
+}

@@ -874,6 +874,7 @@ TFRKPHN_ge2027_ahn_cheol_soo_effect = {
 	set_party_name = { ideology = market_liberal name = TFRKPHN_party_ahn_cheol_soo long_name = TFRKPHN_party_ahn_cheol_soo_long }
 	hidden_effect = {
 		if = { limit = { NOT = { has_character = KOR_ahn_cheol_soo_char } } recruit_character = KOR_ahn_cheol_soo_char }
+		KOR_ahn_cheol_soo_char = { set_portraits = { civilian = { large = GFX_portrait_TFRKPHN_ahn_cheol_soo } } }
 		KOR_ahn_cheol_soo_char = { promote_character = classical_liberalism }
 	}
 	TFRKPHN_term_start_effect = yes
@@ -1950,185 +1951,185 @@ TFRKPHN_cab_appoint_cho_tae_yong = {
 	set_country_flag = TFRKPHN_cab_nso_filled
 	set_country_flag = TFRKPHN_cab_has_cho_tae_yong
 	custom_effect_tooltip = TFRKPHN_cab_eff_cho_tae_yong
-	hidden_effect = { add_to_variable = { TFRKPHN_lee_war = 0.03 } add_to_variable = { TFRKPHN_lee_pp = 0.02 } add_to_variable = { TFRKPHN_cab_sum_war = 0.03 } add_to_variable = { TFRKPHN_cab_sum_pp = 0.02 } add_to_variable = { TFRKPHN_cab_count = 1 } TFRKPHN_lee_gov_init = yes force_update_dynamic_modifier = yes }
+	hidden_effect = { add_to_variable = { TFRKPHN_lee_war = 0.05 } add_to_variable = { TFRKPHN_lee_pp = 0.03 } add_to_variable = { TFRKPHN_cab_sum_war = 0.05 } add_to_variable = { TFRKPHN_cab_sum_pp = 0.03 } add_to_variable = { TFRKPHN_cab_count = 1 } TFRKPHN_lee_gov_init = yes force_update_dynamic_modifier = yes }
 }
 TFRKPHN_cab_appoint_jang_ho_jin = {
 	set_country_flag = TFRKPHN_cab_nso_filled
 	set_country_flag = TFRKPHN_cab_has_jang_ho_jin
 	custom_effect_tooltip = TFRKPHN_cab_eff_jang_ho_jin
-	hidden_effect = { add_to_variable = { TFRKPHN_lee_pp = 0.03 } add_to_variable = { TFRKPHN_lee_war = 0.02 } add_to_variable = { TFRKPHN_cab_sum_pp = 0.03 } add_to_variable = { TFRKPHN_cab_sum_war = 0.02 } add_to_variable = { TFRKPHN_cab_count = 1 } TFRKPHN_lee_gov_init = yes force_update_dynamic_modifier = yes }
+	hidden_effect = { add_to_variable = { TFRKPHN_lee_pp = 0.05 } add_to_variable = { TFRKPHN_lee_war = 0.03 } add_to_variable = { TFRKPHN_cab_sum_pp = 0.05 } add_to_variable = { TFRKPHN_cab_sum_war = 0.03 } add_to_variable = { TFRKPHN_cab_count = 1 } TFRKPHN_lee_gov_init = yes force_update_dynamic_modifier = yes }
 }
 TFRKPHN_cab_appoint_chun_young_woo = {
 	set_country_flag = TFRKPHN_cab_nso_filled
 	set_country_flag = TFRKPHN_cab_has_chun_young_woo
 	custom_effect_tooltip = TFRKPHN_cab_eff_chun_young_woo
-	hidden_effect = { add_to_variable = { TFRKPHN_lee_war = 0.04 } add_to_variable = { TFRKPHN_lee_army = 0.02 } add_to_variable = { TFRKPHN_cab_sum_war = 0.04 } add_to_variable = { TFRKPHN_cab_sum_army = 0.02 } add_to_variable = { TFRKPHN_cab_count = 1 } TFRKPHN_lee_gov_init = yes force_update_dynamic_modifier = yes }
+	hidden_effect = { add_to_variable = { TFRKPHN_lee_war = 0.06 } add_to_variable = { TFRKPHN_lee_army = 0.03 } add_to_variable = { TFRKPHN_cab_sum_war = 0.06 } add_to_variable = { TFRKPHN_cab_sum_army = 0.03 } add_to_variable = { TFRKPHN_cab_count = 1 } TFRKPHN_lee_gov_init = yes force_update_dynamic_modifier = yes }
 }
 TFRKPHN_cab_appoint_lee_do_hoon = {
 	set_country_flag = TFRKPHN_cab_nso_filled
 	set_country_flag = TFRKPHN_cab_has_lee_do_hoon
 	custom_effect_tooltip = TFRKPHN_cab_eff_lee_do_hoon
-	hidden_effect = { add_to_variable = { TFRKPHN_lee_pp = 0.02 } add_to_variable = { TFRKPHN_lee_stab = 0.02 } add_to_variable = { TFRKPHN_cab_sum_pp = 0.02 } add_to_variable = { TFRKPHN_cab_sum_stab = 0.02 } add_to_variable = { TFRKPHN_cab_count = 1 } TFRKPHN_lee_gov_init = yes force_update_dynamic_modifier = yes }
+	hidden_effect = { add_to_variable = { TFRKPHN_lee_pp = 0.03 } add_to_variable = { TFRKPHN_lee_stab = 0.03 } add_to_variable = { TFRKPHN_cab_sum_pp = 0.03 } add_to_variable = { TFRKPHN_cab_sum_stab = 0.03 } add_to_variable = { TFRKPHN_cab_count = 1 } TFRKPHN_lee_gov_init = yes force_update_dynamic_modifier = yes }
 }
 TFRKPHN_cab_appoint_park_cheol_hee = {
 	set_country_flag = TFRKPHN_cab_nso_filled
 	set_country_flag = TFRKPHN_cab_has_park_cheol_hee
 	custom_effect_tooltip = TFRKPHN_cab_eff_park_cheol_hee
-	hidden_effect = { add_to_variable = { TFRKPHN_lee_res = 0.03 } add_to_variable = { TFRKPHN_lee_pp = 0.02 } add_to_variable = { TFRKPHN_cab_sum_res = 0.03 } add_to_variable = { TFRKPHN_cab_sum_pp = 0.02 } add_to_variable = { TFRKPHN_cab_count = 1 } TFRKPHN_lee_gov_init = yes force_update_dynamic_modifier = yes }
+	hidden_effect = { add_to_variable = { TFRKPHN_lee_res = 0.05 } add_to_variable = { TFRKPHN_lee_pp = 0.03 } add_to_variable = { TFRKPHN_cab_sum_res = 0.05 } add_to_variable = { TFRKPHN_cab_sum_pp = 0.03 } add_to_variable = { TFRKPHN_cab_count = 1 } TFRKPHN_lee_gov_init = yes force_update_dynamic_modifier = yes }
 }
 TFRKPHN_cab_appoint_kim_tae_heum = {
 	set_country_flag = TFRKPHN_cab_agri_filled
 	set_country_flag = TFRKPHN_cab_has_kim_tae_heum
 	custom_effect_tooltip = TFRKPHN_cab_eff_kim_tae_heum
-	hidden_effect = { add_to_variable = { TFRKPHN_lee_stab = 0.03 } add_to_variable = { TFRKPHN_lee_cg = -0.01 } add_to_variable = { TFRKPHN_cab_sum_stab = 0.03 } add_to_variable = { TFRKPHN_cab_sum_cg = -0.01 } add_to_variable = { TFRKPHN_cab_count = 1 } TFRKPHN_lee_gov_init = yes force_update_dynamic_modifier = yes }
+	hidden_effect = { add_to_variable = { TFRKPHN_lee_stab = 0.05 } add_to_variable = { TFRKPHN_lee_cg = -0.02 } add_to_variable = { TFRKPHN_cab_sum_stab = 0.05 } add_to_variable = { TFRKPHN_cab_sum_cg = -0.02 } add_to_variable = { TFRKPHN_cab_count = 1 } TFRKPHN_lee_gov_init = yes force_update_dynamic_modifier = yes }
 }
 TFRKPHN_cab_appoint_chung_hwang_keun = {
 	set_country_flag = TFRKPHN_cab_agri_filled
 	set_country_flag = TFRKPHN_cab_has_chung_hwang_keun
 	custom_effect_tooltip = TFRKPHN_cab_eff_chung_hwang_keun
-	hidden_effect = { add_to_variable = { TFRKPHN_lee_cg = -0.02 } add_to_variable = { TFRKPHN_lee_stab = 0.02 } add_to_variable = { TFRKPHN_cab_sum_cg = -0.02 } add_to_variable = { TFRKPHN_cab_sum_stab = 0.02 } add_to_variable = { TFRKPHN_cab_count = 1 } TFRKPHN_lee_gov_init = yes force_update_dynamic_modifier = yes }
+	hidden_effect = { add_to_variable = { TFRKPHN_lee_cg = -0.03 } add_to_variable = { TFRKPHN_lee_stab = 0.03 } add_to_variable = { TFRKPHN_cab_sum_cg = -0.03 } add_to_variable = { TFRKPHN_cab_sum_stab = 0.03 } add_to_variable = { TFRKPHN_cab_count = 1 } TFRKPHN_lee_gov_init = yes force_update_dynamic_modifier = yes }
 }
 TFRKPHN_cab_appoint_song_mi_ryung = {
 	set_country_flag = TFRKPHN_cab_agri_filled
 	set_country_flag = TFRKPHN_cab_has_song_mi_ryung
 	custom_effect_tooltip = TFRKPHN_cab_eff_song_mi_ryung
-	hidden_effect = { add_to_variable = { TFRKPHN_lee_res = 0.02 } add_to_variable = { TFRKPHN_lee_stab = 0.03 } add_to_variable = { TFRKPHN_cab_sum_res = 0.02 } add_to_variable = { TFRKPHN_cab_sum_stab = 0.03 } add_to_variable = { TFRKPHN_cab_count = 1 } TFRKPHN_lee_gov_init = yes force_update_dynamic_modifier = yes }
+	hidden_effect = { add_to_variable = { TFRKPHN_lee_res = 0.03 } add_to_variable = { TFRKPHN_lee_stab = 0.05 } add_to_variable = { TFRKPHN_cab_sum_res = 0.03 } add_to_variable = { TFRKPHN_cab_sum_stab = 0.05 } add_to_variable = { TFRKPHN_cab_count = 1 } TFRKPHN_lee_gov_init = yes force_update_dynamic_modifier = yes }
 }
 TFRKPHN_cab_appoint_lee_dong_phil = {
 	set_country_flag = TFRKPHN_cab_agri_filled
 	set_country_flag = TFRKPHN_cab_has_lee_dong_phil
 	custom_effect_tooltip = TFRKPHN_cab_eff_lee_dong_phil
-	hidden_effect = { add_to_variable = { TFRKPHN_lee_stab = 0.04 } add_to_variable = { TFRKPHN_cab_sum_stab = 0.04 } add_to_variable = { TFRKPHN_cab_count = 1 } TFRKPHN_lee_gov_init = yes force_update_dynamic_modifier = yes }
+	hidden_effect = { add_to_variable = { TFRKPHN_lee_stab = 0.06 } add_to_variable = { TFRKPHN_cab_sum_stab = 0.06 } add_to_variable = { TFRKPHN_cab_count = 1 } TFRKPHN_lee_gov_init = yes force_update_dynamic_modifier = yes }
 }
 TFRKPHN_cab_appoint_lee_yang_soo = {
 	set_country_flag = TFRKPHN_cab_agri_filled
 	set_country_flag = TFRKPHN_cab_has_lee_yang_soo
 	custom_effect_tooltip = TFRKPHN_cab_eff_lee_yang_soo
-	hidden_effect = { add_to_variable = { TFRKPHN_lee_pp = 0.04 } add_to_variable = { TFRKPHN_cab_sum_pp = 0.04 } add_to_variable = { TFRKPHN_cab_count = 1 } TFRKPHN_lee_gov_init = yes force_update_dynamic_modifier = yes }
+	hidden_effect = { add_to_variable = { TFRKPHN_lee_pp = 0.06 } add_to_variable = { TFRKPHN_cab_sum_pp = 0.06 } add_to_variable = { TFRKPHN_cab_count = 1 } TFRKPHN_lee_gov_init = yes force_update_dynamic_modifier = yes }
 }
 TFRKPHN_cab_appoint_lee_jung_sik = {
 	set_country_flag = TFRKPHN_cab_labor_filled
 	set_country_flag = TFRKPHN_cab_has_lee_jung_sik
 	custom_effect_tooltip = TFRKPHN_cab_eff_lee_jung_sik
-	hidden_effect = { add_to_variable = { TFRKPHN_lee_ind = 0.03 } add_to_variable = { TFRKPHN_lee_stab = 0.02 } add_to_variable = { TFRKPHN_cab_sum_ind = 0.03 } add_to_variable = { TFRKPHN_cab_sum_stab = 0.02 } add_to_variable = { TFRKPHN_cab_count = 1 } TFRKPHN_lee_gov_init = yes force_update_dynamic_modifier = yes }
+	hidden_effect = { add_to_variable = { TFRKPHN_lee_ind = 0.05 } add_to_variable = { TFRKPHN_lee_stab = 0.03 } add_to_variable = { TFRKPHN_cab_sum_ind = 0.05 } add_to_variable = { TFRKPHN_cab_sum_stab = 0.03 } add_to_variable = { TFRKPHN_cab_count = 1 } TFRKPHN_lee_gov_init = yes force_update_dynamic_modifier = yes }
 }
 TFRKPHN_cab_appoint_lim_i_ja = {
 	set_country_flag = TFRKPHN_cab_labor_filled
 	set_country_flag = TFRKPHN_cab_has_lim_i_ja
 	custom_effect_tooltip = TFRKPHN_cab_eff_lim_i_ja
-	hidden_effect = { add_to_variable = { TFRKPHN_lee_pp = 0.03 } add_to_variable = { TFRKPHN_lee_stab = 0.02 } add_to_variable = { TFRKPHN_cab_sum_pp = 0.03 } add_to_variable = { TFRKPHN_cab_sum_stab = 0.02 } add_to_variable = { TFRKPHN_cab_count = 1 } TFRKPHN_lee_gov_init = yes force_update_dynamic_modifier = yes }
+	hidden_effect = { add_to_variable = { TFRKPHN_lee_pp = 0.05 } add_to_variable = { TFRKPHN_lee_stab = 0.03 } add_to_variable = { TFRKPHN_cab_sum_pp = 0.05 } add_to_variable = { TFRKPHN_cab_sum_stab = 0.03 } add_to_variable = { TFRKPHN_cab_count = 1 } TFRKPHN_lee_gov_init = yes force_update_dynamic_modifier = yes }
 }
 TFRKPHN_cab_appoint_kwon_ki_seop = {
 	set_country_flag = TFRKPHN_cab_labor_filled
 	set_country_flag = TFRKPHN_cab_has_kwon_ki_seop
 	custom_effect_tooltip = TFRKPHN_cab_eff_kwon_ki_seop
-	hidden_effect = { add_to_variable = { TFRKPHN_lee_eff = 0.03 } add_to_variable = { TFRKPHN_lee_ind = 0.02 } add_to_variable = { TFRKPHN_cab_sum_eff = 0.03 } add_to_variable = { TFRKPHN_cab_sum_ind = 0.02 } add_to_variable = { TFRKPHN_cab_count = 1 } TFRKPHN_lee_gov_init = yes force_update_dynamic_modifier = yes }
+	hidden_effect = { add_to_variable = { TFRKPHN_lee_eff = 0.05 } add_to_variable = { TFRKPHN_lee_ind = 0.03 } add_to_variable = { TFRKPHN_cab_sum_eff = 0.05 } add_to_variable = { TFRKPHN_cab_sum_ind = 0.03 } add_to_variable = { TFRKPHN_cab_count = 1 } TFRKPHN_lee_gov_init = yes force_update_dynamic_modifier = yes }
 }
 TFRKPHN_cab_appoint_lee_ki_kweon = {
 	set_country_flag = TFRKPHN_cab_labor_filled
 	set_country_flag = TFRKPHN_cab_has_lee_ki_kweon
 	custom_effect_tooltip = TFRKPHN_cab_eff_lee_ki_kweon
-	hidden_effect = { add_to_variable = { TFRKPHN_lee_ind = 0.04 } add_to_variable = { TFRKPHN_cab_sum_ind = 0.04 } add_to_variable = { TFRKPHN_cab_count = 1 } TFRKPHN_lee_gov_init = yes force_update_dynamic_modifier = yes }
+	hidden_effect = { add_to_variable = { TFRKPHN_lee_ind = 0.06 } add_to_variable = { TFRKPHN_cab_sum_ind = 0.06 } add_to_variable = { TFRKPHN_cab_count = 1 } TFRKPHN_lee_gov_init = yes force_update_dynamic_modifier = yes }
 }
 TFRKPHN_cab_appoint_bang_ha_nam = {
 	set_country_flag = TFRKPHN_cab_labor_filled
 	set_country_flag = TFRKPHN_cab_has_bang_ha_nam
 	custom_effect_tooltip = TFRKPHN_cab_eff_bang_ha_nam
-	hidden_effect = { add_to_variable = { TFRKPHN_lee_res = 0.02 } add_to_variable = { TFRKPHN_lee_stab = 0.03 } add_to_variable = { TFRKPHN_cab_sum_res = 0.02 } add_to_variable = { TFRKPHN_cab_sum_stab = 0.03 } add_to_variable = { TFRKPHN_cab_count = 1 } TFRKPHN_lee_gov_init = yes force_update_dynamic_modifier = yes }
+	hidden_effect = { add_to_variable = { TFRKPHN_lee_res = 0.03 } add_to_variable = { TFRKPHN_lee_stab = 0.05 } add_to_variable = { TFRKPHN_cab_sum_res = 0.03 } add_to_variable = { TFRKPHN_cab_sum_stab = 0.05 } add_to_variable = { TFRKPHN_cab_count = 1 } TFRKPHN_lee_gov_init = yes force_update_dynamic_modifier = yes }
 }
 TFRKPHN_cab_appoint_kim_yung_ho = {
 	set_country_flag = TFRKPHN_cab_unif_filled
 	set_country_flag = TFRKPHN_cab_has_kim_yung_ho
 	custom_effect_tooltip = TFRKPHN_cab_eff_kim_yung_ho
-	hidden_effect = { add_to_variable = { TFRKPHN_lee_war = 0.04 } add_to_variable = { TFRKPHN_cab_sum_war = 0.04 } add_to_variable = { TFRKPHN_cab_count = 1 } TFRKPHN_lee_gov_init = yes force_update_dynamic_modifier = yes }
+	hidden_effect = { add_to_variable = { TFRKPHN_lee_war = 0.06 } add_to_variable = { TFRKPHN_cab_sum_war = 0.06 } add_to_variable = { TFRKPHN_cab_count = 1 } TFRKPHN_lee_gov_init = yes force_update_dynamic_modifier = yes }
 }
 TFRKPHN_cab_appoint_hong_yong_pyo = {
 	set_country_flag = TFRKPHN_cab_unif_filled
 	set_country_flag = TFRKPHN_cab_has_hong_yong_pyo
 	custom_effect_tooltip = TFRKPHN_cab_eff_hong_yong_pyo
-	hidden_effect = { add_to_variable = { TFRKPHN_lee_pp = 0.03 } add_to_variable = { TFRKPHN_lee_stab = 0.02 } add_to_variable = { TFRKPHN_cab_sum_pp = 0.03 } add_to_variable = { TFRKPHN_cab_sum_stab = 0.02 } add_to_variable = { TFRKPHN_cab_count = 1 } TFRKPHN_lee_gov_init = yes force_update_dynamic_modifier = yes }
+	hidden_effect = { add_to_variable = { TFRKPHN_lee_pp = 0.05 } add_to_variable = { TFRKPHN_lee_stab = 0.03 } add_to_variable = { TFRKPHN_cab_sum_pp = 0.05 } add_to_variable = { TFRKPHN_cab_sum_stab = 0.03 } add_to_variable = { TFRKPHN_cab_count = 1 } TFRKPHN_lee_gov_init = yes force_update_dynamic_modifier = yes }
 }
 TFRKPHN_cab_appoint_ryoo_kihl_jae = {
 	set_country_flag = TFRKPHN_cab_unif_filled
 	set_country_flag = TFRKPHN_cab_has_ryoo_kihl_jae
 	custom_effect_tooltip = TFRKPHN_cab_eff_ryoo_kihl_jae
-	hidden_effect = { add_to_variable = { TFRKPHN_lee_stab = 0.04 } add_to_variable = { TFRKPHN_cab_sum_stab = 0.04 } add_to_variable = { TFRKPHN_cab_count = 1 } TFRKPHN_lee_gov_init = yes force_update_dynamic_modifier = yes }
+	hidden_effect = { add_to_variable = { TFRKPHN_lee_stab = 0.06 } add_to_variable = { TFRKPHN_cab_sum_stab = 0.06 } add_to_variable = { TFRKPHN_cab_count = 1 } TFRKPHN_lee_gov_init = yes force_update_dynamic_modifier = yes }
 }
 TFRKPHN_cab_appoint_kim_gi_woong = {
 	set_country_flag = TFRKPHN_cab_unif_filled
 	set_country_flag = TFRKPHN_cab_has_kim_gi_woong
 	custom_effect_tooltip = TFRKPHN_cab_eff_kim_gi_woong
-	hidden_effect = { add_to_variable = { TFRKPHN_lee_pp = 0.02 } add_to_variable = { TFRKPHN_lee_war = 0.02 } add_to_variable = { TFRKPHN_cab_sum_pp = 0.02 } add_to_variable = { TFRKPHN_cab_sum_war = 0.02 } add_to_variable = { TFRKPHN_cab_count = 1 } TFRKPHN_lee_gov_init = yes force_update_dynamic_modifier = yes }
+	hidden_effect = { add_to_variable = { TFRKPHN_lee_pp = 0.03 } add_to_variable = { TFRKPHN_lee_war = 0.03 } add_to_variable = { TFRKPHN_cab_sum_pp = 0.03 } add_to_variable = { TFRKPHN_cab_sum_war = 0.03 } add_to_variable = { TFRKPHN_cab_count = 1 } TFRKPHN_lee_gov_init = yes force_update_dynamic_modifier = yes }
 }
 TFRKPHN_cab_appoint_jo_gun_shik = {
 	set_country_flag = TFRKPHN_cab_unif_filled
 	set_country_flag = TFRKPHN_cab_has_jo_gun_shik
 	custom_effect_tooltip = TFRKPHN_cab_eff_jo_gun_shik
-	hidden_effect = { add_to_variable = { TFRKPHN_lee_build = 0.04 } add_to_variable = { TFRKPHN_cab_sum_build = 0.04 } add_to_variable = { TFRKPHN_cab_count = 1 } TFRKPHN_lee_gov_init = yes force_update_dynamic_modifier = yes }
+	hidden_effect = { add_to_variable = { TFRKPHN_lee_build = 0.06 } add_to_variable = { TFRKPHN_cab_sum_build = 0.06 } add_to_variable = { TFRKPHN_cab_count = 1 } TFRKPHN_lee_gov_init = yes force_update_dynamic_modifier = yes }
 }
 TFRKPHN_cab_appoint_shim_woo_jung = {
 	set_country_flag = TFRKPHN_cab_justice_filled
 	set_country_flag = TFRKPHN_cab_has_shim_woo_jung
 	custom_effect_tooltip = TFRKPHN_cab_eff_shim_woo_jung
-	hidden_effect = { add_to_variable = { TFRKPHN_lee_stab = 0.03 } add_to_variable = { TFRKPHN_lee_pp = 0.02 } add_to_variable = { TFRKPHN_cab_sum_stab = 0.03 } add_to_variable = { TFRKPHN_cab_sum_pp = 0.02 } add_to_variable = { TFRKPHN_cab_count = 1 } TFRKPHN_lee_gov_init = yes force_update_dynamic_modifier = yes }
+	hidden_effect = { add_to_variable = { TFRKPHN_lee_stab = 0.05 } add_to_variable = { TFRKPHN_lee_pp = 0.03 } add_to_variable = { TFRKPHN_cab_sum_stab = 0.05 } add_to_variable = { TFRKPHN_cab_sum_pp = 0.03 } add_to_variable = { TFRKPHN_cab_count = 1 } TFRKPHN_lee_gov_init = yes force_update_dynamic_modifier = yes }
 }
 TFRKPHN_cab_appoint_lee_noh_kong = {
 	set_country_flag = TFRKPHN_cab_justice_filled
 	set_country_flag = TFRKPHN_cab_has_lee_noh_kong
 	custom_effect_tooltip = TFRKPHN_cab_eff_lee_noh_kong
-	hidden_effect = { add_to_variable = { TFRKPHN_lee_stab = 0.04 } add_to_variable = { TFRKPHN_cab_sum_stab = 0.04 } add_to_variable = { TFRKPHN_cab_count = 1 } TFRKPHN_lee_gov_init = yes force_update_dynamic_modifier = yes }
+	hidden_effect = { add_to_variable = { TFRKPHN_lee_stab = 0.06 } add_to_variable = { TFRKPHN_cab_sum_stab = 0.06 } add_to_variable = { TFRKPHN_cab_count = 1 } TFRKPHN_lee_gov_init = yes force_update_dynamic_modifier = yes }
 }
 TFRKPHN_cab_appoint_kim_do_eup = {
 	set_country_flag = TFRKPHN_cab_justice_filled
 	set_country_flag = TFRKPHN_cab_has_kim_do_eup
 	custom_effect_tooltip = TFRKPHN_cab_eff_kim_do_eup
-	hidden_effect = { add_to_variable = { TFRKPHN_lee_pp = 0.04 } add_to_variable = { TFRKPHN_cab_sum_pp = 0.04 } add_to_variable = { TFRKPHN_cab_count = 1 } TFRKPHN_lee_gov_init = yes force_update_dynamic_modifier = yes }
+	hidden_effect = { add_to_variable = { TFRKPHN_lee_pp = 0.06 } add_to_variable = { TFRKPHN_cab_sum_pp = 0.06 } add_to_variable = { TFRKPHN_cab_count = 1 } TFRKPHN_lee_gov_init = yes force_update_dynamic_modifier = yes }
 }
 TFRKPHN_cab_appoint_jeong_jeom_sig = {
 	set_country_flag = TFRKPHN_cab_justice_filled
 	set_country_flag = TFRKPHN_cab_has_jeong_jeom_sig
 	custom_effect_tooltip = TFRKPHN_cab_eff_jeong_jeom_sig
-	hidden_effect = { add_to_variable = { TFRKPHN_lee_stab = 0.02 } add_to_variable = { TFRKPHN_lee_war = 0.02 } add_to_variable = { TFRKPHN_cab_sum_stab = 0.02 } add_to_variable = { TFRKPHN_cab_sum_war = 0.02 } add_to_variable = { TFRKPHN_cab_count = 1 } TFRKPHN_lee_gov_init = yes force_update_dynamic_modifier = yes }
+	hidden_effect = { add_to_variable = { TFRKPHN_lee_stab = 0.03 } add_to_variable = { TFRKPHN_lee_war = 0.03 } add_to_variable = { TFRKPHN_cab_sum_stab = 0.03 } add_to_variable = { TFRKPHN_cab_sum_war = 0.03 } add_to_variable = { TFRKPHN_cab_count = 1 } TFRKPHN_lee_gov_init = yes force_update_dynamic_modifier = yes }
 }
 TFRKPHN_cab_appoint_yoo_sang_bum = {
 	set_country_flag = TFRKPHN_cab_justice_filled
 	set_country_flag = TFRKPHN_cab_has_yoo_sang_bum
 	custom_effect_tooltip = TFRKPHN_cab_eff_yoo_sang_bum
-	hidden_effect = { add_to_variable = { TFRKPHN_lee_pp = 0.03 } add_to_variable = { TFRKPHN_lee_stab = 0.01 } add_to_variable = { TFRKPHN_cab_sum_pp = 0.03 } add_to_variable = { TFRKPHN_cab_sum_stab = 0.01 } add_to_variable = { TFRKPHN_cab_count = 1 } TFRKPHN_lee_gov_init = yes force_update_dynamic_modifier = yes }
+	hidden_effect = { add_to_variable = { TFRKPHN_lee_pp = 0.05 } add_to_variable = { TFRKPHN_lee_stab = 0.02 } add_to_variable = { TFRKPHN_cab_sum_pp = 0.05 } add_to_variable = { TFRKPHN_cab_sum_stab = 0.02 } add_to_variable = { TFRKPHN_cab_count = 1 } TFRKPHN_lee_gov_init = yes force_update_dynamic_modifier = yes }
 }
 TFRKPHN_cab_appoint_yoon_suk_yeol = {
 	set_country_flag = TFRKPHN_cab_justice_filled
 	set_country_flag = TFRKPHN_cab_has_yoon_suk_yeol
 	custom_effect_tooltip = TFRKPHN_cab_eff_yoon_suk_yeol
-	hidden_effect = { add_to_variable = { TFRKPHN_lee_stab = 0.04 } add_to_variable = { TFRKPHN_lee_pp = 0.04 } add_to_variable = { TFRKPHN_cab_sum_stab = 0.04 } add_to_variable = { TFRKPHN_cab_sum_pp = 0.04 } add_to_variable = { TFRKPHN_cab_count = 1 } TFRKPHN_lee_gov_init = yes force_update_dynamic_modifier = yes }
+	hidden_effect = { add_to_variable = { TFRKPHN_lee_stab = 0.06 } add_to_variable = { TFRKPHN_lee_pp = 0.06 } add_to_variable = { TFRKPHN_cab_sum_stab = 0.06 } add_to_variable = { TFRKPHN_cab_sum_pp = 0.06 } add_to_variable = { TFRKPHN_cab_count = 1 } TFRKPHN_lee_gov_init = yes force_update_dynamic_modifier = yes }
 }
 TFRKPHN_cab_appoint_lee_chang_yang = {
 	set_country_flag = TFRKPHN_cab_trade_filled
 	set_country_flag = TFRKPHN_cab_has_lee_chang_yang
 	custom_effect_tooltip = TFRKPHN_cab_eff_lee_chang_yang
-	hidden_effect = { add_to_variable = { TFRKPHN_lee_res = 0.04 } add_to_variable = { TFRKPHN_cab_sum_res = 0.04 } add_to_variable = { TFRKPHN_cab_count = 1 } TFRKPHN_lee_gov_init = yes force_update_dynamic_modifier = yes }
+	hidden_effect = { add_to_variable = { TFRKPHN_lee_res = 0.06 } add_to_variable = { TFRKPHN_cab_sum_res = 0.06 } add_to_variable = { TFRKPHN_cab_count = 1 } TFRKPHN_lee_gov_init = yes force_update_dynamic_modifier = yes }
 }
 TFRKPHN_cab_appoint_bang_moon_kyu = {
 	set_country_flag = TFRKPHN_cab_trade_filled
 	set_country_flag = TFRKPHN_cab_has_bang_moon_kyu
 	custom_effect_tooltip = TFRKPHN_cab_eff_bang_moon_kyu
-	hidden_effect = { add_to_variable = { TFRKPHN_lee_cg = -0.02 } add_to_variable = { TFRKPHN_lee_ind = 0.02 } add_to_variable = { TFRKPHN_cab_sum_cg = -0.02 } add_to_variable = { TFRKPHN_cab_sum_ind = 0.02 } add_to_variable = { TFRKPHN_cab_count = 1 } TFRKPHN_lee_gov_init = yes force_update_dynamic_modifier = yes }
+	hidden_effect = { add_to_variable = { TFRKPHN_lee_cg = -0.03 } add_to_variable = { TFRKPHN_lee_ind = 0.03 } add_to_variable = { TFRKPHN_cab_sum_cg = -0.03 } add_to_variable = { TFRKPHN_cab_sum_ind = 0.03 } add_to_variable = { TFRKPHN_cab_count = 1 } TFRKPHN_lee_gov_init = yes force_update_dynamic_modifier = yes }
 }
 TFRKPHN_cab_appoint_ahn_duk_geun = {
 	set_country_flag = TFRKPHN_cab_trade_filled
 	set_country_flag = TFRKPHN_cab_has_ahn_duk_geun
 	custom_effect_tooltip = TFRKPHN_cab_eff_ahn_duk_geun
-	hidden_effect = { add_to_variable = { TFRKPHN_lee_ind = 0.03 } add_to_variable = { TFRKPHN_lee_pp = 0.01 } add_to_variable = { TFRKPHN_cab_sum_ind = 0.03 } add_to_variable = { TFRKPHN_cab_sum_pp = 0.01 } add_to_variable = { TFRKPHN_cab_count = 1 } TFRKPHN_lee_gov_init = yes force_update_dynamic_modifier = yes }
+	hidden_effect = { add_to_variable = { TFRKPHN_lee_ind = 0.05 } add_to_variable = { TFRKPHN_lee_pp = 0.02 } add_to_variable = { TFRKPHN_cab_sum_ind = 0.05 } add_to_variable = { TFRKPHN_cab_sum_pp = 0.02 } add_to_variable = { TFRKPHN_cab_count = 1 } TFRKPHN_lee_gov_init = yes force_update_dynamic_modifier = yes }
 }
 TFRKPHN_cab_appoint_yoon_sang_jick = {
 	set_country_flag = TFRKPHN_cab_trade_filled
 	set_country_flag = TFRKPHN_cab_has_yoon_sang_jick
 	custom_effect_tooltip = TFRKPHN_cab_eff_yoon_sang_jick
-	hidden_effect = { add_to_variable = { TFRKPHN_lee_build = 0.04 } add_to_variable = { TFRKPHN_cab_sum_build = 0.04 } add_to_variable = { TFRKPHN_cab_count = 1 } TFRKPHN_lee_gov_init = yes force_update_dynamic_modifier = yes }
+	hidden_effect = { add_to_variable = { TFRKPHN_lee_build = 0.06 } add_to_variable = { TFRKPHN_cab_sum_build = 0.06 } add_to_variable = { TFRKPHN_cab_count = 1 } TFRKPHN_lee_gov_init = yes force_update_dynamic_modifier = yes }
 }
 TFRKPHN_cab_appoint_joo_hyung_hwan = {
 	set_country_flag = TFRKPHN_cab_trade_filled
 	set_country_flag = TFRKPHN_cab_has_joo_hyung_hwan
 	custom_effect_tooltip = TFRKPHN_cab_eff_joo_hyung_hwan
-	hidden_effect = { add_to_variable = { TFRKPHN_lee_ind = 0.02 } add_to_variable = { TFRKPHN_lee_eff = 0.03 } add_to_variable = { TFRKPHN_cab_sum_ind = 0.02 } add_to_variable = { TFRKPHN_cab_sum_eff = 0.03 } add_to_variable = { TFRKPHN_cab_count = 1 } TFRKPHN_lee_gov_init = yes force_update_dynamic_modifier = yes }
+	hidden_effect = { add_to_variable = { TFRKPHN_lee_ind = 0.03 } add_to_variable = { TFRKPHN_lee_eff = 0.05 } add_to_variable = { TFRKPHN_cab_sum_ind = 0.03 } add_to_variable = { TFRKPHN_cab_sum_eff = 0.05 } add_to_variable = { TFRKPHN_cab_count = 1 } TFRKPHN_lee_gov_init = yes force_update_dynamic_modifier = yes }
 }

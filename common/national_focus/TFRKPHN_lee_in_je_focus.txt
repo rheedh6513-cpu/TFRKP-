@@ -52,6 +52,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			hidden_effect = { country_event = { id = tfrkphn.502 days = 2 } }	# 홍준표 이야기 (hong_build.py)
 			country_event = { id = tfrkphn.263 }
 			add_to_variable = { TFRKPHN_lee_stab = 0.03 }
 			TFRKPHN_lee_gov_init = yes
@@ -70,6 +71,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			hidden_effect = { country_event = { id = tfrkphn.502 days = 2 } }	# 홍준표 이야기 (hong_build.py)
 			country_event = { id = tfrkphn.264 }
 			add_to_variable = { TFRKPHN_lee_pp = 0.05 }
 			TFRKPHN_lee_gov_init = yes
@@ -183,6 +185,12 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			hidden_effect = { country_event = { id = tfrkphn.477 } }
+			hidden_effect = { country_event = { id = tfrkphn.476 days = 3 } }
+			# 일자리 대타협 탭의 일자리 수가 오른다
+			custom_effect_tooltip = TFRKPHN_job_focus_5_tt
+			custom_effect_tooltip = TFRKPHN_job_focus_lab_tt
+			hidden_effect = { TFRKPHN_job_start = yes add_to_variable = { TFRKPHN_job_n = 5 } add_to_variable = { TFRKPHN_job_lab = 5 } TFRKPHN_job_update = yes }
 			add_to_variable = { TFRKPHN_lee_pp = 0.05 }
 			TFRKPHN_lee_gov_init = yes
 			custom_effect_tooltip = TFRKPHN_lee_tt_pp5
@@ -199,6 +207,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			custom_effect_tooltip = TFRKPHN_ut_focus_tt
+			hidden_effect = { set_country_flag = TFRKPHN_ut_on set_country_flag = { flag = TFRKPHN_ut_cd days = 10 value = 1 } }
+			hidden_effect = { country_event = { id = tfrkphn.480 } }
+			# 일자리 대타협 탭의 일자리 수가 오른다
+			custom_effect_tooltip = TFRKPHN_job_focus_5_tt
+			custom_effect_tooltip = TFRKPHN_job_focus_biz_tt
+			hidden_effect = { TFRKPHN_job_start = yes add_to_variable = { TFRKPHN_job_n = 5 } add_to_variable = { TFRKPHN_job_biz = 5 } TFRKPHN_job_update = yes }
 			add_to_variable = { TFRKPHN_lee_build = 0.05 }
 			TFRKPHN_lee_gov_init = yes
 			custom_effect_tooltip = TFRKPHN_lee_tt_build5
@@ -215,6 +230,11 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			hidden_effect = { country_event = { id = tfrkphn.478 } }
+			# 일자리 대타협 탭의 일자리 수가 오른다
+			custom_effect_tooltip = TFRKPHN_job_focus_10_tt
+			custom_effect_tooltip = TFRKPHN_job_focus_lab_tt
+			hidden_effect = { TFRKPHN_job_start = yes add_to_variable = { TFRKPHN_job_n = 10 } add_to_variable = { TFRKPHN_job_lab = 5 } TFRKPHN_job_update = yes }
 			add_to_variable = { TFRKPHN_lee_cg = -0.03 }
 			TFRKPHN_lee_gov_init = yes
 			random_owned_controlled_state = { limit = { is_core_of = ROOT } add_extra_state_shared_building_slots = 1 add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
@@ -232,9 +252,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			set_temp_variable = { TFRKPHN_dev_tmp = 0.01 }
-			custom_effect_tooltip = TFRKPHN_dev_m_ind_up_tt
-			hidden_effect = { add_to_variable = { TFRKPHN_dev_m_ind = 0.01 } TFRKPHN_dev_monthly_ensure = yes }
+			hidden_effect = { country_event = { id = tfrkphn.481 } }
+			# 일자리 대타협 탭의 일자리 수가 오른다
+			custom_effect_tooltip = TFRKPHN_job_focus_5_tt
+			custom_effect_tooltip = TFRKPHN_job_focus_biz_tt
+			hidden_effect = { TFRKPHN_job_start = yes add_to_variable = { TFRKPHN_job_n = 5 } add_to_variable = { TFRKPHN_job_biz = 5 } TFRKPHN_job_update = yes }
+			set_temp_variable = { industrial_development_var_temp = 0.1 }
+			add_industrial_development = yes
 		}
 	}
 
@@ -248,9 +272,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			set_temp_variable = { TFRKPHN_dev_tmp = 0.01 }
-			custom_effect_tooltip = TFRKPHN_dev_m_soc_up_tt
-			hidden_effect = { add_to_variable = { TFRKPHN_dev_m_soc = 0.01 } TFRKPHN_dev_monthly_ensure = yes }
+			hidden_effect = { country_event = { id = tfrkphn.479 } }
+			# 일자리 대타협 탭의 일자리 수가 오른다
+			custom_effect_tooltip = TFRKPHN_job_focus_5_tt
+			custom_effect_tooltip = TFRKPHN_job_focus_lab_tt
+			hidden_effect = { TFRKPHN_job_start = yes add_to_variable = { TFRKPHN_job_n = 5 } add_to_variable = { TFRKPHN_job_lab = 5 } TFRKPHN_job_update = yes }
+			set_temp_variable = { society_development_var_temp = 0.1 }
+			add_society_development = yes
 		}
 	}
 
@@ -264,6 +292,10 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			# 일자리 대타협 탭의 일자리 수가 오른다
+			custom_effect_tooltip = TFRKPHN_job_focus_5_tt
+			custom_effect_tooltip = TFRKPHN_job_focus_biz_tt
+			hidden_effect = { TFRKPHN_job_start = yes add_to_variable = { TFRKPHN_job_n = 5 } add_to_variable = { TFRKPHN_job_biz = 5 } TFRKPHN_job_update = yes }
 			random_owned_controlled_state = { limit = { is_core_of = ROOT NOT = { is_capital = yes } } add_extra_state_shared_building_slots = 2 add_building_construction = { type = industrial_complex level = 2 instant_build = yes } }
 			custom_effect_tooltip = TFRKPHN_lee_tt_civ2
 		}
@@ -280,6 +312,7 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_war_support = 0.03
+			custom_effect_tooltip = TFRKPHN_nk_open_tt
 		}
 	}
 
@@ -294,6 +327,9 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			custom_effect_tooltip = TFRKPHN_c2_nk_tt
+			hidden_effect = { if = { limit = { NOT = { has_country_flag = TFRKPHN_kju_op_done } } TFRKPHN_nk_start = yes TFRKPHN_nk_all_m_5 = yes TFRKPHN_nk_all_m_5 = yes } }
+			hidden_effect = { country_event = { id = tfrkphn.504 days = 2 } }	# 홍준표 이야기 (hong_build.py)
 			add_political_power = 75
 		}
 	}
@@ -309,6 +345,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			custom_effect_tooltip = TFRKPHN_c3_nk_tt
+			hidden_effect = { country_event = { id = tfrkphn.505 } if = { limit = { NOT = { has_country_flag = TFRKPHN_kju_op_done } } TFRKPHN_nk_start = yes TFRKPHN_nk_all_d_5 = yes TFRKPHN_nk_all_d_5 = yes } }
 			add_war_support = 0.05
 		}
 	}
@@ -353,6 +391,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			hidden_effect = { country_event = { id = tfrkphn.506 } }
 			add_political_power = 75
 			JAP = { add_opinion_modifier = { target = ROOT modifier = TFRKPHN_lee_alliance } }
 			ROOT = { add_opinion_modifier = { target = JAP modifier = TFRKPHN_lee_alliance } }
@@ -369,6 +408,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			hidden_effect = { country_event = { id = tfrkphn.507 } }
 			set_temp_variable = { var = income_var_temp value = -10 }
 			add_income = yes
 			add_political_power = 50
@@ -504,6 +544,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			custom_effect_tooltip = TFRKPHN_chb_focus_tt
+			hidden_effect = { country_event = { id = tfrkphn.466 } }
 			add_political_power = 50
 			add_to_variable = { TFRKPHN_lee_ind = 0.03 }
 			TFRKPHN_lee_gov_init = yes
@@ -524,6 +566,13 @@ focus_tree = {
 			add_to_variable = { TFRKPHN_lee_build = 0.05 }
 			TFRKPHN_lee_gov_init = yes
 			custom_effect_tooltip = TFRKPHN_lee_tt_build5
+			custom_effect_tooltip = TFRKPHN_lee_tt_birth10
+			hidden_effect = {	# KP 효과는 10, 20... 에 딱 닿을 때만 국민정신을 바꾸므로 1씩 열 번 올린다
+				for_loop_effect = {
+					start = 0 end = 10 compare = less_than add = 1 value = TFRKPHN_i
+					if = { limit = { check_variable = { KOR_korea_no_sex_var < 50 } } set_temp_variable = { KOR_korea_no_sex_var_temp = 1 } KOR_aging_population_check_up_effect = yes }
+				}
+			}
 		}
 	}
 
@@ -537,9 +586,15 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			set_temp_variable = { TFRKPHN_dev_tmp = 0.01 }
-			custom_effect_tooltip = TFRKPHN_dev_m_soc_up_tt
-			hidden_effect = { add_to_variable = { TFRKPHN_dev_m_soc = 0.01 } TFRKPHN_dev_monthly_ensure = yes }
+			set_temp_variable = { society_development_var_temp = 0.1 }
+			add_society_development = yes
+			custom_effect_tooltip = TFRKPHN_lee_tt_birth10
+			hidden_effect = {	# KP 효과는 10, 20... 에 딱 닿을 때만 국민정신을 바꾸므로 1씩 열 번 올린다
+				for_loop_effect = {
+					start = 0 end = 10 compare = less_than add = 1 value = TFRKPHN_i
+					if = { limit = { check_variable = { KOR_korea_no_sex_var < 50 } } set_temp_variable = { KOR_korea_no_sex_var_temp = 1 } KOR_aging_population_check_up_effect = yes }
+				}
+			}
 		}
 	}
 
@@ -569,6 +624,7 @@ focus_tree = {
 		completion_reward = {
 			add_command_power = 30
 			army_experience = 20
+			custom_effect_tooltip = TFRKPHN_bj_open_tt
 		}
 	}
 
@@ -583,6 +639,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			hidden_effect = { country_event = { id = tfrkphn.501 days = 2 } }	# 홍준표 이야기 (hong_build.py)
 			add_stability = 0.03
 			add_political_power = 50
 		}
@@ -649,9 +706,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			set_temp_variable = { TFRKPHN_dev_tmp = 0.01 }
-			custom_effect_tooltip = TFRKPHN_dev_m_mil_up_tt
-			hidden_effect = { add_to_variable = { TFRKPHN_dev_m_mil = 0.01 } TFRKPHN_dev_monthly_ensure = yes }
+			set_temp_variable = { military_development_var_temp = 0.1 }
+			add_military_development = yes
 		}
 	}
 
@@ -665,6 +721,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			hidden_effect = { country_event = { id = tfrkphn.503 days = 2 } }	# 홍준표 이야기 (hong_build.py)
 			add_war_support = 0.05
 			add_stability = 0.03
 		}

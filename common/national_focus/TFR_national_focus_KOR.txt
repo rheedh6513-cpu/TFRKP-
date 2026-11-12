@@ -1420,7 +1420,7 @@ focus_tree = {
 
 	focus = {
 		id = TFRKPHN_e22_election_cheol_soo
-		icon = GFX_KOR_election_cheol_soo
+		icon = GFX_focus_TFRKPHN_e22_maksang
 		prerequisite = {
 			focus = TFRKPHN_e22_election_depend_ppp
 			focus = TFRKPHN_e22_election_candlelight_dp

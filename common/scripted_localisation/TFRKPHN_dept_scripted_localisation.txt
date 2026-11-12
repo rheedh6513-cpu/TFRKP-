@@ -1,0 +1,21 @@
+# [안내] 기획재정부 이름. 2026년 개편 이벤트(tfrkphn.285)에서 나누면 재정경제부로 바뀐다. 글에서는 [TFRKPHN_mof], [TFRKPHN_mof_s]로 쓴다.
+defined_text = {
+	name = TFRKPHN_mof
+	text = { trigger = { has_country_flag = TFRKPHN_mof_renamed } localization_key = TFRKPHN_mof_new }
+	text = { localization_key = TFRKPHN_mof_old }
+}
+defined_text = {
+	name = TFRKPHN_mof_s
+	text = { trigger = { has_country_flag = TFRKPHN_mof_renamed } localization_key = TFRKPHN_mof_s_new }
+	text = { localization_key = TFRKPHN_mof_s_old }
+}
+# 해임 건의 이벤트(tfrkphn.295)에서 누구인지. 변수 TFRKPHN_dept_who로 고른다
+defined_text = {
+	name = TFRKPHN_dept_who
+	text = { trigger = { check_variable = { TFRKPHN_dept_who = 1 } } localization_key = TFRKPHN_dept_who_pm }
+	text = { trigger = { check_variable = { TFRKPHN_dept_who = 2 } } localization_key = TFRKPHN_dept_who_fm }
+	text = { trigger = { check_variable = { TFRKPHN_dept_who = 3 } } localization_key = TFRKPHN_dept_who_em }
+	text = { trigger = { check_variable = { TFRKPHN_dept_who = 4 } } localization_key = TFRKPHN_dept_who_im }
+	text = { trigger = { check_variable = { TFRKPHN_dept_who = 6 } } localization_key = TFRKPHN_dept_who_dm }
+	text = { localization_key = TFRKPHN_dept_who_pm }
+}

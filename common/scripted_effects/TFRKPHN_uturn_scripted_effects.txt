@@ -1,0 +1,17 @@
+# [안내] 돌아오는 기업: 다음 기업이 올 날을 잡는다. 여섯 곳이 다 오면 마무리 이벤트. uturn_build.py가 만든다.
+TFRKPHN_ut_next = {
+	if = { limit = { check_variable = { TFRKPHN_ut_n > 5.5 } } country_event = { id = tfrkphn.489 days = 5 } }
+	else = { set_country_flag = { flag = TFRKPHN_ut_cd days = 75 value = 1 } }
+}
+TFRKPHN_ut_daily = {
+	if = {
+		limit = { has_country_flag = TFRKPHN_ut_on NOT = { has_country_flag = TFRKPHN_ut_cd } check_variable = { TFRKPHN_ut_sent < 6 } check_variable = { TFRKPHN_ut_sent = TFRKPHN_ut_n } }
+		if = { limit = { check_variable = { TFRKPHN_ut_sent = 0 } } country_event = { id = tfrkphn.483 } }
+		else_if = { limit = { check_variable = { TFRKPHN_ut_sent = 1 } } country_event = { id = tfrkphn.484 } }
+		else_if = { limit = { check_variable = { TFRKPHN_ut_sent = 2 } } country_event = { id = tfrkphn.485 } }
+		else_if = { limit = { check_variable = { TFRKPHN_ut_sent = 3 } } country_event = { id = tfrkphn.486 } }
+		else_if = { limit = { check_variable = { TFRKPHN_ut_sent = 4 } } country_event = { id = tfrkphn.487 } }
+		else_if = { limit = { check_variable = { TFRKPHN_ut_sent = 5 } } country_event = { id = tfrkphn.488 } }
+		add_to_variable = { TFRKPHN_ut_sent = 1 }
+	}
+}

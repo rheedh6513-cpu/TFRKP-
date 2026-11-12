@@ -1,0 +1,333 @@
+# [안내] 이인제 정부 「북진통일 고토회복」. 육군, 해군, 공군 태세(0~100). sk_build.py가 만든다.
+
+# 값을 묶고 단계, 그림, 효과를 다시 계산한다
+TFRKPHN_bj_update = {
+	set_variable = { TFRKPHN_bj_avg = 0 }
+	set_variable = { TFRKPHN_bj_a = 0 }
+	clamp_variable = { var = TFRKPHN_bj_u_mk_c1 min = 0 max = 100 }
+	add_to_variable = { TFRKPHN_bj_a = TFRKPHN_bj_u_mk_c1 }
+	clamp_variable = { var = TFRKPHN_bj_u_mk_c5 min = 0 max = 100 }
+	add_to_variable = { TFRKPHN_bj_a = TFRKPHN_bj_u_mk_c5 }
+	clamp_variable = { var = TFRKPHN_bj_u_mk_c2 min = 0 max = 100 }
+	add_to_variable = { TFRKPHN_bj_a = TFRKPHN_bj_u_mk_c2 }
+	clamp_variable = { var = TFRKPHN_bj_u_mk_c3 min = 0 max = 100 }
+	add_to_variable = { TFRKPHN_bj_a = TFRKPHN_bj_u_mk_c3 }
+	clamp_variable = { var = TFRKPHN_bj_u_mk_cs min = 0 max = 100 }
+	add_to_variable = { TFRKPHN_bj_a = TFRKPHN_bj_u_mk_cs }
+	clamp_variable = { var = TFRKPHN_bj_u_mk_cc min = 0 max = 100 }
+	add_to_variable = { TFRKPHN_bj_a = TFRKPHN_bj_u_mk_cc }
+	clamp_variable = { var = TFRKPHN_bj_u_mk_c7 min = 0 max = 100 }
+	add_to_variable = { TFRKPHN_bj_a = TFRKPHN_bj_u_mk_c7 }
+	clamp_variable = { var = TFRKPHN_bj_u_mk_c0 min = 0 max = 100 }
+	add_to_variable = { TFRKPHN_bj_a = TFRKPHN_bj_u_mk_c0 }
+	clamp_variable = { var = TFRKPHN_bj_u_mk_f_gr min = 0 max = 100 }
+	add_to_variable = { TFRKPHN_bj_a = TFRKPHN_bj_u_mk_f_gr }
+	clamp_variable = { var = TFRKPHN_bj_u_mk_f_sm min = 0 max = 100 }
+	add_to_variable = { TFRKPHN_bj_a = TFRKPHN_bj_u_mk_f_sm }
+	clamp_variable = { var = TFRKPHN_bj_u_mk_f_tr min = 0 max = 100 }
+	add_to_variable = { TFRKPHN_bj_a = TFRKPHN_bj_u_mk_f_tr }
+	divide_variable = { TFRKPHN_bj_a = 11 }
+	set_variable = { TFRKPHN_bj_n = 0 }
+	clamp_variable = { var = TFRKPHN_bj_u_nv_0 min = 0 max = 100 }
+	add_to_variable = { TFRKPHN_bj_n = TFRKPHN_bj_u_nv_0 }
+	clamp_variable = { var = TFRKPHN_bj_u_nv_1 min = 0 max = 100 }
+	add_to_variable = { TFRKPHN_bj_n = TFRKPHN_bj_u_nv_1 }
+	clamp_variable = { var = TFRKPHN_bj_u_nv_2 min = 0 max = 100 }
+	add_to_variable = { TFRKPHN_bj_n = TFRKPHN_bj_u_nv_2 }
+	clamp_variable = { var = TFRKPHN_bj_u_nv_3 min = 0 max = 100 }
+	add_to_variable = { TFRKPHN_bj_n = TFRKPHN_bj_u_nv_3 }
+	clamp_variable = { var = TFRKPHN_bj_u_nv_4 min = 0 max = 100 }
+	add_to_variable = { TFRKPHN_bj_n = TFRKPHN_bj_u_nv_4 }
+	clamp_variable = { var = TFRKPHN_bj_u_nv_5 min = 0 max = 100 }
+	add_to_variable = { TFRKPHN_bj_n = TFRKPHN_bj_u_nv_5 }
+	clamp_variable = { var = TFRKPHN_bj_u_nv_6 min = 0 max = 100 }
+	add_to_variable = { TFRKPHN_bj_n = TFRKPHN_bj_u_nv_6 }
+	clamp_variable = { var = TFRKPHN_bj_u_nv_7 min = 0 max = 100 }
+	add_to_variable = { TFRKPHN_bj_n = TFRKPHN_bj_u_nv_7 }
+	clamp_variable = { var = TFRKPHN_bj_u_nv_8 min = 0 max = 100 }
+	add_to_variable = { TFRKPHN_bj_n = TFRKPHN_bj_u_nv_8 }
+	divide_variable = { TFRKPHN_bj_n = 9 }
+	set_variable = { TFRKPHN_bj_f = 0 }
+	clamp_variable = { var = TFRKPHN_bj_u_ab_0 min = 0 max = 100 }
+	add_to_variable = { TFRKPHN_bj_f = TFRKPHN_bj_u_ab_0 }
+	clamp_variable = { var = TFRKPHN_bj_u_ab_1 min = 0 max = 100 }
+	add_to_variable = { TFRKPHN_bj_f = TFRKPHN_bj_u_ab_1 }
+	clamp_variable = { var = TFRKPHN_bj_u_ab_2 min = 0 max = 100 }
+	add_to_variable = { TFRKPHN_bj_f = TFRKPHN_bj_u_ab_2 }
+	clamp_variable = { var = TFRKPHN_bj_u_ab_3 min = 0 max = 100 }
+	add_to_variable = { TFRKPHN_bj_f = TFRKPHN_bj_u_ab_3 }
+	clamp_variable = { var = TFRKPHN_bj_u_ab_4 min = 0 max = 100 }
+	add_to_variable = { TFRKPHN_bj_f = TFRKPHN_bj_u_ab_4 }
+	clamp_variable = { var = TFRKPHN_bj_u_ab_5 min = 0 max = 100 }
+	add_to_variable = { TFRKPHN_bj_f = TFRKPHN_bj_u_ab_5 }
+	clamp_variable = { var = TFRKPHN_bj_u_ab_6 min = 0 max = 100 }
+	add_to_variable = { TFRKPHN_bj_f = TFRKPHN_bj_u_ab_6 }
+	clamp_variable = { var = TFRKPHN_bj_u_ab_7 min = 0 max = 100 }
+	add_to_variable = { TFRKPHN_bj_f = TFRKPHN_bj_u_ab_7 }
+	clamp_variable = { var = TFRKPHN_bj_u_ab_8 min = 0 max = 100 }
+	add_to_variable = { TFRKPHN_bj_f = TFRKPHN_bj_u_ab_8 }
+	clamp_variable = { var = TFRKPHN_bj_u_ab_9 min = 0 max = 100 }
+	add_to_variable = { TFRKPHN_bj_f = TFRKPHN_bj_u_ab_9 }
+	clamp_variable = { var = TFRKPHN_bj_u_ab_10 min = 0 max = 100 }
+	add_to_variable = { TFRKPHN_bj_f = TFRKPHN_bj_u_ab_10 }
+	clamp_variable = { var = TFRKPHN_bj_u_ab_11 min = 0 max = 100 }
+	add_to_variable = { TFRKPHN_bj_f = TFRKPHN_bj_u_ab_11 }
+	clamp_variable = { var = TFRKPHN_bj_u_ab_12 min = 0 max = 100 }
+	add_to_variable = { TFRKPHN_bj_f = TFRKPHN_bj_u_ab_12 }
+	clamp_variable = { var = TFRKPHN_bj_u_ab_13 min = 0 max = 100 }
+	add_to_variable = { TFRKPHN_bj_f = TFRKPHN_bj_u_ab_13 }
+	clamp_variable = { var = TFRKPHN_bj_u_ab_14 min = 0 max = 100 }
+	add_to_variable = { TFRKPHN_bj_f = TFRKPHN_bj_u_ab_14 }
+	divide_variable = { TFRKPHN_bj_f = 15 }
+	clamp_variable = { var = TFRKPHN_bj_a min = 0 max = 100 }
+	add_to_variable = { TFRKPHN_bj_avg = TFRKPHN_bj_a }
+	set_variable = { TFRKPHN_bj_bf_a = TFRKPHN_bj_a } divide_variable = { TFRKPHN_bj_bf_a = 5 } round_variable = TFRKPHN_bj_bf_a add_to_variable = { TFRKPHN_bj_bf_a = 1 }
+	clamp_variable = { var = TFRKPHN_bj_n min = 0 max = 100 }
+	add_to_variable = { TFRKPHN_bj_avg = TFRKPHN_bj_n }
+	set_variable = { TFRKPHN_bj_bf_n = TFRKPHN_bj_n } divide_variable = { TFRKPHN_bj_bf_n = 5 } round_variable = TFRKPHN_bj_bf_n add_to_variable = { TFRKPHN_bj_bf_n = 1 }
+	clamp_variable = { var = TFRKPHN_bj_f min = 0 max = 100 }
+	add_to_variable = { TFRKPHN_bj_avg = TFRKPHN_bj_f }
+	set_variable = { TFRKPHN_bj_bf_f = TFRKPHN_bj_f } divide_variable = { TFRKPHN_bj_bf_f = 5 } round_variable = TFRKPHN_bj_bf_f add_to_variable = { TFRKPHN_bj_bf_f = 1 }
+	divide_variable = { TFRKPHN_bj_avg = 3 }
+	set_variable = { TFRKPHN_bj_lv = 0 }
+	if = { limit = { check_variable = { TFRKPHN_bj_avg > 19.99 } } add_to_variable = { TFRKPHN_bj_lv = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_bj_avg > 39.99 } } add_to_variable = { TFRKPHN_bj_lv = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_bj_avg > 59.99 } } add_to_variable = { TFRKPHN_bj_lv = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_bj_avg > 79.99 } } add_to_variable = { TFRKPHN_bj_lv = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_bj_avg > 94.99 } } add_to_variable = { TFRKPHN_bj_lv = 1 } }
+	set_variable = { TFRKPHN_bj_fr = TFRKPHN_bj_lv } add_to_variable = { TFRKPHN_bj_fr = 1 }
+	set_variable = { TFRKPHN_bj_pk = TFRKPHN_bj_lv } multiply_variable = { TFRKPHN_bj_pk = 5 }
+	set_variable = { TFRKPHN_bj_pc = TFRKPHN_bj_lv } multiply_variable = { TFRKPHN_bj_pc = 3 }
+	# 세 군 평균 태세가 50을 넘으면 한 번: 작전계획이 책상에 올랐다
+	if = { limit = { check_variable = { TFRKPHN_bj_avg > 49.99 } NOT = { has_country_flag = TFRKPHN_bj_ms_50 } } set_country_flag = TFRKPHN_bj_ms_50 country_event = { id = tfrkphn.460 } }
+	# 세 군 평균 태세가 75을 넘으면 한 번: 동원 태세가 갖춰졌다
+	if = { limit = { check_variable = { TFRKPHN_bj_avg > 74.99 } NOT = { has_country_flag = TFRKPHN_bj_ms_75 } } set_country_flag = TFRKPHN_bj_ms_75 country_event = { id = tfrkphn.461 } }
+	# 세 군 평균 태세가 90을 넘으면 한 번: 북진 준비 완료
+	if = { limit = { check_variable = { TFRKPHN_bj_avg > 89.99 } NOT = { has_country_flag = TFRKPHN_bj_ms_90 } } set_country_flag = TFRKPHN_bj_ms_90 country_event = { id = tfrkphn.462 } }
+	# 세 군 평균 태세가 95을 넘으면 한 번: 상륙을 기다리는 함대
+	if = { limit = { check_variable = { TFRKPHN_bj_avg > 94.99 } NOT = { has_country_flag = TFRKPHN_bj_ms_95 } } set_country_flag = TFRKPHN_bj_ms_95 country_event = { id = tfrkphn.464 } }
+	# 단계가 바뀌면 국가정신을 갈아 끼운다
+	if = {
+		limit = { NOT = { check_variable = { TFRKPHN_bj_lv = TFRKPHN_bj_lvcur } } }
+		if = { limit = { has_idea = TFRKPHN_bj_lv1 } remove_ideas = TFRKPHN_bj_lv1 }
+		if = { limit = { has_idea = TFRKPHN_bj_lv2 } remove_ideas = TFRKPHN_bj_lv2 }
+		if = { limit = { has_idea = TFRKPHN_bj_lv3 } remove_ideas = TFRKPHN_bj_lv3 }
+		if = { limit = { has_idea = TFRKPHN_bj_lv4 } remove_ideas = TFRKPHN_bj_lv4 }
+		if = { limit = { has_idea = TFRKPHN_bj_lv5 } remove_ideas = TFRKPHN_bj_lv5 }
+		if = { limit = { check_variable = { TFRKPHN_bj_lv = 1 } } add_ideas = TFRKPHN_bj_lv1 }
+		if = { limit = { check_variable = { TFRKPHN_bj_lv = 2 } } add_ideas = TFRKPHN_bj_lv2 }
+		if = { limit = { check_variable = { TFRKPHN_bj_lv = 3 } } add_ideas = TFRKPHN_bj_lv3 }
+		if = { limit = { check_variable = { TFRKPHN_bj_lv = 4 } } add_ideas = TFRKPHN_bj_lv4 }
+		if = { limit = { check_variable = { TFRKPHN_bj_lv = 5 } } add_ideas = TFRKPHN_bj_lv5 }
+		set_variable = { TFRKPHN_bj_lvcur = TFRKPHN_bj_lv }
+	}
+	set_variable = { TFRKPHN_bj_m_aorg = TFRKPHN_bj_a } multiply_variable = { TFRKPHN_bj_m_aorg = 0.001 }
+	set_variable = { TFRKPHN_bj_m_aatk = TFRKPHN_bj_a } multiply_variable = { TFRKPHN_bj_m_aatk = 0.0005 }
+	set_variable = { TFRKPHN_bj_m_norg = TFRKPHN_bj_n } multiply_variable = { TFRKPHN_bj_m_norg = 0.001 }
+	set_variable = { TFRKPHN_bj_m_ndmg = TFRKPHN_bj_n } multiply_variable = { TFRKPHN_bj_m_ndmg = 0.001 }
+	set_variable = { TFRKPHN_bj_m_fatk = TFRKPHN_bj_f } multiply_variable = { TFRKPHN_bj_m_fatk = 0.001 }
+	set_variable = { TFRKPHN_bj_m_fdef = TFRKPHN_bj_f } multiply_variable = { TFRKPHN_bj_m_fdef = 0.001 }
+	if = { limit = { NOT = { has_country_flag = TFRKPHN_bj_mod_on } } set_country_flag = TFRKPHN_bj_mod_on add_dynamic_modifier = { modifier = TFRKPHN_bj_force } }
+	force_update_dynamic_modifier = yes
+}
+
+# 시작: 중점 「안보는 대통령의 몫」을 끝낸 다음 날 한 번
+TFRKPHN_bj_start = {
+	if = {
+		limit = { NOT = { has_country_flag = TFRKPHN_bj_started } }
+		set_country_flag = TFRKPHN_bj_started
+		set_variable = { TFRKPHN_bj_view = 0 }
+		set_variable = { TFRKPHN_bj_lvcur = 0 }
+		set_variable = { TFRKPHN_bj_sel_a = 1 }
+		set_variable = { TFRKPHN_bj_u_mk_c1 = 10 }
+		set_variable = { TFRKPHN_bj_u_mk_c5 = 10 }
+		set_variable = { TFRKPHN_bj_u_mk_c2 = 10 }
+		set_variable = { TFRKPHN_bj_u_mk_c3 = 10 }
+		set_variable = { TFRKPHN_bj_u_mk_cs = 10 }
+		set_variable = { TFRKPHN_bj_u_mk_cc = 10 }
+		set_variable = { TFRKPHN_bj_u_mk_c7 = 10 }
+		set_variable = { TFRKPHN_bj_u_mk_c0 = 10 }
+		set_variable = { TFRKPHN_bj_u_mk_f_gr = 10 }
+		set_variable = { TFRKPHN_bj_u_mk_f_sm = 10 }
+		set_variable = { TFRKPHN_bj_u_mk_f_tr = 10 }
+		set_variable = { TFRKPHN_bj_sel_n = 1 }
+		set_variable = { TFRKPHN_bj_u_nv_0 = 10 }
+		set_variable = { TFRKPHN_bj_u_nv_1 = 10 }
+		set_variable = { TFRKPHN_bj_u_nv_2 = 10 }
+		set_variable = { TFRKPHN_bj_u_nv_3 = 10 }
+		set_variable = { TFRKPHN_bj_u_nv_4 = 10 }
+		set_variable = { TFRKPHN_bj_u_nv_5 = 10 }
+		set_variable = { TFRKPHN_bj_u_nv_6 = 10 }
+		set_variable = { TFRKPHN_bj_u_nv_7 = 10 }
+		set_variable = { TFRKPHN_bj_u_nv_8 = 10 }
+		set_variable = { TFRKPHN_bj_sel_f = 1 }
+		set_variable = { TFRKPHN_bj_u_ab_0 = 10 }
+		set_variable = { TFRKPHN_bj_u_ab_1 = 10 }
+		set_variable = { TFRKPHN_bj_u_ab_2 = 10 }
+		set_variable = { TFRKPHN_bj_u_ab_3 = 10 }
+		set_variable = { TFRKPHN_bj_u_ab_4 = 10 }
+		set_variable = { TFRKPHN_bj_u_ab_5 = 10 }
+		set_variable = { TFRKPHN_bj_u_ab_6 = 10 }
+		set_variable = { TFRKPHN_bj_u_ab_7 = 10 }
+		set_variable = { TFRKPHN_bj_u_ab_8 = 10 }
+		set_variable = { TFRKPHN_bj_u_ab_9 = 10 }
+		set_variable = { TFRKPHN_bj_u_ab_10 = 10 }
+		set_variable = { TFRKPHN_bj_u_ab_11 = 10 }
+		set_variable = { TFRKPHN_bj_u_ab_12 = 10 }
+		set_variable = { TFRKPHN_bj_u_ab_13 = 10 }
+		set_variable = { TFRKPHN_bj_u_ab_14 = 10 }
+		TFRKPHN_bj_update = yes
+	}
+}
+
+# 북한군이 무너질 때(군단장들의 귀순, tfrkphn.458): 모든 부대의 태세가 한 번에 오른다
+TFRKPHN_bj_boost = {
+	if = {
+		limit = { has_country_flag = TFRKPHN_bj_started }
+		add_to_variable = { TFRKPHN_bj_u_mk_c1 = 20 }
+		add_to_variable = { TFRKPHN_bj_u_mk_c5 = 20 }
+		add_to_variable = { TFRKPHN_bj_u_mk_c2 = 20 }
+		add_to_variable = { TFRKPHN_bj_u_mk_c3 = 20 }
+		add_to_variable = { TFRKPHN_bj_u_mk_cs = 20 }
+		add_to_variable = { TFRKPHN_bj_u_mk_cc = 20 }
+		add_to_variable = { TFRKPHN_bj_u_mk_c7 = 20 }
+		add_to_variable = { TFRKPHN_bj_u_mk_c0 = 20 }
+		add_to_variable = { TFRKPHN_bj_u_mk_f_gr = 20 }
+		add_to_variable = { TFRKPHN_bj_u_mk_f_sm = 20 }
+		add_to_variable = { TFRKPHN_bj_u_mk_f_tr = 20 }
+		add_to_variable = { TFRKPHN_bj_u_nv_0 = 20 }
+		add_to_variable = { TFRKPHN_bj_u_nv_1 = 20 }
+		add_to_variable = { TFRKPHN_bj_u_nv_2 = 20 }
+		add_to_variable = { TFRKPHN_bj_u_nv_3 = 20 }
+		add_to_variable = { TFRKPHN_bj_u_nv_4 = 20 }
+		add_to_variable = { TFRKPHN_bj_u_nv_5 = 20 }
+		add_to_variable = { TFRKPHN_bj_u_nv_6 = 20 }
+		add_to_variable = { TFRKPHN_bj_u_nv_7 = 20 }
+		add_to_variable = { TFRKPHN_bj_u_nv_8 = 20 }
+		add_to_variable = { TFRKPHN_bj_u_ab_0 = 20 }
+		add_to_variable = { TFRKPHN_bj_u_ab_1 = 20 }
+		add_to_variable = { TFRKPHN_bj_u_ab_2 = 20 }
+		add_to_variable = { TFRKPHN_bj_u_ab_3 = 20 }
+		add_to_variable = { TFRKPHN_bj_u_ab_4 = 20 }
+		add_to_variable = { TFRKPHN_bj_u_ab_5 = 20 }
+		add_to_variable = { TFRKPHN_bj_u_ab_6 = 20 }
+		add_to_variable = { TFRKPHN_bj_u_ab_7 = 20 }
+		add_to_variable = { TFRKPHN_bj_u_ab_8 = 20 }
+		add_to_variable = { TFRKPHN_bj_u_ab_9 = 20 }
+		add_to_variable = { TFRKPHN_bj_u_ab_10 = 20 }
+		add_to_variable = { TFRKPHN_bj_u_ab_11 = 20 }
+		add_to_variable = { TFRKPHN_bj_u_ab_12 = 20 }
+		add_to_variable = { TFRKPHN_bj_u_ab_13 = 20 }
+		add_to_variable = { TFRKPHN_bj_u_ab_14 = 20 }
+		TFRKPHN_bj_update = yes
+	}
+}
+
+# 북한 장비가 넘어올 때(전차 -> 육군, 함정 -> 해군, 전투기 -> 공군): 육군 모든 부대의 태세가 오른다
+TFRKPHN_bj_boost_a = {
+	if = {
+		limit = { has_country_flag = TFRKPHN_bj_started }
+		add_to_variable = { TFRKPHN_bj_u_mk_c1 = 5 }
+		add_to_variable = { TFRKPHN_bj_u_mk_c5 = 5 }
+		add_to_variable = { TFRKPHN_bj_u_mk_c2 = 5 }
+		add_to_variable = { TFRKPHN_bj_u_mk_c3 = 5 }
+		add_to_variable = { TFRKPHN_bj_u_mk_cs = 5 }
+		add_to_variable = { TFRKPHN_bj_u_mk_cc = 5 }
+		add_to_variable = { TFRKPHN_bj_u_mk_c7 = 5 }
+		add_to_variable = { TFRKPHN_bj_u_mk_c0 = 5 }
+		add_to_variable = { TFRKPHN_bj_u_mk_f_gr = 5 }
+		add_to_variable = { TFRKPHN_bj_u_mk_f_sm = 5 }
+		add_to_variable = { TFRKPHN_bj_u_mk_f_tr = 5 }
+		TFRKPHN_bj_update = yes
+	}
+}
+
+# 북한 장비가 넘어올 때(전차 -> 육군, 함정 -> 해군, 전투기 -> 공군): 해군 모든 부대의 태세가 오른다
+TFRKPHN_bj_boost_n = {
+	if = {
+		limit = { has_country_flag = TFRKPHN_bj_started }
+		add_to_variable = { TFRKPHN_bj_u_nv_0 = 5 }
+		add_to_variable = { TFRKPHN_bj_u_nv_1 = 5 }
+		add_to_variable = { TFRKPHN_bj_u_nv_2 = 5 }
+		add_to_variable = { TFRKPHN_bj_u_nv_3 = 5 }
+		add_to_variable = { TFRKPHN_bj_u_nv_4 = 5 }
+		add_to_variable = { TFRKPHN_bj_u_nv_5 = 5 }
+		add_to_variable = { TFRKPHN_bj_u_nv_6 = 5 }
+		add_to_variable = { TFRKPHN_bj_u_nv_7 = 5 }
+		add_to_variable = { TFRKPHN_bj_u_nv_8 = 5 }
+		TFRKPHN_bj_update = yes
+	}
+}
+
+# 북한 장비가 넘어올 때(전차 -> 육군, 함정 -> 해군, 전투기 -> 공군): 공군 모든 부대의 태세가 오른다
+TFRKPHN_bj_boost_f = {
+	if = {
+		limit = { has_country_flag = TFRKPHN_bj_started }
+		add_to_variable = { TFRKPHN_bj_u_ab_0 = 5 }
+		add_to_variable = { TFRKPHN_bj_u_ab_1 = 5 }
+		add_to_variable = { TFRKPHN_bj_u_ab_2 = 5 }
+		add_to_variable = { TFRKPHN_bj_u_ab_3 = 5 }
+		add_to_variable = { TFRKPHN_bj_u_ab_4 = 5 }
+		add_to_variable = { TFRKPHN_bj_u_ab_5 = 5 }
+		add_to_variable = { TFRKPHN_bj_u_ab_6 = 5 }
+		add_to_variable = { TFRKPHN_bj_u_ab_7 = 5 }
+		add_to_variable = { TFRKPHN_bj_u_ab_8 = 5 }
+		add_to_variable = { TFRKPHN_bj_u_ab_9 = 5 }
+		add_to_variable = { TFRKPHN_bj_u_ab_10 = 5 }
+		add_to_variable = { TFRKPHN_bj_u_ab_11 = 5 }
+		add_to_variable = { TFRKPHN_bj_u_ab_12 = 5 }
+		add_to_variable = { TFRKPHN_bj_u_ab_13 = 5 }
+		add_to_variable = { TFRKPHN_bj_u_ab_14 = 5 }
+		TFRKPHN_bj_update = yes
+	}
+}
+
+# 이벤트(tfrkphn.460의 선택, tfrkphn.463)에서 쓴다: 육군 모든 부대의 태세 +10
+TFRKPHN_bj_axis_a = {
+	add_to_variable = { TFRKPHN_bj_u_mk_c1 = 10 }
+	add_to_variable = { TFRKPHN_bj_u_mk_c5 = 10 }
+	add_to_variable = { TFRKPHN_bj_u_mk_c2 = 10 }
+	add_to_variable = { TFRKPHN_bj_u_mk_c3 = 10 }
+	add_to_variable = { TFRKPHN_bj_u_mk_cs = 10 }
+	add_to_variable = { TFRKPHN_bj_u_mk_cc = 10 }
+	add_to_variable = { TFRKPHN_bj_u_mk_c7 = 10 }
+	add_to_variable = { TFRKPHN_bj_u_mk_c0 = 10 }
+	add_to_variable = { TFRKPHN_bj_u_mk_f_gr = 10 }
+	add_to_variable = { TFRKPHN_bj_u_mk_f_sm = 10 }
+	add_to_variable = { TFRKPHN_bj_u_mk_f_tr = 10 }
+	TFRKPHN_bj_update = yes
+}
+
+# 이벤트(tfrkphn.460의 선택, tfrkphn.463)에서 쓴다: 해군 모든 부대의 태세 +10
+TFRKPHN_bj_axis_n = {
+	add_to_variable = { TFRKPHN_bj_u_nv_0 = 10 }
+	add_to_variable = { TFRKPHN_bj_u_nv_1 = 10 }
+	add_to_variable = { TFRKPHN_bj_u_nv_2 = 10 }
+	add_to_variable = { TFRKPHN_bj_u_nv_3 = 10 }
+	add_to_variable = { TFRKPHN_bj_u_nv_4 = 10 }
+	add_to_variable = { TFRKPHN_bj_u_nv_5 = 10 }
+	add_to_variable = { TFRKPHN_bj_u_nv_6 = 10 }
+	add_to_variable = { TFRKPHN_bj_u_nv_7 = 10 }
+	add_to_variable = { TFRKPHN_bj_u_nv_8 = 10 }
+	TFRKPHN_bj_update = yes
+}
+
+# 이벤트(tfrkphn.460의 선택, tfrkphn.463)에서 쓴다: 공군 모든 부대의 태세 +10
+TFRKPHN_bj_axis_f = {
+	add_to_variable = { TFRKPHN_bj_u_ab_0 = 10 }
+	add_to_variable = { TFRKPHN_bj_u_ab_1 = 10 }
+	add_to_variable = { TFRKPHN_bj_u_ab_2 = 10 }
+	add_to_variable = { TFRKPHN_bj_u_ab_3 = 10 }
+	add_to_variable = { TFRKPHN_bj_u_ab_4 = 10 }
+	add_to_variable = { TFRKPHN_bj_u_ab_5 = 10 }
+	add_to_variable = { TFRKPHN_bj_u_ab_6 = 10 }
+	add_to_variable = { TFRKPHN_bj_u_ab_7 = 10 }
+	add_to_variable = { TFRKPHN_bj_u_ab_8 = 10 }
+	add_to_variable = { TFRKPHN_bj_u_ab_9 = 10 }
+	add_to_variable = { TFRKPHN_bj_u_ab_10 = 10 }
+	add_to_variable = { TFRKPHN_bj_u_ab_11 = 10 }
+	add_to_variable = { TFRKPHN_bj_u_ab_12 = 10 }
+	add_to_variable = { TFRKPHN_bj_u_ab_13 = 10 }
+	add_to_variable = { TFRKPHN_bj_u_ab_14 = 10 }
+	TFRKPHN_bj_update = yes
+}

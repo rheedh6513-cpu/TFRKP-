@@ -1,0 +1,21 @@
+# [안내] 「북진통일 고토회복」 탭 위쪽의 북한 / 남한 단추 그림. nkbj_merge.py가 만든다.
+spriteTypes = {
+	spriteType = { name = "GFX_TFRKPHN_nkbj_tab_ov" texturefile = "gfx/interface/gui/TFRKPHN_nk/TFRKPHN_nkbj_tab_ov.png" }
+	spriteType = { name = "GFX_TFRKPHN_nkbj_tab_nk" texturefile = "gfx/interface/gui/TFRKPHN_nk/TFRKPHN_nkbj_tab_nk.png" }
+	spriteType = { name = "GFX_TFRKPHN_nkbj_tab_bj" texturefile = "gfx/interface/gui/TFRKPHN_nk/TFRKPHN_nkbj_tab_bj.png" }
+	spriteType = { name = "GFX_TFRKPHN_nkbj_tab_sel" texturefile = "gfx/interface/gui/TFRKPHN_nk/TFRKPHN_nkbj_tab_sel.png" }
+	spriteType = { name = "GFX_TFRKPHN_nkbj_ov_bg" texturefile = "gfx/interface/gui/TFRKPHN_nk/TFRKPHN_nkbj_ov_bg.png" }
+	spriteType = { name = "GFX_TFRKPHN_nkbj_ov_side" texturefile = "gfx/interface/gui/TFRKPHN_nk/TFRKPHN_nkbj_ov_side.png" }
+	spriteType = { name = "GFX_TFRKPHN_nkbj_ov_click_n" texturefile = "gfx/interface/gui/TFRKPHN_nk/TFRKPHN_nkbj_ov_click_n.png" }
+	spriteType = { name = "GFX_TFRKPHN_nkbj_ov_click_s" texturefile = "gfx/interface/gui/TFRKPHN_nk/TFRKPHN_nkbj_ov_click_s.png" }
+	spriteType = { name = "GFX_TFRKPHN_nkbj_ov_plan2" texturefile = "gfx/interface/gui/TFRKPHN_nk/TFRKPHN_nkbj_ov_plan2.png" }
+	spriteType = { name = "GFX_TFRKPHN_nkbj_ov_plan3" texturefile = "gfx/interface/gui/TFRKPHN_nk/TFRKPHN_nkbj_ov_plan3.png" }
+	spriteType = { name = "GFX_TFRKPHN_nkbj_ov_plan4" texturefile = "gfx/interface/gui/TFRKPHN_nk/TFRKPHN_nkbj_ov_plan4.png" }
+	spriteType = { name = "GFX_TFRKPHN_nkbj_ov_plan5" texturefile = "gfx/interface/gui/TFRKPHN_nk/TFRKPHN_nkbj_ov_plan5.png" }
+	spriteType = { name = "GFX_TFRKPHN_nkbj_ov_front1" texturefile = "gfx/interface/gui/TFRKPHN_nk/TFRKPHN_nkbj_ov_front1.png" }
+	spriteType = { name = "GFX_TFRKPHN_nkbj_ov_front3" texturefile = "gfx/interface/gui/TFRKPHN_nk/TFRKPHN_nkbj_ov_front3.png" }
+	spriteType = { name = "GFX_TFRKPHN_nkbj_ov_front4" texturefile = "gfx/interface/gui/TFRKPHN_nk/TFRKPHN_nkbj_ov_front4.png" }
+	spriteType = { name = "GFX_TFRKPHN_nkbj_ov_front5" texturefile = "gfx/interface/gui/TFRKPHN_nk/TFRKPHN_nkbj_ov_front5.png" }
+	spriteType = { name = "GFX_TFRKPHN_nkbj_ov_n" texturefile = "gfx/interface/gui/TFRKPHN_nk/TFRKPHN_nkbj_ov_n.png" noOfFrames = 7 }
+	spriteType = { name = "GFX_TFRKPHN_nkbj_ov_s" texturefile = "gfx/interface/gui/TFRKPHN_nk/TFRKPHN_nkbj_ov_s.png" noOfFrames = 6 }
+}

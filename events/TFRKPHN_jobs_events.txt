@@ -1,0 +1,46 @@
+# [안내] 이인제 정부 「일자리 대타협」 이벤트. 문구는 localisation/korean/TFRKPHN_job_l_korean.yml. 콘솔: event tfrkphn.281
+add_namespace = tfrkphn
+
+# 총파업: 노동계 게이지가 20 아래로 내려갔을 때
+country_event = {
+	id = tfrkphn.281
+	title = tfrkphn.281.t
+	desc = tfrkphn.281.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.281.a
+		add_stability = -0.05
+		custom_effect_tooltip = tfrkphn.281.tt
+		hidden_effect = { clr_country_flag = TFRKPHN_job_crisis subtract_from_variable = { TFRKPHN_job_n = 5 } set_variable = { TFRKPHN_job_lab = 30 } subtract_from_variable = { TFRKPHN_job_biz = 5 } TFRKPHN_job_update = yes }
+	}
+}
+
+# 투자 철수: 경영계 게이지가 20 아래로 내려갔을 때
+country_event = {
+	id = tfrkphn.282
+	title = tfrkphn.282.t
+	desc = tfrkphn.282.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.282.a
+		add_political_power = -50
+		custom_effect_tooltip = tfrkphn.282.tt
+		hidden_effect = { clr_country_flag = TFRKPHN_job_crisis subtract_from_variable = { TFRKPHN_job_n = 5 } set_variable = { TFRKPHN_job_biz = 30 } subtract_from_variable = { TFRKPHN_job_lab = 5 } TFRKPHN_job_update = yes }
+	}
+}
+
+# 일자리 100만 개 달성
+country_event = {
+	id = tfrkphn.283
+	title = tfrkphn.283.t
+	desc = tfrkphn.283.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.283.a
+		add_stability = 0.10
+	}
+}

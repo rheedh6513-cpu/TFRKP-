@@ -1,0 +1,16 @@
+# [안내] 이인제 정부 「기타 장관 임명」 패널 그림. 장관 그림은 TFRKP_HN.gfx의 GFX_idea_TFRKPHN_<이름>을 그대로 쓴다.
+spriteTypes = {
+	spriteType = { name = "GFX_TFRKPHN_cab_done" texturefile = "gfx/interface/gui/TFRKPHN_cab/TFRKPHN_cab_done.png" }
+	spriteType = { name = "GFX_TFRKPHN_cab_line" texturefile = "gfx/interface/gui/TFRKPHN_cab/TFRKPHN_cab_line.png" }
+	spriteType = { name = "GFX_TFRKPHN_cab_sel" texturefile = "gfx/interface/gui/TFRKPHN_cab/TFRKPHN_cab_sel.png" }
+	spriteType = { name = "GFX_TFRKPHN_cab_nophoto" texturefile = "gfx/interface/gui/TFRKPHN_cab/TFRKPHN_cab_nophoto.png" }
+	spriteType = { name = "GFX_TFRKPHN_cab_box" texturefile = "gfx/interface/gui/TFRKPHN_cab/TFRKPHN_cab_box.png" }
+	spriteType = { name = "GFX_TFRKPHN_cab_card" texturefile = "gfx/interface/gui/TFRKPHN_cab/TFRKPHN_cab_card.png" }
+	spriteType = { name = "GFX_TFRKPHN_cab_tray" texturefile = "gfx/interface/gui/TFRKPHN_cab/TFRKPHN_cab_tray.png" }
+	spriteType = { name = "GFX_TFRKPHN_cab_post_nso" texturefile = "gfx/interface/gui/TFRKPHN_cab/TFRKPHN_cab_post_nso.png" }
+	spriteType = { name = "GFX_TFRKPHN_cab_post_agri" texturefile = "gfx/interface/gui/TFRKPHN_cab/TFRKPHN_cab_post_agri.png" }
+	spriteType = { name = "GFX_TFRKPHN_cab_post_labor" texturefile = "gfx/interface/gui/TFRKPHN_cab/TFRKPHN_cab_post_labor.png" }
+	spriteType = { name = "GFX_TFRKPHN_cab_post_unif" texturefile = "gfx/interface/gui/TFRKPHN_cab/TFRKPHN_cab_post_unif.png" }
+	spriteType = { name = "GFX_TFRKPHN_cab_post_justice" texturefile = "gfx/interface/gui/TFRKPHN_cab/TFRKPHN_cab_post_justice.png" }
+	spriteType = { name = "GFX_TFRKPHN_cab_post_trade" texturefile = "gfx/interface/gui/TFRKPHN_cab/TFRKPHN_cab_post_trade.png" }
+}

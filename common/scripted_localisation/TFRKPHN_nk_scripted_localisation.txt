@@ -1,0 +1,7 @@
+# [안내] 평양의 통제를 벗어난 도의 이름. 변수 TFRKPHN_nk_lost로 고른다. 글에서는 [TFRKPHN_nk_lost_name]으로 쓴다. nk_build.py가 만든다.
+defined_text = {
+	name = TFRKPHN_nk_lost_name
+	text = { trigger = { check_variable = { TFRKPHN_nk_lost = 10 } } localization_key = TFRKPHN_nk_rn_hwn }
+	text = { trigger = { check_variable = { TFRKPHN_nk_lost = 11 } } localization_key = TFRKPHN_nk_rn_gw }
+	text = { localization_key = TFRKPHN_nk_rn_none }
+}

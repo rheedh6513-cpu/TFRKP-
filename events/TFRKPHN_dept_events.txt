@@ -1,0 +1,165 @@
+# [안내] 이인제 정부 「임기를 함께하는 내각」: 신임이 바닥난 부처의 사건. dept_build.py가 만든다. 내용은 dept_data.py의 RESIGN.
+# [안내] 콘솔: event tfrkphn.286 (286~291 사의, 295 해임 건의, 296 공개 충돌)
+add_namespace = tfrkphn
+
+# 국무총리실: 장관이 사의를 밝힌다 (신임 30 이하)
+country_event = {
+	id = tfrkphn.286
+	title = tfrkphn.286.t
+	desc = tfrkphn.286.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.resign.a
+		add_political_power = -40
+		custom_effect_tooltip = tfrkphn.286.a_tt
+		hidden_effect = { clr_country_flag = TFRKPHN_dept_ev add_to_variable = { TFRKPHN_dept_t_pm = 15 } TFRKPHN_dept_update = yes }
+	}
+	option = {
+		name = tfrkphn.resign.b
+		custom_effect_tooltip = tfrkphn.286.b_tt
+		hidden_effect = { clr_country_flag = TFRKPHN_dept_ev add_to_variable = { TFRKPHN_dept_t_pm = 25 } subtract_from_variable = { TFRKPHN_dept_t_em = 10 } TFRKPHN_dept_update = yes }
+	}
+}
+
+# 외교부: 장관이 사의를 밝힌다 (신임 30 이하)
+country_event = {
+	id = tfrkphn.287
+	title = tfrkphn.287.t
+	desc = tfrkphn.287.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.resign.a
+		add_political_power = -40
+		custom_effect_tooltip = tfrkphn.287.a_tt
+		hidden_effect = { clr_country_flag = TFRKPHN_dept_ev add_to_variable = { TFRKPHN_dept_t_fm = 15 } TFRKPHN_dept_update = yes }
+	}
+	option = {
+		name = tfrkphn.resign.b
+		custom_effect_tooltip = tfrkphn.287.b_tt
+		hidden_effect = { clr_country_flag = TFRKPHN_dept_ev add_to_variable = { TFRKPHN_dept_t_fm = 25 } subtract_from_variable = { TFRKPHN_dept_t_nis = 10 } TFRKPHN_dept_update = yes }
+	}
+}
+
+# 기획재정부: 장관이 사의를 밝힌다 (신임 30 이하)
+country_event = {
+	id = tfrkphn.288
+	title = tfrkphn.288.t
+	desc = tfrkphn.288.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.resign.a
+		add_political_power = -40
+		custom_effect_tooltip = tfrkphn.288.a_tt
+		hidden_effect = { clr_country_flag = TFRKPHN_dept_ev add_to_variable = { TFRKPHN_dept_t_em = 15 } TFRKPHN_dept_update = yes }
+	}
+	option = {
+		name = tfrkphn.resign.b
+		custom_effect_tooltip = tfrkphn.288.b_tt
+		hidden_effect = { clr_country_flag = TFRKPHN_dept_ev add_to_variable = { TFRKPHN_dept_t_em = 25 } subtract_from_variable = { TFRKPHN_dept_t_dm = 10 } TFRKPHN_dept_update = yes }
+	}
+}
+
+# 행정안전부: 장관이 사의를 밝힌다 (신임 30 이하)
+country_event = {
+	id = tfrkphn.289
+	title = tfrkphn.289.t
+	desc = tfrkphn.289.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.resign.a
+		add_political_power = -40
+		custom_effect_tooltip = tfrkphn.289.a_tt
+		hidden_effect = { clr_country_flag = TFRKPHN_dept_ev add_to_variable = { TFRKPHN_dept_t_im = 15 } TFRKPHN_dept_update = yes }
+	}
+	option = {
+		name = tfrkphn.resign.b
+		custom_effect_tooltip = tfrkphn.289.b_tt
+		hidden_effect = { clr_country_flag = TFRKPHN_dept_ev add_to_variable = { TFRKPHN_dept_t_im = 25 } subtract_from_variable = { TFRKPHN_dept_t_em = 10 } TFRKPHN_dept_update = yes }
+	}
+}
+
+# 국가정보원: 장관이 사의를 밝힌다 (신임 30 이하)
+country_event = {
+	id = tfrkphn.290
+	title = tfrkphn.290.t
+	desc = tfrkphn.290.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.resign.a
+		add_political_power = -40
+		custom_effect_tooltip = tfrkphn.290.a_tt
+		hidden_effect = { clr_country_flag = TFRKPHN_dept_ev add_to_variable = { TFRKPHN_dept_t_nis = 15 } TFRKPHN_dept_update = yes }
+	}
+	option = {
+		name = tfrkphn.resign.b
+		custom_effect_tooltip = tfrkphn.290.b_tt
+		hidden_effect = { clr_country_flag = TFRKPHN_dept_ev add_to_variable = { TFRKPHN_dept_t_nis = 25 } subtract_from_variable = { TFRKPHN_dept_t_im = 10 } TFRKPHN_dept_update = yes }
+	}
+}
+
+# 국방부: 장관이 사의를 밝힌다 (신임 30 이하)
+country_event = {
+	id = tfrkphn.291
+	title = tfrkphn.291.t
+	desc = tfrkphn.291.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.resign.a
+		add_political_power = -40
+		custom_effect_tooltip = tfrkphn.291.a_tt
+		hidden_effect = { clr_country_flag = TFRKPHN_dept_ev add_to_variable = { TFRKPHN_dept_t_dm = 15 } TFRKPHN_dept_update = yes }
+	}
+	option = {
+		name = tfrkphn.resign.b
+		custom_effect_tooltip = tfrkphn.291.b_tt
+		hidden_effect = { clr_country_flag = TFRKPHN_dept_ev add_to_variable = { TFRKPHN_dept_t_dm = 25 } subtract_from_variable = { TFRKPHN_dept_t_em = 10 } TFRKPHN_dept_update = yes }
+	}
+}
+
+# 국회가 장관 해임을 건의한다 (신임 10 이하. 국정원장은 국무위원이 아니라서 빠진다)
+country_event = {
+	id = tfrkphn.295
+	title = tfrkphn.295.t
+	desc = tfrkphn.295.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.295.a
+		add_stability = -0.03
+		custom_effect_tooltip = tfrkphn.295.tt
+		hidden_effect = { clr_country_flag = TFRKPHN_dept_ev if = { limit = { check_variable = { TFRKPHN_dept_who = 1 } } set_variable = { TFRKPHN_dept_t_pm = 35 } } if = { limit = { check_variable = { TFRKPHN_dept_who = 2 } } set_variable = { TFRKPHN_dept_t_fm = 35 } } if = { limit = { check_variable = { TFRKPHN_dept_who = 3 } } set_variable = { TFRKPHN_dept_t_em = 35 } } if = { limit = { check_variable = { TFRKPHN_dept_who = 4 } } set_variable = { TFRKPHN_dept_t_im = 35 } } if = { limit = { check_variable = { TFRKPHN_dept_who = 6 } } set_variable = { TFRKPHN_dept_t_dm = 35 } } TFRKPHN_dept_update = yes }
+	}
+	option = {
+		name = tfrkphn.295.b
+		add_political_power = -30
+		add_stability = -0.01
+		custom_effect_tooltip = tfrkphn.295.tt
+		hidden_effect = { clr_country_flag = TFRKPHN_dept_ev if = { limit = { check_variable = { TFRKPHN_dept_who = 1 } } set_variable = { TFRKPHN_dept_t_pm = 35 } } if = { limit = { check_variable = { TFRKPHN_dept_who = 2 } } set_variable = { TFRKPHN_dept_t_fm = 35 } } if = { limit = { check_variable = { TFRKPHN_dept_who = 3 } } set_variable = { TFRKPHN_dept_t_em = 35 } } if = { limit = { check_variable = { TFRKPHN_dept_who = 4 } } set_variable = { TFRKPHN_dept_t_im = 35 } } if = { limit = { check_variable = { TFRKPHN_dept_who = 6 } } set_variable = { TFRKPHN_dept_t_dm = 35 } } TFRKPHN_dept_update = yes }
+	}
+}
+
+# 국무회의에서 두 부처가 공개 충돌한다 (신임 30 이하인 부처가 둘 이상)
+country_event = {
+	id = tfrkphn.296
+	title = tfrkphn.296.t
+	desc = tfrkphn.296.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.296.a
+		add_political_power = -60
+		custom_effect_tooltip = tfrkphn.296.a_tt
+		hidden_effect = { clr_country_flag = TFRKPHN_dept_ev if = { limit = { check_variable = { TFRKPHN_dept_t_pm < 31 } } add_to_variable = { TFRKPHN_dept_t_pm = 10 } } if = { limit = { check_variable = { TFRKPHN_dept_t_fm < 31 } } add_to_variable = { TFRKPHN_dept_t_fm = 10 } } if = { limit = { check_variable = { TFRKPHN_dept_t_em < 31 } } add_to_variable = { TFRKPHN_dept_t_em = 10 } } if = { limit = { check_variable = { TFRKPHN_dept_t_im < 31 } } add_to_variable = { TFRKPHN_dept_t_im = 10 } } if = { limit = { check_variable = { TFRKPHN_dept_t_nis < 31 } } add_to_variable = { TFRKPHN_dept_t_nis = 10 } } if = { limit = { check_variable = { TFRKPHN_dept_t_dm < 31 } } add_to_variable = { TFRKPHN_dept_t_dm = 10 } } TFRKPHN_dept_update = yes }
+	}
+	option = {
+		name = tfrkphn.296.b
+		add_stability = -0.02
+		hidden_effect = { clr_country_flag = TFRKPHN_dept_ev }
+	}
+}

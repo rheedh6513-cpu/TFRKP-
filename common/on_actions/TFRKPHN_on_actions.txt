@@ -104,16 +104,92 @@ if = {
 	activate_mission = TFRKPHN_support_decay_mission
 }
 
-# 이인제 정부 부처 신임: 중점 「임기를 함께하는 내각」 뒤에 시작하고, 국무회의 미션을 무한 반복한다
+# 이인제 정부 일자리 대타협: 중점 「일자리 만드는 대통령」 뒤에 탭이 열린다. 장관이 정해지면 시작값을 더한다
+if = {
+	limit = {
+		has_country_flag = TFRKPHN_successor_lee_in_je
+		has_completed_focus = TFRKPHN_lee_in_je_b1
+	}
+	TFRKPHN_job_start = yes
+	TFRKPHN_job_daily = yes
+}
+
+# 이인제 정부 돌아오는 기업
+if = { limit = { has_country_flag = TFRKPHN_ut_on } TFRKPHN_ut_daily = yes }
+
+# 이인제 정부 북진 통일 마무리: 북한 내전에서 평양 정부와 군사위원회가 모두 무너지면 평양 입성 이벤트
+if = {
+	limit = {
+		has_country_flag = TFRKPHN_successor_lee_in_je
+		has_global_flag = TFRKPHN_nk_civil_war
+		NOT = { has_country_flag = TFRKPHN_fin_started }
+		OR = { NOT = { country_exists = PRK } PRK = { has_capitulated = yes } }
+		OR = { NOT = { country_exists = CPK } CPK = { has_capitulated = yes } }
+	}
+	set_country_flag = TFRKPHN_fin_started
+	country_event = { id = tfrkphn.471 }
+}
+
+# 이인제 정부 북진통일 고토회복: 중점 「북한 체제의 근본 변화」나 「안보는 대통령의 몫」 가운데 하나만 끝내도 탭이 열리고 북한 쪽, 남한 쪽이 함께 시작한다
+if = {
+	limit = {
+		has_country_flag = TFRKPHN_successor_lee_in_je
+		OR = { has_completed_focus = TFRKPHN_lee_in_je_c1 has_completed_focus = TFRKPHN_lee_in_je_h1 }
+	}
+	if = { limit = { NOT = { has_country_flag = TFRKPHN_bj_started } } TFRKPHN_bj_start = yes }
+	if = {
+		limit = { NOT = { has_country_flag = TFRKPHN_kju_op_done } }
+		TFRKPHN_nk_start = yes
+		TFRKPHN_nk_bonus = yes		# 「한라에서」를 끝내면 평균 이반도에 따라 참수 준비가 앞당겨진다
+	}
+	# 참수 작전이 끝나면 북한 쪽은 닫히고 남한 쪽만 남는다
+	if = { limit = { has_country_flag = TFRKPHN_kju_op_done check_variable = { TFRKPHN_nkbj_side = 1 } } set_variable = { TFRKPHN_nkbj_side = 0 } }
+	TFRKPHN_nkbj_update = yes		# 한반도 전체 보기의 북쪽 색
+}
+# 참수 작전이 끝난 날 한 번: 흔들어 둔 북한군이 무너진다
+if = {
+	limit = {
+		has_country_flag = TFRKPHN_kju_op_done
+		has_country_flag = TFRKPHN_nk_started
+		NOT = { has_country_flag = TFRKPHN_nk_after_done }
+	}
+	TFRKPHN_nk_after = yes
+}
+
+# 2026년 1월 2일: 기획재정부를 재정경제부와 기획예산처로 나눌지 묻는다 (한 번)
+if = {
+	limit = {
+		date > 2026.1.1
+		NOT = { has_country_flag = TFRKPHN_mof_asked }
+		OR = { has_country_flag = TFRKP_HN_hong_president has_country_flag = TFRKPHN_successor_lee_in_je }
+	}
+	set_country_flag = TFRKPHN_mof_asked
+	country_event = { id = tfrkphn.285 }
+}
+
+# 이인제 정부 부처 신임: 중점 「임기를 함께하는 내각」 뒤에 탭이 열리고, 기타 장관을 다 임명하면 국무회의 미션이 무한 반복한다
 if = {
 	limit = {
 		has_country_flag = TFRKPHN_successor_lee_in_je
 		has_completed_focus = TFRKPHN_lee_in_je_a3
 	}
 	TFRKPHN_dept_start = yes
+	TFRKPHN_dept_home = yes
+	# 기타 장관 여섯 자리를 모두 임명한 뒤에야 국무회의가 돌기 시작한다
 	if = {
-		limit = { NOT = { has_active_mission = TFRKPHN_dept_meeting_mission } }
-		activate_mission = TFRKPHN_dept_meeting_mission
+		limit = {
+			has_country_flag = TFRKPHN_cab_nso_filled
+			has_country_flag = TFRKPHN_cab_agri_filled
+			has_country_flag = TFRKPHN_cab_labor_filled
+			has_country_flag = TFRKPHN_cab_unif_filled
+			has_country_flag = TFRKPHN_cab_justice_filled
+			has_country_flag = TFRKPHN_cab_trade_filled
+		}
+		TFRKPHN_dept_begin = yes
+		if = {
+			limit = { NOT = { has_active_mission = TFRKPHN_dept_meeting_mission } }
+			activate_mission = TFRKPHN_dept_meeting_mission
+		}
 	}
 }
 
@@ -136,6 +212,20 @@ if = {
 }
 
 # 개헌안 가결 후에는 결정 탭의 개헌 결정으로 진행한다 (자동 완료 없음)
+
+# 안철수 초상화를 이 모드의 그림으로 바꾼다 (인물이 나라에 있을 때 한 번)
+if = {
+	limit = {
+		has_character = KOR_ahn_cheol_soo_char
+		NOT = { has_country_flag = TFRKPHN_ahn_portrait }
+	}
+	set_country_flag = TFRKPHN_ahn_portrait
+	KOR_ahn_cheol_soo_char = {
+		set_portraits = {
+			civilian = { large = GFX_portrait_TFRKPHN_ahn_cheol_soo }
+		}
+	}
+}
 
 # 양안전쟁 승전(중국 패배): 홍준표 초상화를 웃는 얼굴로 (참전 여부와 상관없이 한 번)
 if = {

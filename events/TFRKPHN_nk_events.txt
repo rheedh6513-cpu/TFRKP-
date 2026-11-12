@@ -1,0 +1,362 @@
+# [안내] 이인제 정부 「북한 체제의 근본적 변화」 이벤트. 문구는 localisation/korean/TFRKPHN_nk_l_korean.yml. 콘솔: event tfrkphn.297
+add_namespace = tfrkphn
+
+# 전체 평균 이반도가 60을 넘었을 때 한 번
+country_event = {
+	id = tfrkphn.297
+	title = tfrkphn.297.t
+	desc = tfrkphn.297.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.297.a
+		add_war_support = 0.03
+	}
+}
+
+# 저항 조직의 소문
+country_event = {
+	id = tfrkphn.441
+	title = tfrkphn.441.t
+	desc = tfrkphn.441.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.441.a
+		custom_effect_tooltip = tfrkphn.441.a_tt
+		hidden_effect = { TFRKPHN_nk_all_d_2 = yes }
+	}
+}
+
+# 자유조선의 마크
+country_event = {
+	id = tfrkphn.442
+	title = tfrkphn.442.t
+	desc = tfrkphn.442.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.442.a
+		custom_effect_tooltip = tfrkphn.442.a_tt
+		hidden_effect = { TFRKPHN_nk_all_d_3 = yes }
+	}
+}
+
+# 판문점을 넘은 병사
+country_event = {
+	id = tfrkphn.447
+	title = tfrkphn.447.t
+	desc = tfrkphn.447.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.447.a
+		custom_effect_tooltip = tfrkphn.447.a_tt
+		hidden_effect = { TFRKPHN_nk_all_m_3 = yes }
+	}
+}
+
+# 고위급의 귀순
+country_event = {
+	id = tfrkphn.443
+	title = tfrkphn.443.t
+	desc = tfrkphn.443.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.443.a
+		custom_effect_tooltip = tfrkphn.443.a_tt
+		add_war_support = 0.02
+		hidden_effect = { TFRKPHN_nk_all_d_3 = yes }
+	}
+	option = {
+		name = tfrkphn.443.b
+		custom_effect_tooltip = tfrkphn.443.b_tt
+		add_political_power = 30
+		hidden_effect = { TFRKPHN_nk_all_m_4 = yes }
+	}
+}
+
+# 국경경비대가 강을 건넜다
+country_event = {
+	id = tfrkphn.448
+	title = tfrkphn.448.t
+	desc = tfrkphn.448.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.448.a
+		custom_effect_tooltip = tfrkphn.448.a_tt
+		hidden_effect = { TFRKPHN_nk_all_d_2 = yes }
+		hidden_effect = { TFRKPHN_nk_all_m_3 = yes }
+	}
+}
+
+# 외교관의 망명
+country_event = {
+	id = tfrkphn.449
+	title = tfrkphn.449.t
+	desc = tfrkphn.449.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.449.a
+		custom_effect_tooltip = tfrkphn.449.a_tt
+		add_political_power = 25
+		hidden_effect = { TFRKPHN_nk_all_d_2 = yes }
+	}
+}
+
+# 북한에서 시위가 났다
+country_event = {
+	id = tfrkphn.445
+	title = tfrkphn.445.t
+	desc = tfrkphn.445.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.445.a
+		custom_effect_tooltip = tfrkphn.445.a_tt
+		hidden_effect = { if = { limit = { country_exists = PRK } PRK = { add_stability = -0.03 } } }
+		hidden_effect = { TFRKPHN_nk_all_d_4 = yes }
+	}
+}
+
+# 진압 부대가 돌아섰다는 소문
+country_event = {
+	id = tfrkphn.446
+	title = tfrkphn.446.t
+	desc = tfrkphn.446.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.446.a
+		custom_effect_tooltip = tfrkphn.446.a_tt
+		hidden_effect = { if = { limit = { country_exists = PRK } PRK = { add_war_support = -0.03 } } }
+		hidden_effect = { TFRKPHN_nk_all_m_5 = yes }
+	}
+}
+
+# 통제가 무너졌다
+country_event = {
+	id = tfrkphn.450
+	title = tfrkphn.450.t
+	desc = tfrkphn.450.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.450.a
+		custom_effect_tooltip = tfrkphn.450.a_tt
+		hidden_effect = { if = { limit = { country_exists = PRK } PRK = { add_stability = -0.05 } } }
+		hidden_effect = { TFRKPHN_nk_all_d_5 = yes }
+	}
+	option = {
+		name = tfrkphn.450.b
+		custom_effect_tooltip = tfrkphn.450.b_tt
+		hidden_effect = { if = { limit = { country_exists = PRK } PRK = { add_war_support = -0.05 } } }
+		hidden_effect = { TFRKPHN_nk_all_m_4 = yes }
+	}
+}
+
+# 주민들이 총을 들었다
+country_event = {
+	id = tfrkphn.451
+	title = tfrkphn.451.t
+	desc = tfrkphn.451.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.451.a
+		custom_effect_tooltip = tfrkphn.451.a_tt
+		hidden_effect = { if = { limit = { country_exists = PRK } PRK = { add_stability = -0.05 } } }
+		hidden_effect = { TFRKPHN_nk_all_d_4 = yes }
+		hidden_effect = { TFRKPHN_nk_all_m_4 = yes }
+	}
+	option = {
+		name = tfrkphn.451.b
+		custom_effect_tooltip = tfrkphn.451.b_tt
+		hidden_effect = { TFRKPHN_nk_all_d_2 = yes }
+	}
+}
+
+# 전차가 넘어왔다
+country_event = {
+	id = tfrkphn.452
+	title = tfrkphn.452.t
+	desc = tfrkphn.452.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.452.a
+		custom_effect_tooltip = tfrkphn.452.a_tt
+		hidden_effect = { TFRKPHN_nk_get_tank = yes }
+	}
+}
+
+# 전투기가 넘어왔다
+country_event = {
+	id = tfrkphn.444
+	title = tfrkphn.444.t
+	desc = tfrkphn.444.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.444.a
+		custom_effect_tooltip = tfrkphn.444.a_tt
+		hidden_effect = { TFRKPHN_nk_get_jet = yes }
+	}
+}
+
+# 바다 위의 반란
+country_event = {
+	id = tfrkphn.453
+	title = tfrkphn.453.t
+	desc = tfrkphn.453.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.453.a
+		custom_effect_tooltip = tfrkphn.453.a_tt
+		hidden_effect = { TFRKPHN_nk_get_ship = yes }
+	}
+}
+
+
+# 검열 실패: 동요가 너무 높은 부대에서 총정치국 검열단이 쫓겨난다 (되풀이해서 뜸)
+country_event = {
+	id = tfrkphn.465
+	title = tfrkphn.465.t
+	desc = tfrkphn.465.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.465.a
+		custom_effect_tooltip = tfrkphn.465.tt
+	}
+}
+
+# 단속 실패: 이반도가 너무 높은 지역에서 단속하러 간 부대가 당한다 (되풀이해서 뜸)
+country_event = {
+	id = tfrkphn.454
+	title = tfrkphn.454.t
+	desc = tfrkphn.454.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.454.a
+		custom_effect_tooltip = tfrkphn.454.tt
+	}
+}
+
+# 총체적 붕괴: 민간 평균 이반도가 높아지면 북한에 국민정신이 붙는다
+country_event = {
+	id = tfrkphn.455
+	title = tfrkphn.455.t
+	desc = tfrkphn.455.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.455.a
+		custom_effect_tooltip = tfrkphn.455.tt
+	}
+}
+
+# 한 도가 평양의 통제를 벗어난다: 군 평균 동요가 높아지면 (게임 속 이야기)
+country_event = {
+	id = tfrkphn.457
+	title = tfrkphn.457.t
+	desc = tfrkphn.457.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.457.a
+		custom_effect_tooltip = tfrkphn.457.tt
+		hidden_effect = { if = { limit = { country_exists = PRK } PRK = { add_stability = -0.1 add_war_support = -0.1 } } }
+	}
+}
+
+# 군단장들의 귀순: 군 평균 동요가 아주 높아지면 (게임 속 이야기)
+country_event = {
+	id = tfrkphn.458
+	title = tfrkphn.458.t
+	desc = tfrkphn.458.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.458.a
+		custom_effect_tooltip = tfrkphn.458.tt
+		add_command_power = 50
+		army_experience = 50
+		hidden_effect = {
+			set_variable = { TFRKPHN_kju_prep = 100 }
+			set_country_flag = TFRKPHN_kju_prep_done
+			if = { limit = { country_exists = PRK } PRK = { add_ideas = TFRKPHN_nk_disobey } }
+			TFRKPHN_bj_boost = yes
+		}
+	}
+}
+
+# 평양방어군단의 총격전: 군단장들의 귀순 며칠 뒤 (게임 속 이야기)
+country_event = {
+	id = tfrkphn.459
+	title = tfrkphn.459.t
+	desc = tfrkphn.459.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.459.a
+		custom_effect_tooltip = tfrkphn.459.tt
+		hidden_effect = {
+			add_to_variable = { TFRKPHN_nk_d_py = 30 }
+			set_variable = { TFRKPHN_nk_m_cp = 100 }
+			TFRKPHN_nk_update = yes
+			if = { limit = { country_exists = PRK } PRK = { add_stability = -0.1 } }
+		}
+	}
+}
+
+# 김정철의 망명: 민간 평균 이반도가 아주 높아지면 (게임 속 이야기)
+country_event = {
+	id = tfrkphn.456
+	title = tfrkphn.456.t
+	desc = tfrkphn.456.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.456.a
+		custom_effect_tooltip = tfrkphn.456.a_tt
+		add_war_support = 0.05
+		hidden_effect = {
+			if = { limit = { country_exists = PRK } PRK = { add_stability = -0.1 add_war_support = -0.1 } }
+			TFRKPHN_nk_all_m_5 = yes
+		}
+	}
+	option = {
+		name = tfrkphn.456.b
+		custom_effect_tooltip = tfrkphn.456.b_tt
+		add_political_power = 100
+		hidden_effect = {
+			if = { limit = { country_exists = PRK } PRK = { add_stability = -0.1 } }
+		}
+	}
+}
+
+# 참수 작전 뒤: 흔들어 둔 북한군이 무너진다
+country_event = {
+	id = tfrkphn.298
+	title = tfrkphn.298.t
+	desc = tfrkphn.298.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.298.a
+		custom_effect_tooltip = tfrkphn.298.tt
+	}
+}

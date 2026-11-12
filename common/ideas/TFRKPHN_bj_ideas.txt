@@ -1,0 +1,122 @@
+# [안내] 북진통일 고토회복: 세 군 평균 태세의 단계마다 북한군, 중국군 상대 공격과 방어가 붙는다. sk_build.py가 만든다.
+ideas = {
+	country = {
+		TFRKPHN_bj_lv1 = {
+			picture = KOR_yoon_common_conservatism_dynamic_modifir_idea
+			allowed = { original_tag = KOR }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			targeted_modifier = {
+				tag = PRK
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
+			}
+			targeted_modifier = {
+				tag = PRC
+				attack_bonus_against = 0.03
+				defense_bonus_against = 0.03
+			}
+		}
+		TFRKPHN_bj_lv2 = {
+			picture = KOR_yoon_common_conservatism_dynamic_modifir_idea
+			allowed = { original_tag = KOR }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			targeted_modifier = {
+				tag = PRK
+				attack_bonus_against = 0.10
+				defense_bonus_against = 0.10
+			}
+			targeted_modifier = {
+				tag = PRC
+				attack_bonus_against = 0.06
+				defense_bonus_against = 0.06
+			}
+		}
+		TFRKPHN_bj_lv3 = {
+			picture = KOR_yoon_common_conservatism_dynamic_modifir_idea
+			allowed = { original_tag = KOR }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			targeted_modifier = {
+				tag = PRK
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.15
+			}
+			targeted_modifier = {
+				tag = PRC
+				attack_bonus_against = 0.09
+				defense_bonus_against = 0.09
+			}
+		}
+		TFRKPHN_bj_lv4 = {
+			picture = KOR_yoon_common_conservatism_dynamic_modifir_idea
+			allowed = { original_tag = KOR }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			targeted_modifier = {
+				tag = PRK
+				attack_bonus_against = 0.20
+				defense_bonus_against = 0.20
+			}
+			targeted_modifier = {
+				tag = PRC
+				attack_bonus_against = 0.12
+				defense_bonus_against = 0.12
+			}
+		}
+		TFRKPHN_bj_lv5 = {
+			picture = KOR_yoon_common_conservatism_dynamic_modifir_idea
+			allowed = { original_tag = KOR }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			targeted_modifier = {
+				tag = PRK
+				attack_bonus_against = 0.25
+				defense_bonus_against = 0.25
+			}
+			targeted_modifier = {
+				tag = PRC
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.15
+			}
+		}
+		TFRKPHN_bj_plan = {
+			picture = KOR_yoon_common_conservatism_dynamic_modifir_idea
+			allowed = { original_tag = KOR }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				planning_speed = 0.15
+				max_planning_factor = 0.1
+			}
+		}
+		TFRKPHN_bj_mobil = {
+			picture = KOR_yoon_common_conservatism_dynamic_modifir_idea
+			allowed = { original_tag = KOR }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				planning_speed = 0.15
+				max_planning_factor = 0.1
+				training_time_factor = -0.1
+				supply_consumption_factor = -0.1
+			}
+		}
+		TFRKPHN_bj_ready = {
+			picture = KOR_yoon_common_conservatism_dynamic_modifir_idea
+			allowed = { original_tag = KOR }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				planning_speed = 0.15
+				max_planning_factor = 0.1
+				training_time_factor = -0.1
+				supply_consumption_factor = -0.1
+				army_attack_factor = 0.1
+				army_speed_factor = 0.1
+				war_support_factor = 0.1
+			}
+		}
+	}
+}

@@ -1,0 +1,51 @@
+# [안내] 이인제 정부 「북한 체제의 근본적 변화」 패널 그림. nk_build.py가 만든다. 지역 그림은 이반도에 따라 7단계로 색이 바뀐다.
+spriteTypes = {
+	spriteType = { name = "GFX_TFRKPHN_nk_mapbg" texturefile = "gfx/interface/gui/TFRKPHN_nk/TFRKPHN_nk_mapbg.png" }
+	spriteType = { name = "GFX_TFRKPHN_nk_chip" texturefile = "gfx/interface/gui/TFRKPHN_nk/TFRKPHN_nk_chip.png" }
+	spriteType = { name = "GFX_TFRKPHN_nk_chip_sel" texturefile = "gfx/interface/gui/TFRKPHN_nk/TFRKPHN_nk_chip_sel.png" }
+	spriteType = { name = "GFX_TFRKPHN_nk_side" texturefile = "gfx/interface/gui/TFRKPHN_nk/TFRKPHN_nk_side.png" }
+	spriteType = { name = "GFX_TFRKPHN_nk_info" texturefile = "gfx/interface/gui/TFRKPHN_nk/TFRKPHN_nk_info.png" }
+	spriteType = { name = "GFX_TFRKPHN_nk_legend" texturefile = "gfx/interface/gui/TFRKPHN_nk/TFRKPHN_nk_legend.png" }
+	spriteType = { name = "GFX_TFRKPHN_nk_line" texturefile = "gfx/interface/gui/TFRKPHN_nk/TFRKPHN_nk_line.png" }
+	spriteType = { name = "GFX_TFRKPHN_nk_mk_air" texturefile = "gfx/interface/gui/TFRKPHN_nk/TFRKPHN_nk_mk_air.png" }
+	spriteType = { name = "GFX_TFRKPHN_nk_mk_air_hq" texturefile = "gfx/interface/gui/TFRKPHN_nk/TFRKPHN_nk_mk_air_hq.png" }
+	spriteType = { name = "GFX_TFRKPHN_nk_mk_navy" texturefile = "gfx/interface/gui/TFRKPHN_nk/TFRKPHN_nk_mk_navy.png" }
+	spriteType = { name = "GFX_TFRKPHN_nk_mk_sel" texturefile = "gfx/interface/gui/TFRKPHN_nk/TFRKPHN_nk_mk_sel.png" }
+	spriteType = { name = "GFX_TFRKPHN_nk_v_sel" texturefile = "gfx/interface/gui/TFRKPHN_nk/TFRKPHN_nk_v_sel.png" }
+	spriteType = { name = "GFX_TFRKPHN_nk_plan2" texturefile = "gfx/interface/gui/TFRKPHN_nk/TFRKPHN_nk_plan2.png" }
+	spriteType = { name = "GFX_TFRKPHN_nk_plan3" texturefile = "gfx/interface/gui/TFRKPHN_nk/TFRKPHN_nk_plan3.png" }
+	spriteType = { name = "GFX_TFRKPHN_nk_plan4" texturefile = "gfx/interface/gui/TFRKPHN_nk/TFRKPHN_nk_plan4.png" }
+	spriteType = { name = "GFX_TFRKPHN_nk_plan5" texturefile = "gfx/interface/gui/TFRKPHN_nk/TFRKPHN_nk_plan5.png" }
+	spriteType = { name = "GFX_TFRKPHN_nk_nfront1" texturefile = "gfx/interface/gui/TFRKPHN_nk/TFRKPHN_nk_nfront1.png" }
+	spriteType = { name = "GFX_TFRKPHN_nk_nfront3" texturefile = "gfx/interface/gui/TFRKPHN_nk/TFRKPHN_nk_nfront3.png" }
+	spriteType = { name = "GFX_TFRKPHN_nk_nfront4" texturefile = "gfx/interface/gui/TFRKPHN_nk/TFRKPHN_nk_nfront4.png" }
+	spriteType = { name = "GFX_TFRKPHN_nk_nfront5" texturefile = "gfx/interface/gui/TFRKPHN_nk/TFRKPHN_nk_nfront5.png" }
+	spriteType = { name = "GFX_TFRKPHN_nk_v_map" texturefile = "gfx/interface/gui/TFRKPHN_nk/TFRKPHN_nk_v_map.png" }
+	spriteType = { name = "GFX_TFRKPHN_nk_v_army" texturefile = "gfx/interface/gui/TFRKPHN_nk/TFRKPHN_nk_v_army.png" }
+	spriteType = { name = "GFX_TFRKPHN_nk_v_air" texturefile = "gfx/interface/gui/TFRKPHN_nk/TFRKPHN_nk_v_air.png" }
+	spriteType = { name = "GFX_TFRKPHN_nk_v_navy" texturefile = "gfx/interface/gui/TFRKPHN_nk/TFRKPHN_nk_v_navy.png" }
+	spriteType = { name = "GFX_TFRKPHN_nk_mk_c9" texturefile = "gfx/interface/gui/TFRKPHN_nk/TFRKPHN_nk_mk_c9.png" }
+	spriteType = { name = "GFX_TFRKPHN_nk_mk_c12" texturefile = "gfx/interface/gui/TFRKPHN_nk/TFRKPHN_nk_mk_c12.png" }
+	spriteType = { name = "GFX_TFRKPHN_nk_mk_c7" texturefile = "gfx/interface/gui/TFRKPHN_nk/TFRKPHN_nk_mk_c7.png" }
+	spriteType = { name = "GFX_TFRKPHN_nk_mk_c8" texturefile = "gfx/interface/gui/TFRKPHN_nk/TFRKPHN_nk_mk_c8.png" }
+	spriteType = { name = "GFX_TFRKPHN_nk_mk_c11" texturefile = "gfx/interface/gui/TFRKPHN_nk/TFRKPHN_nk_mk_c11.png" }
+	spriteType = { name = "GFX_TFRKPHN_nk_mk_c10" texturefile = "gfx/interface/gui/TFRKPHN_nk/TFRKPHN_nk_mk_c10.png" }
+	spriteType = { name = "GFX_TFRKPHN_nk_mk_c1" texturefile = "gfx/interface/gui/TFRKPHN_nk/TFRKPHN_nk_mk_c1.png" }
+	spriteType = { name = "GFX_TFRKPHN_nk_mk_c5" texturefile = "gfx/interface/gui/TFRKPHN_nk/TFRKPHN_nk_mk_c5.png" }
+	spriteType = { name = "GFX_TFRKPHN_nk_mk_c2" texturefile = "gfx/interface/gui/TFRKPHN_nk/TFRKPHN_nk_mk_c2.png" }
+	spriteType = { name = "GFX_TFRKPHN_nk_mk_c4" texturefile = "gfx/interface/gui/TFRKPHN_nk/TFRKPHN_nk_mk_c4.png" }
+	spriteType = { name = "GFX_TFRKPHN_nk_mk_c3" texturefile = "gfx/interface/gui/TFRKPHN_nk/TFRKPHN_nk_mk_c3.png" }
+	spriteType = { name = "GFX_TFRKPHN_nk_mk_cp" texturefile = "gfx/interface/gui/TFRKPHN_nk/TFRKPHN_nk_mk_cp.png" }
+	spriteType = { name = "GFX_TFRKPHN_nk_r_hb" texturefile = "gfx/interface/gui/TFRKPHN_nk/TFRKPHN_nk_r_hb.png" noOfFrames = 7 }
+	spriteType = { name = "GFX_TFRKPHN_nk_r_ns" texturefile = "gfx/interface/gui/TFRKPHN_nk/TFRKPHN_nk_r_ns.png" noOfFrames = 7 }
+	spriteType = { name = "GFX_TFRKPHN_nk_r_yg" texturefile = "gfx/interface/gui/TFRKPHN_nk/TFRKPHN_nk_r_yg.png" noOfFrames = 7 }
+	spriteType = { name = "GFX_TFRKPHN_nk_r_jg" texturefile = "gfx/interface/gui/TFRKPHN_nk/TFRKPHN_nk_r_jg.png" noOfFrames = 7 }
+	spriteType = { name = "GFX_TFRKPHN_nk_r_pb" texturefile = "gfx/interface/gui/TFRKPHN_nk/TFRKPHN_nk_r_pb.png" noOfFrames = 7 }
+	spriteType = { name = "GFX_TFRKPHN_nk_r_hn" texturefile = "gfx/interface/gui/TFRKPHN_nk/TFRKPHN_nk_r_hn.png" noOfFrames = 7 }
+	spriteType = { name = "GFX_TFRKPHN_nk_r_pn" texturefile = "gfx/interface/gui/TFRKPHN_nk/TFRKPHN_nk_r_pn.png" noOfFrames = 7 }
+	spriteType = { name = "GFX_TFRKPHN_nk_r_py" texturefile = "gfx/interface/gui/TFRKPHN_nk/TFRKPHN_nk_r_py.png" noOfFrames = 7 }
+	spriteType = { name = "GFX_TFRKPHN_nk_r_hwb" texturefile = "gfx/interface/gui/TFRKPHN_nk/TFRKPHN_nk_r_hwb.png" noOfFrames = 7 }
+	spriteType = { name = "GFX_TFRKPHN_nk_r_hwn" texturefile = "gfx/interface/gui/TFRKPHN_nk/TFRKPHN_nk_r_hwn.png" noOfFrames = 7 }
+	spriteType = { name = "GFX_TFRKPHN_nk_r_gw" texturefile = "gfx/interface/gui/TFRKPHN_nk/TFRKPHN_nk_r_gw.png" noOfFrames = 7 }
+	spriteType = { name = "GFX_TFRKPHN_nk_r_ks" texturefile = "gfx/interface/gui/TFRKPHN_nk/TFRKPHN_nk_r_ks.png" noOfFrames = 7 }
+}

@@ -1,0 +1,359 @@
+# [안내] 이인제 정부 「일자리 대타협」. 일자리 수(만 개), 노동계와 경영계 게이지(0~100). jobs_build.py가 만든다.
+
+# 값을 묶고 배수, 막대 그림, 단계 보상, 위기를 다시 계산한다
+TFRKPHN_job_update = {
+	clamp_variable = { var = TFRKPHN_job_lab min = 0 max = 100 }
+	clamp_variable = { var = TFRKPHN_job_biz min = 0 max = 100 }
+	clamp_variable = { var = TFRKPHN_job_n min = 0 max = 200 }
+	# 배수: 노선, 그리고 합의 성사
+	set_variable = { TFRKPHN_job_mult = 1 }
+	if = { limit = { has_completed_focus = TFRKPHN_lee_in_je_d2 } set_variable = { TFRKPHN_job_mult = 1.2 } }
+	if = { limit = { has_completed_focus = TFRKPHN_lee_in_je_d2b } set_variable = { TFRKPHN_job_mult = 0.8 } }
+	if = { limit = { has_country_flag = TFRKPHN_job_pact } multiply_variable = { TFRKPHN_job_mult = 1.5 } }
+	# 내각 탭과의 연결: 기획재정부 신임이 높으면 배수가 오르고 낮으면 내려간다
+	if = { limit = { has_country_flag = TFRKPHN_dept_running check_variable = { TFRKPHN_dept_t_em > 69 } } add_to_variable = { TFRKPHN_job_mult = 0.1 } }
+	if = { limit = { has_country_flag = TFRKPHN_dept_running check_variable = { TFRKPHN_dept_t_em < 31 } } subtract_from_variable = { TFRKPHN_job_mult = 0.1 } }
+	# 한쪽이 너무 내려가면 벌칙: 35 아래는 불만, 20 아래는 반발. 머무는 동안 계속된다
+	set_variable = { TFRKPHN_job_pen_stab = 0 }
+	set_variable = { TFRKPHN_job_pen_build = 0 }
+	if = { limit = { check_variable = { TFRKPHN_job_lab < 35 } } set_variable = { TFRKPHN_job_pen_stab = -0.03 } }
+	if = { limit = { check_variable = { TFRKPHN_job_lab < 20 } } set_variable = { TFRKPHN_job_pen_stab = -0.06 } }
+	if = { limit = { check_variable = { TFRKPHN_job_biz < 35 } } set_variable = { TFRKPHN_job_pen_build = -0.05 } }
+	if = { limit = { check_variable = { TFRKPHN_job_biz < 20 } } set_variable = { TFRKPHN_job_pen_build = -0.1 } }
+	if = { limit = { OR = { check_variable = { TFRKPHN_job_lab < 35 } check_variable = { TFRKPHN_job_biz < 35 } } } subtract_from_variable = { TFRKPHN_job_mult = 0.2 } }
+	clamp_variable = { var = TFRKPHN_job_mult min = 0 max = 5 }
+	force_update_dynamic_modifier = yes
+	# 막대 그림
+	set_variable = { TFRKPHN_job_f_lab = TFRKPHN_job_lab } divide_variable = { TFRKPHN_job_f_lab = 5 } round_variable = TFRKPHN_job_f_lab add_to_variable = { TFRKPHN_job_f_lab = 1 }
+	set_variable = { TFRKPHN_job_f_biz = TFRKPHN_job_biz } divide_variable = { TFRKPHN_job_f_biz = 5 } round_variable = TFRKPHN_job_f_biz add_to_variable = { TFRKPHN_job_f_biz = 1 }
+	set_variable = { TFRKPHN_job_f_n = TFRKPHN_job_n } divide_variable = { TFRKPHN_job_f_n = 4 } round_variable = TFRKPHN_job_f_n add_to_variable = { TFRKPHN_job_f_n = 1 }
+	clamp_variable = { var = TFRKPHN_job_f_n min = 1 max = 26 }
+	# 단계 보상 (한 번씩)
+	if = { limit = { check_variable = { TFRKPHN_job_n > 24.99 } NOT = { has_country_flag = TFRKPHN_job_m0 } } set_country_flag = TFRKPHN_job_m0 add_stability = 0.05 }
+	if = { limit = { check_variable = { TFRKPHN_job_n > 49.99 } NOT = { has_country_flag = TFRKPHN_job_m1 } } set_country_flag = TFRKPHN_job_m1 add_to_variable = { TFRKPHN_lee_cg = -0.05 } TFRKPHN_lee_gov_init = yes force_update_dynamic_modifier = yes }
+	if = {
+		limit = { check_variable = { TFRKPHN_job_n > 74.99 } NOT = { has_country_flag = TFRKPHN_job_m2 } }
+		set_country_flag = TFRKPHN_job_m2
+		random_owned_controlled_state = {
+			limit = { free_building_slots = { building = industrial_complex size > 2 include_locked = yes } }
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = { type = industrial_complex level = 3 instant_build = yes }
+		}
+	}
+	if = { limit = { check_variable = { TFRKPHN_job_n > 99.99 } NOT = { has_country_flag = TFRKPHN_job_m3 } } set_country_flag = TFRKPHN_job_m3 country_event = { id = tfrkphn.283 } }
+	if = { limit = { check_variable = { TFRKPHN_job_n > 49.99 } NOT = { has_country_flag = TFRKPHN_hong_ev_job } } set_country_flag = TFRKPHN_hong_ev_job country_event = { id = tfrkphn.496 days = 2 } }	# 홍준표가 숫자를 묻다 (hong_build.py)
+	# 위기: 한쪽이 20 아래로 내려가면 이벤트 (끝날 때까지 다시 뜨지 않는다)
+	if = {
+		limit = { NOT = { has_country_flag = TFRKPHN_job_crisis } check_variable = { TFRKPHN_job_lab < 20 } }
+		set_country_flag = TFRKPHN_job_crisis
+		country_event = { id = tfrkphn.281 }
+	}
+	else_if = {
+		limit = { NOT = { has_country_flag = TFRKPHN_job_crisis } check_variable = { TFRKPHN_job_biz < 20 } }
+		set_country_flag = TFRKPHN_job_crisis
+		country_event = { id = tfrkphn.282 }
+	}
+}
+
+# 일자리를 더한다: temp 변수 TFRKPHN_job_add 에 기본값(만 개)을 넣고 부른다
+TFRKPHN_job_gain = {
+	multiply_temp_variable = { TFRKPHN_job_add = TFRKPHN_job_mult }
+	add_to_variable = { TFRKPHN_job_n = TFRKPHN_job_add }
+}
+
+# 시작: 하르츠식 대타협이나 국회 입법 중점을 끝낸 다음 날 한 번
+TFRKPHN_job_start = {
+	if = {
+		limit = { NOT = { has_country_flag = TFRKPHN_job_started } }
+		set_country_flag = TFRKPHN_job_started
+		set_variable = { TFRKPHN_job_n = 0 }
+		set_variable = { TFRKPHN_job_lab = 50 }
+		set_variable = { TFRKPHN_job_biz = 50 }
+		TFRKPHN_job_update = yes
+	}
+}
+
+# 매일: 고용노동부와 산업통상자원부 장관이 정해지면 시작값을 한 번 더한다
+TFRKPHN_job_daily = {
+	# 벌칙 보정치를 한 번 붙인다 (이미 탭이 열린 세이브도 포함)
+	if = { limit = { has_country_flag = TFRKPHN_job_started NOT = { has_country_flag = TFRKPHN_job_mod_on } } set_country_flag = TFRKPHN_job_mod_on add_dynamic_modifier = { modifier = TFRKPHN_job_mood } }
+	# 내각 신임이 바뀌었을 수 있으니 배수를 날마다 다시 계산한다
+	if = { limit = { has_country_flag = TFRKPHN_job_started } TFRKPHN_job_update = yes }
+	if = {
+		limit = { has_country_flag = TFRKPHN_job_started NOT = { has_country_flag = TFRKPHN_job_lab_min } has_country_flag = TFRKPHN_cab_labor_filled }
+		set_country_flag = TFRKPHN_job_lab_min
+		if = { limit = { has_country_flag = TFRKPHN_cab_has_lee_jung_sik } add_to_variable = { TFRKPHN_job_lab = 10 } add_to_variable = { TFRKPHN_job_biz = -5 } }
+		if = { limit = { has_country_flag = TFRKPHN_cab_has_lim_i_ja } add_to_variable = { TFRKPHN_job_lab = 10 } add_to_variable = { TFRKPHN_job_biz = -5 } }
+		if = { limit = { has_country_flag = TFRKPHN_cab_has_lee_ki_kweon } add_to_variable = { TFRKPHN_job_lab = -10 } add_to_variable = { TFRKPHN_job_biz = 10 } }
+		TFRKPHN_job_update = yes
+	}
+	if = {
+		limit = { has_country_flag = TFRKPHN_job_started NOT = { has_country_flag = TFRKPHN_job_trade_min } has_country_flag = TFRKPHN_cab_trade_filled }
+		set_country_flag = TFRKPHN_job_trade_min
+		if = { limit = { has_country_flag = TFRKPHN_cab_has_yoon_sang_jick } add_to_variable = { TFRKPHN_job_biz = 10 } }
+		if = { limit = { has_country_flag = TFRKPHN_cab_has_joo_hyung_hwan } add_to_variable = { TFRKPHN_job_biz = 8 } }
+		if = { limit = { has_country_flag = TFRKPHN_cab_has_lee_chang_yang } add_to_variable = { TFRKPHN_job_biz = 8 } }
+		if = { limit = { has_country_flag = TFRKPHN_cab_has_bang_moon_kyu } add_to_variable = { TFRKPHN_job_biz = 5 } }
+		if = { limit = { has_country_flag = TFRKPHN_cab_has_ahn_duk_geun } add_to_variable = { TFRKPHN_job_biz = 5 } }
+		TFRKPHN_job_update = yes
+	}
+}
+
+# 결정마다 하는 일 (두 노선의 결정이 같은 효과를 쓴다)
+TFRKPHN_job_do_retire65 = {
+	set_country_flag = TFRKPHN_job_done_retire65
+	set_temp_variable = { TFRKPHN_job_add = 3 }
+	TFRKPHN_job_gain = yes
+	add_to_variable = { TFRKPHN_job_lab = 10 }
+	subtract_from_variable = { TFRKPHN_job_biz = 8 }
+	TFRKPHN_job_update = yes
+}
+TFRKPHN_job_do_hours52 = {
+	set_country_flag = TFRKPHN_job_done_hours52
+	set_temp_variable = { TFRKPHN_job_add = 4 }
+	TFRKPHN_job_gain = yes
+	add_to_variable = { TFRKPHN_job_lab = 8 }
+	subtract_from_variable = { TFRKPHN_job_biz = 10 }
+	TFRKPHN_job_update = yes
+}
+TFRKPHN_job_do_minwage = {
+	set_country_flag = TFRKPHN_job_done_minwage
+	add_to_variable = { TFRKPHN_job_lab = 12 }
+	subtract_from_variable = { TFRKPHN_job_biz = 12 }
+	TFRKPHN_job_update = yes
+}
+TFRKPHN_job_do_yellow = {
+	set_country_flag = TFRKPHN_job_done_yellow
+	add_to_variable = { TFRKPHN_job_lab = 15 }
+	subtract_from_variable = { TFRKPHN_job_biz = 15 }
+	TFRKPHN_job_update = yes
+}
+TFRKPHN_job_do_regular = {
+	set_country_flag = TFRKPHN_job_done_regular
+	set_temp_variable = { TFRKPHN_job_add = 3 }
+	TFRKPHN_job_gain = yes
+	add_to_variable = { TFRKPHN_job_lab = 10 }
+	subtract_from_variable = { TFRKPHN_job_biz = 4 }
+	if = { limit = { has_country_flag = TFRKPHN_dept_started } subtract_from_variable = { TFRKPHN_dept_t_em = 5 } TFRKPHN_dept_update = yes }
+	TFRKPHN_job_update = yes
+}
+TFRKPHN_job_do_under5 = {
+	set_country_flag = TFRKPHN_job_done_under5
+	add_to_variable = { TFRKPHN_job_lab = 10 }
+	subtract_from_variable = { TFRKPHN_job_biz = 10 }
+	TFRKPHN_job_update = yes
+}
+TFRKPHN_job_do_safety = {
+	set_country_flag = TFRKPHN_job_done_safety
+	add_to_variable = { TFRKPHN_job_lab = 10 }
+	subtract_from_variable = { TFRKPHN_job_biz = 10 }
+	TFRKPHN_job_update = yes
+}
+TFRKPHN_job_do_boardseat = {
+	set_country_flag = TFRKPHN_job_done_boardseat
+	add_to_variable = { TFRKPHN_job_lab = 8 }
+	subtract_from_variable = { TFRKPHN_job_biz = 5 }
+	TFRKPHN_job_update = yes
+}
+TFRKPHN_job_do_insure = {
+	set_country_flag = TFRKPHN_job_done_insure
+	set_temp_variable = { TFRKPHN_job_add = 2 }
+	TFRKPHN_job_gain = yes
+	add_to_variable = { TFRKPHN_job_lab = 8 }
+	subtract_from_variable = { TFRKPHN_job_biz = 5 }
+	if = { limit = { has_country_flag = TFRKPHN_dept_started } subtract_from_variable = { TFRKPHN_dept_t_em = 3 } TFRKPHN_dept_update = yes }
+	TFRKPHN_job_update = yes
+}
+TFRKPHN_job_do_platform = {
+	set_country_flag = TFRKPHN_job_done_platform
+	set_temp_variable = { TFRKPHN_job_add = 1 }
+	TFRKPHN_job_gain = yes
+	add_to_variable = { TFRKPHN_job_lab = 8 }
+	subtract_from_variable = { TFRKPHN_job_biz = 5 }
+	TFRKPHN_job_update = yes
+}
+TFRKPHN_job_do_lumpwage = {
+	set_country_flag = TFRKPHN_job_done_lumpwage
+	set_temp_variable = { TFRKPHN_job_add = 2 }
+	TFRKPHN_job_gain = yes
+	add_to_variable = { TFRKPHN_job_lab = 10 }
+	subtract_from_variable = { TFRKPHN_job_biz = 8 }
+	TFRKPHN_job_update = yes
+}
+TFRKPHN_job_do_public = {
+	set_country_flag = TFRKPHN_job_done_public
+	set_temp_variable = { TFRKPHN_job_add = 8 }
+	TFRKPHN_job_gain = yes
+	add_to_variable = { TFRKPHN_job_lab = 6 }
+	subtract_from_variable = { TFRKPHN_job_biz = 4 }
+	if = { limit = { has_country_flag = TFRKPHN_dept_started } subtract_from_variable = { TFRKPHN_dept_t_em = 5 } add_to_variable = { TFRKPHN_dept_t_im = 5 } TFRKPHN_dept_update = yes }
+	TFRKPHN_job_update = yes
+}
+TFRKPHN_job_do_jobpay = {
+	set_country_flag = TFRKPHN_job_done_jobpay
+	set_temp_variable = { TFRKPHN_job_add = 6 }
+	TFRKPHN_job_gain = yes
+	subtract_from_variable = { TFRKPHN_job_lab = 10 }
+	add_to_variable = { TFRKPHN_job_biz = 10 }
+	TFRKPHN_job_update = yes
+}
+TFRKPHN_job_do_flex = {
+	set_country_flag = TFRKPHN_job_done_flex
+	set_temp_variable = { TFRKPHN_job_add = 5 }
+	TFRKPHN_job_gain = yes
+	subtract_from_variable = { TFRKPHN_job_lab = 12 }
+	add_to_variable = { TFRKPHN_job_biz = 12 }
+	TFRKPHN_job_update = yes
+}
+TFRKPHN_job_do_dispatch = {
+	set_country_flag = TFRKPHN_job_done_dispatch
+	set_temp_variable = { TFRKPHN_job_add = 6 }
+	TFRKPHN_job_gain = yes
+	subtract_from_variable = { TFRKPHN_job_lab = 10 }
+	add_to_variable = { TFRKPHN_job_biz = 10 }
+	TFRKPHN_job_update = yes
+}
+TFRKPHN_job_do_dismiss = {
+	set_country_flag = TFRKPHN_job_done_dismiss
+	set_temp_variable = { TFRKPHN_job_add = 3 }
+	TFRKPHN_job_gain = yes
+	subtract_from_variable = { TFRKPHN_job_lab = 15 }
+	add_to_variable = { TFRKPHN_job_biz = 12 }
+	TFRKPHN_job_update = yes
+}
+TFRKPHN_job_do_wagebysector = {
+	set_country_flag = TFRKPHN_job_done_wagebysector
+	set_temp_variable = { TFRKPHN_job_add = 4 }
+	TFRKPHN_job_gain = yes
+	subtract_from_variable = { TFRKPHN_job_lab = 10 }
+	add_to_variable = { TFRKPHN_job_biz = 10 }
+	TFRKPHN_job_update = yes
+}
+TFRKPHN_job_do_safetydelay = {
+	set_country_flag = TFRKPHN_job_done_safetydelay
+	set_temp_variable = { TFRKPHN_job_add = 2 }
+	TFRKPHN_job_gain = yes
+	subtract_from_variable = { TFRKPHN_job_lab = 10 }
+	add_to_variable = { TFRKPHN_job_biz = 10 }
+	TFRKPHN_job_update = yes
+}
+TFRKPHN_job_do_replace = {
+	set_country_flag = TFRKPHN_job_done_replace
+	subtract_from_variable = { TFRKPHN_job_lab = 15 }
+	add_to_variable = { TFRKPHN_job_biz = 12 }
+	TFRKPHN_job_update = yes
+}
+TFRKPHN_job_do_unionbook = {
+	set_country_flag = TFRKPHN_job_done_unionbook
+	subtract_from_variable = { TFRKPHN_job_lab = 10 }
+	add_to_variable = { TFRKPHN_job_biz = 6 }
+	TFRKPHN_job_update = yes
+}
+TFRKPHN_job_do_hirecredit = {
+	set_country_flag = TFRKPHN_job_done_hirecredit
+	set_temp_variable = { TFRKPHN_job_add = 6 }
+	TFRKPHN_job_gain = yes
+	add_to_variable = { TFRKPHN_job_biz = 8 }
+	if = { limit = { has_country_flag = TFRKPHN_dept_started } subtract_from_variable = { TFRKPHN_dept_t_em = 5 } TFRKPHN_dept_update = yes }
+	TFRKPHN_job_update = yes
+}
+TFRKPHN_job_do_reshore = {
+	set_country_flag = TFRKPHN_job_done_reshore
+	set_temp_variable = { TFRKPHN_job_add = 5 }
+	TFRKPHN_job_gain = yes
+	add_to_variable = { TFRKPHN_job_lab = 2 }
+	add_to_variable = { TFRKPHN_job_biz = 8 }
+	if = { limit = { has_country_flag = TFRKPHN_dept_started } subtract_from_variable = { TFRKPHN_dept_t_em = 3 } TFRKPHN_dept_update = yes }
+	TFRKPHN_job_update = yes
+}
+TFRKPHN_job_do_foreign = {
+	set_country_flag = TFRKPHN_job_done_foreign
+	subtract_from_variable = { TFRKPHN_job_lab = 8 }
+	add_to_variable = { TFRKPHN_job_biz = 10 }
+	if = { limit = { has_country_flag = TFRKPHN_dept_started } add_to_variable = { TFRKPHN_dept_t_fm = 3 } TFRKPHN_dept_update = yes }
+	TFRKPHN_job_update = yes
+}
+TFRKPHN_job_do_benefitcut = {
+	set_country_flag = TFRKPHN_job_done_benefitcut
+	set_temp_variable = { TFRKPHN_job_add = 2 }
+	TFRKPHN_job_gain = yes
+	subtract_from_variable = { TFRKPHN_job_lab = 10 }
+	add_to_variable = { TFRKPHN_job_biz = 6 }
+	TFRKPHN_job_update = yes
+}
+TFRKPHN_job_do_sandbox = {
+	set_country_flag = TFRKPHN_job_done_sandbox
+	set_temp_variable = { TFRKPHN_job_add = 5 }
+	TFRKPHN_job_gain = yes
+	add_to_variable = { TFRKPHN_job_biz = 8 }
+	if = { limit = { has_country_flag = TFRKPHN_dept_started } add_to_variable = { TFRKPHN_dept_t_pm = 5 } TFRKPHN_dept_update = yes }
+	TFRKPHN_job_update = yes
+}
+TFRKPHN_job_do_gwangju = {
+	set_country_flag = TFRKPHN_job_done_gwangju
+	set_temp_variable = { TFRKPHN_job_add = 6 }
+	TFRKPHN_job_gain = yes
+	add_to_variable = { TFRKPHN_job_lab = 5 }
+	add_to_variable = { TFRKPHN_job_biz = 5 }
+	if = { limit = { has_country_flag = TFRKPHN_dept_started } add_to_variable = { TFRKPHN_dept_t_im = 5 } TFRKPHN_dept_update = yes }
+	TFRKPHN_job_update = yes
+}
+TFRKPHN_job_do_jobseeker = {
+	set_country_flag = TFRKPHN_job_done_jobseeker
+	set_temp_variable = { TFRKPHN_job_add = 5 }
+	TFRKPHN_job_gain = yes
+	add_to_variable = { TFRKPHN_job_lab = 4 }
+	add_to_variable = { TFRKPHN_job_biz = 2 }
+	if = { limit = { has_country_flag = TFRKPHN_dept_started } subtract_from_variable = { TFRKPHN_dept_t_em = 3 } TFRKPHN_dept_update = yes }
+	TFRKPHN_job_update = yes
+}
+TFRKPHN_job_do_youthfund = {
+	set_country_flag = TFRKPHN_job_done_youthfund
+	set_temp_variable = { TFRKPHN_job_add = 4 }
+	TFRKPHN_job_gain = yes
+	add_to_variable = { TFRKPHN_job_lab = 3 }
+	add_to_variable = { TFRKPHN_job_biz = 3 }
+	TFRKPHN_job_update = yes
+}
+TFRKPHN_job_do_training = {
+	set_country_flag = TFRKPHN_job_done_training
+	set_temp_variable = { TFRKPHN_job_add = 4 }
+	TFRKPHN_job_gain = yes
+	add_to_variable = { TFRKPHN_job_lab = 3 }
+	add_to_variable = { TFRKPHN_job_biz = 3 }
+	TFRKPHN_job_update = yes
+}
+TFRKPHN_job_do_shipyard = {
+	set_country_flag = TFRKPHN_job_done_shipyard
+	set_temp_variable = { TFRKPHN_job_add = 4 }
+	TFRKPHN_job_gain = yes
+	add_to_variable = { TFRKPHN_job_lab = 5 }
+	add_to_variable = { TFRKPHN_job_biz = 3 }
+	TFRKPHN_job_update = yes
+}
+TFRKPHN_job_do_veteran = {
+	set_country_flag = TFRKPHN_job_done_veteran
+	set_temp_variable = { TFRKPHN_job_add = 6 }
+	TFRKPHN_job_gain = yes
+	add_to_variable = { TFRKPHN_job_lab = 3 }
+	add_to_variable = { TFRKPHN_job_biz = 3 }
+	if = { limit = { has_country_flag = TFRKPHN_dept_started } add_to_variable = { TFRKPHN_dept_t_dm = 5 } TFRKPHN_dept_update = yes }
+	TFRKPHN_job_update = yes
+}
+TFRKPHN_job_do_keepjob = {
+	set_country_flag = TFRKPHN_job_done_keepjob
+	set_temp_variable = { TFRKPHN_job_add = 5 }
+	TFRKPHN_job_gain = yes
+	add_to_variable = { TFRKPHN_job_lab = 4 }
+	add_to_variable = { TFRKPHN_job_biz = 4 }
+	if = { limit = { has_country_flag = TFRKPHN_dept_started } subtract_from_variable = { TFRKPHN_dept_t_em = 5 } TFRKPHN_dept_update = yes }
+	TFRKPHN_job_update = yes
+}
+TFRKPHN_job_do_workstudy = {
+	set_country_flag = TFRKPHN_job_done_workstudy
+	set_temp_variable = { TFRKPHN_job_add = 3 }
+	TFRKPHN_job_gain = yes
+	add_to_variable = { TFRKPHN_job_lab = 2 }
+	add_to_variable = { TFRKPHN_job_biz = 4 }
+	TFRKPHN_job_update = yes
+}

@@ -1,0 +1,179 @@
+# [안내] 이인제 정부 「돌아오는 기업」 이벤트. 문구는 localisation/korean/TFRKPHN_uturn_l_korean.yml. uturn_build.py가 만든다.
+add_namespace = tfrkphn
+
+country_event = {
+	id = tfrkphn.483
+	title = tfrkphn.483.t
+	desc = tfrkphn.483.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {	# 수도권
+		name = TFRKPHN_ut_opt_cap
+		custom_effect_tooltip = TFRKPHN_ut_civ_tt
+		custom_effect_tooltip = TFRKPHN_ut_cap_tt
+		random_owned_controlled_state = { limit = { is_core_of = ROOT } add_extra_state_shared_building_slots = 1 add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+		
+		add_stability = -0.01
+		hidden_effect = { country_event = { id = tfrkphn.482 days = 40 }  TFRKPHN_job_start = yes add_to_variable = { TFRKPHN_job_n = 3 } add_to_variable = { TFRKPHN_job_biz = 3 } TFRKPHN_job_update = yes add_to_variable = { TFRKPHN_ut_n = 1 } TFRKPHN_ut_next = yes }
+	}
+	option = {	# 지방 공단
+		name = TFRKPHN_ut_opt_reg
+		custom_effect_tooltip = TFRKPHN_ut_civ_tt
+		custom_effect_tooltip = TFRKPHN_ut_reg_tt
+		random_owned_controlled_state = { limit = { is_core_of = ROOT } add_extra_state_shared_building_slots = 1 add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+		
+		add_stability = 0.01
+		hidden_effect = { country_event = { id = tfrkphn.482 days = 40 }  TFRKPHN_job_start = yes add_to_variable = { TFRKPHN_job_n = 2 } add_to_variable = { TFRKPHN_job_biz = 1 } TFRKPHN_job_update = yes add_to_variable = { TFRKPHN_ut_n = 1 } TFRKPHN_ut_next = yes }
+	}
+}
+
+country_event = {
+	id = tfrkphn.484
+	title = tfrkphn.484.t
+	desc = tfrkphn.484.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {	# 수도권
+		name = TFRKPHN_ut_opt_cap
+		custom_effect_tooltip = TFRKPHN_ut_civ_tt
+		custom_effect_tooltip = TFRKPHN_ut_cap_tt
+		random_owned_controlled_state = { limit = { is_core_of = ROOT } add_extra_state_shared_building_slots = 1 add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+		
+		add_stability = -0.01
+		hidden_effect = {   TFRKPHN_job_start = yes add_to_variable = { TFRKPHN_job_n = 3 } add_to_variable = { TFRKPHN_job_biz = 3 } TFRKPHN_job_update = yes add_to_variable = { TFRKPHN_ut_n = 1 } TFRKPHN_ut_next = yes }
+	}
+	option = {	# 지방 공단
+		name = TFRKPHN_ut_opt_reg
+		custom_effect_tooltip = TFRKPHN_ut_civ_tt
+		custom_effect_tooltip = TFRKPHN_ut_reg_tt
+		random_owned_controlled_state = { limit = { is_core_of = ROOT } add_extra_state_shared_building_slots = 1 add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+		
+		add_stability = 0.01
+		hidden_effect = {   TFRKPHN_job_start = yes add_to_variable = { TFRKPHN_job_n = 2 } add_to_variable = { TFRKPHN_job_biz = 1 } TFRKPHN_job_update = yes add_to_variable = { TFRKPHN_ut_n = 1 } TFRKPHN_ut_next = yes }
+	}
+}
+
+country_event = {
+	id = tfrkphn.485
+	title = tfrkphn.485.t
+	desc = tfrkphn.485.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {	# 수도권
+		name = TFRKPHN_ut_opt_cap
+		custom_effect_tooltip = TFRKPHN_ut_dock_tt
+		custom_effect_tooltip = TFRKPHN_ut_cap_tt
+		random_owned_controlled_state = { limit = { is_core_of = ROOT is_coastal = yes } add_extra_state_shared_building_slots = 1 add_building_construction = { type = dockyard level = 1 instant_build = yes } }
+		hidden_effect = { if = { limit = { has_country_flag = TFRKPHN_bj_started } TFRKPHN_bj_boost_n = yes } }
+		add_stability = -0.01
+		hidden_effect = {   TFRKPHN_job_start = yes add_to_variable = { TFRKPHN_job_n = 3 } add_to_variable = { TFRKPHN_job_biz = 3 } TFRKPHN_job_update = yes add_to_variable = { TFRKPHN_ut_n = 1 } TFRKPHN_ut_next = yes }
+	}
+	option = {	# 지방 공단
+		name = TFRKPHN_ut_opt_reg
+		custom_effect_tooltip = TFRKPHN_ut_dock_tt
+		custom_effect_tooltip = TFRKPHN_ut_reg_tt
+		random_owned_controlled_state = { limit = { is_core_of = ROOT is_coastal = yes } add_extra_state_shared_building_slots = 1 add_building_construction = { type = dockyard level = 1 instant_build = yes } }
+		hidden_effect = { if = { limit = { has_country_flag = TFRKPHN_bj_started } TFRKPHN_bj_boost_n = yes } }
+		add_stability = 0.01
+		hidden_effect = {   TFRKPHN_job_start = yes add_to_variable = { TFRKPHN_job_n = 2 } add_to_variable = { TFRKPHN_job_biz = 1 } TFRKPHN_job_update = yes add_to_variable = { TFRKPHN_ut_n = 1 } TFRKPHN_ut_next = yes }
+	}
+}
+
+country_event = {
+	id = tfrkphn.486
+	title = tfrkphn.486.t
+	desc = tfrkphn.486.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {	# 수도권
+		name = TFRKPHN_ut_opt_cap
+		custom_effect_tooltip = TFRKPHN_ut_mil_tt
+		custom_effect_tooltip = TFRKPHN_ut_cap_tt
+		random_owned_controlled_state = { limit = { is_core_of = ROOT } add_extra_state_shared_building_slots = 1 add_building_construction = { type = arms_factory level = 1 instant_build = yes } }
+		hidden_effect = { if = { limit = { has_country_flag = TFRKPHN_bj_started } TFRKPHN_bj_boost_a = yes } }
+		add_stability = -0.01
+		hidden_effect = {   TFRKPHN_job_start = yes add_to_variable = { TFRKPHN_job_n = 3 } add_to_variable = { TFRKPHN_job_biz = 3 } TFRKPHN_job_update = yes add_to_variable = { TFRKPHN_ut_n = 1 } TFRKPHN_ut_next = yes }
+	}
+	option = {	# 지방 공단
+		name = TFRKPHN_ut_opt_reg
+		custom_effect_tooltip = TFRKPHN_ut_mil_tt
+		custom_effect_tooltip = TFRKPHN_ut_reg_tt
+		random_owned_controlled_state = { limit = { is_core_of = ROOT } add_extra_state_shared_building_slots = 1 add_building_construction = { type = arms_factory level = 1 instant_build = yes } }
+		hidden_effect = { if = { limit = { has_country_flag = TFRKPHN_bj_started } TFRKPHN_bj_boost_a = yes } }
+		add_stability = 0.01
+		hidden_effect = {   TFRKPHN_job_start = yes add_to_variable = { TFRKPHN_job_n = 2 } add_to_variable = { TFRKPHN_job_biz = 1 } TFRKPHN_job_update = yes add_to_variable = { TFRKPHN_ut_n = 1 } TFRKPHN_ut_next = yes }
+	}
+}
+
+country_event = {
+	id = tfrkphn.487
+	title = tfrkphn.487.t
+	desc = tfrkphn.487.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {	# 수도권
+		name = TFRKPHN_ut_opt_cap
+		custom_effect_tooltip = TFRKPHN_ut_mil_tt
+		custom_effect_tooltip = TFRKPHN_ut_cap_tt
+		random_owned_controlled_state = { limit = { is_core_of = ROOT } add_extra_state_shared_building_slots = 1 add_building_construction = { type = arms_factory level = 1 instant_build = yes } }
+		hidden_effect = { if = { limit = { has_country_flag = TFRKPHN_bj_started } TFRKPHN_bj_boost_a = yes } }
+		add_stability = -0.01
+		hidden_effect = {   TFRKPHN_job_start = yes add_to_variable = { TFRKPHN_job_n = 3 } add_to_variable = { TFRKPHN_job_biz = 3 } TFRKPHN_job_update = yes add_to_variable = { TFRKPHN_ut_n = 1 } TFRKPHN_ut_next = yes }
+	}
+	option = {	# 지방 공단
+		name = TFRKPHN_ut_opt_reg
+		custom_effect_tooltip = TFRKPHN_ut_mil_tt
+		custom_effect_tooltip = TFRKPHN_ut_reg_tt
+		random_owned_controlled_state = { limit = { is_core_of = ROOT } add_extra_state_shared_building_slots = 1 add_building_construction = { type = arms_factory level = 1 instant_build = yes } }
+		hidden_effect = { if = { limit = { has_country_flag = TFRKPHN_bj_started } TFRKPHN_bj_boost_a = yes } }
+		add_stability = 0.01
+		hidden_effect = {   TFRKPHN_job_start = yes add_to_variable = { TFRKPHN_job_n = 2 } add_to_variable = { TFRKPHN_job_biz = 1 } TFRKPHN_job_update = yes add_to_variable = { TFRKPHN_ut_n = 1 } TFRKPHN_ut_next = yes }
+	}
+}
+
+country_event = {
+	id = tfrkphn.488
+	title = tfrkphn.488.t
+	desc = tfrkphn.488.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {	# 수도권
+		name = TFRKPHN_ut_opt_cap
+		custom_effect_tooltip = TFRKPHN_ut_civ_tt
+		custom_effect_tooltip = TFRKPHN_ut_cap_tt
+		random_owned_controlled_state = { limit = { is_core_of = ROOT } add_extra_state_shared_building_slots = 1 add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+		
+		add_stability = -0.01
+		hidden_effect = {   TFRKPHN_job_start = yes add_to_variable = { TFRKPHN_job_n = 3 } add_to_variable = { TFRKPHN_job_biz = 3 } TFRKPHN_job_update = yes add_to_variable = { TFRKPHN_ut_n = 1 } TFRKPHN_ut_next = yes }
+	}
+	option = {	# 지방 공단
+		name = TFRKPHN_ut_opt_reg
+		custom_effect_tooltip = TFRKPHN_ut_civ_tt
+		custom_effect_tooltip = TFRKPHN_ut_reg_tt
+		random_owned_controlled_state = { limit = { is_core_of = ROOT } add_extra_state_shared_building_slots = 1 add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+		
+		add_stability = 0.01
+		hidden_effect = {   TFRKPHN_job_start = yes add_to_variable = { TFRKPHN_job_n = 2 } add_to_variable = { TFRKPHN_job_biz = 1 } TFRKPHN_job_update = yes add_to_variable = { TFRKPHN_ut_n = 1 } TFRKPHN_ut_next = yes }
+	}
+}
+
+# 여섯 곳이 다 돌아온 뒤
+country_event = {
+	id = tfrkphn.489
+	title = tfrkphn.489.t
+	desc = tfrkphn.489.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.489.a
+		add_political_power = 50
+		add_stability = 0.02
+	}
+}

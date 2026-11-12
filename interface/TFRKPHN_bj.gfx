@@ -1,0 +1,40 @@
+# [안내] 이인제 정부 「북진통일 고토회복」 패널 그림. sk_build.py가 만든다.
+spriteTypes = {
+	spriteType = { name = "GFX_TFRKPHN_bj_mapbg" texturefile = "gfx/interface/gui/TFRKPHN_bj/TFRKPHN_bj_mapbg.png" }
+	spriteType = { name = "GFX_TFRKPHN_bj_side" texturefile = "gfx/interface/gui/TFRKPHN_bj/TFRKPHN_bj_side.png" }
+	spriteType = { name = "GFX_TFRKPHN_bj_info" texturefile = "gfx/interface/gui/TFRKPHN_bj/TFRKPHN_bj_info.png" }
+	spriteType = { name = "GFX_TFRKPHN_bj_line" texturefile = "gfx/interface/gui/TFRKPHN_bj/TFRKPHN_bj_line.png" }
+	spriteType = { name = "GFX_TFRKPHN_bj_mk_air" texturefile = "gfx/interface/gui/TFRKPHN_bj/TFRKPHN_bj_mk_air.png" }
+	spriteType = { name = "GFX_TFRKPHN_bj_mk_navy" texturefile = "gfx/interface/gui/TFRKPHN_bj/TFRKPHN_bj_mk_navy.png" }
+	spriteType = { name = "GFX_TFRKPHN_bj_vsel" texturefile = "gfx/interface/gui/TFRKPHN_bj/TFRKPHN_bj_vsel.png" }
+	spriteType = { name = "GFX_TFRKPHN_bj_ring20" texturefile = "gfx/interface/gui/TFRKPHN_bj/TFRKPHN_bj_ring20.png" }
+	spriteType = { name = "GFX_TFRKPHN_bj_ring32" texturefile = "gfx/interface/gui/TFRKPHN_bj/TFRKPHN_bj_ring32.png" }
+	spriteType = { name = "GFX_TFRKPHN_bj_ring28" texturefile = "gfx/interface/gui/TFRKPHN_bj/TFRKPHN_bj_ring28.png" }
+	spriteType = { name = "GFX_TFRKPHN_bj_vb_a" texturefile = "gfx/interface/gui/TFRKPHN_bj/TFRKPHN_bj_vb_a.png" }
+	spriteType = { name = "GFX_TFRKPHN_bj_vb_n" texturefile = "gfx/interface/gui/TFRKPHN_bj/TFRKPHN_bj_vb_n.png" }
+	spriteType = { name = "GFX_TFRKPHN_bj_vb_f" texturefile = "gfx/interface/gui/TFRKPHN_bj/TFRKPHN_bj_vb_f.png" }
+	spriteType = { name = "GFX_TFRKPHN_bj_mk_c1" texturefile = "gfx/interface/gui/TFRKPHN_bj/TFRKPHN_bj_mk_c1.png" }
+	spriteType = { name = "GFX_TFRKPHN_bj_mk_c5" texturefile = "gfx/interface/gui/TFRKPHN_bj/TFRKPHN_bj_mk_c5.png" }
+	spriteType = { name = "GFX_TFRKPHN_bj_mk_c2" texturefile = "gfx/interface/gui/TFRKPHN_bj/TFRKPHN_bj_mk_c2.png" }
+	spriteType = { name = "GFX_TFRKPHN_bj_mk_c3" texturefile = "gfx/interface/gui/TFRKPHN_bj/TFRKPHN_bj_mk_c3.png" }
+	spriteType = { name = "GFX_TFRKPHN_bj_mk_cs" texturefile = "gfx/interface/gui/TFRKPHN_bj/TFRKPHN_bj_mk_cs.png" }
+	spriteType = { name = "GFX_TFRKPHN_bj_mk_cc" texturefile = "gfx/interface/gui/TFRKPHN_bj/TFRKPHN_bj_mk_cc.png" }
+	spriteType = { name = "GFX_TFRKPHN_bj_mk_c7" texturefile = "gfx/interface/gui/TFRKPHN_bj/TFRKPHN_bj_mk_c7.png" }
+	spriteType = { name = "GFX_TFRKPHN_bj_mk_c0" texturefile = "gfx/interface/gui/TFRKPHN_bj/TFRKPHN_bj_mk_c0.png" }
+	spriteType = { name = "GFX_TFRKPHN_bj_mk_f_gr" texturefile = "gfx/interface/gui/TFRKPHN_bj/TFRKPHN_bj_mk_f_gr.png" }
+	spriteType = { name = "GFX_TFRKPHN_bj_mk_f_sm" texturefile = "gfx/interface/gui/TFRKPHN_bj/TFRKPHN_bj_mk_f_sm.png" }
+	spriteType = { name = "GFX_TFRKPHN_bj_mk_f_tr" texturefile = "gfx/interface/gui/TFRKPHN_bj/TFRKPHN_bj_mk_f_tr.png" }
+	spriteType = { name = "GFX_TFRKPHN_bj_mk_ab0" texturefile = "gfx/interface/gui/TFRKPHN_bj/TFRKPHN_bj_mk_ab0.png" }
+	spriteType = { name = "GFX_TFRKPHN_bj_mk_ab1" texturefile = "gfx/interface/gui/TFRKPHN_bj/TFRKPHN_bj_mk_ab1.png" }
+	spriteType = { name = "GFX_TFRKPHN_bj_mk_ab2" texturefile = "gfx/interface/gui/TFRKPHN_bj/TFRKPHN_bj_mk_ab2.png" }
+	spriteType = { name = "GFX_TFRKPHN_bj_mk_ab3" texturefile = "gfx/interface/gui/TFRKPHN_bj/TFRKPHN_bj_mk_ab3.png" }
+	spriteType = { name = "GFX_TFRKPHN_bj_mk_ab5" texturefile = "gfx/interface/gui/TFRKPHN_bj/TFRKPHN_bj_mk_ab5.png" }
+	spriteType = { name = "GFX_TFRKPHN_bj_mk_ab7" texturefile = "gfx/interface/gui/TFRKPHN_bj/TFRKPHN_bj_mk_ab7.png" }
+	spriteType = { name = "GFX_TFRKPHN_bj_mk_ab8" texturefile = "gfx/interface/gui/TFRKPHN_bj/TFRKPHN_bj_mk_ab8.png" }
+	spriteType = { name = "GFX_TFRKPHN_bj_mk_ab10" texturefile = "gfx/interface/gui/TFRKPHN_bj/TFRKPHN_bj_mk_ab10.png" }
+	spriteType = { name = "GFX_TFRKPHN_bj_mk_ab11" texturefile = "gfx/interface/gui/TFRKPHN_bj/TFRKPHN_bj_mk_ab11.png" }
+	spriteType = { name = "GFX_TFRKPHN_bj_mk_ab13" texturefile = "gfx/interface/gui/TFRKPHN_bj/TFRKPHN_bj_mk_ab13.png" }
+	spriteType = { name = "GFX_TFRKPHN_bj_mk_ab14" texturefile = "gfx/interface/gui/TFRKPHN_bj/TFRKPHN_bj_mk_ab14.png" }
+	spriteType = { name = "GFX_TFRKPHN_bj_land" texturefile = "gfx/interface/gui/TFRKPHN_bj/TFRKPHN_bj_land.png" noOfFrames = 6 }
+	spriteType = { name = "GFX_TFRKPHN_bj_bar" texturefile = "gfx/interface/gui/TFRKPHN_bj/TFRKPHN_bj_bar.png" noOfFrames = 21 }
+}

@@ -1,0 +1,48 @@
+# [안내] 북한 체제의 근본적 변화: 민간 평균 이반도가 75을 넘으면 북한에 붙는 국민정신. nk_build.py가 만든다. 값은 nk_data.py의 COLLAPSE_MOD.
+ideas = {
+	country = {
+		TFRKPHN_nk_collapse = {
+			picture = KOR_yoon_common_conservatism_dynamic_modifir_idea
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.3
+				war_support_factor = -0.3
+				political_power_factor = -0.5
+				army_org_factor = -0.2
+				army_attack_factor = -0.15
+				army_defence_factor = -0.15
+				army_morale_factor = -0.2
+				air_attack_factor = -0.15
+				air_defence_factor = -0.15
+				navy_org_factor = -0.15
+				naval_damage_factor = -0.15
+				industrial_capacity_factory = -0.3
+				production_speed_buildings_factor = -0.3
+				research_speed_factor = -0.3
+				conscription_factor = -0.3
+				academic_development_monthly = -0.02
+				industrial_development_monthly = -0.02
+				society_development_monthly = -0.02
+				military_development_monthly = -0.02
+				poverty_development_monthly = -0.02
+				farming_development_monthly = -0.02
+			}
+		}
+		# 군 평균 동요가 90을 넘으면 북한에 붙는다. 값은 nk_data.py의 DISOBEY_MOD
+		TFRKPHN_nk_disobey = {
+			picture = KOR_yoon_common_conservatism_dynamic_modifir_idea
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				army_org_regain = -0.25
+				planning_speed = -0.3
+				supply_consumption_factor = 0.2
+				conscription_factor = -0.2
+				command_power_gain_mult = -0.3
+			}
+		}
+	}
+}

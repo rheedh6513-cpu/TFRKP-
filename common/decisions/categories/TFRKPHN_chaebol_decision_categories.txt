@@ -1,0 +1,9 @@
+# [안내] 이인제 정부: 재벌 개혁. 이벤트 「유승민과의 만남」 뒤에 열린다. 결정은 없고 패널의 카드로 한다.
+TFRKPHN_lee_chaebol_category = {
+	icon = generic_political_actions
+	priority = 203
+	scripted_gui = TFRKPHN_chb_gui
+	visible_when_empty = yes
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_successor_lee_in_je has_country_flag = TFRKPHN_chb_open }
+}

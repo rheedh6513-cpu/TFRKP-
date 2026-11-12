@@ -1,0 +1,39 @@
+# [안내] 이인제 정부 「일자리 대타협」 패널의 동작. jobs_build.py가 만든다.
+scripted_gui = {
+	TFRKPHN_job_gui = {
+		context_type = decision_category
+		window_name = TFRKPHN_job_container
+		properties = {
+			TFRKPHN_job_bar = { frame = TFRKPHN_job_f_n }
+			TFRKPHN_job_g_lab = { frame = TFRKPHN_job_f_lab }
+			TFRKPHN_job_g_biz = { frame = TFRKPHN_job_f_biz }
+		}
+		triggers = {
+			TFRKPHN_job_s_lab_hi_visible = { check_variable = { TFRKPHN_job_lab > 49 } }
+			TFRKPHN_job_s_lab_mid_visible = { check_variable = { TFRKPHN_job_lab > 34 } check_variable = { TFRKPHN_job_lab < 50 } }
+			TFRKPHN_job_s_lab_warn_visible = { check_variable = { TFRKPHN_job_lab > 19 } check_variable = { TFRKPHN_job_lab < 35 } }
+			TFRKPHN_job_s_lab_lo_visible = { check_variable = { TFRKPHN_job_lab < 20 } }
+			TFRKPHN_job_s_biz_hi_visible = { check_variable = { TFRKPHN_job_biz > 49 } }
+			TFRKPHN_job_s_biz_mid_visible = { check_variable = { TFRKPHN_job_biz > 34 } check_variable = { TFRKPHN_job_biz < 50 } }
+			TFRKPHN_job_s_biz_warn_visible = { check_variable = { TFRKPHN_job_biz > 19 } check_variable = { TFRKPHN_job_biz < 35 } }
+			TFRKPHN_job_s_biz_lo_visible = { check_variable = { TFRKPHN_job_biz < 20 } }
+			TFRKPHN_job_route_h_visible = { has_completed_focus = TFRKPHN_lee_in_je_d2 }
+			TFRKPHN_job_route_a_visible = { has_completed_focus = TFRKPHN_lee_in_je_d2b }
+			TFRKPHN_job_route_n_visible = { NOT = { has_completed_focus = TFRKPHN_lee_in_je_d2 } NOT = { has_completed_focus = TFRKPHN_lee_in_je_d2b } }
+			TFRKPHN_job_pact_no_visible = { NOT = { has_country_flag = TFRKPHN_job_pact } }
+			TFRKPHN_job_pact_yes_visible = { has_country_flag = TFRKPHN_job_pact }
+			TFRKPHN_job_msd0_visible = { has_country_flag = TFRKPHN_job_m0 }
+			TFRKPHN_job_ms_y0_visible = { has_country_flag = TFRKPHN_job_m0 }
+			TFRKPHN_job_ms_n0_visible = { NOT = { has_country_flag = TFRKPHN_job_m0 } }
+			TFRKPHN_job_msd1_visible = { has_country_flag = TFRKPHN_job_m1 }
+			TFRKPHN_job_ms_y1_visible = { has_country_flag = TFRKPHN_job_m1 }
+			TFRKPHN_job_ms_n1_visible = { NOT = { has_country_flag = TFRKPHN_job_m1 } }
+			TFRKPHN_job_msd2_visible = { has_country_flag = TFRKPHN_job_m2 }
+			TFRKPHN_job_ms_y2_visible = { has_country_flag = TFRKPHN_job_m2 }
+			TFRKPHN_job_ms_n2_visible = { NOT = { has_country_flag = TFRKPHN_job_m2 } }
+			TFRKPHN_job_msd3_visible = { has_country_flag = TFRKPHN_job_m3 }
+			TFRKPHN_job_ms_y3_visible = { has_country_flag = TFRKPHN_job_m3 }
+			TFRKPHN_job_ms_n3_visible = { NOT = { has_country_flag = TFRKPHN_job_m3 } }
+		}
+	}
+}

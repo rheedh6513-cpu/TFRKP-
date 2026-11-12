@@ -1,0 +1,50 @@
+# [안내] 재벌 개혁: 진행도와 그림 단계를 다시 계산하고, 다 하면 보상, 저항이 높으면 반격 이벤트. chaebol_build.py가 만든다.
+TFRKPHN_chb_check = {
+	set_variable = { TFRKPHN_chb_n = 0 }
+	set_variable = { TFRKPHN_chb_nc = 0 }
+	set_variable = { TFRKPHN_chb_f_ftc = 1 }
+	if = { limit = { has_country_flag = TFRKPHN_chb_done_ftc } add_to_variable = { TFRKPHN_chb_n = 1 } set_variable = { TFRKPHN_chb_f_ftc = 2 } }
+	if = { limit = { has_country_flag = TFRKPHN_chb_comp_ftc } add_to_variable = { TFRKPHN_chb_nc = 1 } set_variable = { TFRKPHN_chb_f_ftc = 3 } }
+	set_variable = { TFRKPHN_chb_f_class = 1 }
+	if = { limit = { has_country_flag = TFRKPHN_chb_done_class } add_to_variable = { TFRKPHN_chb_n = 1 } set_variable = { TFRKPHN_chb_f_class = 2 } }
+	if = { limit = { has_country_flag = TFRKPHN_chb_comp_class } add_to_variable = { TFRKPHN_chb_nc = 1 } set_variable = { TFRKPHN_chb_f_class = 3 } }
+	set_variable = { TFRKPHN_chb_f_punitive = 1 }
+	if = { limit = { has_country_flag = TFRKPHN_chb_done_punitive } add_to_variable = { TFRKPHN_chb_n = 1 } set_variable = { TFRKPHN_chb_f_punitive = 2 } }
+	if = { limit = { has_country_flag = TFRKPHN_chb_comp_punitive } add_to_variable = { TFRKPHN_chb_nc = 1 } set_variable = { TFRKPHN_chb_f_punitive = 3 } }
+	set_variable = { TFRKPHN_chb_f_private = 1 }
+	if = { limit = { has_country_flag = TFRKPHN_chb_done_private } add_to_variable = { TFRKPHN_chb_n = 1 } set_variable = { TFRKPHN_chb_f_private = 2 } }
+	if = { limit = { has_country_flag = TFRKPHN_chb_comp_private } add_to_variable = { TFRKPHN_chb_nc = 1 } set_variable = { TFRKPHN_chb_f_private = 3 } }
+	set_variable = { TFRKPHN_chb_f_internal = 1 }
+	if = { limit = { has_country_flag = TFRKPHN_chb_done_internal } add_to_variable = { TFRKPHN_chb_n = 1 } set_variable = { TFRKPHN_chb_f_internal = 2 } }
+	if = { limit = { has_country_flag = TFRKPHN_chb_comp_internal } add_to_variable = { TFRKPHN_chb_nc = 1 } set_variable = { TFRKPHN_chb_f_internal = 3 } }
+	set_variable = { TFRKPHN_chb_f_inherit = 1 }
+	if = { limit = { has_country_flag = TFRKPHN_chb_done_inherit } add_to_variable = { TFRKPHN_chb_n = 1 } set_variable = { TFRKPHN_chb_f_inherit = 2 } }
+	if = { limit = { has_country_flag = TFRKPHN_chb_comp_inherit } add_to_variable = { TFRKPHN_chb_nc = 1 } set_variable = { TFRKPHN_chb_f_inherit = 3 } }
+	set_variable = { TFRKPHN_chb_f_pardon = 1 }
+	if = { limit = { has_country_flag = TFRKPHN_chb_done_pardon } add_to_variable = { TFRKPHN_chb_n = 1 } set_variable = { TFRKPHN_chb_f_pardon = 2 } }
+	if = { limit = { has_country_flag = TFRKPHN_chb_comp_pardon } add_to_variable = { TFRKPHN_chb_nc = 1 } set_variable = { TFRKPHN_chb_f_pardon = 3 } }
+	set_variable = { TFRKPHN_chb_f_ban = 1 }
+	if = { limit = { has_country_flag = TFRKPHN_chb_done_ban } add_to_variable = { TFRKPHN_chb_n = 1 } set_variable = { TFRKPHN_chb_f_ban = 2 } }
+	if = { limit = { has_country_flag = TFRKPHN_chb_comp_ban } add_to_variable = { TFRKPHN_chb_nc = 1 } set_variable = { TFRKPHN_chb_f_ban = 3 } }
+	clamp_variable = { var = TFRKPHN_chb_inv min = 0 max = 4 }
+	set_variable = { TFRKPHN_chb_if = TFRKPHN_chb_inv }
+	add_to_variable = { TFRKPHN_chb_if = 1 }
+	set_variable = { TFRKPHN_chb_gain = 15 }
+	if = { limit = { check_variable = { TFRKPHN_chb_inv > 3.5 } } set_variable = { TFRKPHN_chb_gain = 10 } if = { limit = { NOT = { has_country_flag = TFRKPHN_chb_inv_done } } set_country_flag = TFRKPHN_chb_inv_done country_event = { id = tfrkphn.475 days = 1 } } }
+	if = { limit = { check_variable = { TFRKPHN_chb_n > 3.5 } NOT = { has_country_flag = TFRKPHN_hong_ev2 } } set_country_flag = TFRKPHN_hong_ev2 country_event = { id = tfrkphn.493 days = 2 } }
+	set_variable = { TFRKPHN_chb_reward = 10 }
+	subtract_from_variable = { TFRKPHN_chb_reward = TFRKPHN_chb_nc }
+	set_variable = { TFRKPHN_chb_fr = TFRKPHN_chb_n }
+	add_to_variable = { TFRKPHN_chb_fr = 1 }
+	clamp_variable = { var = TFRKPHN_chb_res min = 0 max = 100 }
+	set_variable = { TFRKPHN_chb_rf = TFRKPHN_chb_res }
+	divide_variable = { TFRKPHN_chb_rf = 5 }
+	round_variable = TFRKPHN_chb_rf
+	add_to_variable = { TFRKPHN_chb_rf = 1 }
+	if = { limit = { check_variable = { TFRKPHN_chb_res > 59.99 } NOT = { has_country_flag = TFRKPHN_chb_res_cd } } set_country_flag = { flag = TFRKPHN_chb_res_cd days = 120 value = 1 } country_event = { id = tfrkphn.468 } }
+	if = {
+		limit = { has_country_flag = TFRKPHN_chb_done_ftc has_country_flag = TFRKPHN_chb_done_class has_country_flag = TFRKPHN_chb_done_punitive has_country_flag = TFRKPHN_chb_done_private has_country_flag = TFRKPHN_chb_done_internal has_country_flag = TFRKPHN_chb_done_inherit has_country_flag = TFRKPHN_chb_done_pardon has_country_flag = TFRKPHN_chb_done_ban NOT = { has_country_flag = TFRKPHN_chb_all_done } }
+		set_country_flag = TFRKPHN_chb_all_done
+		country_event = { id = tfrkphn.467 }
+	}
+}

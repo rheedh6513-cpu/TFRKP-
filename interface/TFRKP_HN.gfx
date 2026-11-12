@@ -29,6 +29,11 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/TFRKPHN_tt_hong.png"
 		legacy_lazy_load = no
 	}
+	# 안철수 지도자 초상화 (사용자 제공). KP 인물 KOR_ahn_cheol_soo_char에 on_daily_KOR와 2027 대선 효과에서 입힌다
+	spriteType = {
+		name = "GFX_portrait_TFRKPHN_ahn_cheol_soo"
+		texturefile = "gfx/leaders/KOR/TFRKPHN_ahn_cheol_soo.png"
+	}
 	spriteType = {
 		name = "GFX_portrait_KOR_hong_joon_pyo"
 		texturefile = "gfx/leaders/KOR/TFRKPHN_hong_joon_pyo.png"
@@ -224,6 +229,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_focus_TFRKPHN_myeongnak"
 		texturefile = "gfx/interface/goals/TFRKPHN_myeongnak.png"
+	}
+	spriteType = {
+		name = "GFX_focus_TFRKPHN_e22_maksang"
+		texturefile = "gfx/interface/goals/TFRKPHN_e22_maksang.png"
 	}
 	spriteType = {
 		name = "GFX_focus_TFRKPHN_e22_root"

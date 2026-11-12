@@ -1,0 +1,55 @@
+# [안내] 이인제 정부 「재벌 개혁」 패널. 위: 유승민 카드(커서를 올리면 이력과 성향), 진행도, 재계의 저항. 가운데: 개혁 카드 여섯 장. 아래: 대응 단추. chaebol_build.py가 만든다.
+guiTypes = {
+	containerWindowType = {
+		name = "TFRKPHN_chb_container"
+		size = { width = 100%% height = 500 }
+		containerWindowType = {
+			name = "TFRKPHN_chb_panel"
+			position = { x = 0 y = 0 }
+			size = { width = 500 height = 498 }
+			clipping = yes
+			background = { name = "background" spriteType = "GFX_tiled_decisions_bg_small" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_chb_bg" position = { x = 8 y = 6 } spriteType = "GFX_TFRKPHN_chb_bg" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_chb_card" position = { x = 14 y = 12 } spriteType = "GFX_TFRKPHN_chb_card" pdx_tooltip = "TFRKPHN_chb_card_tt" }
+			instantTextBoxType = { name = "TFRKPHN_chb_t_prog" position = { x = 212 y = 12 } text = "TFRKPHN_chb_t_prog" font = "hoi_16mbs" format = left maxWidth = 270 maxHeight = 20 alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_chb_pips" position = { x = 212 y = 34 } spriteType = "GFX_TFRKPHN_chb_pips" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_chb_t_res" position = { x = 212 y = 62 } text = "TFRKPHN_chb_t_res" font = "hoi_16mbs" format = left maxWidth = 270 maxHeight = 20 alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_chb_bar" position = { x = 212 y = 84 } spriteType = "GFX_TFRKPHN_chb_bar" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_chb_t_g" position = { x = 212 y = 101 } text = "TFRKPHN_chb_t_g" font = "hoi_16mbs" format = left maxWidth = 270 maxHeight = 20 alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_chb_k_ftc" position = { x = 8 y = 142 } spriteType = "GFX_TFRKPHN_chb_k_ftc" pdx_tooltip = "TFRKPHN_chb_k_ftc_tt" clicksound = click_default }
+			instantTextBoxType = { name = "TFRKPHN_chb_kn_ftc" position = { x = 22 y = 150 } text = "TFRKPHN_chb_kn_ftc" font = "hoi_16mbs" format = left maxWidth = 136 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_chb_kc_ftc" position = { x = 22 y = 180 } text = "TFRKPHN_chb_kc_ftc" font = "hoi_16mbs" format = left maxWidth = 136 maxHeight = 20 alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_chb_k_class" position = { x = 172 y = 142 } spriteType = "GFX_TFRKPHN_chb_k_class" pdx_tooltip = "TFRKPHN_chb_k_class_tt" clicksound = click_default }
+			instantTextBoxType = { name = "TFRKPHN_chb_kn_class" position = { x = 186 y = 150 } text = "TFRKPHN_chb_kn_class" font = "hoi_16mbs" format = left maxWidth = 136 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_chb_kc_class" position = { x = 186 y = 180 } text = "TFRKPHN_chb_kc_class" font = "hoi_16mbs" format = left maxWidth = 136 maxHeight = 20 alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_chb_k_punitive" position = { x = 336 y = 142 } spriteType = "GFX_TFRKPHN_chb_k_punitive" pdx_tooltip = "TFRKPHN_chb_k_punitive_tt" clicksound = click_default }
+			instantTextBoxType = { name = "TFRKPHN_chb_kn_punitive" position = { x = 350 y = 150 } text = "TFRKPHN_chb_kn_punitive" font = "hoi_16mbs" format = left maxWidth = 136 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_chb_kc_punitive" position = { x = 350 y = 180 } text = "TFRKPHN_chb_kc_punitive" font = "hoi_16mbs" format = left maxWidth = 136 maxHeight = 20 alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_chb_k_private" position = { x = 8 y = 216 } spriteType = "GFX_TFRKPHN_chb_k_private" pdx_tooltip = "TFRKPHN_chb_k_private_tt" clicksound = click_default }
+			instantTextBoxType = { name = "TFRKPHN_chb_kn_private" position = { x = 22 y = 224 } text = "TFRKPHN_chb_kn_private" font = "hoi_16mbs" format = left maxWidth = 136 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_chb_kc_private" position = { x = 22 y = 254 } text = "TFRKPHN_chb_kc_private" font = "hoi_16mbs" format = left maxWidth = 136 maxHeight = 20 alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_chb_k_internal" position = { x = 172 y = 216 } spriteType = "GFX_TFRKPHN_chb_k_internal" pdx_tooltip = "TFRKPHN_chb_k_internal_tt" clicksound = click_default }
+			instantTextBoxType = { name = "TFRKPHN_chb_kn_internal" position = { x = 186 y = 224 } text = "TFRKPHN_chb_kn_internal" font = "hoi_16mbs" format = left maxWidth = 136 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_chb_kc_internal" position = { x = 186 y = 254 } text = "TFRKPHN_chb_kc_internal" font = "hoi_16mbs" format = left maxWidth = 136 maxHeight = 20 alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_chb_k_inherit" position = { x = 336 y = 216 } spriteType = "GFX_TFRKPHN_chb_k_inherit" pdx_tooltip = "TFRKPHN_chb_k_inherit_tt" clicksound = click_default }
+			instantTextBoxType = { name = "TFRKPHN_chb_kn_inherit" position = { x = 350 y = 224 } text = "TFRKPHN_chb_kn_inherit" font = "hoi_16mbs" format = left maxWidth = 136 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_chb_kc_inherit" position = { x = 350 y = 254 } text = "TFRKPHN_chb_kc_inherit" font = "hoi_16mbs" format = left maxWidth = 136 maxHeight = 20 alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_chb_k_pardon" position = { x = 8 y = 290 } spriteType = "GFX_TFRKPHN_chb_k_pardon" pdx_tooltip = "TFRKPHN_chb_k_pardon_tt" clicksound = click_default }
+			instantTextBoxType = { name = "TFRKPHN_chb_kn_pardon" position = { x = 22 y = 298 } text = "TFRKPHN_chb_kn_pardon" font = "hoi_16mbs" format = left maxWidth = 136 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_chb_kc_pardon" position = { x = 22 y = 328 } text = "TFRKPHN_chb_kc_pardon" font = "hoi_16mbs" format = left maxWidth = 136 maxHeight = 20 alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_chb_k_ban" position = { x = 172 y = 290 } spriteType = "GFX_TFRKPHN_chb_k_ban" pdx_tooltip = "TFRKPHN_chb_k_ban_tt" clicksound = click_default }
+			instantTextBoxType = { name = "TFRKPHN_chb_kn_ban" position = { x = 186 y = 298 } text = "TFRKPHN_chb_kn_ban" font = "hoi_16mbs" format = left maxWidth = 136 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_chb_kc_ban" position = { x = 186 y = 328 } text = "TFRKPHN_chb_kc_ban" font = "hoi_16mbs" format = left maxWidth = 136 maxHeight = 20 alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_chb_mode_off" position = { x = 340 y = 292 } quadTextureSprite = "GFX_button_148x34" buttonText = "TFRKPHN_chb_mode_off" buttonFont = "hoi_16mbs" pdx_tooltip = "TFRKPHN_chb_mode_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_chb_mode_on" position = { x = 340 y = 292 } quadTextureSprite = "GFX_button_148x34" buttonText = "TFRKPHN_chb_mode_on" buttonFont = "hoi_16mbs" pdx_tooltip = "TFRKPHN_chb_mode_tt" clicksound = click_default }
+			instantTextBoxType = { name = "TFRKPHN_chb_mode_note" position = { x = 340 y = 330 } text = "TFRKPHN_chb_mode_note" font = "hoi_16mbs" format = center maxWidth = 150 maxHeight = 20 alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_chb_a_opinion" position = { x = 12 y = 370 } quadTextureSprite = "GFX_button_148x34" buttonText = "TFRKPHN_chb_a_opinion" buttonFont = "hoi_16mbs" pdx_tooltip = "TFRKPHN_chb_a_opinion_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_chb_a_talk" position = { x = 174 y = 370 } quadTextureSprite = "GFX_button_148x34" buttonText = "TFRKPHN_chb_a_talk" buttonFont = "hoi_16mbs" pdx_tooltip = "TFRKPHN_chb_a_talk_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_chb_a_probe" position = { x = 336 y = 370 } quadTextureSprite = "GFX_button_148x34" buttonText = "TFRKPHN_chb_a_probe" buttonFont = "hoi_16mbs" pdx_tooltip = "TFRKPHN_chb_a_probe_tt" clicksound = click_default }
+			instantTextBoxType = { name = "TFRKPHN_chb_t_inv" position = { x = 14 y = 420 } text = "TFRKPHN_chb_t_inv" font = "hoi_16mbs" format = left maxWidth = 170 maxHeight = 20 alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_chb_ipips" position = { x = 190 y = 418 } spriteType = "GFX_TFRKPHN_chb_ipips" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_chb_inv_go" position = { x = 336 y = 412 } quadTextureSprite = "GFX_button_148x34" buttonText = "TFRKPHN_chb_inv_go" buttonFont = "hoi_16mbs" pdx_tooltip = "TFRKPHN_chb_inv_go_tt" clicksound = click_default }
+			instantTextBoxType = { name = "TFRKPHN_chb_hint" position = { x = 8 y = 452 } text = "TFRKPHN_chb_hint" font = "hoi_16mbs" format = center maxWidth = 484 maxHeight = 42 alwaystransparent = yes }
+		}
+	}
+}

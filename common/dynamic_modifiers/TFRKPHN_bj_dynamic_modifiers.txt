@@ -1,0 +1,10 @@
+# [안내] 북진통일 고토회복: 군종별 전비 태세에 비례하는 효과. 값은 scripted effect TFRKPHN_bj_update가 정한다. sk_build.py가 만든다.
+TFRKPHN_bj_force = {
+	icon = GFX_idea_KOR_yoon_common_conservatism_dynamic_modifir_idea
+	army_org_factor = TFRKPHN_bj_m_aorg
+	army_attack_factor = TFRKPHN_bj_m_aatk
+	navy_org_factor = TFRKPHN_bj_m_norg
+	naval_damage_factor = TFRKPHN_bj_m_ndmg
+	air_attack_factor = TFRKPHN_bj_m_fatk
+	air_defence_factor = TFRKPHN_bj_m_fdef
+}

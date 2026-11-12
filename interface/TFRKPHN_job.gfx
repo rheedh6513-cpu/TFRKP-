@@ -1,0 +1,15 @@
+# [안내] 이인제 정부 「일자리 대타협」 패널 그림. jobs_build.py가 만든다.
+spriteTypes = {
+	spriteType = { name = "GFX_TFRKPHN_job_top" texturefile = "gfx/interface/gui/TFRKPHN_job/TFRKPHN_job_top.png" }
+	spriteType = { name = "GFX_TFRKPHN_job_side_lab" texturefile = "gfx/interface/gui/TFRKPHN_job/TFRKPHN_job_side_lab.png" }
+	spriteType = { name = "GFX_TFRKPHN_job_side_biz" texturefile = "gfx/interface/gui/TFRKPHN_job/TFRKPHN_job_side_biz.png" }
+	spriteType = { name = "GFX_TFRKPHN_job_mid" texturefile = "gfx/interface/gui/TFRKPHN_job/TFRKPHN_job_mid.png" }
+	spriteType = { name = "GFX_TFRKPHN_job_ms" texturefile = "gfx/interface/gui/TFRKPHN_job/TFRKPHN_job_ms.png" }
+	spriteType = { name = "GFX_TFRKPHN_job_ms_done" texturefile = "gfx/interface/gui/TFRKPHN_job/TFRKPHN_job_ms_done.png" }
+	spriteType = { name = "GFX_TFRKPHN_job_line" texturefile = "gfx/interface/gui/TFRKPHN_job/TFRKPHN_job_line.png" }
+	spriteType = { name = "GFX_TFRKPHN_job_logo_lab" texturefile = "gfx/interface/gui/TFRKPHN_job/TFRKPHN_job_logo_lab.png" }
+	spriteType = { name = "GFX_TFRKPHN_job_logo_biz" texturefile = "gfx/interface/gui/TFRKPHN_job/TFRKPHN_job_logo_biz.png" }
+	spriteType = { name = "GFX_TFRKPHN_job_bar" texturefile = "gfx/interface/gui/TFRKPHN_job/TFRKPHN_job_bar.png" noOfFrames = 26 }
+	spriteType = { name = "GFX_TFRKPHN_job_g_lab" texturefile = "gfx/interface/gui/TFRKPHN_job/TFRKPHN_job_g_lab.png" noOfFrames = 21 }
+	spriteType = { name = "GFX_TFRKPHN_job_g_biz" texturefile = "gfx/interface/gui/TFRKPHN_job/TFRKPHN_job_g_biz.png" noOfFrames = 21 }
+}

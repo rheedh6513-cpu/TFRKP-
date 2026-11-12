@@ -1,0 +1,10 @@
+# [안내] 이인제 정부 부처 신임에 따른 국가 보정치. 값은 scripted effect TFRKPHN_dept_update가 정한다. dept_build.py가 만든다.
+TFRKPHN_dept_trust = {
+	icon = GFX_idea_KOR_yoon_common_conservatism_dynamic_modifir_idea
+	political_power_factor = TFRKPHN_dept_m_pm
+	opinion_gain_monthly_factor = TFRKPHN_dept_m_fm
+	consumer_goods_factor = TFRKPHN_dept_m_em
+	stability_factor = TFRKPHN_dept_m_im
+	foreign_subversive_activites = TFRKPHN_dept_m_nis
+	planning_speed = TFRKPHN_dept_m_dm
+}

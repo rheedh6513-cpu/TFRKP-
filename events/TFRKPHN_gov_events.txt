@@ -1,0 +1,34 @@
+# [안내] 정부 조직 개편 이벤트. 문구는 localisation/korean/TFRKPHN_dept_l_korean.yml. 콘솔: event tfrkphn.285
+add_namespace = tfrkphn
+
+# 2026년 1월: 기획재정부를 재정경제부와 기획예산처로 나눌지 고른다 (on_daily_KOR에서 한 번 띄운다)
+country_event = {
+	id = tfrkphn.285
+	title = tfrkphn.285.t
+	desc = tfrkphn.285.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.285.a
+		custom_effect_tooltip = tfrkphn.285.a_tt
+		add_political_power = -50
+		set_country_flag = TFRKPHN_mof_renamed
+		hidden_effect = {
+			# 부처 신임 탭이 이미 열려 있으면 예산을 넘겨받은 총리실이 오르고 재정경제부가 내려간다
+			if = {
+				limit = { has_country_flag = TFRKPHN_dept_started }
+				add_to_variable = { TFRKPHN_dept_t_pm = 10 }
+				subtract_from_variable = { TFRKPHN_dept_t_em = 10 }
+				if = { limit = { has_country_flag = TFRKPHN_dept_req_pm1 } clr_country_flag = TFRKPHN_dept_req_pm1 clr_country_flag = TFRKPHN_dept_pend_pm }
+				TFRKPHN_dept_update = yes
+			}
+		}
+		ai_chance = { factor = 50 }
+	}
+	option = {
+		name = tfrkphn.285.b
+		custom_effect_tooltip = tfrkphn.285.b_tt
+		ai_chance = { factor = 50 }
+	}
+}

@@ -1,0 +1,92 @@
+# [안내] 이인제 정부 「임기를 함께하는 내각」 패널. 부처 여섯 곳의 신임을 보여 준다. dept_build.py가 만든다.
+# [안내] 동작은 common/scripted_guis/TFRKPHN_dept_scripted_guis.txt.
+guiTypes = {
+	containerWindowType = {
+		name = "TFRKPHN_dept_container"
+		size = { width = 100%% height = 364 }
+		containerWindowType = {
+			name = "TFRKPHN_dept_panel"
+			position = { x = 0 y = 0 }
+			size = { width = 500 height = 362 }
+			clipping = yes
+			background = { name = "background" spriteType = "GFX_tiled_decisions_bg_small" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_dept_card_pm" position = { x = 8 y = 8 } spriteType = "GFX_TFRKPHN_dept_card" pdx_tooltip = "TFRKPHN_dept_tt_pm" }
+			iconType = { name = "TFRKPHN_dept_port_pm" position = { x = 16 y = 39 } spriteType = "GFX_idea_TFRKPHN_chung_jin_suk" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_dept_dn_pm" position = { x = 11 y = 12 } text = "TFRKPHN_dept_name_pm" font = "hoi_16mbs" format = center maxWidth = 150 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_dept_mn_pm" position = { x = 86 y = 42 } text = "TFRKPHN_dept_min_pm" font = "hoi_16mbs" format = left maxWidth = 74 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_dept_tv_pm" position = { x = 86 y = 70 } text = "TFRKPHN_dept_tv_pm" font = "hoi_16mbs" format = left maxWidth = 74 maxHeight = 20 alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_dept_bar_pm" position = { x = 16 y = 112 } spriteType = "GFX_TFRKPHN_dept_bar" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_dept_st_hi_pm" position = { x = 86 y = 88 } text = "TFRKPHN_dept_st_hi" font = "hoi_16mbs" format = left maxWidth = 74 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_dept_st_mid_pm" position = { x = 86 y = 88 } text = "TFRKPHN_dept_st_mid" font = "hoi_16mbs" format = left maxWidth = 74 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_dept_st_lo_pm" position = { x = 86 y = 88 } text = "TFRKPHN_dept_st_lo" font = "hoi_16mbs" format = left maxWidth = 74 maxHeight = 20 alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_dept_fr_hi_pm" position = { x = 8 y = 8 } spriteType = "GFX_TFRKPHN_dept_hi" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_dept_fr_lo_pm" position = { x = 8 y = 8 } spriteType = "GFX_TFRKPHN_dept_lo" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_dept_bd_pm" position = { x = 118 y = 124 } spriteType = "GFX_TFRKPHN_dept_badge" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_dept_card_fm" position = { x = 170 y = 8 } spriteType = "GFX_TFRKPHN_dept_card" pdx_tooltip = "TFRKPHN_dept_tt_fm" }
+			iconType = { name = "TFRKPHN_dept_port_fm" position = { x = 178 y = 39 } spriteType = "GFX_idea_TFRKPHN_cho_hyun_dong" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_dept_dn_fm" position = { x = 173 y = 12 } text = "TFRKPHN_dept_name_fm" font = "hoi_16mbs" format = center maxWidth = 150 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_dept_mn_fm" position = { x = 248 y = 42 } text = "TFRKPHN_dept_min_fm" font = "hoi_16mbs" format = left maxWidth = 74 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_dept_tv_fm" position = { x = 248 y = 70 } text = "TFRKPHN_dept_tv_fm" font = "hoi_16mbs" format = left maxWidth = 74 maxHeight = 20 alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_dept_bar_fm" position = { x = 178 y = 112 } spriteType = "GFX_TFRKPHN_dept_bar" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_dept_st_hi_fm" position = { x = 248 y = 88 } text = "TFRKPHN_dept_st_hi" font = "hoi_16mbs" format = left maxWidth = 74 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_dept_st_mid_fm" position = { x = 248 y = 88 } text = "TFRKPHN_dept_st_mid" font = "hoi_16mbs" format = left maxWidth = 74 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_dept_st_lo_fm" position = { x = 248 y = 88 } text = "TFRKPHN_dept_st_lo" font = "hoi_16mbs" format = left maxWidth = 74 maxHeight = 20 alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_dept_fr_hi_fm" position = { x = 170 y = 8 } spriteType = "GFX_TFRKPHN_dept_hi" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_dept_fr_lo_fm" position = { x = 170 y = 8 } spriteType = "GFX_TFRKPHN_dept_lo" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_dept_bd_fm" position = { x = 280 y = 124 } spriteType = "GFX_TFRKPHN_dept_badge" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_dept_card_em" position = { x = 332 y = 8 } spriteType = "GFX_TFRKPHN_dept_card" pdx_tooltip = "TFRKPHN_dept_tt_em" }
+			buttonType = { name = "TFRKPHN_dept_card_em2" position = { x = 332 y = 8 } spriteType = "GFX_TFRKPHN_dept_card" pdx_tooltip = "TFRKPHN_dept_tt_em2" }
+			iconType = { name = "TFRKPHN_dept_port_em" position = { x = 340 y = 39 } spriteType = "GFX_idea_TFRKPHN_bang_ki_sun" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_dept_dn_em2" position = { x = 335 y = 12 } text = "TFRKPHN_dept_name_em2" font = "hoi_16mbs" format = center maxWidth = 150 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_dept_dn_em" position = { x = 335 y = 12 } text = "TFRKPHN_dept_name_em" font = "hoi_16mbs" format = center maxWidth = 150 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_dept_mn_em" position = { x = 410 y = 42 } text = "TFRKPHN_dept_min_em" font = "hoi_16mbs" format = left maxWidth = 74 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_dept_tv_em" position = { x = 410 y = 70 } text = "TFRKPHN_dept_tv_em" font = "hoi_16mbs" format = left maxWidth = 74 maxHeight = 20 alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_dept_bar_em" position = { x = 340 y = 112 } spriteType = "GFX_TFRKPHN_dept_bar" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_dept_st_hi_em" position = { x = 410 y = 88 } text = "TFRKPHN_dept_st_hi" font = "hoi_16mbs" format = left maxWidth = 74 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_dept_st_mid_em" position = { x = 410 y = 88 } text = "TFRKPHN_dept_st_mid" font = "hoi_16mbs" format = left maxWidth = 74 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_dept_st_lo_em" position = { x = 410 y = 88 } text = "TFRKPHN_dept_st_lo" font = "hoi_16mbs" format = left maxWidth = 74 maxHeight = 20 alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_dept_fr_hi_em" position = { x = 332 y = 8 } spriteType = "GFX_TFRKPHN_dept_hi" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_dept_fr_lo_em" position = { x = 332 y = 8 } spriteType = "GFX_TFRKPHN_dept_lo" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_dept_bd_em" position = { x = 442 y = 124 } spriteType = "GFX_TFRKPHN_dept_badge" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_dept_card_im" position = { x = 8 y = 152 } spriteType = "GFX_TFRKPHN_dept_card" pdx_tooltip = "TFRKPHN_dept_tt_im" }
+			iconType = { name = "TFRKPHN_dept_port_im" position = { x = 16 y = 183 } spriteType = "GFX_idea_TFRKPHN_lee_myoung_su" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_dept_dn_im" position = { x = 11 y = 156 } text = "TFRKPHN_dept_name_im" font = "hoi_16mbs" format = center maxWidth = 150 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_dept_mn_im" position = { x = 86 y = 186 } text = "TFRKPHN_dept_min_im" font = "hoi_16mbs" format = left maxWidth = 74 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_dept_tv_im" position = { x = 86 y = 214 } text = "TFRKPHN_dept_tv_im" font = "hoi_16mbs" format = left maxWidth = 74 maxHeight = 20 alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_dept_bar_im" position = { x = 16 y = 256 } spriteType = "GFX_TFRKPHN_dept_bar" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_dept_st_hi_im" position = { x = 86 y = 232 } text = "TFRKPHN_dept_st_hi" font = "hoi_16mbs" format = left maxWidth = 74 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_dept_st_mid_im" position = { x = 86 y = 232 } text = "TFRKPHN_dept_st_mid" font = "hoi_16mbs" format = left maxWidth = 74 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_dept_st_lo_im" position = { x = 86 y = 232 } text = "TFRKPHN_dept_st_lo" font = "hoi_16mbs" format = left maxWidth = 74 maxHeight = 20 alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_dept_fr_hi_im" position = { x = 8 y = 152 } spriteType = "GFX_TFRKPHN_dept_hi" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_dept_fr_lo_im" position = { x = 8 y = 152 } spriteType = "GFX_TFRKPHN_dept_lo" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_dept_bd_im" position = { x = 118 y = 268 } spriteType = "GFX_TFRKPHN_dept_badge" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_dept_card_nis" position = { x = 170 y = 152 } spriteType = "GFX_TFRKPHN_dept_card" pdx_tooltip = "TFRKPHN_dept_tt_nis" }
+			iconType = { name = "TFRKPHN_dept_port_nis" position = { x = 178 y = 183 } spriteType = "GFX_idea_TFRKPHN_kim_hong_kyun" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_dept_dn_nis" position = { x = 173 y = 156 } text = "TFRKPHN_dept_name_nis" font = "hoi_16mbs" format = center maxWidth = 150 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_dept_mn_nis" position = { x = 248 y = 186 } text = "TFRKPHN_dept_min_nis" font = "hoi_16mbs" format = left maxWidth = 74 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_dept_tv_nis" position = { x = 248 y = 214 } text = "TFRKPHN_dept_tv_nis" font = "hoi_16mbs" format = left maxWidth = 74 maxHeight = 20 alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_dept_bar_nis" position = { x = 178 y = 256 } spriteType = "GFX_TFRKPHN_dept_bar" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_dept_st_hi_nis" position = { x = 248 y = 232 } text = "TFRKPHN_dept_st_hi" font = "hoi_16mbs" format = left maxWidth = 74 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_dept_st_mid_nis" position = { x = 248 y = 232 } text = "TFRKPHN_dept_st_mid" font = "hoi_16mbs" format = left maxWidth = 74 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_dept_st_lo_nis" position = { x = 248 y = 232 } text = "TFRKPHN_dept_st_lo" font = "hoi_16mbs" format = left maxWidth = 74 maxHeight = 20 alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_dept_fr_hi_nis" position = { x = 170 y = 152 } spriteType = "GFX_TFRKPHN_dept_hi" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_dept_fr_lo_nis" position = { x = 170 y = 152 } spriteType = "GFX_TFRKPHN_dept_lo" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_dept_bd_nis" position = { x = 280 y = 268 } spriteType = "GFX_TFRKPHN_dept_badge" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_dept_card_dm" position = { x = 332 y = 152 } spriteType = "GFX_TFRKPHN_dept_card" pdx_tooltip = "TFRKPHN_dept_tt_dm" }
+			iconType = { name = "TFRKPHN_dept_port_dm" position = { x = 340 y = 183 } spriteType = "GFX_idea_TFRKPHN_shin_beom_chul" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_dept_dn_dm" position = { x = 335 y = 156 } text = "TFRKPHN_dept_name_dm" font = "hoi_16mbs" format = center maxWidth = 150 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_dept_mn_dm" position = { x = 410 y = 186 } text = "TFRKPHN_dept_min_dm" font = "hoi_16mbs" format = left maxWidth = 74 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_dept_tv_dm" position = { x = 410 y = 214 } text = "TFRKPHN_dept_tv_dm" font = "hoi_16mbs" format = left maxWidth = 74 maxHeight = 20 alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_dept_bar_dm" position = { x = 340 y = 256 } spriteType = "GFX_TFRKPHN_dept_bar" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_dept_st_hi_dm" position = { x = 410 y = 232 } text = "TFRKPHN_dept_st_hi" font = "hoi_16mbs" format = left maxWidth = 74 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_dept_st_mid_dm" position = { x = 410 y = 232 } text = "TFRKPHN_dept_st_mid" font = "hoi_16mbs" format = left maxWidth = 74 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_dept_st_lo_dm" position = { x = 410 y = 232 } text = "TFRKPHN_dept_st_lo" font = "hoi_16mbs" format = left maxWidth = 74 maxHeight = 20 alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_dept_fr_hi_dm" position = { x = 332 y = 152 } spriteType = "GFX_TFRKPHN_dept_hi" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_dept_fr_lo_dm" position = { x = 332 y = 152 } spriteType = "GFX_TFRKPHN_dept_lo" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_dept_bd_dm" position = { x = 442 y = 268 } spriteType = "GFX_TFRKPHN_dept_badge" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_dept_line" position = { x = 8 y = 292 } spriteType = "GFX_TFRKPHN_dept_line" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_dept_hint" position = { x = 8 y = 318 } text = "TFRKPHN_dept_hint" font = "hoi_16mbs" format = center maxWidth = 484 maxHeight = 40 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_dept_wait" position = { x = 8 y = 318 } text = "TFRKPHN_dept_wait" font = "hoi_16mbs" format = center maxWidth = 484 maxHeight = 40 alwaystransparent = yes }
+		}
+	}
+}

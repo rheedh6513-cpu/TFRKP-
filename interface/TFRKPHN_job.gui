@@ -1,0 +1,76 @@
+# [안내] 이인제 정부 「일자리 대타협」 패널. 위는 일자리 숫자, 가운데는 노동계/정부/경영계, 아래는 단계 보상. jobs_build.py가 만든다.
+# [안내] 동작은 common/scripted_guis/TFRKPHN_job_scripted_guis.txt.
+guiTypes = {
+	containerWindowType = {
+		name = "TFRKPHN_job_container"
+		size = { width = 100%% height = 432 }
+		containerWindowType = {
+			name = "TFRKPHN_job_panel"
+			position = { x = 0 y = 0 }
+			size = { width = 500 height = 430 }
+			clipping = yes
+			background = { name = "background" spriteType = "GFX_tiled_decisions_bg_small" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_job_top" position = { x = 8 y = 8 } spriteType = "GFX_TFRKPHN_job_top" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_job_t_top" position = { x = 8 y = 12 } text = "TFRKPHN_job_t_top" font = "hoi_16mbs" format = center maxWidth = 484 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_job_num" position = { x = 8 y = 40 } text = "TFRKPHN_job_num" font = "hoi_18mbs" format = center maxWidth = 484 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_job_goal" position = { x = 8 y = 62 } text = "TFRKPHN_job_goal" font = "hoi_16mbs" format = center maxWidth = 484 maxHeight = 20 alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_job_bar" position = { x = 100 y = 84 } spriteType = "GFX_TFRKPHN_job_bar" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_job_tick0" position = { x = 145 y = 100 } text = "TFRKPHN_job_tick0" font = "hoi_16mbs" format = center maxWidth = 60 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_job_tick1" position = { x = 220 y = 100 } text = "TFRKPHN_job_tick1" font = "hoi_16mbs" format = center maxWidth = 60 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_job_tick2" position = { x = 295 y = 100 } text = "TFRKPHN_job_tick2" font = "hoi_16mbs" format = center maxWidth = 60 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_job_tick3" position = { x = 370 y = 100 } text = "TFRKPHN_job_tick3" font = "hoi_16mbs" format = center maxWidth = 60 maxHeight = 20 alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_job_c_lab" position = { x = 8 y = 130 } spriteType = "GFX_TFRKPHN_job_side_lab" pdx_tooltip = "TFRKPHN_job_tt_lab" }
+			buttonType = { name = "TFRKPHN_job_c_gov" position = { x = 184 y = 130 } spriteType = "GFX_TFRKPHN_job_mid" pdx_tooltip = "TFRKPHN_job_tt_gov" }
+			buttonType = { name = "TFRKPHN_job_c_biz" position = { x = 322 y = 130 } spriteType = "GFX_TFRKPHN_job_side_biz" pdx_tooltip = "TFRKPHN_job_tt_biz" }
+			buttonType = { name = "TFRKPHN_job_logo_lab" position = { x = 66 y = 138 } spriteType = "GFX_TFRKPHN_job_logo_lab" pdx_tooltip = "TFRKPHN_job_tt_logo_lab" }
+			buttonType = { name = "TFRKPHN_job_logo_biz" position = { x = 379 y = 138 } spriteType = "GFX_TFRKPHN_job_logo_biz" pdx_tooltip = "TFRKPHN_job_tt_logo_biz" }
+			instantTextBoxType = { name = "TFRKPHN_job_t_lab" position = { x = 8 y = 184 } text = "TFRKPHN_job_t_lab" font = "hoi_16mbs" format = center maxWidth = 170 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_job_t_gov" position = { x = 184 y = 134 } text = "TFRKPHN_job_t_gov" font = "hoi_16mbs" format = center maxWidth = 132 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_job_t_biz" position = { x = 322 y = 184 } text = "TFRKPHN_job_t_biz" font = "hoi_16mbs" format = center maxWidth = 170 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_job_v_lab" position = { x = 8 y = 204 } text = "TFRKPHN_job_v_lab" font = "hoi_18mbs" format = center maxWidth = 170 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_job_v_biz" position = { x = 322 y = 204 } text = "TFRKPHN_job_v_biz" font = "hoi_18mbs" format = center maxWidth = 170 maxHeight = 20 alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_job_g_lab" position = { x = 20 y = 232 } spriteType = "GFX_TFRKPHN_job_g_lab" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_job_g_biz" position = { x = 334 y = 232 } spriteType = "GFX_TFRKPHN_job_g_biz" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_job_s_lab_hi" position = { x = 8 y = 252 } text = "TFRKPHN_job_s_hi" font = "hoi_16mbs" format = center maxWidth = 170 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_job_s_lab_mid" position = { x = 8 y = 252 } text = "TFRKPHN_job_s_mid" font = "hoi_16mbs" format = center maxWidth = 170 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_job_s_lab_warn" position = { x = 8 y = 252 } text = "TFRKPHN_job_s_warn" font = "hoi_16mbs" format = center maxWidth = 170 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_job_s_lab_lo" position = { x = 8 y = 252 } text = "TFRKPHN_job_s_lo" font = "hoi_16mbs" format = center maxWidth = 170 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_job_s_biz_hi" position = { x = 322 y = 252 } text = "TFRKPHN_job_s_hi" font = "hoi_16mbs" format = center maxWidth = 170 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_job_s_biz_mid" position = { x = 322 y = 252 } text = "TFRKPHN_job_s_mid" font = "hoi_16mbs" format = center maxWidth = 170 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_job_s_biz_warn" position = { x = 322 y = 252 } text = "TFRKPHN_job_s_warn" font = "hoi_16mbs" format = center maxWidth = 170 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_job_s_biz_lo" position = { x = 322 y = 252 } text = "TFRKPHN_job_s_lo" font = "hoi_16mbs" format = center maxWidth = 170 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_job_route_h" position = { x = 184 y = 160 } text = "TFRKPHN_job_route_h" font = "hoi_16mbs" format = center maxWidth = 132 maxHeight = 40 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_job_route_a" position = { x = 184 y = 160 } text = "TFRKPHN_job_route_a" font = "hoi_16mbs" format = center maxWidth = 132 maxHeight = 40 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_job_route_n" position = { x = 184 y = 160 } text = "TFRKPHN_job_route_n" font = "hoi_16mbs" format = center maxWidth = 132 maxHeight = 40 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_job_mult" position = { x = 184 y = 208 } text = "TFRKPHN_job_mult" font = "hoi_18mbs" format = center maxWidth = 132 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_job_pact_no" position = { x = 184 y = 236 } text = "TFRKPHN_job_pact_no" font = "hoi_16mbs" format = center maxWidth = 132 maxHeight = 40 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_job_pact_yes" position = { x = 184 y = 242 } text = "TFRKPHN_job_pact_yes" font = "hoi_16mbs" format = center maxWidth = 132 maxHeight = 20 alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_job_ms0" position = { x = 8 y = 290 } spriteType = "GFX_TFRKPHN_job_ms" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_job_msd0" position = { x = 8 y = 290 } spriteType = "GFX_TFRKPHN_job_ms_done" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_job_ms_l0" position = { x = 8 y = 295 } text = "TFRKPHN_job_ms_l0" font = "hoi_16mbs" format = center maxWidth = 118 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_job_ms_r0" position = { x = 8 y = 313 } text = "TFRKPHN_job_ms_r0" font = "hoi_16mbs" format = center maxWidth = 118 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_job_ms_y0" position = { x = 8 y = 331 } text = "TFRKPHN_job_ms_yes" font = "hoi_16mbs" format = center maxWidth = 118 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_job_ms_n0" position = { x = 8 y = 331 } text = "TFRKPHN_job_ms_no" font = "hoi_16mbs" format = center maxWidth = 118 maxHeight = 20 alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_job_ms1" position = { x = 130 y = 290 } spriteType = "GFX_TFRKPHN_job_ms" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_job_msd1" position = { x = 130 y = 290 } spriteType = "GFX_TFRKPHN_job_ms_done" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_job_ms_l1" position = { x = 130 y = 295 } text = "TFRKPHN_job_ms_l1" font = "hoi_16mbs" format = center maxWidth = 118 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_job_ms_r1" position = { x = 130 y = 313 } text = "TFRKPHN_job_ms_r1" font = "hoi_16mbs" format = center maxWidth = 118 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_job_ms_y1" position = { x = 130 y = 331 } text = "TFRKPHN_job_ms_yes" font = "hoi_16mbs" format = center maxWidth = 118 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_job_ms_n1" position = { x = 130 y = 331 } text = "TFRKPHN_job_ms_no" font = "hoi_16mbs" format = center maxWidth = 118 maxHeight = 20 alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_job_ms2" position = { x = 252 y = 290 } spriteType = "GFX_TFRKPHN_job_ms" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_job_msd2" position = { x = 252 y = 290 } spriteType = "GFX_TFRKPHN_job_ms_done" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_job_ms_l2" position = { x = 252 y = 295 } text = "TFRKPHN_job_ms_l2" font = "hoi_16mbs" format = center maxWidth = 118 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_job_ms_r2" position = { x = 252 y = 313 } text = "TFRKPHN_job_ms_r2" font = "hoi_16mbs" format = center maxWidth = 118 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_job_ms_y2" position = { x = 252 y = 331 } text = "TFRKPHN_job_ms_yes" font = "hoi_16mbs" format = center maxWidth = 118 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_job_ms_n2" position = { x = 252 y = 331 } text = "TFRKPHN_job_ms_no" font = "hoi_16mbs" format = center maxWidth = 118 maxHeight = 20 alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_job_ms3" position = { x = 374 y = 290 } spriteType = "GFX_TFRKPHN_job_ms" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_job_msd3" position = { x = 374 y = 290 } spriteType = "GFX_TFRKPHN_job_ms_done" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_job_ms_l3" position = { x = 374 y = 295 } text = "TFRKPHN_job_ms_l3" font = "hoi_16mbs" format = center maxWidth = 118 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_job_ms_r3" position = { x = 374 y = 313 } text = "TFRKPHN_job_ms_r3" font = "hoi_16mbs" format = center maxWidth = 118 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_job_ms_y3" position = { x = 374 y = 331 } text = "TFRKPHN_job_ms_yes" font = "hoi_16mbs" format = center maxWidth = 118 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_job_ms_n3" position = { x = 374 y = 331 } text = "TFRKPHN_job_ms_no" font = "hoi_16mbs" format = center maxWidth = 118 maxHeight = 20 alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_job_line" position = { x = 8 y = 360 } spriteType = "GFX_TFRKPHN_job_line" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_job_hint" position = { x = 8 y = 384 } text = "TFRKPHN_job_hint" font = "hoi_16mbs" format = center maxWidth = 484 maxHeight = 40 alwaystransparent = yes }
+		}
+	}
+}

@@ -1,0 +1,14 @@
+# [안내] 국민정신 「죽의 장막」: PDTO 공동성명 이벤트(tfrkphn.506) 뒤 호주, 일본, 대한민국, 인도, 중국, 파키스탄에 붙는다. 안정도 -5%. c23_build.py가 만든다.
+ideas = {
+	country = {
+		TFRKPHN_bamboo_curtain = {
+			picture = KOR_yoon_common_conservatism_dynamic_modifir_idea
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.05
+			}
+		}
+	}
+}

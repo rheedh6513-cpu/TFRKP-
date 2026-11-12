@@ -1,0 +1,9 @@
+# [안내] 이인제 정부: 부처 신임 관리. 중점 「임기를 함께하는 내각」을 끝내면 열린다.
+TFRKPHN_lee_trust_category = {
+	icon = generic_political_actions
+	priority = 204
+	scripted_gui = TFRKPHN_dept_gui
+	visible_when_empty = yes
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_successor_lee_in_je has_completed_focus = TFRKPHN_lee_in_je_a3 }
+}

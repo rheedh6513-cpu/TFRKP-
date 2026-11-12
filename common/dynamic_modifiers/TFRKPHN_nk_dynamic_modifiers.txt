@@ -1,0 +1,21 @@
+# [안내] 북한 체제의 근본적 변화: 이반도와 군 동요에 비례해 두 나라에 걸리는 효과. 값은 scripted effect TFRKPHN_nk_update가 정한다. nk_build.py가 만든다.
+# 한국에 걸린다
+TFRKPHN_nk_kor = {
+	icon = GFX_idea_KOR_yoon_common_conservatism_dynamic_modifir_idea
+	stability_factor = TFRKPHN_nk_k_stab
+	war_support_factor = TFRKPHN_nk_k_ws
+	political_power_factor = TFRKPHN_nk_k_pp
+}
+# 북한에 걸린다
+TFRKPHN_nk_prk = {
+	icon = GFX_idea_KOR_yoon_common_conservatism_dynamic_modifir_idea
+	stability_factor = TFRKPHN_nk_p_stab
+	war_support_factor = TFRKPHN_nk_p_ws
+	army_org_factor = TFRKPHN_nk_p_org
+	army_attack_factor = TFRKPHN_nk_p_atk
+	army_defence_factor = TFRKPHN_nk_p_def
+	air_attack_factor = TFRKPHN_nk_p_aatk
+	air_defence_factor = TFRKPHN_nk_p_adef
+	navy_org_factor = TFRKPHN_nk_p_norg
+	naval_damage_factor = TFRKPHN_nk_p_ndmg
+}

@@ -1,0 +1,105 @@
+# [안내] 이인제 정부 「북진통일 고토회복」 남한 쪽 이벤트. 세 군 평균 전비 태세가 50, 75, 90을 넘을 때 한 번씩. 문구는 localisation/korean/TFRKPHN_bj_l_korean.yml. sk_build.py가 만든다.
+add_namespace = tfrkphn
+
+# 평균 50: 작전계획이 대통령 책상에 오른다
+country_event = {
+	id = tfrkphn.460
+	title = tfrkphn.460.t
+	desc = tfrkphn.460.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.460.a
+		add_ideas = TFRKPHN_bj_plan
+		add_command_power = 30
+		custom_effect_tooltip = tfrkphn.460.a_tt
+		hidden_effect = { TFRKPHN_bj_axis_a = yes }
+	}
+	option = {
+		name = tfrkphn.460.b
+		add_ideas = TFRKPHN_bj_plan
+		add_command_power = 30
+		custom_effect_tooltip = tfrkphn.460.b_tt
+		hidden_effect = { TFRKPHN_bj_axis_n = yes }
+	}
+}
+
+# 평균 75: 동원 태세가 갖춰진다
+country_event = {
+	id = tfrkphn.461
+	title = tfrkphn.461.t
+	desc = tfrkphn.461.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.461.a
+		hidden_effect = { country_event = { id = tfrkphn.491 days = 2 } }	# 김지원 하사의 탄약 지급 이야기 (fin_build.py)
+		if = { limit = { has_idea = TFRKPHN_bj_plan } swap_ideas = { remove_idea = TFRKPHN_bj_plan add_idea = TFRKPHN_bj_mobil } }
+		else = { add_ideas = TFRKPHN_bj_mobil }
+		add_manpower = 100000
+		add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 5000 producer = KOR }
+		add_equipment_to_stockpile = { type = support_equipment amount = 800 producer = KOR }
+	}
+}
+
+# 평균 90: 북진 준비 완료
+country_event = {
+	id = tfrkphn.462
+	title = tfrkphn.462.t
+	desc = tfrkphn.462.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.462.a
+		hidden_effect = { country_event = { id = tfrkphn.497 days = 3 } }	# 홍준표: 전쟁을 해 본 사람 (hong_build.py)
+		if = { limit = { has_idea = TFRKPHN_bj_mobil } swap_ideas = { remove_idea = TFRKPHN_bj_mobil add_idea = TFRKPHN_bj_ready } }
+		else = { add_ideas = TFRKPHN_bj_ready }
+		custom_effect_tooltip = tfrkphn.462.tt
+		hidden_effect = {
+			add_to_variable = { TFRKPHN_kju_prep = 50 }
+			if = { limit = { check_variable = { TFRKPHN_kju_prep > 99 } } set_country_flag = TFRKPHN_kju_prep_done }
+			country_event = { id = tfrkphn.463 days = 7 }
+		}
+	}
+}
+
+# 평균 95: 과거 7함대 소속과 제3해병원정군 장병들이 해상자위대와 대한민국 해군의 함정에서 상륙을 준비한다
+country_event = {
+	id = tfrkphn.464
+	title = tfrkphn.464.t
+	desc = tfrkphn.464.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.464.a
+		navy_experience = 50
+		custom_effect_tooltip = tfrkphn.464.tt
+		hidden_effect = {
+			TFRKPHN_bj_axis_n = yes
+			if = { limit = { country_exists = PRK } PRK = { add_war_support = -0.05 } }
+		}
+	}
+}
+
+# 북진 준비 완료 며칠 뒤: 옛 미군 소속이던 공군과 일본 공군이 북한을 향해 뜬다
+country_event = {
+	id = tfrkphn.463
+	title = tfrkphn.463.t
+	desc = tfrkphn.463.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.463.a
+		air_experience = 50
+		custom_effect_tooltip = tfrkphn.463.tt
+		hidden_effect = {
+			TFRKPHN_bj_axis_f = yes
+			if = { limit = { country_exists = PRK } PRK = { add_war_support = -0.05 } }
+		}
+	}
+}
