@@ -1,0 +1,91 @@
+# [안내] 홍준표 루트: 유승민 이야기 이벤트. 문구는 localisation/korean/TFRKPHN_yoo_hong_l_korean.yml. yoo_hong_build.py가 만든다.
+add_namespace = tfrkphn
+
+# 정부 출범 닷새 뒤: 경제부총리
+country_event = {
+	id = tfrkphn.513
+	title = tfrkphn.513.t
+	desc = tfrkphn.513.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.513.a
+		add_political_power = 10
+	}
+	option = {
+		name = tfrkphn.513.b
+		add_stability = 0.01
+	}
+}
+
+# 모병제 확대 사흘 뒤: 누가 군대에 가는가
+country_event = {
+	id = tfrkphn.514
+	title = tfrkphn.514.t
+	desc = tfrkphn.514.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.514.a
+		add_political_power = -10
+		add_stability = 0.02
+	}
+	option = {
+		name = tfrkphn.514.b
+		add_political_power = 10
+	}
+}
+
+# 토지임대부 주택 사흘 뒤: 10년 뒤의 집값
+country_event = {
+	id = tfrkphn.515
+	title = tfrkphn.515.t
+	desc = tfrkphn.515.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.515.a
+		add_political_power = -10
+		add_stability = 0.01
+	}
+	option = {
+		name = tfrkphn.515.b
+		add_political_power = 10
+	}
+}
+
+# 법인세 인하 사흘 뒤: 깎은 세금
+country_event = {
+	id = tfrkphn.516
+	title = tfrkphn.516.t
+	desc = tfrkphn.516.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.516.a
+		add_political_power = 10
+	}
+	option = {
+		name = tfrkphn.516.b
+		add_political_power = -10
+		add_stability = 0.01
+	}
+}
+
+# 걸어온 길, 걸어가는 길 이틀 뒤: 유승민의 채점표
+country_event = {
+	id = tfrkphn.517
+	title = tfrkphn.517.t
+	desc = tfrkphn.517.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.517.a
+		add_political_power = 15
+	}
+}

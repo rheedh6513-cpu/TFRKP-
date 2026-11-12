@@ -48,12 +48,14 @@ country_event = {
 	fire_only_once = yes
 	option = {
 		name = tfrkphn.507.a
+		hidden_effect = { country_event = { id = tfrkphn.512 days = 4 } }	# 유승민: 세금 이야기 (yoo_build.py)
 		add_stability = -0.03
 		set_country_flag = TFRKPHN_unitax_full
 		custom_effect_tooltip = tfrkphn.507.a_tt
 	}
 	option = {
 		name = tfrkphn.507.b
+		hidden_effect = { country_event = { id = tfrkphn.512 days = 4 } }	# 유승민: 세금 이야기 (yoo_build.py)
 		add_stability = -0.01
 		add_political_power = -10
 		set_country_flag = TFRKPHN_unitax_half
@@ -61,6 +63,7 @@ country_event = {
 	}
 	option = {
 		name = tfrkphn.507.c
+		hidden_effect = { country_event = { id = tfrkphn.512 days = 4 } }	# 유승민: 세금 이야기 (yoo_build.py)
 		add_political_power = -20
 		custom_effect_tooltip = tfrkphn.507.c_tt
 	}

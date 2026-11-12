@@ -4,7 +4,7 @@ KOR_pdto_cooperation_initiative_category = {
 	# 캄보디아 특공대 파견: 1회, PDTO 코인 1 + 정치력 50, 30일 뒤 PDTO 결속도 +10
 	TFRKPHN_pdto_cambodia_commando = {
 		icon = GFX_decision_generic_political_actions
-		cost = 50
+		cost = 25
 		days_remove = 30
 		fire_only_once = yes
 		visible = { country_exists = CAM }

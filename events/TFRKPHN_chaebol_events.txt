@@ -133,6 +133,6 @@ country_event = {
 		name = tfrkphn.468.a
 		add_stability = -0.02
 		custom_effect_tooltip = tfrkphn.468.tt
-		hidden_effect = { add_to_variable = { TFRKPHN_job_biz = -5 } TFRKPHN_job_update = yes }
+		hidden_effect = { add_to_variable = { TFRKPHN_job_biz = -5 } TFRKPHN_job_update = yes country_event = { id = tfrkphn.510 days = 2 } }
 	}
 }

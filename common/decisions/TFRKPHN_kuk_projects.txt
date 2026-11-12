@@ -2,7 +2,7 @@
 TFRKPHN_hong_kuk_category = {
 	TFRKPHN_kuk_p_gtx = {
 		icon = GFX_decision_generic_construction
-		cost = 150
+		cost = 75
 		days_remove = 120
 		fire_only_once = yes
 		visible = { check_variable = { TFRKPHN_kuk_sel = 101 } }
@@ -16,7 +16,7 @@ TFRKPHN_hong_kuk_category = {
 	}
 	TFRKPHN_kuk_p_newtown = {
 		icon = GFX_decision_generic_construction
-		cost = 125
+		cost = 63
 		days_remove = 90
 		fire_only_once = yes
 		visible = { check_variable = { TFRKPHN_kuk_sel = 101 } }
@@ -30,7 +30,7 @@ TFRKPHN_hong_kuk_category = {
 	}
 	TFRKPHN_kuk_p_yongin = {
 		icon = GFX_decision_generic_construction
-		cost = 200
+		cost = 100
 		days_remove = 180
 		fire_only_once = yes
 		visible = { check_variable = { TFRKPHN_kuk_sel = 101 } }
@@ -44,7 +44,7 @@ TFRKPHN_hong_kuk_category = {
 	}
 	TFRKPHN_kuk_p_donghae = {
 		icon = GFX_decision_generic_construction
-		cost = 125
+		cost = 63
 		days_remove = 120
 		fire_only_once = yes
 		visible = { check_variable = { TFRKPHN_kuk_sel = 104 } }
@@ -58,7 +58,7 @@ TFRKPHN_hong_kuk_category = {
 	}
 	TFRKPHN_kuk_p_chunsok = {
 		icon = GFX_decision_generic_construction
-		cost = 125
+		cost = 63
 		days_remove = 120
 		fire_only_once = yes
 		visible = { check_variable = { TFRKPHN_kuk_sel = 104 } }
@@ -72,7 +72,7 @@ TFRKPHN_hong_kuk_category = {
 	}
 	TFRKPHN_kuk_p_wonju = {
 		icon = GFX_decision_generic_construction
-		cost = 125
+		cost = 63
 		days_remove = 90
 		fire_only_once = yes
 		visible = { check_variable = { TFRKPHN_kuk_sel = 104 } }
@@ -86,7 +86,7 @@ TFRKPHN_hong_kuk_category = {
 	}
 	TFRKPHN_kuk_p_daejeontram = {
 		icon = GFX_decision_generic_construction
-		cost = 100
+		cost = 50
 		days_remove = 90
 		fire_only_once = yes
 		visible = { check_variable = { TFRKPHN_kuk_sel = 102 } }
@@ -100,7 +100,7 @@ TFRKPHN_hong_kuk_category = {
 	}
 	TFRKPHN_kuk_p_ctx = {
 		icon = GFX_decision_generic_construction
-		cost = 150
+		cost = 75
 		days_remove = 120
 		fire_only_once = yes
 		visible = { check_variable = { TFRKPHN_kuk_sel = 102 } }
@@ -114,7 +114,7 @@ TFRKPHN_hong_kuk_category = {
 	}
 	TFRKPHN_kuk_p_sejong = {
 		icon = GFX_decision_generic_construction
-		cost = 150
+		cost = 75
 		days_remove = 120
 		fire_only_once = yes
 		visible = { check_variable = { TFRKPHN_kuk_sel = 102 } }
@@ -128,7 +128,7 @@ TFRKPHN_hong_kuk_category = {
 	}
 	TFRKPHN_kuk_p_saemangeum = {
 		icon = GFX_decision_generic_construction
-		cost = 200
+		cost = 100
 		days_remove = 180
 		fire_only_once = yes
 		visible = { check_variable = { TFRKPHN_kuk_sel = 103 } }
@@ -142,7 +142,7 @@ TFRKPHN_hong_kuk_category = {
 	}
 	TFRKPHN_kuk_p_gwangjusub = {
 		icon = GFX_decision_generic_construction
-		cost = 100
+		cost = 50
 		days_remove = 90
 		fire_only_once = yes
 		visible = { check_variable = { TFRKPHN_kuk_sel = 103 } }
@@ -156,7 +156,7 @@ TFRKPHN_hong_kuk_category = {
 	}
 	TFRKPHN_kuk_p_swsemi = {
 		icon = GFX_decision_generic_construction
-		cost = 200
+		cost = 100
 		days_remove = 180
 		fire_only_once = yes
 		visible = { check_variable = { TFRKPHN_kuk_sel = 103 } }
@@ -170,7 +170,7 @@ TFRKPHN_hong_kuk_category = {
 	}
 	TFRKPHN_kuk_p_gadeok = {
 		icon = GFX_decision_generic_construction
-		cost = 200
+		cost = 100
 		days_remove = 180
 		fire_only_once = yes
 		visible = { check_variable = { TFRKPHN_kuk_sel = 105 } }
@@ -184,7 +184,7 @@ TFRKPHN_hong_kuk_category = {
 	}
 	TFRKPHN_kuk_p_tkairport = {
 		icon = GFX_decision_generic_construction
-		cost = 150
+		cost = 75
 		days_remove = 150
 		fire_only_once = yes
 		visible = { check_variable = { TFRKPHN_kuk_sel = 105 } }
@@ -198,7 +198,7 @@ TFRKPHN_hong_kuk_category = {
 	}
 	TFRKPHN_kuk_p_buulgyeong = {
 		icon = GFX_decision_generic_construction
-		cost = 125
+		cost = 63
 		days_remove = 120
 		fire_only_once = yes
 		visible = { check_variable = { TFRKPHN_kuk_sel = 105 } }
@@ -212,7 +212,7 @@ TFRKPHN_hong_kuk_category = {
 	}
 	TFRKPHN_kuk_p_jeju2nd = {
 		icon = GFX_decision_generic_construction
-		cost = 150
+		cost = 75
 		days_remove = 150
 		fire_only_once = yes
 		visible = { check_variable = { TFRKPHN_kuk_sel = 106 } }
@@ -226,7 +226,7 @@ TFRKPHN_hong_kuk_category = {
 	}
 	TFRKPHN_kuk_p_jejuport = {
 		icon = GFX_decision_generic_construction
-		cost = 125
+		cost = 63
 		days_remove = 120
 		fire_only_once = yes
 		visible = { check_variable = { TFRKPHN_kuk_sel = 106 } }
@@ -240,7 +240,7 @@ TFRKPHN_hong_kuk_category = {
 	}
 	TFRKPHN_kuk_p_jejuh2 = {
 		icon = GFX_decision_generic_construction
-		cost = 100
+		cost = 50
 		days_remove = 90
 		fire_only_once = yes
 		visible = { check_variable = { TFRKPHN_kuk_sel = 106 } }

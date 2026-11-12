@@ -1,0 +1,100 @@
+# [안내] 이인제 정부: 유승민 이야기 이벤트. 문구는 localisation/korean/TFRKPHN_yoo_l_korean.yml. yoo_build.py가 만든다.
+add_namespace = tfrkphn
+
+# 첫 개혁이 통과된 사흘 뒤: 자리는 받지 않겠다
+country_event = {
+	id = tfrkphn.508
+	title = tfrkphn.508.t
+	desc = tfrkphn.508.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.508.a
+		add_political_power = 20
+		add_stability = 0.01
+	}
+	option = {
+		name = tfrkphn.508.b
+		custom_effect_tooltip = tfrkphn.508.b_tt
+		hidden_effect = { add_to_variable = { TFRKPHN_chb_res = -5 } TFRKPHN_chb_check = yes }
+	}
+}
+
+# 처음 타협안을 고른 다음 날: 유승민의 메모
+country_event = {
+	id = tfrkphn.509
+	title = tfrkphn.509.t
+	desc = tfrkphn.509.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.509.a
+		add_political_power = -10
+		add_stability = 0.01
+	}
+	option = {
+		name = tfrkphn.509.b
+		add_political_power = 10
+		custom_effect_tooltip = tfrkphn.509.b_tt
+		hidden_effect = { TFRKPHN_job_start = yes add_to_variable = { TFRKPHN_job_biz = 0 } add_to_variable = { TFRKPHN_job_lab = -3 } TFRKPHN_job_update = yes }
+	}
+}
+
+# 재계의 반격 이틀 뒤: 공개 토론
+country_event = {
+	id = tfrkphn.510
+	title = tfrkphn.510.t
+	desc = tfrkphn.510.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.510.a
+		custom_effect_tooltip = tfrkphn.510.a_tt
+		hidden_effect = { add_to_variable = { TFRKPHN_chb_res = -10 } TFRKPHN_chb_check = yes }
+	}
+}
+
+# 정경유착 수사 2단계(압수수색) 이틀 뒤: 보복이냐는 질문
+country_event = {
+	id = tfrkphn.511
+	title = tfrkphn.511.t
+	desc = tfrkphn.511.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.511.a
+		add_stability = 0.01
+		add_political_power = -10
+	}
+	option = {
+		name = tfrkphn.511.b
+		custom_effect_tooltip = tfrkphn.511.b_tt
+		hidden_effect = { add_to_variable = { TFRKPHN_chb_res = -5 } TFRKPHN_chb_check = yes }
+	}
+}
+
+# 통일세 발표 나흘 뒤: 세금 이야기. 고른 안에 따라 글이 다르다
+country_event = {
+	id = tfrkphn.512
+	title = tfrkphn.512.t
+	desc = { text = tfrkphn.512.d_full trigger = { has_country_flag = TFRKPHN_unitax_full } }
+	desc = { text = tfrkphn.512.d_half trigger = { has_country_flag = TFRKPHN_unitax_half } }
+	desc = { text = tfrkphn.512.d_none trigger = { NOT = { has_country_flag = TFRKPHN_unitax_full } NOT = { has_country_flag = TFRKPHN_unitax_half } } }
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.512.a
+		trigger = { OR = { has_country_flag = TFRKPHN_unitax_full has_country_flag = TFRKPHN_unitax_half } }
+		add_stability = 0.01
+	}
+	option = {
+		name = tfrkphn.512.b
+		trigger = { NOT = { has_country_flag = TFRKPHN_unitax_full } NOT = { has_country_flag = TFRKPHN_unitax_half } }
+		add_political_power = -10
+	}
+}

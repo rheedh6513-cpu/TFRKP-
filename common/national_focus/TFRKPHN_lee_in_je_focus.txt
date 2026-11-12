@@ -769,4 +769,6 @@ focus_tree = {
 		}
 	}
 
+	# 대아대전이 일어나면 Korea Plus 원본의 대아대전 중점 가지가 이 트리에서도 열린다 (원본 파일의 공유 중점).
+	shared_focus = KOR_gwr_reserve_forces
 }

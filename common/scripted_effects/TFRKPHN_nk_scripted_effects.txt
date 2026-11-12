@@ -151,7 +151,9 @@ TFRKPHN_nk_update = {
 	set_variable = { TFRKPHN_nk_k_stab = nk_a } multiply_variable = { TFRKPHN_nk_k_stab = 0.1 }
 	set_variable = { TFRKPHN_nk_k_ws = nk_a } multiply_variable = { TFRKPHN_nk_k_ws = 0.15 }
 	set_variable = { TFRKPHN_nk_k_pp = nk_a } multiply_variable = { TFRKPHN_nk_k_pp = 0.15 }
-	if = { limit = { NOT = { has_country_flag = TFRKPHN_nk_kmod_on } } set_country_flag = TFRKPHN_nk_kmod_on add_dynamic_modifier = { modifier = TFRKPHN_nk_kor } }
+	# 한국 쪽 효과는 따로 붙이지 않고 국민정신 「북진 태세」(TFRKPHN_bj_force)에 모은다. 값은 위의 k_stab, k_ws, k_pp 를 sk 쪽 update가 가져간다
+	if = { limit = { has_dynamic_modifier = { modifier = TFRKPHN_nk_kor } } remove_dynamic_modifier = { modifier = TFRKPHN_nk_kor } }
+	if = { limit = { has_country_flag = TFRKPHN_bj_started } TFRKPHN_bj_update = yes }
 	force_update_dynamic_modifier = yes
 	if = {
 		limit = { country_exists = PRK }

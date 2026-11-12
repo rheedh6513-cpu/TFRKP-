@@ -125,55 +125,12 @@ TFRKPHN_hong_amend_category = {
 	}
 
 	# ===== 개헌 결정 (가결 후): 하나당 30일, 진행 중에는 다른 개헌 결정 불가 =====
-	# 타협(야당과 협력) 횟수만큼 효과가 줄어든다: 1회당 -10%, 최소 30%
+	# 타협안을 고른 횟수만큼 효과가 줄어든다: 1회당 -10%, 최소 30%
 
-	# 가결 뒤에도 야당과 타협할 수 있다: 안정도ㆍ정치력을 얻는 대신 이후 개헌 결정의 효과가 줄어든다
-	TFRKPHN_amend_d_coop = {
-		icon = GFX_decision_generic_political_actions
-		cost = 0
-		days_remove = 14
-		visible = {
-			has_country_flag = TFRKP_HN_hong_president
-			has_country_flag = TFRKPHN_amend_passed
-			NOT = { check_variable = { TFRKPHN_amend_comp > 6 } }
-		}
-		available = {
-			custom_trigger_tooltip = {
-				tooltip = TFRKPHN_amend_not_busy_tt
-				NOT = { has_country_flag = TFRKPHN_amend_busy }
-			}
-			custom_trigger_tooltip = {
-				tooltip = TFRKPHN_amend_token_held_tt
-				NOT = { has_country_flag = TFRKPHN_amend_coop_token }
-			}
-		}
-		complete_effect = {
-			set_country_flag = TFRKPHN_amend_busy
-			custom_effect_tooltip = TFRKPHN_amend_busy_tt
-		}
-		remove_effect = {
-			clr_country_flag = TFRKPHN_amend_busy
-			custom_effect_tooltip = TFRKPHN_amend_comp_tt
-			hidden_effect = {
-				add_to_variable = { TFRKPHN_amend_comp = 1 }
-				TFRKPHN_amend_calc_eff = yes
-			}
-			set_country_flag = TFRKPHN_amend_coop_token
-			custom_effect_tooltip = TFRKPHN_amend_coop_token_tt
-			add_stability = 0.03
-		}
-		ai_will_do = { factor = 0 }
-	}
-
+	# 조문마다 두 가지 결정이 있다: 원안(정치력 90)과 타협안(_c, 정치력 45). 타협안은 타협 횟수를 1 늘리고 조문을 타협안으로 바꾼다.
 	TFRKPHN_amend_d_committee = {
 		icon = GFX_decision_TFRKPHN_constitution
-		custom_cost_trigger = {
-			OR = {
-				has_country_flag = TFRKPHN_amend_coop_token
-				has_political_power > 179
-			}
-		}
-		custom_cost_text = TFRKPHN_amend_cost_180
+		cost = 90
 		fire_only_once = yes
 		days_remove = 30
 		visible = {
@@ -188,11 +145,6 @@ TFRKPHN_hong_amend_category = {
 			}
 		}
 		complete_effect = {
-			if = {
-				limit = { has_country_flag = TFRKPHN_amend_coop_token }
-				clr_country_flag = TFRKPHN_amend_coop_token
-			}
-			else = { add_political_power = -180 }
 			set_country_flag = TFRKPHN_amend_busy
 			custom_effect_tooltip = TFRKPHN_amend_busy_tt
 		}
@@ -215,15 +167,51 @@ TFRKPHN_hong_amend_category = {
 		ai_will_do = { factor = 1 }
 	}
 
-	TFRKPHN_amend_d_term = {
+	# committee: 야당과 타협한 안. 정치력은 절반이지만 타협 횟수가 1 늘어 개헌 효과가 줄고, 조문이 타협안으로 바뀐다
+	TFRKPHN_amend_d_committee_c = {
 		icon = GFX_decision_TFRKPHN_constitution
-		custom_cost_trigger = {
-			OR = {
-				has_country_flag = TFRKPHN_amend_coop_token
-				has_political_power > 179
+		cost = 45
+		fire_only_once = yes
+		days_remove = 30
+		visible = {
+			has_country_flag = TFRKP_HN_hong_president
+			has_country_flag = TFRKPHN_amend_passed
+			NOT = { has_country_flag = TFRKPHN_const_committee }
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = TFRKPHN_amend_not_busy_tt
+				NOT = { has_country_flag = TFRKPHN_amend_busy }
 			}
 		}
-		custom_cost_text = TFRKPHN_amend_cost_180
+		complete_effect = {
+			set_country_flag = TFRKPHN_amend_busy
+			custom_effect_tooltip = TFRKPHN_amend_busy_tt
+		}
+		remove_effect = {
+			clr_country_flag = TFRKPHN_amend_busy
+			custom_effect_tooltip = TFRKPHN_amend_comp_tt
+			hidden_effect = { add_to_variable = { TFRKPHN_amend_comp = 1 } }
+			hidden_effect = { TFRKPHN_amend_calc_eff = yes }
+			set_country_flag = TFRKPHN_const_committee
+			country_event = tfrkphn.138
+			custom_effect_tooltip = TFRKPHN_7rep_start_scaled_tt
+			hidden_effect = { TFRKPHN_7rep_add_scaled = yes }
+			if = { limit = { check_variable = { TFRKPHN_amend_comp < 1 } } add_political_power = 50 add_stability = 0.02 }
+			else_if = { limit = { check_variable = { TFRKPHN_amend_comp < 2 } } add_political_power = 45 add_stability = 0.018 }
+			else_if = { limit = { check_variable = { TFRKPHN_amend_comp < 3 } } add_political_power = 40 add_stability = 0.016 }
+			else_if = { limit = { check_variable = { TFRKPHN_amend_comp < 4 } } add_political_power = 35 add_stability = 0.014 }
+			else_if = { limit = { check_variable = { TFRKPHN_amend_comp < 5 } } add_political_power = 30 add_stability = 0.012 }
+			else_if = { limit = { check_variable = { TFRKPHN_amend_comp < 6 } } add_political_power = 25 add_stability = 0.01 }
+			else_if = { limit = { check_variable = { TFRKPHN_amend_comp < 7 } } add_political_power = 20 add_stability = 0.008 }
+			else = { add_political_power = 15 add_stability = 0.006 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	TFRKPHN_amend_d_term = {
+		icon = GFX_decision_TFRKPHN_constitution
+		cost = 90
 		fire_only_once = yes
 		days_remove = 30
 		visible = {
@@ -242,11 +230,6 @@ TFRKPHN_hong_amend_category = {
 			}
 		}
 		complete_effect = {
-			if = {
-				limit = { has_country_flag = TFRKPHN_amend_coop_token }
-				clr_country_flag = TFRKPHN_amend_coop_token
-			}
-			else = { add_political_power = -180 }
 			set_country_flag = TFRKPHN_amend_busy
 			custom_effect_tooltip = TFRKPHN_amend_busy_tt
 		}
@@ -256,9 +239,8 @@ TFRKPHN_hong_amend_category = {
 			set_country_flag = TFRKPHN_const_term
 			hidden_effect = {
 				add_to_variable = { TFRKPHN_const_done = 1 }
-				if = { limit = { check_variable = { TFRKPHN_amend_comp > 3 } } set_country_flag = TFRKPHN_const_term_weak }
 			}
-			custom_effect_tooltip = TFRKPHN_const_term_tt
+			custom_effect_tooltip = TFRKPHN_const_term_o_tt
 			country_event = tfrkphn.76
 			custom_effect_tooltip = TFRKPHN_7rep_up_scaled_tt
 			hidden_effect = { TFRKPHN_7rep_add_scaled = yes }
@@ -266,15 +248,52 @@ TFRKPHN_hong_amend_category = {
 		ai_will_do = { factor = 1 }
 	}
 
-	TFRKPHN_amend_d_vp = {
+	# term: 야당과 타협한 안. 정치력은 절반이지만 타협 횟수가 1 늘어 개헌 효과가 줄고, 조문이 타협안으로 바뀐다
+	TFRKPHN_amend_d_term_c = {
 		icon = GFX_decision_TFRKPHN_constitution
-		custom_cost_trigger = {
-			OR = {
-				has_country_flag = TFRKPHN_amend_coop_token
-				has_political_power > 179
+		cost = 45
+		fire_only_once = yes
+		days_remove = 30
+		visible = {
+			has_country_flag = TFRKP_HN_hong_president
+			has_country_flag = TFRKPHN_amend_passed
+			NOT = { has_country_flag = TFRKPHN_const_term }
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = TFRKPHN_amend_req_term_tt
+				has_country_flag = TFRKPHN_const_committee
+			}
+			custom_trigger_tooltip = {
+				tooltip = TFRKPHN_amend_not_busy_tt
+				NOT = { has_country_flag = TFRKPHN_amend_busy }
 			}
 		}
-		custom_cost_text = TFRKPHN_amend_cost_180
+		complete_effect = {
+			set_country_flag = TFRKPHN_amend_busy
+			custom_effect_tooltip = TFRKPHN_amend_busy_tt
+		}
+		remove_effect = {
+			clr_country_flag = TFRKPHN_amend_busy
+			custom_effect_tooltip = TFRKPHN_amend_comp_tt
+			hidden_effect = { add_to_variable = { TFRKPHN_amend_comp = 1 } }
+			hidden_effect = { TFRKPHN_amend_calc_eff = yes }
+			set_country_flag = TFRKPHN_const_term
+			hidden_effect = {
+				add_to_variable = { TFRKPHN_const_done = 1 }
+				set_country_flag = TFRKPHN_const_term_weak
+			}
+			custom_effect_tooltip = TFRKPHN_const_term_c_tt
+			country_event = tfrkphn.76
+			custom_effect_tooltip = TFRKPHN_7rep_up_scaled_tt
+			hidden_effect = { TFRKPHN_7rep_add_scaled = yes }
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	TFRKPHN_amend_d_vp = {
+		icon = GFX_decision_TFRKPHN_constitution
+		cost = 90
 		fire_only_once = yes
 		days_remove = 30
 		visible = {
@@ -293,11 +312,6 @@ TFRKPHN_hong_amend_category = {
 			}
 		}
 		complete_effect = {
-			if = {
-				limit = { has_country_flag = TFRKPHN_amend_coop_token }
-				clr_country_flag = TFRKPHN_amend_coop_token
-			}
-			else = { add_political_power = -180 }
 			set_country_flag = TFRKPHN_amend_busy
 			custom_effect_tooltip = TFRKPHN_amend_busy_tt
 		}
@@ -307,9 +321,8 @@ TFRKPHN_hong_amend_category = {
 			set_country_flag = TFRKPHN_const_vp
 			hidden_effect = {
 				add_to_variable = { TFRKPHN_const_done = 1 }
-				if = { limit = { check_variable = { TFRKPHN_amend_comp > 3 } } set_country_flag = TFRKPHN_const_vp_weak }
 			}
-			custom_effect_tooltip = TFRKPHN_const_vp_tt
+			custom_effect_tooltip = TFRKPHN_const_vp_o_tt
 			country_event = tfrkphn.132
 			custom_effect_tooltip = TFRKPHN_7rep_up_scaled_tt
 			hidden_effect = { TFRKPHN_7rep_add_scaled = yes }
@@ -325,15 +338,60 @@ TFRKPHN_hong_amend_category = {
 		ai_will_do = { factor = 1 }
 	}
 
-	TFRKPHN_amend_d_bicam = {
+	# vp: 야당과 타협한 안. 정치력은 절반이지만 타협 횟수가 1 늘어 개헌 효과가 줄고, 조문이 타협안으로 바뀐다
+	TFRKPHN_amend_d_vp_c = {
 		icon = GFX_decision_TFRKPHN_constitution
-		custom_cost_trigger = {
-			OR = {
-				has_country_flag = TFRKPHN_amend_coop_token
-				has_political_power > 179
+		cost = 45
+		fire_only_once = yes
+		days_remove = 30
+		visible = {
+			has_country_flag = TFRKP_HN_hong_president
+			has_country_flag = TFRKPHN_amend_passed
+			NOT = { has_country_flag = TFRKPHN_const_vp }
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = TFRKPHN_amend_req_vp_tt
+				has_country_flag = TFRKPHN_const_committee
+			}
+			custom_trigger_tooltip = {
+				tooltip = TFRKPHN_amend_not_busy_tt
+				NOT = { has_country_flag = TFRKPHN_amend_busy }
 			}
 		}
-		custom_cost_text = TFRKPHN_amend_cost_180
+		complete_effect = {
+			set_country_flag = TFRKPHN_amend_busy
+			custom_effect_tooltip = TFRKPHN_amend_busy_tt
+		}
+		remove_effect = {
+			clr_country_flag = TFRKPHN_amend_busy
+			custom_effect_tooltip = TFRKPHN_amend_comp_tt
+			hidden_effect = { add_to_variable = { TFRKPHN_amend_comp = 1 } }
+			hidden_effect = { TFRKPHN_amend_calc_eff = yes }
+			set_country_flag = TFRKPHN_const_vp
+			hidden_effect = {
+				add_to_variable = { TFRKPHN_const_done = 1 }
+				set_country_flag = TFRKPHN_const_vp_weak
+			}
+			custom_effect_tooltip = TFRKPHN_const_vp_c_tt
+			country_event = tfrkphn.132
+			custom_effect_tooltip = TFRKPHN_7rep_up_scaled_tt
+			hidden_effect = { TFRKPHN_7rep_add_scaled = yes }
+			if = { limit = { check_variable = { TFRKPHN_amend_comp < 1 } } add_political_power = 100 add_stability = 0.03 }
+			else_if = { limit = { check_variable = { TFRKPHN_amend_comp < 2 } } add_political_power = 90 add_stability = 0.027 }
+			else_if = { limit = { check_variable = { TFRKPHN_amend_comp < 3 } } add_political_power = 80 add_stability = 0.024 }
+			else_if = { limit = { check_variable = { TFRKPHN_amend_comp < 4 } } add_political_power = 70 add_stability = 0.021 }
+			else_if = { limit = { check_variable = { TFRKPHN_amend_comp < 5 } } add_political_power = 60 add_stability = 0.018 }
+			else_if = { limit = { check_variable = { TFRKPHN_amend_comp < 6 } } add_political_power = 50 add_stability = 0.015 }
+			else_if = { limit = { check_variable = { TFRKPHN_amend_comp < 7 } } add_political_power = 40 add_stability = 0.012 }
+			else = { add_political_power = 30 add_stability = 0.009 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	TFRKPHN_amend_d_bicam = {
+		icon = GFX_decision_TFRKPHN_constitution
+		cost = 90
 		fire_only_once = yes
 		days_remove = 30
 		visible = {
@@ -352,11 +410,6 @@ TFRKPHN_hong_amend_category = {
 			}
 		}
 		complete_effect = {
-			if = {
-				limit = { has_country_flag = TFRKPHN_amend_coop_token }
-				clr_country_flag = TFRKPHN_amend_coop_token
-			}
-			else = { add_political_power = -180 }
 			set_country_flag = TFRKPHN_amend_busy
 			custom_effect_tooltip = TFRKPHN_amend_busy_tt
 		}
@@ -366,9 +419,8 @@ TFRKPHN_hong_amend_category = {
 			set_country_flag = TFRKPHN_const_bicam
 			hidden_effect = {
 				add_to_variable = { TFRKPHN_const_done = 1 }
-				if = { limit = { check_variable = { TFRKPHN_amend_comp > 3 } } set_country_flag = TFRKPHN_const_bicam_weak }
 			}
-			custom_effect_tooltip = TFRKPHN_const_bicam_tt
+			custom_effect_tooltip = TFRKPHN_const_bicam_o_tt
 			country_event = tfrkphn.77
 			custom_effect_tooltip = TFRKPHN_7rep_up_scaled_tt
 			hidden_effect = { TFRKPHN_7rep_add_scaled = yes }
@@ -378,15 +430,54 @@ TFRKPHN_hong_amend_category = {
 		ai_will_do = { factor = 1 }
 	}
 
-	TFRKPHN_amend_d_court = {
+	# bicam: 야당과 타협한 안. 정치력은 절반이지만 타협 횟수가 1 늘어 개헌 효과가 줄고, 조문이 타협안으로 바뀐다
+	TFRKPHN_amend_d_bicam_c = {
 		icon = GFX_decision_TFRKPHN_constitution
-		custom_cost_trigger = {
-			OR = {
-				has_country_flag = TFRKPHN_amend_coop_token
-				has_political_power > 179
+		cost = 45
+		fire_only_once = yes
+		days_remove = 30
+		visible = {
+			has_country_flag = TFRKP_HN_hong_president
+			has_country_flag = TFRKPHN_amend_passed
+			NOT = { has_country_flag = TFRKPHN_const_bicam }
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = TFRKPHN_amend_req_bicam_tt
+				has_country_flag = TFRKPHN_const_committee
+			}
+			custom_trigger_tooltip = {
+				tooltip = TFRKPHN_amend_not_busy_tt
+				NOT = { has_country_flag = TFRKPHN_amend_busy }
 			}
 		}
-		custom_cost_text = TFRKPHN_amend_cost_180
+		complete_effect = {
+			set_country_flag = TFRKPHN_amend_busy
+			custom_effect_tooltip = TFRKPHN_amend_busy_tt
+		}
+		remove_effect = {
+			clr_country_flag = TFRKPHN_amend_busy
+			custom_effect_tooltip = TFRKPHN_amend_comp_tt
+			hidden_effect = { add_to_variable = { TFRKPHN_amend_comp = 1 } }
+			hidden_effect = { TFRKPHN_amend_calc_eff = yes }
+			set_country_flag = TFRKPHN_const_bicam
+			hidden_effect = {
+				add_to_variable = { TFRKPHN_const_done = 1 }
+				set_country_flag = TFRKPHN_const_bicam_weak
+			}
+			custom_effect_tooltip = TFRKPHN_const_bicam_c_tt
+			country_event = tfrkphn.77
+			custom_effect_tooltip = TFRKPHN_7rep_up_scaled_tt
+			hidden_effect = { TFRKPHN_7rep_add_scaled = yes }
+			custom_effect_tooltip = TFRKPHN_senate_tt
+			hidden_effect = { TFRKPHN_senate_setup = yes }
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	TFRKPHN_amend_d_court = {
+		icon = GFX_decision_TFRKPHN_constitution
+		cost = 90
 		fire_only_once = yes
 		days_remove = 30
 		visible = {
@@ -405,11 +496,6 @@ TFRKPHN_hong_amend_category = {
 			}
 		}
 		complete_effect = {
-			if = {
-				limit = { has_country_flag = TFRKPHN_amend_coop_token }
-				clr_country_flag = TFRKPHN_amend_coop_token
-			}
-			else = { add_political_power = -180 }
 			set_country_flag = TFRKPHN_amend_busy
 			custom_effect_tooltip = TFRKPHN_amend_busy_tt
 		}
@@ -419,9 +505,8 @@ TFRKPHN_hong_amend_category = {
 			set_country_flag = TFRKPHN_const_court
 			hidden_effect = {
 				add_to_variable = { TFRKPHN_const_done = 1 }
-				if = { limit = { check_variable = { TFRKPHN_amend_comp > 3 } } set_country_flag = TFRKPHN_const_court_weak }
 			}
-			custom_effect_tooltip = TFRKPHN_const_court_tt
+			custom_effect_tooltip = TFRKPHN_const_court_o_tt
 			country_event = tfrkphn.133
 			custom_effect_tooltip = TFRKPHN_7rep_up_scaled_tt
 			hidden_effect = { TFRKPHN_7rep_add_scaled = yes }
@@ -437,15 +522,60 @@ TFRKPHN_hong_amend_category = {
 		ai_will_do = { factor = 1 }
 	}
 
-	TFRKPHN_amend_d_cio = {
+	# court: 야당과 타협한 안. 정치력은 절반이지만 타협 횟수가 1 늘어 개헌 효과가 줄고, 조문이 타협안으로 바뀐다
+	TFRKPHN_amend_d_court_c = {
 		icon = GFX_decision_TFRKPHN_constitution
-		custom_cost_trigger = {
-			OR = {
-				has_country_flag = TFRKPHN_amend_coop_token
-				has_political_power > 179
+		cost = 45
+		fire_only_once = yes
+		days_remove = 30
+		visible = {
+			has_country_flag = TFRKP_HN_hong_president
+			has_country_flag = TFRKPHN_amend_passed
+			NOT = { has_country_flag = TFRKPHN_const_court }
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = TFRKPHN_amend_req_court_tt
+				has_country_flag = TFRKPHN_const_committee
+			}
+			custom_trigger_tooltip = {
+				tooltip = TFRKPHN_amend_not_busy_tt
+				NOT = { has_country_flag = TFRKPHN_amend_busy }
 			}
 		}
-		custom_cost_text = TFRKPHN_amend_cost_180
+		complete_effect = {
+			set_country_flag = TFRKPHN_amend_busy
+			custom_effect_tooltip = TFRKPHN_amend_busy_tt
+		}
+		remove_effect = {
+			clr_country_flag = TFRKPHN_amend_busy
+			custom_effect_tooltip = TFRKPHN_amend_comp_tt
+			hidden_effect = { add_to_variable = { TFRKPHN_amend_comp = 1 } }
+			hidden_effect = { TFRKPHN_amend_calc_eff = yes }
+			set_country_flag = TFRKPHN_const_court
+			hidden_effect = {
+				add_to_variable = { TFRKPHN_const_done = 1 }
+				set_country_flag = TFRKPHN_const_court_weak
+			}
+			custom_effect_tooltip = TFRKPHN_const_court_c_tt
+			country_event = tfrkphn.133
+			custom_effect_tooltip = TFRKPHN_7rep_up_scaled_tt
+			hidden_effect = { TFRKPHN_7rep_add_scaled = yes }
+			if = { limit = { check_variable = { TFRKPHN_amend_comp < 1 } } add_political_power = 50 add_stability = 0.03 }
+			else_if = { limit = { check_variable = { TFRKPHN_amend_comp < 2 } } add_political_power = 45 add_stability = 0.027 }
+			else_if = { limit = { check_variable = { TFRKPHN_amend_comp < 3 } } add_political_power = 40 add_stability = 0.024 }
+			else_if = { limit = { check_variable = { TFRKPHN_amend_comp < 4 } } add_political_power = 35 add_stability = 0.021 }
+			else_if = { limit = { check_variable = { TFRKPHN_amend_comp < 5 } } add_political_power = 30 add_stability = 0.018 }
+			else_if = { limit = { check_variable = { TFRKPHN_amend_comp < 6 } } add_political_power = 25 add_stability = 0.015 }
+			else_if = { limit = { check_variable = { TFRKPHN_amend_comp < 7 } } add_political_power = 20 add_stability = 0.012 }
+			else = { add_political_power = 15 add_stability = 0.009 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	TFRKPHN_amend_d_cio = {
+		icon = GFX_decision_TFRKPHN_constitution
+		cost = 90
 		fire_only_once = yes
 		days_remove = 30
 		visible = {
@@ -464,11 +594,6 @@ TFRKPHN_hong_amend_category = {
 			}
 		}
 		complete_effect = {
-			if = {
-				limit = { has_country_flag = TFRKPHN_amend_coop_token }
-				clr_country_flag = TFRKPHN_amend_coop_token
-			}
-			else = { add_political_power = -180 }
 			set_country_flag = TFRKPHN_amend_busy
 			custom_effect_tooltip = TFRKPHN_amend_busy_tt
 		}
@@ -478,9 +603,8 @@ TFRKPHN_hong_amend_category = {
 			set_country_flag = TFRKPHN_const_cio
 			hidden_effect = {
 				add_to_variable = { TFRKPHN_const_done = 1 }
-				if = { limit = { check_variable = { TFRKPHN_amend_comp > 3 } } set_country_flag = TFRKPHN_const_cio_weak }
 			}
-			custom_effect_tooltip = TFRKPHN_const_cio_tt
+			custom_effect_tooltip = TFRKPHN_const_cio_o_tt
 			country_event = tfrkphn.134
 			custom_effect_tooltip = TFRKPHN_7rep_up_scaled_tt
 			hidden_effect = { TFRKPHN_7rep_add_scaled = yes }
@@ -496,15 +620,60 @@ TFRKPHN_hong_amend_category = {
 		ai_will_do = { factor = 1 }
 	}
 
-	TFRKPHN_amend_d_nbi = {
+	# cio: 야당과 타협한 안. 정치력은 절반이지만 타협 횟수가 1 늘어 개헌 효과가 줄고, 조문이 타협안으로 바뀐다
+	TFRKPHN_amend_d_cio_c = {
 		icon = GFX_decision_TFRKPHN_constitution
-		custom_cost_trigger = {
-			OR = {
-				has_country_flag = TFRKPHN_amend_coop_token
-				has_political_power > 179
+		cost = 45
+		fire_only_once = yes
+		days_remove = 30
+		visible = {
+			has_country_flag = TFRKP_HN_hong_president
+			has_country_flag = TFRKPHN_amend_passed
+			NOT = { has_country_flag = TFRKPHN_const_cio }
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = TFRKPHN_amend_req_cio_tt
+				has_country_flag = TFRKPHN_const_committee
+			}
+			custom_trigger_tooltip = {
+				tooltip = TFRKPHN_amend_not_busy_tt
+				NOT = { has_country_flag = TFRKPHN_amend_busy }
 			}
 		}
-		custom_cost_text = TFRKPHN_amend_cost_180
+		complete_effect = {
+			set_country_flag = TFRKPHN_amend_busy
+			custom_effect_tooltip = TFRKPHN_amend_busy_tt
+		}
+		remove_effect = {
+			clr_country_flag = TFRKPHN_amend_busy
+			custom_effect_tooltip = TFRKPHN_amend_comp_tt
+			hidden_effect = { add_to_variable = { TFRKPHN_amend_comp = 1 } }
+			hidden_effect = { TFRKPHN_amend_calc_eff = yes }
+			set_country_flag = TFRKPHN_const_cio
+			hidden_effect = {
+				add_to_variable = { TFRKPHN_const_done = 1 }
+				set_country_flag = TFRKPHN_const_cio_weak
+			}
+			custom_effect_tooltip = TFRKPHN_const_cio_c_tt
+			country_event = tfrkphn.134
+			custom_effect_tooltip = TFRKPHN_7rep_up_scaled_tt
+			hidden_effect = { TFRKPHN_7rep_add_scaled = yes }
+			if = { limit = { check_variable = { TFRKPHN_amend_comp < 1 } } add_political_power = 75 add_stability = 0.02 }
+			else_if = { limit = { check_variable = { TFRKPHN_amend_comp < 2 } } add_political_power = 68 add_stability = 0.018 }
+			else_if = { limit = { check_variable = { TFRKPHN_amend_comp < 3 } } add_political_power = 60 add_stability = 0.016 }
+			else_if = { limit = { check_variable = { TFRKPHN_amend_comp < 4 } } add_political_power = 52 add_stability = 0.014 }
+			else_if = { limit = { check_variable = { TFRKPHN_amend_comp < 5 } } add_political_power = 45 add_stability = 0.012 }
+			else_if = { limit = { check_variable = { TFRKPHN_amend_comp < 6 } } add_political_power = 38 add_stability = 0.01 }
+			else_if = { limit = { check_variable = { TFRKPHN_amend_comp < 7 } } add_political_power = 30 add_stability = 0.008 }
+			else = { add_political_power = 22 add_stability = 0.006 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	TFRKPHN_amend_d_nbi = {
+		icon = GFX_decision_TFRKPHN_constitution
+		cost = 90
 		fire_only_once = yes
 		days_remove = 30
 		visible = {
@@ -523,11 +692,6 @@ TFRKPHN_hong_amend_category = {
 			}
 		}
 		complete_effect = {
-			if = {
-				limit = { has_country_flag = TFRKPHN_amend_coop_token }
-				clr_country_flag = TFRKPHN_amend_coop_token
-			}
-			else = { add_political_power = -180 }
 			set_country_flag = TFRKPHN_amend_busy
 			custom_effect_tooltip = TFRKPHN_amend_busy_tt
 		}
@@ -537,9 +701,8 @@ TFRKPHN_hong_amend_category = {
 			set_country_flag = TFRKPHN_const_nbi
 			hidden_effect = {
 				add_to_variable = { TFRKPHN_const_done = 1 }
-				if = { limit = { check_variable = { TFRKPHN_amend_comp > 3 } } set_country_flag = TFRKPHN_const_nbi_weak }
 			}
-			custom_effect_tooltip = TFRKPHN_const_nbi_tt
+			custom_effect_tooltip = TFRKPHN_const_nbi_o_tt
 			country_event = tfrkphn.137
 			custom_effect_tooltip = TFRKPHN_7rep_up_scaled_tt
 			hidden_effect = { TFRKPHN_7rep_add_scaled = yes }
@@ -555,15 +718,60 @@ TFRKPHN_hong_amend_category = {
 		ai_will_do = { factor = 1 }
 	}
 
-	TFRKPHN_amend_d_district = {
+	# nbi: 야당과 타협한 안. 정치력은 절반이지만 타협 횟수가 1 늘어 개헌 효과가 줄고, 조문이 타협안으로 바뀐다
+	TFRKPHN_amend_d_nbi_c = {
 		icon = GFX_decision_TFRKPHN_constitution
-		custom_cost_trigger = {
-			OR = {
-				has_country_flag = TFRKPHN_amend_coop_token
-				has_political_power > 179
+		cost = 45
+		fire_only_once = yes
+		days_remove = 30
+		visible = {
+			has_country_flag = TFRKP_HN_hong_president
+			has_country_flag = TFRKPHN_amend_passed
+			NOT = { has_country_flag = TFRKPHN_const_nbi }
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = TFRKPHN_amend_req_nbi_tt
+				has_country_flag = TFRKPHN_const_cio
+			}
+			custom_trigger_tooltip = {
+				tooltip = TFRKPHN_amend_not_busy_tt
+				NOT = { has_country_flag = TFRKPHN_amend_busy }
 			}
 		}
-		custom_cost_text = TFRKPHN_amend_cost_180
+		complete_effect = {
+			set_country_flag = TFRKPHN_amend_busy
+			custom_effect_tooltip = TFRKPHN_amend_busy_tt
+		}
+		remove_effect = {
+			clr_country_flag = TFRKPHN_amend_busy
+			custom_effect_tooltip = TFRKPHN_amend_comp_tt
+			hidden_effect = { add_to_variable = { TFRKPHN_amend_comp = 1 } }
+			hidden_effect = { TFRKPHN_amend_calc_eff = yes }
+			set_country_flag = TFRKPHN_const_nbi
+			hidden_effect = {
+				add_to_variable = { TFRKPHN_const_done = 1 }
+				set_country_flag = TFRKPHN_const_nbi_weak
+			}
+			custom_effect_tooltip = TFRKPHN_const_nbi_c_tt
+			country_event = tfrkphn.137
+			custom_effect_tooltip = TFRKPHN_7rep_up_scaled_tt
+			hidden_effect = { TFRKPHN_7rep_add_scaled = yes }
+			if = { limit = { check_variable = { TFRKPHN_amend_comp < 1 } } add_political_power = 50 add_stability = 0.03 }
+			else_if = { limit = { check_variable = { TFRKPHN_amend_comp < 2 } } add_political_power = 45 add_stability = 0.027 }
+			else_if = { limit = { check_variable = { TFRKPHN_amend_comp < 3 } } add_political_power = 40 add_stability = 0.024 }
+			else_if = { limit = { check_variable = { TFRKPHN_amend_comp < 4 } } add_political_power = 35 add_stability = 0.021 }
+			else_if = { limit = { check_variable = { TFRKPHN_amend_comp < 5 } } add_political_power = 30 add_stability = 0.018 }
+			else_if = { limit = { check_variable = { TFRKPHN_amend_comp < 6 } } add_political_power = 25 add_stability = 0.015 }
+			else_if = { limit = { check_variable = { TFRKPHN_amend_comp < 7 } } add_political_power = 20 add_stability = 0.012 }
+			else = { add_political_power = 15 add_stability = 0.009 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	TFRKPHN_amend_d_district = {
+		icon = GFX_decision_TFRKPHN_constitution
+		cost = 90
 		fire_only_once = yes
 		days_remove = 30
 		visible = {
@@ -582,11 +790,6 @@ TFRKPHN_hong_amend_category = {
 			}
 		}
 		complete_effect = {
-			if = {
-				limit = { has_country_flag = TFRKPHN_amend_coop_token }
-				clr_country_flag = TFRKPHN_amend_coop_token
-			}
-			else = { add_political_power = -180 }
 			set_country_flag = TFRKPHN_amend_busy
 			custom_effect_tooltip = TFRKPHN_amend_busy_tt
 		}
@@ -596,9 +799,8 @@ TFRKPHN_hong_amend_category = {
 			set_country_flag = TFRKPHN_const_district
 			hidden_effect = {
 				add_to_variable = { TFRKPHN_const_done = 1 }
-				if = { limit = { check_variable = { TFRKPHN_amend_comp > 3 } } set_country_flag = TFRKPHN_const_district_weak }
 			}
-			custom_effect_tooltip = TFRKPHN_const_district_tt
+			custom_effect_tooltip = TFRKPHN_const_district_o_tt
 			country_event = tfrkphn.135
 			custom_effect_tooltip = TFRKPHN_7rep_up_scaled_tt
 			hidden_effect = { TFRKPHN_7rep_add_scaled = yes }
@@ -614,15 +816,60 @@ TFRKPHN_hong_amend_category = {
 		ai_will_do = { factor = 1 }
 	}
 
-	TFRKPHN_amend_d_nec = {
+	# district: 야당과 타협한 안. 정치력은 절반이지만 타협 횟수가 1 늘어 개헌 효과가 줄고, 조문이 타협안으로 바뀐다
+	TFRKPHN_amend_d_district_c = {
 		icon = GFX_decision_TFRKPHN_constitution
-		custom_cost_trigger = {
-			OR = {
-				has_country_flag = TFRKPHN_amend_coop_token
-				has_political_power > 179
+		cost = 45
+		fire_only_once = yes
+		days_remove = 30
+		visible = {
+			has_country_flag = TFRKP_HN_hong_president
+			has_country_flag = TFRKPHN_amend_passed
+			NOT = { has_country_flag = TFRKPHN_const_district }
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = TFRKPHN_amend_req_district_tt
+				has_country_flag = TFRKPHN_const_committee
+			}
+			custom_trigger_tooltip = {
+				tooltip = TFRKPHN_amend_not_busy_tt
+				NOT = { has_country_flag = TFRKPHN_amend_busy }
 			}
 		}
-		custom_cost_text = TFRKPHN_amend_cost_180
+		complete_effect = {
+			set_country_flag = TFRKPHN_amend_busy
+			custom_effect_tooltip = TFRKPHN_amend_busy_tt
+		}
+		remove_effect = {
+			clr_country_flag = TFRKPHN_amend_busy
+			custom_effect_tooltip = TFRKPHN_amend_comp_tt
+			hidden_effect = { add_to_variable = { TFRKPHN_amend_comp = 1 } }
+			hidden_effect = { TFRKPHN_amend_calc_eff = yes }
+			set_country_flag = TFRKPHN_const_district
+			hidden_effect = {
+				add_to_variable = { TFRKPHN_const_done = 1 }
+				set_country_flag = TFRKPHN_const_district_weak
+			}
+			custom_effect_tooltip = TFRKPHN_const_district_c_tt
+			country_event = tfrkphn.135
+			custom_effect_tooltip = TFRKPHN_7rep_up_scaled_tt
+			hidden_effect = { TFRKPHN_7rep_add_scaled = yes }
+			if = { limit = { check_variable = { TFRKPHN_amend_comp < 1 } } add_stability = 0.05 }
+			else_if = { limit = { check_variable = { TFRKPHN_amend_comp < 2 } } add_stability = 0.045 }
+			else_if = { limit = { check_variable = { TFRKPHN_amend_comp < 3 } } add_stability = 0.04 }
+			else_if = { limit = { check_variable = { TFRKPHN_amend_comp < 4 } } add_stability = 0.035 }
+			else_if = { limit = { check_variable = { TFRKPHN_amend_comp < 5 } } add_stability = 0.03 }
+			else_if = { limit = { check_variable = { TFRKPHN_amend_comp < 6 } } add_stability = 0.025 }
+			else_if = { limit = { check_variable = { TFRKPHN_amend_comp < 7 } } add_stability = 0.02 }
+			else = { add_stability = 0.015 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	TFRKPHN_amend_d_nec = {
+		icon = GFX_decision_TFRKPHN_constitution
+		cost = 90
 		fire_only_once = yes
 		days_remove = 30
 		visible = {
@@ -641,11 +888,6 @@ TFRKPHN_hong_amend_category = {
 			}
 		}
 		complete_effect = {
-			if = {
-				limit = { has_country_flag = TFRKPHN_amend_coop_token }
-				clr_country_flag = TFRKPHN_amend_coop_token
-			}
-			else = { add_political_power = -180 }
 			set_country_flag = TFRKPHN_amend_busy
 			custom_effect_tooltip = TFRKPHN_amend_busy_tt
 		}
@@ -655,9 +897,8 @@ TFRKPHN_hong_amend_category = {
 			set_country_flag = TFRKPHN_const_nec
 			hidden_effect = {
 				add_to_variable = { TFRKPHN_const_done = 1 }
-				if = { limit = { check_variable = { TFRKPHN_amend_comp > 3 } } set_country_flag = TFRKPHN_const_nec_weak }
 			}
-			custom_effect_tooltip = TFRKPHN_const_nec_tt
+			custom_effect_tooltip = TFRKPHN_const_nec_o_tt
 			country_event = tfrkphn.136
 			custom_effect_tooltip = TFRKPHN_7rep_up_scaled_tt
 			hidden_effect = { TFRKPHN_7rep_add_scaled = yes }
@@ -673,15 +914,60 @@ TFRKPHN_hong_amend_category = {
 		ai_will_do = { factor = 1 }
 	}
 
-	TFRKPHN_amend_d_review = {
+	# nec: 야당과 타협한 안. 정치력은 절반이지만 타협 횟수가 1 늘어 개헌 효과가 줄고, 조문이 타협안으로 바뀐다
+	TFRKPHN_amend_d_nec_c = {
 		icon = GFX_decision_TFRKPHN_constitution
-		custom_cost_trigger = {
-			OR = {
-				has_country_flag = TFRKPHN_amend_coop_token
-				has_political_power > 179
+		cost = 45
+		fire_only_once = yes
+		days_remove = 30
+		visible = {
+			has_country_flag = TFRKP_HN_hong_president
+			has_country_flag = TFRKPHN_amend_passed
+			NOT = { has_country_flag = TFRKPHN_const_nec }
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = TFRKPHN_amend_req_nec_tt
+				has_country_flag = TFRKPHN_const_committee
+			}
+			custom_trigger_tooltip = {
+				tooltip = TFRKPHN_amend_not_busy_tt
+				NOT = { has_country_flag = TFRKPHN_amend_busy }
 			}
 		}
-		custom_cost_text = TFRKPHN_amend_cost_180
+		complete_effect = {
+			set_country_flag = TFRKPHN_amend_busy
+			custom_effect_tooltip = TFRKPHN_amend_busy_tt
+		}
+		remove_effect = {
+			clr_country_flag = TFRKPHN_amend_busy
+			custom_effect_tooltip = TFRKPHN_amend_comp_tt
+			hidden_effect = { add_to_variable = { TFRKPHN_amend_comp = 1 } }
+			hidden_effect = { TFRKPHN_amend_calc_eff = yes }
+			set_country_flag = TFRKPHN_const_nec
+			hidden_effect = {
+				add_to_variable = { TFRKPHN_const_done = 1 }
+				set_country_flag = TFRKPHN_const_nec_weak
+			}
+			custom_effect_tooltip = TFRKPHN_const_nec_c_tt
+			country_event = tfrkphn.136
+			custom_effect_tooltip = TFRKPHN_7rep_up_scaled_tt
+			hidden_effect = { TFRKPHN_7rep_add_scaled = yes }
+			if = { limit = { check_variable = { TFRKPHN_amend_comp < 1 } } add_political_power = 50 add_stability = 0.03 }
+			else_if = { limit = { check_variable = { TFRKPHN_amend_comp < 2 } } add_political_power = 45 add_stability = 0.027 }
+			else_if = { limit = { check_variable = { TFRKPHN_amend_comp < 3 } } add_political_power = 40 add_stability = 0.024 }
+			else_if = { limit = { check_variable = { TFRKPHN_amend_comp < 4 } } add_political_power = 35 add_stability = 0.021 }
+			else_if = { limit = { check_variable = { TFRKPHN_amend_comp < 5 } } add_political_power = 30 add_stability = 0.018 }
+			else_if = { limit = { check_variable = { TFRKPHN_amend_comp < 6 } } add_political_power = 25 add_stability = 0.015 }
+			else_if = { limit = { check_variable = { TFRKPHN_amend_comp < 7 } } add_political_power = 20 add_stability = 0.012 }
+			else = { add_political_power = 15 add_stability = 0.009 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	TFRKPHN_amend_d_review = {
+		icon = GFX_decision_TFRKPHN_constitution
+		cost = 90
 		fire_only_once = yes
 		days_remove = 30
 		visible = {
@@ -707,11 +993,6 @@ TFRKPHN_hong_amend_category = {
 			}
 		}
 		complete_effect = {
-			if = {
-				limit = { has_country_flag = TFRKPHN_amend_coop_token }
-				clr_country_flag = TFRKPHN_amend_coop_token
-			}
-			else = { add_political_power = -180 }
 			set_country_flag = TFRKPHN_amend_busy
 			custom_effect_tooltip = TFRKPHN_amend_busy_tt
 		}

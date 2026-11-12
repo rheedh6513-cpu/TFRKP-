@@ -4,7 +4,7 @@ TFRKPHN_hong_invest_category = {
 	# 중국/대만 중 하나 선택
 	TFRKPHN_hong_choose_prc = {
 		icon = GFX_decision_generic_attract_foreign_investors
-		cost = 25
+		cost = 13
 		days_remove = 14
 		fire_only_once = yes
 		priority = 300
@@ -32,7 +32,7 @@ TFRKPHN_hong_invest_category = {
 	}
 	TFRKPHN_hong_choose_chi = {
 		icon = GFX_decision_generic_attract_foreign_investors
-		cost = 25
+		cost = 13
 		days_remove = 14
 		fire_only_once = yes
 		priority = 300

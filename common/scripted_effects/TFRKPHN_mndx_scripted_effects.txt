@@ -1,0 +1,145 @@
+# [안내] 국방부 사업을 끝낼 때 해당 군의 통합 국민정신에 수치를 더한다. mndx_build.py가 만든다.
+TFRKPHN_mndx_grant_army = {
+	custom_effect_tooltip = TFRKPHN_mndx_grant_army_tt
+	hidden_effect = {
+		add_to_variable = { TFRKPHN_mndx_army_army_attack_factor = 0.05 }
+		add_to_variable = { TFRKPHN_mndx_army_army_defence_factor = 0.05 }
+		if = { limit = { NOT = { has_dynamic_modifier = { modifier = TFRKPHN_mndx_army } } } add_dynamic_modifier = { modifier = TFRKPHN_mndx_army } }
+		force_update_dynamic_modifier = yes
+	}
+}
+TFRKPHN_mndx_grant_barracks = {
+	custom_effect_tooltip = TFRKPHN_mndx_grant_barracks_tt
+	hidden_effect = {
+		add_to_variable = { TFRKPHN_mndx_army_army_morale_factor = 0.05 }
+		add_to_variable = { TFRKPHN_mndx_army_stability_factor = 0.02 }
+		if = { limit = { NOT = { has_dynamic_modifier = { modifier = TFRKPHN_mndx_army } } } add_dynamic_modifier = { modifier = TFRKPHN_mndx_army } }
+		force_update_dynamic_modifier = yes
+	}
+}
+TFRKPHN_mndx_grant_drone_command = {
+	custom_effect_tooltip = TFRKPHN_mndx_grant_drone_command_tt
+	hidden_effect = {
+		add_to_variable = { TFRKPHN_mndx_army_recon_factor = 0.1 }
+		add_to_variable = { TFRKPHN_mndx_army_army_intel_factor = 0.05 }
+		if = { limit = { NOT = { has_dynamic_modifier = { modifier = TFRKPHN_mndx_army } } } add_dynamic_modifier = { modifier = TFRKPHN_mndx_army } }
+		force_update_dynamic_modifier = yes
+	}
+}
+TFRKPHN_mndx_grant_army_tiger = {
+	custom_effect_tooltip = TFRKPHN_mndx_grant_army_tiger_tt
+	hidden_effect = {
+		add_to_variable = { TFRKPHN_mndx_army_army_speed_factor = 0.05 }
+		add_to_variable = { TFRKPHN_mndx_army_army_attack_factor = 0.03 }
+		if = { limit = { NOT = { has_dynamic_modifier = { modifier = TFRKPHN_mndx_army } } } add_dynamic_modifier = { modifier = TFRKPHN_mndx_army } }
+		force_update_dynamic_modifier = yes
+	}
+}
+TFRKPHN_mndx_grant_navy = {
+	custom_effect_tooltip = TFRKPHN_mndx_grant_navy_tt
+	hidden_effect = {
+		add_to_variable = { TFRKPHN_mndx_navy_naval_damage_factor = 0.05 }
+		add_to_variable = { TFRKPHN_mndx_navy_naval_speed_factor = 0.05 }
+		if = { limit = { NOT = { has_dynamic_modifier = { modifier = TFRKPHN_mndx_navy } } } add_dynamic_modifier = { modifier = TFRKPHN_mndx_navy } }
+		force_update_dynamic_modifier = yes
+	}
+}
+TFRKPHN_mndx_grant_fa50 = {
+	custom_effect_tooltip = TFRKPHN_mndx_grant_fa50_tt
+	hidden_effect = {
+		add_to_variable = { TFRKPHN_mndx_air_air_attack_factor = 0.05 }
+		add_to_variable = { TFRKPHN_mndx_air_air_agility_factor = 0.05 }
+		if = { limit = { NOT = { has_dynamic_modifier = { modifier = TFRKPHN_mndx_air } } } add_dynamic_modifier = { modifier = TFRKPHN_mndx_air } }
+		force_update_dynamic_modifier = yes
+	}
+}
+TFRKPHN_mndx_grant_f4 = {
+	custom_effect_tooltip = TFRKPHN_mndx_grant_f4_tt
+	hidden_effect = {
+		add_to_variable = { TFRKPHN_mndx_air_air_accidents_factor = -0.25 }
+		add_to_variable = { TFRKPHN_mndx_air_air_defence_factor = 0.05 }
+		if = { limit = { NOT = { has_dynamic_modifier = { modifier = TFRKPHN_mndx_air } } } add_dynamic_modifier = { modifier = TFRKPHN_mndx_air } }
+		force_update_dynamic_modifier = yes
+	}
+}
+TFRKPHN_mndx_grant_kc330 = {
+	custom_effect_tooltip = TFRKPHN_mndx_grant_kc330_tt
+	hidden_effect = {
+		add_to_variable = { TFRKPHN_mndx_air_air_range_factor = 0.15 }
+		if = { limit = { NOT = { has_dynamic_modifier = { modifier = TFRKPHN_mndx_air } } } add_dynamic_modifier = { modifier = TFRKPHN_mndx_air } }
+		force_update_dynamic_modifier = yes
+	}
+}
+TFRKPHN_mndx_grant_global_hawk = {
+	custom_effect_tooltip = TFRKPHN_mndx_grant_global_hawk_tt
+	hidden_effect = {
+		add_to_variable = { TFRKPHN_mndx_air_airforce_intel_factor = 0.1 }
+		add_to_variable = { TFRKPHN_mndx_air_army_intel_factor = 0.05 }
+		if = { limit = { NOT = { has_dynamic_modifier = { modifier = TFRKPHN_mndx_air } } } add_dynamic_modifier = { modifier = TFRKPHN_mndx_air } }
+		force_update_dynamic_modifier = yes
+	}
+}
+TFRKPHN_mndx_grant_space = {
+	custom_effect_tooltip = TFRKPHN_mndx_grant_space_tt
+	hidden_effect = {
+		add_to_variable = { TFRKPHN_mndx_air_army_intel_factor = 0.1 }
+		add_to_variable = { TFRKPHN_mndx_air_navy_intel_factor = 0.1 }
+		add_to_variable = { TFRKPHN_mndx_air_airforce_intel_factor = 0.1 }
+		add_to_variable = { TFRKPHN_mndx_air_research_speed_factor = 0.03 }
+		if = { limit = { NOT = { has_dynamic_modifier = { modifier = TFRKPHN_mndx_air } } } add_dynamic_modifier = { modifier = TFRKPHN_mndx_air } }
+		force_update_dynamic_modifier = yes
+	}
+}
+TFRKPHN_mndx_grant_sat425 = {
+	custom_effect_tooltip = TFRKPHN_mndx_grant_sat425_tt
+	hidden_effect = {
+		add_to_variable = { TFRKPHN_mndx_air_army_intel_factor = 0.1 }
+		add_to_variable = { TFRKPHN_mndx_air_navy_intel_factor = 0.1 }
+		add_to_variable = { TFRKPHN_mndx_air_airforce_intel_factor = 0.1 }
+		if = { limit = { NOT = { has_dynamic_modifier = { modifier = TFRKPHN_mndx_air } } } add_dynamic_modifier = { modifier = TFRKPHN_mndx_air } }
+		force_update_dynamic_modifier = yes
+	}
+}
+TFRKPHN_mndx_grant_marine_sof = {
+	custom_effect_tooltip = TFRKPHN_mndx_grant_marine_sof_tt
+	hidden_effect = {
+		add_to_variable = { TFRKPHN_mndx_marine_special_forces_cap = 0.1 }
+		add_to_variable = { TFRKPHN_mndx_marine_special_forces_attack_factor = 0.1 }
+		add_to_variable = { TFRKPHN_mndx_marine_special_forces_defence_factor = 0.1 }
+		if = { limit = { NOT = { has_dynamic_modifier = { modifier = TFRKPHN_mndx_marine } } } add_dynamic_modifier = { modifier = TFRKPHN_mndx_marine } }
+		force_update_dynamic_modifier = yes
+	}
+}
+TFRKPHN_mndx_grant_marineon = {
+	custom_effect_tooltip = TFRKPHN_mndx_grant_marineon_tt
+	hidden_effect = {
+		add_to_variable = { TFRKPHN_mndx_marine_amphibious_invasion = 0.15 }
+		add_to_variable = { TFRKPHN_mndx_marine_naval_invasion_capacity = 1 }
+		if = { limit = { NOT = { has_dynamic_modifier = { modifier = TFRKPHN_mndx_marine } } } add_dynamic_modifier = { modifier = TFRKPHN_mndx_marine } }
+		force_update_dynamic_modifier = yes
+	}
+}
+TFRKPHN_mndx_grant_nwi_command = {
+	custom_effect_tooltip = TFRKPHN_mndx_grant_nwi_command_tt
+	hidden_effect = {
+		add_to_variable = { TFRKPHN_mndx_marine_army_defence_factor = 0.03 }
+		if = { limit = { NOT = { has_dynamic_modifier = { modifier = TFRKPHN_mndx_marine } } } add_dynamic_modifier = { modifier = TFRKPHN_mndx_marine } }
+		force_update_dynamic_modifier = yes
+	}
+}
+TFRKPHN_mndx_migrate = {
+	if = { limit = { has_dynamic_modifier = { modifier = TFRKPHN_mnd_army } } remove_dynamic_modifier = { modifier = TFRKPHN_mnd_army } TFRKPHN_mndx_grant_army = yes }
+	if = { limit = { has_dynamic_modifier = { modifier = TFRKPHN_mnd_barracks } } remove_dynamic_modifier = { modifier = TFRKPHN_mnd_barracks } TFRKPHN_mndx_grant_barracks = yes }
+	if = { limit = { has_dynamic_modifier = { modifier = TFRKPHN_mnd_drone_command } } remove_dynamic_modifier = { modifier = TFRKPHN_mnd_drone_command } TFRKPHN_mndx_grant_drone_command = yes }
+	if = { limit = { has_dynamic_modifier = { modifier = TFRKPHN_mnd_army_tiger } } remove_dynamic_modifier = { modifier = TFRKPHN_mnd_army_tiger } TFRKPHN_mndx_grant_army_tiger = yes }
+	if = { limit = { has_dynamic_modifier = { modifier = TFRKPHN_mnd_navy } } remove_dynamic_modifier = { modifier = TFRKPHN_mnd_navy } TFRKPHN_mndx_grant_navy = yes }
+	if = { limit = { has_dynamic_modifier = { modifier = TFRKPHN_mnd_fa50 } } remove_dynamic_modifier = { modifier = TFRKPHN_mnd_fa50 } TFRKPHN_mndx_grant_fa50 = yes }
+	if = { limit = { has_dynamic_modifier = { modifier = TFRKPHN_mnd_f4 } } remove_dynamic_modifier = { modifier = TFRKPHN_mnd_f4 } TFRKPHN_mndx_grant_f4 = yes }
+	if = { limit = { has_dynamic_modifier = { modifier = TFRKPHN_mnd_kc330 } } remove_dynamic_modifier = { modifier = TFRKPHN_mnd_kc330 } TFRKPHN_mndx_grant_kc330 = yes }
+	if = { limit = { has_dynamic_modifier = { modifier = TFRKPHN_mnd_global_hawk } } remove_dynamic_modifier = { modifier = TFRKPHN_mnd_global_hawk } TFRKPHN_mndx_grant_global_hawk = yes }
+	if = { limit = { has_dynamic_modifier = { modifier = TFRKPHN_mnd_space } } remove_dynamic_modifier = { modifier = TFRKPHN_mnd_space } TFRKPHN_mndx_grant_space = yes }
+	if = { limit = { has_dynamic_modifier = { modifier = TFRKPHN_mnd_sat425 } } remove_dynamic_modifier = { modifier = TFRKPHN_mnd_sat425 } TFRKPHN_mndx_grant_sat425 = yes }
+	if = { limit = { has_dynamic_modifier = { modifier = TFRKPHN_mnd_marine_sof } } remove_dynamic_modifier = { modifier = TFRKPHN_mnd_marine_sof } TFRKPHN_mndx_grant_marine_sof = yes }
+	if = { limit = { has_dynamic_modifier = { modifier = TFRKPHN_mnd_marineon } } remove_dynamic_modifier = { modifier = TFRKPHN_mnd_marineon } TFRKPHN_mndx_grant_marineon = yes }
+	if = { limit = { has_dynamic_modifier = { modifier = TFRKPHN_mnd_nwi_command } } remove_dynamic_modifier = { modifier = TFRKPHN_mnd_nwi_command } TFRKPHN_mndx_grant_nwi_command = yes }
+}

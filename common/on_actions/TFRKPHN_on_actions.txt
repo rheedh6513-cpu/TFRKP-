@@ -59,6 +59,16 @@ on_actions = {
 					else = { clr_country_flag = TFRKPHN_pres_cycle }
 				}
 			}
+			# 이미 대아대전이 시작된 저장 파일에서도 대아대전 중점 가지가 열리게 한다
+			if = {
+				limit = {
+					has_global_flag = TFRKP_GAW_is_started_flag
+					has_country_flag = TFRKPHN_kju_op_done
+					NOT = { has_country_flag = KOR_great_asia_war }
+				}
+				set_country_flag = KOR_great_asia_war
+				mark_focus_tree_layout_dirty = yes
+			}
 			# 김정은 참수 뒤 한국과 중국이 전쟁에 들어가면 대아대전이 시작된다 (Korea Plus의 대아대전 시작 처리와 같게)
 			if = {
 				limit = {
@@ -68,6 +78,9 @@ on_actions = {
 				}
 				set_global_flag = TFRKP_GAW_is_started_flag
 				news_event = { id = tfrkphn.253 }
+				# Korea Plus의 대아대전 중점 가지(공유 중점)가 홍준표, 이인제 트리에서도 열리게 한다
+				set_country_flag = KOR_great_asia_war
+				mark_focus_tree_layout_dirty = yes
 				PRC = {
 					unlock_national_focus = PRC_support_the_korean_way
 					unlock_national_focus = PRC_finilize_korean_revolution
@@ -113,6 +126,12 @@ if = {
 	TFRKPHN_job_start = yes
 	TFRKPHN_job_daily = yes
 }
+
+# 승전 뒤 국민정신 통합: 예전 저장 파일의 전후 번영, 자주국방, 아시아 민주주의 연합을 한 번 「승전의 유산」으로 옮긴다
+if = { limit = { NOT = { has_country_flag = TFRKPHN_pw_migrated } } set_country_flag = TFRKPHN_pw_migrated TFRKPHN_pw_migrate = yes }
+
+# 국방부 탭 국민정신 통합: 예전 저장 파일의 옛 보정치를 한 번 새 것으로 옮긴다
+if = { limit = { NOT = { has_country_flag = TFRKPHN_mndx_migrated } } set_country_flag = TFRKPHN_mndx_migrated TFRKPHN_mndx_migrate = yes }
 
 # 이인제 정부 돌아오는 기업
 if = { limit = { has_country_flag = TFRKPHN_ut_on } TFRKPHN_ut_daily = yes }

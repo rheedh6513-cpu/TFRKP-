@@ -11,14 +11,14 @@ country_event = {
 	fire_only_once = yes
 	option = {
 		name = tfrkphn.460.a
-		add_ideas = TFRKPHN_bj_plan
+		TFRKPHN_bj_stage1 = yes
 		add_command_power = 30
 		custom_effect_tooltip = tfrkphn.460.a_tt
 		hidden_effect = { TFRKPHN_bj_axis_a = yes }
 	}
 	option = {
 		name = tfrkphn.460.b
-		add_ideas = TFRKPHN_bj_plan
+		TFRKPHN_bj_stage1 = yes
 		add_command_power = 30
 		custom_effect_tooltip = tfrkphn.460.b_tt
 		hidden_effect = { TFRKPHN_bj_axis_n = yes }
@@ -36,8 +36,7 @@ country_event = {
 	option = {
 		name = tfrkphn.461.a
 		hidden_effect = { country_event = { id = tfrkphn.491 days = 2 } }	# 김지원 하사의 탄약 지급 이야기 (fin_build.py)
-		if = { limit = { has_idea = TFRKPHN_bj_plan } swap_ideas = { remove_idea = TFRKPHN_bj_plan add_idea = TFRKPHN_bj_mobil } }
-		else = { add_ideas = TFRKPHN_bj_mobil }
+		TFRKPHN_bj_stage2 = yes
 		add_manpower = 100000
 		add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 5000 producer = KOR }
 		add_equipment_to_stockpile = { type = support_equipment amount = 800 producer = KOR }
@@ -55,8 +54,7 @@ country_event = {
 	option = {
 		name = tfrkphn.462.a
 		hidden_effect = { country_event = { id = tfrkphn.497 days = 3 } }	# 홍준표: 전쟁을 해 본 사람 (hong_build.py)
-		if = { limit = { has_idea = TFRKPHN_bj_mobil } swap_ideas = { remove_idea = TFRKPHN_bj_mobil add_idea = TFRKPHN_bj_ready } }
-		else = { add_ideas = TFRKPHN_bj_ready }
+		TFRKPHN_bj_stage3 = yes
 		custom_effect_tooltip = tfrkphn.462.tt
 		hidden_effect = {
 			add_to_variable = { TFRKPHN_kju_prep = 50 }

@@ -31,6 +31,10 @@ TFRKPHN_chb_check = {
 	add_to_variable = { TFRKPHN_chb_if = 1 }
 	set_variable = { TFRKPHN_chb_gain = 15 }
 	if = { limit = { check_variable = { TFRKPHN_chb_inv > 3.5 } } set_variable = { TFRKPHN_chb_gain = 10 } if = { limit = { NOT = { has_country_flag = TFRKPHN_chb_inv_done } } set_country_flag = TFRKPHN_chb_inv_done country_event = { id = tfrkphn.475 days = 1 } } }
+	# 유승민 이야기 (yoo_build.py): 첫 개혁 통과, 첫 타협, 압수수색
+	if = { limit = { check_variable = { TFRKPHN_chb_n > 0.5 } NOT = { has_country_flag = TFRKPHN_yoo_ev1 } } set_country_flag = TFRKPHN_yoo_ev1 country_event = { id = tfrkphn.508 days = 3 } }
+	if = { limit = { check_variable = { TFRKPHN_chb_nc > 0.5 } NOT = { has_country_flag = TFRKPHN_yoo_ev2 } } set_country_flag = TFRKPHN_yoo_ev2 country_event = { id = tfrkphn.509 days = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_chb_inv > 1.5 } NOT = { has_country_flag = TFRKPHN_yoo_ev4 } } set_country_flag = TFRKPHN_yoo_ev4 country_event = { id = tfrkphn.511 days = 2 } }
 	if = { limit = { check_variable = { TFRKPHN_chb_n > 3.5 } NOT = { has_country_flag = TFRKPHN_hong_ev2 } } set_country_flag = TFRKPHN_hong_ev2 country_event = { id = tfrkphn.493 days = 2 } }
 	set_variable = { TFRKPHN_chb_reward = 10 }
 	subtract_from_variable = { TFRKPHN_chb_reward = TFRKPHN_chb_nc }

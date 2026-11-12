@@ -4,7 +4,7 @@ TFRKPHN_crime_category = {
 
 	TFRKPHN_crime_seoul = {
 		icon = GFX_decision_generic_political_actions
-		cost = 35
+		cost = 18
 		days_remove = 14
 		visible = {
 			check_variable = { TFRKPHN_crime_sel = 1 }
@@ -51,7 +51,7 @@ TFRKPHN_crime_category = {
 
 	TFRKPHN_crime_busan = {
 		icon = GFX_decision_generic_political_actions
-		cost = 35
+		cost = 18
 		days_remove = 14
 		visible = {
 			check_variable = { TFRKPHN_crime_sel = 2 }
@@ -98,7 +98,7 @@ TFRKPHN_crime_category = {
 
 	TFRKPHN_crime_daegu = {
 		icon = GFX_decision_generic_political_actions
-		cost = 35
+		cost = 18
 		days_remove = 14
 		visible = {
 			check_variable = { TFRKPHN_crime_sel = 3 }
@@ -145,7 +145,7 @@ TFRKPHN_crime_category = {
 
 	TFRKPHN_crime_gwangju = {
 		icon = GFX_decision_generic_political_actions
-		cost = 35
+		cost = 18
 		days_remove = 14
 		visible = {
 			check_variable = { TFRKPHN_crime_sel = 4 }
@@ -192,7 +192,7 @@ TFRKPHN_crime_category = {
 
 	TFRKPHN_crime_daejeon = {
 		icon = GFX_decision_generic_political_actions
-		cost = 35
+		cost = 18
 		days_remove = 14
 		visible = {
 			check_variable = { TFRKPHN_crime_sel = 5 }
@@ -239,7 +239,7 @@ TFRKPHN_crime_category = {
 
 	TFRKPHN_crime_ulsan = {
 		icon = GFX_decision_generic_political_actions
-		cost = 35
+		cost = 18
 		days_remove = 14
 		visible = {
 			check_variable = { TFRKPHN_crime_sel = 6 }

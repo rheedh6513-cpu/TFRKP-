@@ -26,7 +26,7 @@ TFRKPHN_hong_minsim_category = {
 	}
 	TFRKPHN_hong_tour_seoul = {
 		icon = GFX_decision_icon_KOR_LJS_misc
-		cost = 50
+		cost = 25
 		days_remove = 14
 		days_re_enable = 21
 		priority = 100
@@ -54,7 +54,7 @@ TFRKPHN_hong_minsim_category = {
 	}
 	TFRKPHN_hong_tour_gyeonggi = {
 		icon = GFX_decision_icon_KOR_LJS_misc
-		cost = 50
+		cost = 25
 		days_remove = 14
 		days_re_enable = 21
 		priority = 100
@@ -82,7 +82,7 @@ TFRKPHN_hong_minsim_category = {
 	}
 	TFRKPHN_hong_tour_gangwon = {
 		icon = GFX_decision_icon_KOR_LJS_misc
-		cost = 50
+		cost = 25
 		days_remove = 14
 		days_re_enable = 21
 		priority = 100
@@ -110,7 +110,7 @@ TFRKPHN_hong_minsim_category = {
 	}
 	TFRKPHN_hong_tour_chungcheong = {
 		icon = GFX_decision_icon_KOR_LJS_misc
-		cost = 50
+		cost = 25
 		days_remove = 14
 		days_re_enable = 21
 		priority = 100
@@ -138,7 +138,7 @@ TFRKPHN_hong_minsim_category = {
 	}
 	TFRKPHN_hong_tour_jeonbuk = {
 		icon = GFX_decision_icon_KOR_LJS_misc
-		cost = 50
+		cost = 25
 		days_remove = 14
 		days_re_enable = 21
 		priority = 100
@@ -166,7 +166,7 @@ TFRKPHN_hong_minsim_category = {
 	}
 	TFRKPHN_hong_tour_jeonnam = {
 		icon = GFX_decision_icon_KOR_LJS_misc
-		cost = 50
+		cost = 25
 		days_remove = 14
 		days_re_enable = 21
 		priority = 100
@@ -194,7 +194,7 @@ TFRKPHN_hong_minsim_category = {
 	}
 	TFRKPHN_hong_tour_gyeongbuk = {
 		icon = GFX_decision_icon_KOR_LJS_misc
-		cost = 50
+		cost = 25
 		days_remove = 14
 		days_re_enable = 21
 		priority = 100
@@ -222,7 +222,7 @@ TFRKPHN_hong_minsim_category = {
 	}
 	TFRKPHN_hong_tour_gyeongnam = {
 		icon = GFX_decision_icon_KOR_LJS_misc
-		cost = 50
+		cost = 25
 		days_remove = 14
 		days_re_enable = 21
 		priority = 100
@@ -250,7 +250,7 @@ TFRKPHN_hong_minsim_category = {
 	}
 	TFRKPHN_hong_tour_jeju = {
 		icon = GFX_decision_icon_KOR_LJS_misc
-		cost = 50
+		cost = 25
 		days_remove = 14
 		days_re_enable = 21
 		priority = 100
@@ -278,7 +278,7 @@ TFRKPHN_hong_minsim_category = {
 	}
 	TFRKPHN_hong_arms_seoul = {
 		icon = GFX_decision_icon_KOR_arms_factory_icon
-		cost = 30
+		cost = 15
 		days_remove = 14
 		fire_only_once = yes
 		priority = 90
@@ -326,7 +326,7 @@ TFRKPHN_hong_minsim_category = {
 	}
 	TFRKPHN_hong_arms_gyeonggi = {
 		icon = GFX_decision_icon_KOR_arms_factory_icon
-		cost = 30
+		cost = 15
 		days_remove = 14
 		fire_only_once = yes
 		priority = 90
@@ -374,7 +374,7 @@ TFRKPHN_hong_minsim_category = {
 	}
 	TFRKPHN_hong_arms_gangwon = {
 		icon = GFX_decision_icon_KOR_arms_factory_icon
-		cost = 30
+		cost = 15
 		days_remove = 14
 		fire_only_once = yes
 		priority = 90
@@ -422,7 +422,7 @@ TFRKPHN_hong_minsim_category = {
 	}
 	TFRKPHN_hong_arms_chungcheong = {
 		icon = GFX_decision_icon_KOR_arms_factory_icon
-		cost = 30
+		cost = 15
 		days_remove = 14
 		fire_only_once = yes
 		priority = 90
@@ -470,7 +470,7 @@ TFRKPHN_hong_minsim_category = {
 	}
 	TFRKPHN_hong_arms_jeonbuk = {
 		icon = GFX_decision_icon_KOR_arms_factory_icon
-		cost = 30
+		cost = 15
 		days_remove = 14
 		fire_only_once = yes
 		priority = 90
@@ -518,7 +518,7 @@ TFRKPHN_hong_minsim_category = {
 	}
 	TFRKPHN_hong_arms_jeonnam = {
 		icon = GFX_decision_icon_KOR_arms_factory_icon
-		cost = 30
+		cost = 15
 		days_remove = 14
 		fire_only_once = yes
 		priority = 90
@@ -566,7 +566,7 @@ TFRKPHN_hong_minsim_category = {
 	}
 	TFRKPHN_hong_arms_gyeongbuk = {
 		icon = GFX_decision_icon_KOR_arms_factory_icon
-		cost = 30
+		cost = 15
 		days_remove = 14
 		fire_only_once = yes
 		priority = 90
@@ -614,7 +614,7 @@ TFRKPHN_hong_minsim_category = {
 	}
 	TFRKPHN_hong_arms_gyeongnam = {
 		icon = GFX_decision_icon_KOR_arms_factory_icon
-		cost = 30
+		cost = 15
 		days_remove = 14
 		fire_only_once = yes
 		priority = 90

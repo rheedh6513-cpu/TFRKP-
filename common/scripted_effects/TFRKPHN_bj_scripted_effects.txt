@@ -127,10 +127,46 @@ TFRKPHN_bj_update = {
 	set_variable = { TFRKPHN_bj_m_ndmg = TFRKPHN_bj_n } multiply_variable = { TFRKPHN_bj_m_ndmg = 0.001 }
 	set_variable = { TFRKPHN_bj_m_fatk = TFRKPHN_bj_f } multiply_variable = { TFRKPHN_bj_m_fatk = 0.001 }
 	set_variable = { TFRKPHN_bj_m_fdef = TFRKPHN_bj_f } multiply_variable = { TFRKPHN_bj_m_fdef = 0.001 }
+	# 예전 저장 파일: 따로 붙어 있던 단계 국민정신을 떼고 단계 숫자로 옮긴다
+	if = { limit = { has_idea = TFRKPHN_bj_plan } remove_ideas = TFRKPHN_bj_plan if = { limit = { check_variable = { TFRKPHN_bj_stage < 1 } } set_variable = { TFRKPHN_bj_stage = 1 } } }
+	if = { limit = { has_idea = TFRKPHN_bj_mobil } remove_ideas = TFRKPHN_bj_mobil if = { limit = { check_variable = { TFRKPHN_bj_stage < 2 } } set_variable = { TFRKPHN_bj_stage = 2 } } }
+	if = { limit = { has_idea = TFRKPHN_bj_ready } remove_ideas = TFRKPHN_bj_ready if = { limit = { check_variable = { TFRKPHN_bj_stage < 3 } } set_variable = { TFRKPHN_bj_stage = 3 } } }
+	# 단계(0 없음, 1 작전계획, 2 동원 완료, 3 준비 완료)에 따른 값
+	set_variable = { TFRKPHN_bj_m_plan = 0 }
+	set_variable = { TFRKPHN_bj_m_mplan = 0 }
+	set_variable = { TFRKPHN_bj_m_train = 0 }
+	set_variable = { TFRKPHN_bj_m_sup = 0 }
+	set_variable = { TFRKPHN_bj_m_aspd = 0 }
+	set_variable = { TFRKPHN_bj_m_ws = 0 }
+	set_variable = { TFRKPHN_bj_m_satk = 0 }
+	if = { limit = { check_variable = { TFRKPHN_bj_stage > 0.5 } } set_variable = { TFRKPHN_bj_m_plan = 0.15 } set_variable = { TFRKPHN_bj_m_mplan = 0.1 } }
+	if = { limit = { check_variable = { TFRKPHN_bj_stage > 1.5 } } set_variable = { TFRKPHN_bj_m_plan = 0.15 } set_variable = { TFRKPHN_bj_m_mplan = 0.1 } set_variable = { TFRKPHN_bj_m_train = -0.1 } set_variable = { TFRKPHN_bj_m_sup = -0.1 } }
+	if = { limit = { check_variable = { TFRKPHN_bj_stage > 2.5 } } set_variable = { TFRKPHN_bj_m_plan = 0.15 } set_variable = { TFRKPHN_bj_m_mplan = 0.1 } set_variable = { TFRKPHN_bj_m_train = -0.1 } set_variable = { TFRKPHN_bj_m_sup = -0.1 } set_variable = { TFRKPHN_bj_m_satk = 0.1 } set_variable = { TFRKPHN_bj_m_aspd = 0.1 } set_variable = { TFRKPHN_bj_m_ws = 0.1 } }
+	add_to_variable = { TFRKPHN_bj_m_aatk = TFRKPHN_bj_m_satk }
+	# 북한 민심 이반에 비례하는 값 (nk 쪽에서 계산한 것을 가져온다)
+	add_to_variable = { TFRKPHN_bj_m_ws = TFRKPHN_nk_k_ws }
+	set_variable = { TFRKPHN_bj_m_stab = TFRKPHN_nk_k_stab }
+	set_variable = { TFRKPHN_bj_m_pp = TFRKPHN_nk_k_pp }
+	if = { limit = { has_dynamic_modifier = { modifier = TFRKPHN_nk_kor } } remove_dynamic_modifier = { modifier = TFRKPHN_nk_kor } }
 	if = { limit = { NOT = { has_country_flag = TFRKPHN_bj_mod_on } } set_country_flag = TFRKPHN_bj_mod_on add_dynamic_modifier = { modifier = TFRKPHN_bj_force } }
 	force_update_dynamic_modifier = yes
 }
 
+# 단계 1: 북진 작전계획. 국민정신 「북진 태세」에 효과가 더해진다
+TFRKPHN_bj_stage1 = {
+	custom_effect_tooltip = TFRKPHN_bj_stage1_tt
+	hidden_effect = { if = { limit = { check_variable = { TFRKPHN_bj_stage < 1 } } set_variable = { TFRKPHN_bj_stage = 1 } } TFRKPHN_bj_update = yes }
+}
+# 단계 2: 동원 완료. 국민정신 「북진 태세」에 효과가 더해진다
+TFRKPHN_bj_stage2 = {
+	custom_effect_tooltip = TFRKPHN_bj_stage2_tt
+	hidden_effect = { if = { limit = { check_variable = { TFRKPHN_bj_stage < 2 } } set_variable = { TFRKPHN_bj_stage = 2 } } TFRKPHN_bj_update = yes }
+}
+# 단계 3: 북진 준비 완료. 국민정신 「북진 태세」에 효과가 더해진다
+TFRKPHN_bj_stage3 = {
+	custom_effect_tooltip = TFRKPHN_bj_stage3_tt
+	hidden_effect = { if = { limit = { check_variable = { TFRKPHN_bj_stage < 3 } } set_variable = { TFRKPHN_bj_stage = 3 } } TFRKPHN_bj_update = yes }
+}
 # 시작: 중점 「안보는 대통령의 몫」을 끝낸 다음 날 한 번
 TFRKPHN_bj_start = {
 	if = {

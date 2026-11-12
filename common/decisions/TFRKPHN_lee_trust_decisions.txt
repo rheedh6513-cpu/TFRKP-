@@ -20,7 +20,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_pm1 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_pm1 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_pm1_tt
 			hidden_effect = { clr_country_flag = TFRKPHN_dept_req_pm1 clr_country_flag = TFRKPHN_dept_pend_pm add_to_variable = { TFRKPHN_dept_t_pm = 15 } subtract_from_variable = { TFRKPHN_dept_t_em = 8 } subtract_from_variable = { TFRKPHN_dept_t_fm = 8 } add_to_variable = { TFRKPHN_dept_t_dm = 6 } TFRKPHN_dept_update = yes }
@@ -31,7 +31,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_pm2 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_pm2 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_pm2_tt
 			hidden_effect = { clr_country_flag = TFRKPHN_dept_req_pm2 clr_country_flag = TFRKPHN_dept_pend_pm add_to_variable = { TFRKPHN_dept_t_pm = 15 } subtract_from_variable = { TFRKPHN_dept_t_em = 8 } subtract_from_variable = { TFRKPHN_dept_t_dm = 8 } add_to_variable = { TFRKPHN_dept_t_fm = 6 } TFRKPHN_dept_update = yes if = { limit = { has_country_flag = TFRKPHN_job_started } add_to_variable = { TFRKPHN_job_biz = 5 } TFRKPHN_job_update = yes } }
@@ -42,7 +42,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_pm3 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_pm3 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_pm3_tt
 			hidden_effect = { clr_country_flag = TFRKPHN_dept_req_pm3 clr_country_flag = TFRKPHN_dept_pend_pm add_to_variable = { TFRKPHN_dept_t_pm = 15 } subtract_from_variable = { TFRKPHN_dept_t_nis = 8 } subtract_from_variable = { TFRKPHN_dept_t_fm = 8 } add_to_variable = { TFRKPHN_dept_t_im = 6 } TFRKPHN_dept_update = yes }
@@ -53,7 +53,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_fm1 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_fm1 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_fm1_tt
 			hidden_effect = { clr_country_flag = TFRKPHN_dept_req_fm1 clr_country_flag = TFRKPHN_dept_pend_fm add_to_variable = { TFRKPHN_dept_t_fm = 15 } subtract_from_variable = { TFRKPHN_dept_t_im = 8 } subtract_from_variable = { TFRKPHN_dept_t_nis = 8 } add_to_variable = { TFRKPHN_dept_t_dm = 6 } TFRKPHN_dept_update = yes }
@@ -64,7 +64,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_fm2 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_fm2 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_fm2_tt
 			hidden_effect = { clr_country_flag = TFRKPHN_dept_req_fm2 clr_country_flag = TFRKPHN_dept_pend_fm add_to_variable = { TFRKPHN_dept_t_fm = 15 } subtract_from_variable = { TFRKPHN_dept_t_em = 8 } subtract_from_variable = { TFRKPHN_dept_t_pm = 8 } add_to_variable = { TFRKPHN_dept_t_dm = 6 } TFRKPHN_dept_update = yes }
@@ -75,7 +75,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_fm3 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_fm3 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_fm3_tt
 			hidden_effect = { clr_country_flag = TFRKPHN_dept_req_fm3 clr_country_flag = TFRKPHN_dept_pend_fm add_to_variable = { TFRKPHN_dept_t_fm = 15 } subtract_from_variable = { TFRKPHN_dept_t_em = 8 } subtract_from_variable = { TFRKPHN_dept_t_dm = 8 } add_to_variable = { TFRKPHN_dept_t_im = 6 } TFRKPHN_dept_update = yes }
@@ -86,7 +86,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_em1 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_em1 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_em1_tt
 			hidden_effect = { clr_country_flag = TFRKPHN_dept_req_em1 clr_country_flag = TFRKPHN_dept_pend_em add_to_variable = { TFRKPHN_dept_t_em = 15 } subtract_from_variable = { TFRKPHN_dept_t_dm = 8 } subtract_from_variable = { TFRKPHN_dept_t_fm = 8 } add_to_variable = { TFRKPHN_dept_t_nis = 6 } TFRKPHN_dept_update = yes if = { limit = { has_country_flag = TFRKPHN_job_started } add_to_variable = { TFRKPHN_job_n = -2 } TFRKPHN_job_update = yes } }
@@ -97,7 +97,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_em2 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_em2 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_em2_tt
 			hidden_effect = { clr_country_flag = TFRKPHN_dept_req_em2 clr_country_flag = TFRKPHN_dept_pend_em add_to_variable = { TFRKPHN_dept_t_em = 15 } subtract_from_variable = { TFRKPHN_dept_t_im = 8 } subtract_from_variable = { TFRKPHN_dept_t_pm = 8 } add_to_variable = { TFRKPHN_dept_t_fm = 6 } TFRKPHN_dept_update = yes }
@@ -108,7 +108,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_em3 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_em3 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_em3_tt
 			hidden_effect = { clr_country_flag = TFRKPHN_dept_req_em3 clr_country_flag = TFRKPHN_dept_pend_em add_to_variable = { TFRKPHN_dept_t_em = 15 } subtract_from_variable = { TFRKPHN_dept_t_nis = 8 } subtract_from_variable = { TFRKPHN_dept_t_dm = 8 } add_to_variable = { TFRKPHN_dept_t_pm = 6 } TFRKPHN_dept_update = yes }
@@ -119,7 +119,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_im1 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_im1 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_im1_tt
 			add_stability = 0.01
@@ -131,7 +131,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_im2 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_im2 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_im2_tt
 			hidden_effect = { clr_country_flag = TFRKPHN_dept_req_im2 clr_country_flag = TFRKPHN_dept_pend_im add_to_variable = { TFRKPHN_dept_t_im = 15 } subtract_from_variable = { TFRKPHN_dept_t_fm = 8 } subtract_from_variable = { TFRKPHN_dept_t_dm = 8 } add_to_variable = { TFRKPHN_dept_t_pm = 6 } TFRKPHN_dept_update = yes }
@@ -142,7 +142,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_im3 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_im3 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_im3_tt
 			hidden_effect = { clr_country_flag = TFRKPHN_dept_req_im3 clr_country_flag = TFRKPHN_dept_pend_im add_to_variable = { TFRKPHN_dept_t_im = 15 } subtract_from_variable = { TFRKPHN_dept_t_dm = 8 } subtract_from_variable = { TFRKPHN_dept_t_pm = 8 } add_to_variable = { TFRKPHN_dept_t_em = 6 } TFRKPHN_dept_update = yes }
@@ -153,7 +153,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_nis1 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_nis1 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_nis1_tt
 			hidden_effect = { clr_country_flag = TFRKPHN_dept_req_nis1 clr_country_flag = TFRKPHN_dept_pend_nis add_to_variable = { TFRKPHN_dept_t_nis = 15 } subtract_from_variable = { TFRKPHN_dept_t_im = 8 } subtract_from_variable = { TFRKPHN_dept_t_fm = 8 } add_to_variable = { TFRKPHN_dept_t_em = 6 } TFRKPHN_dept_update = yes }
@@ -164,7 +164,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_nis2 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_nis2 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_nis2_tt
 			hidden_effect = { clr_country_flag = TFRKPHN_dept_req_nis2 clr_country_flag = TFRKPHN_dept_pend_nis add_to_variable = { TFRKPHN_dept_t_nis = 15 } subtract_from_variable = { TFRKPHN_dept_t_dm = 8 } subtract_from_variable = { TFRKPHN_dept_t_im = 8 } add_to_variable = { TFRKPHN_dept_t_em = 6 } TFRKPHN_dept_update = yes }
@@ -175,7 +175,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_nis3 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_nis3 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_nis3_tt
 			hidden_effect = { clr_country_flag = TFRKPHN_dept_req_nis3 clr_country_flag = TFRKPHN_dept_pend_nis add_to_variable = { TFRKPHN_dept_t_nis = 15 } subtract_from_variable = { TFRKPHN_dept_t_pm = 8 } subtract_from_variable = { TFRKPHN_dept_t_dm = 8 } add_to_variable = { TFRKPHN_dept_t_fm = 6 } TFRKPHN_dept_update = yes }
@@ -186,7 +186,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_dm1 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_dm1 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_dm1_tt
 			army_experience = 20
@@ -198,7 +198,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_dm2 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_dm2 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_dm2_tt
 			hidden_effect = { clr_country_flag = TFRKPHN_dept_req_dm2 clr_country_flag = TFRKPHN_dept_pend_dm add_to_variable = { TFRKPHN_dept_t_dm = 15 } subtract_from_variable = { TFRKPHN_dept_t_im = 8 } subtract_from_variable = { TFRKPHN_dept_t_fm = 8 } add_to_variable = { TFRKPHN_dept_t_pm = 6 } TFRKPHN_dept_update = yes if = { limit = { has_country_flag = TFRKPHN_job_started } add_to_variable = { TFRKPHN_job_biz = -5 } TFRKPHN_job_update = yes } }
@@ -209,7 +209,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_dm3 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_dm3 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_dm3_tt
 			hidden_effect = { clr_country_flag = TFRKPHN_dept_req_dm3 clr_country_flag = TFRKPHN_dept_pend_dm add_to_variable = { TFRKPHN_dept_t_dm = 15 } subtract_from_variable = { TFRKPHN_dept_t_nis = 8 } subtract_from_variable = { TFRKPHN_dept_t_pm = 8 } add_to_variable = { TFRKPHN_dept_t_im = 6 } TFRKPHN_dept_update = yes }
@@ -220,7 +220,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_pm4 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_pm4 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_pm4_tt
 			hidden_effect = { clr_country_flag = TFRKPHN_dept_req_pm4 clr_country_flag = TFRKPHN_dept_pend_pm add_to_variable = { TFRKPHN_dept_t_pm = 15 } subtract_from_variable = { TFRKPHN_dept_t_em = 8 } subtract_from_variable = { TFRKPHN_dept_t_nis = 8 } add_to_variable = { TFRKPHN_dept_t_im = 6 } TFRKPHN_dept_update = yes }
@@ -231,7 +231,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_pm5 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_pm5 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_pm5_tt
 			hidden_effect = { clr_country_flag = TFRKPHN_dept_req_pm5 clr_country_flag = TFRKPHN_dept_pend_pm add_to_variable = { TFRKPHN_dept_t_pm = 15 } subtract_from_variable = { TFRKPHN_dept_t_em = 8 } subtract_from_variable = { TFRKPHN_dept_t_dm = 8 } add_to_variable = { TFRKPHN_dept_t_fm = 6 } TFRKPHN_dept_update = yes }
@@ -242,7 +242,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_pm6 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_pm6 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_pm6_tt
 			hidden_effect = { clr_country_flag = TFRKPHN_dept_req_pm6 clr_country_flag = TFRKPHN_dept_pend_pm add_to_variable = { TFRKPHN_dept_t_pm = 15 } subtract_from_variable = { TFRKPHN_dept_t_fm = 8 } subtract_from_variable = { TFRKPHN_dept_t_nis = 8 } add_to_variable = { TFRKPHN_dept_t_em = 6 } TFRKPHN_dept_update = yes }
@@ -253,7 +253,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_pm7 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_pm7 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_pm7_tt
 			hidden_effect = { clr_country_flag = TFRKPHN_dept_req_pm7 clr_country_flag = TFRKPHN_dept_pend_pm add_to_variable = { TFRKPHN_dept_t_pm = 15 } subtract_from_variable = { TFRKPHN_dept_t_im = 8 } subtract_from_variable = { TFRKPHN_dept_t_dm = 8 } add_to_variable = { TFRKPHN_dept_t_nis = 6 } TFRKPHN_dept_update = yes }
@@ -264,7 +264,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_pm8 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_pm8 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_pm8_tt
 			hidden_effect = { clr_country_flag = TFRKPHN_dept_req_pm8 clr_country_flag = TFRKPHN_dept_pend_pm add_to_variable = { TFRKPHN_dept_t_pm = 15 } subtract_from_variable = { TFRKPHN_dept_t_fm = 8 } subtract_from_variable = { TFRKPHN_dept_t_im = 8 } add_to_variable = { TFRKPHN_dept_t_dm = 6 } TFRKPHN_dept_update = yes }
@@ -275,7 +275,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_pm9 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_pm9 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_pm9_tt
 			hidden_effect = { clr_country_flag = TFRKPHN_dept_req_pm9 clr_country_flag = TFRKPHN_dept_pend_pm add_to_variable = { TFRKPHN_dept_t_pm = 15 } subtract_from_variable = { TFRKPHN_dept_t_nis = 8 } subtract_from_variable = { TFRKPHN_dept_t_dm = 8 } add_to_variable = { TFRKPHN_dept_t_em = 6 } TFRKPHN_dept_update = yes }
@@ -286,7 +286,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_fm4 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_fm4 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_fm4_tt
 			hidden_effect = { clr_country_flag = TFRKPHN_dept_req_fm4 clr_country_flag = TFRKPHN_dept_pend_fm add_to_variable = { TFRKPHN_dept_t_fm = 15 } subtract_from_variable = { TFRKPHN_dept_t_pm = 8 } subtract_from_variable = { TFRKPHN_dept_t_nis = 8 } add_to_variable = { TFRKPHN_dept_t_em = 6 } TFRKPHN_dept_update = yes }
@@ -297,7 +297,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_fm5 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_fm5 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_fm5_tt
 			hidden_effect = { clr_country_flag = TFRKPHN_dept_req_fm5 clr_country_flag = TFRKPHN_dept_pend_fm add_to_variable = { TFRKPHN_dept_t_fm = 15 } subtract_from_variable = { TFRKPHN_dept_t_em = 8 } subtract_from_variable = { TFRKPHN_dept_t_nis = 8 } add_to_variable = { TFRKPHN_dept_t_im = 6 } TFRKPHN_dept_update = yes }
@@ -308,7 +308,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_fm6 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_fm6 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_fm6_tt
 			hidden_effect = { clr_country_flag = TFRKPHN_dept_req_fm6 clr_country_flag = TFRKPHN_dept_pend_fm add_to_variable = { TFRKPHN_dept_t_fm = 15 } subtract_from_variable = { TFRKPHN_dept_t_im = 8 } subtract_from_variable = { TFRKPHN_dept_t_nis = 8 } add_to_variable = { TFRKPHN_dept_t_em = 6 } TFRKPHN_dept_update = yes }
@@ -319,7 +319,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_fm7 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_fm7 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_fm7_tt
 			hidden_effect = { clr_country_flag = TFRKPHN_dept_req_fm7 clr_country_flag = TFRKPHN_dept_pend_fm add_to_variable = { TFRKPHN_dept_t_fm = 15 } subtract_from_variable = { TFRKPHN_dept_t_em = 8 } subtract_from_variable = { TFRKPHN_dept_t_pm = 8 } add_to_variable = { TFRKPHN_dept_t_dm = 6 } TFRKPHN_dept_update = yes }
@@ -330,7 +330,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_fm8 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_fm8 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_fm8_tt
 			hidden_effect = { clr_country_flag = TFRKPHN_dept_req_fm8 clr_country_flag = TFRKPHN_dept_pend_fm add_to_variable = { TFRKPHN_dept_t_fm = 15 } subtract_from_variable = { TFRKPHN_dept_t_em = 8 } subtract_from_variable = { TFRKPHN_dept_t_pm = 8 } add_to_variable = { TFRKPHN_dept_t_im = 6 } TFRKPHN_dept_update = yes }
@@ -341,7 +341,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_em4 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_em4 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_em4_tt
 			hidden_effect = { clr_country_flag = TFRKPHN_dept_req_em4 clr_country_flag = TFRKPHN_dept_pend_em add_to_variable = { TFRKPHN_dept_t_em = 15 } subtract_from_variable = { TFRKPHN_dept_t_fm = 8 } subtract_from_variable = { TFRKPHN_dept_t_im = 8 } add_to_variable = { TFRKPHN_dept_t_dm = 6 } TFRKPHN_dept_update = yes if = { limit = { has_country_flag = TFRKPHN_job_started } add_to_variable = { TFRKPHN_job_n = -3 } add_to_variable = { TFRKPHN_job_lab = -5 } TFRKPHN_job_update = yes } }
@@ -352,7 +352,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_em5 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_em5 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_em5_tt
 			hidden_effect = { clr_country_flag = TFRKPHN_dept_req_em5 clr_country_flag = TFRKPHN_dept_pend_em add_to_variable = { TFRKPHN_dept_t_em = 15 } subtract_from_variable = { TFRKPHN_dept_t_im = 8 } subtract_from_variable = { TFRKPHN_dept_t_pm = 8 } add_to_variable = { TFRKPHN_dept_t_dm = 6 } TFRKPHN_dept_update = yes }
@@ -363,7 +363,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_em6 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_em6 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_em6_tt
 			hidden_effect = { clr_country_flag = TFRKPHN_dept_req_em6 clr_country_flag = TFRKPHN_dept_pend_em add_to_variable = { TFRKPHN_dept_t_em = 15 } subtract_from_variable = { TFRKPHN_dept_t_dm = 8 } subtract_from_variable = { TFRKPHN_dept_t_fm = 8 } add_to_variable = { TFRKPHN_dept_t_pm = 6 } TFRKPHN_dept_update = yes }
@@ -374,7 +374,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_em7 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_em7 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_em7_tt
 			hidden_effect = { clr_country_flag = TFRKPHN_dept_req_em7 clr_country_flag = TFRKPHN_dept_pend_em add_to_variable = { TFRKPHN_dept_t_em = 15 } subtract_from_variable = { TFRKPHN_dept_t_dm = 8 } subtract_from_variable = { TFRKPHN_dept_t_fm = 8 } add_to_variable = { TFRKPHN_dept_t_im = 6 } TFRKPHN_dept_update = yes if = { limit = { has_country_flag = TFRKPHN_job_started } add_to_variable = { TFRKPHN_job_lab = -3 } TFRKPHN_job_update = yes } }
@@ -385,7 +385,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_em8 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_em8 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_em8_tt
 			hidden_effect = { clr_country_flag = TFRKPHN_dept_req_em8 clr_country_flag = TFRKPHN_dept_pend_em add_to_variable = { TFRKPHN_dept_t_em = 15 } subtract_from_variable = { TFRKPHN_dept_t_im = 8 } subtract_from_variable = { TFRKPHN_dept_t_dm = 8 } add_to_variable = { TFRKPHN_dept_t_nis = 6 } TFRKPHN_dept_update = yes }
@@ -396,7 +396,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_em9 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_em9 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_em9_tt
 			hidden_effect = { clr_country_flag = TFRKPHN_dept_req_em9 clr_country_flag = TFRKPHN_dept_pend_em add_to_variable = { TFRKPHN_dept_t_em = 15 } subtract_from_variable = { TFRKPHN_dept_t_dm = 8 } subtract_from_variable = { TFRKPHN_dept_t_nis = 8 } add_to_variable = { TFRKPHN_dept_t_im = 6 } TFRKPHN_dept_update = yes }
@@ -407,7 +407,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_im4 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_im4 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_im4_tt
 			hidden_effect = { clr_country_flag = TFRKPHN_dept_req_im4 clr_country_flag = TFRKPHN_dept_pend_im add_to_variable = { TFRKPHN_dept_t_im = 15 } subtract_from_variable = { TFRKPHN_dept_t_em = 8 } subtract_from_variable = { TFRKPHN_dept_t_pm = 8 } add_to_variable = { TFRKPHN_dept_t_fm = 6 } TFRKPHN_dept_update = yes }
@@ -418,7 +418,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_im5 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_im5 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_im5_tt
 			hidden_effect = { clr_country_flag = TFRKPHN_dept_req_im5 clr_country_flag = TFRKPHN_dept_pend_im add_to_variable = { TFRKPHN_dept_t_im = 15 } subtract_from_variable = { TFRKPHN_dept_t_em = 8 } subtract_from_variable = { TFRKPHN_dept_t_nis = 8 } add_to_variable = { TFRKPHN_dept_t_pm = 6 } TFRKPHN_dept_update = yes }
@@ -429,7 +429,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_im6 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_im6 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_im6_tt
 			hidden_effect = { clr_country_flag = TFRKPHN_dept_req_im6 clr_country_flag = TFRKPHN_dept_pend_im add_to_variable = { TFRKPHN_dept_t_im = 15 } subtract_from_variable = { TFRKPHN_dept_t_em = 8 } subtract_from_variable = { TFRKPHN_dept_t_pm = 8 } add_to_variable = { TFRKPHN_dept_t_dm = 6 } TFRKPHN_dept_update = yes }
@@ -440,7 +440,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_im7 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_im7 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_im7_tt
 			hidden_effect = { clr_country_flag = TFRKPHN_dept_req_im7 clr_country_flag = TFRKPHN_dept_pend_im add_to_variable = { TFRKPHN_dept_t_im = 15 } subtract_from_variable = { TFRKPHN_dept_t_em = 8 } subtract_from_variable = { TFRKPHN_dept_t_fm = 8 } add_to_variable = { TFRKPHN_dept_t_pm = 6 } TFRKPHN_dept_update = yes }
@@ -451,7 +451,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_im8 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_im8 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_im8_tt
 			hidden_effect = { clr_country_flag = TFRKPHN_dept_req_im8 clr_country_flag = TFRKPHN_dept_pend_im add_to_variable = { TFRKPHN_dept_t_im = 15 } subtract_from_variable = { TFRKPHN_dept_t_em = 8 } subtract_from_variable = { TFRKPHN_dept_t_nis = 8 } add_to_variable = { TFRKPHN_dept_t_fm = 6 } TFRKPHN_dept_update = yes if = { limit = { has_country_flag = TFRKPHN_job_started } add_to_variable = { TFRKPHN_job_n = 3 } add_to_variable = { TFRKPHN_job_lab = 3 } TFRKPHN_job_update = yes } }
@@ -462,7 +462,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_im9 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_im9 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_im9_tt
 			hidden_effect = { clr_country_flag = TFRKPHN_dept_req_im9 clr_country_flag = TFRKPHN_dept_pend_im add_to_variable = { TFRKPHN_dept_t_im = 15 } subtract_from_variable = { TFRKPHN_dept_t_pm = 8 } subtract_from_variable = { TFRKPHN_dept_t_nis = 8 } add_to_variable = { TFRKPHN_dept_t_fm = 6 } TFRKPHN_dept_update = yes }
@@ -473,7 +473,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_nis4 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_nis4 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_nis4_tt
 			hidden_effect = { clr_country_flag = TFRKPHN_dept_req_nis4 clr_country_flag = TFRKPHN_dept_pend_nis add_to_variable = { TFRKPHN_dept_t_nis = 15 } subtract_from_variable = { TFRKPHN_dept_t_fm = 8 } subtract_from_variable = { TFRKPHN_dept_t_pm = 8 } add_to_variable = { TFRKPHN_dept_t_im = 6 } TFRKPHN_dept_update = yes }
@@ -484,7 +484,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_nis5 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_nis5 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_nis5_tt
 			hidden_effect = { clr_country_flag = TFRKPHN_dept_req_nis5 clr_country_flag = TFRKPHN_dept_pend_nis add_to_variable = { TFRKPHN_dept_t_nis = 15 } subtract_from_variable = { TFRKPHN_dept_t_im = 8 } subtract_from_variable = { TFRKPHN_dept_t_pm = 8 } add_to_variable = { TFRKPHN_dept_t_em = 6 } TFRKPHN_dept_update = yes if = { limit = { has_country_flag = TFRKPHN_job_started } add_to_variable = { TFRKPHN_job_biz = 3 } TFRKPHN_job_update = yes } }
@@ -495,7 +495,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_nis6 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_nis6 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_nis6_tt
 			hidden_effect = { clr_country_flag = TFRKPHN_dept_req_nis6 clr_country_flag = TFRKPHN_dept_pend_nis add_to_variable = { TFRKPHN_dept_t_nis = 15 } subtract_from_variable = { TFRKPHN_dept_t_pm = 8 } subtract_from_variable = { TFRKPHN_dept_t_fm = 8 } add_to_variable = { TFRKPHN_dept_t_em = 6 } TFRKPHN_dept_update = yes }
@@ -506,7 +506,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_nis7 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_nis7 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_nis7_tt
 			hidden_effect = { clr_country_flag = TFRKPHN_dept_req_nis7 clr_country_flag = TFRKPHN_dept_pend_nis add_to_variable = { TFRKPHN_dept_t_nis = 15 } subtract_from_variable = { TFRKPHN_dept_t_pm = 8 } subtract_from_variable = { TFRKPHN_dept_t_fm = 8 } add_to_variable = { TFRKPHN_dept_t_dm = 6 } TFRKPHN_dept_update = yes }
@@ -517,7 +517,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_nis8 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_nis8 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_nis8_tt
 			hidden_effect = { clr_country_flag = TFRKPHN_dept_req_nis8 clr_country_flag = TFRKPHN_dept_pend_nis add_to_variable = { TFRKPHN_dept_t_nis = 15 } subtract_from_variable = { TFRKPHN_dept_t_im = 8 } subtract_from_variable = { TFRKPHN_dept_t_dm = 8 } add_to_variable = { TFRKPHN_dept_t_em = 6 } TFRKPHN_dept_update = yes }
@@ -528,7 +528,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_nis9 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_nis9 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_nis9_tt
 			hidden_effect = { clr_country_flag = TFRKPHN_dept_req_nis9 clr_country_flag = TFRKPHN_dept_pend_nis add_to_variable = { TFRKPHN_dept_t_nis = 15 } subtract_from_variable = { TFRKPHN_dept_t_fm = 8 } subtract_from_variable = { TFRKPHN_dept_t_em = 8 } add_to_variable = { TFRKPHN_dept_t_pm = 6 } TFRKPHN_dept_update = yes }
@@ -539,7 +539,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_dm4 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_dm4 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_dm4_tt
 			hidden_effect = { clr_country_flag = TFRKPHN_dept_req_dm4 clr_country_flag = TFRKPHN_dept_pend_dm add_to_variable = { TFRKPHN_dept_t_dm = 15 } subtract_from_variable = { TFRKPHN_dept_t_em = 8 } subtract_from_variable = { TFRKPHN_dept_t_nis = 8 } add_to_variable = { TFRKPHN_dept_t_im = 6 } TFRKPHN_dept_update = yes }
@@ -550,7 +550,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_dm5 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_dm5 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_dm5_tt
 			add_war_support = 0.01
@@ -562,7 +562,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_dm6 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_dm6 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_dm6_tt
 			hidden_effect = { clr_country_flag = TFRKPHN_dept_req_dm6 clr_country_flag = TFRKPHN_dept_pend_dm add_to_variable = { TFRKPHN_dept_t_dm = 15 } subtract_from_variable = { TFRKPHN_dept_t_nis = 8 } subtract_from_variable = { TFRKPHN_dept_t_fm = 8 } add_to_variable = { TFRKPHN_dept_t_pm = 6 } TFRKPHN_dept_update = yes }
@@ -573,7 +573,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_dm7 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_dm7 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_dm7_tt
 			hidden_effect = { clr_country_flag = TFRKPHN_dept_req_dm7 clr_country_flag = TFRKPHN_dept_pend_dm add_to_variable = { TFRKPHN_dept_t_dm = 15 } subtract_from_variable = { TFRKPHN_dept_t_im = 8 } subtract_from_variable = { TFRKPHN_dept_t_fm = 8 } add_to_variable = { TFRKPHN_dept_t_em = 6 } TFRKPHN_dept_update = yes }
@@ -584,7 +584,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_dm8 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_dm8 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_dm8_tt
 			hidden_effect = { clr_country_flag = TFRKPHN_dept_req_dm8 clr_country_flag = TFRKPHN_dept_pend_dm add_to_variable = { TFRKPHN_dept_t_dm = 15 } subtract_from_variable = { TFRKPHN_dept_t_em = 8 } subtract_from_variable = { TFRKPHN_dept_t_pm = 8 } add_to_variable = { TFRKPHN_dept_t_nis = 6 } TFRKPHN_dept_update = yes }
@@ -595,7 +595,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_dm9 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_dm9 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_dm9_tt
 			hidden_effect = { clr_country_flag = TFRKPHN_dept_req_dm9 clr_country_flag = TFRKPHN_dept_pend_dm add_to_variable = { TFRKPHN_dept_t_dm = 15 } subtract_from_variable = { TFRKPHN_dept_t_im = 8 } subtract_from_variable = { TFRKPHN_dept_t_nis = 8 } add_to_variable = { TFRKPHN_dept_t_fm = 6 } TFRKPHN_dept_update = yes }
@@ -606,7 +606,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_pm10 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_pm10 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_pm10_tt
 			hidden_effect = { clr_country_flag = TFRKPHN_dept_req_pm10 clr_country_flag = TFRKPHN_dept_pend_pm add_to_variable = { TFRKPHN_dept_t_pm = 15 } subtract_from_variable = { TFRKPHN_dept_t_nis = 8 } subtract_from_variable = { TFRKPHN_dept_t_dm = 8 } add_to_variable = { TFRKPHN_dept_t_em = 6 } TFRKPHN_dept_update = yes }
@@ -617,7 +617,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_pm11 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_pm11 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_pm11_tt
 			hidden_effect = { clr_country_flag = TFRKPHN_dept_req_pm11 clr_country_flag = TFRKPHN_dept_pend_pm add_to_variable = { TFRKPHN_dept_t_pm = 15 } subtract_from_variable = { TFRKPHN_dept_t_im = 8 } subtract_from_variable = { TFRKPHN_dept_t_fm = 8 } add_to_variable = { TFRKPHN_dept_t_dm = 6 } TFRKPHN_dept_update = yes }
@@ -628,7 +628,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_pm12 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_pm12 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_pm12_tt
 			hidden_effect = { clr_country_flag = TFRKPHN_dept_req_pm12 clr_country_flag = TFRKPHN_dept_pend_pm add_to_variable = { TFRKPHN_dept_t_pm = 15 } subtract_from_variable = { TFRKPHN_dept_t_em = 8 } subtract_from_variable = { TFRKPHN_dept_t_dm = 8 } add_to_variable = { TFRKPHN_dept_t_nis = 6 } TFRKPHN_dept_update = yes if = { limit = { has_country_flag = TFRKPHN_job_started } add_to_variable = { TFRKPHN_job_lab = 3 } add_to_variable = { TFRKPHN_job_biz = -8 } TFRKPHN_job_update = yes } }
@@ -639,7 +639,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_pm13 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_pm13 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_pm13_tt
 			hidden_effect = { clr_country_flag = TFRKPHN_dept_req_pm13 clr_country_flag = TFRKPHN_dept_pend_pm add_to_variable = { TFRKPHN_dept_t_pm = 15 } subtract_from_variable = { TFRKPHN_dept_t_im = 8 } subtract_from_variable = { TFRKPHN_dept_t_dm = 8 } add_to_variable = { TFRKPHN_dept_t_nis = 6 } TFRKPHN_dept_update = yes }
@@ -650,7 +650,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_fm9 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_fm9 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_fm9_tt
 			hidden_effect = { clr_country_flag = TFRKPHN_dept_req_fm9 clr_country_flag = TFRKPHN_dept_pend_fm add_to_variable = { TFRKPHN_dept_t_fm = 15 } subtract_from_variable = { TFRKPHN_dept_t_nis = 8 } subtract_from_variable = { TFRKPHN_dept_t_pm = 8 } add_to_variable = { TFRKPHN_dept_t_dm = 6 } TFRKPHN_dept_update = yes }
@@ -661,7 +661,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_fm10 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_fm10 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_fm10_tt
 			hidden_effect = { clr_country_flag = TFRKPHN_dept_req_fm10 clr_country_flag = TFRKPHN_dept_pend_fm add_to_variable = { TFRKPHN_dept_t_fm = 15 } subtract_from_variable = { TFRKPHN_dept_t_nis = 8 } subtract_from_variable = { TFRKPHN_dept_t_dm = 8 } add_to_variable = { TFRKPHN_dept_t_im = 6 } TFRKPHN_dept_update = yes }
@@ -672,7 +672,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_fm11 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_fm11 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_fm11_tt
 			hidden_effect = { clr_country_flag = TFRKPHN_dept_req_fm11 clr_country_flag = TFRKPHN_dept_pend_fm add_to_variable = { TFRKPHN_dept_t_fm = 15 } subtract_from_variable = { TFRKPHN_dept_t_dm = 8 } subtract_from_variable = { TFRKPHN_dept_t_nis = 8 } add_to_variable = { TFRKPHN_dept_t_em = 6 } TFRKPHN_dept_update = yes }
@@ -683,7 +683,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_fm12 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_fm12 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_fm12_tt
 			hidden_effect = { clr_country_flag = TFRKPHN_dept_req_fm12 clr_country_flag = TFRKPHN_dept_pend_fm add_to_variable = { TFRKPHN_dept_t_fm = 15 } subtract_from_variable = { TFRKPHN_dept_t_im = 8 } subtract_from_variable = { TFRKPHN_dept_t_nis = 8 } add_to_variable = { TFRKPHN_dept_t_dm = 6 } TFRKPHN_dept_update = yes }
@@ -694,7 +694,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_fm13 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_fm13 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_fm13_tt
 			hidden_effect = { clr_country_flag = TFRKPHN_dept_req_fm13 clr_country_flag = TFRKPHN_dept_pend_fm add_to_variable = { TFRKPHN_dept_t_fm = 15 } subtract_from_variable = { TFRKPHN_dept_t_em = 8 } subtract_from_variable = { TFRKPHN_dept_t_dm = 8 } add_to_variable = { TFRKPHN_dept_t_nis = 6 } TFRKPHN_dept_update = yes }
@@ -705,7 +705,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_fm14 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_fm14 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_fm14_tt
 			hidden_effect = { clr_country_flag = TFRKPHN_dept_req_fm14 clr_country_flag = TFRKPHN_dept_pend_fm add_to_variable = { TFRKPHN_dept_t_fm = 15 } subtract_from_variable = { TFRKPHN_dept_t_pm = 8 } subtract_from_variable = { TFRKPHN_dept_t_im = 8 } add_to_variable = { TFRKPHN_dept_t_nis = 6 } TFRKPHN_dept_update = yes }
@@ -716,7 +716,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_em10 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_em10 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_em10_tt
 			hidden_effect = { clr_country_flag = TFRKPHN_dept_req_em10 clr_country_flag = TFRKPHN_dept_pend_em add_to_variable = { TFRKPHN_dept_t_em = 15 } subtract_from_variable = { TFRKPHN_dept_t_pm = 8 } subtract_from_variable = { TFRKPHN_dept_t_nis = 8 } add_to_variable = { TFRKPHN_dept_t_fm = 6 } TFRKPHN_dept_update = yes }
@@ -727,7 +727,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_em11 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_em11 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_em11_tt
 			hidden_effect = { clr_country_flag = TFRKPHN_dept_req_em11 clr_country_flag = TFRKPHN_dept_pend_em add_to_variable = { TFRKPHN_dept_t_em = 15 } subtract_from_variable = { TFRKPHN_dept_t_fm = 8 } subtract_from_variable = { TFRKPHN_dept_t_dm = 8 } add_to_variable = { TFRKPHN_dept_t_pm = 6 } TFRKPHN_dept_update = yes if = { limit = { has_country_flag = TFRKPHN_job_started } add_to_variable = { TFRKPHN_job_n = -2 } TFRKPHN_job_update = yes } }
@@ -738,7 +738,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_em12 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_em12 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_em12_tt
 			hidden_effect = { clr_country_flag = TFRKPHN_dept_req_em12 clr_country_flag = TFRKPHN_dept_pend_em add_to_variable = { TFRKPHN_dept_t_em = 15 } subtract_from_variable = { TFRKPHN_dept_t_dm = 8 } subtract_from_variable = { TFRKPHN_dept_t_nis = 8 } add_to_variable = { TFRKPHN_dept_t_fm = 6 } TFRKPHN_dept_update = yes }
@@ -749,7 +749,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_em13 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_em13 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_em13_tt
 			hidden_effect = { clr_country_flag = TFRKPHN_dept_req_em13 clr_country_flag = TFRKPHN_dept_pend_em add_to_variable = { TFRKPHN_dept_t_em = 15 } subtract_from_variable = { TFRKPHN_dept_t_pm = 8 } subtract_from_variable = { TFRKPHN_dept_t_im = 8 } add_to_variable = { TFRKPHN_dept_t_nis = 6 } TFRKPHN_dept_update = yes }
@@ -760,7 +760,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_im10 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_im10 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_im10_tt
 			hidden_effect = { clr_country_flag = TFRKPHN_dept_req_im10 clr_country_flag = TFRKPHN_dept_pend_im add_to_variable = { TFRKPHN_dept_t_im = 15 } subtract_from_variable = { TFRKPHN_dept_t_em = 8 } subtract_from_variable = { TFRKPHN_dept_t_fm = 8 } add_to_variable = { TFRKPHN_dept_t_pm = 6 } TFRKPHN_dept_update = yes if = { limit = { has_country_flag = TFRKPHN_job_started } add_to_variable = { TFRKPHN_job_lab = -3 } TFRKPHN_job_update = yes } }
@@ -771,7 +771,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_im11 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_im11 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_im11_tt
 			hidden_effect = { clr_country_flag = TFRKPHN_dept_req_im11 clr_country_flag = TFRKPHN_dept_pend_im add_to_variable = { TFRKPHN_dept_t_im = 15 } subtract_from_variable = { TFRKPHN_dept_t_nis = 8 } subtract_from_variable = { TFRKPHN_dept_t_fm = 8 } add_to_variable = { TFRKPHN_dept_t_pm = 6 } TFRKPHN_dept_update = yes }
@@ -782,7 +782,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_im12 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_im12 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_im12_tt
 			hidden_effect = { clr_country_flag = TFRKPHN_dept_req_im12 clr_country_flag = TFRKPHN_dept_pend_im add_to_variable = { TFRKPHN_dept_t_im = 15 } subtract_from_variable = { TFRKPHN_dept_t_pm = 8 } subtract_from_variable = { TFRKPHN_dept_t_dm = 8 } add_to_variable = { TFRKPHN_dept_t_fm = 6 } TFRKPHN_dept_update = yes }
@@ -793,7 +793,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_im13 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_im13 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_im13_tt
 			hidden_effect = { clr_country_flag = TFRKPHN_dept_req_im13 clr_country_flag = TFRKPHN_dept_pend_im add_to_variable = { TFRKPHN_dept_t_im = 15 } subtract_from_variable = { TFRKPHN_dept_t_dm = 8 } subtract_from_variable = { TFRKPHN_dept_t_nis = 8 } add_to_variable = { TFRKPHN_dept_t_em = 6 } TFRKPHN_dept_update = yes }
@@ -804,7 +804,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_nis10 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_nis10 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_nis10_tt
 			hidden_effect = { clr_country_flag = TFRKPHN_dept_req_nis10 clr_country_flag = TFRKPHN_dept_pend_nis add_to_variable = { TFRKPHN_dept_t_nis = 15 } subtract_from_variable = { TFRKPHN_dept_t_dm = 8 } subtract_from_variable = { TFRKPHN_dept_t_pm = 8 } add_to_variable = { TFRKPHN_dept_t_fm = 6 } TFRKPHN_dept_update = yes }
@@ -815,7 +815,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_nis11 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_nis11 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_nis11_tt
 			hidden_effect = { clr_country_flag = TFRKPHN_dept_req_nis11 clr_country_flag = TFRKPHN_dept_pend_nis add_to_variable = { TFRKPHN_dept_t_nis = 15 } subtract_from_variable = { TFRKPHN_dept_t_pm = 8 } subtract_from_variable = { TFRKPHN_dept_t_fm = 8 } add_to_variable = { TFRKPHN_dept_t_im = 6 } TFRKPHN_dept_update = yes }
@@ -826,7 +826,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_nis12 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_nis12 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_nis12_tt
 			hidden_effect = { clr_country_flag = TFRKPHN_dept_req_nis12 clr_country_flag = TFRKPHN_dept_pend_nis add_to_variable = { TFRKPHN_dept_t_nis = 15 } subtract_from_variable = { TFRKPHN_dept_t_fm = 8 } subtract_from_variable = { TFRKPHN_dept_t_im = 8 } add_to_variable = { TFRKPHN_dept_t_dm = 6 } TFRKPHN_dept_update = yes }
@@ -837,7 +837,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_nis13 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_nis13 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_nis13_tt
 			hidden_effect = { clr_country_flag = TFRKPHN_dept_req_nis13 clr_country_flag = TFRKPHN_dept_pend_nis add_to_variable = { TFRKPHN_dept_t_nis = 15 } subtract_from_variable = { TFRKPHN_dept_t_em = 8 } subtract_from_variable = { TFRKPHN_dept_t_fm = 8 } add_to_variable = { TFRKPHN_dept_t_im = 6 } TFRKPHN_dept_update = yes }
@@ -848,7 +848,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_dm10 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_dm10 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_dm10_tt
 			hidden_effect = { clr_country_flag = TFRKPHN_dept_req_dm10 clr_country_flag = TFRKPHN_dept_pend_dm add_to_variable = { TFRKPHN_dept_t_dm = 15 } subtract_from_variable = { TFRKPHN_dept_t_em = 8 } subtract_from_variable = { TFRKPHN_dept_t_fm = 8 } add_to_variable = { TFRKPHN_dept_t_nis = 6 } TFRKPHN_dept_update = yes }
@@ -859,7 +859,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_dm11 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_dm11 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_dm11_tt
 			hidden_effect = { clr_country_flag = TFRKPHN_dept_req_dm11 clr_country_flag = TFRKPHN_dept_pend_dm add_to_variable = { TFRKPHN_dept_t_dm = 15 } subtract_from_variable = { TFRKPHN_dept_t_im = 8 } subtract_from_variable = { TFRKPHN_dept_t_nis = 8 } add_to_variable = { TFRKPHN_dept_t_fm = 6 } TFRKPHN_dept_update = yes if = { limit = { has_country_flag = TFRKPHN_job_started } add_to_variable = { TFRKPHN_job_n = 2 } TFRKPHN_job_update = yes } }
@@ -870,7 +870,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_dm12 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_dm12 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_dm12_tt
 			hidden_effect = { clr_country_flag = TFRKPHN_dept_req_dm12 clr_country_flag = TFRKPHN_dept_pend_dm add_to_variable = { TFRKPHN_dept_t_dm = 15 } subtract_from_variable = { TFRKPHN_dept_t_fm = 8 } subtract_from_variable = { TFRKPHN_dept_t_nis = 8 } add_to_variable = { TFRKPHN_dept_t_im = 6 } TFRKPHN_dept_update = yes }
@@ -881,7 +881,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_dm13 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_dm13 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_dm13_tt
 			hidden_effect = { clr_country_flag = TFRKPHN_dept_req_dm13 clr_country_flag = TFRKPHN_dept_pend_dm add_to_variable = { TFRKPHN_dept_t_dm = 15 } subtract_from_variable = { TFRKPHN_dept_t_im = 8 } subtract_from_variable = { TFRKPHN_dept_t_pm = 8 } add_to_variable = { TFRKPHN_dept_t_nis = 6 } TFRKPHN_dept_update = yes }
@@ -892,7 +892,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_dm14 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_dm14 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_dm14_tt
 			hidden_effect = { clr_country_flag = TFRKPHN_dept_req_dm14 clr_country_flag = TFRKPHN_dept_pend_dm add_to_variable = { TFRKPHN_dept_t_dm = 15 } subtract_from_variable = { TFRKPHN_dept_t_pm = 8 } subtract_from_variable = { TFRKPHN_dept_t_im = 8 } add_to_variable = { TFRKPHN_dept_t_nis = 6 } TFRKPHN_dept_update = yes }
@@ -903,7 +903,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_pm14 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_pm14 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_pm14_tt
 			hidden_effect = { clr_country_flag = TFRKPHN_dept_req_pm14 clr_country_flag = TFRKPHN_dept_pend_pm add_to_variable = { TFRKPHN_dept_t_pm = 15 } subtract_from_variable = { TFRKPHN_dept_t_em = 8 } subtract_from_variable = { TFRKPHN_dept_t_im = 8 } add_to_variable = { TFRKPHN_dept_t_fm = 6 } TFRKPHN_dept_update = yes if = { limit = { has_country_flag = TFRKPHN_job_started } add_to_variable = { TFRKPHN_job_n = 2 } TFRKPHN_job_update = yes } }
@@ -914,7 +914,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_em14 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_em14 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_em14_tt
 			hidden_effect = { clr_country_flag = TFRKPHN_dept_req_em14 clr_country_flag = TFRKPHN_dept_pend_em add_to_variable = { TFRKPHN_dept_t_em = 15 } subtract_from_variable = { TFRKPHN_dept_t_fm = 8 } subtract_from_variable = { TFRKPHN_dept_t_im = 8 } add_to_variable = { TFRKPHN_dept_t_pm = 6 } TFRKPHN_dept_update = yes if = { limit = { has_country_flag = TFRKPHN_job_started } add_to_variable = { TFRKPHN_job_biz = 5 } TFRKPHN_job_update = yes } }
@@ -925,7 +925,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_im14 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_im14 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_im14_tt
 			hidden_effect = { clr_country_flag = TFRKPHN_dept_req_im14 clr_country_flag = TFRKPHN_dept_pend_im add_to_variable = { TFRKPHN_dept_t_im = 15 } subtract_from_variable = { TFRKPHN_dept_t_em = 8 } subtract_from_variable = { TFRKPHN_dept_t_pm = 8 } add_to_variable = { TFRKPHN_dept_t_nis = 6 } TFRKPHN_dept_update = yes }
@@ -936,7 +936,7 @@ TFRKPHN_lee_trust_category = {
 	TFRKPHN_dept_req_nis14 = {
 		icon = GFX_decision_generic_political_actions
 		visible = { has_country_flag = TFRKPHN_dept_req_nis14 }
-		cost = 35
+		cost = 18
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_dept_req_nis14_tt
 			hidden_effect = { clr_country_flag = TFRKPHN_dept_req_nis14 clr_country_flag = TFRKPHN_dept_pend_nis add_to_variable = { TFRKPHN_dept_t_nis = 15 } subtract_from_variable = { TFRKPHN_dept_t_em = 8 } subtract_from_variable = { TFRKPHN_dept_t_pm = 8 } add_to_variable = { TFRKPHN_dept_t_dm = 6 } TFRKPHN_dept_update = yes }

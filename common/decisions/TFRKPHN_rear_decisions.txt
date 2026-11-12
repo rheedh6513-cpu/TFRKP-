@@ -4,7 +4,7 @@ TFRKPHN_hong_rear_category = {
 	# 1. 중국 내 반공 인사 망명 지원
 	TFRKPHN_hong_rear_defectors = {
 		icon = GFX_decision_generic_ignite_civil_war
-		cost = 50
+		cost = 25
 		days_remove = 14
 		fire_only_once = yes
 		visible = { tag = KOR }
@@ -26,7 +26,7 @@ TFRKPHN_hong_rear_category = {
 	# 2. 푸젠성 사보타주
 	TFRKPHN_hong_rear_fujian_sabotage = {
 		icon = GFX_decision_generic_ignite_civil_war
-		cost = 75
+		cost = 38
 		days_remove = 14
 		fire_only_once = yes
 		visible = { tag = KOR }
@@ -71,18 +71,18 @@ TFRKPHN_hong_rear_category = {
 	# 3. 이어도 감시기지
 	TFRKPHN_hong_rear_ieodo = {
 		icon = GFX_decision_generic_radar
-		cost = 50
+		cost = 25
 		days_remove = 14
 		fire_only_once = yes
 		visible = { tag = KOR }
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_after_14_tt
-			custom_effect_tooltip = TFRKPHN_hong_rear_ieodo_tt
+			custom_effect_tooltip = TFRKPHN_hong_rear_ieodo_365_tt
 		}
 		remove_effect = {
 			hidden_effect = {
-				if = { limit = { country_exists = CHI } CHI = { add_ideas = TFRKPHN_ieodo_watch } }
-				if = { limit = { country_exists = JAP } JAP = { add_ideas = TFRKPHN_ieodo_watch } }
+				if = { limit = { country_exists = CHI } CHI = { add_timed_idea = { idea = TFRKPHN_ieodo_watch days = 365 } } }
+				if = { limit = { country_exists = JAP } JAP = { add_timed_idea = { idea = TFRKPHN_ieodo_watch days = 365 } } }
 			}
 		}
 		ai_will_do = { factor = 0 }
@@ -90,7 +90,7 @@ TFRKPHN_hong_rear_category = {
 	# 4. 서해 경비
 	TFRKPHN_hong_rear_west_sea = {
 		icon = GFX_decision_generic_radar
-		cost = 50
+		cost = 25
 		days_remove = 14
 		fire_only_once = yes
 		visible = { tag = KOR }

@@ -15,4 +15,5 @@ spriteTypes = {
 	spriteType = { name = "GFX_TFRKPHN_chb_k_ban" texturefile = "gfx/interface/gui/TFRKPHN_chb/TFRKPHN_chb_k_ban.png" noOfFrames = 3 }
 	spriteType = { name = "GFX_banner_TFRKPHN_chb_half" textureFile = "gfx/texticons/banners/ideas/banner_TFRKPHN_chb_half.png" legacy_lazy_load = no }
 	spriteType = { name = "GFX_banner_TFRKPHN_chb_sme" textureFile = "gfx/texticons/banners/ideas/banner_TFRKPHN_chb_sme.png" legacy_lazy_load = no }
+	spriteType = { name = "GFX_banner_TFRKPHN_chb_coop" textureFile = "gfx/texticons/banners/ideas/banner_TFRKPHN_chb_coop.png" legacy_lazy_load = no }
 }

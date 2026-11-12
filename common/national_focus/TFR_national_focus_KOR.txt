@@ -15142,1110 +15142,8 @@ focus_tree = {
 
 	## 군사중점들
 
-	focus = {
-		id = KOR_yoon_army_upper
-		icon = GFX_KOR_yoon_army_upper
-		allow_branch = {
-			OR = {
-				has_country_flag = KOR_yoon_taiwan_war_victory
-				AND = {
-					has_country_flag = KOR_lee_taiwan_war_victory
-					has_country_flag = KOR_lee_freewin_end_flag
-				}
-				has_country_flag = KOR_lee_taiwan_war_victory_supported
-				KOR_is_PPPDKP_path = yes
-			}
-			NOT = {
-				KOR_is_yoon_declare_martial_law = yes
-				has_country_flag = KOR_yoon_mtl_focus_unlock
-			}
-		}
-		cost = 3
-		x = -13
-		y = 2
-		available = {
-			if = {
-				limit = {
-					KOR_is_yoon_path = yes
-				}
-				OR = {
-					has_completed_focus = KOR_yoon_among_country
-					has_completed_focus = KOR_yoon_among_people
-				}
-			}
-			if = {
-				limit = {
-					KOR_is_lee_path = yes
-					has_country_flag = KOR_lee_taiwan_war_victory_supported
-				}
-				has_completed_focus = KOR_lee_victory_sup_26
-			}
-			if = {
-				limit = {
-					KOR_is_lee_path = yes
-					NOT = { has_country_flag = KOR_lee_taiwan_war_victory_supported }
-				}
-				has_completed_focus = KOR_lee_nothing_focus_26
-			}
-			if = {
-				limit = {
-					KOR_is_PPPDKP_path = yes
-				}
-				custom_trigger_tooltip = {
-					tooltip = KOR_coa_army_can_select_tt
-					has_completed_focus = KOR_lee_coa_route_15
-					has_completed_focus = KOR_lee_coa_route_14
-					has_completed_focus = KOR_lee_coa_route_28
-					has_completed_focus = KOR_lee_coa_route_29
-					has_completed_focus = KOR_lee_coa_route_21
-					has_completed_focus = KOR_lee_coa_route_22
-				}
-			}
-		}
-		completion_reward = {
-			hidden_effect = {
-				activate_mission = KOR_defense_reform_token_growth_month
-			}
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = KOR_yoon_roka_dynamic_dummy_idea
-					add_idea = KOR_yoon_army_upper_idea
-				}
-			}
-			country_event = { id = korea.178 hours = 6 }
-			army_experience = 50
-			navy_experience = 50
-			air_experience = 50
-			set_temp_variable = {
-				var = military_development_var_temp
-				value = 0.1
-			}
-			add_military_development = yes
-			set_temp_variable = {
-				var = debt_var_temp
-				value = 20
-			}
-			add_debt_with_inflation = yes
-			TFRKP_defreform_init_effect = yes
-			custom_effect_tooltip = tooltip_white_line
-			set_country_flag = TFRKP_show_defreform_GUI
-			hidden_effect = {
-				add_dynamic_modifier = {
-					modifier = KOR_yoon_roka_dynamic_modifir
-				}
-
-				add_to_variable = {
-					var = KOR_roka_army_org_factor_dynamic_var
-					value = -0.1
-				}
-
-				add_to_variable = {
-					var = KOR_roka_battalion_upkeep_factor_dynamic_var
-					value = 0.1
-				}
-
-				add_to_variable = {
-					var = KOR_roka_army_attack_factor_dynamic_var
-					value = -0.1
-				}
-
-				add_to_variable = {
-					var = KOR_roka_army_defence_factor_dynamic_var
-					value = -0.1
-				}
-
-				add_to_variable = {
-					var = KOR_roka_consumer_goods_factor_dynamic_var
-					value = -0.025
-				}
-
-				add_to_variable = {
-					var = KOR_roka_income_growth_factor_dynamic_var
-					value = -0.05
-				}
-			}
-		}
-	}
-
-	## 공군중점
-
-	focus = {
-		id = KOR_yoon_after_airforce_0 # 공군개혁
-		icon = GFX_KOR_yoon_after_airforce_0
-		cost = 3
-		x = -5
-		y = 1
-		prerequisite = { focus = KOR_yoon_army_upper }
-		relative_position_id = KOR_yoon_army_upper
-		completion_reward = {
-			country_event = { id = korea.176 hours = 6 }
-			air_experience = 25
-			custom_effect_tooltip = TFRKP_defreform_progress_add_10_TT
-			hidden_effect = {
-				set_temp_variable = { TFRKP_defreform_progress_change = 10 }
-				TFRKP_defreform_add_progress_effect = yes
-			}
-		}
-	}
-
-	focus = {
-		id = KOR_yoon_after_airforce_4 # 공군개혁
-		icon = GFX_KOR_yoon_after_airforce_4
-		cost = 3
-		x = -5
-		y = 2
-		prerequisite = { focus = KOR_yoon_after_airforce_0 }
-		relative_position_id = KOR_yoon_army_upper
-		completion_reward = {
-			country_event = { id = korea.92 hours = 6 }
-		}
-	}
-
-	focus = {
-		id = KOR_yoon_after_airforce_1
-		icon = GFX_KOR_yoon_after_airforce_1
-		cost = 3
-		x = -1
-		y = 1
-		prerequisite = { focus = KOR_yoon_after_airforce_4 }
-		relative_position_id = KOR_yoon_after_airforce_4
-		completion_reward = {
-			if = {
-				limit = {
-					has_dlc = "By Blood Alone"
-				}
-				if = {
-					limit = {
-						KOR = { NOT = { has_tech = basic_medium_airframe } }
-					}
-					set_technology = {
-						basic_medium_airframe = 1
-					}
-				}
-				create_equipment_variant = {
-					name = "KUS-FC"
-					type = medium_plane_airframe_1
-					parent_version = 0
-					allow_without_tech = yes
-					modules = {
-						fixed_main_weapon_slot = aircraft_cannon_1_2x
-						fixed_auxiliary_weapon_slot_1 = aircraft_cannon_1_2x
-						fixed_auxiliary_weapon_slot_2 = empty
-						fixed_auxiliary_weapon_slot_3 = empty
-						engine_type_slot = engine_2_2x
-						special_type_slot_1 = lmg_defense_turret_2x
-						special_type_slot_2 = lmg_defense_turret_2x
-						special_type_slot_3 = empty
-					}
-				}
-				add_equipment_to_stockpile = {
-					type = medium_plane_airframe_1
-					variant_name = "KUS-FC"
-					amount = 100
-					producer = KOR
-				}
-			}
-			else = {
-				add_equipment_to_stockpile = {
-					type = tac_bomber_equipment_1
-					amount = 100
-					producer = KOR
-				}
-				add_equipment_to_stockpile = {
-					type = tac_bomber_equipment_2
-					amount = 50
-					producer = KOR
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = KOR_yoon_after_airforce_2
-		icon = GFX_KOR_yoon_after_airforce_2
-		cost = 3
-		x = 1
-		y = 1
-		prerequisite = { focus = KOR_yoon_after_airforce_4 }
-		relative_position_id = KOR_yoon_after_airforce_4
-		completion_reward = {
-			country_event = { id = korea.91 hours = 6 }
-		}
-	}
-
-	focus = {
-		id = KOR_yoon_after_airforce_3
-		icon = GFX_KOR_yoon_after_airforce_3
-		cost = 3
-		x = 0
-		y = 2
-		prerequisite = { focus = KOR_yoon_after_airforce_1 }
-		prerequisite = { focus = KOR_yoon_after_airforce_2 }
-		relative_position_id = KOR_yoon_after_airforce_4
-		completion_reward = {
-			if = {
-				limit = {
-					has_dlc = "By Blood Alone"
-				}
-				if = {
-					limit = {
-						KOR = { NOT = { has_tech = improved_small_airframe } }
-					}
-					set_technology = {
-						improved_small_airframe = 1
-					}
-				}
-				create_equipment_variant = {
-					name = "KF-21"
-					type = small_plane_airframe_2
-					parent_version = 0
-					allow_without_tech = yes
-					modules = {
-						fixed_main_weapon_slot = heavy_mg_4x
-						fixed_auxiliary_weapon_slot_1 = heavy_mg_4x
-						fixed_auxiliary_weapon_slot_2 = heavy_mg_4x
-						fixed_auxiliary_weapon_slot_3 = light_mg_4x
-						fixed_auxiliary_weapon_slot_4 = empty
-						engine_type_slot = engine_2_2x
-						special_type_slot_1 = hmg_defense_turret
-						special_type_slot_2 = ai_targeting_computer_small
-						special_type_slot_3 = empty
-					}
-				}
-				add_equipment_to_stockpile = {
-					type = small_plane_airframe_2
-					variant_name = "KF-21"
-					amount = 60
-					producer = KOR
-				}
-			}
-			else = {
-				add_equipment_to_stockpile = {
-					type = CAS_equipment_3
-					amount = 60
-					producer = KOR
-				}
-				set_technology = {
-					CAS_equipment_3 = 1
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = KOR_yoon_after_airforce_5
-		icon = GFX_KOR_yoon_after_airforce_5
-		cost = 5
-		x = 0
-		y = 3
-		prerequisite = { focus = KOR_yoon_after_airforce_3 }
-		relative_position_id = KOR_yoon_after_airforce_4
-		completion_reward = {
-			effect_tooltip = {
-				swap_ideas = {
-					add_idea = KOR_roka_dynamic_dummy_airforce_5_idea
-					remove_idea = KOR_yoon_roka_dynamic_dummy_idea
-				}
-			}
-			add_to_variable = { KOR_roka_air_attack_factor_dynamic_var = 0.03 }
-			add_to_variable = { KOR_roka_air_defence_factor_dynamic_var = 0.05 }
-			add_to_variable = { KOR_roka_air_mission_efficiency_dynamic_var = 0.07 }
-			add_to_variable = { KOR_roka_air_intercept_efficiency_dynamic_var = 0.1 }
-
-			custom_effect_tooltip = TFRKP_defreform_trust_add_10_TT
-			hidden_effect = {
-				set_temp_variable = { TFRKP_defreform_trust_change = 10 }
-				TFRKP_defreform_add_trust_effect = yes
-			}
-			custom_effect_tooltip = TFRKP_defreform_progress_add_10_TT
-			hidden_effect = {
-				set_temp_variable = { TFRKP_defreform_progress_change = 10 }
-				TFRKP_defreform_add_progress_effect = yes
-			}
-			custom_effect_tooltip = TFRKP_rank_up_korea_army_TT
-			set_temp_variable = { TFRKP_defreform_rank_change = -1 }
-		    TFRKP_defreform_add_rank_effect = yes
-		}
-	}
-
-	## 해군중점 ##
-
-	focus = {
-		id = KOR_yoon_after_navy_0 # 바다의 방패
-		icon = GFX_KOR_yoon_after_navy_0
-		cost = 5
-		x = 0
-		y = 1
-		prerequisite = { focus = KOR_yoon_army_upper }
-		relative_position_id = KOR_yoon_army_upper
-		completion_reward = {
-			country_event = { id = korea.175 hours = 6 }
-			navy_experience = 50
-			custom_effect_tooltip = TFRKP_defreform_progress_add_5_TT
-			hidden_effect = {
-				set_temp_variable = { TFRKP_defreform_progress_change = 5 }
-				TFRKP_defreform_add_progress_effect = yes
-			}
-		}
-	}
-
-	focus = {
-		id = KOR_yoon_after_navy_1 # 우리의 미래
-		icon = GFX_KOR_yoon_after_navy_1
-		cost = 5
-		x = 0
-		y = 2
-		prerequisite = { focus = KOR_yoon_after_navy_0 }
-		relative_position_id = KOR_yoon_army_upper
-		completion_reward = {
-			1410 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = dockyard
-					level = 2
-					instant_build = yes
-				}
-			}
-
-			1409 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = dockyard
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = KOR_yoon_after_navy_2
-		icon = GFX_KOR_yoon_after_navy_2
-		cost = 4
-		x = -1
-		y = 3
-		mutually_exclusive = { focus = KOR_yoon_after_navy_4 }
-		prerequisite = { focus = KOR_yoon_after_navy_1 }
-		relative_position_id = KOR_yoon_army_upper
-		completion_reward = {
-			set_temp_variable = {
-				var = debt_var_temp
-				value = 50
-			}
-			add_debt_with_inflation = yes
-
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = KOR_yoon_roka_dynamic_dummy_idea
-					add_idea = KOR_ocean_navy_idea
-				}
-			}
-			hidden_effect = {
-				add_to_variable = {
-					var = KOR_roka_income_growth_factor_dynamic_var
-					value = -0.1
-				}
-			}
-			add_ideas = KOR_ocean_navy_idea_d
-			TFRK_navy_build_Baekdusan_class_effect = yes
-		}
-	}
-
-	focus = {
-		id = KOR_yoon_after_navy_3
-		icon = GFX_KOR_yoon_after_navy_3
-		cost = 4
-		x = -1
-		y = 4
-		prerequisite = { focus = KOR_yoon_after_navy_2 }
-		relative_position_id = KOR_yoon_army_upper
-		completion_reward = {
-			set_temp_variable = {
-				var = debt_var_temp
-				value = 80
-			}
-			add_debt_with_inflation = yes
-
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = KOR_yoon_roka_dynamic_dummy_idea
-					add_idea = KOR_escort_squadron_idea
-				}
-			}
-
-			hidden_effect = {
-				add_to_variable = {
-					var = KOR_roka_navy_carrier_air_attack_factor_dynamic_var
-					value = 0.1
-				}
-
-				add_to_variable = {
-					var = KOR_roka_navy_carrier_air_targetting_factor_dynamic_var
-					value = 0.1
-				}
-			}
-			add_ideas = KOR_escort_squadron_idea_d
-		}
-	}
-
-	focus = {
-		id = KOR_yoon_after_navy_4
-		icon = GFX_KOR_yoon_after_navy_4
-		cost = 4
-		x = 1
-		y = 3
-		mutually_exclusive = { focus = KOR_yoon_after_navy_2 }
-		prerequisite = { focus = KOR_yoon_after_navy_1 }
-		relative_position_id = KOR_yoon_army_upper
-		completion_reward = {
-			navy_experience = 30
-			add_ideas = KOR_real_choice_idea
-			TFRK_navy_build_Yi_Bongchang_class_effect = yes
-
-		}
-	}
-
-	focus = {
-		id = KOR_yoon_after_navy_5
-		icon = GFX_KOR_yoon_after_navy_5
-		cost = 4
-		x = 1
-		y = 4
-		prerequisite = { focus = KOR_yoon_after_navy_4 }
-		relative_position_id = KOR_yoon_army_upper
-		completion_reward = {
-			navy_experience = 75
-			add_doctrine_cost_reduction = {
-				name = KOR_trade_interdiction_doctrine
-				cost_reduction = 0.5
-				uses = 2
-				category = cat_trade_interdiction
-			}
-		}
-	}
-
-	focus = {
-		id = KOR_yoon_after_navy_6
-		icon = GFX_KOR_yoon_after_navy_6
-		cost = 5
-		x = 0
-		y = 5
-		prerequisite = {
-			focus = KOR_yoon_after_navy_3
-			focus = KOR_yoon_after_navy_5
-		}
-		relative_position_id = KOR_yoon_army_upper
-		completion_reward = {
-			navy_experience = 150
-			custom_effect_tooltip = TFRKP_rank_up_korea_army_TT
-			set_temp_variable = { TFRKP_defreform_rank_change = -1 }
-		    TFRKP_defreform_add_rank_effect = yes
-		}
-	}
-
-	focus = {
-		id = KOR_yoon_after_army_0
-		icon = GFX_KOR_yoon_after_army_6
-		cost = 5
-		x = 5
-		y = 1
-		prerequisite = { focus = KOR_yoon_army_upper }
-		relative_position_id = KOR_yoon_army_upper
-		completion_reward = {
-			country_event = { id = korea.177 hours = 6 }
-			army_experience = 50
-			custom_effect_tooltip = TFRKP_defreform_trust_add_5_TT
-			hidden_effect = {
-				set_temp_variable = { TFRKP_defreform_trust_change = 5 }
-				TFRKP_defreform_add_trust_effect = yes
-			}
-			custom_effect_tooltip = TFRKP_defreform_progress_add_5_TT
-			hidden_effect = {
-				set_temp_variable = { TFRKP_defreform_progress_change = 5 }
-				TFRKP_defreform_add_progress_effect = yes
-			}
-		}
-	}
-
-	focus = {
-		id = KOR_yoon_after_army_1
-		icon = GFX_KOR_yoon_after_army_1
-		cost = 5
-		x = -1
-		y = 1
-		prerequisite = { focus = KOR_yoon_after_army_0 }
-		relative_position_id = KOR_yoon_after_army_0
-		completion_reward = {
-			set_temp_variable = {
-				var = military_development_var_temp
-				value = 0.05
-			}
-			add_military_development = yes
-			custom_effect_tooltip = TFRKP_defreform_trust_add_5_TT
-			hidden_effect = {
-				set_temp_variable = { TFRKP_defreform_trust_change = 5 }
-				TFRKP_defreform_add_trust_effect = yes
-			}
-			custom_effect_tooltip = TFRKP_defreform_progress_add_5_TT
-			hidden_effect = {
-				set_temp_variable = { TFRKP_defreform_progress_change = 5 }
-				TFRKP_defreform_add_progress_effect = yes
-			}
-			unlock_decision_tooltip = KOR_k2_black_panter
-			unlock_decision_tooltip = KOR_k21_change
-			unlock_decision_tooltip = KOR_beeho_bokhap
-		}
-	}
-
-	focus = {
-		id = KOR_yoon_after_army_2
-		icon = GFX_KOR_TFR_KR
-		cost = 5
-		x = 1
-		y = 1
-		prerequisite = { focus = KOR_yoon_after_army_0 }
-		relative_position_id = KOR_yoon_after_army_0
-		completion_reward = {
-			set_temp_variable = {
-				var = military_development_var_temp
-				value = 0.05
-			}
-			add_military_development = yes
-			custom_effect_tooltip = TFRKP_defreform_trust_add_10_TT
-			hidden_effect = {
-				set_temp_variable = { TFRKP_defreform_trust_change = 10 }
-				TFRKP_defreform_add_trust_effect = yes
-			}
-			custom_effect_tooltip = TFRKP_defreform_progress_add_10_TT
-			hidden_effect = {
-				set_temp_variable = { TFRKP_defreform_progress_change = 10 }
-				TFRKP_defreform_add_progress_effect = yes
-			}
-			unlock_decision_tooltip = KOR_korea_warrior
-			unlock_decision_tooltip = KOR_k2c1
-			unlock_decision_tooltip = KOR_anti_dron
-		}
-	}
-
-	focus = {
-		id = KOR_yoon_after_army_3
-		icon = GFX_KOR_yoon_after_army_3
-		cost = 5
-		x = 0
-		y = 2
-		prerequisite = {
-			focus = KOR_yoon_after_army_1
-			focus = KOR_yoon_after_army_2
-		}
-		relative_position_id = KOR_yoon_after_army_0
-		completion_reward = {
-			set_temp_variable = {
-				var = military_development_var_temp
-				value = 0.1
-			}
-			add_military_development = yes
-		}
-	}
-
-	focus = {
-		id = KOR_yoon_after_army_4
-		icon = GFX_KOR_yoon_after_army_4
-		cost = 5
-		x = 1
-		y = 3
-		mutually_exclusive = { focus = KOR_yoon_after_army_5 }
-		prerequisite = { focus = KOR_yoon_after_army_3 }
-		relative_position_id = KOR_yoon_after_army_0
-		ai_will_do = { factor = 10 }
-		completion_reward = {
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = KOR_yoon_roka_dynamic_dummy_idea
-					add_idea = KOR_conscription_system_idea
-				}
-			}
-			set_country_flag = KOR_mobilization_reform_flag
-			swap_ideas = {
-				remove_idea = KOR_mobilization_hard_laws
-				add_idea = medium_conscription
-			}
-			unlock_decision_tooltip = KOR_gong_eic
-			country_event = { id = korea.135 }
-
-			hidden_effect = {
-				add_to_variable = {
-					var = KOR_roka_recruitable_population_factor_dynamic_var
-					value = -0.10
-				}
-
-				add_to_variable = {
-					var = KOR_roka_battalion_upkeep_factor_dynamic_var
-					value = -0.15
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = KOR_yoon_after_army_5
-		icon = GFX_KOR_yoon_after_army_5
-		cost = 5
-		x = -1
-		y = 3
-		mutually_exclusive = { focus = KOR_yoon_after_army_4 }
-		prerequisite = { focus = KOR_yoon_after_army_3 }
-		relative_position_id = KOR_yoon_after_army_0
-		ai_will_do = { factor = 0 }
-		completion_reward = {
-			#add_ideas = KOR_your_choice_idea
-			custom_effect_tooltip = TFRKP_defreform_trust_add_-20_TT
-			hidden_effect = {
-				set_temp_variable = { TFRKP_defreform_trust_change = -20 }
-				TFRKP_defreform_add_trust_effect = yes
-			}
-			custom_effect_tooltip = TFRKP_defreform_progress_add_-20_TT
-			hidden_effect = {
-				set_temp_variable = { TFRKP_defreform_progress_change = -20 }
-				TFRKP_defreform_add_progress_effect = yes
-			}
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = KOR_yoon_roka_dynamic_dummy_idea
-					add_idea = KOR_your_choice_idea_d
-				}
-			}
-			swap_ideas = {
-				remove_idea = KOR_mobilization_hard_laws
-				add_idea = KOR_mobilization_hard_laws_2
-			}
-			set_country_flag = KOR_mobilization_upgrade_flag
-			country_event = { id = korea.136 }
-
-			hidden_effect = {
-				add_to_variable = {
-					var = KOR_roka_mobilization_speed_dynamic_var
-					value = 0.3
-				}
-
-				add_to_variable = {
-					var = KOR_roka_recruitable_population_factor_dynamic_var
-					value = 0.075
-				}
-
-				add_to_variable = {
-					var = KOR_roka_battalion_upkeep_factor_dynamic_var
-					value = 0.15
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = KOR_yoon_after_army_6
-		icon = GFX_KOR_yoon_after_army_0
-		cost = 6
-		x = 0
-		y = 4
-		prerequisite = {
-			focus = KOR_yoon_after_army_5
-			focus = KOR_yoon_after_army_4
-		}
-		relative_position_id = KOR_yoon_after_army_0
-		completion_reward = {
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = KOR_yoon_roka_dynamic_dummy_idea
-					add_idea = KOR_yoon_after_army_6_idea
-				}
-			}
-			set_temp_variable = {
-				var = military_development_var_temp
-				value = 0.1
-			}
-			add_military_development = yes
-			add_war_support = 0.1
-			custom_effect_tooltip = TFRKP_rank_up_korea_army_TT
-			set_temp_variable = { TFRKP_defreform_rank_change = -1 }
-		    TFRKP_defreform_add_rank_effect = yes
-			hidden_effect = {
-				add_to_variable = {
-					var = KOR_roka_military_development_monthly_dynamic_var
-					value = 0.02
-				}
-
-				add_to_variable = {
-					var = KOR_roka_army_org_factor_dynamic_var
-					value = 0.10
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = KOR_yoon_after_army_7
-		icon = GFX_KOR_yoon_after_army_7
-		cost = 5
-		x = -2
-		y = 2
-		prerequisite = {
-			focus = KOR_yoon_after_army_2
-			focus = KOR_yoon_after_navy_1
-		}
-		relative_position_id = KOR_yoon_after_army_0
-		completion_reward = {
-			country_event = { id = korea.236 hours = 6 }
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = KOR_yoon_roka_dynamic_dummy_idea
-					add_idea = KOR_yoon_after_army_7_idea
-				}
-			}
-			add_to_variable = {
-				var = KOR_roka_army_attack_factor_dynamic_var
-				value = 0.05
-			}
-			add_to_variable = {
-				var = KOR_roka_army_defence_factor_dynamic_var
-				value = 0.05
-			}
-		}
-	}
-
-	focus = {
-		id = KOR_yoon_after_army_8
-		icon = GFX_KOR_yoon_after_army_8
-		cost = 5
-		x = 2
-		y = 2
-		prerequisite = {
-			focus = KOR_yoon_after_army_1
-			focus = KOR_yoon_after_army_2
-		}
-		relative_position_id = KOR_yoon_after_army_0
-		completion_reward = {
-			custom_effect_tooltip = TFRKP_defreform_trust_add_5_TT
-			hidden_effect = {
-				set_temp_variable = { TFRKP_defreform_trust_change = 5 }
-				TFRKP_defreform_add_trust_effect = yes
-			}
-			custom_effect_tooltip = TFRKP_defreform_progress_add_5_TT
-			hidden_effect = {
-				set_temp_variable = { TFRKP_defreform_progress_change = 5 }
-				TFRKP_defreform_add_progress_effect = yes
-			}
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = KOR_yoon_roka_dynamic_dummy_idea
-					add_idea = KOR_yoon_after_army_8_idea
-				}
-			}
-
-			hidden_effect = {
-				add_to_variable = {
-					var = KOR_roka_military_development_monthly_dynamic_var
-					value = 0.01
-				}
-
-				add_to_variable = {
-					var = KOR_roka_army_org_factor_dynamic_var
-					value = 0.05
-				}
-
-				add_to_variable = {
-					var = KOR_roka_planning_speed_dynamic_var
-					value = 0.1
-				}
-				add_to_variable = {
-					var = KOR_roka_army_attack_factor_dynamic_var
-					value = 0.05
-				}
-			}
-		}
-	}
-
-	### Military Focus
-
-	focus = {
-		id = KOR_military_common_1
-		icon = GFX_KOR_military_common_1
-		cost = 5
-		x = 0
-		y = 6
-		prerequisite = { focus = KOR_yoon_after_navy_6 }
-		prerequisite = { focus = KOR_yoon_after_airforce_5 }
-		prerequisite = { focus = KOR_yoon_after_army_6 }
-		relative_position_id = KOR_yoon_army_upper
-		completion_reward = {
-			effect_tooltip = {
-				swap_ideas = {
-					add_idea = KOR_roka_dynamic_dummy_military_idea
-					remove_idea = KOR_yoon_roka_dynamic_dummy_idea
-				}
-			}
-			custom_effect_tooltip = TFRKP_defreform_trust_add_10_TT
-			hidden_effect = {
-				set_temp_variable = { TFRKP_defreform_trust_change = 10 }
-				TFRKP_defreform_add_trust_effect = yes
-			}
-			custom_effect_tooltip = TFRKP_defreform_progress_add_10_TT
-			hidden_effect = {
-				set_temp_variable = { TFRKP_defreform_progress_change = 10 }
-				TFRKP_defreform_add_progress_effect = yes
-			}
-			add_to_variable = {
-				var = KOR_roka_army_attack_factor_dynamic_var
-				value = 0.1
-			}
-			add_to_variable = {
-				var = KOR_roka_army_defence_factor_dynamic_var
-				value = 0.1
-			}
-			custom_effect_tooltip = tooltip_white_line
-			effect_tooltip = {
-				focus_unlock = yes
-			}
-			mark_focus_tree_layout_dirty = yes
-		}
-	}
-
-	focus = {
-		id = KOR_military_common_2
-		icon = GFX_KOR_military_common_2
-		cost = 5
-		x = -2
-		y = 1
-		allow_branch = {
-			OR = {
-				has_country_flag = KOR_yoon_taiwan_war_victory
-				has_country_flag = KOR_lee_taiwan_war_victory
-				KOR_is_PPPDKP_path = yes
-			}
-			NOT = {
-				KOR_is_yoon_declare_martial_law = yes
-				has_country_flag = KOR_yoon_mtl_focus_unlock
-			}
-			has_completed_focus = KOR_military_common_1
-		}
-		prerequisite = { focus = KOR_military_common_1 }
-		relative_position_id = KOR_military_common_1
-		completion_reward = {
-			custom_effect_tooltip = tooltip_white_line
-			custom_effect_tooltip = TFRKP_defreform_trust_add_5_TT
-			hidden_effect = {
-				set_temp_variable = { TFRKP_defreform_trust_change = 5 }
-				TFRKP_defreform_add_trust_effect = yes
-			}
-			unlock_decision_category_tooltip = KOR_kfxx_project_category
-			set_country_flag = KOR_kfxx_project_category_flag
-			set_country_flag = KOR_kfxx_project_days_var_initialized_flag
-			set_variable = { KOR_kfxx_project_days_var = 1000 }
-			activate_mission = KOR_kfxx_fighter_project_mission
-		}
-	}
-
-	focus = {
-		id = KOR_military_common_3
-		icon = GFX_KOR_military_common_3
-		cost = 5
-		x = 0
-		y = 1
-		allow_branch = {
-			OR = {
-				has_country_flag = KOR_yoon_taiwan_war_victory
-				has_country_flag = KOR_lee_taiwan_war_victory
-				KOR_is_PPPDKP_path = yes
-			}
-			NOT = {
-				KOR_is_yoon_declare_martial_law = yes
-				has_country_flag = KOR_yoon_mtl_focus_unlock
-			}
-			has_completed_focus = KOR_military_common_1
-		}
-		prerequisite = { focus = KOR_military_common_1 }
-		relative_position_id = KOR_military_common_1
-		completion_reward = {
-			add_tech_bonus = {
-				bonus = 0.5
-				uses = 3
-				category = ship_modules_tech
-				name = KOR_military_common_3
-			}
-			add_tech_bonus = {
-				bonus = 0.5
-				uses = 1
-				category = cat_torpedoes
-				name = KOR_military_common_3
-			}
-		}
-	}
-
-	focus = {
-		id = KOR_military_common_4
-		icon = GFX_KOR_military_common_4
-		cost = 5
-		x = 2
-		y = 1
-		allow_branch = {
-			OR = {
-				has_country_flag = KOR_yoon_taiwan_war_victory
-				has_country_flag = KOR_lee_taiwan_war_victory
-				KOR_is_PPPDKP_path = yes
-			}
-			NOT = {
-				KOR_is_yoon_declare_martial_law = yes
-				has_country_flag = KOR_yoon_mtl_focus_unlock
-			}
-			has_completed_focus = KOR_military_common_1
-		}
-		prerequisite = { focus = KOR_military_common_1 }
-		relative_position_id = KOR_military_common_1
-		completion_reward = {
-			effect_tooltip = {
-				swap_ideas = {
-					add_idea = KOR_roka_dynamic_dummy_military_4_idea
-					remove_idea = KOR_yoon_roka_dynamic_dummy_idea
-				}
-			}
-			add_to_variable = { KOR_roka_army_armor_attack_factor_dynamic_var = 0.05 }
-			add_to_variable = { KOR_roka_army_armor_defence_factor_dynamic_var = 0.05 }
-            add_tech_bonus = {
-                name = KOR_military_common_4
-                bonus = 0.5
-				ahead_reduction = 1
-                uses = 1
-                category = armor
-            }
-			custom_effect_tooltip = tooltip_white_line
-			custom_effect_tooltip = TFRKP_defreform_trust_add_5_TT
-			hidden_effect = {
-				set_temp_variable = { TFRKP_defreform_trust_change = 5 }
-				TFRKP_defreform_add_trust_effect = yes
-			}
-			custom_effect_tooltip = TFRKP_defreform_progress_add_5_TT
-			hidden_effect = {
-				set_temp_variable = { TFRKP_defreform_progress_change = 5 }
-				TFRKP_defreform_add_progress_effect = yes
-			}
-		}
-	}
-
-	focus = {
-		id = KOR_military_common_5
-		icon = GFX_KOR_military_common_5
-		cost = 5
-		x = -1
-		y = 2
-		prerequisite = { focus = KOR_military_common_2 }
-		prerequisite = { focus = KOR_military_common_3 }
-		prerequisite = { focus = KOR_military_common_4 }
-		relative_position_id = KOR_military_common_1
-		completion_reward = {
-			if = {
-				limit = {
-					NOT = {
-						has_dlc = "By Blood Alone"
-					}
-				}
-				add_tech_bonus = {
-					name = KOR_military_common_5
-					bonus = 0.25
-					uses = 1
-					category = naval_bomber
-				}
-				add_tech_bonus = {
-					name = KOR_military_common_5
-					bonus = 0.25
-					uses = 1
-					category = naval_air
-				}
-			}
-			else = {
-				add_tech_bonus = {
-					name = KOR_military_common_5
-					bonus = 0.5
-					uses = 3
-					category = plane_modules_tech
-				}
-				add_tech_bonus = {
-					name = KOR_military_common_5
-					bonus = 0.33
-					uses = 1
-					category = heavy_air
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = KOR_military_common_6
-		icon = GFX_KOR_military_common_6
-		cost = 5
-		x = 1
-		y = 2
-		prerequisite = { focus = KOR_military_common_2 }
-		prerequisite = { focus = KOR_military_common_3 }
-		prerequisite = { focus = KOR_military_common_4 }
-		relative_position_id = KOR_military_common_1
-		completion_reward = {
-			army_experience = 30
-			effect_tooltip = {
-				swap_ideas = {
-					add_idea = KOR_roka_dynamic_dummy_military_6_idea
-					remove_idea = KOR_yoon_roka_dynamic_dummy_idea
-				}
-			}
-			add_to_variable = { KOR_roka_army_attack_factor_dynamic_var = 0.015 }
-			add_to_variable = { KOR_roka_army_defence_factor_dynamic_var = 0.015 }
-			add_tech_bonus = {
-				name = KOR_military_common_6
-				bonus = 0.5
-				ahead_reduction = 2
-				uses = 3
-				category = infantry_weapons
-			}
-			custom_effect_tooltip = tooltip_white_line
-			custom_effect_tooltip = TFRKP_defreform_progress_add_5_TT
-			hidden_effect = {
-				set_temp_variable = { TFRKP_defreform_progress_change = 5 }
-				TFRKP_defreform_add_progress_effect = yes
-			}
-		}
-	}
-
-	focus = {
-		id = KOR_military_common_7
-		icon = GFX_KOR_military_common_7
-		cost = 5
-		x = 0
-		y = 3
-		prerequisite = { focus = KOR_military_common_5 }
-		prerequisite = { focus = KOR_military_common_6 }
-		relative_position_id = KOR_military_common_1
-		completion_reward = {
-			effect_tooltip = {
-				swap_ideas = {
-					add_idea = KOR_roka_dynamic_dummy_military_7_idea
-					remove_idea = KOR_yoon_roka_dynamic_dummy_idea
-				}
-			}
-			add_to_variable = { KOR_roka_army_org_factor_dynamic_var = 0.03 }
-			add_to_variable = { KOR_roka_mobilization_speed_dynamic_var = 0.05 }
-			add_to_variable = { KOR_roka_military_development_monthly_dynamic_var = 0.01 }
-			add_to_variable = { KOR_roka_planning_speed_dynamic_var = 0.05 }
-
-			custom_effect_tooltip = TFRKP_defreform_trust_add_5_TT
-			hidden_effect = {
-				set_temp_variable = { TFRKP_defreform_trust_change = 5 }
-				TFRKP_defreform_add_trust_effect = yes
-			}
-			custom_effect_tooltip = TFRKP_defreform_progress_add_5_TT
-			hidden_effect = {
-				set_temp_variable = { TFRKP_defreform_progress_change = 5 }
-				TFRKP_defreform_add_progress_effect = yes
-			}
-		}
-	}
-
+	# [홍낙] 군사 가지(국방비 증액 아래 30개)는 파일 맨 아래의 공유 중점으로 옮겼다. 홍준표 트리도 같은 것을 쓴다.
+	shared_focus = KOR_yoon_army_upper
 	######
 
 	focus = {
@@ -21451,730 +20349,1917 @@ focus_tree = {
 
 	## 대아대전 GWR ##
 
-	focus = {
-		id = KOR_gwr_reserve_forces
-		icon = {
-			GFX_focus_KOR_gwr_reserve_forces_reds = { KOR_is_PP_path = yes }
-			GFX_focus_KOR_gwr_reserve_forces = { KOR_is_PP_path = no }
-		}
-		cost = 3
-		x = 11
-		y = 9
-		allow_branch = {
-			has_country_flag = KOR_great_asia_war
-			NOT = {
+	# [홍낙] 대아대전 가지(21개)는 파일 맨 아래의 공유 중점으로 옮겼다. 홍준표 트리와 이인제 트리도 같은 것을 쓴다.
+	shared_focus = KOR_gwr_reserve_forces
+}
+
+################################################################
+# [홍낙] 공유 군사 중점: 원본 트리(TFR_tree_KOR)와 홍준표 트리(TFRKPHN_hong_tree)가 함께 쓴다.
+# 내용은 원본 그대로이고, 루트의 가지 조건/찍는 조건/위치와 공통 2~4의 가지 조건에만 홍준표 트리용 갈래를 더했다.
+################################################################
+
+shared_focus = {
+	id = KOR_yoon_army_upper
+	icon = GFX_KOR_yoon_army_upper
+	# [홍낙] 이 군사 가지는 원본 트리와 홍준표 트리가 함께 쓰는 공유 중점이다 (같은 이름을 두 트리에 따로 두면 선이 엉킨다).
+	allow_branch = {
+		OR = {
+			AND = {	# 홍준표 트리: 마지막 중점을 끝내면 열린다
+				has_focus_tree = TFRKPHN_hong_tree
+				has_completed_focus = TFRKPHN_hong_b03_25
+			}
+			AND = {	# 원본 조건
+				NOT = { has_focus_tree = TFRKPHN_hong_tree }
 				OR = {
-					has_global_flag = PRC_japanese_gaw_victory_global
+					has_country_flag = KOR_yoon_taiwan_war_victory
+					AND = {
+						has_country_flag = KOR_lee_taiwan_war_victory
+						has_country_flag = KOR_lee_freewin_end_flag
+					}
+					has_country_flag = KOR_lee_taiwan_war_victory_supported
+					KOR_is_PPPDKP_path = yes
+				}
+				NOT = {
+					KOR_is_yoon_declare_martial_law = yes
 					has_country_flag = KOR_yoon_mtl_focus_unlock
 				}
 			}
 		}
-		offset = {
-			trigger = {
-				KOR_is_lee_after_yoon_path = yes
-			}
-			x = 1
-			y = 2
+	}
+	cost = 3
+	x = -13
+	y = 2
+	offset = {	# 홍준표 트리에서는 오른쪽 끝(56, 0)에 놓는다
+		x = 69
+		y = -2
+		trigger = { has_focus_tree = TFRKPHN_hong_tree }
+	}
+	available = {
+		if = {
+			limit = { has_focus_tree = TFRKPHN_hong_tree }
+			has_completed_focus = TFRKPHN_hong_b03_25
 		}
-		offset = {
-			trigger = {
-				KOR_is_PP_path = yes
+		if = {
+			limit = {
+				NOT = { has_focus_tree = TFRKPHN_hong_tree }
+				KOR_is_yoon_path = yes
 			}
-			x = -2
-			y = 4
+			OR = {
+				has_completed_focus = KOR_yoon_among_country
+				has_completed_focus = KOR_yoon_among_people
+			}
 		}
-		offset = {
-			trigger = {
+		if = {
+			limit = {
+				NOT = { has_focus_tree = TFRKPHN_hong_tree }
+				KOR_is_lee_path = yes
+				has_country_flag = KOR_lee_taiwan_war_victory_supported
+			}
+			has_completed_focus = KOR_lee_victory_sup_26
+		}
+		if = {
+			limit = {
+				NOT = { has_focus_tree = TFRKPHN_hong_tree }
+				KOR_is_lee_path = yes
+				NOT = { has_country_flag = KOR_lee_taiwan_war_victory_supported }
+			}
+			has_completed_focus = KOR_lee_nothing_focus_26
+		}
+		if = {
+			limit = {
+				NOT = { has_focus_tree = TFRKPHN_hong_tree }
 				KOR_is_PPPDKP_path = yes
 			}
-			x = -15
-			y = 2
-		}
-		offset = {
-			trigger = {
-				has_country_flag = KOR_yoon_winter_republic
-			}
-			x = -1
-			y = 2
-		}
-		offset = {
-			trigger = {
-				KOR_is_army_path = yes
-			}
-			x = -2
-			y = 1
-		}
-		offset = {
-			trigger = {
-				OR = {
-					KOR_is_lee_DPK_path = yes
-					KOR_is_lee_PPP_path = yes
-				}
-			}
-			x = 5
-		}
-		completion_reward = {
-			effect_tooltip = {
-				add_ideas = KOR_great_asian_war_dynamic_idea_added_dummy
-			}
-			hidden_effect = {
-				set_variable = { KOR_great_asian_war_dynamic_war_support_factor_dynamic_var = 0.15 }
-				set_variable = { KOR_great_asian_war_dynamic_conscription_factor_dynamic_var = 0.15 }
-				add_dynamic_modifier = { modifier = KOR_great_asian_war_dynamic }
-			}
-
-			custom_effect_tooltip = tooltip_white_line
-
-			GAW_start_setting_effect = yes
-
-			set_temp_variable = { GAW_operation_chip_var_temp = 3 }
-			GAW_add_chip_effect = yes
-
-			custom_effect_tooltip = KOR_gwr_reserve_forces_tt
-			hidden_effect = {
-				if = {
-					limit = { has_completed_focus = KOR_yoon_after_army_5 }
-					load_oob = "01_load_oob_KOR_dongwon_2"
-				}
-				else = {
-					load_oob = "01_load_oob_KOR_dongwon"
-
-				}
-			}
-			country_event = { id = korea.137 hours = 6 }
-		}
-	}
-
-	focus = {
-		id = KOR_gwr_plan
-		icon = {
-			GFX_focus_KOR_gwr_plan_reds = { KOR_is_PP_path = yes }
-			GFX_focus_KOR_gwr_plan = { KOR_is_PP_path = no }
-		}
-		cost = 2
-		x = -1
-		y = 1
-		available = {
-		}
-		prerequisite = { focus = KOR_gwr_reserve_forces }
-		relative_position_id = KOR_gwr_reserve_forces
-		completion_reward = {
-			set_temp_variable = { GAW_operation_chip_var_temp = 1 }
-			GAW_add_chip_effect = yes
-			add_timed_idea = {
-				idea = KOR_gwr_plan_idea
-				days = 90
-			}
-
-		}
-	}
-
-	focus = {
-		id = KOR_gwr_kill_chain
-		icon = {
-			GFX_focus_KOR_gwr_kill_chain_reds = { KOR_is_PP_path = yes }
-			GFX_focus_KOR_gwr_kill_chain = { KOR_is_PP_path = no }
-		}
-		cost = 2
-		x = 1
-		y = 1
-		available = {
-		}
-		prerequisite = { focus = KOR_gwr_reserve_forces }
-		relative_position_id = KOR_gwr_reserve_forces
-		completion_reward = {
-			effect_tooltip = {
-				swap_ideas = {
-					add_idea = KOR_gwr_kill_chain_idea
-					remove_idea = KOR_great_asian_war_dynamic_idea_dummy
-				}
-			}
-			set_temp_variable = { GAW_operation_chip_var_temp = 1 }
-			GAW_add_chip_effect = yes
-			hidden_effect = {
-				set_variable = { KOR_great_asian_war_dynamic_air_superiority_efficiency_var = 0.15 }
-				set_variable = { KOR_great_asian_war_dynamic_ground_attack_factor_var = 0.1 }
-				set_variable = { KOR_great_asian_war_dynamic_air_strategic_bomber_bombing_factor_var = 0.1 }
-			}
-		}
-	}
-
-	focus = {
-		id = KOR_gwr_seoul_fortification
-		icon = {
-			GFX_focus_KOR_gwr_seoul_fortification_reds = { KOR_is_PP_path = yes }
-			GFX_focus_KOR_gwr_seoul_fortification = { KOR_is_PP_path = no }
-		}
-		cost = 3
-		x = 0
-		y = 2
-		available = {
-
-		}
-		prerequisite = {
-			focus = KOR_gwr_reserve_forces
-			focus = KOR_gwr_plan
-			focus = KOR_gwr_kill_chain
-		}
-		relative_position_id = KOR_gwr_reserve_forces
-		completion_reward = {
-			effect_tooltip = {
-				swap_ideas = {
-					add_idea = KOR_gwr_seoul_fortification_idea
-					remove_idea = KOR_great_asian_war_dynamic_idea_dummy
-				}
-			}
-			hidden_effect = {
-				set_variable = { KOR_great_asian_war_dynamic_production_speed_bunker_factor_var = 0.2 }
-			}
-			1041 = {
-				add_building_construction = {
-					type = bunker
-					level = 3
-					province = 7125
-					instant_build = yes
-				}
-			}
-			1041 = {
-				add_building_construction = {
-					type = bunker
-					level = 3
-					province = 13693
-					instant_build = yes
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = KOR_gwr_preparation_winter_war
-		icon = {
-			GFX_focus_KOR_gwr_preparation_winter_war_reds = { KOR_is_PP_path = yes }
-			GFX_focus_KOR_gwr_preparation_winter_war = { KOR_is_PP_path = no }
-		}
-		cost = 3
-		x = -2
-		y = 2
-		available = {
-		}
-		prerequisite = {
-			focus = KOR_gwr_plan
-			focus = KOR_gwr_kill_chain
-		}
-		relative_position_id = KOR_gwr_reserve_forces
-		completion_reward = {
-			effect_tooltip = {
-				swap_ideas = {
-					add_idea = KOR_gwr_preparation_winter_war_idea
-					remove_idea = KOR_great_asian_war_dynamic_idea_dummy
-				}
-			}
-			hidden_effect = {
-				set_variable = { KOR_great_asian_war_dynamic_max_planning_factor_var = 0.1 }
-				set_variable = { KOR_great_asian_war_dynamic_winter_attrition_factor_var = -0.15 }
-			}
-		}
-	}
-
-	focus = {
-		id = KOR_gwr_moving_industrial
-		icon = {
-			GFX_focus_KOR_gwr_moving_industrial_reds = { KOR_is_PP_path = yes }
-			GFX_focus_KOR_gwr_moving_industrial = { KOR_is_PP_path = no }
-		}
-		cost = 5
-		x = 2
-		y = 2
-		available = {
-		}
-		prerequisite = {
-			focus = KOR_gwr_plan
-			focus = KOR_gwr_kill_chain
-		}
-		relative_position_id = KOR_gwr_reserve_forces
-		completion_reward = {
-			custom_effect_tooltip = KOR_gwr_moving_industrial_tt
-
-			1041 = {
-				remove_building = {
-					type = industrial_complex
-					level = 4
-				}
-			}
-			869 = {
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-			870 = {
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = KOR_gwr_plan_sandong
-		icon = {
-			GFX_focus_KOR_gwr_plan_sandong_reds = { KOR_is_PP_path = yes }
-			GFX_focus_KOR_gwr_plan_sandong = { KOR_is_PP_path = no }
-		}
-		cost = 4
-		x = -1
-		y = 3
-		available = {
-			has_war_with = PRC
-		}
-		prerequisite = {
-			focus = KOR_gwr_moving_industrial
-			focus = KOR_gwr_preparation_winter_war
-			focus = KOR_gwr_seoul_fortification
-		}
-		mutually_exclusive = { focus = KOR_gwr_attack_to_sanhaekuan }
-		relative_position_id = KOR_gwr_reserve_forces
-		completion_reward = {
-			unlock_decision_tooltip = KOR_attack_sandong_dec
-			set_temp_variable = { GAW_operation_chip_var_temp = 1 }
-			GAW_add_chip_effect = yes
-		}
-	}
-
-	focus = {
-		id = KOR_gwr_attack_to_sanhaekuan
-		icon = {
-			GFX_focus_KOR_gwr_attack_to_sanhaekuan_reds = { KOR_is_PP_path = yes }
-			GFX_focus_KOR_gwr_attack_to_sanhaekuan = { KOR_is_PP_path = no }
-		}
-		cost = 4
-		x = -3
-		y = 3
-		available = {
-			has_war_with = PRC
-		}
-		prerequisite = {
-			focus = KOR_gwr_moving_industrial
-			focus = KOR_gwr_preparation_winter_war
-			focus = KOR_gwr_seoul_fortification
-		}
-		mutually_exclusive = { focus = KOR_gwr_plan_sandong }
-		relative_position_id = KOR_gwr_reserve_forces
-		completion_reward = {
-			unlock_decision_tooltip = KOR_attack_manju_dec
-			set_temp_variable = { GAW_operation_chip_var_temp = 1 }
-			GAW_add_chip_effect = yes
-		}
-	}
-
-	focus = {
-		id = KOR_gwr_attack_to_prc
-		icon = {
-			GFX_focus_KOR_gwr_attack_to_prc_reds = { KOR_is_PP_path = yes }
-			GFX_focus_KOR_gwr_attack_to_prc = { KOR_is_PP_path = no }
-		}
-		cost = 4
-		x = -2
-		y = 4
-		available = {
-		}
-		prerequisite = {
-			focus = KOR_gwr_plan_sandong
-			focus = KOR_gwr_attack_to_sanhaekuan
-		}
-		relative_position_id = KOR_gwr_reserve_forces
-		completion_reward = {
-			add_timed_idea = {
-				idea = KOR_gwr_attack_to_prc_idea
-				days = 365
-			}
-			set_temp_variable = { GAW_operation_chip_var_temp = 1 }
-			GAW_add_chip_effect = yes
-		}
-	}
-
-	focus = {
-		id = KOR_gwr_attack_to_wonsan
-		icon = {
-			GFX_focus_KOR_gwr_attack_to_wonsan_reds = { KOR_is_PP_path = yes }
-			GFX_focus_KOR_gwr_attack_to_wonsan = { KOR_is_PP_path = no }
-		}
-		cost = 4
-		x = 1
-		y = 3
-		available = {
-		}
-		prerequisite = {
-			focus = KOR_gwr_moving_industrial
-			focus = KOR_gwr_preparation_winter_war
-			focus = KOR_gwr_seoul_fortification
-		}
-		mutually_exclusive = { focus = KOR_gwr_attack_to_chongjin }
-		relative_position_id = KOR_gwr_reserve_forces
-		completion_reward = {
-			custom_effect_tooltip = KOR_gwr_attack_to_wonsan_tt
-			hidden_effect = {
-				6928 = {
-					set_demilitarized_zone = yes
-				}
-
-				6928 = {
-					set_demilitarized_zone = no
-					set_state_controller_to = KOR
-				}
-
-				load_oob = "01_load_oob_KOR_wonsan"
-			}
-			set_temp_variable = { GAW_operation_chip_var_temp = 1 }
-			GAW_add_chip_effect = yes
-		}
-	}
-
-	focus = {
-		id = KOR_gwr_attack_to_chongjin
-		icon = {
-			GFX_focus_KOR_gwr_attack_to_chongjin_reds = { KOR_is_PP_path = yes }
-			GFX_focus_KOR_gwr_attack_to_chongjin = { KOR_is_PP_path = no }
-		}
-		cost = 4
-		x = 3
-		y = 3
-		available = {
-		}
-		prerequisite = {
-			focus = KOR_gwr_moving_industrial
-			focus = KOR_gwr_preparation_winter_war
-			focus = KOR_gwr_seoul_fortification
-		}
-		mutually_exclusive = { focus = KOR_gwr_attack_to_wonsan }
-		relative_position_id = KOR_gwr_reserve_forces
-		completion_reward = {
-			custom_effect_tooltip = KOR_gwr_attack_to_chongjin_tt
-			hidden_effect = {
-				6822 = {
-					set_demilitarized_zone = yes
-				}
-
-				6822 = {
-					set_demilitarized_zone = no
-					set_state_controller_to = KOR
-				}
-				load_oob = "01_load_oob_KOR_chongjin"
-
-			}
-			set_temp_variable = { GAW_operation_chip_var_temp = 1 }
-			GAW_add_chip_effect = yes
-		}
-	}
-
-	focus = {
-		id = KOR_gwr_attack_to_nk
-		icon = {
-			GFX_focus_KOR_gwr_attack_to_nk_reds = { KOR_is_PP_path = yes }
-			GFX_focus_KOR_gwr_attack_to_nk = { KOR_is_PP_path = no }
-		}
-		cost = 4
-		x = 2
-		y = 4
-		available = {
-		}
-		prerequisite = {
-			focus = KOR_gwr_attack_to_chongjin
-			focus = KOR_gwr_attack_to_wonsan
-		}
-		relative_position_id = KOR_gwr_reserve_forces
-		completion_reward = {
-			unlock_decision_tooltip = KOR_attack_RPK_dec
-			set_temp_variable = { GAW_operation_chip_var_temp = 1 }
-			GAW_add_chip_effect = yes
-		}
-	}
-
-	focus = {
-		id = KOR_gwr_dawn_east_asia
-		icon = {
-			GFX_focus_KOR_gwr_dawn_east_asia_reds = { KOR_is_PP_path = yes }
-			GFX_focus_KOR_gwr_dawn_east_asia = { KOR_is_PP_path = no }
-		}
-		cost = 4
-		x = 0
-		y = 4
-		available = {
-		}
-		prerequisite = {
-			focus = KOR_gwr_preparation_winter_war
-			focus = KOR_gwr_seoul_fortification
-			focus = KOR_gwr_moving_industrial
-		}
-		relative_position_id = KOR_gwr_reserve_forces
-		completion_reward = {
-			effect_tooltip = {
-				swap_ideas = {
-					add_idea = KOR_gwr_dawn_east_asia_idea
-					remove_idea = KOR_great_asian_war_dynamic_idea_dummy
-				}
-			}
-			hidden_effect = {
-				set_variable = { KOR_great_asian_war_dynamic_industrial_capacity_factory_var = 0.1 }
-				set_variable = { KOR_great_asian_war_dynamic_production_factory_max_efficiency_factor_var = 0.1 }
-				set_variable = { KOR_great_asian_war_dynamic_army_morale_factor_var = 0.1 }
-			}
-		}
-	}
-
-	focus = {
-		id = KOR_gwr_faith_in_steel
-		icon = {
-			GFX_focus_KOR_gwr_faith_in_steel_reds = { KOR_is_PP_path = yes }
-			GFX_focus_KOR_gwr_faith_in_steel = { KOR_is_PP_path = no }
-		}
-		cost = 4
-		x = -1
-		y = 5
-		available = {
-		}
-		prerequisite = { focus = KOR_gwr_dawn_east_asia }
-		relative_position_id = KOR_gwr_reserve_forces
-		completion_reward = {
-			effect_tooltip = {
-				swap_ideas = {
-					add_idea = KOR_gwr_faith_in_steel_idea
-					remove_idea = KOR_great_asian_war_dynamic_idea_dummy
-				}
-			}
-			hidden_effect = {
-				set_variable = { KOR_great_asian_war_dynamic_army_core_attack_factor_var = 0.15 }
-				set_variable = { KOR_great_asian_war_dynamic_army_core_defence_factor_var = 0.15 }
-			}
-		}
-	}
-
-	focus = {
-		id = KOR_gwr_navy
-		icon = {
-			GFX_focus_KOR_gwr_navy_reds = { KOR_is_PP_path = yes }
-			GFX_focus_KOR_gwr_navy = { KOR_is_PP_path = no }
-		}
-		cost = 4
-		x = 1
-		y = 5
-		available = {
-		}
-		prerequisite = { focus = KOR_gwr_dawn_east_asia }
-		relative_position_id = KOR_gwr_reserve_forces
-		completion_reward = {
-			effect_tooltip = {
-				swap_ideas = {
-					add_idea = KOR_gwr_navy_idea
-					remove_idea = KOR_great_asian_war_dynamic_idea_dummy
-				}
-			}
-			hidden_effect = {
-				set_variable = { KOR_great_asian_war_dynamic_navy_capital_ship_attack_factor_var = 0.1 }
-				set_variable = { KOR_great_asian_war_dynamic_navy_capital_ship_defence_factor_var = 0.1 }
-				set_variable = { KOR_great_asian_war_dynamic_navy_screen_attack_factor_var = 0.1 }
-				set_variable = { KOR_great_asian_war_dynamic_navy_screen_defence_factor_var = 0.1 }
-				set_variable = { KOR_great_asian_war_dynamic_screening_efficiency_var = 0.1 }
-				set_variable = { KOR_great_asian_war_dynamic_navy_org_factor_var = 0.1 }
-			}
-		}
-	}
-
-	##북괴##
-
-	focus = {
-		id = KOR_gwr_partisan
-		icon = {
-			GFX_focus_KOR_gwr_partisan_reds = { KOR_is_PP_path = yes }
-			GFX_focus_KOR_gwr_partisan = { KOR_is_PP_path = no }
-		}
-		cost = 5
-		x = 4
-		y = 2
-		available = {
-			if = {
-				limit = {
-					KOR_is_PP_path = no
-				}
-				OR = {
-					NOT = { country_exists = PRK }
-					PRK = { has_capitulated = yes }
-				}
-			}
-		}
-		prerequisite = { focus = KOR_gwr_plan }
-		prerequisite = { focus = KOR_gwr_kill_chain }
-		relative_position_id = KOR_gwr_reserve_forces
-		completion_reward = {
-			if = {
-				limit = {
-					KOR_is_PP_path = yes
-				}
-				PRK = {
-					add_stability = -0.1
-					add_war_support = -0.1
-				}
-				PRC = {
-					add_war_support = -0.1
-				}
-				add_stability = 0.03
-				add_war_support = 0.03
-				set_temp_variable = { GAW_operation_chip_var_temp = 2 }
-				GAW_add_chip_effect = yes
-			}
-			else = {
-				873 = {
-					add_manpower = -2000
-				}
-				1042 = {
-					add_manpower = -2000
-				}
-				874 = {
-					add_manpower = -2000
-				}
-				add_stability = 0.05
-				set_temp_variable = { GAW_operation_chip_var_temp = 1 }
-				GAW_add_chip_effect = yes
-			}
-		}
-	}
-
-	focus = {
-		id = KOR_gwr_sunrising_plan
-		icon = {
-			GFX_focus_KOR_gwr_sunrising_plan_reds = { KOR_is_PP_path = yes }
-			GFX_focus_KOR_gwr_sunrising_plan = { KOR_is_PP_path = no }
-		}
-		cost = 5
-		x = 6
-		y = 2
-		available = {
-		}
-		prerequisite = { focus = KOR_gwr_plan }
-		prerequisite = { focus = KOR_gwr_kill_chain }
-		relative_position_id = KOR_gwr_reserve_forces
-		completion_reward = {
-			add_war_support = 0.15
-		}
-	}
-
-	focus = {
-		id = KOR_gwr_stabilization_prk
-		icon = {
-			GFX_focus_KOR_gwr_stabilization_prk_reds = { KOR_is_PP_path = yes }
-			GFX_focus_KOR_gwr_stabilization_prk = { KOR_is_PP_path = no }
-		}
-		cost = 5
-		x = 5
-		y = 3
-		bypass = {
-			KOR_is_PP_path = no
-    		has_global_flag = PRC_japanese_gaw_victory_global
-		}
-		bypass_effect = {
-			if = {
-				limit = {
-					KOR_is_PP_path = no
-				}
-				custom_effect_tooltip = KOR_gwr_stabilization_prk_tt
-				hidden_effect = {
-					KOR_north_korea_add_core_state_effect = yes
-				}
-			}
-		}
-		available = {
-			if = {
-				limit = {
-					KOR_is_PP_path = yes
-				}
-				PRK = {
-					exists = no
-				}
-			}
-			else = {
-				custom_trigger_tooltip = {
-					tooltip = KOR_gwr_stabilization_prk_trigger_tt
-					OR = {
-						controls_state = 1043
-						any_country = {
-							OR = {
-								is_in_faction_with = KOR
-								is_puppet_of = KOR
-							}
-							controls_state = 1043
-						}
-					}
-				}
-			}
-		}
-		prerequisite = { focus = KOR_gwr_partisan }
-		prerequisite = { focus = KOR_gwr_sunrising_plan }
-		relative_position_id = KOR_gwr_reserve_forces
-		completion_reward = {
-			if = {
-				limit = {
-					KOR_is_PP_path = yes
-				}
-				if = {
-					limit = {
-						KPA = {
-							exists = yes
-						}
-					}
-					KPA = {
-						add_timed_idea = {
-							idea = KOR_reds_attack_the_china
-							days = 60
-						}
-					}
-				}
-				add_timed_idea = {
-					idea = KOR_reds_attack_the_china
-					days = 60
-				}
-				set_temp_variable = { GAW_operation_chip_var_temp = 2 }
-				GAW_add_chip_effect = yes
-			}
-			else = {
-				custom_effect_tooltip = KOR_gwr_stabilization_prk_tt
-				hidden_effect = {
-					country_event = { id = korea.222 }
-					KOR_north_korea_add_core_state_effect = yes
-				}
-			}
-		}
-	}
-
-	##짱깨
-
-	focus = {
-		id = KOR_gwr_chines_expulsion
-		icon = {
-			GFX_focus_KOR_gwr_chines_expulsion_reds = { KOR_is_PP_path = yes }
-			GFX_focus_KOR_gwr_chines_expulsion = { KOR_is_PP_path = no }
-		}
-		cost = 5
-		x = -4
-		y = 2
-		available = {
 			custom_trigger_tooltip = {
-				tooltip = KOR_gwr_manchucontrol_trigger_tt
+				tooltip = KOR_coa_army_can_select_tt
+				has_completed_focus = KOR_lee_coa_route_15
+				has_completed_focus = KOR_lee_coa_route_14
+				has_completed_focus = KOR_lee_coa_route_28
+				has_completed_focus = KOR_lee_coa_route_29
+				has_completed_focus = KOR_lee_coa_route_21
+				has_completed_focus = KOR_lee_coa_route_22
+			}
+		}
+	}
+	completion_reward = {
+		hidden_effect = {
+			activate_mission = KOR_defense_reform_token_growth_month
+		}
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = KOR_yoon_roka_dynamic_dummy_idea
+				add_idea = KOR_yoon_army_upper_idea
+			}
+		}
+		country_event = { id = korea.178 hours = 6 }
+		army_experience = 50
+		navy_experience = 50
+		air_experience = 50
+		set_temp_variable = {
+			var = military_development_var_temp
+			value = 0.1
+		}
+		add_military_development = yes
+		set_temp_variable = {
+			var = debt_var_temp
+			value = 20
+		}
+		add_debt_with_inflation = yes
+		TFRKP_defreform_init_effect = yes
+		custom_effect_tooltip = tooltip_white_line
+		set_country_flag = TFRKP_show_defreform_GUI
+		hidden_effect = {
+			add_dynamic_modifier = {
+				modifier = KOR_yoon_roka_dynamic_modifir
+			}
+
+			add_to_variable = {
+				var = KOR_roka_army_org_factor_dynamic_var
+				value = -0.1
+			}
+
+			add_to_variable = {
+				var = KOR_roka_battalion_upkeep_factor_dynamic_var
+				value = 0.1
+			}
+
+			add_to_variable = {
+				var = KOR_roka_army_attack_factor_dynamic_var
+				value = -0.1
+			}
+
+			add_to_variable = {
+				var = KOR_roka_army_defence_factor_dynamic_var
+				value = -0.1
+			}
+
+			add_to_variable = {
+				var = KOR_roka_consumer_goods_factor_dynamic_var
+				value = -0.025
+			}
+
+			add_to_variable = {
+				var = KOR_roka_income_growth_factor_dynamic_var
+				value = -0.05
+			}
+		}
+	}
+}
+
+## 공군중점
+
+shared_focus = {
+	id = KOR_yoon_after_airforce_0 # 공군개혁
+	icon = GFX_KOR_yoon_after_airforce_0
+	cost = 3
+	x = -5
+	y = 1
+	prerequisite = { focus = KOR_yoon_army_upper }
+	relative_position_id = KOR_yoon_army_upper
+	completion_reward = {
+		country_event = { id = korea.176 hours = 6 }
+		air_experience = 25
+		custom_effect_tooltip = TFRKP_defreform_progress_add_10_TT
+		hidden_effect = {
+			set_temp_variable = { TFRKP_defreform_progress_change = 10 }
+			TFRKP_defreform_add_progress_effect = yes
+		}
+	}
+}
+
+shared_focus = {
+	id = KOR_yoon_after_airforce_4 # 공군개혁
+	icon = GFX_KOR_yoon_after_airforce_4
+	cost = 3
+	x = -5
+	y = 2
+	prerequisite = { focus = KOR_yoon_after_airforce_0 }
+	relative_position_id = KOR_yoon_army_upper
+	completion_reward = {
+		country_event = { id = korea.92 hours = 6 }
+	}
+}
+
+shared_focus = {
+	id = KOR_yoon_after_airforce_1
+	icon = GFX_KOR_yoon_after_airforce_1
+	cost = 3
+	x = -1
+	y = 1
+	prerequisite = { focus = KOR_yoon_after_airforce_4 }
+	relative_position_id = KOR_yoon_after_airforce_4
+	completion_reward = {
+		if = {
+			limit = {
+				has_dlc = "By Blood Alone"
+			}
+			if = {
+				limit = {
+					KOR = { NOT = { has_tech = basic_medium_airframe } }
+				}
+				set_technology = {
+					basic_medium_airframe = 1
+				}
+			}
+			create_equipment_variant = {
+				name = "KUS-FC"
+				type = medium_plane_airframe_1
+				parent_version = 0
+				allow_without_tech = yes
+				modules = {
+					fixed_main_weapon_slot = aircraft_cannon_1_2x
+					fixed_auxiliary_weapon_slot_1 = aircraft_cannon_1_2x
+					fixed_auxiliary_weapon_slot_2 = empty
+					fixed_auxiliary_weapon_slot_3 = empty
+					engine_type_slot = engine_2_2x
+					special_type_slot_1 = lmg_defense_turret_2x
+					special_type_slot_2 = lmg_defense_turret_2x
+					special_type_slot_3 = empty
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = medium_plane_airframe_1
+				variant_name = "KUS-FC"
+				amount = 100
+				producer = KOR
+			}
+		}
+		else = {
+			add_equipment_to_stockpile = {
+				type = tac_bomber_equipment_1
+				amount = 100
+				producer = KOR
+			}
+			add_equipment_to_stockpile = {
+				type = tac_bomber_equipment_2
+				amount = 50
+				producer = KOR
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = KOR_yoon_after_airforce_2
+	icon = GFX_KOR_yoon_after_airforce_2
+	cost = 3
+	x = 1
+	y = 1
+	prerequisite = { focus = KOR_yoon_after_airforce_4 }
+	relative_position_id = KOR_yoon_after_airforce_4
+	completion_reward = {
+		country_event = { id = korea.91 hours = 6 }
+	}
+}
+
+shared_focus = {
+	id = KOR_yoon_after_airforce_3
+	icon = GFX_KOR_yoon_after_airforce_3
+	cost = 3
+	x = 0
+	y = 2
+	prerequisite = { focus = KOR_yoon_after_airforce_1 }
+	prerequisite = { focus = KOR_yoon_after_airforce_2 }
+	relative_position_id = KOR_yoon_after_airforce_4
+	completion_reward = {
+		if = {
+			limit = {
+				has_dlc = "By Blood Alone"
+			}
+			if = {
+				limit = {
+					KOR = { NOT = { has_tech = improved_small_airframe } }
+				}
+				set_technology = {
+					improved_small_airframe = 1
+				}
+			}
+			create_equipment_variant = {
+				name = "KF-21"
+				type = small_plane_airframe_2
+				parent_version = 0
+				allow_without_tech = yes
+				modules = {
+					fixed_main_weapon_slot = heavy_mg_4x
+					fixed_auxiliary_weapon_slot_1 = heavy_mg_4x
+					fixed_auxiliary_weapon_slot_2 = heavy_mg_4x
+					fixed_auxiliary_weapon_slot_3 = light_mg_4x
+					fixed_auxiliary_weapon_slot_4 = empty
+					engine_type_slot = engine_2_2x
+					special_type_slot_1 = hmg_defense_turret
+					special_type_slot_2 = ai_targeting_computer_small
+					special_type_slot_3 = empty
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = small_plane_airframe_2
+				variant_name = "KF-21"
+				amount = 60
+				producer = KOR
+			}
+		}
+		else = {
+			add_equipment_to_stockpile = {
+				type = CAS_equipment_3
+				amount = 60
+				producer = KOR
+			}
+			set_technology = {
+				CAS_equipment_3 = 1
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = KOR_yoon_after_airforce_5
+	icon = GFX_KOR_yoon_after_airforce_5
+	cost = 5
+	x = 0
+	y = 3
+	prerequisite = { focus = KOR_yoon_after_airforce_3 }
+	relative_position_id = KOR_yoon_after_airforce_4
+	completion_reward = {
+		effect_tooltip = {
+			swap_ideas = {
+				add_idea = KOR_roka_dynamic_dummy_airforce_5_idea
+				remove_idea = KOR_yoon_roka_dynamic_dummy_idea
+			}
+		}
+		add_to_variable = { KOR_roka_air_attack_factor_dynamic_var = 0.03 }
+		add_to_variable = { KOR_roka_air_defence_factor_dynamic_var = 0.05 }
+		add_to_variable = { KOR_roka_air_mission_efficiency_dynamic_var = 0.07 }
+		add_to_variable = { KOR_roka_air_intercept_efficiency_dynamic_var = 0.1 }
+
+		custom_effect_tooltip = TFRKP_defreform_trust_add_10_TT
+		hidden_effect = {
+			set_temp_variable = { TFRKP_defreform_trust_change = 10 }
+			TFRKP_defreform_add_trust_effect = yes
+		}
+		custom_effect_tooltip = TFRKP_defreform_progress_add_10_TT
+		hidden_effect = {
+			set_temp_variable = { TFRKP_defreform_progress_change = 10 }
+			TFRKP_defreform_add_progress_effect = yes
+		}
+		custom_effect_tooltip = TFRKP_rank_up_korea_army_TT
+		set_temp_variable = { TFRKP_defreform_rank_change = -1 }
+	    TFRKP_defreform_add_rank_effect = yes
+	}
+}
+
+## 해군중점 ##
+
+shared_focus = {
+	id = KOR_yoon_after_navy_0 # 바다의 방패
+	icon = GFX_KOR_yoon_after_navy_0
+	cost = 5
+	x = 0
+	y = 1
+	prerequisite = { focus = KOR_yoon_army_upper }
+	relative_position_id = KOR_yoon_army_upper
+	completion_reward = {
+		country_event = { id = korea.175 hours = 6 }
+		navy_experience = 50
+		custom_effect_tooltip = TFRKP_defreform_progress_add_5_TT
+		hidden_effect = {
+			set_temp_variable = { TFRKP_defreform_progress_change = 5 }
+			TFRKP_defreform_add_progress_effect = yes
+		}
+	}
+}
+
+shared_focus = {
+	id = KOR_yoon_after_navy_1 # 우리의 미래
+	icon = GFX_KOR_yoon_after_navy_1
+	cost = 5
+	x = 0
+	y = 2
+	prerequisite = { focus = KOR_yoon_after_navy_0 }
+	relative_position_id = KOR_yoon_army_upper
+	completion_reward = {
+		1410 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = dockyard
+				level = 2
+				instant_build = yes
+			}
+		}
+
+		1409 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = dockyard
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = KOR_yoon_after_navy_2
+	icon = GFX_KOR_yoon_after_navy_2
+	cost = 4
+	x = -1
+	y = 3
+	mutually_exclusive = { focus = KOR_yoon_after_navy_4 }
+	prerequisite = { focus = KOR_yoon_after_navy_1 }
+	relative_position_id = KOR_yoon_army_upper
+	completion_reward = {
+		set_temp_variable = {
+			var = debt_var_temp
+			value = 50
+		}
+		add_debt_with_inflation = yes
+
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = KOR_yoon_roka_dynamic_dummy_idea
+				add_idea = KOR_ocean_navy_idea
+			}
+		}
+		hidden_effect = {
+			add_to_variable = {
+				var = KOR_roka_income_growth_factor_dynamic_var
+				value = -0.1
+			}
+		}
+		add_ideas = KOR_ocean_navy_idea_d
+		TFRK_navy_build_Baekdusan_class_effect = yes
+	}
+}
+
+shared_focus = {
+	id = KOR_yoon_after_navy_3
+	icon = GFX_KOR_yoon_after_navy_3
+	cost = 4
+	x = -1
+	y = 4
+	prerequisite = { focus = KOR_yoon_after_navy_2 }
+	relative_position_id = KOR_yoon_army_upper
+	completion_reward = {
+		set_temp_variable = {
+			var = debt_var_temp
+			value = 80
+		}
+		add_debt_with_inflation = yes
+
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = KOR_yoon_roka_dynamic_dummy_idea
+				add_idea = KOR_escort_squadron_idea
+			}
+		}
+
+		hidden_effect = {
+			add_to_variable = {
+				var = KOR_roka_navy_carrier_air_attack_factor_dynamic_var
+				value = 0.1
+			}
+
+			add_to_variable = {
+				var = KOR_roka_navy_carrier_air_targetting_factor_dynamic_var
+				value = 0.1
+			}
+		}
+		add_ideas = KOR_escort_squadron_idea_d
+	}
+}
+
+shared_focus = {
+	id = KOR_yoon_after_navy_4
+	icon = GFX_KOR_yoon_after_navy_4
+	cost = 4
+	x = 1
+	y = 3
+	mutually_exclusive = { focus = KOR_yoon_after_navy_2 }
+	prerequisite = { focus = KOR_yoon_after_navy_1 }
+	relative_position_id = KOR_yoon_army_upper
+	completion_reward = {
+		navy_experience = 30
+		add_ideas = KOR_real_choice_idea
+		TFRK_navy_build_Yi_Bongchang_class_effect = yes
+
+	}
+}
+
+shared_focus = {
+	id = KOR_yoon_after_navy_5
+	icon = GFX_KOR_yoon_after_navy_5
+	cost = 4
+	x = 1
+	y = 4
+	prerequisite = { focus = KOR_yoon_after_navy_4 }
+	relative_position_id = KOR_yoon_army_upper
+	completion_reward = {
+		navy_experience = 75
+		add_doctrine_cost_reduction = {
+			name = KOR_trade_interdiction_doctrine
+			cost_reduction = 0.5
+			uses = 2
+			category = cat_trade_interdiction
+		}
+	}
+}
+
+shared_focus = {
+	id = KOR_yoon_after_navy_6
+	icon = GFX_KOR_yoon_after_navy_6
+	cost = 5
+	x = 0
+	y = 5
+	prerequisite = {
+		focus = KOR_yoon_after_navy_3
+		focus = KOR_yoon_after_navy_5
+	}
+	relative_position_id = KOR_yoon_army_upper
+	completion_reward = {
+		navy_experience = 150
+		custom_effect_tooltip = TFRKP_rank_up_korea_army_TT
+		set_temp_variable = { TFRKP_defreform_rank_change = -1 }
+	    TFRKP_defreform_add_rank_effect = yes
+	}
+}
+
+shared_focus = {
+	id = KOR_yoon_after_army_0
+	icon = GFX_KOR_yoon_after_army_6
+	cost = 5
+	x = 5
+	y = 1
+	prerequisite = { focus = KOR_yoon_army_upper }
+	relative_position_id = KOR_yoon_army_upper
+	completion_reward = {
+		country_event = { id = korea.177 hours = 6 }
+		army_experience = 50
+		custom_effect_tooltip = TFRKP_defreform_trust_add_5_TT
+		hidden_effect = {
+			set_temp_variable = { TFRKP_defreform_trust_change = 5 }
+			TFRKP_defreform_add_trust_effect = yes
+		}
+		custom_effect_tooltip = TFRKP_defreform_progress_add_5_TT
+		hidden_effect = {
+			set_temp_variable = { TFRKP_defreform_progress_change = 5 }
+			TFRKP_defreform_add_progress_effect = yes
+		}
+	}
+}
+
+shared_focus = {
+	id = KOR_yoon_after_army_1
+	icon = GFX_KOR_yoon_after_army_1
+	cost = 5
+	x = -1
+	y = 1
+	prerequisite = { focus = KOR_yoon_after_army_0 }
+	relative_position_id = KOR_yoon_after_army_0
+	completion_reward = {
+		set_temp_variable = {
+			var = military_development_var_temp
+			value = 0.05
+		}
+		add_military_development = yes
+		custom_effect_tooltip = TFRKP_defreform_trust_add_5_TT
+		hidden_effect = {
+			set_temp_variable = { TFRKP_defreform_trust_change = 5 }
+			TFRKP_defreform_add_trust_effect = yes
+		}
+		custom_effect_tooltip = TFRKP_defreform_progress_add_5_TT
+		hidden_effect = {
+			set_temp_variable = { TFRKP_defreform_progress_change = 5 }
+			TFRKP_defreform_add_progress_effect = yes
+		}
+		unlock_decision_tooltip = KOR_k2_black_panter
+		unlock_decision_tooltip = KOR_k21_change
+		unlock_decision_tooltip = KOR_beeho_bokhap
+	}
+}
+
+shared_focus = {
+	id = KOR_yoon_after_army_2
+	icon = GFX_KOR_TFR_KR
+	cost = 5
+	x = 1
+	y = 1
+	prerequisite = { focus = KOR_yoon_after_army_0 }
+	relative_position_id = KOR_yoon_after_army_0
+	completion_reward = {
+		set_temp_variable = {
+			var = military_development_var_temp
+			value = 0.05
+		}
+		add_military_development = yes
+		custom_effect_tooltip = TFRKP_defreform_trust_add_10_TT
+		hidden_effect = {
+			set_temp_variable = { TFRKP_defreform_trust_change = 10 }
+			TFRKP_defreform_add_trust_effect = yes
+		}
+		custom_effect_tooltip = TFRKP_defreform_progress_add_10_TT
+		hidden_effect = {
+			set_temp_variable = { TFRKP_defreform_progress_change = 10 }
+			TFRKP_defreform_add_progress_effect = yes
+		}
+		unlock_decision_tooltip = KOR_korea_warrior
+		unlock_decision_tooltip = KOR_k2c1
+		unlock_decision_tooltip = KOR_anti_dron
+	}
+}
+
+shared_focus = {
+	id = KOR_yoon_after_army_3
+	icon = GFX_KOR_yoon_after_army_3
+	cost = 5
+	x = 0
+	y = 2
+	prerequisite = {
+		focus = KOR_yoon_after_army_1
+		focus = KOR_yoon_after_army_2
+	}
+	relative_position_id = KOR_yoon_after_army_0
+	completion_reward = {
+		set_temp_variable = {
+			var = military_development_var_temp
+			value = 0.1
+		}
+		add_military_development = yes
+	}
+}
+
+shared_focus = {
+	id = KOR_yoon_after_army_4
+	icon = GFX_KOR_yoon_after_army_4
+	cost = 5
+	x = 1
+	y = 3
+	mutually_exclusive = { focus = KOR_yoon_after_army_5 }
+	prerequisite = { focus = KOR_yoon_after_army_3 }
+	relative_position_id = KOR_yoon_after_army_0
+	ai_will_do = { factor = 10 }
+	completion_reward = {
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = KOR_yoon_roka_dynamic_dummy_idea
+				add_idea = KOR_conscription_system_idea
+			}
+		}
+		set_country_flag = KOR_mobilization_reform_flag
+		swap_ideas = {
+			remove_idea = KOR_mobilization_hard_laws
+			add_idea = medium_conscription
+		}
+		unlock_decision_tooltip = KOR_gong_eic
+		country_event = { id = korea.135 }
+
+		hidden_effect = {
+			add_to_variable = {
+				var = KOR_roka_recruitable_population_factor_dynamic_var
+				value = -0.10
+			}
+
+			add_to_variable = {
+				var = KOR_roka_battalion_upkeep_factor_dynamic_var
+				value = -0.15
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = KOR_yoon_after_army_5
+	icon = GFX_KOR_yoon_after_army_5
+	cost = 5
+	x = -1
+	y = 3
+	mutually_exclusive = { focus = KOR_yoon_after_army_4 }
+	prerequisite = { focus = KOR_yoon_after_army_3 }
+	relative_position_id = KOR_yoon_after_army_0
+	ai_will_do = { factor = 0 }
+	completion_reward = {
+		#add_ideas = KOR_your_choice_idea
+		custom_effect_tooltip = TFRKP_defreform_trust_add_-20_TT
+		hidden_effect = {
+			set_temp_variable = { TFRKP_defreform_trust_change = -20 }
+			TFRKP_defreform_add_trust_effect = yes
+		}
+		custom_effect_tooltip = TFRKP_defreform_progress_add_-20_TT
+		hidden_effect = {
+			set_temp_variable = { TFRKP_defreform_progress_change = -20 }
+			TFRKP_defreform_add_progress_effect = yes
+		}
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = KOR_yoon_roka_dynamic_dummy_idea
+				add_idea = KOR_your_choice_idea_d
+			}
+		}
+		swap_ideas = {
+			remove_idea = KOR_mobilization_hard_laws
+			add_idea = KOR_mobilization_hard_laws_2
+		}
+		set_country_flag = KOR_mobilization_upgrade_flag
+		country_event = { id = korea.136 }
+
+		hidden_effect = {
+			add_to_variable = {
+				var = KOR_roka_mobilization_speed_dynamic_var
+				value = 0.3
+			}
+
+			add_to_variable = {
+				var = KOR_roka_recruitable_population_factor_dynamic_var
+				value = 0.075
+			}
+
+			add_to_variable = {
+				var = KOR_roka_battalion_upkeep_factor_dynamic_var
+				value = 0.15
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = KOR_yoon_after_army_6
+	icon = GFX_KOR_yoon_after_army_0
+	cost = 6
+	x = 0
+	y = 4
+	prerequisite = {
+		focus = KOR_yoon_after_army_5
+		focus = KOR_yoon_after_army_4
+	}
+	relative_position_id = KOR_yoon_after_army_0
+	completion_reward = {
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = KOR_yoon_roka_dynamic_dummy_idea
+				add_idea = KOR_yoon_after_army_6_idea
+			}
+		}
+		set_temp_variable = {
+			var = military_development_var_temp
+			value = 0.1
+		}
+		add_military_development = yes
+		add_war_support = 0.1
+		custom_effect_tooltip = TFRKP_rank_up_korea_army_TT
+		set_temp_variable = { TFRKP_defreform_rank_change = -1 }
+	    TFRKP_defreform_add_rank_effect = yes
+		hidden_effect = {
+			add_to_variable = {
+				var = KOR_roka_military_development_monthly_dynamic_var
+				value = 0.02
+			}
+
+			add_to_variable = {
+				var = KOR_roka_army_org_factor_dynamic_var
+				value = 0.10
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = KOR_yoon_after_army_7
+	icon = GFX_KOR_yoon_after_army_7
+	cost = 5
+	x = -2
+	y = 2
+	prerequisite = {
+		focus = KOR_yoon_after_army_2
+		focus = KOR_yoon_after_navy_1
+	}
+	relative_position_id = KOR_yoon_after_army_0
+	completion_reward = {
+		country_event = { id = korea.236 hours = 6 }
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = KOR_yoon_roka_dynamic_dummy_idea
+				add_idea = KOR_yoon_after_army_7_idea
+			}
+		}
+		add_to_variable = {
+			var = KOR_roka_army_attack_factor_dynamic_var
+			value = 0.05
+		}
+		add_to_variable = {
+			var = KOR_roka_army_defence_factor_dynamic_var
+			value = 0.05
+		}
+	}
+}
+
+shared_focus = {
+	id = KOR_yoon_after_army_8
+	icon = GFX_KOR_yoon_after_army_8
+	cost = 5
+	x = 2
+	y = 2
+	prerequisite = {
+		focus = KOR_yoon_after_army_1
+		focus = KOR_yoon_after_army_2
+	}
+	relative_position_id = KOR_yoon_after_army_0
+	completion_reward = {
+		custom_effect_tooltip = TFRKP_defreform_trust_add_5_TT
+		hidden_effect = {
+			set_temp_variable = { TFRKP_defreform_trust_change = 5 }
+			TFRKP_defreform_add_trust_effect = yes
+		}
+		custom_effect_tooltip = TFRKP_defreform_progress_add_5_TT
+		hidden_effect = {
+			set_temp_variable = { TFRKP_defreform_progress_change = 5 }
+			TFRKP_defreform_add_progress_effect = yes
+		}
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = KOR_yoon_roka_dynamic_dummy_idea
+				add_idea = KOR_yoon_after_army_8_idea
+			}
+		}
+
+		hidden_effect = {
+			add_to_variable = {
+				var = KOR_roka_military_development_monthly_dynamic_var
+				value = 0.01
+			}
+
+			add_to_variable = {
+				var = KOR_roka_army_org_factor_dynamic_var
+				value = 0.05
+			}
+
+			add_to_variable = {
+				var = KOR_roka_planning_speed_dynamic_var
+				value = 0.1
+			}
+			add_to_variable = {
+				var = KOR_roka_army_attack_factor_dynamic_var
+				value = 0.05
+			}
+		}
+	}
+}
+
+### Military Focus
+
+shared_focus = {
+	id = KOR_military_common_1
+	icon = GFX_KOR_military_common_1
+	cost = 5
+	x = 0
+	y = 6
+	prerequisite = { focus = KOR_yoon_after_navy_6 }
+	prerequisite = { focus = KOR_yoon_after_airforce_5 }
+	prerequisite = { focus = KOR_yoon_after_army_6 }
+	relative_position_id = KOR_yoon_army_upper
+	completion_reward = {
+		effect_tooltip = {
+			swap_ideas = {
+				add_idea = KOR_roka_dynamic_dummy_military_idea
+				remove_idea = KOR_yoon_roka_dynamic_dummy_idea
+			}
+		}
+		custom_effect_tooltip = TFRKP_defreform_trust_add_10_TT
+		hidden_effect = {
+			set_temp_variable = { TFRKP_defreform_trust_change = 10 }
+			TFRKP_defreform_add_trust_effect = yes
+		}
+		custom_effect_tooltip = TFRKP_defreform_progress_add_10_TT
+		hidden_effect = {
+			set_temp_variable = { TFRKP_defreform_progress_change = 10 }
+			TFRKP_defreform_add_progress_effect = yes
+		}
+		add_to_variable = {
+			var = KOR_roka_army_attack_factor_dynamic_var
+			value = 0.1
+		}
+		add_to_variable = {
+			var = KOR_roka_army_defence_factor_dynamic_var
+			value = 0.1
+		}
+		custom_effect_tooltip = tooltip_white_line
+		effect_tooltip = {
+			focus_unlock = yes
+		}
+		mark_focus_tree_layout_dirty = yes
+	}
+}
+
+shared_focus = {
+	id = KOR_military_common_2
+	icon = GFX_KOR_military_common_2
+	cost = 5
+	x = -2
+	y = 1
+	allow_branch = {
+		OR = {
+			has_focus_tree = TFRKPHN_hong_tree
+			AND = {
 				OR = {
+					has_country_flag = KOR_yoon_taiwan_war_victory
+					has_country_flag = KOR_lee_taiwan_war_victory
+					KOR_is_PPPDKP_path = yes
+				}
+				NOT = {
+					KOR_is_yoon_declare_martial_law = yes
+					has_country_flag = KOR_yoon_mtl_focus_unlock
+				}
+			}
+		}
+		has_completed_focus = KOR_military_common_1
+	}
+	prerequisite = { focus = KOR_military_common_1 }
+	relative_position_id = KOR_military_common_1
+	completion_reward = {
+		custom_effect_tooltip = tooltip_white_line
+		custom_effect_tooltip = TFRKP_defreform_trust_add_5_TT
+		hidden_effect = {
+			set_temp_variable = { TFRKP_defreform_trust_change = 5 }
+			TFRKP_defreform_add_trust_effect = yes
+		}
+		unlock_decision_category_tooltip = KOR_kfxx_project_category
+		set_country_flag = KOR_kfxx_project_category_flag
+		set_country_flag = KOR_kfxx_project_days_var_initialized_flag
+		set_variable = { KOR_kfxx_project_days_var = 1000 }
+		activate_mission = KOR_kfxx_fighter_project_mission
+	}
+}
+
+shared_focus = {
+	id = KOR_military_common_3
+	icon = GFX_KOR_military_common_3
+	cost = 5
+	x = 0
+	y = 1
+	allow_branch = {
+		OR = {
+			has_focus_tree = TFRKPHN_hong_tree
+			AND = {
+				OR = {
+					has_country_flag = KOR_yoon_taiwan_war_victory
+					has_country_flag = KOR_lee_taiwan_war_victory
+					KOR_is_PPPDKP_path = yes
+				}
+				NOT = {
+					KOR_is_yoon_declare_martial_law = yes
+					has_country_flag = KOR_yoon_mtl_focus_unlock
+				}
+			}
+		}
+		has_completed_focus = KOR_military_common_1
+	}
+	prerequisite = { focus = KOR_military_common_1 }
+	relative_position_id = KOR_military_common_1
+	completion_reward = {
+		add_tech_bonus = {
+			bonus = 0.5
+			uses = 3
+			category = ship_modules_tech
+			name = KOR_military_common_3
+		}
+		add_tech_bonus = {
+			bonus = 0.5
+			uses = 1
+			category = cat_torpedoes
+			name = KOR_military_common_3
+		}
+	}
+}
+
+shared_focus = {
+	id = KOR_military_common_4
+	icon = GFX_KOR_military_common_4
+	cost = 5
+	x = 2
+	y = 1
+	allow_branch = {
+		OR = {
+			has_focus_tree = TFRKPHN_hong_tree
+			AND = {
+				OR = {
+					has_country_flag = KOR_yoon_taiwan_war_victory
+					has_country_flag = KOR_lee_taiwan_war_victory
+					KOR_is_PPPDKP_path = yes
+				}
+				NOT = {
+					KOR_is_yoon_declare_martial_law = yes
+					has_country_flag = KOR_yoon_mtl_focus_unlock
+				}
+			}
+		}
+		has_completed_focus = KOR_military_common_1
+	}
+	prerequisite = { focus = KOR_military_common_1 }
+	relative_position_id = KOR_military_common_1
+	completion_reward = {
+		effect_tooltip = {
+			swap_ideas = {
+				add_idea = KOR_roka_dynamic_dummy_military_4_idea
+				remove_idea = KOR_yoon_roka_dynamic_dummy_idea
+			}
+		}
+		add_to_variable = { KOR_roka_army_armor_attack_factor_dynamic_var = 0.05 }
+		add_to_variable = { KOR_roka_army_armor_defence_factor_dynamic_var = 0.05 }
+            add_tech_bonus = {
+                name = KOR_military_common_4
+                bonus = 0.5
+			ahead_reduction = 1
+                uses = 1
+                category = armor
+            }
+		custom_effect_tooltip = tooltip_white_line
+		custom_effect_tooltip = TFRKP_defreform_trust_add_5_TT
+		hidden_effect = {
+			set_temp_variable = { TFRKP_defreform_trust_change = 5 }
+			TFRKP_defreform_add_trust_effect = yes
+		}
+		custom_effect_tooltip = TFRKP_defreform_progress_add_5_TT
+		hidden_effect = {
+			set_temp_variable = { TFRKP_defreform_progress_change = 5 }
+			TFRKP_defreform_add_progress_effect = yes
+		}
+	}
+}
+
+shared_focus = {
+	id = KOR_military_common_5
+	icon = GFX_KOR_military_common_5
+	cost = 5
+	x = -1
+	y = 2
+	prerequisite = { focus = KOR_military_common_2 }
+	prerequisite = { focus = KOR_military_common_3 }
+	prerequisite = { focus = KOR_military_common_4 }
+	relative_position_id = KOR_military_common_1
+	completion_reward = {
+		if = {
+			limit = {
+				NOT = {
+					has_dlc = "By Blood Alone"
+				}
+			}
+			add_tech_bonus = {
+				name = KOR_military_common_5
+				bonus = 0.25
+				uses = 1
+				category = naval_bomber
+			}
+			add_tech_bonus = {
+				name = KOR_military_common_5
+				bonus = 0.25
+				uses = 1
+				category = naval_air
+			}
+		}
+		else = {
+			add_tech_bonus = {
+				name = KOR_military_common_5
+				bonus = 0.5
+				uses = 3
+				category = plane_modules_tech
+			}
+			add_tech_bonus = {
+				name = KOR_military_common_5
+				bonus = 0.33
+				uses = 1
+				category = heavy_air
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = KOR_military_common_6
+	icon = GFX_KOR_military_common_6
+	cost = 5
+	x = 1
+	y = 2
+	prerequisite = { focus = KOR_military_common_2 }
+	prerequisite = { focus = KOR_military_common_3 }
+	prerequisite = { focus = KOR_military_common_4 }
+	relative_position_id = KOR_military_common_1
+	completion_reward = {
+		army_experience = 30
+		effect_tooltip = {
+			swap_ideas = {
+				add_idea = KOR_roka_dynamic_dummy_military_6_idea
+				remove_idea = KOR_yoon_roka_dynamic_dummy_idea
+			}
+		}
+		add_to_variable = { KOR_roka_army_attack_factor_dynamic_var = 0.015 }
+		add_to_variable = { KOR_roka_army_defence_factor_dynamic_var = 0.015 }
+		add_tech_bonus = {
+			name = KOR_military_common_6
+			bonus = 0.5
+			ahead_reduction = 2
+			uses = 3
+			category = infantry_weapons
+		}
+		custom_effect_tooltip = tooltip_white_line
+		custom_effect_tooltip = TFRKP_defreform_progress_add_5_TT
+		hidden_effect = {
+			set_temp_variable = { TFRKP_defreform_progress_change = 5 }
+			TFRKP_defreform_add_progress_effect = yes
+		}
+	}
+}
+
+shared_focus = {
+	id = KOR_military_common_7
+	icon = GFX_KOR_military_common_7
+	cost = 5
+	x = 0
+	y = 3
+	prerequisite = { focus = KOR_military_common_5 }
+	prerequisite = { focus = KOR_military_common_6 }
+	relative_position_id = KOR_military_common_1
+	completion_reward = {
+		effect_tooltip = {
+			swap_ideas = {
+				add_idea = KOR_roka_dynamic_dummy_military_7_idea
+				remove_idea = KOR_yoon_roka_dynamic_dummy_idea
+			}
+		}
+		add_to_variable = { KOR_roka_army_org_factor_dynamic_var = 0.03 }
+		add_to_variable = { KOR_roka_mobilization_speed_dynamic_var = 0.05 }
+		add_to_variable = { KOR_roka_military_development_monthly_dynamic_var = 0.01 }
+		add_to_variable = { KOR_roka_planning_speed_dynamic_var = 0.05 }
+
+		custom_effect_tooltip = TFRKP_defreform_trust_add_5_TT
+		hidden_effect = {
+			set_temp_variable = { TFRKP_defreform_trust_change = 5 }
+			TFRKP_defreform_add_trust_effect = yes
+		}
+		custom_effect_tooltip = TFRKP_defreform_progress_add_5_TT
+		hidden_effect = {
+			set_temp_variable = { TFRKP_defreform_progress_change = 5 }
+			TFRKP_defreform_add_progress_effect = yes
+		}
+	}
+}
+
+################################################################
+# [홍낙] 공유 대아대전 중점: 원본 트리, 홍준표 트리, 이인제 트리가 함께 쓴다. 내용은 원본 그대로이고 루트에 두 트리용 위치만 더했다.
+################################################################
+
+shared_focus = {
+	id = KOR_gwr_reserve_forces
+	icon = {
+		GFX_focus_KOR_gwr_reserve_forces_reds = { KOR_is_PP_path = yes }
+		GFX_focus_KOR_gwr_reserve_forces = { KOR_is_PP_path = no }
+	}
+	cost = 3
+	x = 11
+	y = 9
+	# [홍낙] 대아대전 가지는 원본 트리, 홍준표 트리, 이인제 트리가 함께 쓰는 공유 중점이다. 대아대전이 일어나면 세 트리 모두에서 열린다.
+	offset = {	# 홍준표 트리: 군사 가지 오른쪽 (71, 0)
+		trigger = { has_focus_tree = TFRKPHN_hong_tree }
+		x = 60
+		y = -9
+	}
+	offset = {	# 이인제 트리: 오른쪽 끝 (42, 0)
+		trigger = { has_focus_tree = TFRKPHN_lee_in_je_tree }
+		x = 31
+		y = -9
+	}
+	allow_branch = {
+		has_country_flag = KOR_great_asia_war
+		NOT = {
+			OR = {
+				has_global_flag = PRC_japanese_gaw_victory_global
+				has_country_flag = KOR_yoon_mtl_focus_unlock
+			}
+		}
+	}
+	offset = {
+		trigger = {
+			KOR_is_lee_after_yoon_path = yes
+		}
+		x = 1
+		y = 2
+	}
+	offset = {
+		trigger = {
+			KOR_is_PP_path = yes
+		}
+		x = -2
+		y = 4
+	}
+	offset = {
+		trigger = {
+			KOR_is_PPPDKP_path = yes
+		}
+		x = -15
+		y = 2
+	}
+	offset = {
+		trigger = {
+			has_country_flag = KOR_yoon_winter_republic
+		}
+		x = -1
+		y = 2
+	}
+	offset = {
+		trigger = {
+			KOR_is_army_path = yes
+		}
+		x = -2
+		y = 1
+	}
+	offset = {
+		trigger = {
+			OR = {
+				KOR_is_lee_DPK_path = yes
+				KOR_is_lee_PPP_path = yes
+			}
+		}
+		x = 5
+	}
+	completion_reward = {
+		effect_tooltip = {
+			add_ideas = KOR_great_asian_war_dynamic_idea_added_dummy
+		}
+		hidden_effect = {
+			set_variable = { KOR_great_asian_war_dynamic_war_support_factor_dynamic_var = 0.15 }
+			set_variable = { KOR_great_asian_war_dynamic_conscription_factor_dynamic_var = 0.15 }
+			add_dynamic_modifier = { modifier = KOR_great_asian_war_dynamic }
+		}
+
+		custom_effect_tooltip = tooltip_white_line
+
+		GAW_start_setting_effect = yes
+
+		set_temp_variable = { GAW_operation_chip_var_temp = 3 }
+		GAW_add_chip_effect = yes
+
+		custom_effect_tooltip = KOR_gwr_reserve_forces_tt
+		hidden_effect = {
+			if = {
+				limit = { has_completed_focus = KOR_yoon_after_army_5 }
+				load_oob = "01_load_oob_KOR_dongwon_2"
+			}
+			else = {
+				load_oob = "01_load_oob_KOR_dongwon"
+
+			}
+		}
+		country_event = { id = korea.137 hours = 6 }
+	}
+}
+
+shared_focus = {
+	id = KOR_gwr_plan
+	icon = {
+		GFX_focus_KOR_gwr_plan_reds = { KOR_is_PP_path = yes }
+		GFX_focus_KOR_gwr_plan = { KOR_is_PP_path = no }
+	}
+	cost = 2
+	x = -1
+	y = 1
+	available = {
+	}
+	prerequisite = { focus = KOR_gwr_reserve_forces }
+	relative_position_id = KOR_gwr_reserve_forces
+	completion_reward = {
+		set_temp_variable = { GAW_operation_chip_var_temp = 1 }
+		GAW_add_chip_effect = yes
+		add_timed_idea = {
+			idea = KOR_gwr_plan_idea
+			days = 90
+		}
+
+	}
+}
+
+shared_focus = {
+	id = KOR_gwr_kill_chain
+	icon = {
+		GFX_focus_KOR_gwr_kill_chain_reds = { KOR_is_PP_path = yes }
+		GFX_focus_KOR_gwr_kill_chain = { KOR_is_PP_path = no }
+	}
+	cost = 2
+	x = 1
+	y = 1
+	available = {
+	}
+	prerequisite = { focus = KOR_gwr_reserve_forces }
+	relative_position_id = KOR_gwr_reserve_forces
+	completion_reward = {
+		effect_tooltip = {
+			swap_ideas = {
+				add_idea = KOR_gwr_kill_chain_idea
+				remove_idea = KOR_great_asian_war_dynamic_idea_dummy
+			}
+		}
+		set_temp_variable = { GAW_operation_chip_var_temp = 1 }
+		GAW_add_chip_effect = yes
+		hidden_effect = {
+			set_variable = { KOR_great_asian_war_dynamic_air_superiority_efficiency_var = 0.15 }
+			set_variable = { KOR_great_asian_war_dynamic_ground_attack_factor_var = 0.1 }
+			set_variable = { KOR_great_asian_war_dynamic_air_strategic_bomber_bombing_factor_var = 0.1 }
+		}
+	}
+}
+
+shared_focus = {
+	id = KOR_gwr_seoul_fortification
+	icon = {
+		GFX_focus_KOR_gwr_seoul_fortification_reds = { KOR_is_PP_path = yes }
+		GFX_focus_KOR_gwr_seoul_fortification = { KOR_is_PP_path = no }
+	}
+	cost = 3
+	x = 0
+	y = 2
+	available = {
+
+	}
+	prerequisite = {
+		focus = KOR_gwr_reserve_forces
+		focus = KOR_gwr_plan
+		focus = KOR_gwr_kill_chain
+	}
+	relative_position_id = KOR_gwr_reserve_forces
+	completion_reward = {
+		effect_tooltip = {
+			swap_ideas = {
+				add_idea = KOR_gwr_seoul_fortification_idea
+				remove_idea = KOR_great_asian_war_dynamic_idea_dummy
+			}
+		}
+		hidden_effect = {
+			set_variable = { KOR_great_asian_war_dynamic_production_speed_bunker_factor_var = 0.2 }
+		}
+		1041 = {
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 7125
+				instant_build = yes
+			}
+		}
+		1041 = {
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 13693
+				instant_build = yes
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = KOR_gwr_preparation_winter_war
+	icon = {
+		GFX_focus_KOR_gwr_preparation_winter_war_reds = { KOR_is_PP_path = yes }
+		GFX_focus_KOR_gwr_preparation_winter_war = { KOR_is_PP_path = no }
+	}
+	cost = 3
+	x = -2
+	y = 2
+	available = {
+	}
+	prerequisite = {
+		focus = KOR_gwr_plan
+		focus = KOR_gwr_kill_chain
+	}
+	relative_position_id = KOR_gwr_reserve_forces
+	completion_reward = {
+		effect_tooltip = {
+			swap_ideas = {
+				add_idea = KOR_gwr_preparation_winter_war_idea
+				remove_idea = KOR_great_asian_war_dynamic_idea_dummy
+			}
+		}
+		hidden_effect = {
+			set_variable = { KOR_great_asian_war_dynamic_max_planning_factor_var = 0.1 }
+			set_variable = { KOR_great_asian_war_dynamic_winter_attrition_factor_var = -0.15 }
+		}
+	}
+}
+
+shared_focus = {
+	id = KOR_gwr_moving_industrial
+	icon = {
+		GFX_focus_KOR_gwr_moving_industrial_reds = { KOR_is_PP_path = yes }
+		GFX_focus_KOR_gwr_moving_industrial = { KOR_is_PP_path = no }
+	}
+	cost = 5
+	x = 2
+	y = 2
+	available = {
+	}
+	prerequisite = {
+		focus = KOR_gwr_plan
+		focus = KOR_gwr_kill_chain
+	}
+	relative_position_id = KOR_gwr_reserve_forces
+	completion_reward = {
+		custom_effect_tooltip = KOR_gwr_moving_industrial_tt
+
+		1041 = {
+			remove_building = {
+				type = industrial_complex
+				level = 4
+			}
+		}
+		869 = {
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+		870 = {
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = KOR_gwr_plan_sandong
+	icon = {
+		GFX_focus_KOR_gwr_plan_sandong_reds = { KOR_is_PP_path = yes }
+		GFX_focus_KOR_gwr_plan_sandong = { KOR_is_PP_path = no }
+	}
+	cost = 4
+	x = -1
+	y = 3
+	available = {
+		has_war_with = PRC
+	}
+	prerequisite = {
+		focus = KOR_gwr_moving_industrial
+		focus = KOR_gwr_preparation_winter_war
+		focus = KOR_gwr_seoul_fortification
+	}
+	mutually_exclusive = { focus = KOR_gwr_attack_to_sanhaekuan }
+	relative_position_id = KOR_gwr_reserve_forces
+	completion_reward = {
+		unlock_decision_tooltip = KOR_attack_sandong_dec
+		set_temp_variable = { GAW_operation_chip_var_temp = 1 }
+		GAW_add_chip_effect = yes
+	}
+}
+
+shared_focus = {
+	id = KOR_gwr_attack_to_sanhaekuan
+	icon = {
+		GFX_focus_KOR_gwr_attack_to_sanhaekuan_reds = { KOR_is_PP_path = yes }
+		GFX_focus_KOR_gwr_attack_to_sanhaekuan = { KOR_is_PP_path = no }
+	}
+	cost = 4
+	x = -3
+	y = 3
+	available = {
+		has_war_with = PRC
+	}
+	prerequisite = {
+		focus = KOR_gwr_moving_industrial
+		focus = KOR_gwr_preparation_winter_war
+		focus = KOR_gwr_seoul_fortification
+	}
+	mutually_exclusive = { focus = KOR_gwr_plan_sandong }
+	relative_position_id = KOR_gwr_reserve_forces
+	completion_reward = {
+		unlock_decision_tooltip = KOR_attack_manju_dec
+		set_temp_variable = { GAW_operation_chip_var_temp = 1 }
+		GAW_add_chip_effect = yes
+	}
+}
+
+shared_focus = {
+	id = KOR_gwr_attack_to_prc
+	icon = {
+		GFX_focus_KOR_gwr_attack_to_prc_reds = { KOR_is_PP_path = yes }
+		GFX_focus_KOR_gwr_attack_to_prc = { KOR_is_PP_path = no }
+	}
+	cost = 4
+	x = -2
+	y = 4
+	available = {
+	}
+	prerequisite = {
+		focus = KOR_gwr_plan_sandong
+		focus = KOR_gwr_attack_to_sanhaekuan
+	}
+	relative_position_id = KOR_gwr_reserve_forces
+	completion_reward = {
+		add_timed_idea = {
+			idea = KOR_gwr_attack_to_prc_idea
+			days = 365
+		}
+		set_temp_variable = { GAW_operation_chip_var_temp = 1 }
+		GAW_add_chip_effect = yes
+	}
+}
+
+shared_focus = {
+	id = KOR_gwr_attack_to_wonsan
+	icon = {
+		GFX_focus_KOR_gwr_attack_to_wonsan_reds = { KOR_is_PP_path = yes }
+		GFX_focus_KOR_gwr_attack_to_wonsan = { KOR_is_PP_path = no }
+	}
+	cost = 4
+	x = 1
+	y = 3
+	available = {
+	}
+	prerequisite = {
+		focus = KOR_gwr_moving_industrial
+		focus = KOR_gwr_preparation_winter_war
+		focus = KOR_gwr_seoul_fortification
+	}
+	mutually_exclusive = { focus = KOR_gwr_attack_to_chongjin }
+	relative_position_id = KOR_gwr_reserve_forces
+	completion_reward = {
+		custom_effect_tooltip = KOR_gwr_attack_to_wonsan_tt
+		hidden_effect = {
+			6928 = {
+				set_demilitarized_zone = yes
+			}
+
+			6928 = {
+				set_demilitarized_zone = no
+				set_state_controller_to = KOR
+			}
+
+			load_oob = "01_load_oob_KOR_wonsan"
+		}
+		set_temp_variable = { GAW_operation_chip_var_temp = 1 }
+		GAW_add_chip_effect = yes
+	}
+}
+
+shared_focus = {
+	id = KOR_gwr_attack_to_chongjin
+	icon = {
+		GFX_focus_KOR_gwr_attack_to_chongjin_reds = { KOR_is_PP_path = yes }
+		GFX_focus_KOR_gwr_attack_to_chongjin = { KOR_is_PP_path = no }
+	}
+	cost = 4
+	x = 3
+	y = 3
+	available = {
+	}
+	prerequisite = {
+		focus = KOR_gwr_moving_industrial
+		focus = KOR_gwr_preparation_winter_war
+		focus = KOR_gwr_seoul_fortification
+	}
+	mutually_exclusive = { focus = KOR_gwr_attack_to_wonsan }
+	relative_position_id = KOR_gwr_reserve_forces
+	completion_reward = {
+		custom_effect_tooltip = KOR_gwr_attack_to_chongjin_tt
+		hidden_effect = {
+			6822 = {
+				set_demilitarized_zone = yes
+			}
+
+			6822 = {
+				set_demilitarized_zone = no
+				set_state_controller_to = KOR
+			}
+			load_oob = "01_load_oob_KOR_chongjin"
+
+		}
+		set_temp_variable = { GAW_operation_chip_var_temp = 1 }
+		GAW_add_chip_effect = yes
+	}
+}
+
+shared_focus = {
+	id = KOR_gwr_attack_to_nk
+	icon = {
+		GFX_focus_KOR_gwr_attack_to_nk_reds = { KOR_is_PP_path = yes }
+		GFX_focus_KOR_gwr_attack_to_nk = { KOR_is_PP_path = no }
+	}
+	cost = 4
+	x = 2
+	y = 4
+	available = {
+	}
+	prerequisite = {
+		focus = KOR_gwr_attack_to_chongjin
+		focus = KOR_gwr_attack_to_wonsan
+	}
+	relative_position_id = KOR_gwr_reserve_forces
+	completion_reward = {
+		unlock_decision_tooltip = KOR_attack_RPK_dec
+		set_temp_variable = { GAW_operation_chip_var_temp = 1 }
+		GAW_add_chip_effect = yes
+	}
+}
+
+shared_focus = {
+	id = KOR_gwr_dawn_east_asia
+	icon = {
+		GFX_focus_KOR_gwr_dawn_east_asia_reds = { KOR_is_PP_path = yes }
+		GFX_focus_KOR_gwr_dawn_east_asia = { KOR_is_PP_path = no }
+	}
+	cost = 4
+	x = 0
+	y = 4
+	available = {
+	}
+	prerequisite = {
+		focus = KOR_gwr_preparation_winter_war
+		focus = KOR_gwr_seoul_fortification
+		focus = KOR_gwr_moving_industrial
+	}
+	relative_position_id = KOR_gwr_reserve_forces
+	completion_reward = {
+		effect_tooltip = {
+			swap_ideas = {
+				add_idea = KOR_gwr_dawn_east_asia_idea
+				remove_idea = KOR_great_asian_war_dynamic_idea_dummy
+			}
+		}
+		hidden_effect = {
+			set_variable = { KOR_great_asian_war_dynamic_industrial_capacity_factory_var = 0.1 }
+			set_variable = { KOR_great_asian_war_dynamic_production_factory_max_efficiency_factor_var = 0.1 }
+			set_variable = { KOR_great_asian_war_dynamic_army_morale_factor_var = 0.1 }
+		}
+	}
+}
+
+shared_focus = {
+	id = KOR_gwr_faith_in_steel
+	icon = {
+		GFX_focus_KOR_gwr_faith_in_steel_reds = { KOR_is_PP_path = yes }
+		GFX_focus_KOR_gwr_faith_in_steel = { KOR_is_PP_path = no }
+	}
+	cost = 4
+	x = -1
+	y = 5
+	available = {
+	}
+	prerequisite = { focus = KOR_gwr_dawn_east_asia }
+	relative_position_id = KOR_gwr_reserve_forces
+	completion_reward = {
+		effect_tooltip = {
+			swap_ideas = {
+				add_idea = KOR_gwr_faith_in_steel_idea
+				remove_idea = KOR_great_asian_war_dynamic_idea_dummy
+			}
+		}
+		hidden_effect = {
+			set_variable = { KOR_great_asian_war_dynamic_army_core_attack_factor_var = 0.15 }
+			set_variable = { KOR_great_asian_war_dynamic_army_core_defence_factor_var = 0.15 }
+		}
+	}
+}
+
+shared_focus = {
+	id = KOR_gwr_navy
+	icon = {
+		GFX_focus_KOR_gwr_navy_reds = { KOR_is_PP_path = yes }
+		GFX_focus_KOR_gwr_navy = { KOR_is_PP_path = no }
+	}
+	cost = 4
+	x = 1
+	y = 5
+	available = {
+	}
+	prerequisite = { focus = KOR_gwr_dawn_east_asia }
+	relative_position_id = KOR_gwr_reserve_forces
+	completion_reward = {
+		effect_tooltip = {
+			swap_ideas = {
+				add_idea = KOR_gwr_navy_idea
+				remove_idea = KOR_great_asian_war_dynamic_idea_dummy
+			}
+		}
+		hidden_effect = {
+			set_variable = { KOR_great_asian_war_dynamic_navy_capital_ship_attack_factor_var = 0.1 }
+			set_variable = { KOR_great_asian_war_dynamic_navy_capital_ship_defence_factor_var = 0.1 }
+			set_variable = { KOR_great_asian_war_dynamic_navy_screen_attack_factor_var = 0.1 }
+			set_variable = { KOR_great_asian_war_dynamic_navy_screen_defence_factor_var = 0.1 }
+			set_variable = { KOR_great_asian_war_dynamic_screening_efficiency_var = 0.1 }
+			set_variable = { KOR_great_asian_war_dynamic_navy_org_factor_var = 0.1 }
+		}
+	}
+}
+
+##북괴##
+
+shared_focus = {
+	id = KOR_gwr_partisan
+	icon = {
+		GFX_focus_KOR_gwr_partisan_reds = { KOR_is_PP_path = yes }
+		GFX_focus_KOR_gwr_partisan = { KOR_is_PP_path = no }
+	}
+	cost = 5
+	x = 4
+	y = 2
+	available = {
+		if = {
+			limit = {
+				KOR_is_PP_path = no
+			}
+			OR = {
+				NOT = { country_exists = PRK }
+				PRK = { has_capitulated = yes }
+			}
+		}
+	}
+	prerequisite = { focus = KOR_gwr_plan }
+	prerequisite = { focus = KOR_gwr_kill_chain }
+	relative_position_id = KOR_gwr_reserve_forces
+	completion_reward = {
+		if = {
+			limit = {
+				KOR_is_PP_path = yes
+			}
+			PRK = {
+				add_stability = -0.1
+				add_war_support = -0.1
+			}
+			PRC = {
+				add_war_support = -0.1
+			}
+			add_stability = 0.03
+			add_war_support = 0.03
+			set_temp_variable = { GAW_operation_chip_var_temp = 2 }
+			GAW_add_chip_effect = yes
+		}
+		else = {
+			873 = {
+				add_manpower = -2000
+			}
+			1042 = {
+				add_manpower = -2000
+			}
+			874 = {
+				add_manpower = -2000
+			}
+			add_stability = 0.05
+			set_temp_variable = { GAW_operation_chip_var_temp = 1 }
+			GAW_add_chip_effect = yes
+		}
+	}
+}
+
+shared_focus = {
+	id = KOR_gwr_sunrising_plan
+	icon = {
+		GFX_focus_KOR_gwr_sunrising_plan_reds = { KOR_is_PP_path = yes }
+		GFX_focus_KOR_gwr_sunrising_plan = { KOR_is_PP_path = no }
+	}
+	cost = 5
+	x = 6
+	y = 2
+	available = {
+	}
+	prerequisite = { focus = KOR_gwr_plan }
+	prerequisite = { focus = KOR_gwr_kill_chain }
+	relative_position_id = KOR_gwr_reserve_forces
+	completion_reward = {
+		add_war_support = 0.15
+	}
+}
+
+shared_focus = {
+	id = KOR_gwr_stabilization_prk
+	icon = {
+		GFX_focus_KOR_gwr_stabilization_prk_reds = { KOR_is_PP_path = yes }
+		GFX_focus_KOR_gwr_stabilization_prk = { KOR_is_PP_path = no }
+	}
+	cost = 5
+	x = 5
+	y = 3
+	bypass = {
+		KOR_is_PP_path = no
+    		has_global_flag = PRC_japanese_gaw_victory_global
+	}
+	bypass_effect = {
+		if = {
+			limit = {
+				KOR_is_PP_path = no
+			}
+			custom_effect_tooltip = KOR_gwr_stabilization_prk_tt
+			hidden_effect = {
+				KOR_north_korea_add_core_state_effect = yes
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = {
+				KOR_is_PP_path = yes
+			}
+			PRK = {
+				exists = no
+			}
+		}
+		else = {
+			custom_trigger_tooltip = {
+				tooltip = KOR_gwr_stabilization_prk_trigger_tt
+				OR = {
+					controls_state = 1043
+					any_country = {
+						OR = {
+							is_in_faction_with = KOR
+							is_puppet_of = KOR
+						}
+						controls_state = 1043
+					}
+				}
+			}
+		}
+	}
+	prerequisite = { focus = KOR_gwr_partisan }
+	prerequisite = { focus = KOR_gwr_sunrising_plan }
+	relative_position_id = KOR_gwr_reserve_forces
+	completion_reward = {
+		if = {
+			limit = {
+				KOR_is_PP_path = yes
+			}
+			if = {
+				limit = {
+					KPA = {
+						exists = yes
+					}
+				}
+				KPA = {
+					add_timed_idea = {
+						idea = KOR_reds_attack_the_china
+						days = 60
+					}
+				}
+			}
+			add_timed_idea = {
+				idea = KOR_reds_attack_the_china
+				days = 60
+			}
+			set_temp_variable = { GAW_operation_chip_var_temp = 2 }
+			GAW_add_chip_effect = yes
+		}
+		else = {
+			custom_effect_tooltip = KOR_gwr_stabilization_prk_tt
+			hidden_effect = {
+				country_event = { id = korea.222 }
+				KOR_north_korea_add_core_state_effect = yes
+			}
+		}
+	}
+}
+
+##짱깨
+
+shared_focus = {
+	id = KOR_gwr_chines_expulsion
+	icon = {
+		GFX_focus_KOR_gwr_chines_expulsion_reds = { KOR_is_PP_path = yes }
+		GFX_focus_KOR_gwr_chines_expulsion = { KOR_is_PP_path = no }
+	}
+	cost = 5
+	x = -4
+	y = 2
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = KOR_gwr_manchucontrol_trigger_tt
+			OR = {
+				OR = {
+					controls_state = 1413
+					controls_state = 1414
+					controls_state = 1415
+					controls_state = 1416
+					controls_state = 1417
+					controls_state = 328
+					controls_state = 716
+					controls_state = 1394
+					controls_state = 717
+					controls_state = 714
+					controls_state = 1424
+					controls_state = 1167
+					controls_state = 715
+					controls_state = 1425
+				}
+				any_country = {
+					OR = {
+						is_in_faction_with = KOR
+						is_puppet_of = KOR
+					}
 					OR = {
 						controls_state = 1413
 						controls_state = 1414
@@ -22191,141 +22276,19 @@ focus_tree = {
 						controls_state = 715
 						controls_state = 1425
 					}
-					any_country = {
-						OR = {
-							is_in_faction_with = KOR
-							is_puppet_of = KOR
-						}
-						OR = {
-							controls_state = 1413
-							controls_state = 1414
-							controls_state = 1415
-							controls_state = 1416
-							controls_state = 1417
-							controls_state = 328
-							controls_state = 716
-							controls_state = 1394
-							controls_state = 717
-							controls_state = 714
-							controls_state = 1424
-							controls_state = 1167
-							controls_state = 715
-							controls_state = 1425
-						}
-					}
 				}
-			}
-		}
-		mutually_exclusive = { focus = KOR_gwr_korean }
-		prerequisite = { focus = KOR_gwr_plan }
-		prerequisite = { focus = KOR_gwr_kill_chain }
-		relative_position_id = KOR_gwr_reserve_forces
-		completion_reward = {
-			if = {
-				limit = {
-					KOR_is_PP_path = no
-				}
-				if = {
-					limit = {
-						OR = {
-							controls_state = 1413
-							controls_state = 1414
-							controls_state = 1415
-							controls_state = 1416
-							controls_state = 1417
-							controls_state = 328
-							controls_state = 716
-							controls_state = 1394
-							controls_state = 717
-							controls_state = 714
-							controls_state = 1424
-							controls_state = 1167
-							controls_state = 715
-							controls_state = 1425
-						}
-					}
-					every_state = {
-						limit = {
-							OR = {
-								state = 1413
-								state = 1414
-								state = 1415
-								state = 1416
-								state = 1417
-								state = 328
-								state = 716
-								state = 1394
-								state = 717
-								state = 714
-								state = 1424
-								state = 1167
-								state = 715
-								state = 1425
-							}
-							OR = {
-								is_controlled_by = KOR
-								is_controlled_by = JAP
-								is_controlled_by = CHI
-							}
-						}
-						add_manpower = -20000
-						add_resistance = -30
-					}
-				}
-				else = {
-					custom_effect_tooltip = KOR_gwr_chines_expulsion_tt
-				}
-			}
-			else = {
-				set_temp_variable = { GAW_operation_chip_var_temp = 2 }
-				GAW_add_chip_effect = yes
-				add_war_support = 0.05
 			}
 		}
 	}
-
-	focus = {
-		id = KOR_gwr_korean
-		icon = {
-			GFX_focus_KOR_gwr_korean_reds = { KOR_is_PP_path = yes }
-			GFX_focus_KOR_gwr_korean = { KOR_is_PP_path = no }
-		}
-		cost = 5
-		x = -6
-		y = 2
-		available = {
-			custom_trigger_tooltip = {
-				tooltip = KOR_gwr_korean_trigger_tt
-				OR = {
-					OR = {
-						controls_state = 1413
-						controls_state = 1414
-						controls_state = 1415
-						controls_state = 1416
-						controls_state = 1417
-					}
-					any_country = {
-						OR = {
-							is_in_faction_with = KOR
-							is_puppet_of = KOR
-						}
-						OR = {
-							controls_state = 1413
-							controls_state = 1414
-							controls_state = 1415
-							controls_state = 1416
-							controls_state = 1417
-						}
-					}
-				}
+	mutually_exclusive = { focus = KOR_gwr_korean }
+	prerequisite = { focus = KOR_gwr_plan }
+	prerequisite = { focus = KOR_gwr_kill_chain }
+	relative_position_id = KOR_gwr_reserve_forces
+	completion_reward = {
+		if = {
+			limit = {
+				KOR_is_PP_path = no
 			}
-			NOT = { has_country_flag = CANNOT_USE_UNIFICASE_CHOSEUN }
-		}
-		mutually_exclusive = { focus = KOR_gwr_chines_expulsion }
-		prerequisite = { focus = KOR_gwr_plan }
-		prerequisite = { focus = KOR_gwr_kill_chain }
-		relative_position_id = KOR_gwr_reserve_forces
-		completion_reward = {
 			if = {
 				limit = {
 					OR = {
@@ -22334,6 +22297,15 @@ focus_tree = {
 						controls_state = 1415
 						controls_state = 1416
 						controls_state = 1417
+						controls_state = 328
+						controls_state = 716
+						controls_state = 1394
+						controls_state = 717
+						controls_state = 714
+						controls_state = 1424
+						controls_state = 1167
+						controls_state = 715
+						controls_state = 1425
 					}
 				}
 				every_state = {
@@ -22344,77 +22316,6 @@ focus_tree = {
 							state = 1415
 							state = 1416
 							state = 1417
-						}
-						OR = {
-							is_controlled_by = KOR
-							is_controlled_by = JAP
-							is_controlled_by = CHI
-						}
-					}
-					add_compliance = 25
-				}
-			}
-			else = {
-				custom_effect_tooltip = KOR_gwr_korean_tt
-			}
-		}
-	}
-
-	focus = {
-		id = KOR_gwr_stabilization_manchuria
-		icon = {
-			GFX_focus_KOR_gwr_stabilization_manchuria_reds = { KOR_is_PP_path = yes }
-			GFX_focus_KOR_gwr_stabilization_manchuria = { KOR_is_PP_path = no }
-		}
-		cost = 7
-		x = -5
-		y = 3
-		available = {
-			custom_trigger_tooltip = {
-				tooltip = KOR_gwr_korean_trigger_tt
-				OR = {
-					OR = {
-						controls_state = 1413
-						controls_state = 1414
-						controls_state = 1415
-						controls_state = 1416
-						controls_state = 1417
-					}
-					any_country = {
-						OR = {
-							is_in_faction_with = KOR
-							is_puppet_of = KOR
-						}
-						OR = {
-							controls_state = 1413
-							controls_state = 1414
-							controls_state = 1415
-							controls_state = 1416
-							controls_state = 1417
-						}
-					}
-				}
-			}
-		}
-		prerequisite = {
-			focus = KOR_gwr_korean
-			focus = KOR_gwr_chines_expulsion
-		}
-		relative_position_id = KOR_gwr_reserve_forces
-		completion_reward = {
-			if = {
-				limit = {
-					OR = {
-						controls_state = 1413
-						controls_state = 1414
-						controls_state = 1415
-						controls_state = 1416
-						controls_state = 1417
-					}
-				}
-				every_state = {
-					limit = {
-						OR = {
 							state = 328
 							state = 716
 							state = 1394
@@ -22431,30 +22332,191 @@ focus_tree = {
 							is_controlled_by = CHI
 						}
 					}
-					add_dynamic_modifier = {
-						modifier = KOR_PRC_modifier
-					}
-				}
-				every_state = {
-					limit = {
-						OR = {
-							state = 1413
-							state = 1414
-							state = 1415
-							state = 1416
-							state = 1417
-						}
-					}
-					add_dynamic_modifier = {
-						modifier = KOR_PRC_modifier
-					}
+					add_manpower = -20000
+					add_resistance = -30
 				}
 			}
 			else = {
-				custom_effect_tooltip = KOR_gwr_stabilization_manchuria_tt
+				custom_effect_tooltip = KOR_gwr_chines_expulsion_tt
 			}
-
+		}
+		else = {
+			set_temp_variable = { GAW_operation_chip_var_temp = 2 }
+			GAW_add_chip_effect = yes
+			add_war_support = 0.05
 		}
 	}
+}
 
+shared_focus = {
+	id = KOR_gwr_korean
+	icon = {
+		GFX_focus_KOR_gwr_korean_reds = { KOR_is_PP_path = yes }
+		GFX_focus_KOR_gwr_korean = { KOR_is_PP_path = no }
+	}
+	cost = 5
+	x = -6
+	y = 2
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = KOR_gwr_korean_trigger_tt
+			OR = {
+				OR = {
+					controls_state = 1413
+					controls_state = 1414
+					controls_state = 1415
+					controls_state = 1416
+					controls_state = 1417
+				}
+				any_country = {
+					OR = {
+						is_in_faction_with = KOR
+						is_puppet_of = KOR
+					}
+					OR = {
+						controls_state = 1413
+						controls_state = 1414
+						controls_state = 1415
+						controls_state = 1416
+						controls_state = 1417
+					}
+				}
+			}
+		}
+		NOT = { has_country_flag = CANNOT_USE_UNIFICASE_CHOSEUN }
+	}
+	mutually_exclusive = { focus = KOR_gwr_chines_expulsion }
+	prerequisite = { focus = KOR_gwr_plan }
+	prerequisite = { focus = KOR_gwr_kill_chain }
+	relative_position_id = KOR_gwr_reserve_forces
+	completion_reward = {
+		if = {
+			limit = {
+				OR = {
+					controls_state = 1413
+					controls_state = 1414
+					controls_state = 1415
+					controls_state = 1416
+					controls_state = 1417
+				}
+			}
+			every_state = {
+				limit = {
+					OR = {
+						state = 1413
+						state = 1414
+						state = 1415
+						state = 1416
+						state = 1417
+					}
+					OR = {
+						is_controlled_by = KOR
+						is_controlled_by = JAP
+						is_controlled_by = CHI
+					}
+				}
+				add_compliance = 25
+			}
+		}
+		else = {
+			custom_effect_tooltip = KOR_gwr_korean_tt
+		}
+	}
+}
+
+shared_focus = {
+	id = KOR_gwr_stabilization_manchuria
+	icon = {
+		GFX_focus_KOR_gwr_stabilization_manchuria_reds = { KOR_is_PP_path = yes }
+		GFX_focus_KOR_gwr_stabilization_manchuria = { KOR_is_PP_path = no }
+	}
+	cost = 7
+	x = -5
+	y = 3
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = KOR_gwr_korean_trigger_tt
+			OR = {
+				OR = {
+					controls_state = 1413
+					controls_state = 1414
+					controls_state = 1415
+					controls_state = 1416
+					controls_state = 1417
+				}
+				any_country = {
+					OR = {
+						is_in_faction_with = KOR
+						is_puppet_of = KOR
+					}
+					OR = {
+						controls_state = 1413
+						controls_state = 1414
+						controls_state = 1415
+						controls_state = 1416
+						controls_state = 1417
+					}
+				}
+			}
+		}
+	}
+	prerequisite = {
+		focus = KOR_gwr_korean
+		focus = KOR_gwr_chines_expulsion
+	}
+	relative_position_id = KOR_gwr_reserve_forces
+	completion_reward = {
+		if = {
+			limit = {
+				OR = {
+					controls_state = 1413
+					controls_state = 1414
+					controls_state = 1415
+					controls_state = 1416
+					controls_state = 1417
+				}
+			}
+			every_state = {
+				limit = {
+					OR = {
+						state = 328
+						state = 716
+						state = 1394
+						state = 717
+						state = 714
+						state = 1424
+						state = 1167
+						state = 715
+						state = 1425
+					}
+					OR = {
+						is_controlled_by = KOR
+						is_controlled_by = JAP
+						is_controlled_by = CHI
+					}
+				}
+				add_dynamic_modifier = {
+					modifier = KOR_PRC_modifier
+				}
+			}
+			every_state = {
+				limit = {
+					OR = {
+						state = 1413
+						state = 1414
+						state = 1415
+						state = 1416
+						state = 1417
+					}
+				}
+				add_dynamic_modifier = {
+					modifier = KOR_PRC_modifier
+				}
+			}
+		}
+		else = {
+			custom_effect_tooltip = KOR_gwr_stabilization_manchuria_tt
+		}
+
+	}
 }

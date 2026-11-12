@@ -1,4 +1,4 @@
-# [안내] 이인제 정부 「일자리 대타협」 결정. 정책마다 세 벌이 있다: _n은 노선을 고르기 전(비용 40), _h는 하르츠식 대타협(비용 50), _a는 국회 입법으로 돌파(비용 30).
+# [안내] 이인제 정부 「일자리 대타협」 결정. 정책마다 세 벌이 있다: _n은 노선을 고르기 전(비용 20), _h는 하르츠식 대타협(비용 25), _a는 국회 입법으로 돌파(비용 15).
 # [안내] jobs_build.py가 만든다. 내용은 jobs_data.py에서 고친다.
 TFRKPHN_lee_jobs_category = {
 
@@ -7,7 +7,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started has_completed_focus = TFRKPHN_lee_in_je_d2 NOT = { has_country_flag = TFRKPHN_job_done_retire65 } }
 		fire_only_once = yes
-		cost = 50
+		cost = 25
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_retire65_tt
 			hidden_effect = { TFRKPHN_job_do_retire65 = yes }
@@ -20,7 +20,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started has_completed_focus = TFRKPHN_lee_in_je_d2b NOT = { has_country_flag = TFRKPHN_job_done_retire65 } }
 		fire_only_once = yes
-		cost = 30
+		cost = 15
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_retire65_tt
 			hidden_effect = { TFRKPHN_job_do_retire65 = yes }
@@ -33,7 +33,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started NOT = { has_completed_focus = TFRKPHN_lee_in_je_d2 } NOT = { has_completed_focus = TFRKPHN_lee_in_je_d2b } NOT = { has_country_flag = TFRKPHN_job_done_retire65 } }
 		fire_only_once = yes
-		cost = 40
+		cost = 20
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_retire65_tt
 			hidden_effect = { TFRKPHN_job_do_retire65 = yes }
@@ -46,7 +46,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started has_completed_focus = TFRKPHN_lee_in_je_d2 NOT = { has_country_flag = TFRKPHN_job_done_hours52 } }
 		fire_only_once = yes
-		cost = 50
+		cost = 25
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_hours52_tt
 			hidden_effect = { TFRKPHN_job_do_hours52 = yes }
@@ -59,7 +59,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started has_completed_focus = TFRKPHN_lee_in_je_d2b NOT = { has_country_flag = TFRKPHN_job_done_hours52 } }
 		fire_only_once = yes
-		cost = 30
+		cost = 15
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_hours52_tt
 			hidden_effect = { TFRKPHN_job_do_hours52 = yes }
@@ -72,7 +72,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started NOT = { has_completed_focus = TFRKPHN_lee_in_je_d2 } NOT = { has_completed_focus = TFRKPHN_lee_in_je_d2b } NOT = { has_country_flag = TFRKPHN_job_done_hours52 } }
 		fire_only_once = yes
-		cost = 40
+		cost = 20
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_hours52_tt
 			hidden_effect = { TFRKPHN_job_do_hours52 = yes }
@@ -85,7 +85,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started has_completed_focus = TFRKPHN_lee_in_je_d2 NOT = { has_country_flag = TFRKPHN_job_done_minwage } }
 		fire_only_once = yes
-		cost = 50
+		cost = 25
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_minwage_tt
 			hidden_effect = { TFRKPHN_job_do_minwage = yes }
@@ -98,7 +98,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started has_completed_focus = TFRKPHN_lee_in_je_d2b NOT = { has_country_flag = TFRKPHN_job_done_minwage } }
 		fire_only_once = yes
-		cost = 30
+		cost = 15
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_minwage_tt
 			hidden_effect = { TFRKPHN_job_do_minwage = yes }
@@ -111,7 +111,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started NOT = { has_completed_focus = TFRKPHN_lee_in_je_d2 } NOT = { has_completed_focus = TFRKPHN_lee_in_je_d2b } NOT = { has_country_flag = TFRKPHN_job_done_minwage } }
 		fire_only_once = yes
-		cost = 40
+		cost = 20
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_minwage_tt
 			hidden_effect = { TFRKPHN_job_do_minwage = yes }
@@ -124,7 +124,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started has_completed_focus = TFRKPHN_lee_in_je_d2 NOT = { has_country_flag = TFRKPHN_job_done_yellow } }
 		fire_only_once = yes
-		cost = 50
+		cost = 25
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_yellow_tt
 			hidden_effect = { TFRKPHN_job_do_yellow = yes }
@@ -137,7 +137,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started has_completed_focus = TFRKPHN_lee_in_je_d2b NOT = { has_country_flag = TFRKPHN_job_done_yellow } }
 		fire_only_once = yes
-		cost = 30
+		cost = 15
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_yellow_tt
 			hidden_effect = { TFRKPHN_job_do_yellow = yes }
@@ -150,7 +150,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started NOT = { has_completed_focus = TFRKPHN_lee_in_je_d2 } NOT = { has_completed_focus = TFRKPHN_lee_in_je_d2b } NOT = { has_country_flag = TFRKPHN_job_done_yellow } }
 		fire_only_once = yes
-		cost = 40
+		cost = 20
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_yellow_tt
 			hidden_effect = { TFRKPHN_job_do_yellow = yes }
@@ -163,7 +163,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started has_completed_focus = TFRKPHN_lee_in_je_d2 NOT = { has_country_flag = TFRKPHN_job_done_regular } }
 		fire_only_once = yes
-		cost = 50
+		cost = 25
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_regular_tt
 			hidden_effect = { TFRKPHN_job_do_regular = yes }
@@ -176,7 +176,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started has_completed_focus = TFRKPHN_lee_in_je_d2b NOT = { has_country_flag = TFRKPHN_job_done_regular } }
 		fire_only_once = yes
-		cost = 30
+		cost = 15
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_regular_tt
 			hidden_effect = { TFRKPHN_job_do_regular = yes }
@@ -189,7 +189,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started NOT = { has_completed_focus = TFRKPHN_lee_in_je_d2 } NOT = { has_completed_focus = TFRKPHN_lee_in_je_d2b } NOT = { has_country_flag = TFRKPHN_job_done_regular } }
 		fire_only_once = yes
-		cost = 40
+		cost = 20
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_regular_tt
 			hidden_effect = { TFRKPHN_job_do_regular = yes }
@@ -202,7 +202,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started has_completed_focus = TFRKPHN_lee_in_je_d2 NOT = { has_country_flag = TFRKPHN_job_done_under5 } }
 		fire_only_once = yes
-		cost = 50
+		cost = 25
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_under5_tt
 			hidden_effect = { TFRKPHN_job_do_under5 = yes }
@@ -215,7 +215,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started has_completed_focus = TFRKPHN_lee_in_je_d2b NOT = { has_country_flag = TFRKPHN_job_done_under5 } }
 		fire_only_once = yes
-		cost = 30
+		cost = 15
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_under5_tt
 			hidden_effect = { TFRKPHN_job_do_under5 = yes }
@@ -228,7 +228,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started NOT = { has_completed_focus = TFRKPHN_lee_in_je_d2 } NOT = { has_completed_focus = TFRKPHN_lee_in_je_d2b } NOT = { has_country_flag = TFRKPHN_job_done_under5 } }
 		fire_only_once = yes
-		cost = 40
+		cost = 20
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_under5_tt
 			hidden_effect = { TFRKPHN_job_do_under5 = yes }
@@ -241,7 +241,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started has_completed_focus = TFRKPHN_lee_in_je_d2 NOT = { has_country_flag = TFRKPHN_job_done_safety } }
 		fire_only_once = yes
-		cost = 50
+		cost = 25
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_safety_tt
 			hidden_effect = { TFRKPHN_job_do_safety = yes }
@@ -254,7 +254,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started has_completed_focus = TFRKPHN_lee_in_je_d2b NOT = { has_country_flag = TFRKPHN_job_done_safety } }
 		fire_only_once = yes
-		cost = 30
+		cost = 15
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_safety_tt
 			hidden_effect = { TFRKPHN_job_do_safety = yes }
@@ -267,7 +267,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started NOT = { has_completed_focus = TFRKPHN_lee_in_je_d2 } NOT = { has_completed_focus = TFRKPHN_lee_in_je_d2b } NOT = { has_country_flag = TFRKPHN_job_done_safety } }
 		fire_only_once = yes
-		cost = 40
+		cost = 20
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_safety_tt
 			hidden_effect = { TFRKPHN_job_do_safety = yes }
@@ -280,7 +280,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started has_completed_focus = TFRKPHN_lee_in_je_d2 NOT = { has_country_flag = TFRKPHN_job_done_boardseat } }
 		fire_only_once = yes
-		cost = 50
+		cost = 25
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_boardseat_tt
 			hidden_effect = { TFRKPHN_job_do_boardseat = yes }
@@ -293,7 +293,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started has_completed_focus = TFRKPHN_lee_in_je_d2b NOT = { has_country_flag = TFRKPHN_job_done_boardseat } }
 		fire_only_once = yes
-		cost = 30
+		cost = 15
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_boardseat_tt
 			hidden_effect = { TFRKPHN_job_do_boardseat = yes }
@@ -306,7 +306,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started NOT = { has_completed_focus = TFRKPHN_lee_in_je_d2 } NOT = { has_completed_focus = TFRKPHN_lee_in_je_d2b } NOT = { has_country_flag = TFRKPHN_job_done_boardseat } }
 		fire_only_once = yes
-		cost = 40
+		cost = 20
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_boardseat_tt
 			hidden_effect = { TFRKPHN_job_do_boardseat = yes }
@@ -319,7 +319,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started has_completed_focus = TFRKPHN_lee_in_je_d2 NOT = { has_country_flag = TFRKPHN_job_done_insure } }
 		fire_only_once = yes
-		cost = 50
+		cost = 25
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_insure_tt
 			hidden_effect = { TFRKPHN_job_do_insure = yes }
@@ -332,7 +332,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started has_completed_focus = TFRKPHN_lee_in_je_d2b NOT = { has_country_flag = TFRKPHN_job_done_insure } }
 		fire_only_once = yes
-		cost = 30
+		cost = 15
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_insure_tt
 			hidden_effect = { TFRKPHN_job_do_insure = yes }
@@ -345,7 +345,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started NOT = { has_completed_focus = TFRKPHN_lee_in_je_d2 } NOT = { has_completed_focus = TFRKPHN_lee_in_je_d2b } NOT = { has_country_flag = TFRKPHN_job_done_insure } }
 		fire_only_once = yes
-		cost = 40
+		cost = 20
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_insure_tt
 			hidden_effect = { TFRKPHN_job_do_insure = yes }
@@ -358,7 +358,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started has_completed_focus = TFRKPHN_lee_in_je_d2 NOT = { has_country_flag = TFRKPHN_job_done_platform } }
 		fire_only_once = yes
-		cost = 50
+		cost = 25
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_platform_tt
 			hidden_effect = { TFRKPHN_job_do_platform = yes }
@@ -371,7 +371,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started has_completed_focus = TFRKPHN_lee_in_je_d2b NOT = { has_country_flag = TFRKPHN_job_done_platform } }
 		fire_only_once = yes
-		cost = 30
+		cost = 15
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_platform_tt
 			hidden_effect = { TFRKPHN_job_do_platform = yes }
@@ -384,7 +384,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started NOT = { has_completed_focus = TFRKPHN_lee_in_je_d2 } NOT = { has_completed_focus = TFRKPHN_lee_in_je_d2b } NOT = { has_country_flag = TFRKPHN_job_done_platform } }
 		fire_only_once = yes
-		cost = 40
+		cost = 20
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_platform_tt
 			hidden_effect = { TFRKPHN_job_do_platform = yes }
@@ -397,7 +397,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started has_completed_focus = TFRKPHN_lee_in_je_d2 NOT = { has_country_flag = TFRKPHN_job_done_lumpwage } }
 		fire_only_once = yes
-		cost = 50
+		cost = 25
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_lumpwage_tt
 			hidden_effect = { TFRKPHN_job_do_lumpwage = yes }
@@ -410,7 +410,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started has_completed_focus = TFRKPHN_lee_in_je_d2b NOT = { has_country_flag = TFRKPHN_job_done_lumpwage } }
 		fire_only_once = yes
-		cost = 30
+		cost = 15
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_lumpwage_tt
 			hidden_effect = { TFRKPHN_job_do_lumpwage = yes }
@@ -423,7 +423,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started NOT = { has_completed_focus = TFRKPHN_lee_in_je_d2 } NOT = { has_completed_focus = TFRKPHN_lee_in_je_d2b } NOT = { has_country_flag = TFRKPHN_job_done_lumpwage } }
 		fire_only_once = yes
-		cost = 40
+		cost = 20
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_lumpwage_tt
 			hidden_effect = { TFRKPHN_job_do_lumpwage = yes }
@@ -436,7 +436,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started has_completed_focus = TFRKPHN_lee_in_je_d2 NOT = { has_country_flag = TFRKPHN_job_done_public } }
 		fire_only_once = yes
-		cost = 50
+		cost = 25
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_public_tt
 			hidden_effect = { TFRKPHN_job_do_public = yes }
@@ -449,7 +449,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started has_completed_focus = TFRKPHN_lee_in_je_d2b NOT = { has_country_flag = TFRKPHN_job_done_public } }
 		fire_only_once = yes
-		cost = 30
+		cost = 15
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_public_tt
 			hidden_effect = { TFRKPHN_job_do_public = yes }
@@ -462,7 +462,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started NOT = { has_completed_focus = TFRKPHN_lee_in_je_d2 } NOT = { has_completed_focus = TFRKPHN_lee_in_je_d2b } NOT = { has_country_flag = TFRKPHN_job_done_public } }
 		fire_only_once = yes
-		cost = 40
+		cost = 20
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_public_tt
 			hidden_effect = { TFRKPHN_job_do_public = yes }
@@ -475,7 +475,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started has_completed_focus = TFRKPHN_lee_in_je_d2 NOT = { has_country_flag = TFRKPHN_job_done_jobpay } }
 		fire_only_once = yes
-		cost = 50
+		cost = 25
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_jobpay_tt
 			hidden_effect = { TFRKPHN_job_do_jobpay = yes }
@@ -488,7 +488,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started has_completed_focus = TFRKPHN_lee_in_je_d2b NOT = { has_country_flag = TFRKPHN_job_done_jobpay } }
 		fire_only_once = yes
-		cost = 30
+		cost = 15
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_jobpay_tt
 			hidden_effect = { TFRKPHN_job_do_jobpay = yes }
@@ -501,7 +501,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started NOT = { has_completed_focus = TFRKPHN_lee_in_je_d2 } NOT = { has_completed_focus = TFRKPHN_lee_in_je_d2b } NOT = { has_country_flag = TFRKPHN_job_done_jobpay } }
 		fire_only_once = yes
-		cost = 40
+		cost = 20
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_jobpay_tt
 			hidden_effect = { TFRKPHN_job_do_jobpay = yes }
@@ -514,7 +514,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started has_completed_focus = TFRKPHN_lee_in_je_d2 NOT = { has_country_flag = TFRKPHN_job_done_flex } }
 		fire_only_once = yes
-		cost = 50
+		cost = 25
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_flex_tt
 			hidden_effect = { TFRKPHN_job_do_flex = yes }
@@ -527,7 +527,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started has_completed_focus = TFRKPHN_lee_in_je_d2b NOT = { has_country_flag = TFRKPHN_job_done_flex } }
 		fire_only_once = yes
-		cost = 30
+		cost = 15
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_flex_tt
 			hidden_effect = { TFRKPHN_job_do_flex = yes }
@@ -540,7 +540,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started NOT = { has_completed_focus = TFRKPHN_lee_in_je_d2 } NOT = { has_completed_focus = TFRKPHN_lee_in_je_d2b } NOT = { has_country_flag = TFRKPHN_job_done_flex } }
 		fire_only_once = yes
-		cost = 40
+		cost = 20
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_flex_tt
 			hidden_effect = { TFRKPHN_job_do_flex = yes }
@@ -553,7 +553,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started has_completed_focus = TFRKPHN_lee_in_je_d2 NOT = { has_country_flag = TFRKPHN_job_done_dispatch } }
 		fire_only_once = yes
-		cost = 50
+		cost = 25
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_dispatch_tt
 			hidden_effect = { TFRKPHN_job_do_dispatch = yes }
@@ -566,7 +566,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started has_completed_focus = TFRKPHN_lee_in_je_d2b NOT = { has_country_flag = TFRKPHN_job_done_dispatch } }
 		fire_only_once = yes
-		cost = 30
+		cost = 15
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_dispatch_tt
 			hidden_effect = { TFRKPHN_job_do_dispatch = yes }
@@ -579,7 +579,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started NOT = { has_completed_focus = TFRKPHN_lee_in_je_d2 } NOT = { has_completed_focus = TFRKPHN_lee_in_je_d2b } NOT = { has_country_flag = TFRKPHN_job_done_dispatch } }
 		fire_only_once = yes
-		cost = 40
+		cost = 20
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_dispatch_tt
 			hidden_effect = { TFRKPHN_job_do_dispatch = yes }
@@ -592,7 +592,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started has_completed_focus = TFRKPHN_lee_in_je_d2 NOT = { has_country_flag = TFRKPHN_job_done_dismiss } }
 		fire_only_once = yes
-		cost = 50
+		cost = 25
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_dismiss_tt
 			hidden_effect = { TFRKPHN_job_do_dismiss = yes }
@@ -605,7 +605,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started has_completed_focus = TFRKPHN_lee_in_je_d2b NOT = { has_country_flag = TFRKPHN_job_done_dismiss } }
 		fire_only_once = yes
-		cost = 30
+		cost = 15
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_dismiss_tt
 			hidden_effect = { TFRKPHN_job_do_dismiss = yes }
@@ -618,7 +618,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started NOT = { has_completed_focus = TFRKPHN_lee_in_je_d2 } NOT = { has_completed_focus = TFRKPHN_lee_in_je_d2b } NOT = { has_country_flag = TFRKPHN_job_done_dismiss } }
 		fire_only_once = yes
-		cost = 40
+		cost = 20
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_dismiss_tt
 			hidden_effect = { TFRKPHN_job_do_dismiss = yes }
@@ -631,7 +631,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started has_completed_focus = TFRKPHN_lee_in_je_d2 NOT = { has_country_flag = TFRKPHN_job_done_wagebysector } }
 		fire_only_once = yes
-		cost = 50
+		cost = 25
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_wagebysector_tt
 			hidden_effect = { TFRKPHN_job_do_wagebysector = yes }
@@ -644,7 +644,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started has_completed_focus = TFRKPHN_lee_in_je_d2b NOT = { has_country_flag = TFRKPHN_job_done_wagebysector } }
 		fire_only_once = yes
-		cost = 30
+		cost = 15
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_wagebysector_tt
 			hidden_effect = { TFRKPHN_job_do_wagebysector = yes }
@@ -657,7 +657,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started NOT = { has_completed_focus = TFRKPHN_lee_in_je_d2 } NOT = { has_completed_focus = TFRKPHN_lee_in_je_d2b } NOT = { has_country_flag = TFRKPHN_job_done_wagebysector } }
 		fire_only_once = yes
-		cost = 40
+		cost = 20
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_wagebysector_tt
 			hidden_effect = { TFRKPHN_job_do_wagebysector = yes }
@@ -670,7 +670,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started has_completed_focus = TFRKPHN_lee_in_je_d2 NOT = { has_country_flag = TFRKPHN_job_done_safetydelay } }
 		fire_only_once = yes
-		cost = 50
+		cost = 25
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_safetydelay_tt
 			hidden_effect = { TFRKPHN_job_do_safetydelay = yes }
@@ -683,7 +683,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started has_completed_focus = TFRKPHN_lee_in_je_d2b NOT = { has_country_flag = TFRKPHN_job_done_safetydelay } }
 		fire_only_once = yes
-		cost = 30
+		cost = 15
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_safetydelay_tt
 			hidden_effect = { TFRKPHN_job_do_safetydelay = yes }
@@ -696,7 +696,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started NOT = { has_completed_focus = TFRKPHN_lee_in_je_d2 } NOT = { has_completed_focus = TFRKPHN_lee_in_je_d2b } NOT = { has_country_flag = TFRKPHN_job_done_safetydelay } }
 		fire_only_once = yes
-		cost = 40
+		cost = 20
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_safetydelay_tt
 			hidden_effect = { TFRKPHN_job_do_safetydelay = yes }
@@ -709,7 +709,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started has_completed_focus = TFRKPHN_lee_in_je_d2 NOT = { has_country_flag = TFRKPHN_job_done_replace } }
 		fire_only_once = yes
-		cost = 50
+		cost = 25
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_replace_tt
 			hidden_effect = { TFRKPHN_job_do_replace = yes }
@@ -722,7 +722,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started has_completed_focus = TFRKPHN_lee_in_je_d2b NOT = { has_country_flag = TFRKPHN_job_done_replace } }
 		fire_only_once = yes
-		cost = 30
+		cost = 15
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_replace_tt
 			hidden_effect = { TFRKPHN_job_do_replace = yes }
@@ -735,7 +735,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started NOT = { has_completed_focus = TFRKPHN_lee_in_je_d2 } NOT = { has_completed_focus = TFRKPHN_lee_in_je_d2b } NOT = { has_country_flag = TFRKPHN_job_done_replace } }
 		fire_only_once = yes
-		cost = 40
+		cost = 20
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_replace_tt
 			hidden_effect = { TFRKPHN_job_do_replace = yes }
@@ -748,7 +748,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started has_completed_focus = TFRKPHN_lee_in_je_d2 NOT = { has_country_flag = TFRKPHN_job_done_unionbook } }
 		fire_only_once = yes
-		cost = 50
+		cost = 25
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_unionbook_tt
 			hidden_effect = { TFRKPHN_job_do_unionbook = yes }
@@ -761,7 +761,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started has_completed_focus = TFRKPHN_lee_in_je_d2b NOT = { has_country_flag = TFRKPHN_job_done_unionbook } }
 		fire_only_once = yes
-		cost = 30
+		cost = 15
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_unionbook_tt
 			hidden_effect = { TFRKPHN_job_do_unionbook = yes }
@@ -774,7 +774,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started NOT = { has_completed_focus = TFRKPHN_lee_in_je_d2 } NOT = { has_completed_focus = TFRKPHN_lee_in_je_d2b } NOT = { has_country_flag = TFRKPHN_job_done_unionbook } }
 		fire_only_once = yes
-		cost = 40
+		cost = 20
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_unionbook_tt
 			hidden_effect = { TFRKPHN_job_do_unionbook = yes }
@@ -787,7 +787,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started has_completed_focus = TFRKPHN_lee_in_je_d2 NOT = { has_country_flag = TFRKPHN_job_done_hirecredit } }
 		fire_only_once = yes
-		cost = 50
+		cost = 25
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_hirecredit_tt
 			hidden_effect = { TFRKPHN_job_do_hirecredit = yes }
@@ -800,7 +800,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started has_completed_focus = TFRKPHN_lee_in_je_d2b NOT = { has_country_flag = TFRKPHN_job_done_hirecredit } }
 		fire_only_once = yes
-		cost = 30
+		cost = 15
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_hirecredit_tt
 			hidden_effect = { TFRKPHN_job_do_hirecredit = yes }
@@ -813,7 +813,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started NOT = { has_completed_focus = TFRKPHN_lee_in_je_d2 } NOT = { has_completed_focus = TFRKPHN_lee_in_je_d2b } NOT = { has_country_flag = TFRKPHN_job_done_hirecredit } }
 		fire_only_once = yes
-		cost = 40
+		cost = 20
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_hirecredit_tt
 			hidden_effect = { TFRKPHN_job_do_hirecredit = yes }
@@ -826,7 +826,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started has_completed_focus = TFRKPHN_lee_in_je_d2 NOT = { has_country_flag = TFRKPHN_job_done_reshore } }
 		fire_only_once = yes
-		cost = 50
+		cost = 25
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_reshore_tt
 			hidden_effect = { TFRKPHN_job_do_reshore = yes }
@@ -839,7 +839,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started has_completed_focus = TFRKPHN_lee_in_je_d2b NOT = { has_country_flag = TFRKPHN_job_done_reshore } }
 		fire_only_once = yes
-		cost = 30
+		cost = 15
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_reshore_tt
 			hidden_effect = { TFRKPHN_job_do_reshore = yes }
@@ -852,7 +852,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started NOT = { has_completed_focus = TFRKPHN_lee_in_je_d2 } NOT = { has_completed_focus = TFRKPHN_lee_in_je_d2b } NOT = { has_country_flag = TFRKPHN_job_done_reshore } }
 		fire_only_once = yes
-		cost = 40
+		cost = 20
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_reshore_tt
 			hidden_effect = { TFRKPHN_job_do_reshore = yes }
@@ -865,7 +865,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started has_completed_focus = TFRKPHN_lee_in_je_d2 NOT = { has_country_flag = TFRKPHN_job_done_foreign } }
 		fire_only_once = yes
-		cost = 50
+		cost = 25
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_foreign_tt
 			hidden_effect = { TFRKPHN_job_do_foreign = yes }
@@ -878,7 +878,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started has_completed_focus = TFRKPHN_lee_in_je_d2b NOT = { has_country_flag = TFRKPHN_job_done_foreign } }
 		fire_only_once = yes
-		cost = 30
+		cost = 15
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_foreign_tt
 			hidden_effect = { TFRKPHN_job_do_foreign = yes }
@@ -891,7 +891,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started NOT = { has_completed_focus = TFRKPHN_lee_in_je_d2 } NOT = { has_completed_focus = TFRKPHN_lee_in_je_d2b } NOT = { has_country_flag = TFRKPHN_job_done_foreign } }
 		fire_only_once = yes
-		cost = 40
+		cost = 20
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_foreign_tt
 			hidden_effect = { TFRKPHN_job_do_foreign = yes }
@@ -904,7 +904,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started has_completed_focus = TFRKPHN_lee_in_je_d2 NOT = { has_country_flag = TFRKPHN_job_done_benefitcut } }
 		fire_only_once = yes
-		cost = 50
+		cost = 25
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_benefitcut_tt
 			hidden_effect = { TFRKPHN_job_do_benefitcut = yes }
@@ -917,7 +917,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started has_completed_focus = TFRKPHN_lee_in_je_d2b NOT = { has_country_flag = TFRKPHN_job_done_benefitcut } }
 		fire_only_once = yes
-		cost = 30
+		cost = 15
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_benefitcut_tt
 			hidden_effect = { TFRKPHN_job_do_benefitcut = yes }
@@ -930,7 +930,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started NOT = { has_completed_focus = TFRKPHN_lee_in_je_d2 } NOT = { has_completed_focus = TFRKPHN_lee_in_je_d2b } NOT = { has_country_flag = TFRKPHN_job_done_benefitcut } }
 		fire_only_once = yes
-		cost = 40
+		cost = 20
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_benefitcut_tt
 			hidden_effect = { TFRKPHN_job_do_benefitcut = yes }
@@ -943,7 +943,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started has_completed_focus = TFRKPHN_lee_in_je_d2 NOT = { has_country_flag = TFRKPHN_job_done_sandbox } }
 		fire_only_once = yes
-		cost = 50
+		cost = 25
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_sandbox_tt
 			hidden_effect = { TFRKPHN_job_do_sandbox = yes }
@@ -956,7 +956,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started has_completed_focus = TFRKPHN_lee_in_je_d2b NOT = { has_country_flag = TFRKPHN_job_done_sandbox } }
 		fire_only_once = yes
-		cost = 30
+		cost = 15
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_sandbox_tt
 			hidden_effect = { TFRKPHN_job_do_sandbox = yes }
@@ -969,7 +969,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started NOT = { has_completed_focus = TFRKPHN_lee_in_je_d2 } NOT = { has_completed_focus = TFRKPHN_lee_in_je_d2b } NOT = { has_country_flag = TFRKPHN_job_done_sandbox } }
 		fire_only_once = yes
-		cost = 40
+		cost = 20
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_sandbox_tt
 			hidden_effect = { TFRKPHN_job_do_sandbox = yes }
@@ -982,7 +982,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started has_completed_focus = TFRKPHN_lee_in_je_d2 NOT = { has_country_flag = TFRKPHN_job_done_gwangju } }
 		fire_only_once = yes
-		cost = 50
+		cost = 25
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_gwangju_tt
 			hidden_effect = { TFRKPHN_job_do_gwangju = yes }
@@ -995,7 +995,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started has_completed_focus = TFRKPHN_lee_in_je_d2b NOT = { has_country_flag = TFRKPHN_job_done_gwangju } }
 		fire_only_once = yes
-		cost = 30
+		cost = 15
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_gwangju_tt
 			hidden_effect = { TFRKPHN_job_do_gwangju = yes }
@@ -1008,7 +1008,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started NOT = { has_completed_focus = TFRKPHN_lee_in_je_d2 } NOT = { has_completed_focus = TFRKPHN_lee_in_je_d2b } NOT = { has_country_flag = TFRKPHN_job_done_gwangju } }
 		fire_only_once = yes
-		cost = 40
+		cost = 20
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_gwangju_tt
 			hidden_effect = { TFRKPHN_job_do_gwangju = yes }
@@ -1021,7 +1021,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started has_completed_focus = TFRKPHN_lee_in_je_d2 NOT = { has_country_flag = TFRKPHN_job_done_jobseeker } }
 		fire_only_once = yes
-		cost = 50
+		cost = 25
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_jobseeker_tt
 			hidden_effect = { TFRKPHN_job_do_jobseeker = yes }
@@ -1034,7 +1034,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started has_completed_focus = TFRKPHN_lee_in_je_d2b NOT = { has_country_flag = TFRKPHN_job_done_jobseeker } }
 		fire_only_once = yes
-		cost = 30
+		cost = 15
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_jobseeker_tt
 			hidden_effect = { TFRKPHN_job_do_jobseeker = yes }
@@ -1047,7 +1047,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started NOT = { has_completed_focus = TFRKPHN_lee_in_je_d2 } NOT = { has_completed_focus = TFRKPHN_lee_in_je_d2b } NOT = { has_country_flag = TFRKPHN_job_done_jobseeker } }
 		fire_only_once = yes
-		cost = 40
+		cost = 20
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_jobseeker_tt
 			hidden_effect = { TFRKPHN_job_do_jobseeker = yes }
@@ -1060,7 +1060,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started has_completed_focus = TFRKPHN_lee_in_je_d2 NOT = { has_country_flag = TFRKPHN_job_done_youthfund } }
 		fire_only_once = yes
-		cost = 50
+		cost = 25
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_youthfund_tt
 			hidden_effect = { TFRKPHN_job_do_youthfund = yes }
@@ -1073,7 +1073,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started has_completed_focus = TFRKPHN_lee_in_je_d2b NOT = { has_country_flag = TFRKPHN_job_done_youthfund } }
 		fire_only_once = yes
-		cost = 30
+		cost = 15
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_youthfund_tt
 			hidden_effect = { TFRKPHN_job_do_youthfund = yes }
@@ -1086,7 +1086,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started NOT = { has_completed_focus = TFRKPHN_lee_in_je_d2 } NOT = { has_completed_focus = TFRKPHN_lee_in_je_d2b } NOT = { has_country_flag = TFRKPHN_job_done_youthfund } }
 		fire_only_once = yes
-		cost = 40
+		cost = 20
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_youthfund_tt
 			hidden_effect = { TFRKPHN_job_do_youthfund = yes }
@@ -1099,7 +1099,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started has_completed_focus = TFRKPHN_lee_in_je_d2 NOT = { has_country_flag = TFRKPHN_job_done_training } }
 		fire_only_once = yes
-		cost = 50
+		cost = 25
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_training_tt
 			hidden_effect = { TFRKPHN_job_do_training = yes }
@@ -1112,7 +1112,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started has_completed_focus = TFRKPHN_lee_in_je_d2b NOT = { has_country_flag = TFRKPHN_job_done_training } }
 		fire_only_once = yes
-		cost = 30
+		cost = 15
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_training_tt
 			hidden_effect = { TFRKPHN_job_do_training = yes }
@@ -1125,7 +1125,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started NOT = { has_completed_focus = TFRKPHN_lee_in_je_d2 } NOT = { has_completed_focus = TFRKPHN_lee_in_je_d2b } NOT = { has_country_flag = TFRKPHN_job_done_training } }
 		fire_only_once = yes
-		cost = 40
+		cost = 20
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_training_tt
 			hidden_effect = { TFRKPHN_job_do_training = yes }
@@ -1138,7 +1138,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started has_completed_focus = TFRKPHN_lee_in_je_d2 NOT = { has_country_flag = TFRKPHN_job_done_shipyard } }
 		fire_only_once = yes
-		cost = 50
+		cost = 25
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_shipyard_tt
 			hidden_effect = { TFRKPHN_job_do_shipyard = yes }
@@ -1151,7 +1151,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started has_completed_focus = TFRKPHN_lee_in_je_d2b NOT = { has_country_flag = TFRKPHN_job_done_shipyard } }
 		fire_only_once = yes
-		cost = 30
+		cost = 15
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_shipyard_tt
 			hidden_effect = { TFRKPHN_job_do_shipyard = yes }
@@ -1164,7 +1164,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started NOT = { has_completed_focus = TFRKPHN_lee_in_je_d2 } NOT = { has_completed_focus = TFRKPHN_lee_in_je_d2b } NOT = { has_country_flag = TFRKPHN_job_done_shipyard } }
 		fire_only_once = yes
-		cost = 40
+		cost = 20
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_shipyard_tt
 			hidden_effect = { TFRKPHN_job_do_shipyard = yes }
@@ -1177,7 +1177,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started has_completed_focus = TFRKPHN_lee_in_je_d2 NOT = { has_country_flag = TFRKPHN_job_done_veteran } }
 		fire_only_once = yes
-		cost = 50
+		cost = 25
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_veteran_tt
 			hidden_effect = { TFRKPHN_job_do_veteran = yes }
@@ -1190,7 +1190,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started has_completed_focus = TFRKPHN_lee_in_je_d2b NOT = { has_country_flag = TFRKPHN_job_done_veteran } }
 		fire_only_once = yes
-		cost = 30
+		cost = 15
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_veteran_tt
 			hidden_effect = { TFRKPHN_job_do_veteran = yes }
@@ -1203,7 +1203,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started NOT = { has_completed_focus = TFRKPHN_lee_in_je_d2 } NOT = { has_completed_focus = TFRKPHN_lee_in_je_d2b } NOT = { has_country_flag = TFRKPHN_job_done_veteran } }
 		fire_only_once = yes
-		cost = 40
+		cost = 20
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_veteran_tt
 			hidden_effect = { TFRKPHN_job_do_veteran = yes }
@@ -1216,7 +1216,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started has_completed_focus = TFRKPHN_lee_in_je_d2 NOT = { has_country_flag = TFRKPHN_job_done_keepjob } }
 		fire_only_once = yes
-		cost = 50
+		cost = 25
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_keepjob_tt
 			hidden_effect = { TFRKPHN_job_do_keepjob = yes }
@@ -1229,7 +1229,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started has_completed_focus = TFRKPHN_lee_in_je_d2b NOT = { has_country_flag = TFRKPHN_job_done_keepjob } }
 		fire_only_once = yes
-		cost = 30
+		cost = 15
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_keepjob_tt
 			hidden_effect = { TFRKPHN_job_do_keepjob = yes }
@@ -1242,7 +1242,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started NOT = { has_completed_focus = TFRKPHN_lee_in_je_d2 } NOT = { has_completed_focus = TFRKPHN_lee_in_je_d2b } NOT = { has_country_flag = TFRKPHN_job_done_keepjob } }
 		fire_only_once = yes
-		cost = 40
+		cost = 20
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_keepjob_tt
 			hidden_effect = { TFRKPHN_job_do_keepjob = yes }
@@ -1255,7 +1255,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started has_completed_focus = TFRKPHN_lee_in_je_d2 NOT = { has_country_flag = TFRKPHN_job_done_workstudy } }
 		fire_only_once = yes
-		cost = 50
+		cost = 25
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_workstudy_tt
 			hidden_effect = { TFRKPHN_job_do_workstudy = yes }
@@ -1268,7 +1268,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started has_completed_focus = TFRKPHN_lee_in_je_d2b NOT = { has_country_flag = TFRKPHN_job_done_workstudy } }
 		fire_only_once = yes
-		cost = 30
+		cost = 15
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_workstudy_tt
 			hidden_effect = { TFRKPHN_job_do_workstudy = yes }
@@ -1281,7 +1281,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started NOT = { has_completed_focus = TFRKPHN_lee_in_je_d2 } NOT = { has_completed_focus = TFRKPHN_lee_in_je_d2b } NOT = { has_country_flag = TFRKPHN_job_done_workstudy } }
 		fire_only_once = yes
-		cost = 40
+		cost = 20
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_workstudy_tt
 			hidden_effect = { TFRKPHN_job_do_workstudy = yes }
@@ -1294,7 +1294,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started has_completed_focus = TFRKPHN_lee_in_je_d2 }
 		days_re_enable = 180
-		cost = 100
+		cost = 50
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_summit_tt
 			hidden_effect = { add_to_variable = { TFRKPHN_job_lab = 5 } add_to_variable = { TFRKPHN_job_biz = 5 } TFRKPHN_job_update = yes }
@@ -1308,7 +1308,7 @@ TFRKPHN_lee_jobs_category = {
 		visible = { has_country_flag = TFRKPHN_job_started has_completed_focus = TFRKPHN_lee_in_je_d2 NOT = { has_country_flag = TFRKPHN_job_pact } }
 		fire_only_once = yes
 		available = { custom_trigger_tooltip = { tooltip = TFRKPHN_job_pact_need check_variable = { TFRKPHN_job_lab > 49 } check_variable = { TFRKPHN_job_biz > 49 } } }
-		cost = 50
+		cost = 25
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_pact_tt
 			add_stability = 0.05
@@ -1323,7 +1323,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started has_completed_focus = TFRKPHN_lee_in_je_d2b }
 		days_re_enable = 180
-		cost = 60
+		cost = 30
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_summit_tt
 			hidden_effect = { add_to_variable = { TFRKPHN_job_lab = 5 } add_to_variable = { TFRKPHN_job_biz = 5 } TFRKPHN_job_update = yes }
@@ -1337,7 +1337,7 @@ TFRKPHN_lee_jobs_category = {
 		visible = { has_country_flag = TFRKPHN_job_started has_completed_focus = TFRKPHN_lee_in_je_d2b NOT = { has_country_flag = TFRKPHN_job_pact } }
 		fire_only_once = yes
 		available = { custom_trigger_tooltip = { tooltip = TFRKPHN_job_pact_need check_variable = { TFRKPHN_job_lab > 49 } check_variable = { TFRKPHN_job_biz > 49 } } }
-		cost = 30
+		cost = 15
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_pact_tt
 			add_stability = 0.05
@@ -1352,7 +1352,7 @@ TFRKPHN_lee_jobs_category = {
 		allowed = { original_tag = KOR }
 		visible = { has_country_flag = TFRKPHN_job_started NOT = { has_completed_focus = TFRKPHN_lee_in_je_d2 } NOT = { has_completed_focus = TFRKPHN_lee_in_je_d2b } }
 		days_re_enable = 180
-		cost = 80
+		cost = 40
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_summit_tt
 			hidden_effect = { add_to_variable = { TFRKPHN_job_lab = 5 } add_to_variable = { TFRKPHN_job_biz = 5 } TFRKPHN_job_update = yes }
@@ -1366,7 +1366,7 @@ TFRKPHN_lee_jobs_category = {
 		visible = { has_country_flag = TFRKPHN_job_started NOT = { has_completed_focus = TFRKPHN_lee_in_je_d2 } NOT = { has_completed_focus = TFRKPHN_lee_in_je_d2b } NOT = { has_country_flag = TFRKPHN_job_pact } }
 		fire_only_once = yes
 		available = { custom_trigger_tooltip = { tooltip = TFRKPHN_job_pact_need check_variable = { TFRKPHN_job_lab > 49 } check_variable = { TFRKPHN_job_biz > 49 } } }
-		cost = 40
+		cost = 20
 		complete_effect = {
 			custom_effect_tooltip = TFRKPHN_job_pact_tt
 			add_stability = 0.05

@@ -7,4 +7,14 @@ TFRKPHN_bj_force = {
 	naval_damage_factor = TFRKPHN_bj_m_ndmg
 	air_attack_factor = TFRKPHN_bj_m_fatk
 	air_defence_factor = TFRKPHN_bj_m_fdef
+	# 작전계획 / 동원 / 준비 완료 단계에서 더해지는 것 (예전에는 국민정신이 따로 붙었다)
+	planning_speed = TFRKPHN_bj_m_plan
+	max_planning_factor = TFRKPHN_bj_m_mplan
+	training_time_factor = TFRKPHN_bj_m_train
+	supply_consumption_factor = TFRKPHN_bj_m_sup
+	army_speed_factor = TFRKPHN_bj_m_aspd
+	# 북한 민심 이반에 비례하는 것 (예전의 「북한 체제의 근본적 변화」)과 준비 완료 단계의 전쟁 지지도
+	war_support_factor = TFRKPHN_bj_m_ws
+	stability_factor = TFRKPHN_bj_m_stab
+	political_power_factor = TFRKPHN_bj_m_pp
 }

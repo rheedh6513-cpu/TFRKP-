@@ -1,0 +1,10 @@
+# [안내] 승전 뒤 세 갈래(전후 번영, 자주국방, 아시아 민주주의 연합)의 효과를 모은 국민정신 「승전의 유산」. pw_build.py가 만든다.
+TFRKPHN_pw_legacy = {
+	icon = GFX_idea_KOR_yoon_common_conservatism_dynamic_modifir_idea
+	industrial_capacity_factory = TFRKPHN_pw_industrial_capacity_factory
+	stability_factor = TFRKPHN_pw_stability_factor
+	army_attack_factor = TFRKPHN_pw_army_attack_factor
+	army_defence_factor = TFRKPHN_pw_army_defence_factor
+	war_support_factor = TFRKPHN_pw_war_support_factor
+	political_power_gain = TFRKPHN_pw_political_power_gain
+}

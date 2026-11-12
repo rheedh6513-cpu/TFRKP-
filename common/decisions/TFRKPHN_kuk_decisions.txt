@@ -3,7 +3,7 @@
 TFRKPHN_hong_kuk_category = {
 	TFRKPHN_kuk_seohee = {
 		icon = GFX_decision_generic_construction
-		cost = 150
+		cost = 75
 		days_remove = 60
 		fire_only_once = yes
 		visible = { OR = { check_variable = { TFRKPHN_kuk_sel = 0 } check_variable = { TFRKPHN_kuk_sel = 1 } } }
@@ -19,7 +19,7 @@ TFRKPHN_hong_kuk_category = {
 	}
 	TFRKPHN_kuk_ottogi = {
 		icon = GFX_decision_generic_construction
-		cost = 75
+		cost = 38
 		days_remove = 30
 		fire_only_once = yes
 		visible = { OR = { check_variable = { TFRKPHN_kuk_sel = 0 } check_variable = { TFRKPHN_kuk_sel = 2 } } }
@@ -35,7 +35,7 @@ TFRKPHN_hong_kuk_category = {
 	}
 	TFRKPHN_kuk_kyeryong = {
 		icon = GFX_decision_generic_construction
-		cost = 150
+		cost = 75
 		days_remove = 60
 		fire_only_once = yes
 		visible = { OR = { check_variable = { TFRKPHN_kuk_sel = 0 } check_variable = { TFRKPHN_kuk_sel = 3 } } }
@@ -51,7 +51,7 @@ TFRKPHN_hong_kuk_category = {
 	}
 	TFRKPHN_kuk_mackis = {
 		icon = GFX_decision_generic_construction
-		cost = 75
+		cost = 38
 		days_remove = 30
 		fire_only_once = yes
 		visible = { OR = { check_variable = { TFRKPHN_kuk_sel = 0 } check_variable = { TFRKPHN_kuk_sel = 4 } } }
@@ -67,7 +67,7 @@ TFRKPHN_hong_kuk_category = {
 	}
 	TFRKPHN_kuk_woomi = {
 		icon = GFX_decision_generic_construction
-		cost = 150
+		cost = 75
 		days_remove = 60
 		fire_only_once = yes
 		visible = { OR = { check_variable = { TFRKPHN_kuk_sel = 0 } check_variable = { TFRKPHN_kuk_sel = 5 } } }
@@ -83,7 +83,7 @@ TFRKPHN_hong_kuk_category = {
 	}
 	TFRKPHN_kuk_bohae = {
 		icon = GFX_decision_generic_construction
-		cost = 75
+		cost = 38
 		days_remove = 30
 		fire_only_once = yes
 		visible = { OR = { check_variable = { TFRKPHN_kuk_sel = 0 } check_variable = { TFRKPHN_kuk_sel = 6 } } }
@@ -99,7 +99,7 @@ TFRKPHN_hong_kuk_category = {
 	}
 	TFRKPHN_kuk_daemyung = {
 		icon = GFX_decision_generic_construction
-		cost = 150
+		cost = 75
 		days_remove = 60
 		fire_only_once = yes
 		visible = { OR = { check_variable = { TFRKPHN_kuk_sel = 0 } check_variable = { TFRKPHN_kuk_sel = 7 } } }
@@ -115,7 +115,7 @@ TFRKPHN_hong_kuk_category = {
 	}
 	TFRKPHN_kuk_douzone = {
 		icon = GFX_decision_generic_construction
-		cost = 75
+		cost = 38
 		days_remove = 30
 		fire_only_once = yes
 		visible = { OR = { check_variable = { TFRKPHN_kuk_sel = 0 } check_variable = { TFRKPHN_kuk_sel = 8 } } }
@@ -131,7 +131,7 @@ TFRKPHN_hong_kuk_category = {
 	}
 	TFRKPHN_kuk_hshwasung = {
 		icon = GFX_decision_generic_construction
-		cost = 150
+		cost = 75
 		days_remove = 60
 		fire_only_once = yes
 		visible = { OR = { check_variable = { TFRKPHN_kuk_sel = 0 } check_variable = { TFRKPHN_kuk_sel = 9 } } }
@@ -147,7 +147,7 @@ TFRKPHN_hong_kuk_category = {
 	}
 	TFRKPHN_kuk_muhak = {
 		icon = GFX_decision_generic_construction
-		cost = 75
+		cost = 38
 		days_remove = 30
 		fire_only_once = yes
 		visible = { OR = { check_variable = { TFRKPHN_kuk_sel = 0 } check_variable = { TFRKPHN_kuk_sel = 10 } } }
@@ -163,7 +163,7 @@ TFRKPHN_hong_kuk_category = {
 	}
 	TFRKPHN_kuk_raon = {
 		icon = GFX_decision_generic_construction
-		cost = 150
+		cost = 75
 		days_remove = 60
 		fire_only_once = yes
 		visible = { OR = { check_variable = { TFRKPHN_kuk_sel = 0 } check_variable = { TFRKPHN_kuk_sel = 11 } } }
@@ -179,7 +179,7 @@ TFRKPHN_hong_kuk_category = {
 	}
 	TFRKPHN_kuk_jpdc = {
 		icon = GFX_decision_generic_construction
-		cost = 75
+		cost = 38
 		days_remove = 30
 		fire_only_once = yes
 		visible = { OR = { check_variable = { TFRKPHN_kuk_sel = 0 } check_variable = { TFRKPHN_kuk_sel = 12 } } }

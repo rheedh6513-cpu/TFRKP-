@@ -1,0 +1,7 @@
+﻿l_korean:
+ # 승전 뒤 국민정신 통합. pw_build.py가 만든다.
+ TFRKPHN_pw_legacy:0 "승전의 유산"
+ TFRKPHN_pw_legacy_desc:0 "양안전쟁에서 이긴 뒤 경제와 국방과 외교에서 쌓은 것들입니다. 승전 뒤의 세 갈래를 하나씩 끝낼 때마다 수치가 더해집니다."
+ TFRKPHN_pw_grant_prosperity_tt:0 "§Y전후 번영§!: 국민정신 §Y승전의 유산§!에 더해집니다.\n공장 산출량 §G+10%§!\n안정도 §G+3%§!"
+ TFRKPHN_pw_grant_defense_tt:0 "§Y자주국방§!: 국민정신 §Y승전의 유산§!에 더해집니다.\n사단 공격 §G+5%§!\n사단 방어 §G+5%§!\n전쟁 지지도 §G+3%§!"
+ TFRKPHN_pw_grant_diplomacy_tt:0 "§Y아시아 민주주의 연합§!: 국민정신 §Y승전의 유산§!에 더해집니다.\n일일 정치력 §G+0.20§!\n안정도 §G+3%§!"

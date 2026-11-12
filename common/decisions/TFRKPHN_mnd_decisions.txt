@@ -4,47 +4,47 @@ TFRKPHN_mnd_category = {
 	# ===== 각 군 개혁 (각 1회). 예전에는 패널 마크를 누르면 바로 됐고, 지금은 탭 안의 결정이다 =====
 	TFRKPHN_mnd_army_reform = {
 		icon = GFX_decision_generic_political_actions
-		cost = 50
+		cost = 25
 		fire_only_once = yes
 		priority = 300
 		visible = { check_variable = { TFRKPHN_mnd_tab = 1 } }
 		complete_effect = { hidden_effect = { add_to_array = { array = TFRKPHN_mnd_done value = 1 } }
 			army_experience = 25
 			set_country_flag = TFRKPHN_mnd_army_done
-			add_dynamic_modifier = { modifier = TFRKPHN_mnd_army }
+			TFRKPHN_mndx_grant_army = yes
 		}
 		ai_will_do = { factor = 1 }
 	}
 	TFRKPHN_mnd_navy_reform = {
 		icon = GFX_decision_generic_political_actions
-		cost = 50
+		cost = 25
 		fire_only_once = yes
 		priority = 300
 		visible = { check_variable = { TFRKPHN_mnd_tab = 2 } }
 		complete_effect = { hidden_effect = { add_to_array = { array = TFRKPHN_mnd_done value = 2 } }
 			navy_experience = 25
 			set_country_flag = TFRKPHN_mnd_navy_done
-			add_dynamic_modifier = { modifier = TFRKPHN_mnd_navy }
+			TFRKPHN_mndx_grant_navy = yes
 		}
 		ai_will_do = { factor = 1 }
 	}
 	TFRKPHN_mnd_fa50_buy = {
 		icon = GFX_decision_generic_political_actions
-		cost = 75
+		cost = 38
 		fire_only_once = yes
 		priority = 300
 		visible = { check_variable = { TFRKPHN_mnd_tab = 3 } }
 		complete_effect = { hidden_effect = { add_to_array = { array = TFRKPHN_mnd_done value = 3 } }
 			air_experience = 25
 			set_country_flag = TFRKPHN_mnd_fa50_done
-			add_dynamic_modifier = { modifier = TFRKPHN_mnd_fa50 }
+			TFRKPHN_mndx_grant_fa50 = yes
 			TFRKPHN_mnd_fa50_planes = yes
 		}
 		ai_will_do = { factor = 1 }
 	}
 	TFRKPHN_mnd_f4_retire = {
 		icon = GFX_decision_generic_political_actions
-		cost = 50
+		cost = 25
 		fire_only_once = yes
 		priority = 299
 		visible = { check_variable = { TFRKPHN_mnd_tab = 3 } }
@@ -52,26 +52,26 @@ TFRKPHN_mnd_category = {
 		complete_effect = { hidden_effect = { add_to_array = { array = TFRKPHN_mnd_done value = 4 } }
 			air_experience = 25
 			set_country_flag = TFRKPHN_mnd_f4_done
-			add_dynamic_modifier = { modifier = TFRKPHN_mnd_f4 }
+			TFRKPHN_mndx_grant_f4 = yes
 		}
 		ai_will_do = { factor = 1 }
 	}
 	TFRKPHN_mnd_marine_create = {
 		icon = GFX_decision_generic_political_actions
-		cost = 100
+		cost = 50
 		fire_only_once = yes
 		priority = 300
 		visible = { check_variable = { TFRKPHN_mnd_tab = 4 } }
 		complete_effect = { hidden_effect = { add_to_array = { array = TFRKPHN_mnd_done value = 5 } }
 			army_experience = 25
 			set_country_flag = TFRKPHN_mnd_marine_done
-			add_dynamic_modifier = { modifier = TFRKPHN_mnd_marine_sof }
+			TFRKPHN_mndx_grant_marine_sof = yes
 		}
 		ai_will_do = { factor = 1 }
 	}
 	TFRKPHN_mnd_industry = {
 		icon = GFX_decision_generic_political_actions
-		cost = 100
+		cost = 50
 		fire_only_once = yes
 		priority = 300
 		visible = { check_variable = { TFRKPHN_mnd_tab = 0 } }
@@ -94,7 +94,7 @@ TFRKPHN_mnd_category = {
 	}
 	TFRKPHN_mnd_space_create = {
 		icon = GFX_decision_generic_political_actions
-		cost = 150
+		cost = 75
 		fire_only_once = yes
 		priority = 299
 		visible = { check_variable = { TFRKPHN_mnd_tab = 0 } }
@@ -110,13 +110,13 @@ TFRKPHN_mnd_category = {
 		}
 		complete_effect = { hidden_effect = { add_to_array = { array = TFRKPHN_mnd_done value = 7 } }
 			set_country_flag = TFRKPHN_mnd_space_done
-			add_dynamic_modifier = { modifier = TFRKPHN_mnd_space }
+			TFRKPHN_mndx_grant_space = yes
 		}
 		ai_will_do = { factor = 1 }
 	}
 	TFRKPHN_mnd_k2 = {
 		icon = GFX_decision_generic_political_actions
-		cost = 75
+		cost = 38
 		days_remove = 90
 		fire_only_once = yes
 		visible = { check_variable = { TFRKPHN_mnd_tab = 1 } }
@@ -127,7 +127,7 @@ TFRKPHN_mnd_category = {
 	}
 	TFRKPHN_mnd_k9 = {
 		icon = GFX_decision_generic_political_actions
-		cost = 75
+		cost = 38
 		days_remove = 90
 		fire_only_once = yes
 		visible = { check_variable = { TFRKPHN_mnd_tab = 1 } }
@@ -138,7 +138,7 @@ TFRKPHN_mnd_category = {
 	}
 	TFRKPHN_mnd_reserve = {
 		icon = GFX_decision_generic_political_actions
-		cost = 50
+		cost = 25
 		days_remove = 60
 		fire_only_once = yes
 		visible = { check_variable = { TFRKPHN_mnd_tab = 1 } }
@@ -148,15 +148,15 @@ TFRKPHN_mnd_category = {
 	}
 	TFRKPHN_mnd_barracks = {
 		icon = GFX_decision_generic_political_actions
-		cost = 50
+		cost = 25
 		fire_only_once = yes
 		visible = { check_variable = { TFRKPHN_mnd_tab = 0 } }
-		complete_effect = { hidden_effect = { add_to_array = { array = TFRKPHN_mnd_done value = 11 } } add_dynamic_modifier = { modifier = TFRKPHN_mnd_barracks } }
+		complete_effect = { hidden_effect = { add_to_array = { array = TFRKPHN_mnd_done value = 11 } } TFRKPHN_mndx_grant_barracks = yes }
 		ai_will_do = { factor = 1 }
 	}
 	TFRKPHN_mnd_export = {
 		icon = GFX_decision_generic_attract_foreign_investors
-		cost = 50
+		cost = 25
 		days_remove = 30
 		fire_only_once = yes
 		visible = { check_variable = { TFRKPHN_mnd_tab = 0 } }
@@ -360,7 +360,7 @@ TFRKPHN_mnd_category = {
 	# ===== 무장평화론 (중점 TFRKPHN_hong_b03_11 완료 뒤, 각 1회) =====
 	TFRKPHN_mnd_armpeace_arms = {
 		icon = GFX_decision_generic_political_actions
-		cost = 75
+		cost = 38
 		days_remove = 90
 		fire_only_once = yes
 		priority = 260
@@ -381,7 +381,7 @@ TFRKPHN_mnd_category = {
 	}
 	TFRKPHN_mnd_armpeace_dock = {
 		icon = GFX_decision_generic_political_actions
-		cost = 75
+		cost = 38
 		days_remove = 90
 		fire_only_once = yes
 		priority = 260
@@ -408,7 +408,7 @@ TFRKPHN_mnd_category = {
 	# ===== KDDX 선행 개발 3종 (각 1회): 셋을 모두 끝내야 KDDX 건조를 할 수 있다 =====
 	TFRKPHN_mnd_kvls = {
 		icon = GFX_decision_generic_political_actions
-		cost = 50
+		cost = 25
 		days_remove = 90
 		fire_only_once = yes
 		priority = 245
@@ -424,7 +424,7 @@ TFRKPHN_mnd_category = {
 	}
 	TFRKPHN_mnd_ciws2 = {
 		icon = GFX_decision_generic_political_actions
-		cost = 50
+		cost = 25
 		days_remove = 90
 		fire_only_once = yes
 		priority = 245
@@ -439,7 +439,7 @@ TFRKPHN_mnd_category = {
 	}
 	TFRKPHN_mnd_saam2 = {
 		icon = GFX_decision_generic_political_actions
-		cost = 75
+		cost = 38
 		days_remove = 120
 		fire_only_once = yes
 		priority = 245
@@ -457,7 +457,7 @@ TFRKPHN_mnd_category = {
 	# ===== KDDX 사업 최종선정 (1회): 기동함대 창설 + 선행 개발 3종 뒤 =====
 	TFRKPHN_mnd_kddx = {
 		icon = GFX_decision_generic_political_actions
-		cost = 100
+		cost = 50
 		days_remove = 180
 		fire_only_once = yes
 		priority = 240
@@ -484,7 +484,7 @@ TFRKPHN_mnd_category = {
 	# ===== 해병대 탭 추가 결정 (해병특수작전군 창설 뒤) =====
 	TFRKPHN_mnd_marineon = {
 		icon = GFX_decision_generic_political_actions
-		cost = 50
+		cost = 25
 		days_remove = 90
 		fire_only_once = yes
 		priority = 295
@@ -493,20 +493,20 @@ TFRKPHN_mnd_category = {
 		complete_effect = { custom_effect_tooltip = TFRKPHN_mnd_after_90_tt }
 		remove_effect = { hidden_effect = { add_to_array = { array = TFRKPHN_mnd_done value = 19 } }
 			army_experience = 15
-			add_dynamic_modifier = { modifier = TFRKPHN_mnd_marineon }
+			TFRKPHN_mndx_grant_marineon = yes
 		}
 		ai_will_do = { factor = 1 }
 	}
 	TFRKPHN_mnd_nwi_command = {
 		icon = GFX_decision_generic_political_actions
-		cost = 75
+		cost = 38
 		fire_only_once = yes
 		priority = 294
 		visible = { check_variable = { TFRKPHN_mnd_tab = 4 } }
 		available = { has_country_flag = TFRKPHN_mnd_marine_done }
 		complete_effect = { hidden_effect = { add_to_array = { array = TFRKPHN_mnd_done value = 20 } }
 			army_experience = 15
-			add_dynamic_modifier = { modifier = TFRKPHN_mnd_nwi_command }
+			TFRKPHN_mndx_grant_nwi_command = yes
 			random_owned_state = {
 				limit = { is_core_of = ROOT is_coastal = yes }
 				add_building_construction = { type = coastal_bunker level = 2 province = { all_provinces = yes limit_to_coastal = yes } instant_build = yes }
@@ -518,7 +518,7 @@ TFRKPHN_mnd_category = {
 	# ===== 공군 탭 추가 결정 =====
 	TFRKPHN_mnd_kc330 = {
 		icon = GFX_decision_generic_political_actions
-		cost = 75
+		cost = 38
 		days_remove = 90
 		fire_only_once = yes
 		priority = 290
@@ -526,13 +526,13 @@ TFRKPHN_mnd_category = {
 		complete_effect = { custom_effect_tooltip = TFRKPHN_mnd_after_90_tt }
 		remove_effect = { hidden_effect = { add_to_array = { array = TFRKPHN_mnd_done value = 21 } }
 			air_experience = 15
-			add_dynamic_modifier = { modifier = TFRKPHN_mnd_kc330 }
+			TFRKPHN_mndx_grant_kc330 = yes
 		}
 		ai_will_do = { factor = 1 }
 	}
 	TFRKPHN_mnd_global_hawk = {
 		icon = GFX_decision_generic_political_actions
-		cost = 75
+		cost = 38
 		days_remove = 90
 		fire_only_once = yes
 		priority = 289
@@ -540,14 +540,14 @@ TFRKPHN_mnd_category = {
 		complete_effect = { custom_effect_tooltip = TFRKPHN_mnd_after_90_tt }
 		remove_effect = { hidden_effect = { add_to_array = { array = TFRKPHN_mnd_done value = 22 } }
 			air_experience = 15
-			add_dynamic_modifier = { modifier = TFRKPHN_mnd_global_hawk }
+			TFRKPHN_mndx_grant_global_hawk = yes
 			add_tech_bonus = { name = TFRKPHN_mnd_global_hawk bonus = 0.5 uses = 1 category = radar_tech }
 		}
 		ai_will_do = { factor = 1 }
 	}
 	TFRKPHN_mnd_sat425 = {
 		icon = GFX_decision_generic_political_actions
-		cost = 100
+		cost = 50
 		days_remove = 120
 		fire_only_once = yes
 		priority = 288
@@ -556,7 +556,7 @@ TFRKPHN_mnd_category = {
 		complete_effect = { custom_effect_tooltip = TFRKPHN_mnd_after_120_tt }
 		remove_effect = { hidden_effect = { add_to_array = { array = TFRKPHN_mnd_done value = 23 } }
 			air_experience = 25
-			add_dynamic_modifier = { modifier = TFRKPHN_mnd_sat425 }
+			TFRKPHN_mndx_grant_sat425 = yes
 			add_tech_bonus = { name = TFRKPHN_mnd_sat425 bonus = 1.0 uses = 1 category = electronics }
 		}
 		ai_will_do = { factor = 1 }
@@ -564,7 +564,7 @@ TFRKPHN_mnd_category = {
 	# ===== 육군 탭 추가 결정 =====
 	TFRKPHN_mnd_drone_command = {
 		icon = GFX_decision_generic_political_actions
-		cost = 75
+		cost = 38
 		days_remove = 90
 		fire_only_once = yes
 		priority = 290
@@ -572,14 +572,14 @@ TFRKPHN_mnd_category = {
 		complete_effect = { custom_effect_tooltip = TFRKPHN_mnd_after_90_tt }
 		remove_effect = { hidden_effect = { add_to_array = { array = TFRKPHN_mnd_done value = 24 } }
 			army_experience = 15
-			add_dynamic_modifier = { modifier = TFRKPHN_mnd_drone_command }
+			TFRKPHN_mndx_grant_drone_command = yes
 			add_tech_bonus = { name = TFRKPHN_mnd_drone_command bonus = 0.5 uses = 1 category = artificial_intelligence }
 		}
 		ai_will_do = { factor = 1 }
 	}
 	TFRKPHN_mnd_army_tiger = {
 		icon = GFX_decision_generic_political_actions
-		cost = 100
+		cost = 50
 		days_remove = 120
 		fire_only_once = yes
 		priority = 289
@@ -588,7 +588,7 @@ TFRKPHN_mnd_category = {
 		complete_effect = { custom_effect_tooltip = TFRKPHN_mnd_after_120_tt }
 		remove_effect = { hidden_effect = { add_to_array = { array = TFRKPHN_mnd_done value = 25 } }
 			army_experience = 25
-			add_dynamic_modifier = { modifier = TFRKPHN_mnd_army_tiger }
+			TFRKPHN_mndx_grant_army_tiger = yes
 			add_tech_bonus = { name = TFRKPHN_mnd_army_tiger bonus = 0.5 uses = 1 category = cat_mobile_warfare }
 		}
 		ai_will_do = { factor = 1 }
