@@ -70,6 +70,21 @@ characters = {
 			id = -1
 		}
 	}
+	# 김한솔: 초상화는 사용자가 준 것. 아직 어느 나라에도 넣지 않았다 (쓸 자리가 정해지면 recruit_character 로 부른다)
+	TFRKPHN_kim_han_sol_char = {
+		name = TFRKPHN_kim_han_sol_char
+		portraits = {
+			civilian = {
+				large = GFX_portrait_TFRKPHN_kim_han_sol
+			}
+		}
+		country_leader = {
+			desc = TFRKPHN_kim_han_sol_char_desc
+			ideology = interim_democracy_authoritarioan
+			expire = "2065.1.1"
+			id = -1
+		}
+	}
 	# 조선인민군 군사위원회(CPK) 지도자: TFR 원본 최룡해 초상화와 이름을 그대로 쓴다
 	TFRKPHN_cho_ryong_hae_char = {
 		name = NK3_cho_ryong_hae

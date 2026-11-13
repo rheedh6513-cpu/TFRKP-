@@ -6,3 +6,10 @@ music = {
 		factor = 0
 	}
 }
+
+music = {
+	song = "TFRKP_TFRKPHN_FINISH_LINE"
+	chance = {
+		factor = 0
+	}
+}

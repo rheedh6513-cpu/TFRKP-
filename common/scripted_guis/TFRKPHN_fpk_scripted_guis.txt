@@ -42,4 +42,19 @@ scripted_gui = {
 		visible = { tag = FPK }
 		triggers = { view_click_enabled = { always = no } }
 	}
+	# 김한솔 칸 (portrait_add.py)
+	TFRKPHN_fpk_kim_han_sol_tt = {
+		context_type = player_context
+		parent_window_token = politics_tab
+		window_name = "TFRKPHN_fpk_kim_han_sol_tt_container"
+		visible = { tag = FPK }
+		triggers = { view_click_enabled = { always = no } }
+	}
+	TFRKPHN_fpk_kim_han_sol_tt_diplo = {
+		context_type = selected_country_context
+		parent_window_token = selected_country_view_diplomacy
+		window_name = "TFRKPHN_fpk_kim_han_sol_tt_diplo_container"
+		visible = { tag = FPK }
+		triggers = { view_click_enabled = { always = no } }
+	}
 }

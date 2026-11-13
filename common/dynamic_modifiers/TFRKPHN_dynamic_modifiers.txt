@@ -165,4 +165,9 @@ TFRKPHN_lee_gov = {
 	army_org_factor = TFRKPHN_lee_army
 	war_support_factor = TFRKPHN_lee_war
 	industrial_capacity_factory = TFRKPHN_lee_ind
+	# 경제 보정 (TFR 본체의 수치): 사업 가치, 개인 가치, 수입 증가, 월간 인플레이션. buff_build.py가 중점마다 더한다
+	business_value_factor = TFRKPHN_lee_biz
+	personal_value_factor = TFRKPHN_lee_pers
+	income_growth_factor = TFRKPHN_lee_incg
+	inflation_monthly = TFRKPHN_lee_infl
 }

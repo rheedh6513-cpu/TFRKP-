@@ -1,0 +1,84 @@
+# [안내] 대아대전 승전 엔딩 중점의 이벤트. 문구는 localisation/korean/TFRKPHN_gawend_l_korean.yml. gawend_build.py가 만든다.
+add_namespace = tfrkphn
+
+country_event = {
+	id = tfrkphn.556
+	title = tfrkphn.556.t
+	desc = tfrkphn.556.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.556.a
+	}
+}
+
+country_event = {
+	id = tfrkphn.557
+	title = tfrkphn.557.t
+	desc = tfrkphn.557.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.557.a
+	}
+}
+
+country_event = {
+	id = tfrkphn.558
+	title = tfrkphn.558.t
+	desc = tfrkphn.558.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.558.a
+		custom_effect_tooltip = TFRKPHN_gawend_eac_tt
+		hidden_effect = {
+			if = {
+				limit = { NOT = { has_global_flag = TFRKPHN_eac_formed } }
+				set_global_flag = TFRKPHN_eac_formed
+				news_event = { id = kor_news.32 days = 1 }
+				set_faction_name = EAC_FACTION
+			}
+		}
+	}
+}
+
+country_event = {
+	id = tfrkphn.559
+	title = tfrkphn.559.t
+	desc = tfrkphn.559.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.559.a
+	}
+}
+
+country_event = {
+	id = tfrkphn.560
+	title = tfrkphn.560.t
+	desc = tfrkphn.560.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.560.a
+	}
+}
+
+country_event = {
+	id = tfrkphn.561
+	title = tfrkphn.561.t
+	desc = tfrkphn.561.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.561.a
+	}
+}
+

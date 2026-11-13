@@ -20,6 +20,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			add_political_power = 50	# 버프 (buff_build.py)
 			country_event = { id = tfrkphn.260 }
 			TFRKPHN_lee_gov_init = yes
 			TFRKPHN_lee_cabinet_appoint = yes	# 이인제 정부 장관 여섯 명 임명
@@ -36,6 +37,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			add_political_power = 50	# 버프 (buff_build.py)
 			country_event = { id = tfrkphn.261 }
 			custom_effect_tooltip = TFRKPHN_dept_start_tt	# 임기를 함께하는 내각 탭과 국무회의가 열린다
 			add_stability = 0.04
@@ -54,6 +56,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			add_to_variable = { TFRKPHN_lee_stab = 0.02 } add_political_power = 50 TFRKPHN_lee_gov_init = yes custom_effect_tooltip = TFRKPHN_buff_a2_tt	# 버프 (buff_build.py)
 			hidden_effect = { country_event = { id = tfrkphn.502 days = 2 } }	# 홍준표 이야기 (hong_build.py)
 			country_event = { id = tfrkphn.263 }
 			add_to_variable = { TFRKPHN_lee_stab = 0.03 }
@@ -73,6 +76,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			add_to_variable = { TFRKPHN_lee_pp = 0.05 } TFRKPHN_lee_gov_init = yes custom_effect_tooltip = TFRKPHN_buff_a2b_tt	# 버프 (buff_build.py)
 			hidden_effect = { country_event = { id = tfrkphn.502 days = 2 } }	# 홍준표 이야기 (hong_build.py)
 			country_event = { id = tfrkphn.264 }
 			add_to_variable = { TFRKPHN_lee_pp = 0.05 }
@@ -91,6 +95,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			add_stability = 0.02	# 버프 (buff_build.py)
 			country_event = { id = tfrkphn.265 }
 			add_to_variable = { TFRKPHN_lee_pp = 0.05 }
 			TFRKPHN_lee_gov_init = yes
@@ -108,6 +113,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			add_to_variable = { TFRKPHN_lee_pp = 0.03 } TFRKPHN_lee_gov_init = yes custom_effect_tooltip = TFRKPHN_buff_a4_tt	# 버프 (buff_build.py)
 			country_event = { id = tfrkphn.521 }	# 김영삼, 김대중, 김종필 세 편 (threekims_build.py)
 			add_political_power = 75
 			add_stability = 0.02
@@ -124,6 +130,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			add_political_power = 50 add_to_variable = { TFRKPHN_lee_stab = 0.02 } TFRKPHN_lee_gov_init = yes custom_effect_tooltip = TFRKPHN_buff_a4b_tt	# 버프 (buff_build.py)
 			country_event = { id = tfrkphn.518 }	# 서명하지 않은 명령서 (lawexec_build.py)
 			add_stability = 0.03
 		}
@@ -139,6 +146,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			add_stability = 0.02 add_to_variable = { TFRKPHN_lee_biz = 0.02 } TFRKPHN_lee_gov_init = yes custom_effect_tooltip = TFRKPHN_buff_a5_tt	# 버프 (buff_build.py)
 			country_event = { id = tfrkphn.524 }	# 입찰 설명회, 돈이 흐르는 길목 (jk_build.py)
 			custom_effect_tooltip = TFRKPHN_jk_inv_tt	# 정경유착 수사 비용과 대기가 줄어든다
 			add_political_power = 50
@@ -158,6 +166,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			add_political_power = 50 add_to_variable = { TFRKPHN_lee_incg = 0.005 } add_to_variable = { TFRKPHN_lee_infl = -0.001 } if = { limit = { check_variable = { debt_var > 10 } } set_temp_variable = { var = debt_var_temp value = -10 } add_debt_with_inflation = yes } custom_effect_tooltip = TFRKPHN_buff_debt10_tt TFRKPHN_lee_gov_init = yes custom_effect_tooltip = TFRKPHN_buff_a6_tt	# 버프 (buff_build.py)
 			add_stability = 0.03
 			add_to_variable = { TFRKPHN_lee_cg = -0.02 }
 			TFRKPHN_wd_start = yes	# 전쟁 국채 상환 탭 (debt_build.py)
@@ -176,6 +185,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			add_to_variable = { TFRKPHN_lee_res = 0.03 } add_to_variable = { TFRKPHN_lee_pers = 0.01 } TFRKPHN_lee_gov_init = yes custom_effect_tooltip = TFRKPHN_buff_b1_tt	# 버프 (buff_build.py)
 			country_event = { id = tfrkphn.262 }
 			add_political_power = 75
 		}
@@ -191,6 +201,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			add_to_variable = { TFRKPHN_lee_cg = -0.01 } add_to_variable = { TFRKPHN_lee_pers = 0.01 } TFRKPHN_lee_gov_init = yes custom_effect_tooltip = TFRKPHN_buff_b2_tt	# 버프 (buff_build.py)
 			hidden_effect = { country_event = { id = tfrkphn.477 } }
 			hidden_effect = { country_event = { id = tfrkphn.476 days = 3 } }
 			# 일자리 대타협 탭의 일자리 수가 오른다
@@ -213,6 +224,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			add_to_variable = { TFRKPHN_lee_ind = 0.02 } add_to_variable = { TFRKPHN_lee_biz = 0.03 } TFRKPHN_lee_gov_init = yes custom_effect_tooltip = TFRKPHN_buff_b3_tt	# 버프 (buff_build.py)
 			custom_effect_tooltip = TFRKPHN_ut_focus_tt
 			hidden_effect = { set_country_flag = TFRKPHN_ut_on set_country_flag = { flag = TFRKPHN_ut_cd days = 10 value = 1 } }
 			hidden_effect = { country_event = { id = tfrkphn.480 } }
@@ -236,6 +248,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			add_to_variable = { TFRKPHN_lee_cg = -0.02 } add_to_variable = { TFRKPHN_lee_pers = 0.02 } TFRKPHN_lee_gov_init = yes custom_effect_tooltip = TFRKPHN_buff_b5_tt	# 버프 (buff_build.py)
 			hidden_effect = { country_event = { id = tfrkphn.478 } }
 			# 일자리 대타협 탭의 일자리 수가 오른다
 			custom_effect_tooltip = TFRKPHN_job_focus_10_tt
@@ -258,6 +271,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			add_to_variable = { TFRKPHN_lee_res = 0.03 } add_to_variable = { TFRKPHN_lee_biz = 0.02 } TFRKPHN_lee_gov_init = yes custom_effect_tooltip = TFRKPHN_buff_b6_tt	# 버프 (buff_build.py)
 			hidden_effect = { country_event = { id = tfrkphn.481 } }
 			# 일자리 대타협 탭의 일자리 수가 오른다
 			custom_effect_tooltip = TFRKPHN_job_focus_5_tt
@@ -278,6 +292,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			add_stability = 0.02 add_to_variable = { TFRKPHN_lee_pers = 0.01 } TFRKPHN_lee_gov_init = yes custom_effect_tooltip = TFRKPHN_buff_b7_tt	# 버프 (buff_build.py)
 			hidden_effect = { country_event = { id = tfrkphn.479 } }
 			# 일자리 대타협 탭의 일자리 수가 오른다
 			custom_effect_tooltip = TFRKPHN_job_focus_5_tt
@@ -298,6 +313,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			add_to_variable = { TFRKPHN_lee_build = 0.03 } add_to_variable = { TFRKPHN_lee_biz = 0.02 } TFRKPHN_lee_gov_init = yes custom_effect_tooltip = TFRKPHN_buff_b4_tt	# 버프 (buff_build.py)
 			# 일자리 대타협 탭의 일자리 수가 오른다
 			custom_effect_tooltip = TFRKPHN_job_focus_5_tt
 			custom_effect_tooltip = TFRKPHN_job_focus_biz_tt
@@ -317,6 +333,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			add_political_power = 50	# 버프 (buff_build.py)
 			add_war_support = 0.03
 			custom_effect_tooltip = TFRKPHN_nk_open_tt
 		}
@@ -333,6 +350,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			add_stability = 0.02	# 버프 (buff_build.py)
 			custom_effect_tooltip = TFRKPHN_c2_nk_tt
 			hidden_effect = { if = { limit = { NOT = { has_country_flag = TFRKPHN_kju_op_done } } TFRKPHN_nk_start = yes TFRKPHN_nk_all_m_5 = yes TFRKPHN_nk_all_m_5 = yes } }
 			hidden_effect = { country_event = { id = tfrkphn.504 days = 2 } }	# 홍준표 이야기 (hong_build.py)
@@ -351,6 +369,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			add_to_variable = { TFRKPHN_lee_war = 0.03 } TFRKPHN_lee_gov_init = yes custom_effect_tooltip = TFRKPHN_buff_c3_tt	# 버프 (buff_build.py)
 			custom_effect_tooltip = TFRKPHN_c3_nk_tt
 			hidden_effect = { country_event = { id = tfrkphn.505 } if = { limit = { NOT = { has_country_flag = TFRKPHN_kju_op_done } } TFRKPHN_nk_start = yes TFRKPHN_nk_all_d_5 = yes TFRKPHN_nk_all_d_5 = yes } }
 			add_war_support = 0.05
@@ -367,6 +386,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			add_political_power = 50 add_to_variable = { TFRKPHN_lee_stab = 0.02 } TFRKPHN_lee_gov_init = yes custom_effect_tooltip = TFRKPHN_buff_c5_tt	# 버프 (buff_build.py)
 			country_event = { id = tfrkphn.536 }	# 탈북민 정착 지원 (settle_build.py)
 			add_stability = 0.03
 		}
@@ -382,6 +402,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			add_stability = 0.02	# 버프 (buff_build.py)
 			country_event = { id = tfrkphn.535 }	# 북한인권재단 출범 (nkhr_build.py)
 			add_political_power = 50
 			add_war_support = 0.02
@@ -399,6 +420,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			add_to_variable = { TFRKPHN_lee_pp = 0.03 } TFRKPHN_lee_gov_init = yes custom_effect_tooltip = TFRKPHN_buff_c7_tt	# 버프 (buff_build.py)
 			hidden_effect = { country_event = { id = tfrkphn.506 } }
 			add_political_power = 75
 			JAP = { add_opinion_modifier = { target = ROOT modifier = TFRKPHN_lee_alliance } }
@@ -416,6 +438,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			add_to_variable = { TFRKPHN_lee_build = 0.05 } add_to_variable = { TFRKPHN_lee_biz = 0.02 } TFRKPHN_lee_gov_init = yes custom_effect_tooltip = TFRKPHN_buff_c8_tt	# 버프 (buff_build.py)
 			hidden_effect = { country_event = { id = tfrkphn.507 } }
 			set_temp_variable = { var = income_var_temp value = -10 }
 			add_income = yes
@@ -436,6 +459,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			add_to_variable = { TFRKPHN_lee_ind = 0.03 } add_to_variable = { TFRKPHN_lee_incg = 0.01 } TFRKPHN_lee_gov_init = yes custom_effect_tooltip = TFRKPHN_buff_c4_tt	# 버프 (buff_build.py)
 			country_event = { id = tfrkphn.552 }	# 통일은 경제다 (wel_build.py)
 			add_war_support = 0.05
 			add_to_variable = { TFRKPHN_lee_war = 0.10 }
@@ -454,6 +478,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			add_political_power = 75	# 버프 (buff_build.py)
 			country_event = { id = tfrkphn.537 }	# 누군가는 해야 할 일 (d1_build.py)
 			add_popularity = { ideology = conservative popularity = 0.05 }
 		}
@@ -470,6 +495,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			add_to_variable = { TFRKPHN_lee_eff = 0.03 } add_to_variable = { TFRKPHN_lee_pers = 0.02 } TFRKPHN_lee_gov_init = yes custom_effect_tooltip = TFRKPHN_buff_d2_tt	# 버프 (buff_build.py)
 			country_event = { id = tfrkphn.538 }	# 하르츠 개혁 (d2_build.py)
 			add_stability = 0.05
 			add_to_variable = { TFRKPHN_lee_cg = -0.02 }
@@ -489,6 +515,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			add_political_power = 75 add_to_variable = { TFRKPHN_lee_incg = 0.005 } TFRKPHN_lee_gov_init = yes custom_effect_tooltip = TFRKPHN_buff_d2b_tt	# 버프 (buff_build.py)
 			country_event = { id = tfrkphn.539 }	# 국회 입법으로 돌파 (d2b_build.py)
 			add_to_variable = { TFRKPHN_lee_pp = 0.10 }
 			TFRKPHN_lee_gov_init = yes
@@ -507,6 +534,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			add_to_variable = { TFRKPHN_lee_ind = 0.02 } add_to_variable = { TFRKPHN_lee_pers = 0.01 } add_to_variable = { TFRKPHN_lee_incg = 0.005 } TFRKPHN_lee_gov_init = yes custom_effect_tooltip = TFRKPHN_buff_d3_tt	# 버프 (buff_build.py)
 			country_event = { id = tfrkphn.540 }	# 정년 연장과 임금체계 개편 (d3_build.py)
 			add_to_variable = { TFRKPHN_lee_eff = 0.05 }
 			TFRKPHN_lee_gov_init = yes
@@ -525,6 +553,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			add_to_variable = { TFRKPHN_lee_eff = 0.03 } add_to_variable = { TFRKPHN_lee_biz = 0.02 } add_to_variable = { TFRKPHN_lee_infl = -0.001 } if = { limit = { check_variable = { debt_var > 10 } } set_temp_variable = { var = debt_var_temp value = -10 } add_debt_with_inflation = yes } custom_effect_tooltip = TFRKPHN_buff_debt10_tt TFRKPHN_lee_gov_init = yes custom_effect_tooltip = TFRKPHN_buff_d4_tt	# 버프 (buff_build.py)
 			country_event = { id = tfrkphn.541 }	# 생산성만큼의 임금 (d4_build.py)
 			add_to_variable = { TFRKPHN_lee_ind = 0.05 }
 			TFRKPHN_lee_gov_init = yes
@@ -544,6 +573,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			add_to_variable = { TFRKPHN_lee_stab = 0.03 } add_political_power = 50 add_to_variable = { TFRKPHN_lee_pers = 0.01 } TFRKPHN_lee_gov_init = yes custom_effect_tooltip = TFRKPHN_buff_d4b_tt	# 버프 (buff_build.py)
 			country_event = { id = tfrkphn.542 }	# 무노동 부분임금 (d4b_build.py)
 			add_stability = 0.05
 		}
@@ -559,6 +589,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			add_stability = 0.02 add_to_variable = { TFRKPHN_lee_biz = 0.02 } TFRKPHN_lee_gov_init = yes custom_effect_tooltip = TFRKPHN_buff_e1_tt	# 버프 (buff_build.py)
 			custom_effect_tooltip = TFRKPHN_chb_focus_tt
 			hidden_effect = { country_event = { id = tfrkphn.466 } }
 			add_political_power = 50
@@ -578,6 +609,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			add_political_power = 50 add_to_variable = { TFRKPHN_lee_pers = 0.01 } TFRKPHN_lee_gov_init = yes custom_effect_tooltip = TFRKPHN_buff_e2_tt	# 버프 (buff_build.py)
 			country_event = { id = tfrkphn.553 }	# 가진 만큼의 지분 (wel_build.py)
 			add_to_variable = { TFRKPHN_lee_build = 0.05 }
 			TFRKPHN_lee_gov_init = yes
@@ -602,6 +634,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			add_to_variable = { TFRKPHN_lee_eff = 0.03 } add_to_variable = { TFRKPHN_lee_pers = 0.02 } TFRKPHN_lee_gov_init = yes custom_effect_tooltip = TFRKPHN_buff_e3_tt	# 버프 (buff_build.py)
 			country_event = { id = tfrkphn.554 }	# 일하는 어머니 (wel_build.py)
 			set_temp_variable = { society_development_var_temp = 0.1 }
 			add_society_development = yes
@@ -625,6 +658,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			add_political_power = 50 add_to_variable = { TFRKPHN_lee_stab = 0.02 } add_to_variable = { TFRKPHN_lee_pers = 0.01 } TFRKPHN_lee_gov_init = yes custom_effect_tooltip = TFRKPHN_buff_e4_tt	# 버프 (buff_build.py)
 			country_event = { id = tfrkphn.555 }	# 카드 한 장 (wel_build.py)
 			add_stability = 0.04
 		}
@@ -640,6 +674,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			add_to_variable = { TFRKPHN_lee_army = 0.03 } TFRKPHN_lee_gov_init = yes custom_effect_tooltip = TFRKPHN_buff_h1_tt	# 버프 (buff_build.py)
 			country_event = { id = tfrkphn.547 }	# 외정은 대통령이 (sec_build.py)
 			TFRKPHN_mil_start = yes	# 전후 군 재편: 탭 열기 (mil_build.py)
 			add_command_power = 30
@@ -659,6 +694,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			add_to_variable = { TFRKPHN_lee_stab = 0.02 } TFRKPHN_lee_gov_init = yes custom_effect_tooltip = TFRKPHN_buff_h2_tt	# 버프 (buff_build.py)
 			TFRKPHN_mil_pick_h2 = yes	# 전후 군 재편: 핵 없는 한반도 (mil_build.py)
 			hidden_effect = { country_event = { id = tfrkphn.501 days = 2 } }	# 홍준표 이야기 (hong_build.py)
 			add_stability = 0.03
@@ -677,6 +713,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			add_to_variable = { TFRKPHN_lee_war = 0.05 } add_command_power = 30 TFRKPHN_lee_gov_init = yes custom_effect_tooltip = TFRKPHN_buff_h2b_tt	# 버프 (buff_build.py)
 			country_event = { id = tfrkphn.548 }	# 반대 팻말 (sec_build.py)
 			TFRKPHN_mil_pick_h2b = yes	# 전후 군 재편: 물려받은 핵억지 (mil_build.py)
 			JAP = { add_opinion_modifier = { target = ROOT modifier = TFRKPHN_lee_alliance } }
@@ -695,6 +732,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			army_experience = 30 air_experience = 30	# 버프 (buff_build.py)
 			country_event = { id = tfrkphn.549 }	# 최소한의 대응조치 (sec_build.py)
 			add_war_support = 0.03
 			add_to_variable = { TFRKPHN_lee_war = 0.05 }
@@ -713,6 +751,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			add_to_variable = { TFRKPHN_lee_army = 0.03 } navy_experience = 30 TFRKPHN_lee_gov_init = yes custom_effect_tooltip = TFRKPHN_buff_h4_tt	# 버프 (buff_build.py)
 			country_event = { id = tfrkphn.550 }	# 국방개혁 (sec_build.py)
 			army_experience = 50
 			add_to_variable = { TFRKPHN_lee_army = 0.05 }
@@ -731,6 +770,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			add_to_variable = { TFRKPHN_lee_army = 0.05 } add_command_power = 50 TFRKPHN_lee_gov_init = yes custom_effect_tooltip = TFRKPHN_buff_h5_tt	# 버프 (buff_build.py)
 			country_event = { id = tfrkphn.551 }	# 통일 뒤의 군대 (sec_build.py)
 			set_temp_variable = { military_development_var_temp = 0.1 }
 			add_military_development = yes
@@ -747,6 +787,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			add_political_power = 75 add_to_variable = { TFRKPHN_lee_war = 0.03 } TFRKPHN_lee_gov_init = yes custom_effect_tooltip = TFRKPHN_buff_h6_tt	# 버프 (buff_build.py)
 			hidden_effect = { country_event = { id = tfrkphn.503 days = 2 } }	# 홍준표 이야기 (hong_build.py)
 			add_war_support = 0.05
 			add_stability = 0.03
@@ -770,6 +811,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			add_to_variable = { TFRKPHN_lee_pp = 0.05 } add_to_variable = { TFRKPHN_lee_stab = 0.03 } add_to_variable = { TFRKPHN_lee_biz = 0.03 } add_to_variable = { TFRKPHN_lee_pers = 0.02 } add_to_variable = { TFRKPHN_lee_infl = -0.001 } if = { limit = { check_variable = { debt_var > 20 } } set_temp_variable = { var = debt_var_temp value = -20 } add_debt_with_inflation = yes } custom_effect_tooltip = TFRKPHN_buff_debt20_tt TFRKPHN_lee_gov_init = yes custom_effect_tooltip = TFRKPHN_buff_fin_tt	# 버프 (buff_build.py)
 			add_stability = 0.05
 			add_political_power = 100
 			custom_effect_tooltip = TFRKPHN_lee_fin_tt
@@ -794,6 +836,135 @@ focus_tree = {
 			hidden_effect = { PRK = { country_event = { id = tfrkphn.250 } } }
 		}
 	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	# >>> 대아대전 승전 엔딩 (gawend_build.py)
+	# PDTO가 대아대전에서 이기면 열린다 (깃발 PRC_japanese_gaw_victory_global). 1-3-2-1 모양.
+	focus = {
+		id = TFRKPHN_lee_in_je_g1
+		icon = GFX_goal_generic_political_pressure
+		x = 11
+		y = 16
+		cost = 2
+		allow_branch = { has_global_flag = PRC_japanese_gaw_victory_global }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			hidden_effect = { scoped_play_song = "one_minute_of_silence" scoped_play_song = "TFRKP_TFRKPHN_FINISH_LINE" }	# 사용자가 준 곡 (music_add.py)
+		}
+	}
+
+	focus = {
+		id = TFRKPHN_lee_in_je_g2a
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 9
+		y = 17
+		cost = 2
+		prerequisite = { focus = TFRKPHN_lee_in_je_g1 }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			country_event = { id = tfrkphn.557 }
+		}
+	}
+
+	focus = {
+		id = TFRKPHN_lee_in_je_g2b
+		icon = GFX_goal_generic_military_sphere
+		x = 11
+		y = 17
+		cost = 2
+		prerequisite = { focus = TFRKPHN_lee_in_je_g1 }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			country_event = { id = tfrkphn.556 }
+		}
+	}
+
+	focus = {
+		id = TFRKPHN_lee_in_je_g2c
+		icon = GFX_goal_generic_major_alliance
+		x = 13
+		y = 17
+		cost = 2
+		prerequisite = { focus = TFRKPHN_lee_in_je_g1 }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			country_event = { id = tfrkphn.558 }
+		}
+	}
+
+	focus = {
+		id = TFRKPHN_lee_in_je_g3a
+		icon = GFX_goal_generic_national_unity
+		x = 10
+		y = 18
+		cost = 2
+		prerequisite = { focus = TFRKPHN_lee_in_je_g2a }
+		prerequisite = { focus = TFRKPHN_lee_in_je_g2b }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			country_event = { id = tfrkphn.559 }
+		}
+	}
+
+	focus = {
+		id = TFRKPHN_lee_in_je_g3b
+		icon = GFX_goal_generic_military_sphere
+		x = 12
+		y = 18
+		cost = 2
+		prerequisite = { focus = TFRKPHN_lee_in_je_g2b }
+		prerequisite = { focus = TFRKPHN_lee_in_je_g2c }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			country_event = { id = tfrkphn.560 }
+		}
+	}
+
+	focus = {
+		id = TFRKPHN_lee_in_je_g4
+		icon = GFX_goal_generic_national_unity
+		x = 11
+		y = 19
+		cost = 2
+		prerequisite = { focus = TFRKPHN_lee_in_je_g3a }
+		prerequisite = { focus = TFRKPHN_lee_in_je_g3b }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			country_event = { id = tfrkphn.561 }
+			add_ideas = KOR_economic_bubble_idea2
+		}
+	}
+
+	# <<< 대아대전 승전 엔딩 (gawend_build.py)
 
 	# 대아대전이 일어나면 Korea Plus 원본의 대아대전 중점 가지가 이 트리에서도 열린다 (원본 파일의 공유 중점).
 	shared_focus = KOR_gwr_reserve_forces

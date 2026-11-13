@@ -162,6 +162,9 @@ if = { limit = { has_country_flag = TFRKPHN_wd_on } TFRKPHN_wd_daily = yes }
 if = { limit = { has_country_flag = TFRKPHN_successor_lee_in_je has_completed_focus = TFRKPHN_lee_in_je_h1 NOT = { has_country_flag = TFRKPHN_mil_on } NOT = { has_country_flag = TFRKPHN_mil_closed } } TFRKPHN_mil_start = yes if = { limit = { has_completed_focus = TFRKPHN_lee_in_je_h2 } TFRKPHN_mil_pick_h2 = yes } if = { limit = { has_completed_focus = TFRKPHN_lee_in_je_h2b } TFRKPHN_mil_pick_h2b = yes } }
 if = { limit = { has_country_flag = TFRKPHN_mil_on } TFRKPHN_mil_daily = yes }
 
+# 대아대전 승전 엔딩 중점: PDTO가 이기면 이인제 트리를 다시 그려 「결승선을 마주보며」 가지가 보이게 한다
+if = { limit = { has_global_flag = PRC_japanese_gaw_victory_global NOT = { has_country_flag = TFRKPHN_gaw_end_open } } set_country_flag = TFRKPHN_gaw_end_open mark_focus_tree_layout_dirty = yes }
+
 # 이인제 정부 돌아오는 기업
 if = { limit = { has_country_flag = TFRKPHN_ut_on } TFRKPHN_ut_daily = yes }
 

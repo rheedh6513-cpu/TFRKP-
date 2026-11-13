@@ -869,6 +869,14 @@ spriteTypes = {
 		texturefile = "gfx/super_events/TFRKPHN_se_nk_civil_war.png"
 	}
 	spriteType = {
+		name = "GFX_portrait_TFRKPHN_kim_han_sol"
+		texturefile = "gfx/leaders/KOR/TFRKPHN_kim_han_sol.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_TFRKPHN_yoo_seong_min"
+		texturefile = "gfx/leaders/KOR/TFRKPHN_yoo_seong_min.png"
+	}
+	spriteType = {
 		name = "GFX_portrait_TFRKPHN_adrian_hong_chang"
 		texturefile = "gfx/leaders/KOR/TFRKPHN_adrian_hong_chang.png"
 	}
@@ -892,6 +900,15 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_TFRKPHN_premier_park_choong_kwon_icon"
 		texturefile = "gfx/leaders/KOR/TFRKPHN_park_choong_kwon_icon.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_kim_han_sol_icon"
+		texturefile = "gfx/leaders/KOR/TFRKPHN_kim_han_sol_icon.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_kim_han_sol_big"
+		texturefile = "gfx/leaders/KOR/TFRKPHN_kim_han_sol_big.png"
+		legacy_lazy_load = no
 	}
 	spriteType = {
 		name = "GFX_TFRKPHN_free_joseon_emblem_icon"
