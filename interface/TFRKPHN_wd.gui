@@ -2,11 +2,11 @@
 guiTypes = {
 	containerWindowType = {
 		name = "TFRKPHN_wd_container"
-		size = { width = 100%% height = 254 }
+		size = { width = 100%% height = 338 }
 		containerWindowType = {
 			name = "TFRKPHN_wd_panel"
 			position = { x = 0 y = 0 }
-			size = { width = 500 height = 252 }
+			size = { width = 500 height = 336 }
 			clipping = yes
 			background = { name = "background" spriteType = "GFX_tiled_decisions_bg_small" alwaystransparent = yes }
 			iconType = { name = "TFRKPHN_wd_bg" position = { x = 8 y = 6 } spriteType = "GFX_TFRKPHN_wd_bg" alwaystransparent = yes }
@@ -17,7 +17,11 @@ guiTypes = {
 			buttonType = { name = "TFRKPHN_wd_b_surplus" position = { x = 256 y = 122 } quadTextureSprite = "GFX_button_221x34" buttonText = "TFRKPHN_wd_b_surplus" buttonFont = "hoi_16mbs" pdx_tooltip = "TFRKPHN_wd_b_surplus_tt" clicksound = click_default }
 			buttonType = { name = "TFRKPHN_wd_b_cut" position = { x = 20 y = 164 } quadTextureSprite = "GFX_button_221x34" buttonText = "TFRKPHN_wd_b_cut" buttonFont = "hoi_16mbs" pdx_tooltip = "TFRKPHN_wd_b_cut_tt" clicksound = click_default }
 			buttonType = { name = "TFRKPHN_wd_b_bond" position = { x = 256 y = 164 } quadTextureSprite = "GFX_button_221x34" buttonText = "TFRKPHN_wd_b_bond" buttonFont = "hoi_16mbs" pdx_tooltip = "TFRKPHN_wd_b_bond_tt" clicksound = click_default }
-			instantTextBoxType = { name = "TFRKPHN_wd_hint" position = { x = 8 y = 210 } text = "TFRKPHN_wd_hint" font = "hoi_16mbs" format = center maxWidth = 484 maxHeight = 40 alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_wd_b_export" position = { x = 20 y = 206 } quadTextureSprite = "GFX_button_221x34" buttonText = "TFRKPHN_wd_b_export" buttonFont = "hoi_16mbs" pdx_tooltip = "TFRKPHN_wd_b_export_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_wd_b_ally" position = { x = 256 y = 206 } quadTextureSprite = "GFX_button_221x34" buttonText = "TFRKPHN_wd_b_ally" buttonFont = "hoi_16mbs" pdx_tooltip = "TFRKPHN_wd_b_ally_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_wd_b_biz" position = { x = 20 y = 248 } quadTextureSprite = "GFX_button_221x34" buttonText = "TFRKPHN_wd_b_biz" buttonFont = "hoi_16mbs" pdx_tooltip = "TFRKPHN_wd_b_biz_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_wd_b_seize" position = { x = 256 y = 248 } quadTextureSprite = "GFX_button_221x34" buttonText = "TFRKPHN_wd_b_seize" buttonFont = "hoi_16mbs" pdx_tooltip = "TFRKPHN_wd_b_seize_tt" clicksound = click_default }
+			instantTextBoxType = { name = "TFRKPHN_wd_hint" position = { x = 8 y = 294 } text = "TFRKPHN_wd_hint" font = "hoi_16mbs" format = center maxWidth = 484 maxHeight = 40 alwaystransparent = yes }
 		}
 	}
 }

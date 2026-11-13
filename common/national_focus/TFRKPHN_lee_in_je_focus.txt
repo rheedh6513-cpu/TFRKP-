@@ -367,6 +367,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			country_event = { id = tfrkphn.536 }	# 탈북민 정착 지원 (settle_build.py)
 			add_stability = 0.03
 		}
 	}
@@ -381,6 +382,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			country_event = { id = tfrkphn.535 }	# 북한인권재단 출범 (nkhr_build.py)
 			add_political_power = 50
 			add_war_support = 0.02
 		}
@@ -434,6 +436,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			country_event = { id = tfrkphn.552 }	# 통일은 경제다 (wel_build.py)
 			add_war_support = 0.05
 			add_to_variable = { TFRKPHN_lee_war = 0.10 }
 			TFRKPHN_lee_gov_init = yes
@@ -451,6 +454,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			country_event = { id = tfrkphn.537 }	# 누군가는 해야 할 일 (d1_build.py)
 			add_popularity = { ideology = conservative popularity = 0.05 }
 		}
 	}
@@ -466,6 +470,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			country_event = { id = tfrkphn.538 }	# 하르츠 개혁 (d2_build.py)
 			add_stability = 0.05
 			add_to_variable = { TFRKPHN_lee_cg = -0.02 }
 			TFRKPHN_lee_gov_init = yes
@@ -484,6 +489,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			country_event = { id = tfrkphn.539 }	# 국회 입법으로 돌파 (d2b_build.py)
 			add_to_variable = { TFRKPHN_lee_pp = 0.10 }
 			TFRKPHN_lee_gov_init = yes
 			add_stability = -0.02
@@ -501,6 +507,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			country_event = { id = tfrkphn.540 }	# 정년 연장과 임금체계 개편 (d3_build.py)
 			add_to_variable = { TFRKPHN_lee_eff = 0.05 }
 			TFRKPHN_lee_gov_init = yes
 			custom_effect_tooltip = TFRKPHN_lee_tt_eff5
@@ -518,6 +525,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			country_event = { id = tfrkphn.541 }	# 생산성만큼의 임금 (d4_build.py)
 			add_to_variable = { TFRKPHN_lee_ind = 0.05 }
 			TFRKPHN_lee_gov_init = yes
 			add_stability = -0.02
@@ -536,6 +544,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			country_event = { id = tfrkphn.542 }	# 무노동 부분임금 (d4b_build.py)
 			add_stability = 0.05
 		}
 	}
@@ -569,6 +578,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			country_event = { id = tfrkphn.553 }	# 가진 만큼의 지분 (wel_build.py)
 			add_to_variable = { TFRKPHN_lee_build = 0.05 }
 			TFRKPHN_lee_gov_init = yes
 			custom_effect_tooltip = TFRKPHN_lee_tt_build5
@@ -592,6 +602,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			country_event = { id = tfrkphn.554 }	# 일하는 어머니 (wel_build.py)
 			set_temp_variable = { society_development_var_temp = 0.1 }
 			add_society_development = yes
 			custom_effect_tooltip = TFRKPHN_lee_tt_birth10
@@ -614,6 +625,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			country_event = { id = tfrkphn.555 }	# 카드 한 장 (wel_build.py)
 			add_stability = 0.04
 		}
 	}
@@ -628,6 +640,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			country_event = { id = tfrkphn.547 }	# 외정은 대통령이 (sec_build.py)
+			TFRKPHN_mil_start = yes	# 전후 군 재편: 탭 열기 (mil_build.py)
 			add_command_power = 30
 			army_experience = 20
 			custom_effect_tooltip = TFRKPHN_bj_open_tt
@@ -645,6 +659,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			TFRKPHN_mil_pick_h2 = yes	# 전후 군 재편: 핵 없는 한반도 (mil_build.py)
 			hidden_effect = { country_event = { id = tfrkphn.501 days = 2 } }	# 홍준표 이야기 (hong_build.py)
 			add_stability = 0.03
 			add_political_power = 50
@@ -662,6 +677,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			country_event = { id = tfrkphn.548 }	# 반대 팻말 (sec_build.py)
+			TFRKPHN_mil_pick_h2b = yes	# 전후 군 재편: 물려받은 핵억지 (mil_build.py)
 			JAP = { add_opinion_modifier = { target = ROOT modifier = TFRKPHN_lee_alliance } }
 			ROOT = { add_opinion_modifier = { target = JAP modifier = TFRKPHN_lee_alliance } }
 			add_war_support = 0.03
@@ -678,6 +695,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			country_event = { id = tfrkphn.549 }	# 최소한의 대응조치 (sec_build.py)
 			add_war_support = 0.03
 			add_to_variable = { TFRKPHN_lee_war = 0.05 }
 			TFRKPHN_lee_gov_init = yes
@@ -695,6 +713,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			country_event = { id = tfrkphn.550 }	# 국방개혁 (sec_build.py)
 			army_experience = 50
 			add_to_variable = { TFRKPHN_lee_army = 0.05 }
 			TFRKPHN_lee_gov_init = yes
@@ -712,6 +731,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			country_event = { id = tfrkphn.551 }	# 통일 뒤의 군대 (sec_build.py)
 			set_temp_variable = { military_development_var_temp = 0.1 }
 			add_military_development = yes
 		}

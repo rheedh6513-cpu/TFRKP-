@@ -1,0 +1,45 @@
+# [안내] 이인제 정부 「전후 군 재편」 패널의 동작. mil_build.py가 만든다.
+scripted_gui = {
+	TFRKPHN_mil_gui = {
+		context_type = decision_category
+		window_name = TFRKPHN_mil_container
+		properties = {
+			TFRKPHN_mil_bar_troop = { frame = TFRKPHN_mil_tf }
+			TFRKPHN_mil_bar_det = { frame = TFRKPHN_mil_df }
+			TFRKPHN_mil_bar_press = { frame = TFRKPHN_mil_pf }
+		}
+		effects = {
+			TFRKPHN_mil_b_demob_click = { add_political_power = -15 add_to_variable = { TFRKPHN_mil_troop = -10 } add_to_variable = { TFRKPHN_mil_det = -6 } add_to_variable = { TFRKPHN_lee_ind = 0.02 } add_to_variable = { TFRKPHN_lee_army = -0.02 } set_country_flag = { flag = TFRKPHN_mil_cd_demob days = 60 value = 1 } TFRKPHN_lee_gov_init = yes TFRKPHN_mil_check = yes }
+			TFRKPHN_mil_b_recall_click = { add_political_power = -20 add_to_variable = { TFRKPHN_mil_troop = 10 } add_to_variable = { TFRKPHN_mil_det = 6 } add_to_variable = { TFRKPHN_lee_ind = -0.02 } add_to_variable = { TFRKPHN_lee_army = 0.02 } set_country_flag = { flag = TFRKPHN_mil_cd_recall days = 60 value = 1 } TFRKPHN_lee_gov_init = yes TFRKPHN_mil_check = yes }
+			TFRKPHN_mil_b_reserve_click = { add_political_power = -20 add_to_variable = { TFRKPHN_mil_det = 5 } set_country_flag = { flag = TFRKPHN_mil_cd_reserve days = 90 value = 1 } add_to_variable = { TFRKPHN_mil_n_reserve = 1 } TFRKPHN_lee_gov_init = yes TFRKPHN_mil_check = yes }
+			TFRKPHN_mil_b_md_click = { add_political_power = -25 add_to_variable = { TFRKPHN_mil_det = 8 } if = { limit = { has_completed_focus = TFRKPHN_lee_in_je_h2b } add_to_variable = { TFRKPHN_mil_press = 5 } } set_country_flag = { flag = TFRKPHN_mil_cd_md days = 120 value = 1 } add_to_variable = { TFRKPHN_mil_n_md = 1 } TFRKPHN_lee_gov_init = yes TFRKPHN_mil_check = yes }
+			TFRKPHN_mil_b_merge_click = { add_political_power = -25 add_to_variable = { TFRKPHN_mil_troop = -10 } add_to_variable = { TFRKPHN_mil_det = -2 } add_to_variable = { TFRKPHN_lee_ind = 0.02 } army_experience = 15 set_country_flag = { flag = TFRKPHN_mil_cd_merge days = 90 value = 1 } add_to_variable = { TFRKPHN_mil_n_merge = 1 } TFRKPHN_lee_gov_init = yes TFRKPHN_mil_check = yes }
+			TFRKPHN_mil_b_border_click = { add_political_power = -30 add_to_variable = { TFRKPHN_mil_det = 10 } add_to_variable = { TFRKPHN_mil_n_border = 1 } TFRKPHN_lee_gov_init = yes TFRKPHN_mil_check = yes }
+			TFRKPHN_mil_b_joint_click = { add_political_power = -20 add_to_variable = { TFRKPHN_mil_press = -15 } set_country_flag = { flag = TFRKPHN_mil_cd_joint days = 90 value = 1 } TFRKPHN_lee_gov_init = yes TFRKPHN_mil_check = yes }
+			TFRKPHN_mil_b_explain_click = { add_political_power = -15 add_to_variable = { TFRKPHN_mil_press = -8 } set_country_flag = { flag = TFRKPHN_mil_cd_explain days = 60 value = 1 } TFRKPHN_lee_gov_init = yes TFRKPHN_mil_check = yes }
+			TFRKPHN_mil_b_conv_click = { add_political_power = -20 add_to_variable = { TFRKPHN_mil_det = 6 } add_to_variable = { TFRKPHN_lee_ind = -0.01 } set_country_flag = { flag = TFRKPHN_mil_cd_conv days = 90 value = 1 } add_to_variable = { TFRKPHN_mil_n_conv = 1 } TFRKPHN_lee_gov_init = yes TFRKPHN_mil_check = yes }
+			TFRKPHN_mil_b_declare_click = { add_political_power = -15 add_stability = 0.01 add_political_power = 25 set_country_flag = { flag = TFRKPHN_mil_cd_declare days = 120 value = 1 } add_to_variable = { TFRKPHN_mil_n_declare = 1 } TFRKPHN_lee_gov_init = yes TFRKPHN_mil_check = yes }
+		}
+		triggers = {
+			TFRKPHN_mil_n_none_visible = { NOT = { has_completed_focus = TFRKPHN_lee_in_je_h2 } NOT = { has_completed_focus = TFRKPHN_lee_in_je_h2b } }
+			TFRKPHN_mil_n_h2_visible = { has_completed_focus = TFRKPHN_lee_in_je_h2 }
+			TFRKPHN_mil_n_h2b_visible = { has_completed_focus = TFRKPHN_lee_in_je_h2b }
+			TFRKPHN_mil_bar_press_visible = { has_completed_focus = TFRKPHN_lee_in_je_h2b }
+			TFRKPHN_mil_v_press_visible = { has_completed_focus = TFRKPHN_lee_in_je_h2b }
+			TFRKPHN_mil_b_demob_click_enabled = { has_political_power > 14 NOT = { has_country_flag = TFRKPHN_mil_cd_demob } check_variable = { TFRKPHN_mil_troop > 45 } }
+			TFRKPHN_mil_b_recall_click_enabled = { has_political_power > 19 NOT = { has_country_flag = TFRKPHN_mil_cd_recall } check_variable = { TFRKPHN_mil_troop < 95 } }
+			TFRKPHN_mil_b_reserve_click_enabled = { has_political_power > 19 NOT = { has_country_flag = TFRKPHN_mil_cd_reserve } check_variable = { TFRKPHN_mil_n_reserve < 2.5 } }
+			TFRKPHN_mil_b_md_click_enabled = { has_political_power > 24 NOT = { has_country_flag = TFRKPHN_mil_cd_md } check_variable = { TFRKPHN_mil_n_md < 2.5 } has_completed_focus = TFRKPHN_lee_in_je_h3 }
+			TFRKPHN_mil_b_merge_click_enabled = { has_political_power > 24 NOT = { has_country_flag = TFRKPHN_mil_cd_merge } check_variable = { TFRKPHN_mil_n_merge < 1.5 } has_completed_focus = TFRKPHN_lee_in_je_h4 check_variable = { TFRKPHN_mil_troop > 45 } }
+			TFRKPHN_mil_b_border_click_enabled = { has_political_power > 29 check_variable = { TFRKPHN_mil_n_border < 0.5 } has_completed_focus = TFRKPHN_lee_in_je_h5 }
+			TFRKPHN_mil_b_joint_click_enabled = { has_political_power > 19 NOT = { has_country_flag = TFRKPHN_mil_cd_joint } }
+			TFRKPHN_mil_b_joint_visible = { has_completed_focus = TFRKPHN_lee_in_je_h2b }
+			TFRKPHN_mil_b_explain_click_enabled = { has_political_power > 14 NOT = { has_country_flag = TFRKPHN_mil_cd_explain } }
+			TFRKPHN_mil_b_explain_visible = { has_completed_focus = TFRKPHN_lee_in_je_h2b }
+			TFRKPHN_mil_b_conv_click_enabled = { has_political_power > 19 NOT = { has_country_flag = TFRKPHN_mil_cd_conv } check_variable = { TFRKPHN_mil_n_conv < 2.5 } }
+			TFRKPHN_mil_b_conv_visible = { has_completed_focus = TFRKPHN_lee_in_je_h2 }
+			TFRKPHN_mil_b_declare_click_enabled = { has_political_power > 14 NOT = { has_country_flag = TFRKPHN_mil_cd_declare } check_variable = { TFRKPHN_mil_n_declare < 1.5 } }
+			TFRKPHN_mil_b_declare_visible = { has_completed_focus = TFRKPHN_lee_in_je_h2 }
+		}
+	}
+}

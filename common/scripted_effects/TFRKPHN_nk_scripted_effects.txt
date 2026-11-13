@@ -691,14 +691,12 @@ TFRKPHN_nk_start = {
 	}
 }
 
-# 「한라에서」를 끝냈을 때 한 번: 전체 평균에 따라 참수 준비가 앞당겨진다
+# 「한라에서」를 끝냈을 때 한 번 (예전에는 참수 준비를 앞당겼으나 지금은 표시만 남긴다)
 TFRKPHN_nk_bonus = {
 	if = {
 		limit = { has_country_flag = TFRKPHN_nk_started has_country_flag = TFRKPHN_lee_tree_done NOT = { has_country_flag = TFRKPHN_nk_bonus_done } }
 		set_country_flag = TFRKPHN_nk_bonus_done
-		if = { limit = { check_variable = { TFRKPHN_nk_avg > 59.99 } } add_to_variable = { TFRKPHN_kju_prep = 50 } }
-		else_if = { limit = { check_variable = { TFRKPHN_nk_avg > 39.99 } } add_to_variable = { TFRKPHN_kju_prep = 25 } }
-		if = { limit = { check_variable = { TFRKPHN_kju_prep > 99 } } set_country_flag = TFRKPHN_kju_prep_done }
+		# 참수 준비는 「한라에서」 뒤에 열리는 대북 특수작전 탭의 결정으로만 오른다 (사용자 지시 2026-11-13). 여기서는 올리지 않는다.
 	}
 }
 

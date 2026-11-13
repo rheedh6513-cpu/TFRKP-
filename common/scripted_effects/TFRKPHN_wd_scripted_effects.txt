@@ -4,23 +4,35 @@ TFRKPHN_wd_start = {
 	hidden_effect = {
 		if = {
 			limit = { NOT = { has_country_flag = TFRKPHN_wd_on } NOT = { has_country_flag = TFRKPHN_wd_closed } }
-			set_country_flag = TFRKPHN_wd_on
-			set_variable = { TFRKPHN_wd_left = 100 }
-			set_variable = { TFRKPHN_wd_days = 730 }
-			TFRKPHN_wd_check = yes
+			if = {
+				# 본체의 국가 부채가 이미 없으면 탭을 열지 않고 바로 「갚을 빚이 없다」 이벤트
+				limit = { check_variable = { debt_var < 1 } }
+				set_country_flag = TFRKPHN_wd_closed
+				set_country_flag = TFRKPHN_wd_paid
+				country_event = { id = tfrkphn.529 }
+			}
+			else = {
+				set_country_flag = TFRKPHN_wd_on
+				set_variable = { TFRKPHN_wd_left = 150 }
+				# 국가 부채가 전쟁 국채보다 적게 남았으면 남은 부채만큼만 갚으면 된다
+				if = { limit = { check_variable = { debt_var < 150 } } set_variable = { TFRKPHN_wd_left = debt_var } round_variable = TFRKPHN_wd_left }
+				set_variable = { TFRKPHN_wd_days = 730 }
+				TFRKPHN_wd_check = yes
+			}
 		}
 	}
 }
 TFRKPHN_wd_check = {
 	# 통일세(tfrkphn.507)를 걷기로 했으면 갚을 빚이 한 번 줄어든다: 원안 -20, 절반 -10
-	if = { limit = { has_country_flag = TFRKPHN_unitax_full NOT = { has_country_flag = TFRKPHN_wd_tax_done } } set_country_flag = TFRKPHN_wd_tax_done subtract_from_variable = { TFRKPHN_wd_left = 20 } }
-	if = { limit = { has_country_flag = TFRKPHN_unitax_half NOT = { has_country_flag = TFRKPHN_wd_tax_done } } set_country_flag = TFRKPHN_wd_tax_done subtract_from_variable = { TFRKPHN_wd_left = 10 } }
-	clamp_variable = { var = TFRKPHN_wd_left min = 0 max = 100 }
+	if = { limit = { has_country_flag = TFRKPHN_unitax_full NOT = { has_country_flag = TFRKPHN_wd_tax_done } } set_country_flag = TFRKPHN_wd_tax_done subtract_from_variable = { TFRKPHN_wd_left = 20 } if = { limit = { check_variable = { debt_var > 20 } } set_temp_variable = { var = debt_var_temp value = -20 } add_debt_with_inflation = yes } }
+	if = { limit = { has_country_flag = TFRKPHN_unitax_half NOT = { has_country_flag = TFRKPHN_wd_tax_done } } set_country_flag = TFRKPHN_wd_tax_done subtract_from_variable = { TFRKPHN_wd_left = 10 } if = { limit = { check_variable = { debt_var > 10 } } set_temp_variable = { var = debt_var_temp value = -10 } add_debt_with_inflation = yes } }
+	clamp_variable = { var = TFRKPHN_wd_left min = 0 max = 210 }
 	clamp_variable = { var = TFRKPHN_wd_days min = 0 max = 2000 }
 	set_variable = { TFRKPHN_wd_bf = TFRKPHN_wd_left }
-	divide_variable = { TFRKPHN_wd_bf = 5 }
+	divide_variable = { TFRKPHN_wd_bf = 7.5 }
 	round_variable = TFRKPHN_wd_bf
 	add_to_variable = { TFRKPHN_wd_bf = 1 }
+	clamp_variable = { var = TFRKPHN_wd_bf min = 1 max = 21 }
 	if = {
 		limit = { has_country_flag = TFRKPHN_wd_on check_variable = { TFRKPHN_wd_left < 0.5 } }
 		clr_country_flag = TFRKPHN_wd_on
@@ -37,5 +49,14 @@ TFRKPHN_wd_check = {
 }
 TFRKPHN_wd_daily = {
 	subtract_from_variable = { TFRKPHN_wd_days = 1 }
+	# 이자: 90일마다 전쟁 국채와 본체의 국가 부채가 5씩 는다
+	add_to_variable = { TFRKPHN_wd_int = 1 }
+	if = {
+		limit = { check_variable = { TFRKPHN_wd_int > 89.5 } }
+		set_variable = { TFRKPHN_wd_int = 0 }
+		add_to_variable = { TFRKPHN_wd_left = 5 }
+		set_temp_variable = { var = debt_var_temp value = 5 }
+		add_debt_with_inflation = yes
+	}
 	TFRKPHN_wd_check = yes
 }

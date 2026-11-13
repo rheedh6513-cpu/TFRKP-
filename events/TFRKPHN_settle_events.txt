@@ -1,0 +1,12 @@
+# [안내] 이인제 정부: 중점 「탈북민 정착 지원」 이벤트. 문구는 localisation/korean/TFRKPHN_settle_l_korean.yml. settle_build.py가 만든다.
+add_namespace = tfrkphn
+
+country_event = {
+	id = tfrkphn.536
+	title = tfrkphn.536.t
+	desc = tfrkphn.536.story
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { name = tfrkphn.536.a }
+}

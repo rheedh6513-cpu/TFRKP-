@@ -1,0 +1,9 @@
+# [안내] 이인제 정부: 전후 군 재편. 중점 「안보는 대통령의 몫」 뒤에 열리고 재편을 마무리하면 닫힌다. 결정은 없고 패널의 단추로 한다.
+TFRKPHN_lee_mil_category = {
+	icon = GFX_decision_icon_KOR_defreform_category
+	priority = 201
+	scripted_gui = TFRKPHN_mil_gui
+	visible_when_empty = yes
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_successor_lee_in_je has_country_flag = TFRKPHN_mil_on }
+}

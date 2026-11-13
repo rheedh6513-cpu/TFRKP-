@@ -133,6 +133,21 @@ if = { limit = { NOT = { has_country_flag = TFRKPHN_pw_migrated } } set_country_
 # 국방부 탭 국민정신 통합: 예전 저장 파일의 옛 보정치를 한 번 새 것으로 옮긴다
 if = { limit = { NOT = { has_country_flag = TFRKPHN_mndx_migrated } } set_country_flag = TFRKPHN_mndx_migrated TFRKPHN_mndx_migrate = yes }
 
+# 중점 「타오르는 불길」 지우기: 양안전쟁이 끝났거나 이미 끝낸 중점이면 트리를 한 번 다시 그린다 (예전 저장 파일 포함)
+if = {
+	limit = {
+		has_country_flag = TFRKP_HN_hong_president
+		NOT = { has_country_flag = TFRKPHN_b0113_cleared }
+		OR = {
+			has_global_flag = PRC_taiwan_war_lost
+			has_global_flag = PRC_taiwan_war_won
+			has_completed_focus = TFRKPHN_hong_b01_13
+		}
+	}
+	set_country_flag = TFRKPHN_b0113_cleared
+	mark_focus_tree_layout_dirty = yes
+}
+
 # 모래시계 검사: 이미 결정 11개를 다 끝낸 저장 파일에도 마무리 이벤트를 한 번 띄운다
 if = {
 	limit = { has_country_flag = TFRKP_HN_hong_president check_variable = { TFRKPHN_hourglass_step > 10.5 } NOT = { has_country_flag = TFRKPHN_hourglass_end_sent } NOT = { has_country_flag = TFRKPHN_hourglass_busy } }
@@ -142,6 +157,10 @@ if = {
 
 # 이인제 정부 전쟁 국채 상환: 탭이 열려 있는 동안 기한을 하루씩 줄인다
 if = { limit = { has_country_flag = TFRKPHN_wd_on } TFRKPHN_wd_daily = yes }
+
+# 이인제 정부 전후 군 재편: 예전 저장 파일 따라잡기와 매일 점검
+if = { limit = { has_country_flag = TFRKPHN_successor_lee_in_je has_completed_focus = TFRKPHN_lee_in_je_h1 NOT = { has_country_flag = TFRKPHN_mil_on } NOT = { has_country_flag = TFRKPHN_mil_closed } } TFRKPHN_mil_start = yes if = { limit = { has_completed_focus = TFRKPHN_lee_in_je_h2 } TFRKPHN_mil_pick_h2 = yes } if = { limit = { has_completed_focus = TFRKPHN_lee_in_je_h2b } TFRKPHN_mil_pick_h2b = yes } }
+if = { limit = { has_country_flag = TFRKPHN_mil_on } TFRKPHN_mil_daily = yes }
 
 # 이인제 정부 돌아오는 기업
 if = { limit = { has_country_flag = TFRKPHN_ut_on } TFRKPHN_ut_daily = yes }

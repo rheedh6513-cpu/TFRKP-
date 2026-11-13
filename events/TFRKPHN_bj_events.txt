@@ -57,8 +57,6 @@ country_event = {
 		TFRKPHN_bj_stage3 = yes
 		custom_effect_tooltip = tfrkphn.462.tt
 		hidden_effect = {
-			add_to_variable = { TFRKPHN_kju_prep = 50 }
-			if = { limit = { check_variable = { TFRKPHN_kju_prep > 99 } } set_country_flag = TFRKPHN_kju_prep_done }
 			country_event = { id = tfrkphn.463 days = 7 }
 		}
 	}

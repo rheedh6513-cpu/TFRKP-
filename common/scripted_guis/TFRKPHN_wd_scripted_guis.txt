@@ -7,16 +7,24 @@ scripted_gui = {
 			TFRKPHN_wd_bar = { frame = TFRKPHN_wd_bf }
 		}
 		effects = {
-			TFRKPHN_wd_b_budget_click = { add_political_power = -20 subtract_from_variable = { TFRKPHN_wd_left = 10 } set_country_flag = { flag = TFRKPHN_wd_cd_budget days = 30 value = 1 } TFRKPHN_wd_check = yes }
-			TFRKPHN_wd_b_surplus_click = { add_political_power = -10 subtract_from_variable = { TFRKPHN_wd_left = 20 } set_country_flag = { flag = TFRKPHN_wd_cd_surplus days = 90 value = 1 } add_to_variable = { TFRKPHN_wd_n_surplus = 1 } add_war_support = -0.02 TFRKPHN_wd_check = yes }
-			TFRKPHN_wd_b_cut_click = { add_political_power = -10 subtract_from_variable = { TFRKPHN_wd_left = 15 } set_country_flag = { flag = TFRKPHN_wd_cd_cut days = 60 value = 1 } add_to_variable = { TFRKPHN_wd_n_cut = 1 } add_stability = -0.01 TFRKPHN_wd_check = yes }
-			TFRKPHN_wd_b_bond_click = { add_political_power = -15 subtract_from_variable = { TFRKPHN_wd_left = 15 } add_to_variable = { TFRKPHN_wd_n_bond = 1 } add_stability = -0.02 add_to_variable = { TFRKPHN_wd_days = 120 } TFRKPHN_wd_check = yes }
+			TFRKPHN_wd_b_budget_click = { add_political_power = -20 subtract_from_variable = { TFRKPHN_wd_left = 10 } set_country_flag = { flag = TFRKPHN_wd_cd_budget days = 30 value = 1 } if = { limit = { check_variable = { debt_var > 10 } } set_temp_variable = { var = debt_var_temp value = -10 } add_debt_with_inflation = yes } TFRKPHN_wd_check = yes }
+			TFRKPHN_wd_b_surplus_click = { add_political_power = -10 subtract_from_variable = { TFRKPHN_wd_left = 20 } set_country_flag = { flag = TFRKPHN_wd_cd_surplus days = 90 value = 1 } add_to_variable = { TFRKPHN_wd_n_surplus = 1 } add_war_support = -0.02 if = { limit = { check_variable = { debt_var > 20 } } set_temp_variable = { var = debt_var_temp value = -20 } add_debt_with_inflation = yes } if = { limit = { NOT = { has_country_flag = TFRKPHN_wd_ev_surplus } } set_country_flag = TFRKPHN_wd_ev_surplus country_event = { id = tfrkphn.530 days = 2 } } TFRKPHN_wd_check = yes }
+			TFRKPHN_wd_b_cut_click = { add_political_power = -10 subtract_from_variable = { TFRKPHN_wd_left = 15 } set_country_flag = { flag = TFRKPHN_wd_cd_cut days = 60 value = 1 } add_to_variable = { TFRKPHN_wd_n_cut = 1 } add_stability = -0.01 if = { limit = { check_variable = { debt_var > 15 } } set_temp_variable = { var = debt_var_temp value = -15 } add_debt_with_inflation = yes } TFRKPHN_wd_check = yes }
+			TFRKPHN_wd_b_bond_click = { add_political_power = -15 subtract_from_variable = { TFRKPHN_wd_left = 15 } add_to_variable = { TFRKPHN_wd_n_bond = 1 } add_stability = -0.02 add_to_variable = { TFRKPHN_wd_days = 120 } if = { limit = { NOT = { has_country_flag = TFRKPHN_wd_ev_bond } } set_country_flag = TFRKPHN_wd_ev_bond country_event = { id = tfrkphn.531 days = 2 } } TFRKPHN_wd_check = yes }
+			TFRKPHN_wd_b_export_click = { add_political_power = -10 subtract_from_variable = { TFRKPHN_wd_left = 15 } set_country_flag = { flag = TFRKPHN_wd_cd_export days = 120 value = 1 } add_to_variable = { TFRKPHN_wd_n_export = 1 } if = { limit = { check_variable = { debt_var > 15 } } set_temp_variable = { var = debt_var_temp value = -15 } add_debt_with_inflation = yes } TFRKPHN_wd_check = yes }
+			TFRKPHN_wd_b_ally_click = { add_political_power = -30 subtract_from_variable = { TFRKPHN_wd_left = 25 } add_to_variable = { TFRKPHN_wd_n_ally = 1 } if = { limit = { check_variable = { debt_var > 25 } } set_temp_variable = { var = debt_var_temp value = -25 } add_debt_with_inflation = yes } if = { limit = { NOT = { has_country_flag = TFRKPHN_wd_ev_ally } } set_country_flag = TFRKPHN_wd_ev_ally country_event = { id = tfrkphn.532 days = 2 } } TFRKPHN_wd_check = yes }
+			TFRKPHN_wd_b_biz_click = { add_political_power = -15 subtract_from_variable = { TFRKPHN_wd_left = 20 } add_to_variable = { TFRKPHN_wd_n_biz = 1 } add_to_variable = { TFRKPHN_chb_res = 10 } TFRKPHN_chb_check = yes TFRKPHN_wd_check = yes }
+			TFRKPHN_wd_b_seize_click = { subtract_from_variable = { TFRKPHN_wd_left = 15 } add_to_variable = { TFRKPHN_wd_n_seize = 1 } if = { limit = { check_variable = { debt_var > 15 } } set_temp_variable = { var = debt_var_temp value = -15 } add_debt_with_inflation = yes } TFRKPHN_wd_check = yes }
 		}
 		triggers = {
 			TFRKPHN_wd_b_budget_click_enabled = { has_political_power > 19 check_variable = { TFRKPHN_wd_left > 0.5 } NOT = { has_country_flag = TFRKPHN_wd_cd_budget } }
 			TFRKPHN_wd_b_surplus_click_enabled = { has_political_power > 9 check_variable = { TFRKPHN_wd_left > 0.5 } NOT = { has_country_flag = TFRKPHN_wd_cd_surplus } check_variable = { TFRKPHN_wd_n_surplus < 1.5 } }
 			TFRKPHN_wd_b_cut_click_enabled = { has_political_power > 9 check_variable = { TFRKPHN_wd_left > 0.5 } NOT = { has_country_flag = TFRKPHN_wd_cd_cut } check_variable = { TFRKPHN_wd_n_cut < 1.5 } }
 			TFRKPHN_wd_b_bond_click_enabled = { has_political_power > 14 check_variable = { TFRKPHN_wd_left > 0.5 } check_variable = { TFRKPHN_wd_n_bond < 0.5 } }
+			TFRKPHN_wd_b_export_click_enabled = { has_political_power > 9 check_variable = { TFRKPHN_wd_left > 0.5 } NOT = { has_country_flag = TFRKPHN_wd_cd_export } check_variable = { TFRKPHN_wd_n_export < 1.5 } }
+			TFRKPHN_wd_b_ally_click_enabled = { has_political_power > 29 check_variable = { TFRKPHN_wd_left > 0.5 } check_variable = { TFRKPHN_wd_n_ally < 0.5 } }
+			TFRKPHN_wd_b_biz_click_enabled = { has_political_power > 14 check_variable = { TFRKPHN_wd_left > 0.5 } check_variable = { TFRKPHN_wd_n_biz < 0.5 } }
+			TFRKPHN_wd_b_seize_click_enabled = { check_variable = { TFRKPHN_wd_left > 0.5 } check_variable = { TFRKPHN_wd_n_seize < 0.5 } has_country_flag = TFRKPHN_chb_inv_done }
 		}
 	}
 }

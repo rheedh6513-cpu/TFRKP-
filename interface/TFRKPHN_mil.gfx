@@ -1,0 +1,22 @@
+# [안내] 이인제 정부 「전후 군 재편」 패널 그림 (군 보고서 양식). mil_build.py가 만든다.
+spriteTypes = {
+	spriteType = { name = "GFX_TFRKPHN_mil_bg" texturefile = "gfx/interface/gui/TFRKPHN_mil/TFRKPHN_mil_bg.png" }
+	spriteType = { name = "GFX_TFRKPHN_mil_bar_troop" texturefile = "gfx/interface/gui/TFRKPHN_mil/TFRKPHN_mil_bar_troop.png" noOfFrames = 21 }
+	spriteType = { name = "GFX_TFRKPHN_mil_bar_det" texturefile = "gfx/interface/gui/TFRKPHN_mil/TFRKPHN_mil_bar_det.png" noOfFrames = 21 }
+	spriteType = { name = "GFX_TFRKPHN_mil_bar_press" texturefile = "gfx/interface/gui/TFRKPHN_mil/TFRKPHN_mil_bar_press.png" noOfFrames = 21 }
+	spriteType = { name = "GFX_TFRKPHN_mil_seal" texturefile = "gfx/interface/gui/TFRKPHN_mil/TFRKPHN_mil_seal.png" }
+	spriteType = { name = "GFX_TFRKPHN_mil_seal_min" texturefile = "gfx/interface/gui/TFRKPHN_mil/TFRKPHN_mil_seal_min.png" }
+	spriteType = { name = "GFX_TFRKPHN_mil_n_none" texturefile = "gfx/interface/gui/TFRKPHN_mil/TFRKPHN_mil_n_none.png" }
+	spriteType = { name = "GFX_TFRKPHN_mil_n_h2" texturefile = "gfx/interface/gui/TFRKPHN_mil/TFRKPHN_mil_n_h2.png" }
+	spriteType = { name = "GFX_TFRKPHN_mil_n_h2b" texturefile = "gfx/interface/gui/TFRKPHN_mil/TFRKPHN_mil_n_h2b.png" }
+	spriteType = { name = "GFX_TFRKPHN_mil_b_demob" texturefile = "gfx/interface/gui/TFRKPHN_mil/TFRKPHN_mil_b_demob.png" }
+	spriteType = { name = "GFX_TFRKPHN_mil_b_recall" texturefile = "gfx/interface/gui/TFRKPHN_mil/TFRKPHN_mil_b_recall.png" }
+	spriteType = { name = "GFX_TFRKPHN_mil_b_reserve" texturefile = "gfx/interface/gui/TFRKPHN_mil/TFRKPHN_mil_b_reserve.png" }
+	spriteType = { name = "GFX_TFRKPHN_mil_b_md" texturefile = "gfx/interface/gui/TFRKPHN_mil/TFRKPHN_mil_b_md.png" }
+	spriteType = { name = "GFX_TFRKPHN_mil_b_merge" texturefile = "gfx/interface/gui/TFRKPHN_mil/TFRKPHN_mil_b_merge.png" }
+	spriteType = { name = "GFX_TFRKPHN_mil_b_border" texturefile = "gfx/interface/gui/TFRKPHN_mil/TFRKPHN_mil_b_border.png" }
+	spriteType = { name = "GFX_TFRKPHN_mil_b_joint" texturefile = "gfx/interface/gui/TFRKPHN_mil/TFRKPHN_mil_b_joint.png" }
+	spriteType = { name = "GFX_TFRKPHN_mil_b_explain" texturefile = "gfx/interface/gui/TFRKPHN_mil/TFRKPHN_mil_b_explain.png" }
+	spriteType = { name = "GFX_TFRKPHN_mil_b_conv" texturefile = "gfx/interface/gui/TFRKPHN_mil/TFRKPHN_mil_b_conv.png" }
+	spriteType = { name = "GFX_TFRKPHN_mil_b_declare" texturefile = "gfx/interface/gui/TFRKPHN_mil/TFRKPHN_mil_b_declare.png" }
+}

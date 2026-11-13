@@ -1,0 +1,43 @@
+# [안내] 이인제 정부: 통일과 복지 중점 이벤트 넷. 문구는 localisation/korean/TFRKPHN_wel_l_korean.yml. wel_build.py가 만든다.
+add_namespace = tfrkphn
+
+country_event = {
+	id = tfrkphn.552
+	title = tfrkphn.552.t
+	desc = tfrkphn.552.story
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { name = tfrkphn.552.a }
+}
+
+country_event = {
+	id = tfrkphn.553
+	title = tfrkphn.553.t
+	desc = tfrkphn.553.story
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { name = tfrkphn.553.a }
+}
+
+country_event = {
+	id = tfrkphn.554
+	title = tfrkphn.554.t
+	desc = tfrkphn.554.story
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { name = tfrkphn.554.a }
+}
+
+country_event = {
+	id = tfrkphn.555
+	title = tfrkphn.555.t
+	desc = tfrkphn.555.story
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { name = tfrkphn.555.a }
+}
+

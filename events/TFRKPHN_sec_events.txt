@@ -1,0 +1,53 @@
+# [안내] 이인제 정부: 안보 갈래 중점 이벤트 다섯. 문구는 localisation/korean/TFRKPHN_sec_l_korean.yml. sec_build.py가 만든다.
+add_namespace = tfrkphn
+
+country_event = {
+	id = tfrkphn.547
+	title = tfrkphn.547.t
+	desc = tfrkphn.547.story
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { name = tfrkphn.547.a }
+}
+
+country_event = {
+	id = tfrkphn.548
+	title = tfrkphn.548.t
+	desc = tfrkphn.548.story
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { name = tfrkphn.548.a }
+}
+
+country_event = {
+	id = tfrkphn.549
+	title = tfrkphn.549.t
+	desc = tfrkphn.549.story
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { name = tfrkphn.549.a }
+}
+
+country_event = {
+	id = tfrkphn.550
+	title = tfrkphn.550.t
+	desc = tfrkphn.550.story
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { name = tfrkphn.550.a }
+}
+
+country_event = {
+	id = tfrkphn.551
+	title = tfrkphn.551.t
+	desc = tfrkphn.551.story
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { name = tfrkphn.551.a }
+}
+

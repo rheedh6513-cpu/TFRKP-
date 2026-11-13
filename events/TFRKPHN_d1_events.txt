@@ -1,0 +1,12 @@
+# [안내] 이인제 정부: 중점 「누군가는 해야 할 일」 이벤트. 문구는 localisation/korean/TFRKPHN_d1_l_korean.yml. d1_build.py가 만든다.
+add_namespace = tfrkphn
+
+country_event = {
+	id = tfrkphn.537
+	title = tfrkphn.537.t
+	desc = tfrkphn.537.story
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { name = tfrkphn.537.a }
+}

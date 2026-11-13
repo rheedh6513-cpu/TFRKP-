@@ -177,14 +177,12 @@ focus_tree = {
 	focus = {
 		id = TFRKPHN_hong_b01_13
 		icon = GFX_focus_TFRKPHN_burning_flame
-		# Korea Plus처럼 처음에는 숨겼다가 양안전쟁이 시작되면 나타난다
+		# 양안전쟁이 벌어지는 동안에만 보인다: 전쟁 전에는 숨겨져 있고, 전쟁이 끝나거나 이 중점을 끝내면 트리에서 사라진다
 		allow_branch = {
-			OR = {
-				KOR_in_taiwan_war = yes
-				has_global_flag = PRC_taiwan_war_lost
-				has_global_flag = PRC_taiwan_war_won
-				has_completed_focus = TFRKPHN_hong_b01_13
-			}
+			KOR_in_taiwan_war = yes
+			NOT = { has_global_flag = PRC_taiwan_war_lost }
+			NOT = { has_global_flag = PRC_taiwan_war_won }
+			NOT = { has_completed_focus = TFRKPHN_hong_b01_13 }
 		}
 		x = 6
 		y = 6
@@ -193,6 +191,7 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			country_event = tfrkphn.27
+			hidden_effect = { mark_focus_tree_layout_dirty = yes }	# 끝내면 트리를 다시 그려 이 중점을 지운다
 		}
 	}
 

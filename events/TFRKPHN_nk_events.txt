@@ -292,8 +292,6 @@ country_event = {
 		add_command_power = 50
 		army_experience = 50
 		hidden_effect = {
-			set_variable = { TFRKPHN_kju_prep = 100 }
-			set_country_flag = TFRKPHN_kju_prep_done
 			if = { limit = { country_exists = PRK } PRK = { add_ideas = TFRKPHN_nk_disobey } }
 			TFRKPHN_bj_boost = yes
 		}

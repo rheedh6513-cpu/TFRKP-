@@ -1,0 +1,25 @@
+# [안내] 전후 군 재편을 마무리하면 붙는 국민정신 둘 (이벤트 tfrkphn.545, 546). mil_build.py가 만든다.
+ideas = {
+	country = {
+		TFRKPHN_mil_small = {
+			picture = KOR_yoon_common_conservatism_dynamic_modifir_idea
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = 0.03
+				army_org_factor = 0.05
+			}
+		}
+		TFRKPHN_mil_north = {
+			picture = KOR_yoon_common_conservatism_dynamic_modifir_idea
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				army_org_factor = 0.08
+				war_support_factor = 0.05
+			}
+		}
+	}
+}

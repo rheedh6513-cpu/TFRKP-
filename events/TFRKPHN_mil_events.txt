@@ -1,0 +1,79 @@
+# [안내] 이인제 정부 전후 군 재편 이벤트. 문구는 localisation/korean/TFRKPHN_mil_l_korean.yml. mil_build.py가 만든다.
+add_namespace = tfrkphn
+
+# 억지력이 낮을 때의 도발
+country_event = {
+	id = tfrkphn.543
+	title = tfrkphn.543.t
+	desc = tfrkphn.543.story
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.543.a
+		add_stability = -0.02
+	}
+	option = {
+		name = tfrkphn.543.b
+		hidden_effect = { add_to_variable = { TFRKPHN_mil_troop = 10 } add_to_variable = { TFRKPHN_mil_det = 6 } add_to_variable = { TFRKPHN_lee_ind = -0.02 } add_to_variable = { TFRKPHN_lee_army = 0.02 } TFRKPHN_lee_gov_init = yes TFRKPHN_mil_check = yes }
+		custom_effect_tooltip = TFRKPHN_mil_tt_recall
+	}
+	option = {
+		name = tfrkphn.543.c
+		trigger = { has_completed_focus = TFRKPHN_lee_in_je_h3 }
+		add_war_support = 0.02
+		hidden_effect = { add_to_variable = { TFRKPHN_mil_det = 5 } TFRKPHN_mil_check = yes }
+		custom_effect_tooltip = TFRKPHN_mil_tt_det5
+	}
+}
+
+# 주변국 압력이 높을 때의 항의
+country_event = {
+	id = tfrkphn.544
+	title = tfrkphn.544.t
+	desc = tfrkphn.544.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.544.a
+		add_political_power = -30
+		hidden_effect = { add_to_variable = { TFRKPHN_mil_press = -25 } TFRKPHN_mil_check = yes }
+		custom_effect_tooltip = TFRKPHN_mil_tt_press25
+	}
+	option = {
+		name = tfrkphn.544.b
+		add_stability = -0.02
+		hidden_effect = { add_to_variable = { TFRKPHN_mil_press = -10 } TFRKPHN_mil_check = yes }
+		custom_effect_tooltip = TFRKPHN_mil_tt_press10
+	}
+}
+
+# 마무리: 줄인 군
+country_event = {
+	id = tfrkphn.545
+	title = tfrkphn.545.t
+	desc = tfrkphn.545.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.545.a
+		add_ideas = TFRKPHN_mil_small
+		hidden_effect = { clr_country_flag = TFRKPHN_mil_on set_country_flag = TFRKPHN_mil_closed }
+		custom_effect_tooltip = TFRKPHN_mil_tt_close
+	}
+}
+
+# 마무리: 북쪽을 겨눈 군
+country_event = {
+	id = tfrkphn.546
+	title = tfrkphn.546.t
+	desc = tfrkphn.546.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.546.a
+		add_ideas = TFRKPHN_mil_north
+		hidden_effect = { clr_country_flag = TFRKPHN_mil_on set_country_flag = TFRKPHN_mil_closed }
+		custom_effect_tooltip = TFRKPHN_mil_tt_close
+	}
+}
+

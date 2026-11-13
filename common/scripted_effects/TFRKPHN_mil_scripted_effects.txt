@@ -1,0 +1,77 @@
+# [안내] 전후 군 재편: 시작, 중점에 따른 핵억지 구역, 막대 계산, 매일 점검(압력, 도발, 마무리). mil_build.py가 만든다.
+TFRKPHN_mil_start = {
+	custom_effect_tooltip = TFRKPHN_mil_start_tt
+	hidden_effect = {
+		if = {
+			limit = { NOT = { has_country_flag = TFRKPHN_mil_on } NOT = { has_country_flag = TFRKPHN_mil_closed } }
+			set_country_flag = TFRKPHN_mil_on
+			set_variable = { TFRKPHN_mil_troop = 100 }
+			set_variable = { TFRKPHN_mil_det = 70 }
+			set_variable = { TFRKPHN_mil_press = 0 }
+			TFRKPHN_mil_check = yes
+		}
+	}
+}
+# 중점 「물려받은 핵억지」: 억지력이 받쳐지고 주변국 압력이 쌓이기 시작한다
+TFRKPHN_mil_pick_h2b = {
+	custom_effect_tooltip = TFRKPHN_mil_h2b_tt
+	hidden_effect = { if = { limit = { NOT = { has_country_flag = TFRKPHN_mil_nuke_set } } set_country_flag = TFRKPHN_mil_nuke_set add_to_variable = { TFRKPHN_mil_det = 15 } set_variable = { TFRKPHN_mil_press = 20 } TFRKPHN_mil_check = yes } }
+}
+# 중점 「핵 없는 한반도」: 압력은 없고 억지의 믿음이 조금 깎인다
+TFRKPHN_mil_pick_h2 = {
+	custom_effect_tooltip = TFRKPHN_mil_h2_tt
+	hidden_effect = { if = { limit = { NOT = { has_country_flag = TFRKPHN_mil_nuke_set } } set_country_flag = TFRKPHN_mil_nuke_set add_to_variable = { TFRKPHN_mil_det = -5 } TFRKPHN_mil_check = yes } }
+}
+TFRKPHN_mil_check = {
+	clamp_variable = { var = TFRKPHN_mil_troop min = 40 max = 100 }
+	clamp_variable = { var = TFRKPHN_mil_det min = 0 max = 100 }
+	clamp_variable = { var = TFRKPHN_mil_press min = 0 max = 100 }
+	set_variable = { TFRKPHN_mil_tf = TFRKPHN_mil_troop }
+	divide_variable = { TFRKPHN_mil_tf = 5 }
+	round_variable = TFRKPHN_mil_tf
+	add_to_variable = { TFRKPHN_mil_tf = 1 }
+	clamp_variable = { var = TFRKPHN_mil_tf min = 1 max = 21 }
+	set_variable = { TFRKPHN_mil_df = TFRKPHN_mil_det }
+	divide_variable = { TFRKPHN_mil_df = 5 }
+	round_variable = TFRKPHN_mil_df
+	add_to_variable = { TFRKPHN_mil_df = 1 }
+	clamp_variable = { var = TFRKPHN_mil_df min = 1 max = 21 }
+	set_variable = { TFRKPHN_mil_pf = TFRKPHN_mil_press }
+	divide_variable = { TFRKPHN_mil_pf = 5 }
+	round_variable = TFRKPHN_mil_pf
+	add_to_variable = { TFRKPHN_mil_pf = 1 }
+	clamp_variable = { var = TFRKPHN_mil_pf min = 1 max = 21 }
+	if = {
+		limit = { has_country_flag = TFRKPHN_mil_on has_completed_focus = TFRKPHN_lee_in_je_h5 NOT = { has_country_flag = TFRKPHN_mil_end_sent } }
+		if = {
+			limit = { check_variable = { TFRKPHN_mil_troop < 70.5 } check_variable = { TFRKPHN_mil_det > 69.5 } }
+			set_country_flag = TFRKPHN_mil_end_sent
+			country_event = { id = tfrkphn.545 days = 3 }
+		}
+		else_if = {
+			limit = { check_variable = { TFRKPHN_mil_troop > 89.5 } check_variable = { TFRKPHN_mil_det > 84.5 } }
+			set_country_flag = TFRKPHN_mil_end_sent
+			country_event = { id = tfrkphn.546 days = 3 }
+		}
+	}
+}
+TFRKPHN_mil_daily = {
+	# 30일마다: 물려받은 핵억지를 골랐으면 주변국 압력이 5씩 쌓인다
+	add_to_variable = { TFRKPHN_mil_t = 1 }
+	if = {
+		limit = { check_variable = { TFRKPHN_mil_t > 29.5 } }
+		set_variable = { TFRKPHN_mil_t = 0 }
+		if = { limit = { has_completed_focus = TFRKPHN_lee_in_je_h2b } add_to_variable = { TFRKPHN_mil_press = 5 } }
+		TFRKPHN_mil_check = yes
+	}
+	if = {
+		limit = { check_variable = { TFRKPHN_mil_det < 39.5 } NOT = { has_country_flag = TFRKPHN_mil_cd_prov } }
+		set_country_flag = { flag = TFRKPHN_mil_cd_prov days = 120 value = 1 }
+		country_event = { id = tfrkphn.543 }
+	}
+	if = {
+		limit = { has_completed_focus = TFRKPHN_lee_in_je_h2b check_variable = { TFRKPHN_mil_press > 59.5 } NOT = { has_country_flag = TFRKPHN_mil_cd_press } }
+		set_country_flag = { flag = TFRKPHN_mil_cd_press days = 150 value = 1 }
+		country_event = { id = tfrkphn.544 }
+	}
+}
