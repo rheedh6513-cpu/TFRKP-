@@ -1,0 +1,43 @@
+# [안내] 이인제 정부: 중점 「정치 명예혁명」 이벤트 세 편 (김영삼, 김대중, 김종필). 문구는 localisation/korean/TFRKPHN_threekims_l_korean.yml. threekims_build.py가 만든다.
+add_namespace = tfrkphn
+
+# 김영삼
+country_event = {
+	id = tfrkphn.521
+	title = tfrkphn.521.t
+	desc = tfrkphn.521.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.521.a
+		hidden_effect = { country_event = { id = tfrkphn.522 days = 2 } }
+	}
+}
+
+# 김대중
+country_event = {
+	id = tfrkphn.522
+	title = tfrkphn.522.t
+	desc = tfrkphn.522.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.522.a
+		hidden_effect = { country_event = { id = tfrkphn.523 days = 2 } }
+	}
+}
+
+# 김종필
+country_event = {
+	id = tfrkphn.523
+	title = tfrkphn.523.t
+	desc = tfrkphn.523.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.523.a
+	}
+}

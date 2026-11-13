@@ -1,0 +1,9 @@
+# [안내] 이인제 정부: 전쟁 국채 상환. 중점 「전쟁 빚은 2년 안에」 뒤에 열리고 다 갚거나 기한이 지나면 닫힌다. 결정은 없고 패널의 단추로 한다.
+TFRKPHN_lee_debt_category = {
+	icon = generic_political_actions
+	priority = 202
+	scripted_gui = TFRKPHN_wd_gui
+	visible_when_empty = yes
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_successor_lee_in_je has_country_flag = TFRKPHN_wd_on }
+}

@@ -1,0 +1,22 @@
+# [안내] 이인제 정부 「전쟁 국채 상환」 패널의 동작. debt_build.py가 만든다.
+scripted_gui = {
+	TFRKPHN_wd_gui = {
+		context_type = decision_category
+		window_name = TFRKPHN_wd_container
+		properties = {
+			TFRKPHN_wd_bar = { frame = TFRKPHN_wd_bf }
+		}
+		effects = {
+			TFRKPHN_wd_b_budget_click = { add_political_power = -20 subtract_from_variable = { TFRKPHN_wd_left = 10 } set_country_flag = { flag = TFRKPHN_wd_cd_budget days = 30 value = 1 } TFRKPHN_wd_check = yes }
+			TFRKPHN_wd_b_surplus_click = { add_political_power = -10 subtract_from_variable = { TFRKPHN_wd_left = 20 } set_country_flag = { flag = TFRKPHN_wd_cd_surplus days = 90 value = 1 } add_to_variable = { TFRKPHN_wd_n_surplus = 1 } add_war_support = -0.02 TFRKPHN_wd_check = yes }
+			TFRKPHN_wd_b_cut_click = { add_political_power = -10 subtract_from_variable = { TFRKPHN_wd_left = 15 } set_country_flag = { flag = TFRKPHN_wd_cd_cut days = 60 value = 1 } add_to_variable = { TFRKPHN_wd_n_cut = 1 } add_stability = -0.01 TFRKPHN_wd_check = yes }
+			TFRKPHN_wd_b_bond_click = { add_political_power = -15 subtract_from_variable = { TFRKPHN_wd_left = 15 } add_to_variable = { TFRKPHN_wd_n_bond = 1 } add_stability = -0.02 add_to_variable = { TFRKPHN_wd_days = 120 } TFRKPHN_wd_check = yes }
+		}
+		triggers = {
+			TFRKPHN_wd_b_budget_click_enabled = { has_political_power > 19 check_variable = { TFRKPHN_wd_left > 0.5 } NOT = { has_country_flag = TFRKPHN_wd_cd_budget } }
+			TFRKPHN_wd_b_surplus_click_enabled = { has_political_power > 9 check_variable = { TFRKPHN_wd_left > 0.5 } NOT = { has_country_flag = TFRKPHN_wd_cd_surplus } check_variable = { TFRKPHN_wd_n_surplus < 1.5 } }
+			TFRKPHN_wd_b_cut_click_enabled = { has_political_power > 9 check_variable = { TFRKPHN_wd_left > 0.5 } NOT = { has_country_flag = TFRKPHN_wd_cd_cut } check_variable = { TFRKPHN_wd_n_cut < 1.5 } }
+			TFRKPHN_wd_b_bond_click_enabled = { has_political_power > 14 check_variable = { TFRKPHN_wd_left > 0.5 } check_variable = { TFRKPHN_wd_n_bond < 0.5 } }
+		}
+	}
+}

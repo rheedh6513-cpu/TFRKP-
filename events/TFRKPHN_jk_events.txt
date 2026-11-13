@@ -1,0 +1,44 @@
+# [안내] 이인제 정부: 중점 「정경유착의 뿌리 뽑기」 이벤트 두 편. 문구는 localisation/korean/TFRKPHN_jk_l_korean.yml. jk_build.py가 만든다.
+add_namespace = tfrkphn
+
+# 시화공단 김 사장의 군납 입찰
+country_event = {
+	id = tfrkphn.524
+	title = tfrkphn.524.t
+	desc = tfrkphn.524.story
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.524.a
+		hidden_effect = { country_event = { id = tfrkphn.525 days = 3 } }
+	}
+}
+
+# 대통령의 선택: 어느 길목부터 막을 것인가
+country_event = {
+	id = tfrkphn.525
+	title = tfrkphn.525.t
+	desc = tfrkphn.525.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {	# 계약 공개
+		name = tfrkphn.525.a
+		add_stability = 0.02
+		custom_effect_tooltip = tfrkphn.525.a_tt
+		hidden_effect = { add_to_variable = { TFRKPHN_chb_res = 5 } TFRKPHN_chb_check = yes }
+	}
+	option = {	# 퇴직 공직자 취업 제한
+		name = tfrkphn.525.b
+		add_political_power = -20
+		add_stability = 0.01
+		custom_effect_tooltip = tfrkphn.525.b_tt
+		hidden_effect = { add_to_variable = { TFRKPHN_chb_res = -5 } TFRKPHN_chb_check = yes }
+	}
+	option = {	# 정치자금 실명 공개
+		name = tfrkphn.525.c
+		add_political_power = -30
+		add_stability = 0.03
+	}
+}

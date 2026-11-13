@@ -1,0 +1,15 @@
+# [안내] 국민정신 「성역 없는 법치」: 모래시계 검사 탭의 결정을 다 끝내면 이벤트 tfrkphn.528로 붙는다. hourglass_end_build.py가 만든다.
+ideas = {
+	country = {
+		TFRKPHN_hourglass_legacy = {
+			picture = KOR_yoon_common_conservatism_dynamic_modifir_idea
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = 0.15
+			}
+		}
+	}
+}

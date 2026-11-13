@@ -1,0 +1,41 @@
+# [안내] 전쟁 국채 상환: 시작, 매일 기한 줄이기, 막대 계산, 다 갚거나 기한이 지나면 이벤트. debt_build.py가 만든다.
+TFRKPHN_wd_start = {
+	custom_effect_tooltip = TFRKPHN_wd_start_tt
+	hidden_effect = {
+		if = {
+			limit = { NOT = { has_country_flag = TFRKPHN_wd_on } NOT = { has_country_flag = TFRKPHN_wd_closed } }
+			set_country_flag = TFRKPHN_wd_on
+			set_variable = { TFRKPHN_wd_left = 100 }
+			set_variable = { TFRKPHN_wd_days = 730 }
+			TFRKPHN_wd_check = yes
+		}
+	}
+}
+TFRKPHN_wd_check = {
+	# 통일세(tfrkphn.507)를 걷기로 했으면 갚을 빚이 한 번 줄어든다: 원안 -20, 절반 -10
+	if = { limit = { has_country_flag = TFRKPHN_unitax_full NOT = { has_country_flag = TFRKPHN_wd_tax_done } } set_country_flag = TFRKPHN_wd_tax_done subtract_from_variable = { TFRKPHN_wd_left = 20 } }
+	if = { limit = { has_country_flag = TFRKPHN_unitax_half NOT = { has_country_flag = TFRKPHN_wd_tax_done } } set_country_flag = TFRKPHN_wd_tax_done subtract_from_variable = { TFRKPHN_wd_left = 10 } }
+	clamp_variable = { var = TFRKPHN_wd_left min = 0 max = 100 }
+	clamp_variable = { var = TFRKPHN_wd_days min = 0 max = 2000 }
+	set_variable = { TFRKPHN_wd_bf = TFRKPHN_wd_left }
+	divide_variable = { TFRKPHN_wd_bf = 5 }
+	round_variable = TFRKPHN_wd_bf
+	add_to_variable = { TFRKPHN_wd_bf = 1 }
+	if = {
+		limit = { has_country_flag = TFRKPHN_wd_on check_variable = { TFRKPHN_wd_left < 0.5 } }
+		clr_country_flag = TFRKPHN_wd_on
+		set_country_flag = TFRKPHN_wd_closed
+		set_country_flag = TFRKPHN_wd_paid
+		country_event = { id = tfrkphn.526 }
+	}
+	else_if = {
+		limit = { has_country_flag = TFRKPHN_wd_on check_variable = { TFRKPHN_wd_days < 0.5 } }
+		clr_country_flag = TFRKPHN_wd_on
+		set_country_flag = TFRKPHN_wd_closed
+		country_event = { id = tfrkphn.527 }
+	}
+}
+TFRKPHN_wd_daily = {
+	subtract_from_variable = { TFRKPHN_wd_days = 1 }
+	TFRKPHN_wd_check = yes
+}

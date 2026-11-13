@@ -1,0 +1,35 @@
+# [안내] 이인제 정부 전쟁 국채 상환 이벤트. 문구는 localisation/korean/TFRKPHN_wd_l_korean.yml. debt_build.py가 만든다.
+add_namespace = tfrkphn
+
+# 기한 안에 다 갚았다
+country_event = {
+	id = tfrkphn.526
+	title = tfrkphn.526.t
+	desc = tfrkphn.526.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.526.a
+		add_stability = 0.03
+		add_political_power = 50
+		add_to_variable = { TFRKPHN_lee_cg = -0.02 }
+		TFRKPHN_lee_gov_init = yes
+		custom_effect_tooltip = TFRKPHN_lee_tt_cg2
+	}
+}
+
+# 기한을 넘겼다
+country_event = {
+	id = tfrkphn.527
+	title = tfrkphn.527.t
+	desc = tfrkphn.527.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.527.a
+		add_stability = -0.03
+		add_political_power = -30
+	}
+}

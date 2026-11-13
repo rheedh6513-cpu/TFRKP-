@@ -1,0 +1,33 @@
+# [안내] 이인제 정부 내각: 중점 「출발선에 다시 서서」를 끝내면 홍준표 정부의 장관 여섯 명을 이인제 정부의 장관으로 바꾼다 (한 번).
+TFRKPHN_lee_cabinet_appoint = {
+	custom_effect_tooltip = appoint_head_minister_tooltip
+	show_ideas_tooltip = TFRKPHN_chung_jin_suk_HM
+	custom_effect_tooltip = appoint_foreign_minister_tooltip
+	show_ideas_tooltip = TFRKPHN_cho_hyun_dong_FM
+	custom_effect_tooltip = appoint_economic_minister_tooltip
+	show_ideas_tooltip = TFRKPHN_bang_ki_sun_EM
+	custom_effect_tooltip = appoint_interior_minister_tooltip
+	show_ideas_tooltip = TFRKPHN_lee_myoung_su_IM
+	custom_effect_tooltip = appoint_int_minister_tooltip
+	show_ideas_tooltip = TFRKPHN_kim_hong_kyun_IntelM
+	custom_effect_tooltip = appoint_theorist_minister_tooltip
+	show_ideas_tooltip = TFRKPHN_shin_beom_chul_TM
+	hidden_effect = {
+		if = {
+			limit = { NOT = { has_country_flag = TFRKPHN_lee_cabinet_set } }
+			set_country_flag = TFRKPHN_lee_cabinet_set
+			if = { limit = { has_idea = TFRKPHN_lee_in_je_HM } remove_ideas = TFRKPHN_lee_in_je_HM }
+			if = { limit = { NOT = { has_idea = TFRKPHN_chung_jin_suk_HM } } add_ideas = TFRKPHN_chung_jin_suk_HM }
+			if = { limit = { has_idea = TFRKPHN_kim_dae_sik_FM } remove_ideas = TFRKPHN_kim_dae_sik_FM }
+			if = { limit = { NOT = { has_idea = TFRKPHN_cho_hyun_dong_FM } } add_ideas = TFRKPHN_cho_hyun_dong_FM }
+			if = { limit = { has_idea = TFRKPHN_seo_byung_soo_EM } remove_ideas = TFRKPHN_seo_byung_soo_EM }
+			if = { limit = { NOT = { has_idea = TFRKPHN_bang_ki_sun_EM } } add_ideas = TFRKPHN_bang_ki_sun_EM }
+			if = { limit = { has_idea = TFRKPHN_hong_il_pyo_IM } remove_ideas = TFRKPHN_hong_il_pyo_IM }
+			if = { limit = { NOT = { has_idea = TFRKPHN_lee_myoung_su_IM } } add_ideas = TFRKPHN_lee_myoung_su_IM }
+			if = { limit = { has_idea = TFRKPHN_yoon_jae_ok_IntelM } remove_ideas = TFRKPHN_yoon_jae_ok_IntelM }
+			if = { limit = { NOT = { has_idea = TFRKPHN_kim_hong_kyun_IntelM } } add_ideas = TFRKPHN_kim_hong_kyun_IntelM }
+			if = { limit = { has_idea = TFRKPHN_lim_jong_deuk_TM } remove_ideas = TFRKPHN_lim_jong_deuk_TM }
+			if = { limit = { NOT = { has_idea = TFRKPHN_shin_beom_chul_TM } } add_ideas = TFRKPHN_shin_beom_chul_TM }
+		}
+	}
+}

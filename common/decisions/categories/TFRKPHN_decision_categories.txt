@@ -40,6 +40,8 @@ TFRKPHN_hong_hourglass_category = {
 	visible = {
 		has_country_flag = TFRKP_HN_hong_president
 		has_completed_focus = TFRKPHN_hong_b03_04
+		# 다 끝내고 이벤트 528을 닫으면 30일 동안만 더 보인다
+		OR = { NOT = { has_country_flag = TFRKPHN_hourglass_done } has_country_flag = TFRKPHN_hourglass_closing }
 	}
 	scripted_gui = TFRKPHN_hong_hourglass_gui
 }
@@ -76,8 +78,6 @@ TFRKPHN_senate_category = {
 TFRKPHN_crime_category = {
 	icon = generic_political_actions
 	priority = 205
-	scripted_gui = TFRKPHN_cab_gui
-	visible_when_empty = yes
 	allowed = { original_tag = KOR }
 	visible_when_empty = yes
 	visible = {

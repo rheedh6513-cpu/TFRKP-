@@ -22,6 +22,7 @@ focus_tree = {
 		completion_reward = {
 			country_event = { id = tfrkphn.260 }
 			TFRKPHN_lee_gov_init = yes
+			TFRKPHN_lee_cabinet_appoint = yes	# 이인제 정부 장관 여섯 명 임명
 		}
 	}
 
@@ -36,6 +37,7 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			country_event = { id = tfrkphn.261 }
+			custom_effect_tooltip = TFRKPHN_dept_start_tt	# 임기를 함께하는 내각 탭과 국무회의가 열린다
 			add_stability = 0.04
 			add_popularity = { ideology = conservative popularity = 0.03 }
 		}
@@ -93,7 +95,6 @@ focus_tree = {
 			add_to_variable = { TFRKPHN_lee_pp = 0.05 }
 			TFRKPHN_lee_gov_init = yes
 			custom_effect_tooltip = TFRKPHN_lee_tt_pp5
-			custom_effect_tooltip = TFRKPHN_dept_start_tt
 		}
 	}
 
@@ -107,6 +108,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			country_event = { id = tfrkphn.521 }	# 김영삼, 김대중, 김종필 세 편 (threekims_build.py)
 			add_political_power = 75
 			add_stability = 0.02
 		}
@@ -122,6 +124,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			country_event = { id = tfrkphn.518 }	# 서명하지 않은 명령서 (lawexec_build.py)
 			add_stability = 0.03
 		}
 	}
@@ -136,6 +139,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			country_event = { id = tfrkphn.524 }	# 입찰 설명회, 돈이 흐르는 길목 (jk_build.py)
+			custom_effect_tooltip = TFRKPHN_jk_inv_tt	# 정경유착 수사 비용과 대기가 줄어든다
 			add_political_power = 50
 			add_to_variable = { TFRKPHN_lee_ind = 0.03 }
 			TFRKPHN_lee_gov_init = yes
@@ -155,6 +160,7 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.03
 			add_to_variable = { TFRKPHN_lee_cg = -0.02 }
+			TFRKPHN_wd_start = yes	# 전쟁 국채 상환 탭 (debt_build.py)
 			TFRKPHN_lee_gov_init = yes
 			custom_effect_tooltip = TFRKPHN_lee_tt_cg2
 		}

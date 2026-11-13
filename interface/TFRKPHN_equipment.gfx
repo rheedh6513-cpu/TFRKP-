@@ -1,5 +1,11 @@
-# 한국 2024년형 구축함 선체(ship_hull_cruiser_3) 그림을 KDDX 사진으로 바꾼다. 다른 나라는 원래 그림을 쓴다.
+# 한국 개선형 구축함 선체(ship_hull_cruiser_3, KDDX 사업으로 여는 선체) 그림을 KDDX 사진으로 바꾼다.
+# Korea Plus는 한국 함선 선체 그림을 GFX_KOR_improved_ship_hull_cruiser_medium 같은 이름으로 정한다 (대구급 호위함 사진도 같은 방식). 그 이름을 그대로 써서 덮어쓴다.
+# 다른 나라는 원래 그림을 쓴다.
 spriteTypes = {
+	spriteType = {
+		name = "GFX_KOR_improved_ship_hull_cruiser_medium"
+		texturefile = "gfx/interface/equipment/TFRKPHN_KOR_kddx_hull.png"
+	}
 	spriteType = {
 		name = "GFX_KOR_ship_hull_cruiser_3_medium"
 		texturefile = "gfx/interface/equipment/TFRKPHN_KOR_kddx_hull.png"

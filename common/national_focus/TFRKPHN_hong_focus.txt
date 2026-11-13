@@ -648,9 +648,9 @@ focus_tree = {
 				add_to_variable = { TFRKPHN_sp_jin_stab = 0.02 }
 			}
 			country_event = tfrkphn.58
-			set_temp_variable = { TFRKPHN_dev_tmp = 0.01 }
+			set_temp_variable = { TFRKPHN_dev_tmp = 0.05 }
 			custom_effect_tooltip = TFRKPHN_dev_m_pov_up_tt
-			hidden_effect = { add_to_variable = { TFRKPHN_dev_m_pov = 0.01 } TFRKPHN_dev_monthly_ensure = yes }
+			hidden_effect = { add_to_variable = { TFRKPHN_dev_m_pov = 0.05 } TFRKPHN_dev_monthly_ensure = yes }
 		}
 	}
 
@@ -681,9 +681,9 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			country_event = tfrkphn.60
-			set_temp_variable = { TFRKPHN_dev_tmp = 0.01 }
+			set_temp_variable = { TFRKPHN_dev_tmp = 0.05 }
 			custom_effect_tooltip = TFRKPHN_dev_m_mil_up_tt
-			hidden_effect = { add_to_variable = { TFRKPHN_dev_m_mil = 0.01 } TFRKPHN_dev_monthly_ensure = yes }
+			hidden_effect = { add_to_variable = { TFRKPHN_dev_m_mil = 0.05 } TFRKPHN_dev_monthly_ensure = yes }
 			unlock_decision_tooltip = TFRKPHN_mnd_armpeace_arms
 			unlock_decision_tooltip = TFRKPHN_mnd_armpeace_dock
 		}
@@ -1134,9 +1134,9 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			country_event = tfrkphn.124
-			set_temp_variable = { TFRKPHN_dev_tmp = 0.01 }
+			set_temp_variable = { TFRKPHN_dev_tmp = 0.05 }
 			custom_effect_tooltip = TFRKPHN_dev_m_pov_up_tt
-			hidden_effect = { add_to_variable = { TFRKPHN_dev_m_pov = 0.01 } TFRKPHN_dev_monthly_ensure = yes }
+			hidden_effect = { add_to_variable = { TFRKPHN_dev_m_pov = 0.05 } TFRKPHN_dev_monthly_ensure = yes }
 		}
 	}
 

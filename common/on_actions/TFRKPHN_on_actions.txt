@@ -133,6 +133,16 @@ if = { limit = { NOT = { has_country_flag = TFRKPHN_pw_migrated } } set_country_
 # 국방부 탭 국민정신 통합: 예전 저장 파일의 옛 보정치를 한 번 새 것으로 옮긴다
 if = { limit = { NOT = { has_country_flag = TFRKPHN_mndx_migrated } } set_country_flag = TFRKPHN_mndx_migrated TFRKPHN_mndx_migrate = yes }
 
+# 모래시계 검사: 이미 결정 11개를 다 끝낸 저장 파일에도 마무리 이벤트를 한 번 띄운다
+if = {
+	limit = { has_country_flag = TFRKP_HN_hong_president check_variable = { TFRKPHN_hourglass_step > 10.5 } NOT = { has_country_flag = TFRKPHN_hourglass_end_sent } NOT = { has_country_flag = TFRKPHN_hourglass_busy } }
+	set_country_flag = TFRKPHN_hourglass_end_sent
+	country_event = { id = tfrkphn.528 days = 1 }
+}
+
+# 이인제 정부 전쟁 국채 상환: 탭이 열려 있는 동안 기한을 하루씩 줄인다
+if = { limit = { has_country_flag = TFRKPHN_wd_on } TFRKPHN_wd_daily = yes }
+
 # 이인제 정부 돌아오는 기업
 if = { limit = { has_country_flag = TFRKPHN_ut_on } TFRKPHN_ut_daily = yes }
 
@@ -186,30 +196,32 @@ if = {
 	country_event = { id = tfrkphn.285 }
 }
 
-# 이인제 정부 부처 신임: 중점 「임기를 함께하는 내각」 뒤에 탭이 열리고, 기타 장관을 다 임명하면 국무회의 미션이 무한 반복한다
+# 이인제 정부 부처 신임: 중점 「국민 대통합」을 끝내면 탭이 열리고 국무회의 미션이 바로 무한 반복한다 (기타 장관 임명을 기다리지 않는다)
 if = {
 	limit = {
 		has_country_flag = TFRKPHN_successor_lee_in_je
-		has_completed_focus = TFRKPHN_lee_in_je_a3
+		has_completed_focus = TFRKPHN_lee_in_je_a1
 	}
 	TFRKPHN_dept_start = yes
 	TFRKPHN_dept_home = yes
-	# 기타 장관 여섯 자리를 모두 임명한 뒤에야 국무회의가 돌기 시작한다
+	TFRKPHN_dept_begin = yes
 	if = {
-		limit = {
-			has_country_flag = TFRKPHN_cab_nso_filled
-			has_country_flag = TFRKPHN_cab_agri_filled
-			has_country_flag = TFRKPHN_cab_labor_filled
-			has_country_flag = TFRKPHN_cab_unif_filled
-			has_country_flag = TFRKPHN_cab_justice_filled
-			has_country_flag = TFRKPHN_cab_trade_filled
-		}
-		TFRKPHN_dept_begin = yes
-		if = {
-			limit = { NOT = { has_active_mission = TFRKPHN_dept_meeting_mission } }
-			activate_mission = TFRKPHN_dept_meeting_mission
-		}
+		limit = { NOT = { has_active_mission = TFRKPHN_dept_meeting_mission } }
+		activate_mission = TFRKPHN_dept_meeting_mission
 	}
+}
+
+# 이인제 정부 기타 장관 임명 기한: 미션과 따로 날짜를 세어, 기한이 지나면 빈 자리를 고르는 이벤트를 띄운다
+TFRKPHN_cab_force_daily = yes
+
+# 이인제 정부 내각: 「출발선에 다시 서서」를 끝냈는데 장관이 바뀌지 않은 저장 파일도 한 번 바꿔 준다
+if = {
+	limit = {
+		has_country_flag = TFRKPHN_successor_lee_in_je
+		has_completed_focus = TFRKPHN_lee_in_je_b01_01
+		NOT = { has_country_flag = TFRKPHN_lee_cabinet_set }
+	}
+	TFRKPHN_lee_cabinet_appoint = yes
 }
 
 # 개헌 논의: 남은 기간 표시, 2주마다 반대파 움직임 미션 재가동, 300일 만료 처리
@@ -231,6 +243,12 @@ if = {
 }
 
 # 개헌안 가결 후에는 결정 탭의 개헌 결정으로 진행한다 (자동 완료 없음)
+# 이미 가결된 저장 파일에서 아직 돌고 있는 논의 기한과 반대파 움직임 미션을 끈다
+if = {
+	limit = { has_country_flag = TFRKPHN_amend_passed }
+	if = { limit = { has_active_mission = TFRKPHN_amend_deadline } remove_mission = TFRKPHN_amend_deadline }
+	if = { limit = { has_active_mission = TFRKPHN_amend_opposition_moves } remove_mission = TFRKPHN_amend_opposition_moves }
+}
 
 # 안철수 초상화를 이 모드의 그림으로 바꾼다 (인물이 나라에 있을 때 한 번)
 if = {

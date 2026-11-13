@@ -1,0 +1,22 @@
+# [안내] 이인제 정부 「기타 장관 임명」 기한(60일)이 지났을 때: 비어 있는 자리마다 고르는 이벤트를 하루 간격으로 띄운다. cab_build.py가 만든다.
+TFRKPHN_cab_force = {
+	if = {
+		limit = { NOT = { has_country_flag = TFRKPHN_cab_forced } }
+		set_country_flag = TFRKPHN_cab_forced
+		set_country_flag = TFRKPHN_cab_yoon_unlocked
+		if = { limit = { NOT = { has_country_flag = TFRKPHN_cab_nso_filled } } country_event = { id = tfrkphn.271 days = 1 } }
+		if = { limit = { NOT = { has_country_flag = TFRKPHN_cab_agri_filled } } country_event = { id = tfrkphn.272 days = 2 } }
+		if = { limit = { NOT = { has_country_flag = TFRKPHN_cab_labor_filled } } country_event = { id = tfrkphn.273 days = 3 } }
+		if = { limit = { NOT = { has_country_flag = TFRKPHN_cab_unif_filled } } country_event = { id = tfrkphn.274 days = 4 } }
+		if = { limit = { NOT = { has_country_flag = TFRKPHN_cab_justice_filled } } country_event = { id = tfrkphn.275 days = 5 } }
+		if = { limit = { NOT = { has_country_flag = TFRKPHN_cab_trade_filled } } country_event = { id = tfrkphn.276 days = 6 } }
+	}
+}
+# 날짜 세기: 이인제 정부가 들어선 날부터 하루에 1씩. 60일을 넘기면 위 효과를 부른다.
+TFRKPHN_cab_force_daily = {
+	if = {
+		limit = { has_country_flag = TFRKPHN_successor_lee_in_je NOT = { has_country_flag = TFRKPHN_cab_forced } NOT = { AND = { has_country_flag = TFRKPHN_cab_nso_filled has_country_flag = TFRKPHN_cab_agri_filled has_country_flag = TFRKPHN_cab_labor_filled has_country_flag = TFRKPHN_cab_unif_filled has_country_flag = TFRKPHN_cab_justice_filled has_country_flag = TFRKPHN_cab_trade_filled } } }
+		add_to_variable = { TFRKPHN_cab_wait = 1 }
+		if = { limit = { check_variable = { TFRKPHN_cab_wait > 60.5 } } TFRKPHN_cab_force = yes }
+	}
+}

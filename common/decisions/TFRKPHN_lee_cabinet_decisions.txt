@@ -1,4 +1,4 @@
-# [안내] 이인제 정부 「기타 장관 임명」 기한. 90일 안에 임명하지 않은 자리는 이벤트로 고르게 된다. cab_build.py가 만든 파일.
+# [안내] 이인제 정부 「기타 장관 임명」 기한. 60일 안에 임명하지 않은 자리는 이벤트로 고르게 된다. cab_build.py가 만든 파일.
 TFRKPHN_lee_cabinet_category = {
 	TFRKPHN_cab_timeout = {
 		icon = generic_political_actions
@@ -8,19 +8,11 @@ TFRKPHN_lee_cabinet_category = {
 		cancel_trigger = { hidden_trigger = { has_country_flag = TFRKPHN_cab_nso_filled has_country_flag = TFRKPHN_cab_agri_filled has_country_flag = TFRKPHN_cab_labor_filled has_country_flag = TFRKPHN_cab_unif_filled has_country_flag = TFRKPHN_cab_justice_filled has_country_flag = TFRKPHN_cab_trade_filled } }
 		selectable_mission = no
 		is_good = no
-		days_mission_timeout = 90
+		days_mission_timeout = 60
 		fire_only_once = yes
 		timeout_effect = {
 			custom_effect_tooltip = TFRKPHN_cab_timeout_tt
-			set_country_flag = TFRKPHN_cab_yoon_unlocked
-			hidden_effect = {
-				if = { limit = { NOT = { has_country_flag = TFRKPHN_cab_nso_filled } } country_event = { id = tfrkphn.271 days = 1 } }
-				if = { limit = { NOT = { has_country_flag = TFRKPHN_cab_agri_filled } } country_event = { id = tfrkphn.272 days = 2 } }
-				if = { limit = { NOT = { has_country_flag = TFRKPHN_cab_labor_filled } } country_event = { id = tfrkphn.273 days = 3 } }
-				if = { limit = { NOT = { has_country_flag = TFRKPHN_cab_unif_filled } } country_event = { id = tfrkphn.274 days = 4 } }
-				if = { limit = { NOT = { has_country_flag = TFRKPHN_cab_justice_filled } } country_event = { id = tfrkphn.275 days = 5 } }
-				if = { limit = { NOT = { has_country_flag = TFRKPHN_cab_trade_filled } } country_event = { id = tfrkphn.276 days = 6 } }
-			}
+			hidden_effect = { TFRKPHN_cab_force = yes }
 		}
 	}
 }
