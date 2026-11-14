@@ -2,6 +2,18 @@
 add_namespace = tfrkphn
 
 country_event = {
+	id = tfrkphn.562
+	title = tfrkphn.562.t
+	desc = tfrkphn.562.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.562.a
+	}
+}
+
+country_event = {
 	id = tfrkphn.556
 	title = tfrkphn.556.t
 	desc = tfrkphn.556.d
@@ -82,3 +94,16 @@ country_event = {
 	}
 }
 
+# 시험용 이벤트: 엔딩 가지 열기
+country_event = {
+	id = tfrkphn.599
+	title = tfrkphn.599.t
+	desc = tfrkphn.599.d
+	picture = GFX_TFRKPHN_lee_temp
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.599.a
+		set_country_flag = TFRKPHN_gaw_end_test
+		mark_focus_tree_layout_dirty = yes
+	}
+}
