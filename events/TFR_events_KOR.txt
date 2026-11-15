@@ -1577,7 +1577,7 @@ country_event = { # 제20대 대통령 선거
 			if = {
 				limit = { has_character = KOR_hong_joon_pyo_char }
 				KOR_hong_joon_pyo_char = {
-					promote_character = judicial_conservatism
+					promote_character = korean_neoconservatism
 				}
 			}
 			# 홍준표 중점 트리/지지도 초기화 이벤트를 확실히 호출 (무작위 발생에만 맡기지 않는다)
@@ -1686,7 +1686,7 @@ country_event = { # 제20대 대통령 선거
 				recruit_character = KOR_hong_joon_pyo_char
 			}
 			KOR_hong_joon_pyo_char = {
-				promote_character = judicial_conservatism
+				promote_character = korean_neoconservatism
 			}
 		}
 		else = {

@@ -10,7 +10,7 @@ characters = {
 		}
 		country_leader = {
 			desc = KOR_hong_joon_pyo_char_desc
-			ideology = judicial_conservatism
+			ideology = korean_neoconservatism
 			traits = { TFRKPHN_trait_leader_dokgodai }
 			expire = "2065.1.1"
 			id = -1
@@ -24,7 +24,7 @@ characters = {
 			}
 		}
 		country_leader = {
-			ideology = korean_conservatism
+			ideology = korean_neoconservatism
 			desc = KOR_lee_in_je_char_desc
 			traits = { TFRKPHN_trait_leader_phoenix }
 			expire = "2065.1.1"
@@ -34,7 +34,7 @@ characters = {
 	KOR_oh_se_hoon_char = {
 		name = KOR_oh_se_hoon_char
 		country_leader = {
-			ideology = korean_conservatism
+			ideology = korean_warm_conservatism
 			expire = "2065.1.1"
 			id = -1
 		}

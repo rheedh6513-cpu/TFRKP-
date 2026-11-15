@@ -235,6 +235,18 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/TFRKPHN_e22_maksang.png"
 	}
 	spriteType = {
+		name = "GFX_focus_TFRKPHN_e22_attack"
+		texturefile = "gfx/interface/goals/TFRKPHN_e22_attack.png"
+	}
+	spriteType = {
+		name = "GFX_focus_TFRKPHN_hong_kdef_europe"
+		texturefile = "gfx/interface/goals/TFRKPHN_hong_kdef_europe.png"
+	}
+	spriteType = {
+		name = "GFX_focus_TFRKPHN_hong_ammo"
+		texturefile = "gfx/interface/goals/TFRKPHN_hong_ammo.png"
+	}
+	spriteType = {
 		name = "GFX_focus_TFRKPHN_e22_root"
 		texturefile = "gfx/interface/goals/TFRKPHN_e22_root.png"
 	}
@@ -437,6 +449,402 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_TFRKPHN_artillery_fire"
 		texturefile = "gfx/event_pictures/TFRKPHN_artillery_fire.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_yoo_hong"
+		texturefile = "gfx/event_pictures/TFRKPHN_yoo_hong.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_yoo_lee"
+		texturefile = "gfx/event_pictures/TFRKPHN_yoo_lee.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_hong_praise"
+		texturefile = "gfx/event_pictures/TFRKPHN_hong_praise.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_hong_neutral"
+		texturefile = "gfx/event_pictures/TFRKPHN_hong_neutral.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_hong_blame"
+		texturefile = "gfx/event_pictures/TFRKPHN_hong_blame.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_china_exit"
+		texturefile = "gfx/event_pictures/TFRKPHN_china_exit.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_nk_defect"
+		texturefile = "gfx/event_pictures/TFRKPHN_nk_defect.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_nk_protest"
+		texturefile = "gfx/event_pictures/TFRKPHN_nk_protest.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_nk_riot"
+		texturefile = "gfx/event_pictures/TFRKPHN_nk_riot.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_nk_market"
+		texturefile = "gfx/event_pictures/TFRKPHN_nk_market.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_nk_kjc"
+		texturefile = "gfx/event_pictures/TFRKPHN_nk_kjc.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_nk_soldier"
+		texturefile = "gfx/event_pictures/TFRKPHN_nk_soldier.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_resign"
+		texturefile = "gfx/event_pictures/TFRKPHN_resign.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_cabinet"
+		texturefile = "gfx/event_pictures/TFRKPHN_cabinet.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_threekims"
+		texturefile = "gfx/event_pictures/TFRKPHN_threekims.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_kim_ys"
+		texturefile = "gfx/event_pictures/TFRKPHN_kim_ys.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_kim_dj"
+		texturefile = "gfx/event_pictures/TFRKPHN_kim_dj.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_start_line"
+		texturefile = "gfx/event_pictures/TFRKPHN_start_line.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_chungcheong"
+		texturefile = "gfx/event_pictures/TFRKPHN_chungcheong.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_jobs_president"
+		texturefile = "gfx/event_pictures/TFRKPHN_jobs_president.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_jobs_million"
+		texturefile = "gfx/event_pictures/TFRKPHN_jobs_million.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_empins"
+		texturefile = "gfx/event_pictures/TFRKPHN_empins.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_four_months"
+		texturefile = "gfx/event_pictures/TFRKPHN_four_months.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_finish_line"
+		texturefile = "gfx/event_pictures/TFRKPHN_finish_line.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_empty_chair"
+		texturefile = "gfx/event_pictures/TFRKPHN_empty_chair.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_vacancy"
+		texturefile = "gfx/event_pictures/TFRKPHN_vacancy.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_partial_wage"
+		texturefile = "gfx/event_pictures/TFRKPHN_partial_wage.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_angry_rally"
+		texturefile = "gfx/event_pictures/TFRKPHN_angry_rally.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_unemployment"
+		texturefile = "gfx/event_pictures/TFRKPHN_unemployment.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_loudspeaker"
+		texturefile = "gfx/event_pictures/TFRKPHN_loudspeaker.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_hartz"
+		texturefile = "gfx/event_pictures/TFRKPHN_hartz.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_divest"
+		texturefile = "gfx/event_pictures/TFRKPHN_divest.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_debt_paid"
+		texturefile = "gfx/event_pictures/TFRKPHN_debt_paid.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_cart"
+		texturefile = "gfx/event_pictures/TFRKPHN_cart.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_hourglass_empty"
+		texturefile = "gfx/event_pictures/TFRKPHN_hourglass_empty.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_nkhr"
+		texturefile = "gfx/event_pictures/TFRKPHN_nkhr.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_irreversible"
+		texturefile = "gfx/event_pictures/TFRKPHN_irreversible.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_working_mother"
+		texturefile = "gfx/event_pictures/TFRKPHN_working_mother.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_landing_fleet"
+		texturefile = "gfx/event_pictures/TFRKPHN_landing_fleet.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_nakdong"
+		texturefile = "gfx/event_pictures/TFRKPHN_nakdong.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_north_ready"
+		texturefile = "gfx/event_pictures/TFRKPHN_north_ready.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_free_china"
+		texturefile = "gfx/event_pictures/TFRKPHN_free_china.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_asia_order"
+		texturefile = "gfx/event_pictures/TFRKPHN_asia_order.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_north_wing"
+		texturefile = "gfx/event_pictures/TFRKPHN_north_wing.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_mobilized"
+		texturefile = "gfx/event_pictures/TFRKPHN_mobilized.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_oplan"
+		texturefile = "gfx/event_pictures/TFRKPHN_oplan.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_unification_econ"
+		texturefile = "gfx/event_pictures/TFRKPHN_unification_econ.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_yalu_canteen"
+		texturefile = "gfx/event_pictures/TFRKPHN_yalu_canteen.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_one_constitution"
+		texturefile = "gfx/event_pictures/TFRKPHN_one_constitution.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_ammo_issue"
+		texturefile = "gfx/event_pictures/TFRKPHN_ammo_issue.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_settle"
+		texturefile = "gfx/event_pictures/TFRKPHN_settle.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_ulsan"
+		texturefile = "gfx/event_pictures/TFRKPHN_ulsan.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_bid_briefing"
+		texturefile = "gfx/event_pictures/TFRKPHN_bid_briefing.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_unsigned_order"
+		texturefile = "gfx/event_pictures/TFRKPHN_unsigned_order.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_predecessor_post"
+		texturefile = "gfx/event_pictures/TFRKPHN_predecessor_post.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_venture"
+		texturefile = "gfx/event_pictures/TFRKPHN_venture.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_strong_lead"
+		texturefile = "gfx/event_pictures/TFRKPHN_strong_lead.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_resp_pm"
+		texturefile = "gfx/event_pictures/TFRKPHN_resp_pm.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_blank_slot"
+		texturefile = "gfx/event_pictures/TFRKPHN_blank_slot.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_appointment"
+		texturefile = "gfx/event_pictures/TFRKPHN_appointment.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_rice_price"
+		texturefile = "gfx/event_pictures/TFRKPHN_rice_price.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_moj"
+		texturefile = "gfx/event_pictures/TFRKPHN_moj.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_motie"
+		texturefile = "gfx/event_pictures/TFRKPHN_motie.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_unitax"
+		texturefile = "gfx/event_pictures/TFRKPHN_unitax.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_biz_counter"
+		texturefile = "gfx/event_pictures/TFRKPHN_biz_counter.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_indict"
+		texturefile = "gfx/event_pictures/TFRKPHN_indict.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_pyongyang_ledger"
+		texturefile = "gfx/event_pictures/TFRKPHN_pyongyang_ledger.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_ledger_party"
+		texturefile = "gfx/event_pictures/TFRKPHN_ledger_party.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_baton"
+		texturefile = "gfx/event_pictures/TFRKPHN_baton.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_frontier"
+		texturefile = "gfx/event_pictures/TFRKPHN_frontier.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_useful_man"
+		texturefile = "gfx/event_pictures/TFRKPHN_useful_man.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_one_nay"
+		texturefile = "gfx/event_pictures/TFRKPHN_one_nay.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_three_am"
+		texturefile = "gfx/event_pictures/TFRKPHN_three_am.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_foreign_pres"
+		texturefile = "gfx/event_pictures/TFRKPHN_foreign_pres.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_nay_placard"
+		texturefile = "gfx/event_pictures/TFRKPHN_nay_placard.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_thaad"
+		texturefile = "gfx/event_pictures/TFRKPHN_thaad.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_mnd"
+		texturefile = "gfx/event_pictures/TFRKPHN_mnd.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_army_after"
+		texturefile = "gfx/event_pictures/TFRKPHN_army_after.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_missed_deadline"
+		texturefile = "gfx/event_pictures/TFRKPHN_missed_deadline.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_empty_shelf"
+		texturefile = "gfx/event_pictures/TFRKPHN_empty_shelf.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_burden_share"
+		texturefile = "gfx/event_pictures/TFRKPHN_burden_share.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_debt_zero"
+		texturefile = "gfx/event_pictures/TFRKPHN_debt_zero.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_debt_broken"
+		texturefile = "gfx/event_pictures/TFRKPHN_debt_broken.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_vacant_post"
+		texturefile = "gfx/event_pictures/TFRKPHN_vacant_post.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_protests_pile"
+		texturefile = "gfx/event_pictures/TFRKPHN_protests_pile.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_reorg_done"
+		texturefile = "gfx/event_pictures/TFRKPHN_reorg_done.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_north_facing"
+		texturefile = "gfx/event_pictures/TFRKPHN_north_facing.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_someone_must"
+		texturefile = "gfx/event_pictures/TFRKPHN_someone_must.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_workers_needed"
+		texturefile = "gfx/event_pictures/TFRKPHN_workers_needed.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_biz_friendly"
+		texturefile = "gfx/event_pictures/TFRKPHN_biz_friendly.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_prod_plan"
+		texturefile = "gfx/event_pictures/TFRKPHN_prod_plan.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_equity_share"
+		texturefile = "gfx/event_pictures/TFRKPHN_equity_share.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_one_card"
+		texturefile = "gfx/event_pictures/TFRKPHN_one_card.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_posting"
+		texturefile = "gfx/event_pictures/TFRKPHN_posting.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_money_path"
+		texturefile = "gfx/event_pictures/TFRKPHN_money_path.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_returned"
+		texturefile = "gfx/event_pictures/TFRKPHN_returned.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_not_returned"
+		texturefile = "gfx/event_pictures/TFRKPHN_not_returned.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_baekdu"
+		texturefile = "gfx/event_pictures/TFRKPHN_baekdu.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_oksae_run"
+		texturefile = "gfx/event_pictures/TFRKPHN_oksae_run.png"
 	}
 	spriteType = {
 		name = "GFX_TFRKPHN_assembly_vote"

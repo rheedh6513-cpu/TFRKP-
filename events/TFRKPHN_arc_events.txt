@@ -1,0 +1,99 @@
+# [안내] 홍준표와 이인제 두 사람의 줄기를 잇는 장면들. 문구는 localisation/korean/TFRKPHN_arc_l_korean.yml. arc_build.py가 만든다.
+add_namespace = tfrkphn
+
+country_event = {
+	id = tfrkphn.568
+	title = tfrkphn.568.t
+	desc = tfrkphn.568.story
+	picture = GFX_TFRKPHN_frontier
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { name = tfrkphn.568.a }
+}
+
+country_event = {
+	id = tfrkphn.563
+	title = tfrkphn.563.t
+	desc = tfrkphn.563.story
+	picture = GFX_TFRKPHN_useful_man
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.563.next
+		hidden_effect = { country_event = { id = tfrkphn.663 } }
+	}
+}
+
+country_event = {
+	id = tfrkphn.663
+	title = tfrkphn.563.t
+	desc = tfrkphn.663.story
+	picture = GFX_TFRKPHN_useful_man
+	is_triggered_only = yes
+	option = { name = tfrkphn.563.a }
+}
+
+country_event = {
+	id = tfrkphn.564
+	title = tfrkphn.564.t
+	desc = tfrkphn.564.story
+	picture = GFX_TFRKPHN_one_nay
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { name = tfrkphn.564.a }
+}
+
+country_event = {
+	id = tfrkphn.565
+	title = tfrkphn.565.t
+	desc = tfrkphn.565.story
+	picture = GFX_TFRKPHN_ulsan
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.565.next
+		hidden_effect = { country_event = { id = tfrkphn.665 } }
+	}
+}
+
+country_event = {
+	id = tfrkphn.665
+	title = tfrkphn.565.t
+	desc = tfrkphn.665.story
+	picture = GFX_TFRKPHN_ulsan
+	is_triggered_only = yes
+	option = { name = tfrkphn.565.a }
+}
+
+country_event = {
+	id = tfrkphn.566
+	title = tfrkphn.566.t
+	desc = tfrkphn.566.story
+	picture = GFX_TFRKPHN_baton
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.566.next
+		hidden_effect = { country_event = { id = tfrkphn.666 } }
+	}
+}
+
+country_event = {
+	id = tfrkphn.666
+	title = tfrkphn.566.t
+	desc = tfrkphn.666.story
+	picture = GFX_TFRKPHN_baton
+	is_triggered_only = yes
+	option = { name = tfrkphn.566.a }
+}
+
+country_event = {
+	id = tfrkphn.567
+	title = tfrkphn.567.t
+	desc = tfrkphn.567.story
+	picture = GFX_TFRKPHN_three_am
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { name = tfrkphn.567.a }
+}
+

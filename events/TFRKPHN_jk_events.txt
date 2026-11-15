@@ -2,11 +2,25 @@
 add_namespace = tfrkphn
 
 # 시화공단 김 사장의 군납 입찰
+# >>> kp 524
+# 긴 글의 앞 장들. 마지막 선택지가 원래 이벤트 tfrkphn.524을 부른다 (hongkp_build.py)
+country_event = {
+	id = tfrkphn.924
+	title = tfrkphn.524.t
+	desc = tfrkphn.524.kp
+	picture = GFX_TFRKPHN_bid_briefing
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.924.next
+		hidden_effect = { country_event = { id = tfrkphn.524 } }
+	}
+}
+# <<< kp 524
 country_event = {
 	id = tfrkphn.524
 	title = tfrkphn.524.t
-	desc = tfrkphn.524.story
-	picture = GFX_TFRKPHN_lee_temp
+	desc = tfrkphn.524.kp2
+	picture = GFX_TFRKPHN_bid_briefing
 	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
@@ -20,7 +34,7 @@ country_event = {
 	id = tfrkphn.525
 	title = tfrkphn.525.t
 	desc = tfrkphn.525.d
-	picture = GFX_TFRKPHN_lee_temp
+	picture = GFX_TFRKPHN_money_path
 	is_triggered_only = yes
 	fire_only_once = yes
 	option = {	# 계약 공개

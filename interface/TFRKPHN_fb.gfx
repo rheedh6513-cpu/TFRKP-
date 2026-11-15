@@ -1,0 +1,11 @@
+# [안내] 옥새런 놀이 그림. fb_build.py가 만든다.
+spriteTypes = {
+	spriteType = { name = "GFX_TFRKPHN_fb_bg" texturefile = "gfx/interface/gui/TFRKPHN_fb/TFRKPHN_fb_bg.png" }
+	spriteType = { name = "GFX_TFRKPHN_fb_bird" texturefile = "gfx/interface/gui/TFRKPHN_fb/TFRKPHN_fb_bird.png" noOfFrames = 9 }
+	spriteType = { name = "GFX_TFRKPHN_fb_pipe" texturefile = "gfx/interface/gui/TFRKPHN_fb/TFRKPHN_fb_pipe.png" noOfFrames = 6 }
+	spriteType = { name = "GFX_TFRKPHN_fb_over" texturefile = "gfx/interface/gui/TFRKPHN_fb/TFRKPHN_fb_over.png" }
+	spriteType = { name = "GFX_TFRKPHN_fb_b_flap" texturefile = "gfx/interface/gui/TFRKPHN_fb/TFRKPHN_fb_b_flap.png" }
+	spriteType = { name = "GFX_TFRKPHN_fb_b_wait" texturefile = "gfx/interface/gui/TFRKPHN_fb/TFRKPHN_fb_b_wait.png" }
+	spriteType = { name = "GFX_TFRKPHN_fb_b_reset" texturefile = "gfx/interface/gui/TFRKPHN_fb/TFRKPHN_fb_b_reset.png" }
+	spriteType = { name = "GFX_TFRKPHN_fb_b_close" texturefile = "gfx/interface/gui/TFRKPHN_fb/TFRKPHN_fb_b_close.png" }
+}

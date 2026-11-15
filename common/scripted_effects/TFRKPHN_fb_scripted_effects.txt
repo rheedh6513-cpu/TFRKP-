@@ -1,0 +1,92 @@
+# [안내] 옥새런 놀이의 계산. fb_build.py가 만든다.
+# 변수: TFRKPHN_fb_y = 새의 줄(0 맨 위 ~ 8 맨 아래), TFRKPHN_fb_s0~s7 = 칸마다 기둥(0 없음, 1~5 틈이 시작하는 줄, 틈은 3줄), TFRKPHN_fb_score, TFRKPHN_fb_best, TFRKPHN_fb_dead, TFRKPHN_fb_n(걸음 수)
+TFRKPHN_fb_reset = {
+	set_variable = { TFRKPHN_fb_y = 4 }
+	set_variable = { TFRKPHN_fb_score = 0 }
+	set_variable = { TFRKPHN_fb_dead = 0 }
+	set_variable = { TFRKPHN_fb_n = 0 }
+	set_variable = { TFRKPHN_fb_s0 = 0 }
+	set_variable = { TFRKPHN_fb_s1 = 0 }
+	set_variable = { TFRKPHN_fb_s2 = 0 }
+	set_variable = { TFRKPHN_fb_s3 = 0 }
+	set_variable = { TFRKPHN_fb_s4 = 0 }
+	set_variable = { TFRKPHN_fb_s5 = 0 }
+	set_variable = { TFRKPHN_fb_s6 = 0 }
+	set_variable = { TFRKPHN_fb_s7 = 0 }
+	TFRKPHN_fb_draw = yes
+}
+TFRKPHN_fb_open = {
+	set_country_flag = TFRKPHN_fb_on
+	if = { limit = { NOT = { has_variable = TFRKPHN_fb_best } } set_variable = { TFRKPHN_fb_best = 0 } }
+	TFRKPHN_fb_reset = yes
+}
+# 한 걸음. 부르기 전에 임시 변수 fb_flap(1 날기, 0 그대로)을 정해 둔다.
+TFRKPHN_fb_step = {
+	if = {
+		limit = { has_country_flag = TFRKPHN_fb_on check_variable = { TFRKPHN_fb_dead = 0 } }
+		if = { limit = { check_variable = { fb_flap = 1 } } add_to_variable = { TFRKPHN_fb_y = -2 } }
+		else = { add_to_variable = { TFRKPHN_fb_y = 1 } }
+		if = { limit = { check_variable = { TFRKPHN_fb_y < 0 } } set_variable = { TFRKPHN_fb_y = 0 } }
+		# 기둥을 한 칸 왼쪽으로
+		set_variable = { TFRKPHN_fb_s0 = TFRKPHN_fb_s1 }
+		set_variable = { TFRKPHN_fb_s1 = TFRKPHN_fb_s2 }
+		set_variable = { TFRKPHN_fb_s2 = TFRKPHN_fb_s3 }
+		set_variable = { TFRKPHN_fb_s3 = TFRKPHN_fb_s4 }
+		set_variable = { TFRKPHN_fb_s4 = TFRKPHN_fb_s5 }
+		set_variable = { TFRKPHN_fb_s5 = TFRKPHN_fb_s6 }
+		set_variable = { TFRKPHN_fb_s6 = TFRKPHN_fb_s7 }
+		set_variable = { TFRKPHN_fb_s7 = 0 }
+		add_to_variable = { TFRKPHN_fb_n = 1 }
+		set_temp_variable = { fb_m = TFRKPHN_fb_n }
+		modulo_temp_variable = { fb_m = 3 }
+		if = {
+			limit = { check_variable = { fb_m = 0 } }
+			random_list = {
+				20 = { set_variable = { TFRKPHN_fb_s7 = 1 } }
+				20 = { set_variable = { TFRKPHN_fb_s7 = 2 } }
+				20 = { set_variable = { TFRKPHN_fb_s7 = 3 } }
+				20 = { set_variable = { TFRKPHN_fb_s7 = 4 } }
+				20 = { set_variable = { TFRKPHN_fb_s7 = 5 } }
+			}
+		}
+		# 바닥에 닿았는지
+		if = { limit = { check_variable = { TFRKPHN_fb_y > 8 } } set_variable = { TFRKPHN_fb_y = 8 } set_variable = { TFRKPHN_fb_dead = 1 } }
+		# 새가 있는 칸(둘째 칸)의 기둥에 부딪혔는지: 틈은 s1 ~ s1+2 줄
+		if = {
+			limit = { check_variable = { TFRKPHN_fb_s1 > 0 } }
+			set_temp_variable = { fb_top = TFRKPHN_fb_s1 }
+			set_temp_variable = { fb_bot = TFRKPHN_fb_s1 }
+			add_to_temp_variable = { fb_bot = 2 }
+			if = { limit = { OR = { check_variable = { TFRKPHN_fb_y < fb_top } check_variable = { TFRKPHN_fb_y > fb_bot } } } set_variable = { TFRKPHN_fb_dead = 1 } }
+		}
+		# 기둥 하나를 지나 보냈으면 한 걸음 버틴 것으로 센다
+		if = {
+			limit = { check_variable = { TFRKPHN_fb_dead = 0 } check_variable = { TFRKPHN_fb_s0 > 0 } }
+			add_to_variable = { TFRKPHN_fb_score = 1 }
+			if = { limit = { check_variable = { TFRKPHN_fb_score > TFRKPHN_fb_best } } set_variable = { TFRKPHN_fb_best = TFRKPHN_fb_score } }
+		}
+		TFRKPHN_fb_draw = yes
+	}
+}
+# 그림 프레임 맞추기 (프레임은 1부터)
+TFRKPHN_fb_draw = {
+	set_variable = { TFRKPHN_fb_bf = TFRKPHN_fb_y }
+	add_to_variable = { TFRKPHN_fb_bf = 1 }
+	clamp_variable = { var = TFRKPHN_fb_bf min = 1 max = 9 }
+	set_variable = { TFRKPHN_fb_f0 = TFRKPHN_fb_s0 }
+	add_to_variable = { TFRKPHN_fb_f0 = 1 }
+	set_variable = { TFRKPHN_fb_f1 = TFRKPHN_fb_s1 }
+	add_to_variable = { TFRKPHN_fb_f1 = 1 }
+	set_variable = { TFRKPHN_fb_f2 = TFRKPHN_fb_s2 }
+	add_to_variable = { TFRKPHN_fb_f2 = 1 }
+	set_variable = { TFRKPHN_fb_f3 = TFRKPHN_fb_s3 }
+	add_to_variable = { TFRKPHN_fb_f3 = 1 }
+	set_variable = { TFRKPHN_fb_f4 = TFRKPHN_fb_s4 }
+	add_to_variable = { TFRKPHN_fb_f4 = 1 }
+	set_variable = { TFRKPHN_fb_f5 = TFRKPHN_fb_s5 }
+	add_to_variable = { TFRKPHN_fb_f5 = 1 }
+	set_variable = { TFRKPHN_fb_f6 = TFRKPHN_fb_s6 }
+	add_to_variable = { TFRKPHN_fb_f6 = 1 }
+	set_variable = { TFRKPHN_fb_f7 = TFRKPHN_fb_s7 }
+	add_to_variable = { TFRKPHN_fb_f7 = 1 }
+}

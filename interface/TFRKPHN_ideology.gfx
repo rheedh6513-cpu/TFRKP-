@@ -1,0 +1,21 @@
+# [안내] 「한국식 신보수주의」 그림. 전용 그림이 없어서 Korea Plus의 한국식 보수주의 그림을 가리킨다. neocon_build.py가 만든다.
+spriteTypes = {
+	spriteType = {
+		name = "GFX_ideology_korean_neoconservatism"
+		texturefile = "gfx/interface/ideologies/korean_conservatism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_korean_neoconservatism_conservative_banner"
+		textureFile = "gfx/texticons/banners/ideology/ideology_korean_conservatism_conservative_banner.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_ideology_korean_warm_conservatism"
+		texturefile = "gfx/interface/ideologies/korean_conservatism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_korean_warm_conservatism_conservative_banner"
+		textureFile = "gfx/texticons/banners/ideology/ideology_korean_conservatism_conservative_banner.png"
+		legacy_lazy_load = no
+	}
+}

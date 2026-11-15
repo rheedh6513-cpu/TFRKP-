@@ -1,0 +1,32 @@
+# [안내] 옥새런 놀이의 동작. fb_build.py가 만든다.
+scripted_gui = {
+	TFRKPHN_fb_gui = {
+		context_type = player_context
+		parent_window_token = top_bar
+		window_name = "TFRKPHN_fb_container"
+		visible = { has_country_flag = TFRKPHN_fb_on }
+		ai_enabled = { always = no }
+		properties = {
+			TFRKPHN_fb_bird = { frame = TFRKPHN_fb_bf }
+			TFRKPHN_fb_p0 = { frame = TFRKPHN_fb_f0 }
+			TFRKPHN_fb_p1 = { frame = TFRKPHN_fb_f1 }
+			TFRKPHN_fb_p2 = { frame = TFRKPHN_fb_f2 }
+			TFRKPHN_fb_p3 = { frame = TFRKPHN_fb_f3 }
+			TFRKPHN_fb_p4 = { frame = TFRKPHN_fb_f4 }
+			TFRKPHN_fb_p5 = { frame = TFRKPHN_fb_f5 }
+			TFRKPHN_fb_p6 = { frame = TFRKPHN_fb_f6 }
+			TFRKPHN_fb_p7 = { frame = TFRKPHN_fb_f7 }
+		}
+		effects = {
+			TFRKPHN_fb_b_flap_click = { set_temp_variable = { fb_flap = 1 } TFRKPHN_fb_step = yes }
+			TFRKPHN_fb_b_wait_click = { set_temp_variable = { fb_flap = 0 } TFRKPHN_fb_step = yes }
+			TFRKPHN_fb_b_reset_click = { TFRKPHN_fb_reset = yes }
+			TFRKPHN_fb_b_close_click = { clr_country_flag = TFRKPHN_fb_on }
+		}
+		triggers = {
+			TFRKPHN_fb_over_visible = { check_variable = { TFRKPHN_fb_dead = 1 } }
+			TFRKPHN_fb_b_flap_click_enabled = { check_variable = { TFRKPHN_fb_dead = 0 } }
+			TFRKPHN_fb_b_wait_click_enabled = { check_variable = { TFRKPHN_fb_dead = 0 } }
+		}
+	}
+}

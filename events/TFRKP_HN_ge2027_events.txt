@@ -3,10 +3,24 @@
 add_namespace = tfrkphn
 
 # 제21대 대선 (2027.3.3): 양안전쟁 결과에 따른 차기 대통령
+# >>> kp 301
+# 긴 글의 앞 장들. 마지막 선택지가 원래 이벤트 tfrkphn.301을 부른다 (hongkp_build.py)
+country_event = {
+	id = tfrkphn.701
+	title = tfrkphn.301.t
+	desc = tfrkphn.301.kp
+	picture = GFX_report_event_ppp_ge_win
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.701.next
+		hidden_effect = { country_event = { id = tfrkphn.301 } }
+	}
+}
+# <<< kp 301
 country_event = {
 	id = tfrkphn.301
 	title = tfrkphn.301.t
-	desc = tfrkphn.301.desc
+	desc = tfrkphn.301.kp2
 	picture = GFX_report_event_ppp_ge_win
 	is_triggered_only = yes
 
@@ -117,10 +131,24 @@ country_event = {
 }
 
 # 홍준표 루트: 대만 파병(b02_02) 60일 뒤, 대만 파병 반대 시민대행진
+# >>> kp 309
+# 긴 글의 앞 장들. 마지막 선택지가 원래 이벤트 tfrkphn.309을 부른다 (hongkp_build.py)
+country_event = {
+	id = tfrkphn.709
+	title = tfrkphn.309.t
+	desc = tfrkphn.309.kp
+	picture = GFX_TFRKPHN_taiwan_protest
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.709.next
+		hidden_effect = { country_event = { id = tfrkphn.309 } }
+	}
+}
+# <<< kp 309
 country_event = {
 	id = tfrkphn.309
 	title = tfrkphn.309.t
-	desc = tfrkphn.309.desc
+	desc = tfrkphn.309.kp2
 	picture = GFX_TFRKPHN_taiwan_protest
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -161,7 +189,7 @@ country_event = {
 country_event = {
 	id = tfrkphn.312
 	title = tfrkphn.312.t
-	desc = tfrkphn.312.news
+	desc = tfrkphn.312.kp
 	picture = GFX_report_event_generic_read_write
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -366,10 +394,24 @@ country_event = {
 }
 
 # 범죄와의 전쟁(b03_06) 2일 뒤: 검사의 칼날 (홍준표 회상)
+# >>> kp 322
+# 긴 글의 앞 장들. 마지막 선택지가 원래 이벤트 tfrkphn.322을 부른다 (hongkp_build.py)
+country_event = {
+	id = tfrkphn.722
+	title = tfrkphn.322.t
+	desc = tfrkphn.322.kp
+	picture = GFX_TFRKPHN_sandglass
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.722.next
+		hidden_effect = { country_event = { id = tfrkphn.322 } }
+	}
+}
+# <<< kp 322
 country_event = {
 	id = tfrkphn.322
 	title = tfrkphn.322.t
-	desc = tfrkphn.322.desc
+	desc = tfrkphn.322.kp2
 	picture = GFX_TFRKPHN_sandglass
 	fire_only_once = yes
 	is_triggered_only = yes

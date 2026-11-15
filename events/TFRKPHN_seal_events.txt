@@ -1,0 +1,39 @@
+# [안내] 직인 날인 거부 사건. 중립 갈래(부결) 중점을 찍으면 뜨고 강제로 가결 갈래로 넘긴다. 문구는 localisation/korean/TFRKPHN_seal_l_korean.yml. seal_build.py가 만든다.
+add_namespace = tfrkphn
+
+country_event = {
+	id = tfrkphn.570
+	title = tfrkphn.570.t
+	desc = tfrkphn.570.d
+	picture = GFX_TFRKPHN_oksae_run
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = TFRKPHN_hong_tw_bill_rejected
+			set_country_flag = TFRKPHN_hong_tw_bill_passed
+			set_country_flag = TFRKPHN_seal_incident
+			uncomplete_national_focus = { focus = TFRKPHN_hong_b02_03 uncomplete_children = yes refund_political_power = no }
+			complete_national_focus = TFRKPHN_hong_b02_02
+		}
+	}
+	option = {
+		name = tfrkphn.570.a
+		custom_effect_tooltip = TFRKPHN_seal_tt
+	}
+	option = {	# 이스터에그: 옥새런 놀이 (fb_build.py)
+		name = tfrkphn.570.b
+		trigger = { is_ai = no }
+		custom_effect_tooltip = TFRKPHN_seal_tt
+		hidden_effect = { TFRKPHN_fb_open = yes }
+	}
+}
+# 놀이 창을 다시 여는 숨은 이벤트 (콘솔: event tfrkphn.571)
+country_event = {
+	id = tfrkphn.571
+	title = tfrkphn.570.t
+	desc = tfrkphn.571.d
+	picture = GFX_TFRKPHN_oksae_run
+	is_triggered_only = yes
+	option = { name = tfrkphn.570.b hidden_effect = { TFRKPHN_fb_open = yes } }
+}

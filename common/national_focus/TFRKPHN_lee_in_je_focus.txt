@@ -21,7 +21,7 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_political_power = 50	# 버프 (buff_build.py)
-			country_event = { id = tfrkphn.260 }
+			country_event = { id = tfrkphn.860 }
 			TFRKPHN_lee_gov_init = yes
 			TFRKPHN_lee_cabinet_appoint = yes	# 이인제 정부 장관 여섯 명 임명
 		}
@@ -38,7 +38,7 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_political_power = 50	# 버프 (buff_build.py)
-			country_event = { id = tfrkphn.261 }
+			country_event = { id = tfrkphn.861 }
 			custom_effect_tooltip = TFRKPHN_dept_start_tt	# 임기를 함께하는 내각 탭과 국무회의가 열린다
 			add_stability = 0.04
 			add_popularity = { ideology = conservative popularity = 0.03 }
@@ -58,7 +58,7 @@ focus_tree = {
 		completion_reward = {
 			add_to_variable = { TFRKPHN_lee_stab = 0.02 } add_political_power = 50 TFRKPHN_lee_gov_init = yes custom_effect_tooltip = TFRKPHN_buff_a2_tt	# 버프 (buff_build.py)
 			hidden_effect = { country_event = { id = tfrkphn.502 days = 2 } }	# 홍준표 이야기 (hong_build.py)
-			country_event = { id = tfrkphn.263 }
+			country_event = { id = tfrkphn.863 }
 			add_to_variable = { TFRKPHN_lee_stab = 0.03 }
 			TFRKPHN_lee_gov_init = yes
 			custom_effect_tooltip = TFRKPHN_lee_tt_stab3
@@ -78,7 +78,7 @@ focus_tree = {
 		completion_reward = {
 			add_to_variable = { TFRKPHN_lee_pp = 0.05 } TFRKPHN_lee_gov_init = yes custom_effect_tooltip = TFRKPHN_buff_a2b_tt	# 버프 (buff_build.py)
 			hidden_effect = { country_event = { id = tfrkphn.502 days = 2 } }	# 홍준표 이야기 (hong_build.py)
-			country_event = { id = tfrkphn.264 }
+			country_event = { id = tfrkphn.864 }
 			add_to_variable = { TFRKPHN_lee_pp = 0.05 }
 			TFRKPHN_lee_gov_init = yes
 			custom_effect_tooltip = TFRKPHN_lee_tt_pp5
@@ -96,7 +96,7 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_stability = 0.02	# 버프 (buff_build.py)
-			country_event = { id = tfrkphn.265 }
+			country_event = { id = tfrkphn.865 }
 			add_to_variable = { TFRKPHN_lee_pp = 0.05 }
 			TFRKPHN_lee_gov_init = yes
 			custom_effect_tooltip = TFRKPHN_lee_tt_pp5
@@ -147,7 +147,7 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_stability = 0.02 add_to_variable = { TFRKPHN_lee_biz = 0.02 } TFRKPHN_lee_gov_init = yes custom_effect_tooltip = TFRKPHN_buff_a5_tt	# 버프 (buff_build.py)
-			country_event = { id = tfrkphn.524 }	# 입찰 설명회, 돈이 흐르는 길목 (jk_build.py)
+			country_event = { id = tfrkphn.924 }	# 입찰 설명회, 돈이 흐르는 길목 (jk_build.py)
 			custom_effect_tooltip = TFRKPHN_jk_inv_tt	# 정경유착 수사 비용과 대기가 줄어든다
 			add_political_power = 50
 			add_to_variable = { TFRKPHN_lee_ind = 0.03 }
@@ -186,7 +186,7 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_to_variable = { TFRKPHN_lee_res = 0.03 } add_to_variable = { TFRKPHN_lee_pers = 0.01 } TFRKPHN_lee_gov_init = yes custom_effect_tooltip = TFRKPHN_buff_b1_tt	# 버프 (buff_build.py)
-			country_event = { id = tfrkphn.262 }
+			country_event = { id = tfrkphn.862 }
 			add_political_power = 75
 		}
 	}
@@ -203,7 +203,7 @@ focus_tree = {
 		completion_reward = {
 			add_to_variable = { TFRKPHN_lee_cg = -0.01 } add_to_variable = { TFRKPHN_lee_pers = 0.01 } TFRKPHN_lee_gov_init = yes custom_effect_tooltip = TFRKPHN_buff_b2_tt	# 버프 (buff_build.py)
 			hidden_effect = { country_event = { id = tfrkphn.477 } }
-			hidden_effect = { country_event = { id = tfrkphn.476 days = 3 } }
+			hidden_effect = { country_event = { id = tfrkphn.876 days = 3 } }
 			# 일자리 대타협 탭의 일자리 수가 오른다
 			custom_effect_tooltip = TFRKPHN_job_focus_5_tt
 			custom_effect_tooltip = TFRKPHN_job_focus_lab_tt
@@ -496,7 +496,7 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_to_variable = { TFRKPHN_lee_eff = 0.03 } add_to_variable = { TFRKPHN_lee_pers = 0.02 } TFRKPHN_lee_gov_init = yes custom_effect_tooltip = TFRKPHN_buff_d2_tt	# 버프 (buff_build.py)
-			country_event = { id = tfrkphn.538 }	# 하르츠 개혁 (d2_build.py)
+			country_event = { id = tfrkphn.938 }	# 하르츠 개혁 (d2_build.py)
 			add_stability = 0.05
 			add_to_variable = { TFRKPHN_lee_cg = -0.02 }
 			TFRKPHN_lee_gov_init = yes
@@ -516,7 +516,7 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_political_power = 75 add_to_variable = { TFRKPHN_lee_incg = 0.005 } TFRKPHN_lee_gov_init = yes custom_effect_tooltip = TFRKPHN_buff_d2b_tt	# 버프 (buff_build.py)
-			country_event = { id = tfrkphn.539 }	# 국회 입법으로 돌파 (d2b_build.py)
+			country_event = { id = tfrkphn.939 }	# 국회 입법으로 돌파 (d2b_build.py)
 			add_to_variable = { TFRKPHN_lee_pp = 0.10 }
 			TFRKPHN_lee_gov_init = yes
 			add_stability = -0.02
@@ -535,7 +535,7 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_to_variable = { TFRKPHN_lee_ind = 0.02 } add_to_variable = { TFRKPHN_lee_pers = 0.01 } add_to_variable = { TFRKPHN_lee_incg = 0.005 } TFRKPHN_lee_gov_init = yes custom_effect_tooltip = TFRKPHN_buff_d3_tt	# 버프 (buff_build.py)
-			country_event = { id = tfrkphn.540 }	# 정년 연장과 임금체계 개편 (d3_build.py)
+			country_event = { id = tfrkphn.940 }	# 정년 연장과 임금체계 개편 (d3_build.py)
 			add_to_variable = { TFRKPHN_lee_eff = 0.05 }
 			TFRKPHN_lee_gov_init = yes
 			custom_effect_tooltip = TFRKPHN_lee_tt_eff5
@@ -574,7 +574,7 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_to_variable = { TFRKPHN_lee_stab = 0.03 } add_political_power = 50 add_to_variable = { TFRKPHN_lee_pers = 0.01 } TFRKPHN_lee_gov_init = yes custom_effect_tooltip = TFRKPHN_buff_d4b_tt	# 버프 (buff_build.py)
-			country_event = { id = tfrkphn.542 }	# 무노동 부분임금 (d4b_build.py)
+			country_event = { id = tfrkphn.942 }	# 무노동 부분임금 (d4b_build.py)
 			add_stability = 0.05
 		}
 	}
@@ -864,6 +864,8 @@ focus_tree = {
 
 
 
+
+
 	# >>> 대아대전 승전 엔딩 (gawend_build.py)
 	# PDTO가 대아대전에서 이기면 열린다 (깃발 PRC_japanese_gaw_victory_global). 1-3-2-1 모양.
 	focus = {
@@ -972,5 +974,7 @@ focus_tree = {
 	# <<< 대아대전 승전 엔딩 (gawend_build.py)
 
 	# 대아대전이 일어나면 Korea Plus 원본의 대아대전 중점 가지가 이 트리에서도 열린다 (원본 파일의 공유 중점).
+	# Korea Plus 원본의 국방개혁 중점 가지: 홍준표 트리와 같이 쓴다 (army_keep_build.py)
+	shared_focus = KOR_yoon_army_upper
 	shared_focus = KOR_gwr_reserve_forces
 }

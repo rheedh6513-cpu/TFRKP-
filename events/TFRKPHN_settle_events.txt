@@ -4,8 +4,8 @@ add_namespace = tfrkphn
 country_event = {
 	id = tfrkphn.536
 	title = tfrkphn.536.t
-	desc = tfrkphn.536.story
-	picture = GFX_TFRKPHN_lee_temp
+	desc = tfrkphn.536.kp
+	picture = GFX_TFRKPHN_settle
 	is_triggered_only = yes
 	fire_only_once = yes
 	option = { name = tfrkphn.536.a }

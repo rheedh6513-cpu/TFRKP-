@@ -31,7 +31,10 @@ on_actions = {
 	}
 	on_daily_KOR = {
 		effect = {
+			if = { limit = { has_country_flag = TFRKPHN_fb_on is_ai = no } set_temp_variable = { fb_flap = 0 } TFRKPHN_fb_step = yes }	# 옥새런 놀이 (fb_build.py)
 			if = { limit = { has_global_flag = TFRKPHN_kj_nuke_open } TFRKPHN_kj_daily = yes }
+			# 홍준표 대통령 재임 중에는 연립 없이 보수주의 단독 집권 (ideology_build.py)
+			if = { limit = { has_country_flag = TFRKP_HN_hong_president has_government = conservative is_in_coalition = yes } end_coalition = yes }
 			# 홍준표 대통령 재임 중에는 보수 지도자가 반드시 홍준표 (다른 사건이 이준석 등을 당 대표로 올려도 되돌린다)
 			if = {
 				limit = {
@@ -43,7 +46,7 @@ on_actions = {
 					limit = { NOT = { has_character = KOR_hong_joon_pyo_char } }
 					recruit_character = KOR_hong_joon_pyo_char
 				}
-				KOR_hong_joon_pyo_char = { promote_character = judicial_conservatism }
+				KOR_hong_joon_pyo_char = { promote_character = korean_neoconservatism }
 			}
 			# 대통령 임기: 대선일이 되면 4년 중임(현직 재출마 가능) 또는 단임(현직 출마 불가) 대선을 치른다
 			if = {
@@ -78,6 +81,7 @@ on_actions = {
 				}
 				set_global_flag = TFRKP_GAW_is_started_flag
 				news_event = { id = tfrkphn.253 }
+				if = { limit = { has_country_flag = TFRKPHN_successor_lee_in_je } country_event = { id = tfrkphn.567 days = 1 } }	# 새벽 세 시 (arc_build.py)
 				# Korea Plus의 대아대전 중점 가지(공유 중점)가 홍준표, 이인제 트리에서도 열리게 한다
 				set_country_flag = KOR_great_asia_war
 				mark_focus_tree_layout_dirty = yes
@@ -164,6 +168,9 @@ if = { limit = { has_country_flag = TFRKPHN_mil_on } TFRKPHN_mil_daily = yes }
 
 # 대아대전 승전 엔딩 중점: PDTO가 이기면 이인제 트리를 다시 그려 「결승선을 마주보며」 가지가 보이게 한다
 if = { limit = { has_global_flag = PRC_japanese_gaw_victory_global NOT = { has_country_flag = TFRKPHN_gaw_end_open } } set_country_flag = TFRKPHN_gaw_end_open mark_focus_tree_layout_dirty = yes }
+
+# 국방개혁 가지: 이미 이인제 정부인 저장 파일에서 국방개혁 탭이 열려 있었다면 가지의 뿌리를 끝낸 것으로 표시한다
+if = { limit = { has_country_flag = TFRKPHN_successor_lee_in_je has_country_flag = TFRKP_show_defreform_GUI NOT = { has_country_flag = TFRKPHN_keepf_KOR_yoon_army_upper } } set_country_flag = TFRKPHN_keepf_KOR_yoon_army_upper }
 
 # 이인제 정부 돌아오는 기업
 if = { limit = { has_country_flag = TFRKPHN_ut_on } TFRKPHN_ut_daily = yes }
@@ -399,7 +406,7 @@ if = {
 	TFRKPHN_hong_update_support_display = yes
 	if = {	# 전당대회에서 이인제 선출 (마지막 중점)
 		limit = { has_country_flag = TFRKPHN_conv_lee }
-		country_event = { id = tfrkphn.301 }
+		country_event = { id = tfrkphn.701 }
 	}
 	else_if = {	# 전당대회에서 오세훈 선출 (마지막 중점)
 		limit = { has_country_flag = TFRKPHN_conv_oh }
@@ -409,7 +416,7 @@ if = {
 		limit = { has_completed_focus = TFRKPHN_hong_b02_02 has_global_flag = PRC_taiwan_war_lost }
 		if = {
 			limit = { check_variable = { TFRKPHN_support_avg > 39.999 } }	# 40% 이상이면 이인제
-			country_event = { id = tfrkphn.301 }
+			country_event = { id = tfrkphn.701 }
 		}
 		else = { country_event = { id = tfrkphn.302 } }
 	}

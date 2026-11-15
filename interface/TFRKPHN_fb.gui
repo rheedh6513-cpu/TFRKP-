@@ -1,0 +1,26 @@
+# [안내] 옥새런 놀이 창. 화면 위쪽 막대(top_bar)에 매달려 있고 깃발 TFRKPHN_fb_on이 있을 때만 보인다. fb_build.py가 만든다.
+guiTypes = {
+	containerWindowType = {
+		name = "TFRKPHN_fb_container"
+		position = { x = 520 y = 150 }
+		size = { width = 392 height = 396 }
+		moveable = yes
+		iconType = { name = "TFRKPHN_fb_bg" position = { x = 0 y = 0 } spriteType = "GFX_TFRKPHN_fb_bg" }
+		iconType = { name = "TFRKPHN_fb_p0" position = { x = 20 y = 46 } spriteType = "GFX_TFRKPHN_fb_pipe" alwaystransparent = yes }
+		iconType = { name = "TFRKPHN_fb_p1" position = { x = 64 y = 46 } spriteType = "GFX_TFRKPHN_fb_pipe" alwaystransparent = yes }
+		iconType = { name = "TFRKPHN_fb_p2" position = { x = 108 y = 46 } spriteType = "GFX_TFRKPHN_fb_pipe" alwaystransparent = yes }
+		iconType = { name = "TFRKPHN_fb_p3" position = { x = 152 y = 46 } spriteType = "GFX_TFRKPHN_fb_pipe" alwaystransparent = yes }
+		iconType = { name = "TFRKPHN_fb_p4" position = { x = 196 y = 46 } spriteType = "GFX_TFRKPHN_fb_pipe" alwaystransparent = yes }
+		iconType = { name = "TFRKPHN_fb_p5" position = { x = 240 y = 46 } spriteType = "GFX_TFRKPHN_fb_pipe" alwaystransparent = yes }
+		iconType = { name = "TFRKPHN_fb_p6" position = { x = 284 y = 46 } spriteType = "GFX_TFRKPHN_fb_pipe" alwaystransparent = yes }
+		iconType = { name = "TFRKPHN_fb_p7" position = { x = 328 y = 46 } spriteType = "GFX_TFRKPHN_fb_pipe" alwaystransparent = yes }
+		iconType = { name = "TFRKPHN_fb_bird" position = { x = 64 y = 46 } spriteType = "GFX_TFRKPHN_fb_bird" alwaystransparent = yes }
+		iconType = { name = "TFRKPHN_fb_over" position = { x = 66 y = 136 } spriteType = "GFX_TFRKPHN_fb_over" alwaystransparent = yes }
+		instantTextBoxType = { name = "TFRKPHN_fb_v_score" position = { x = 212 y = 10 } text = "TFRKPHN_fb_v_score" font = "hoi_18mbs" format = left maxWidth = 44 maxHeight = 22 alwaystransparent = yes }
+		instantTextBoxType = { name = "TFRKPHN_fb_v_best" position = { x = 292 y = 10 } text = "TFRKPHN_fb_v_best" font = "hoi_18mbs" format = left maxWidth = 40 maxHeight = 22 alwaystransparent = yes }
+		buttonType = { name = "TFRKPHN_fb_b_flap" position = { x = 20 y = 328 } spriteType = "GFX_TFRKPHN_fb_b_flap" clicksound = click_default }
+		buttonType = { name = "TFRKPHN_fb_b_wait" position = { x = 141 y = 328 } spriteType = "GFX_TFRKPHN_fb_b_wait" clicksound = click_default }
+		buttonType = { name = "TFRKPHN_fb_b_reset" position = { x = 262 y = 328 } spriteType = "GFX_TFRKPHN_fb_b_reset" clicksound = click_default }
+		buttonType = { name = "TFRKPHN_fb_b_close" position = { x = 334 y = 3 } spriteType = "GFX_TFRKPHN_fb_b_close" clicksound = click_default }
+	}
+}

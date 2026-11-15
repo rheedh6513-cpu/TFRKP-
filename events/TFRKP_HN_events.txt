@@ -134,10 +134,24 @@ country_event = {
 }
 
 # Hong Joon-pyo cabinet (like korea.106 for Yoon)
+# >>> kp 20
+# 긴 글의 앞 장들. 마지막 선택지가 원래 이벤트 tfrkphn.20을 부른다 (hongkp_build.py)
+country_event = {
+	id = tfrkphn.720
+	title = tfrkphn.20.t
+	desc = tfrkphn.20.kp
+	picture = GFX_TFRKPHN_hong_press
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.720.next
+		hidden_effect = { country_event = { id = tfrkphn.20 } }
+	}
+}
+# <<< kp 20
 country_event = {
 	id = tfrkphn.20
 	title = tfrkphn.20.t
-	desc = tfrkphn.20.desc
+	desc = tfrkphn.20.kp2
 	picture = GFX_TFRKPHN_hong_press
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -285,10 +299,24 @@ country_event = {
 }
 
 # 1-10 이벤트
+# >>> kp 25
+# 긴 글의 앞 장들. 마지막 선택지가 원래 이벤트 tfrkphn.25을 부른다 (hongkp_build.py)
+country_event = {
+	id = tfrkphn.725
+	title = tfrkphn.25.t
+	desc = tfrkphn.25.kp
+	picture = GFX_TFRKPHN_minsaeng
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.725.next
+		hidden_effect = { country_event = { id = tfrkphn.25 } }
+	}
+}
+# <<< kp 25
 country_event = {
 	id = tfrkphn.25
 	title = tfrkphn.25.t
-	desc = tfrkphn.25.desc
+	desc = tfrkphn.25.kp2
 	picture = GFX_TFRKPHN_minsaeng
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -302,10 +330,24 @@ country_event = {
 }
 
 # 1-11 이벤트
+# >>> kp 26
+# 긴 글의 앞 장들. 마지막 선택지가 원래 이벤트 tfrkphn.26을 부른다 (hongkp_build.py)
+country_event = {
+	id = tfrkphn.726
+	title = tfrkphn.26.t
+	desc = tfrkphn.26.kp
+	picture = GFX_TFRKPHN_hong_tribute
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.726.next
+		hidden_effect = { country_event = { id = tfrkphn.26 } }
+	}
+}
+# <<< kp 26
 country_event = {
 	id = tfrkphn.26
 	title = tfrkphn.26.t
-	desc = tfrkphn.26.desc
+	desc = tfrkphn.26.kp2
 	picture = GFX_TFRKPHN_hong_tribute
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -317,10 +359,24 @@ country_event = {
 }
 
 # 1-13 이벤트
+# >>> kp 27
+# 긴 글의 앞 장들. 마지막 선택지가 원래 이벤트 tfrkphn.27을 부른다 (hongkp_build.py)
+country_event = {
+	id = tfrkphn.727
+	title = tfrkphn.27.t
+	desc = tfrkphn.27.kp
+	picture = GFX_TFRKPHN_artillery_fire
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.727.next
+		hidden_effect = { country_event = { id = tfrkphn.27 } }
+	}
+}
+# <<< kp 27
 country_event = {
 	id = tfrkphn.27
 	title = tfrkphn.27.t
-	desc = tfrkphn.27.desc
+	desc = tfrkphn.27.kp2
 	picture = GFX_TFRKPHN_artillery_fire
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -331,10 +387,24 @@ country_event = {
 }
 
 # 2-1 이벤트: 대만지원법 표결
+# >>> kp 29
+# 긴 글의 앞 장들. 마지막 선택지가 원래 이벤트 tfrkphn.29을 부른다 (hongkp_build.py)
+country_event = {
+	id = tfrkphn.729
+	title = tfrkphn.29.t
+	desc = tfrkphn.29.kp
+	picture = GFX_TFRKPHN_assembly_vote
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.729.next
+		hidden_effect = { country_event = { id = tfrkphn.29 } }
+	}
+}
+# <<< kp 29
 country_event = {
 	id = tfrkphn.29
 	title = tfrkphn.29.t
-	desc = tfrkphn.29.desc
+	desc = tfrkphn.29.kp2
 	picture = GFX_TFRKPHN_assembly_vote
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -358,7 +428,7 @@ country_event = {
 country_event = {
 	id = tfrkphn.85
 	title = tfrkphn.85.t
-	desc = tfrkphn.85.desc
+	desc = tfrkphn.85.kp
 	picture = GFX_TFRKPHN_gallup_post
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -372,10 +442,24 @@ country_event = {
 }
 
 # 2-2 이벤트: 대한민국의 양안전쟁 참전
+# >>> kp 30
+# 긴 글의 앞 장들. 마지막 선택지가 원래 이벤트 tfrkphn.30을 부른다 (hongkp_build.py)
+country_event = {
+	id = tfrkphn.730
+	title = tfrkphn.30.t
+	desc = tfrkphn.30.kp
+	picture = GFX_TFRKPHN_strait_war
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.730.next
+		hidden_effect = { country_event = { id = tfrkphn.30 } }
+	}
+}
+# <<< kp 30
 country_event = {
 	id = tfrkphn.30
 	title = tfrkphn.30.t
-	desc = tfrkphn.30.desc
+	desc = tfrkphn.30.kp2
 	picture = GFX_TFRKPHN_strait_war
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -390,7 +474,7 @@ country_event = {
 country_event = {
 	id = tfrkphn.31
 	title = tfrkphn.31.t
-	desc = tfrkphn.31.desc
+	desc = tfrkphn.31.kp
 	picture = GFX_TFRKPHN_ammo_bunker
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -404,7 +488,7 @@ country_event = {
 country_event = {
 	id = tfrkphn.32
 	title = tfrkphn.32.t
-	desc = tfrkphn.32.desc
+	desc = tfrkphn.32.kp
 	picture = GFX_TFRKPHN_kwangbok
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -415,10 +499,24 @@ country_event = {
 }
 
 # 2-5 국민 안심시키기
+# >>> kp 33
+# 긴 글의 앞 장들. 마지막 선택지가 원래 이벤트 tfrkphn.33을 부른다 (hongkp_build.py)
+country_event = {
+	id = tfrkphn.733
+	title = tfrkphn.33.t
+	desc = tfrkphn.33.kp
+	picture = GFX_TFRKPHN_hong_speech
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.733.next
+		hidden_effect = { country_event = { id = tfrkphn.33 } }
+	}
+}
+# <<< kp 33
 country_event = {
 	id = tfrkphn.33
 	title = tfrkphn.33.t
-	desc = tfrkphn.33.desc
+	desc = tfrkphn.33.kp2
 	picture = GFX_TFRKPHN_hong_speech
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -432,7 +530,7 @@ country_event = {
 country_event = {
 	id = tfrkphn.34
 	title = tfrkphn.34.t
-	desc = tfrkphn.34.desc
+	desc = tfrkphn.34.kp
 	picture = GFX_TFRKPHN_yeonpyeong
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -446,7 +544,7 @@ country_event = {
 country_event = {
 	id = tfrkphn.35
 	title = tfrkphn.35.t
-	desc = tfrkphn.35.desc
+	desc = tfrkphn.35.kp
 	picture = GFX_TFRKPHN_nis_stars
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -460,7 +558,7 @@ country_event = {
 country_event = {
 	id = tfrkphn.36
 	title = tfrkphn.36.t
-	desc = tfrkphn.36.desc
+	desc = tfrkphn.36.kp
 	picture = GFX_TFRKPHN_yeouido_rally
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -474,7 +572,7 @@ country_event = {
 country_event = {
 	id = tfrkphn.37
 	title = tfrkphn.37.t
-	desc = tfrkphn.37.desc
+	desc = tfrkphn.37.kp
 	picture = GFX_TFRKPHN_shipyard
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -488,7 +586,7 @@ country_event = {
 country_event = {
 	id = tfrkphn.38
 	title = tfrkphn.38.t
-	desc = tfrkphn.38.desc
+	desc = tfrkphn.38.kp
 	picture = GFX_TFRKPHN_troll
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -499,10 +597,24 @@ country_event = {
 }
 
 # 2-7 이벤트: 국제사회에 중국 규탄
+# >>> kp 39
+# 긴 글의 앞 장들. 마지막 선택지가 원래 이벤트 tfrkphn.39을 부른다 (hongkp_build.py)
+country_event = {
+	id = tfrkphn.739
+	title = tfrkphn.39.t
+	desc = tfrkphn.39.kp
+	picture = GFX_TFRKPHN_un_assembly
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.739.next
+		hidden_effect = { country_event = { id = tfrkphn.39 } }
+	}
+}
+# <<< kp 39
 country_event = {
 	id = tfrkphn.39
 	title = tfrkphn.39.t
-	desc = tfrkphn.39.desc
+	desc = tfrkphn.39.kp2
 	picture = GFX_TFRKPHN_un_assembly
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -516,7 +628,7 @@ country_event = {
 country_event = {
 	id = tfrkphn.40
 	title = tfrkphn.40.t
-	desc = tfrkphn.40.desc
+	desc = tfrkphn.40.kp
 	picture = GFX_TFRKPHN_warsaw_signing
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -527,10 +639,24 @@ country_event = {
 }
 
 # 2-13 이벤트: 비밀스러운 지원
+# >>> kp 41
+# 긴 글의 앞 장들. 마지막 선택지가 원래 이벤트 tfrkphn.41을 부른다 (hongkp_build.py)
+country_event = {
+	id = tfrkphn.741
+	title = tfrkphn.41.t
+	desc = tfrkphn.41.kp
+	picture = GFX_TFRKPHN_shell_loading
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.741.next
+		hidden_effect = { country_event = { id = tfrkphn.41 } }
+	}
+}
+# <<< kp 41
 country_event = {
 	id = tfrkphn.41
 	title = tfrkphn.41.t
-	desc = tfrkphn.41.desc
+	desc = tfrkphn.41.kp2
 	picture = GFX_TFRKPHN_shell_loading
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -543,7 +669,7 @@ country_event = {
 country_event = {
 	id = tfrkphn.50
 	title = tfrkphn.50.t
-	desc = tfrkphn.50.desc
+	desc = tfrkphn.50.kp
 	picture = GFX_TFRKPHN_hong_office
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -556,7 +682,7 @@ country_event = {
 country_event = {
 	id = tfrkphn.51
 	title = tfrkphn.51.t
-	desc = tfrkphn.51.desc
+	desc = tfrkphn.51.kp
 	picture = GFX_TFRKPHN_hong_memorial
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -569,7 +695,7 @@ country_event = {
 country_event = {
 	id = tfrkphn.52
 	title = tfrkphn.52.t
-	desc = tfrkphn.52.story
+	desc = tfrkphn.52.kp
 	picture = GFX_TFRKPHN_jin
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -579,10 +705,24 @@ country_event = {
 	}
 }
 
+# >>> kp 53
+# 긴 글의 앞 장들. 마지막 선택지가 원래 이벤트 tfrkphn.53을 부른다 (hongkp_build.py)
+country_event = {
+	id = tfrkphn.753
+	title = tfrkphn.53.t
+	desc = tfrkphn.53.kp
+	picture = GFX_TFRKPHN_sandglass
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.753.next
+		hidden_effect = { country_event = { id = tfrkphn.53 } }
+	}
+}
+# <<< kp 53
 country_event = {
 	id = tfrkphn.53
 	title = tfrkphn.53.t
-	desc = tfrkphn.53.story
+	desc = tfrkphn.53.kp2
 	picture = GFX_TFRKPHN_sandglass
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -592,10 +732,24 @@ country_event = {
 	}
 }
 
+# >>> kp 54
+# 긴 글의 앞 장들. 마지막 선택지가 원래 이벤트 tfrkphn.54을 부른다 (hongkp_build.py)
+country_event = {
+	id = tfrkphn.754
+	title = tfrkphn.54.t
+	desc = tfrkphn.54.kp
+	picture = GFX_TFRKPHN_small_gov
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.754.next
+		hidden_effect = { country_event = { id = tfrkphn.54 } }
+	}
+}
+# <<< kp 54
 country_event = {
 	id = tfrkphn.54
 	title = tfrkphn.54.t
-	desc = tfrkphn.54.story
+	desc = tfrkphn.54.kp2
 	picture = GFX_TFRKPHN_small_gov
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -605,10 +759,24 @@ country_event = {
 	}
 }
 
+# >>> kp 55
+# 긴 글의 앞 장들. 마지막 선택지가 원래 이벤트 tfrkphn.55을 부른다 (hongkp_build.py)
+country_event = {
+	id = tfrkphn.755
+	title = tfrkphn.55.t
+	desc = tfrkphn.55.kp
+	picture = GFX_TFRKPHN_hong_crimewar
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.755.next
+		hidden_effect = { country_event = { id = tfrkphn.55 } }
+	}
+}
+# <<< kp 55
 country_event = {
 	id = tfrkphn.55
 	title = tfrkphn.55.t
-	desc = tfrkphn.55.story
+	desc = tfrkphn.55.kp2
 	picture = GFX_TFRKPHN_hong_crimewar
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -618,10 +786,24 @@ country_event = {
 	}
 }
 
+# >>> kp 56
+# 긴 글의 앞 장들. 마지막 선택지가 원래 이벤트 tfrkphn.56을 부른다 (hongkp_build.py)
+country_event = {
+	id = tfrkphn.756
+	title = tfrkphn.56.t
+	desc = tfrkphn.56.kp
+	picture = GFX_TFRKPHN_hong_union
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.756.next
+		hidden_effect = { country_event = { id = tfrkphn.56 } }
+	}
+}
+# <<< kp 56
 country_event = {
 	id = tfrkphn.56
 	title = tfrkphn.56.t
-	desc = tfrkphn.56.story
+	desc = tfrkphn.56.kp2
 	picture = GFX_TFRKPHN_hong_union
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -631,10 +813,24 @@ country_event = {
 	}
 }
 
+# >>> kp 57
+# 긴 글의 앞 장들. 마지막 선택지가 원래 이벤트 tfrkphn.57을 부른다 (hongkp_build.py)
+country_event = {
+	id = tfrkphn.757
+	title = tfrkphn.57.t
+	desc = tfrkphn.57.kp
+	picture = GFX_TFRKPHN_hong_hongkacola
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.757.next
+		hidden_effect = { country_event = { id = tfrkphn.57 } }
+	}
+}
+# <<< kp 57
 country_event = {
 	id = tfrkphn.57
 	title = tfrkphn.57.t
-	desc = tfrkphn.57.story
+	desc = tfrkphn.57.kp2
 	picture = GFX_TFRKPHN_hong_hongkacola
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -647,7 +843,7 @@ country_event = {
 country_event = {
 	id = tfrkphn.58
 	title = tfrkphn.58.t
-	desc = tfrkphn.58.story
+	desc = tfrkphn.58.kp
 	picture = GFX_TFRKPHN_seomin
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -657,10 +853,24 @@ country_event = {
 	}
 }
 
+# >>> kp 59
+# 긴 글의 앞 장들. 마지막 선택지가 원래 이벤트 tfrkphn.59을 부른다 (hongkp_build.py)
+country_event = {
+	id = tfrkphn.759
+	title = tfrkphn.59.t
+	desc = tfrkphn.59.kp
+	picture = GFX_TFRKPHN_chung
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.759.next
+		hidden_effect = { country_event = { id = tfrkphn.59 } }
+	}
+}
+# <<< kp 59
 country_event = {
 	id = tfrkphn.59
 	title = tfrkphn.59.t
-	desc = tfrkphn.59.story
+	desc = tfrkphn.59.kp2
 	picture = GFX_TFRKPHN_chung
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -670,10 +880,24 @@ country_event = {
 	}
 }
 
+# >>> kp 60
+# 긴 글의 앞 장들. 마지막 선택지가 원래 이벤트 tfrkphn.60을 부른다 (hongkp_build.py)
+country_event = {
+	id = tfrkphn.760
+	title = tfrkphn.60.t
+	desc = tfrkphn.60.kp
+	picture = GFX_TFRKPHN_facebook
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.760.next
+		hidden_effect = { country_event = { id = tfrkphn.60 } }
+	}
+}
+# <<< kp 60
 country_event = {
 	id = tfrkphn.60
 	title = tfrkphn.60.t
-	desc = tfrkphn.60.story
+	desc = tfrkphn.60.kp2
 	picture = GFX_TFRKPHN_facebook
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -683,10 +907,24 @@ country_event = {
 	}
 }
 
+# >>> kp 61
+# 긴 글의 앞 장들. 마지막 선택지가 원래 이벤트 tfrkphn.61을 부른다 (hongkp_build.py)
+country_event = {
+	id = tfrkphn.761
+	title = tfrkphn.61.t
+	desc = tfrkphn.61.kp
+	picture = GFX_TFRKPHN_women_soldiers
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.761.next
+		hidden_effect = { country_event = { id = tfrkphn.61 } }
+	}
+}
+# <<< kp 61
 country_event = {
 	id = tfrkphn.61
 	title = tfrkphn.61.t
-	desc = tfrkphn.61.story
+	desc = tfrkphn.61.kp2
 	picture = GFX_TFRKPHN_women_soldiers
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -696,10 +934,24 @@ country_event = {
 	}
 }
 
+# >>> kp 62
+# 긴 글의 앞 장들. 마지막 선택지가 원래 이벤트 tfrkphn.62을 부른다 (hongkp_build.py)
+country_event = {
+	id = tfrkphn.762
+	title = tfrkphn.62.t
+	desc = tfrkphn.62.kp
+	picture = GFX_TFRKPHN_hyunmoo
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.762.next
+		hidden_effect = { country_event = { id = tfrkphn.62 } }
+	}
+}
+# <<< kp 62
 country_event = {
 	id = tfrkphn.62
 	title = tfrkphn.62.t
-	desc = tfrkphn.62.story
+	desc = tfrkphn.62.kp2
 	picture = GFX_TFRKPHN_hyunmoo
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -709,10 +961,24 @@ country_event = {
 	}
 }
 
+# >>> kp 63
+# 긴 글의 앞 장들. 마지막 선택지가 원래 이벤트 tfrkphn.63을 부른다 (hongkp_build.py)
+country_event = {
+	id = tfrkphn.763
+	title = tfrkphn.63.t
+	desc = tfrkphn.63.kp
+	picture = GFX_TFRKPHN_nuke_doc
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.763.next
+		hidden_effect = { country_event = { id = tfrkphn.63 } }
+	}
+}
+# <<< kp 63
 country_event = {
 	id = tfrkphn.63
 	title = tfrkphn.63.t
-	desc = tfrkphn.63.story
+	desc = tfrkphn.63.kp2
 	picture = GFX_TFRKPHN_nuke_doc
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -722,10 +988,24 @@ country_event = {
 	}
 }
 
+# >>> kp 64
+# 긴 글의 앞 장들. 마지막 선택지가 원래 이벤트 tfrkphn.64을 부른다 (hongkp_build.py)
+country_event = {
+	id = tfrkphn.764
+	title = tfrkphn.64.t
+	desc = tfrkphn.64.kp
+	picture = GFX_TFRKPHN_jsa_defector
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.764.next
+		hidden_effect = { country_event = { id = tfrkphn.64 } }
+	}
+}
+# <<< kp 64
 country_event = {
 	id = tfrkphn.64
 	title = tfrkphn.64.t
-	desc = tfrkphn.64.story
+	desc = tfrkphn.64.kp2
 	picture = GFX_TFRKPHN_jsa_defector
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -735,10 +1015,24 @@ country_event = {
 	}
 }
 
+# >>> kp 65
+# 긴 글의 앞 장들. 마지막 선택지가 원래 이벤트 tfrkphn.65을 부른다 (hongkp_build.py)
+country_event = {
+	id = tfrkphn.765
+	title = tfrkphn.65.t
+	desc = tfrkphn.65.kp
+	picture = GFX_TFRKPHN_kr_cn_ties
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.765.next
+		hidden_effect = { country_event = { id = tfrkphn.65 } }
+	}
+}
+# <<< kp 65
 country_event = {
 	id = tfrkphn.65
 	title = tfrkphn.65.t
-	desc = tfrkphn.65.story
+	desc = tfrkphn.65.kp2
 	picture = GFX_TFRKPHN_kr_cn_ties
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -748,10 +1042,24 @@ country_event = {
 	}
 }
 
+# >>> kp 66
+# 긴 글의 앞 장들. 마지막 선택지가 원래 이벤트 tfrkphn.66을 부른다 (hongkp_build.py)
+country_event = {
+	id = tfrkphn.766
+	title = tfrkphn.66.t
+	desc = tfrkphn.66.kp
+	picture = GFX_TFRKPHN_grass
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.766.next
+		hidden_effect = { country_event = { id = tfrkphn.66 } }
+	}
+}
+# <<< kp 66
 country_event = {
 	id = tfrkphn.66
 	title = tfrkphn.66.t
-	desc = tfrkphn.66.story
+	desc = tfrkphn.66.kp2
 	picture = GFX_TFRKPHN_grass
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -761,10 +1069,24 @@ country_event = {
 	}
 }
 
+# >>> kp 67
+# 긴 글의 앞 장들. 마지막 선택지가 원래 이벤트 tfrkphn.67을 부른다 (hongkp_build.py)
+country_event = {
+	id = tfrkphn.767
+	title = tfrkphn.67.t
+	desc = tfrkphn.67.kp
+	picture = GFX_TFRKPHN_kinmen
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.767.next
+		hidden_effect = { country_event = { id = tfrkphn.67 } }
+	}
+}
+# <<< kp 67
 country_event = {
 	id = tfrkphn.67
 	title = tfrkphn.67.t
-	desc = tfrkphn.67.story
+	desc = tfrkphn.67.kp2
 	picture = GFX_TFRKPHN_kinmen
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -774,10 +1096,24 @@ country_event = {
 	}
 }
 
+# >>> kp 68
+# 긴 글의 앞 장들. 마지막 선택지가 원래 이벤트 tfrkphn.68을 부른다 (hongkp_build.py)
+country_event = {
+	id = tfrkphn.768
+	title = tfrkphn.68.t
+	desc = tfrkphn.68.kp
+	picture = GFX_TFRKPHN_roc_flag
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.768.next
+		hidden_effect = { country_event = { id = tfrkphn.68 } }
+	}
+}
+# <<< kp 68
 country_event = {
 	id = tfrkphn.68
 	title = tfrkphn.68.t
-	desc = tfrkphn.68.story
+	desc = tfrkphn.68.kp2
 	picture = GFX_TFRKPHN_roc_flag
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -787,10 +1123,24 @@ country_event = {
 	}
 }
 
+# >>> kp 69
+# 긴 글의 앞 장들. 마지막 선택지가 원래 이벤트 tfrkphn.69을 부른다 (hongkp_build.py)
+country_event = {
+	id = tfrkphn.769
+	title = tfrkphn.69.t
+	desc = tfrkphn.69.kp
+	picture = GFX_TFRKPHN_eungbo
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.769.next
+		hidden_effect = { country_event = { id = tfrkphn.69 } }
+	}
+}
+# <<< kp 69
 country_event = {
 	id = tfrkphn.69
 	title = tfrkphn.69.t
-	desc = tfrkphn.69.story
+	desc = tfrkphn.69.kp2
 	picture = GFX_TFRKPHN_eungbo
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -800,10 +1150,24 @@ country_event = {
 	}
 }
 
+# >>> kp 70
+# 긴 글의 앞 장들. 마지막 선택지가 원래 이벤트 tfrkphn.70을 부른다 (hongkp_build.py)
+country_event = {
+	id = tfrkphn.770
+	title = tfrkphn.70.t
+	desc = tfrkphn.70.kp
+	picture = GFX_TFRKPHN_hmm_ship
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.770.next
+		hidden_effect = { country_event = { id = tfrkphn.70 } }
+	}
+}
+# <<< kp 70
 country_event = {
 	id = tfrkphn.70
 	title = tfrkphn.70.t
-	desc = tfrkphn.70.story
+	desc = tfrkphn.70.kp2
 	picture = GFX_TFRKPHN_hmm_ship
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -813,10 +1177,24 @@ country_event = {
 	}
 }
 
+# >>> kp 71
+# 긴 글의 앞 장들. 마지막 선택지가 원래 이벤트 tfrkphn.71을 부른다 (hongkp_build.py)
+country_event = {
+	id = tfrkphn.771
+	title = tfrkphn.71.t
+	desc = tfrkphn.71.kp
+	picture = GFX_TFRKPHN_segyehwa
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.771.next
+		hidden_effect = { country_event = { id = tfrkphn.71 } }
+	}
+}
+# <<< kp 71
 country_event = {
 	id = tfrkphn.71
 	title = tfrkphn.71.t
-	desc = tfrkphn.71.story
+	desc = tfrkphn.71.kp2
 	picture = GFX_TFRKPHN_segyehwa
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -826,10 +1204,24 @@ country_event = {
 	}
 }
 
+# >>> kp 72
+# 긴 글의 앞 장들. 마지막 선택지가 원래 이벤트 tfrkphn.72을 부른다 (hongkp_build.py)
+country_event = {
+	id = tfrkphn.772
+	title = tfrkphn.72.t
+	desc = tfrkphn.72.kp
+	picture = GFX_TFRKPHN_un_cemetery
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.772.next
+		hidden_effect = { country_event = { id = tfrkphn.72 } }
+	}
+}
+# <<< kp 72
 country_event = {
 	id = tfrkphn.72
 	title = tfrkphn.72.t
-	desc = tfrkphn.72.story
+	desc = tfrkphn.72.kp2
 	picture = GFX_TFRKPHN_un_cemetery
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -853,10 +1245,35 @@ country_event = {
 	}
 }
 
+# >>> kp 73
+# 긴 글의 앞 장들. 마지막 선택지가 원래 이벤트 tfrkphn.73을 부른다 (hongkp_build.py)
+country_event = {
+	id = tfrkphn.773
+	title = tfrkphn.73.t
+	desc = tfrkphn.73.kp
+	picture = GFX_TFRKPHN_footprints
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.773.next
+		hidden_effect = { country_event = { id = tfrkphn.30732 } }
+	}
+}
+country_event = {
+	id = tfrkphn.30732
+	title = tfrkphn.73.t
+	desc = tfrkphn.73.kp2
+	picture = GFX_TFRKPHN_footprints
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.773.next
+		hidden_effect = { country_event = { id = tfrkphn.73 } }
+	}
+}
+# <<< kp 73
 country_event = {
 	id = tfrkphn.73
 	title = tfrkphn.73.story_t
-	desc = tfrkphn.73.story
+	desc = tfrkphn.73.kp3
 	picture = GFX_TFRKPHN_footprints
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -894,10 +1311,24 @@ country_event = {
 	}
 }
 
+# >>> kp 74
+# 긴 글의 앞 장들. 마지막 선택지가 원래 이벤트 tfrkphn.74을 부른다 (hongkp_build.py)
+country_event = {
+	id = tfrkphn.774
+	title = tfrkphn.74.t
+	desc = tfrkphn.74.kp
+	picture = GFX_TFRKPHN_successors
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.774.next
+		hidden_effect = { country_event = { id = tfrkphn.74 } }
+	}
+}
+# <<< kp 74
 country_event = {
 	id = tfrkphn.74
 	title = tfrkphn.74.t
-	desc = tfrkphn.74.story
+	desc = tfrkphn.74.kp2
 	picture = GFX_TFRKPHN_successors
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -942,6 +1373,7 @@ country_event = {
 		name = tfrkphn.90.story_a
 		custom_effect_tooltip = TFRKPHN_conv_lee_tt
 		set_country_flag = TFRKPHN_conv_lee
+		hidden_effect = { country_event = { id = tfrkphn.566 days = 1 } }	# 바통 (arc_build.py)
 		clr_country_flag = TFRKPHN_conv_oh
 	}
 }
@@ -964,10 +1396,24 @@ country_event = {
 
 # ===== 3-4. 국민 통합 갈래 =====
 
+# >>> kp 120
+# 긴 글의 앞 장들. 마지막 선택지가 원래 이벤트 tfrkphn.120을 부른다 (hongkp_build.py)
+country_event = {
+	id = tfrkphn.820
+	title = tfrkphn.120.t
+	desc = tfrkphn.120.kp
+	picture = GFX_TFRKPHN_kuk
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.820.next
+		hidden_effect = { country_event = { id = tfrkphn.120 } }
+	}
+}
+# <<< kp 120
 country_event = {
 	id = tfrkphn.120
 	title = tfrkphn.120.story_t
-	desc = tfrkphn.120.story
+	desc = tfrkphn.120.kp2
 	picture = GFX_TFRKPHN_kuk
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -977,10 +1423,24 @@ country_event = {
 	}
 }
 
+# >>> kp 121
+# 긴 글의 앞 장들. 마지막 선택지가 원래 이벤트 tfrkphn.121을 부른다 (hongkp_build.py)
+country_event = {
+	id = tfrkphn.821
+	title = tfrkphn.121.t
+	desc = tfrkphn.121.kp
+	picture = GFX_TFRKPHN_econ_emergency
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.821.next
+		hidden_effect = { country_event = { id = tfrkphn.121 } }
+	}
+}
+# <<< kp 121
 country_event = {
 	id = tfrkphn.121
 	title = tfrkphn.121.t
-	desc = tfrkphn.121.story
+	desc = tfrkphn.121.kp2
 	picture = GFX_TFRKPHN_econ_emergency
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -990,10 +1450,24 @@ country_event = {
 	}
 }
 
+# >>> kp 122
+# 긴 글의 앞 장들. 마지막 선택지가 원래 이벤트 tfrkphn.122을 부른다 (hongkp_build.py)
+country_event = {
+	id = tfrkphn.822
+	title = tfrkphn.122.t
+	desc = tfrkphn.122.kp
+	picture = GFX_TFRKPHN_samgyeop
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.822.next
+		hidden_effect = { country_event = { id = tfrkphn.122 } }
+	}
+}
+# <<< kp 122
 country_event = {
 	id = tfrkphn.122
 	title = tfrkphn.122.t
-	desc = tfrkphn.122.story
+	desc = tfrkphn.122.kp2
 	picture = GFX_TFRKPHN_samgyeop
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -1003,10 +1477,24 @@ country_event = {
 	}
 }
 
+# >>> kp 123
+# 긴 글의 앞 장들. 마지막 선택지가 원래 이벤트 tfrkphn.123을 부른다 (hongkp_build.py)
+country_event = {
+	id = tfrkphn.823
+	title = tfrkphn.123.t
+	desc = tfrkphn.123.kp
+	picture = GFX_TFRKPHN_gukbap
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.823.next
+		hidden_effect = { country_event = { id = tfrkphn.123 } }
+	}
+}
+# <<< kp 123
 country_event = {
 	id = tfrkphn.123
 	title = tfrkphn.123.t
-	desc = tfrkphn.123.story
+	desc = tfrkphn.123.kp2
 	picture = GFX_TFRKPHN_gukbap
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -1016,10 +1504,24 @@ country_event = {
 	}
 }
 
+# >>> kp 124
+# 긴 글의 앞 장들. 마지막 선택지가 원래 이벤트 tfrkphn.124을 부른다 (hongkp_build.py)
+country_event = {
+	id = tfrkphn.824
+	title = tfrkphn.124.t
+	desc = tfrkphn.124.kp
+	picture = GFX_TFRKPHN_fab
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.824.next
+		hidden_effect = { country_event = { id = tfrkphn.124 } }
+	}
+}
+# <<< kp 124
 country_event = {
 	id = tfrkphn.124
 	title = tfrkphn.124.t
-	desc = tfrkphn.124.story
+	desc = tfrkphn.124.kp2
 	picture = GFX_TFRKPHN_fab
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -1029,10 +1531,24 @@ country_event = {
 	}
 }
 
+# >>> kp 125
+# 긴 글의 앞 장들. 마지막 선택지가 원래 이벤트 tfrkphn.125을 부른다 (hongkp_build.py)
+country_event = {
+	id = tfrkphn.825
+	title = tfrkphn.125.t
+	desc = tfrkphn.125.kp
+	picture = GFX_TFRKPHN_bank
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.825.next
+		hidden_effect = { country_event = { id = tfrkphn.125 } }
+	}
+}
+# <<< kp 125
 country_event = {
 	id = tfrkphn.125
 	title = tfrkphn.125.t
-	desc = tfrkphn.125.story
+	desc = tfrkphn.125.kp2
 	picture = GFX_TFRKPHN_bank
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -1182,7 +1698,7 @@ country_event = {
 country_event = {
 	id = tfrkphn.75
 	title = tfrkphn.75.t
-	desc = tfrkphn.75.desc
+	desc = tfrkphn.75.kp
 	picture = GFX_TFRKPHN_const_court
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -1229,10 +1745,24 @@ country_event = {
 }
 
 # 4-04 이벤트
+# >>> kp 78
+# 긴 글의 앞 장들. 마지막 선택지가 원래 이벤트 tfrkphn.78을 부른다 (hongkp_build.py)
+country_event = {
+	id = tfrkphn.778
+	title = tfrkphn.78.t
+	desc = tfrkphn.78.kp
+	picture = GFX_TFRKPHN_bar_exam_rally
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.778.next
+		hidden_effect = { country_event = { id = tfrkphn.78 } }
+	}
+}
+# <<< kp 78
 country_event = {
 	id = tfrkphn.78
 	title = tfrkphn.78.t
-	desc = tfrkphn.78.desc
+	desc = tfrkphn.78.kp2
 	picture = GFX_TFRKPHN_bar_exam_rally
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -1251,10 +1781,24 @@ country_event = {
 }
 
 # 4-05 이벤트
+# >>> kp 79
+# 긴 글의 앞 장들. 마지막 선택지가 원래 이벤트 tfrkphn.79을 부른다 (hongkp_build.py)
+country_event = {
+	id = tfrkphn.779
+	title = tfrkphn.79.t
+	desc = tfrkphn.79.kp
+	picture = GFX_TFRKPHN_suneung
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.779.next
+		hidden_effect = { country_event = { id = tfrkphn.79 } }
+	}
+}
+# <<< kp 79
 country_event = {
 	id = tfrkphn.79
 	title = tfrkphn.79.t
-	desc = tfrkphn.79.desc
+	desc = tfrkphn.79.kp2
 	picture = GFX_TFRKPHN_suneung
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -1270,10 +1814,24 @@ country_event = {
 }
 
 # 4-06 이벤트
+# >>> kp 80
+# 긴 글의 앞 장들. 마지막 선택지가 원래 이벤트 tfrkphn.80을 부른다 (hongkp_build.py)
+country_event = {
+	id = tfrkphn.780
+	title = tfrkphn.80.t
+	desc = tfrkphn.80.kp
+	picture = GFX_TFRKPHN_army_poster
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.780.next
+		hidden_effect = { country_event = { id = tfrkphn.80 } }
+	}
+}
+# <<< kp 80
 country_event = {
 	id = tfrkphn.80
 	title = tfrkphn.80.t
-	desc = tfrkphn.80.desc
+	desc = tfrkphn.80.kp2
 	picture = GFX_TFRKPHN_army_poster
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -1293,7 +1851,7 @@ country_event = {
 country_event = {
 	id = tfrkphn.81
 	title = tfrkphn.81.t
-	desc = tfrkphn.81.desc
+	desc = tfrkphn.81.kp
 	picture = GFX_TFRKPHN_crisis_room
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -1307,10 +1865,24 @@ country_event = {
 }
 
 # 4-08 이벤트
+# >>> kp 82
+# 긴 글의 앞 장들. 마지막 선택지가 원래 이벤트 tfrkphn.82을 부른다 (hongkp_build.py)
+country_event = {
+	id = tfrkphn.782
+	title = tfrkphn.82.t
+	desc = tfrkphn.82.kp
+	picture = GFX_TFRKPHN_ulsan_factory
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.782.next
+		hidden_effect = { country_event = { id = tfrkphn.82 } }
+	}
+}
+# <<< kp 82
 country_event = {
 	id = tfrkphn.82
 	title = tfrkphn.82.t
-	desc = tfrkphn.82.desc
+	desc = tfrkphn.82.kp2
 	picture = GFX_TFRKPHN_ulsan_factory
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -1329,10 +1901,24 @@ country_event = {
 }
 
 # 4-09 이벤트
+# >>> kp 83
+# 긴 글의 앞 장들. 마지막 선택지가 원래 이벤트 tfrkphn.83을 부른다 (hongkp_build.py)
+country_event = {
+	id = tfrkphn.783
+	title = tfrkphn.83.t
+	desc = tfrkphn.83.kp
+	picture = GFX_TFRKPHN_kbs
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.783.next
+		hidden_effect = { country_event = { id = tfrkphn.83 } }
+	}
+}
+# <<< kp 83
 country_event = {
 	id = tfrkphn.83
 	title = tfrkphn.83.t
-	desc = tfrkphn.83.desc
+	desc = tfrkphn.83.kp2
 	picture = GFX_TFRKPHN_kbs
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -1676,7 +2262,7 @@ news_event = { # 홍준표 후보 당선 (뉴스)
 country_event = {
 	id = tfrkphn.200
 	title = tfrkphn.200.story_t
-	desc = tfrkphn.200.story
+	desc = tfrkphn.200.kp
 	picture = GFX_TFRKPHN_dalbit
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -1686,10 +2272,24 @@ country_event = {
 	}
 }
 
+# >>> kp 201
+# 긴 글의 앞 장들. 마지막 선택지가 원래 이벤트 tfrkphn.201을 부른다 (hongkp_build.py)
+country_event = {
+	id = tfrkphn.801
+	title = tfrkphn.201.t
+	desc = tfrkphn.201.kp
+	picture = GFX_TFRKPHN_youth_dream_logo
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.801.next
+		hidden_effect = { country_event = { id = tfrkphn.201 } }
+	}
+}
+# <<< kp 201
 country_event = {
 	id = tfrkphn.201
 	title = tfrkphn.201.t
-	desc = tfrkphn.201.story
+	desc = tfrkphn.201.kp2
 	picture = GFX_TFRKPHN_youth_dream_logo
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -1702,7 +2302,7 @@ country_event = {
 country_event = {
 	id = tfrkphn.202
 	title = tfrkphn.202.t
-	desc = tfrkphn.202.story
+	desc = tfrkphn.202.kp
 	picture = GFX_TFRKPHN_salute_soldier
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -1713,10 +2313,35 @@ country_event = {
 	}
 }
 
+# >>> kp 203
+# 긴 글의 앞 장들. 마지막 선택지가 원래 이벤트 tfrkphn.203을 부른다 (hongkp_build.py)
+country_event = {
+	id = tfrkphn.803
+	title = tfrkphn.203.t
+	desc = tfrkphn.203.kp
+	picture = GFX_TFRKPHN_empty_frame
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.803.next
+		hidden_effect = { country_event = { id = tfrkphn.32032 } }
+	}
+}
+country_event = {
+	id = tfrkphn.32032
+	title = tfrkphn.203.t
+	desc = tfrkphn.203.kp2
+	picture = GFX_TFRKPHN_empty_frame
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.803.next
+		hidden_effect = { country_event = { id = tfrkphn.203 } }
+	}
+}
+# <<< kp 203
 country_event = {
 	id = tfrkphn.203
 	title = tfrkphn.203.t
-	desc = tfrkphn.203.story
+	desc = tfrkphn.203.kp3
 	picture = GFX_TFRKPHN_empty_frame
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -1726,10 +2351,24 @@ country_event = {
 	}
 }
 
+# >>> kp 204
+# 긴 글의 앞 장들. 마지막 선택지가 원래 이벤트 tfrkphn.204을 부른다 (hongkp_build.py)
+country_event = {
+	id = tfrkphn.804
+	title = tfrkphn.204.t
+	desc = tfrkphn.204.kp
+	picture = GFX_TFRKPHN_vet_points
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.804.next
+		hidden_effect = { country_event = { id = tfrkphn.204 } }
+	}
+}
+# <<< kp 204
 country_event = {
 	id = tfrkphn.204
 	title = tfrkphn.204.t
-	desc = tfrkphn.204.story
+	desc = tfrkphn.204.kp2
 	picture = GFX_TFRKPHN_vet_points
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -1739,10 +2378,24 @@ country_event = {
 	}
 }
 
+# >>> kp 205
+# 긴 글의 앞 장들. 마지막 선택지가 원래 이벤트 tfrkphn.205을 부른다 (hongkp_build.py)
+country_event = {
+	id = tfrkphn.805
+	title = tfrkphn.205.t
+	desc = tfrkphn.205.kp
+	picture = GFX_TFRKPHN_taegukgi
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.805.next
+		hidden_effect = { country_event = { id = tfrkphn.205 } }
+	}
+}
+# <<< kp 205
 country_event = {
 	id = tfrkphn.205
 	title = tfrkphn.205.t
-	desc = tfrkphn.205.desc
+	desc = tfrkphn.205.kp2
 	picture = GFX_TFRKPHN_taegukgi
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -1752,10 +2405,35 @@ country_event = {
 	}
 }
 
+# >>> kp 206
+# 긴 글의 앞 장들. 마지막 선택지가 원래 이벤트 tfrkphn.206을 부른다 (hongkp_build.py)
+country_event = {
+	id = tfrkphn.806
+	title = tfrkphn.206.t
+	desc = tfrkphn.206.kp
+	picture = GFX_TFRKPHN_gdansk
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.806.next
+		hidden_effect = { country_event = { id = tfrkphn.32062 } }
+	}
+}
+country_event = {
+	id = tfrkphn.32062
+	title = tfrkphn.206.t
+	desc = tfrkphn.206.kp2
+	picture = GFX_TFRKPHN_gdansk
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.806.next
+		hidden_effect = { country_event = { id = tfrkphn.206 } }
+	}
+}
+# <<< kp 206
 country_event = {
 	id = tfrkphn.206
 	title = tfrkphn.206.t
-	desc = tfrkphn.206.story
+	desc = tfrkphn.206.kp3
 	picture = GFX_TFRKPHN_gdansk
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -1765,10 +2443,24 @@ country_event = {
 	}
 }
 
+# >>> kp 207
+# 긴 글의 앞 장들. 마지막 선택지가 원래 이벤트 tfrkphn.207을 부른다 (hongkp_build.py)
+country_event = {
+	id = tfrkphn.807
+	title = tfrkphn.207.t
+	desc = tfrkphn.207.kp
+	picture = GFX_TFRKPHN_veterans
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.807.next
+		hidden_effect = { country_event = { id = tfrkphn.207 } }
+	}
+}
+# <<< kp 207
 country_event = {
 	id = tfrkphn.207
 	title = tfrkphn.207.t
-	desc = tfrkphn.207.story
+	desc = tfrkphn.207.kp2
 	picture = GFX_TFRKPHN_veterans
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -1778,10 +2470,24 @@ country_event = {
 	}
 }
 
+# >>> kp 208
+# 긴 글의 앞 장들. 마지막 선택지가 원래 이벤트 tfrkphn.208을 부른다 (hongkp_build.py)
+country_event = {
+	id = tfrkphn.808
+	title = tfrkphn.208.t
+	desc = tfrkphn.208.kp
+	picture = GFX_TFRKPHN_gwanghwamun_night
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.808.next
+		hidden_effect = { country_event = { id = tfrkphn.208 } }
+	}
+}
+# <<< kp 208
 country_event = {
 	id = tfrkphn.208
 	title = tfrkphn.208.t
-	desc = tfrkphn.208.story
+	desc = tfrkphn.208.kp2
 	picture = GFX_TFRKPHN_gwanghwamun_night
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -1791,10 +2497,24 @@ country_event = {
 	}
 }
 
+# >>> kp 209
+# 긴 글의 앞 장들. 마지막 선택지가 원래 이벤트 tfrkphn.209을 부른다 (hongkp_build.py)
+country_event = {
+	id = tfrkphn.809
+	title = tfrkphn.209.t
+	desc = tfrkphn.209.kp
+	picture = GFX_TFRKPHN_oh
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.809.next
+		hidden_effect = { country_event = { id = tfrkphn.209 } }
+	}
+}
+# <<< kp 209
 country_event = {
 	id = tfrkphn.209
 	title = tfrkphn.209.t
-	desc = tfrkphn.209.story
+	desc = tfrkphn.209.kp2
 	picture = GFX_TFRKPHN_oh
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -1804,10 +2524,35 @@ country_event = {
 	}
 }
 
+# >>> kp 210
+# 긴 글의 앞 장들. 마지막 선택지가 원래 이벤트 tfrkphn.210을 부른다 (hongkp_build.py)
+country_event = {
+	id = tfrkphn.810
+	title = tfrkphn.210.t
+	desc = tfrkphn.210.kp
+	picture = GFX_TFRKPHN_kori
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.810.next
+		hidden_effect = { country_event = { id = tfrkphn.32102 } }
+	}
+}
+country_event = {
+	id = tfrkphn.32102
+	title = tfrkphn.210.t
+	desc = tfrkphn.210.kp2
+	picture = GFX_TFRKPHN_kori
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.810.next
+		hidden_effect = { country_event = { id = tfrkphn.210 } }
+	}
+}
+# <<< kp 210
 country_event = {
 	id = tfrkphn.210
 	title = tfrkphn.210.t
-	desc = tfrkphn.210.story
+	desc = tfrkphn.210.kp3
 	picture = GFX_TFRKPHN_kori
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -1817,10 +2562,35 @@ country_event = {
 	}
 }
 
+# >>> kp 211
+# 긴 글의 앞 장들. 마지막 선택지가 원래 이벤트 tfrkphn.211을 부른다 (hongkp_build.py)
+country_event = {
+	id = tfrkphn.811
+	title = tfrkphn.211.t
+	desc = tfrkphn.211.kp
+	picture = GFX_TFRKPHN_g7
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.811.next
+		hidden_effect = { country_event = { id = tfrkphn.32112 } }
+	}
+}
+country_event = {
+	id = tfrkphn.32112
+	title = tfrkphn.211.t
+	desc = tfrkphn.211.kp2
+	picture = GFX_TFRKPHN_g7
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.811.next
+		hidden_effect = { country_event = { id = tfrkphn.211 } }
+	}
+}
+# <<< kp 211
 country_event = {
 	id = tfrkphn.211
 	title = tfrkphn.211.t
-	desc = tfrkphn.211.story
+	desc = tfrkphn.211.kp3
 	picture = GFX_TFRKPHN_g7
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -2373,11 +3143,25 @@ country_event = {
 }
 
 # ===== 이인제 트리 첫 중점 「출발선에 다시 서서」 =====
+# >>> kp 260
+# 긴 글의 앞 장들. 마지막 선택지가 원래 이벤트 tfrkphn.260을 부른다 (hongkp_build.py)
+country_event = {
+	id = tfrkphn.860
+	title = tfrkphn.260.t
+	desc = tfrkphn.260.kp
+	picture = GFX_TFRKPHN_start_line
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.860.next
+		hidden_effect = { country_event = { id = tfrkphn.260 } }
+	}
+}
+# <<< kp 260
 country_event = {
 	id = tfrkphn.260
 	title = tfrkphn.260.t
-	desc = tfrkphn.260.story
-	picture = GFX_TFRKPHN_lee_temp
+	desc = tfrkphn.260.kp2
+	picture = GFX_TFRKPHN_start_line
 	is_triggered_only = yes
 	fire_only_once = yes
 
@@ -2389,11 +3173,25 @@ country_event = {
 }
 
 # ===== 이인제 트리 「국민 대통합」 (충청대망론) =====
+# >>> kp 261
+# 긴 글의 앞 장들. 마지막 선택지가 원래 이벤트 tfrkphn.261을 부른다 (hongkp_build.py)
+country_event = {
+	id = tfrkphn.861
+	title = tfrkphn.261.t
+	desc = tfrkphn.261.kp
+	picture = GFX_TFRKPHN_chungcheong
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.861.next
+		hidden_effect = { country_event = { id = tfrkphn.261 } }
+	}
+}
+# <<< kp 261
 country_event = {
 	id = tfrkphn.261
 	title = tfrkphn.261.t
-	desc = tfrkphn.261.story
-	picture = GFX_TFRKPHN_lee_temp
+	desc = tfrkphn.261.kp2
+	picture = GFX_TFRKPHN_chungcheong
 	is_triggered_only = yes
 	fire_only_once = yes
 
@@ -2403,11 +3201,25 @@ country_event = {
 }
 
 # ===== 이인제 트리 「일자리 만드는 대통령」 (노동부 장관 시절 회고) =====
+# >>> kp 262
+# 긴 글의 앞 장들. 마지막 선택지가 원래 이벤트 tfrkphn.262을 부른다 (hongkp_build.py)
+country_event = {
+	id = tfrkphn.862
+	title = tfrkphn.262.t
+	desc = tfrkphn.262.kp
+	picture = GFX_TFRKPHN_jobs_president
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.862.next
+		hidden_effect = { country_event = { id = tfrkphn.262 } }
+	}
+}
+# <<< kp 262
 country_event = {
 	id = tfrkphn.262
 	title = tfrkphn.262.t
-	desc = tfrkphn.262.story
-	picture = GFX_TFRKPHN_lee_temp
+	desc = tfrkphn.262.kp2
+	picture = GFX_TFRKPHN_jobs_president
 	is_triggered_only = yes
 	fire_only_once = yes
 
@@ -2417,11 +3229,25 @@ country_event = {
 }
 
 # ===== 이인제 트리 「책임총리제」 (설명문 형식) =====
+# >>> kp 263
+# 긴 글의 앞 장들. 마지막 선택지가 원래 이벤트 tfrkphn.263을 부른다 (hongkp_build.py)
+country_event = {
+	id = tfrkphn.863
+	title = tfrkphn.263.t
+	desc = tfrkphn.263.kp
+	picture = GFX_TFRKPHN_resp_pm
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.863.next
+		hidden_effect = { country_event = { id = tfrkphn.263 } }
+	}
+}
+# <<< kp 263
 country_event = {
 	id = tfrkphn.263
 	title = tfrkphn.263.t
-	desc = tfrkphn.263.story
-	picture = GFX_TFRKPHN_lee_temp
+	desc = tfrkphn.263.kp2
+	picture = GFX_TFRKPHN_resp_pm
 	is_triggered_only = yes
 	fire_only_once = yes
 
@@ -2431,11 +3257,25 @@ country_event = {
 }
 
 # ===== 이인제 트리 「강력한 리더십」 =====
+# >>> kp 264
+# 긴 글의 앞 장들. 마지막 선택지가 원래 이벤트 tfrkphn.264을 부른다 (hongkp_build.py)
+country_event = {
+	id = tfrkphn.864
+	title = tfrkphn.264.t
+	desc = tfrkphn.264.kp
+	picture = GFX_TFRKPHN_strong_lead
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.864.next
+		hidden_effect = { country_event = { id = tfrkphn.264 } }
+	}
+}
+# <<< kp 264
 country_event = {
 	id = tfrkphn.264
 	title = tfrkphn.264.t
-	desc = tfrkphn.264.story
-	picture = GFX_TFRKPHN_lee_temp
+	desc = tfrkphn.264.kp2
+	picture = GFX_TFRKPHN_strong_lead
 	is_triggered_only = yes
 	fire_only_once = yes
 
@@ -2445,11 +3285,25 @@ country_event = {
 }
 
 # ===== 이인제 트리 「임기를 함께하는 내각」 1: 인선의 고뇌 =====
+# >>> kp 265
+# 긴 글의 앞 장들. 마지막 선택지가 원래 이벤트 tfrkphn.265을 부른다 (hongkp_build.py)
+country_event = {
+	id = tfrkphn.865
+	title = tfrkphn.265.t
+	desc = tfrkphn.265.kp
+	picture = GFX_TFRKPHN_blank_slot
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.865.next
+		hidden_effect = { country_event = { id = tfrkphn.265 } }
+	}
+}
+# <<< kp 265
 country_event = {
 	id = tfrkphn.265
 	title = tfrkphn.265.t
-	desc = tfrkphn.265.story
-	picture = GFX_TFRKPHN_lee_temp
+	desc = tfrkphn.265.kp2
+	picture = GFX_TFRKPHN_blank_slot
 	is_triggered_only = yes
 	fire_only_once = yes
 
@@ -2464,7 +3318,7 @@ country_event = {
 	id = tfrkphn.266
 	title = tfrkphn.266.t
 	desc = tfrkphn.266.story
-	picture = GFX_TFRKPHN_lee_temp
+	picture = GFX_TFRKPHN_appointment
 	is_triggered_only = yes
 	fire_only_once = yes
 
@@ -2479,7 +3333,7 @@ country_event = {
 	id = tfrkphn.271
 	title = tfrkphn.271.t
 	desc = tfrkphn.271.story
-	picture = GFX_TFRKPHN_lee_temp
+	picture = GFX_TFRKPHN_empty_chair
 	is_triggered_only = yes
 	fire_only_once = yes
 	trigger = { NOT = { has_country_flag = TFRKPHN_cab_nso_filled } }
@@ -2510,7 +3364,7 @@ country_event = {
 	id = tfrkphn.272
 	title = tfrkphn.272.t
 	desc = tfrkphn.272.story
-	picture = GFX_TFRKPHN_lee_temp
+	picture = GFX_TFRKPHN_rice_price
 	is_triggered_only = yes
 	fire_only_once = yes
 	trigger = { NOT = { has_country_flag = TFRKPHN_cab_agri_filled } }
@@ -2541,7 +3395,7 @@ country_event = {
 	id = tfrkphn.273
 	title = tfrkphn.273.t
 	desc = tfrkphn.273.story
-	picture = GFX_TFRKPHN_lee_temp
+	picture = GFX_TFRKPHN_empty_chair
 	is_triggered_only = yes
 	fire_only_once = yes
 	trigger = { NOT = { has_country_flag = TFRKPHN_cab_labor_filled } }
@@ -2572,7 +3426,7 @@ country_event = {
 	id = tfrkphn.274
 	title = tfrkphn.274.t
 	desc = tfrkphn.274.story
-	picture = GFX_TFRKPHN_lee_temp
+	picture = GFX_TFRKPHN_vacancy
 	is_triggered_only = yes
 	fire_only_once = yes
 	trigger = { NOT = { has_country_flag = TFRKPHN_cab_unif_filled } }
@@ -2603,7 +3457,7 @@ country_event = {
 	id = tfrkphn.275
 	title = tfrkphn.275.t
 	desc = tfrkphn.275.story
-	picture = GFX_TFRKPHN_lee_temp
+	picture = GFX_TFRKPHN_moj
 	is_triggered_only = yes
 	fire_only_once = yes
 	trigger = { NOT = { has_country_flag = TFRKPHN_cab_justice_filled } }
@@ -2638,7 +3492,7 @@ country_event = {
 	id = tfrkphn.276
 	title = tfrkphn.276.t
 	desc = tfrkphn.276.story
-	picture = GFX_TFRKPHN_lee_temp
+	picture = GFX_TFRKPHN_motie
 	is_triggered_only = yes
 	fire_only_once = yes
 	trigger = { NOT = { has_country_flag = TFRKPHN_cab_trade_filled } }

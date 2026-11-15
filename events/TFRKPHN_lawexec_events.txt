@@ -6,7 +6,7 @@ country_event = {
 	id = tfrkphn.518
 	title = tfrkphn.518.t
 	desc = tfrkphn.518.d
-	picture = GFX_TFRKPHN_lee_temp
+	picture = GFX_TFRKPHN_unsigned_order
 	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
@@ -20,7 +20,7 @@ country_event = {
 	id = tfrkphn.519
 	title = tfrkphn.519.t
 	desc = tfrkphn.519.d
-	picture = GFX_TFRKPHN_lee_temp
+	picture = GFX_TFRKPHN_irreversible
 	is_triggered_only = yes
 	fire_only_once = yes
 	option = {	# 돌려보내고 종신형 입법
@@ -50,7 +50,7 @@ country_event = {
 	title = tfrkphn.520.t
 	desc = { text = tfrkphn.520.d_yes trigger = { has_country_flag = TFRKPHN_exec_signed } }
 	desc = { text = tfrkphn.520.d_no trigger = { NOT = { has_country_flag = TFRKPHN_exec_signed } } }
-	picture = GFX_TFRKPHN_lee_temp
+	picture = GFX_TFRKPHN_predecessor_post
 	is_triggered_only = yes
 	fire_only_once = yes
 	option = {

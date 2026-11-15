@@ -4,8 +4,8 @@ add_namespace = tfrkphn
 country_event = {
 	id = tfrkphn.547
 	title = tfrkphn.547.t
-	desc = tfrkphn.547.story
-	picture = GFX_TFRKPHN_lee_temp
+	desc = tfrkphn.547.kp
+	picture = GFX_TFRKPHN_foreign_pres
 	is_triggered_only = yes
 	fire_only_once = yes
 	option = { name = tfrkphn.547.a }
@@ -14,8 +14,8 @@ country_event = {
 country_event = {
 	id = tfrkphn.548
 	title = tfrkphn.548.t
-	desc = tfrkphn.548.story
-	picture = GFX_TFRKPHN_lee_temp
+	desc = tfrkphn.548.kp
+	picture = GFX_TFRKPHN_nay_placard
 	is_triggered_only = yes
 	fire_only_once = yes
 	option = { name = tfrkphn.548.a }
@@ -24,8 +24,8 @@ country_event = {
 country_event = {
 	id = tfrkphn.549
 	title = tfrkphn.549.t
-	desc = tfrkphn.549.story
-	picture = GFX_TFRKPHN_lee_temp
+	desc = tfrkphn.549.kp
+	picture = GFX_TFRKPHN_thaad
 	is_triggered_only = yes
 	fire_only_once = yes
 	option = { name = tfrkphn.549.a }
@@ -34,8 +34,8 @@ country_event = {
 country_event = {
 	id = tfrkphn.550
 	title = tfrkphn.550.t
-	desc = tfrkphn.550.story
-	picture = GFX_TFRKPHN_lee_temp
+	desc = tfrkphn.550.kp
+	picture = GFX_TFRKPHN_mnd
 	is_triggered_only = yes
 	fire_only_once = yes
 	option = { name = tfrkphn.550.a }
@@ -44,8 +44,8 @@ country_event = {
 country_event = {
 	id = tfrkphn.551
 	title = tfrkphn.551.t
-	desc = tfrkphn.551.story
-	picture = GFX_TFRKPHN_lee_temp
+	desc = tfrkphn.551.kp
+	picture = GFX_TFRKPHN_army_after
 	is_triggered_only = yes
 	fire_only_once = yes
 	option = { name = tfrkphn.551.a }

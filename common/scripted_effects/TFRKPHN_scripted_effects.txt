@@ -30,9 +30,10 @@ TFRKPHN_hong_start_effect = {
 	}
 	if = {
 		limit = { has_character = KOR_hong_joon_pyo_char }
-		KOR_hong_joon_pyo_char = { promote_character = judicial_conservatism }
+		KOR_hong_joon_pyo_char = { promote_character = korean_neoconservatism }
 	}
 	set_country_flag = TFRKP_HN_hong_president
+	end_coalition = yes	# 연립 없이 보수주의 단독 집권 (ideology_build.py)
 	# 당선 뒤 2주마다 차례로 뜨는 사건 (예전에는 중점 보상이었다)
 	if = {
 		limit = { NOT = { has_country_flag = TFRKPHN_hong_auto_events_sent } }
@@ -837,9 +838,10 @@ TFRKPHN_ge2027_lee_in_je_effect = {
 	add_popularity = { ideology = conservative popularity = 0.15 }
 	hidden_effect = {
 		if = { limit = { NOT = { has_character = KOR_lee_in_je_char } } recruit_character = KOR_lee_in_je_char }
-		KOR_lee_in_je_char = { promote_character = korean_conservatism }
+		KOR_lee_in_je_char = { promote_character = korean_neoconservatism }
 	}
 	TFRKPHN_term_start_effect = yes
+	TFRKPHN_army_keep_effect = yes	# 국방개혁 가지 기록 보존
 	load_focus_tree = { tree = TFRKPHN_lee_in_je_tree keep_completed = no }
 	mark_focus_tree_layout_dirty = yes
 }
@@ -853,7 +855,7 @@ TFRKPHN_ge2027_oh_se_hoon_effect = {
 	add_popularity = { ideology = conservative popularity = 0.15 }
 	hidden_effect = {
 		if = { limit = { NOT = { has_character = KOR_oh_se_hoon_char } } recruit_character = KOR_oh_se_hoon_char }
-		KOR_oh_se_hoon_char = { promote_character = korean_conservatism }
+		KOR_oh_se_hoon_char = { promote_character = korean_warm_conservatism }
 	}
 	TFRKPHN_term_start_effect = yes
 	load_focus_tree = { tree = TFRKPHN_oh_se_hoon_tree keep_completed = no }
@@ -2141,4 +2143,38 @@ TFRKPHN_cab_appoint_joo_hyung_hwan = {
 	set_country_flag = TFRKPHN_cab_has_joo_hyung_hwan
 	custom_effect_tooltip = TFRKPHN_cab_eff_joo_hyung_hwan
 	hidden_effect = { add_to_variable = { TFRKPHN_lee_ind = 0.03 } add_to_variable = { TFRKPHN_lee_eff = 0.05 } add_to_variable = { TFRKPHN_cab_sum_ind = 0.03 } add_to_variable = { TFRKPHN_cab_sum_eff = 0.05 } add_to_variable = { TFRKPHN_cab_count = 1 } TFRKPHN_lee_gov_init = yes force_update_dynamic_modifier = yes }
+}
+
+TFRKPHN_army_keep_effect = {
+	# 이인제 트리로 바꾸기 직전: 국방개혁 가지에서 끝낸 중점을 깃발로 적어 둔다 (army_keep_build.py)
+	if = { limit = { has_completed_focus = KOR_military_common_1 } set_country_flag = TFRKPHN_keepf_KOR_military_common_1 }
+	if = { limit = { has_completed_focus = KOR_military_common_2 } set_country_flag = TFRKPHN_keepf_KOR_military_common_2 }
+	if = { limit = { has_completed_focus = KOR_military_common_3 } set_country_flag = TFRKPHN_keepf_KOR_military_common_3 }
+	if = { limit = { has_completed_focus = KOR_military_common_4 } set_country_flag = TFRKPHN_keepf_KOR_military_common_4 }
+	if = { limit = { has_completed_focus = KOR_military_common_5 } set_country_flag = TFRKPHN_keepf_KOR_military_common_5 }
+	if = { limit = { has_completed_focus = KOR_military_common_6 } set_country_flag = TFRKPHN_keepf_KOR_military_common_6 }
+	if = { limit = { has_completed_focus = KOR_military_common_7 } set_country_flag = TFRKPHN_keepf_KOR_military_common_7 }
+	if = { limit = { has_completed_focus = KOR_yoon_after_airforce_0 } set_country_flag = TFRKPHN_keepf_KOR_yoon_after_airforce_0 }
+	if = { limit = { has_completed_focus = KOR_yoon_after_airforce_1 } set_country_flag = TFRKPHN_keepf_KOR_yoon_after_airforce_1 }
+	if = { limit = { has_completed_focus = KOR_yoon_after_airforce_2 } set_country_flag = TFRKPHN_keepf_KOR_yoon_after_airforce_2 }
+	if = { limit = { has_completed_focus = KOR_yoon_after_airforce_3 } set_country_flag = TFRKPHN_keepf_KOR_yoon_after_airforce_3 }
+	if = { limit = { has_completed_focus = KOR_yoon_after_airforce_4 } set_country_flag = TFRKPHN_keepf_KOR_yoon_after_airforce_4 }
+	if = { limit = { has_completed_focus = KOR_yoon_after_airforce_5 } set_country_flag = TFRKPHN_keepf_KOR_yoon_after_airforce_5 }
+	if = { limit = { has_completed_focus = KOR_yoon_after_army_0 } set_country_flag = TFRKPHN_keepf_KOR_yoon_after_army_0 }
+	if = { limit = { has_completed_focus = KOR_yoon_after_army_1 } set_country_flag = TFRKPHN_keepf_KOR_yoon_after_army_1 }
+	if = { limit = { has_completed_focus = KOR_yoon_after_army_2 } set_country_flag = TFRKPHN_keepf_KOR_yoon_after_army_2 }
+	if = { limit = { has_completed_focus = KOR_yoon_after_army_3 } set_country_flag = TFRKPHN_keepf_KOR_yoon_after_army_3 }
+	if = { limit = { has_completed_focus = KOR_yoon_after_army_4 } set_country_flag = TFRKPHN_keepf_KOR_yoon_after_army_4 }
+	if = { limit = { has_completed_focus = KOR_yoon_after_army_5 } set_country_flag = TFRKPHN_keepf_KOR_yoon_after_army_5 }
+	if = { limit = { has_completed_focus = KOR_yoon_after_army_6 } set_country_flag = TFRKPHN_keepf_KOR_yoon_after_army_6 }
+	if = { limit = { has_completed_focus = KOR_yoon_after_army_7 } set_country_flag = TFRKPHN_keepf_KOR_yoon_after_army_7 }
+	if = { limit = { has_completed_focus = KOR_yoon_after_army_8 } set_country_flag = TFRKPHN_keepf_KOR_yoon_after_army_8 }
+	if = { limit = { has_completed_focus = KOR_yoon_after_navy_0 } set_country_flag = TFRKPHN_keepf_KOR_yoon_after_navy_0 }
+	if = { limit = { has_completed_focus = KOR_yoon_after_navy_1 } set_country_flag = TFRKPHN_keepf_KOR_yoon_after_navy_1 }
+	if = { limit = { has_completed_focus = KOR_yoon_after_navy_2 } set_country_flag = TFRKPHN_keepf_KOR_yoon_after_navy_2 }
+	if = { limit = { has_completed_focus = KOR_yoon_after_navy_3 } set_country_flag = TFRKPHN_keepf_KOR_yoon_after_navy_3 }
+	if = { limit = { has_completed_focus = KOR_yoon_after_navy_4 } set_country_flag = TFRKPHN_keepf_KOR_yoon_after_navy_4 }
+	if = { limit = { has_completed_focus = KOR_yoon_after_navy_5 } set_country_flag = TFRKPHN_keepf_KOR_yoon_after_navy_5 }
+	if = { limit = { has_completed_focus = KOR_yoon_after_navy_6 } set_country_flag = TFRKPHN_keepf_KOR_yoon_after_navy_6 }
+	if = { limit = { has_completed_focus = KOR_yoon_army_upper } set_country_flag = TFRKPHN_keepf_KOR_yoon_army_upper }
 }
