@@ -29,6 +29,31 @@ scripted_gui = {
 			TFRKPHN_sd_23 = { frame = TFRKPHN_sd_f23 }
 			TFRKPHN_sd_24 = { frame = TFRKPHN_sd_f24 }
 			TFRKPHN_sd_25 = { frame = TFRKPHN_sd_f25 }
+			TFRKPHN_sd_mk1 = { frame = TFRKPHN_sd_m1 }
+			TFRKPHN_sd_mk2 = { frame = TFRKPHN_sd_m2 }
+			TFRKPHN_sd_mk3 = { frame = TFRKPHN_sd_m3 }
+			TFRKPHN_sd_mk4 = { frame = TFRKPHN_sd_m4 }
+			TFRKPHN_sd_mk5 = { frame = TFRKPHN_sd_m5 }
+			TFRKPHN_sd_mk6 = { frame = TFRKPHN_sd_m6 }
+			TFRKPHN_sd_mk7 = { frame = TFRKPHN_sd_m7 }
+			TFRKPHN_sd_mk8 = { frame = TFRKPHN_sd_m8 }
+			TFRKPHN_sd_mk9 = { frame = TFRKPHN_sd_m9 }
+			TFRKPHN_sd_mk10 = { frame = TFRKPHN_sd_m10 }
+			TFRKPHN_sd_mk11 = { frame = TFRKPHN_sd_m11 }
+			TFRKPHN_sd_mk12 = { frame = TFRKPHN_sd_m12 }
+			TFRKPHN_sd_mk13 = { frame = TFRKPHN_sd_m13 }
+			TFRKPHN_sd_mk14 = { frame = TFRKPHN_sd_m14 }
+			TFRKPHN_sd_mk15 = { frame = TFRKPHN_sd_m15 }
+			TFRKPHN_sd_mk16 = { frame = TFRKPHN_sd_m16 }
+			TFRKPHN_sd_mk17 = { frame = TFRKPHN_sd_m17 }
+			TFRKPHN_sd_mk18 = { frame = TFRKPHN_sd_m18 }
+			TFRKPHN_sd_mk19 = { frame = TFRKPHN_sd_m19 }
+			TFRKPHN_sd_mk20 = { frame = TFRKPHN_sd_m20 }
+			TFRKPHN_sd_mk21 = { frame = TFRKPHN_sd_m21 }
+			TFRKPHN_sd_mk22 = { frame = TFRKPHN_sd_m22 }
+			TFRKPHN_sd_mk23 = { frame = TFRKPHN_sd_m23 }
+			TFRKPHN_sd_mk24 = { frame = TFRKPHN_sd_m24 }
+			TFRKPHN_sd_mk25 = { frame = TFRKPHN_sd_m25 }
 		}
 	}
 }

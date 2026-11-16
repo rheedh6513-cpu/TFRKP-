@@ -1,0 +1,68 @@
+# [안내] 오세훈 정부 「PDTO 협력」 패널. 회원국은 파랗게, 협력을 마친 나라는 금빛으로 칠해진다. 이름표를 누르면 그 나라가 선택된다. pdto_build.py가 만든다.
+# [안내] 동작은 common/scripted_guis/TFRKPHN_pdto_scripted_guis.txt.
+guiTypes = {
+	containerWindowType = {
+		name = "TFRKPHN_pdto_container"
+		size = { width = 100%% height = 471 }
+		containerWindowType = {
+			name = "TFRKPHN_pdto_panel"
+			position = { x = 0 y = 0 }
+			size = { width = 500 height = 469 }
+			background = { name = "background" spriteType = "GFX_tiled_decisions_bg_small" alwaystransparent = yes }
+			containerWindowType = {
+				name = "TFRKPHN_pdto_title_container"
+				position = { x = 1 y = 0 }
+				size = { width = 498 height = 30 }
+				background = { name = "background" spriteType = "GFX_tiled_header_1" alwaystransparent = yes }
+				instantTextBoxType = { name = "TFRKPHN_pd_t_top" position = { x = -240 y = 2 } orientation = CENTER_UP text = "TFRKPHN_pd_t_top" font = "hoi_18mbs" format = left maxWidth = 300 alwaystransparent = yes }
+			}
+			iconType = { name = "TFRKPHN_pd_base" position = { x = 52 y = 34 } spriteType = "GFX_TFRKPHN_pd_base" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_pd_r_PRC" position = { x = 85 y = 34 } spriteType = "GFX_TFRKPHN_pd_r_PRC" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_pd_r_PRK" position = { x = 308 y = 51 } spriteType = "GFX_TFRKPHN_pd_r_PRK" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_pd_r_PAK" position = { x = 52 y = 77 } spriteType = "GFX_TFRKPHN_pd_r_PAK" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_pd_r_NEP" position = { x = 113 y = 107 } spriteType = "GFX_TFRKPHN_pd_r_NEP" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_pd_r_BAN" position = { x = 148 y = 123 } spriteType = "GFX_TFRKPHN_pd_r_BAN" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_pd_r_SRL" position = { x = 112 y = 197 } spriteType = "GFX_TFRKPHN_pd_r_SRL" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_pd_r_LAO" position = { x = 202 y = 141 } spriteType = "GFX_TFRKPHN_pd_r_LAO" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_pd_r_CAM" position = { x = 211 y = 176 } spriteType = "GFX_TFRKPHN_pd_r_CAM" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_pd_r_BRM" position = { x = 167 y = 115 } spriteType = "GFX_TFRKPHN_pd_r_BRM" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_pd_r_MAL" position = { x = 200 y = 208 } spriteType = "GFX_TFRKPHN_pd_r_MAL" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_pd_r_BHU" position = { x = 152 y = 116 } spriteType = "GFX_TFRKPHN_pd_r_BHU" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_pd_r_JAP" position = { x = 305 y = 40 } spriteType = "GFX_TFRKPHN_pd_r_JAP" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_pd_r_CHI" position = { x = 282 y = 129 } spriteType = "GFX_TFRKPHN_pd_r_CHI" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_pd_r_RAJ" position = { x = 61 y = 84 } spriteType = "GFX_TFRKPHN_pd_r_RAJ" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_pd_r_VIN" position = { x = 210 y = 138 } spriteType = "GFX_TFRKPHN_pd_r_VIN" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_pd_r_PHI" position = { x = 276 y = 149 } spriteType = "GFX_TFRKPHN_pd_r_PHI" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_pd_r_AST" position = { x = 258 y = 285 } spriteType = "GFX_TFRKPHN_pd_r_AST" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_pd_r_INS" position = { x = 180 y = 214 } spriteType = "GFX_TFRKPHN_pd_r_INS" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_pd_r_SIA" position = { x = 190 y = 150 } spriteType = "GFX_TFRKPHN_pd_r_SIA" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_pd_m1" position = { x = 305 y = 40 } spriteType = "GFX_TFRKPHN_pd_m1" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_pd_m2" position = { x = 282 y = 129 } spriteType = "GFX_TFRKPHN_pd_m2" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_pd_m3" position = { x = 61 y = 84 } spriteType = "GFX_TFRKPHN_pd_m3" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_pd_m4" position = { x = 210 y = 138 } spriteType = "GFX_TFRKPHN_pd_m4" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_pd_m5" position = { x = 276 y = 149 } spriteType = "GFX_TFRKPHN_pd_m5" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_pd_m6" position = { x = 258 y = 285 } spriteType = "GFX_TFRKPHN_pd_m6" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_pd_m7" position = { x = 180 y = 214 } spriteType = "GFX_TFRKPHN_pd_m7" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_pd_m8" position = { x = 190 y = 150 } spriteType = "GFX_TFRKPHN_pd_m8" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_pd_g1" position = { x = 305 y = 40 } spriteType = "GFX_TFRKPHN_pd_g1" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_pd_g2" position = { x = 282 y = 129 } spriteType = "GFX_TFRKPHN_pd_g2" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_pd_g3" position = { x = 61 y = 84 } spriteType = "GFX_TFRKPHN_pd_g3" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_pd_g4" position = { x = 210 y = 138 } spriteType = "GFX_TFRKPHN_pd_g4" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_pd_g5" position = { x = 276 y = 149 } spriteType = "GFX_TFRKPHN_pd_g5" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_pd_g6" position = { x = 258 y = 285 } spriteType = "GFX_TFRKPHN_pd_g6" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_pd_g7" position = { x = 180 y = 214 } spriteType = "GFX_TFRKPHN_pd_g7" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_pd_g8" position = { x = 190 y = 150 } spriteType = "GFX_TFRKPHN_pd_g8" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_pd_b1" position = { x = 365 y = 77 } spriteType = "GFX_TFRKPHN_pd_b1" pdx_tooltip = "TFRKPHN_pd_b1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_pd_b2" position = { x = 297 y = 128 } spriteType = "GFX_TFRKPHN_pd_b2" pdx_tooltip = "TFRKPHN_pd_b2_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_pd_b3" position = { x = 95 y = 136 } spriteType = "GFX_TFRKPHN_pd_b3" pdx_tooltip = "TFRKPHN_pd_b3_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_pd_b4" position = { x = 233 y = 169 } spriteType = "GFX_TFRKPHN_pd_b4" pdx_tooltip = "TFRKPHN_pd_b4_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_pd_b5" position = { x = 295 y = 182 } spriteType = "GFX_TFRKPHN_pd_b5" pdx_tooltip = "TFRKPHN_pd_b5_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_pd_b6" position = { x = 337 y = 342 } spriteType = "GFX_TFRKPHN_pd_b6" pdx_tooltip = "TFRKPHN_pd_b6_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_pd_b7" position = { x = 235 y = 239 } spriteType = "GFX_TFRKPHN_pd_b7" pdx_tooltip = "TFRKPHN_pd_b7_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_pd_b8" position = { x = 189 y = 160 } spriteType = "GFX_TFRKPHN_pd_b8" pdx_tooltip = "TFRKPHN_pd_b8_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_pd_kor" position = { x = 271 y = 85 } spriteType = "GFX_TFRKPHN_pd_kor" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_pd_t_sel" position = { x = 8 y = 425 } text = "TFRKPHN_pd_t_sel" font = "hoi_16mbs" format = center maxWidth = 484 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_pd_t_help" position = { x = 8 y = 445 } text = "TFRKPHN_pd_t_help" font = "hoi_16mbs" format = center maxWidth = 484 maxHeight = 20 alwaystransparent = yes }
+		}
+	}
+}

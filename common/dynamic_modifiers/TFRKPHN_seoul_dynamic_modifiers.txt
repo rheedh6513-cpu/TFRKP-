@@ -3,4 +3,10 @@ TFRKPHN_sd_balance = {
 	icon = GFX_idea_KOR_yoon_common_conservatism_dynamic_modifir_idea
 	stability_factor = TFRKPHN_sd_bal
 	production_speed_buildings_factor = TFRKPHN_sd_build
+	business_value_factor = TFRKPHN_sd_bv
+	personal_value_factor = TFRKPHN_sd_pv
+	income_growth_factor = TFRKPHN_sd_ig
+	academic_development_monthly = TFRKPHN_sd_ac
+	research_speed_factor = TFRKPHN_sd_rs
+	poverty_development_monthly = TFRKPHN_sd_pov
 }

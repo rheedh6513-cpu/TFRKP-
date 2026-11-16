@@ -1,0 +1,303 @@
+# [안내] 오세훈 정부: 망명 기업 유치 탭. 중점 「망명 기업에 문을 연다」를 끝내면 열린다. exile_build.py가 만든다.
+TFRKPHN_oh_exile_category = {
+	TFRKPHN_ex_d1 = {
+		icon = GFX_decision_generic_construction
+		cost = 30
+		days_remove = 60
+		fire_only_once = yes
+		visible = { always = yes }
+		available = {
+			custom_trigger_tooltip = { tooltip = TFRKPHN_ex_need1_tt check_variable = { TFRKPHN_mega_s1 > 1.5 } }
+			num_of_civilian_factories_available_for_projects > 0
+		}
+		modifier = { civilian_factory_use = 1 }
+		complete_effect = { custom_effect_tooltip = TFRKPHN_ex_wait_tt }
+		remove_effect = {
+			custom_effect_tooltip = TFRKPHN_ex_d1_tt
+			custom_effect_tooltip = TFRKPHN_ex_gripe_tt
+			hidden_effect = {
+				add_to_variable = { TFRKPHN_ex_rs = 0.03 }
+				add_to_variable = { TFRKPHN_ex_n = 1 }
+				add_to_variable = { TFRKPHN_ex_gripe = 1 }
+				TFRKPHN_ex_refresh = yes
+				country_event = { id = tfrkphn.681 }
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_ex_d2 = {
+		icon = GFX_decision_generic_construction
+		cost = 30
+		days_remove = 60
+		fire_only_once = yes
+		visible = { always = yes }
+		available = {
+			custom_trigger_tooltip = { tooltip = TFRKPHN_ex_need2_tt check_variable = { TFRKPHN_mega_s2 > 1.5 } }
+			num_of_civilian_factories_available_for_projects > 0
+		}
+		modifier = { civilian_factory_use = 1 }
+		complete_effect = { custom_effect_tooltip = TFRKPHN_ex_wait_tt }
+		remove_effect = {
+			custom_effect_tooltip = TFRKPHN_ex_d2_tt
+			custom_effect_tooltip = TFRKPHN_ex_gripe_tt
+			hidden_effect = {
+				add_to_variable = { TFRKPHN_ex_rs = 0.02 } 525 = { if = { limit = { is_owned_by = KOR } add_extra_state_shared_building_slots = 1 add_building_construction = { type = office_park level = 1 instant_build = yes } } }
+				add_to_variable = { TFRKPHN_ex_n = 1 }
+				add_to_variable = { TFRKPHN_ex_gripe = 1 }
+				TFRKPHN_ex_refresh = yes
+				country_event = { id = tfrkphn.682 }
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_ex_d3 = {
+		icon = GFX_decision_generic_construction
+		cost = 30
+		days_remove = 60
+		fire_only_once = yes
+		visible = { always = yes }
+		available = {
+			custom_trigger_tooltip = { tooltip = TFRKPHN_ex_need3_tt check_variable = { TFRKPHN_mega_s3 > 2.5 } }
+			num_of_civilian_factories_available_for_projects > 0
+		}
+		modifier = { civilian_factory_use = 1 }
+		complete_effect = { custom_effect_tooltip = TFRKPHN_ex_wait_tt }
+		remove_effect = {
+			custom_effect_tooltip = TFRKPHN_ex_d3_tt
+			custom_effect_tooltip = TFRKPHN_ex_gripe_tt
+			hidden_effect = {
+				add_to_variable = { TFRKPHN_ex_ig = 0.01 } 869 = { if = { limit = { is_owned_by = KOR } add_extra_state_shared_building_slots = 1 add_building_construction = { type = industrial_complex level = 1 instant_build = yes } } }
+				add_to_variable = { TFRKPHN_ex_n = 1 }
+				add_to_variable = { TFRKPHN_ex_gripe = 1 }
+				TFRKPHN_ex_refresh = yes
+				country_event = { id = tfrkphn.683 }
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_ex_d4 = {
+		icon = GFX_decision_generic_construction
+		cost = 30
+		days_remove = 60
+		fire_only_once = yes
+		visible = { always = yes }
+		available = {
+			custom_trigger_tooltip = { tooltip = TFRKPHN_ex_need4_tt check_variable = { TFRKPHN_mega_s4 > 2.5 } }
+			num_of_civilian_factories_available_for_projects > 0
+		}
+		modifier = { civilian_factory_use = 1 }
+		complete_effect = { custom_effect_tooltip = TFRKPHN_ex_wait_tt }
+		remove_effect = {
+			custom_effect_tooltip = TFRKPHN_ex_d4_tt
+			custom_effect_tooltip = TFRKPHN_ex_gripe_tt
+			hidden_effect = {
+				add_to_variable = { TFRKPHN_ex_bv = 0.03 } 1411 = { if = { limit = { is_owned_by = KOR } add_extra_state_shared_building_slots = 1 add_building_construction = { type = industrial_complex level = 1 instant_build = yes } } }
+				add_to_variable = { TFRKPHN_ex_n = 1 }
+				add_to_variable = { TFRKPHN_ex_gripe = 1 }
+				TFRKPHN_ex_refresh = yes
+				country_event = { id = tfrkphn.684 }
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_ex_d5 = {
+		icon = GFX_decision_generic_construction
+		cost = 30
+		days_remove = 60
+		fire_only_once = yes
+		visible = { always = yes }
+		available = {
+			custom_trigger_tooltip = { tooltip = TFRKPHN_ex_need5_tt check_variable = { TFRKPHN_mega_s5 > 2.5 } }
+			num_of_civilian_factories_available_for_projects > 0
+		}
+		modifier = { civilian_factory_use = 1 }
+		complete_effect = { custom_effect_tooltip = TFRKPHN_ex_wait_tt }
+		remove_effect = {
+			custom_effect_tooltip = TFRKPHN_ex_d5_tt
+			custom_effect_tooltip = TFRKPHN_ex_gripe_tt
+			hidden_effect = {
+				1412 = { if = { limit = { is_owned_by = KOR } add_extra_state_shared_building_slots = 2 add_building_construction = { type = arms_factory level = 1 instant_build = yes } add_building_construction = { type = arms_factory level = 1 instant_build = yes } } }
+				add_to_variable = { TFRKPHN_ex_n = 1 }
+				add_to_variable = { TFRKPHN_ex_gripe = 1 }
+				TFRKPHN_ex_refresh = yes
+				country_event = { id = tfrkphn.685 }
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_ex_d6 = {
+		icon = GFX_decision_generic_construction
+		cost = 30
+		days_remove = 60
+		fire_only_once = yes
+		visible = { always = yes }
+		available = {
+			custom_trigger_tooltip = { tooltip = TFRKPHN_ex_need6_tt check_variable = { TFRKPHN_mega_s1 > 3.5 } }
+			num_of_civilian_factories_available_for_projects > 0
+		}
+		modifier = { civilian_factory_use = 1 }
+		complete_effect = { custom_effect_tooltip = TFRKPHN_ex_wait_tt }
+		remove_effect = {
+			custom_effect_tooltip = TFRKPHN_ex_d6_tt
+			custom_effect_tooltip = TFRKPHN_ex_gripe_tt
+			hidden_effect = {
+				add_to_variable = { TFRKPHN_ex_bv = 0.02 } add_to_variable = { TFRKPHN_ex_ig = 0.02 } 1041 = { if = { limit = { is_owned_by = KOR } add_extra_state_shared_building_slots = 1 add_building_construction = { type = office_park level = 1 instant_build = yes } } }
+				add_to_variable = { TFRKPHN_ex_n = 1 }
+				add_to_variable = { TFRKPHN_ex_gripe = 1 }
+				TFRKPHN_ex_refresh = yes
+				country_event = { id = tfrkphn.686 }
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_ex_d7 = {
+		icon = GFX_decision_generic_construction
+		cost = 30
+		days_remove = 60
+		fire_only_once = yes
+		visible = { always = yes }
+		available = {
+			custom_trigger_tooltip = { tooltip = TFRKPHN_ex_need7_tt check_variable = { TFRKPHN_mega_s3 > 3.5 } }
+			num_of_civilian_factories_available_for_projects > 0
+		}
+		modifier = { civilian_factory_use = 1 }
+		complete_effect = { custom_effect_tooltip = TFRKPHN_ex_wait_tt }
+		remove_effect = {
+			custom_effect_tooltip = TFRKPHN_ex_d7_tt
+			custom_effect_tooltip = TFRKPHN_ex_gripe_tt
+			hidden_effect = {
+				add_to_variable = { TFRKPHN_ex_rs = 0.02 } 869 = { if = { limit = { is_owned_by = KOR } add_extra_state_shared_building_slots = 1 add_building_construction = { type = office_park level = 1 instant_build = yes } } }
+				add_to_variable = { TFRKPHN_ex_n = 1 }
+				add_to_variable = { TFRKPHN_ex_gripe = 1 }
+				TFRKPHN_ex_refresh = yes
+				country_event = { id = tfrkphn.691 }
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_ex_d8 = {
+		icon = GFX_decision_generic_construction
+		cost = 30
+		days_remove = 60
+		fire_only_once = yes
+		visible = { always = yes }
+		available = {
+			custom_trigger_tooltip = { tooltip = TFRKPHN_ex_need8_tt check_variable = { TFRKPHN_mega_s2 > 3.5 } }
+			num_of_civilian_factories_available_for_projects > 0
+		}
+		modifier = { civilian_factory_use = 1 }
+		complete_effect = { custom_effect_tooltip = TFRKPHN_ex_wait_tt }
+		remove_effect = {
+			custom_effect_tooltip = TFRKPHN_ex_d8_tt
+			custom_effect_tooltip = TFRKPHN_ex_gripe_tt
+			hidden_effect = {
+				add_to_variable = { TFRKPHN_ex_ac = 0.002 } 525 = { if = { limit = { is_owned_by = KOR } add_extra_state_shared_building_slots = 1 add_building_construction = { type = industrial_complex level = 1 instant_build = yes } } }
+				add_to_variable = { TFRKPHN_ex_n = 1 }
+				add_to_variable = { TFRKPHN_ex_gripe = 1 }
+				TFRKPHN_ex_refresh = yes
+				country_event = { id = tfrkphn.692 }
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_ex_d9 = {
+		icon = GFX_decision_generic_construction
+		cost = 30
+		days_remove = 60
+		fire_only_once = yes
+		visible = { always = yes }
+		available = {
+			custom_trigger_tooltip = { tooltip = TFRKPHN_ex_need9_tt check_variable = { TFRKPHN_mega_s4 > 3.5 } }
+			num_of_civilian_factories_available_for_projects > 0
+		}
+		modifier = { civilian_factory_use = 1 }
+		complete_effect = { custom_effect_tooltip = TFRKPHN_ex_wait_tt }
+		remove_effect = {
+			custom_effect_tooltip = TFRKPHN_ex_d9_tt
+			custom_effect_tooltip = TFRKPHN_ex_gripe_tt
+			hidden_effect = {
+				870 = { if = { limit = { is_owned_by = KOR } add_extra_state_shared_building_slots = 2 add_building_construction = { type = arms_factory level = 1 instant_build = yes } add_building_construction = { type = arms_factory level = 1 instant_build = yes } } }
+				add_to_variable = { TFRKPHN_ex_n = 1 }
+				add_to_variable = { TFRKPHN_ex_gripe = 1 }
+				TFRKPHN_ex_refresh = yes
+				country_event = { id = tfrkphn.693 }
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_ex_d10 = {
+		icon = GFX_decision_generic_construction
+		cost = 30
+		days_remove = 60
+		fire_only_once = yes
+		visible = { always = yes }
+		available = {
+			custom_trigger_tooltip = { tooltip = TFRKPHN_ex_need10_tt check_variable = { TFRKPHN_mega_s5 > 3.5 } }
+			num_of_civilian_factories_available_for_projects > 0
+		}
+		modifier = { civilian_factory_use = 1 }
+		complete_effect = { custom_effect_tooltip = TFRKPHN_ex_wait_tt }
+		remove_effect = {
+			custom_effect_tooltip = TFRKPHN_ex_d10_tt
+			custom_effect_tooltip = TFRKPHN_ex_gripe_tt
+			hidden_effect = {
+				add_to_variable = { TFRKPHN_ex_bv = 0.02 } add_to_variable = { TFRKPHN_ex_ig = 0.01 } 1409 = { if = { limit = { is_owned_by = KOR } add_extra_state_shared_building_slots = 1 add_building_construction = { type = industrial_complex level = 1 instant_build = yes } } }
+				add_to_variable = { TFRKPHN_ex_n = 1 }
+				add_to_variable = { TFRKPHN_ex_gripe = 1 }
+				TFRKPHN_ex_refresh = yes
+				country_event = { id = tfrkphn.694 }
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_ex_d11 = {
+		icon = GFX_decision_generic_construction
+		cost = 30
+		days_remove = 60
+		fire_only_once = yes
+		visible = { has_country_flag = TFRKPHN_ex_wave2 }
+		available = {
+			custom_trigger_tooltip = { tooltip = TFRKPHN_ex_need11_tt check_variable = { TFRKPHN_mega_s1 > 4.5 } }
+			num_of_civilian_factories_available_for_projects > 0
+		}
+		modifier = { civilian_factory_use = 1 }
+		complete_effect = { custom_effect_tooltip = TFRKPHN_ex_wait_tt }
+		remove_effect = {
+			custom_effect_tooltip = TFRKPHN_ex_d11_tt
+			custom_effect_tooltip = TFRKPHN_ex_gripe_tt
+			hidden_effect = {
+				add_to_variable = { TFRKPHN_ex_bv = 0.03 } 1041 = { if = { limit = { is_owned_by = KOR } add_extra_state_shared_building_slots = 1 add_building_construction = { type = office_park level = 1 instant_build = yes } } }
+				add_to_variable = { TFRKPHN_ex_n = 1 }
+				add_to_variable = { TFRKPHN_ex_gripe = 1 }
+				TFRKPHN_ex_refresh = yes
+				country_event = { id = tfrkphn.6811 }
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_ex_d12 = {
+		icon = GFX_decision_generic_construction
+		cost = 30
+		days_remove = 60
+		fire_only_once = yes
+		visible = { has_country_flag = TFRKPHN_ex_wave2 }
+		available = {
+			custom_trigger_tooltip = { tooltip = TFRKPHN_ex_need12_tt check_variable = { TFRKPHN_mega_s2 > 4.5 } }
+			num_of_civilian_factories_available_for_projects > 0
+		}
+		modifier = { civilian_factory_use = 1 }
+		complete_effect = { custom_effect_tooltip = TFRKPHN_ex_wait_tt }
+		remove_effect = {
+			custom_effect_tooltip = TFRKPHN_ex_d12_tt
+			custom_effect_tooltip = TFRKPHN_ex_gripe_tt
+			hidden_effect = {
+				add_to_variable = { TFRKPHN_ex_rs = 0.01 } 525 = { if = { limit = { is_owned_by = KOR } add_extra_state_shared_building_slots = 2 add_building_construction = { type = industrial_complex level = 1 instant_build = yes } add_building_construction = { type = industrial_complex level = 1 instant_build = yes } } }
+				add_to_variable = { TFRKPHN_ex_n = 1 }
+				add_to_variable = { TFRKPHN_ex_gripe = 1 }
+				TFRKPHN_ex_refresh = yes
+				country_event = { id = tfrkphn.6812 }
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+}

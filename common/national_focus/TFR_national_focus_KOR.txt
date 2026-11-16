@@ -20370,8 +20370,9 @@ shared_focus = {
 				has_completed_focus = TFRKPHN_hong_b03_25
 			}
 			has_focus_tree = TFRKPHN_lee_in_je_tree	# [홍낙] 이인제 트리: 조건 없이 열린다 (army_keep_build.py)
+			has_focus_tree = TFRKPHN_oh_se_hoon_tree	# [홍낙] 오세훈 트리도 같다 (army_keep_oh.py)
 			AND = {	# 원본 조건
-				NOT = { has_focus_tree = TFRKPHN_hong_tree } NOT = { has_focus_tree = TFRKPHN_lee_in_je_tree }
+				NOT = { has_focus_tree = TFRKPHN_hong_tree } NOT = { has_focus_tree = TFRKPHN_lee_in_je_tree } NOT = { has_focus_tree = TFRKPHN_oh_se_hoon_tree }
 				OR = {
 					has_country_flag = KOR_yoon_taiwan_war_victory
 					AND = {
@@ -20399,7 +20400,7 @@ shared_focus = {
 	offset = {	# [홍낙] 이인제 트리에서는 오른쪽 바깥(44, 0)에 놓는다
 		x = 57
 		y = -2
-		trigger = { has_focus_tree = TFRKPHN_lee_in_je_tree }
+		trigger = { OR = { has_focus_tree = TFRKPHN_lee_in_je_tree has_focus_tree = TFRKPHN_oh_se_hoon_tree } }
 	}
 	available = {
 		if = {
@@ -20408,7 +20409,7 @@ shared_focus = {
 		}
 		if = {
 			limit = {
-				NOT = { has_focus_tree = TFRKPHN_hong_tree } NOT = { has_focus_tree = TFRKPHN_lee_in_je_tree }
+				NOT = { has_focus_tree = TFRKPHN_hong_tree } NOT = { has_focus_tree = TFRKPHN_lee_in_je_tree } NOT = { has_focus_tree = TFRKPHN_oh_se_hoon_tree }
 				KOR_is_yoon_path = yes
 			}
 			OR = {
@@ -20418,7 +20419,7 @@ shared_focus = {
 		}
 		if = {
 			limit = {
-				NOT = { has_focus_tree = TFRKPHN_hong_tree } NOT = { has_focus_tree = TFRKPHN_lee_in_je_tree }
+				NOT = { has_focus_tree = TFRKPHN_hong_tree } NOT = { has_focus_tree = TFRKPHN_lee_in_je_tree } NOT = { has_focus_tree = TFRKPHN_oh_se_hoon_tree }
 				KOR_is_lee_path = yes
 				has_country_flag = KOR_lee_taiwan_war_victory_supported
 			}
@@ -20426,7 +20427,7 @@ shared_focus = {
 		}
 		if = {
 			limit = {
-				NOT = { has_focus_tree = TFRKPHN_hong_tree } NOT = { has_focus_tree = TFRKPHN_lee_in_je_tree }
+				NOT = { has_focus_tree = TFRKPHN_hong_tree } NOT = { has_focus_tree = TFRKPHN_lee_in_je_tree } NOT = { has_focus_tree = TFRKPHN_oh_se_hoon_tree }
 				KOR_is_lee_path = yes
 				NOT = { has_country_flag = KOR_lee_taiwan_war_victory_supported }
 			}
@@ -20434,7 +20435,7 @@ shared_focus = {
 		}
 		if = {
 			limit = {
-				NOT = { has_focus_tree = TFRKPHN_hong_tree } NOT = { has_focus_tree = TFRKPHN_lee_in_je_tree }
+				NOT = { has_focus_tree = TFRKPHN_hong_tree } NOT = { has_focus_tree = TFRKPHN_lee_in_je_tree } NOT = { has_focus_tree = TFRKPHN_oh_se_hoon_tree }
 				KOR_is_PPPDKP_path = yes
 			}
 			custom_trigger_tooltip = {
@@ -21288,6 +21289,7 @@ shared_focus = {
 		OR = {
 			has_focus_tree = TFRKPHN_hong_tree
 			has_focus_tree = TFRKPHN_lee_in_je_tree
+			has_focus_tree = TFRKPHN_oh_se_hoon_tree	# [홍낙] 오세훈 트리도 같다 (army_keep_oh.py)
 			AND = {
 				OR = {
 					has_country_flag = KOR_yoon_taiwan_war_victory
@@ -21330,6 +21332,7 @@ shared_focus = {
 		OR = {
 			has_focus_tree = TFRKPHN_hong_tree
 			has_focus_tree = TFRKPHN_lee_in_je_tree
+			has_focus_tree = TFRKPHN_oh_se_hoon_tree	# [홍낙] 오세훈 트리도 같다 (army_keep_oh.py)
 			AND = {
 				OR = {
 					has_country_flag = KOR_yoon_taiwan_war_victory
@@ -21373,6 +21376,7 @@ shared_focus = {
 		OR = {
 			has_focus_tree = TFRKPHN_hong_tree
 			has_focus_tree = TFRKPHN_lee_in_je_tree
+			has_focus_tree = TFRKPHN_oh_se_hoon_tree	# [홍낙] 오세훈 트리도 같다 (army_keep_oh.py)
 			AND = {
 				OR = {
 					has_country_flag = KOR_yoon_taiwan_war_victory
@@ -21559,7 +21563,7 @@ shared_focus = {
 		y = -9
 	}
 	offset = {	# 이인제 트리: 오른쪽 끝 (42, 0)
-		trigger = { has_focus_tree = TFRKPHN_lee_in_je_tree }
+		trigger = { OR = { has_focus_tree = TFRKPHN_lee_in_je_tree has_focus_tree = TFRKPHN_oh_se_hoon_tree } }
 		x = 31
 		y = -9
 	}

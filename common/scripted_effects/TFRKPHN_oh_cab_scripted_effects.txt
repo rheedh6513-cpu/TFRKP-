@@ -3,6 +3,11 @@ TFRKPHN_oh_first_staff = {
 	custom_effect_tooltip = TFRKPHN_oh_first_staff_tt
 	add_ideas = TFRKPHN_koh_dong_jin_EM
 	add_ideas = TFRKPHN_lim_jong_deuk_TM	# 국방부 장관 유임
+	# 외교, 행정안전, 국정원도 홍준표 정부 사람을 그대로 둔다 (2026-11-16, 사용자 지시: 7은 그대로)
+	add_ideas = TFRKPHN_kim_dae_sik_FM
+	add_ideas = TFRKPHN_hong_il_pyo_IM
+	add_ideas = TFRKPHN_yoon_jae_ok_IntelM
+	custom_effect_tooltip = TFRKPHN_oh_keep3_tt
 	add_political_power = 120
 	hidden_effect = {
 		set_country_flag = TFRKPHN_oh_chief_kang

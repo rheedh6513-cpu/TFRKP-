@@ -3345,24 +3345,17 @@ country_event = { # 20대 후보 선택 (TFRKP Hong Nak: 선택한 후보에 맞
 	}
 }
 
-country_event = { # 상대 후보의 선거운동 (이재명)
+country_event = {
 	id = korea.116
-	title = korea.116.t
-	desc = korea.116.desc
-	picture = GFX_report_event_working_jm
+	hidden = yes
 	is_triggered_only = yes
 
-	immediate = {
-		hidden_effect = {
-			set_temp_variable = { KOR_president_election_lee_support_temp = 0.03 }
-			KOR_president_election_lee_support_change_effect = yes
+	immediate = {	# 그림 갈림 (elec22_build.py)
+		if = {
+			limit = { has_country_flag = TFRKP_HN_DPK_lee_nakyeon }
+			country_event = { id = tfrkphn.1008 }
 		}
-	}
-
-	option = {
-		name = korea.116.a
-		set_temp_variable = { KOR_president_election_lee_support_temp = 0.03 }
-		KOR_president_election_lee_support_change_effect = yes
+		else = { country_event = { id = tfrkphn.1007 } }
 	}
 }
 
@@ -3432,61 +3425,45 @@ country_event = { # 광장시장에서, 총선 승리 이전
 	}
 }
 
-country_event = { # 도시락 회동(이준석, 새로운 피)
+country_event = {
 	id = korea.122
-	title = korea.122.t
-	desc = korea.122.desc
-	picture = GFX_report_event_yoon_joon
+	hidden = yes
 	is_triggered_only = yes
 
-	option = {
-		name = korea.122.a
+	immediate = {	# 그림 갈림 (elec22_build.py)
+		if = {
+			limit = { has_country_flag = TFRKP_HN_PPP_hong }
+			country_event = { id = tfrkphn.1002 }
+		}
+		else = { country_event = { id = tfrkphn.1001 } }
 	}
 }
 
-country_event = { # 부득이(윤석열 지지율 감소)
+country_event = {
 	id = korea.123
-	title = korea.123.t
-	desc = korea.123.desc
-	picture = GFX_report_event_yoon_suncheon
+	hidden = yes
 	is_triggered_only = yes
 
-	immediate = {
-		hidden_effect = {
-			set_temp_variable = { KOR_president_election_lee_support_temp = 0.06 }
-			KOR_president_election_lee_support_change_effect = yes
+	immediate = {	# 그림 갈림 (elec22_build.py)
+		if = {
+			limit = { has_country_flag = TFRKP_HN_PPP_hong }
+			country_event = { id = tfrkphn.1004 }
 		}
-	}
-
-	option = {
-		name = korea.123.a
-		effect_tooltip = {
-			set_temp_variable = { KOR_president_election_lee_support_temp = 0.06 }
-			KOR_president_election_lee_support_change_effect = yes
-		}
+		else = { country_event = { id = tfrkphn.1003 } }
 	}
 }
 
-country_event = { # 선제타격(윤석열 지지율 감소)
+country_event = {
 	id = korea.124
-	title = korea.124.t
-	desc = korea.124.desc
-	picture = GFX_report_event_yoon_sim_mistake
+	hidden = yes
 	is_triggered_only = yes
 
-	immediate = {
-		hidden_effect = {
-			set_temp_variable = { KOR_president_election_lee_support_temp = 0.05 }
-			KOR_president_election_lee_support_change_effect = yes
+	immediate = {	# 그림 갈림 (elec22_build.py)
+		if = {
+			limit = { has_country_flag = TFRKP_HN_PPP_hong }
+			country_event = { id = tfrkphn.1006 }
 		}
-	}
-
-	option = {
-		name = korea.124.a
-		effect_tooltip = {
-			set_temp_variable = { KOR_president_election_lee_support_temp = 0.05 }
-			KOR_president_election_lee_support_change_effect = yes
-		}
+		else = { country_event = { id = tfrkphn.1005 } }
 	}
 }
 
@@ -7303,175 +7280,147 @@ country_event = { #감사
 	}
 }
 
-country_event = { #노동자
+country_event = {
 	id = korea.281
-	title = korea.281.t
-	desc = korea.281.d
-	picture = GFX_report_event_281
-
-	fire_only_once = yes
+	hidden = yes
 	is_triggered_only = yes
+	fire_only_once = yes
 	trigger = {
 		NOT = { has_country_flag = TFRKPHN_seen_korea_281 }
 	}
-	immediate = {
-		hidden_effect = { set_country_flag = TFRKPHN_seen_korea_281 }
-	}
 
-	option = {
-		name = korea.281.a
-	}
-}
-
-country_event = { # 상대 후보의 선거운동 (윤석열)
-	id = korea.282
-	title = korea.282.t
-	desc = korea.282.d
-	picture = GFX_report_event_282
-	is_triggered_only = yes
-
-	immediate = {
-		hidden_effect = {
-			set_temp_variable = { KOR_president_election_yoon_support_temp = 0.03 }
-			KOR_president_election_yoon_support_change_effect = yes
+	immediate = {	# 그림 갈림 (elec22_build.py)
+		if = {
+			limit = { has_country_flag = TFRKP_HN_DPK_lee_nakyeon }
+			country_event = { id = tfrkphn.1010 }
 		}
-	}
-
-	option = {
-		name = korea.282.a
-		set_temp_variable = { KOR_president_election_yoon_support_temp = 0.03 }
-		KOR_president_election_yoon_support_change_effect = yes
+		else = { country_event = { id = tfrkphn.1009 } }
 	}
 }
 
-country_event = { # 이동호 상습 도박 및 성매매 의혹
+country_event = {
+	id = korea.282
+	hidden = yes
+	is_triggered_only = yes
+
+	immediate = {	# 그림 갈림 (elec22_build.py)
+		if = {
+			limit = { has_country_flag = TFRKP_HN_DPK_lee_nakyeon }
+			country_event = { id = tfrkphn.1012 }
+		}
+		else = { country_event = { id = tfrkphn.1011 } }
+	}
+}
+
+country_event = {
 	id = korea.283
-	title = korea.283.t
-	desc = korea.283.d
-	picture = GFX_report_event_283
+	hidden = yes
 	is_triggered_only = yes
 
-	immediate = {
-	}
-
-	option = {
-		name = korea.283.a
-		set_temp_variable = { KOR_president_election_yoon_support_temp = 0.02 }
-		KOR_president_election_yoon_support_change_effect = yes
+	immediate = {	# 그림 갈림 (elec22_build.py)
+		if = {
+			limit = { has_country_flag = TFRKP_HN_DPK_lee_nakyeon }
+			country_event = { id = tfrkphn.1014 }
+		}
+		else = { country_event = { id = tfrkphn.1013 } }
 	}
 }
 
-country_event = { # 일부 정책 유화
+country_event = {
 	id = korea.284
-	title = korea.284.t
-	desc = korea.284.d
-	picture = GFX_report_event_284
+	hidden = yes
 	is_triggered_only = yes
 
-	immediate = {
-	}
-
-	option = {
-		name = korea.284.a
-		set_temp_variable = { KOR_president_election_lee_support_temp = 0.02 }
-		KOR_president_election_lee_support_change_effect = yes
+	immediate = {	# 그림 갈림 (elec22_build.py)
+		if = {
+			limit = { has_country_flag = TFRKP_HN_DPK_lee_nakyeon }
+			country_event = { id = tfrkphn.1016 }
+		}
+		else = { country_event = { id = tfrkphn.1015 } }
 	}
 }
 
-country_event = { # 좌파와 연정 이벤트
+country_event = {
 	id = korea.285
-	title = korea.285.t
-	desc = korea.285.d
-	picture = GFX_report_event_285
+	hidden = yes
 	is_triggered_only = yes
 
-	immediate = {
-	}
-
-	option = {
-		name = korea.285.a
+	immediate = {	# 그림 갈림 (elec22_build.py)
+		if = {
+			limit = { has_country_flag = TFRKP_HN_DPK_lee_nakyeon }
+			country_event = { id = tfrkphn.1018 }
+		}
+		else = { country_event = { id = tfrkphn.1017 } }
 	}
 }
 
-country_event = { # 유능한 경제대통령
+country_event = {
 	id = korea.286
-	title = korea.286.t
-	desc = korea.286.d
-	picture = GFX_report_event_286
+	hidden = yes
 	is_triggered_only = yes
 
-	immediate = {
-	}
-
-	option = {
-		name = korea.286.a
+	immediate = {	# 그림 갈림 (elec22_build.py)
+		if = {
+			limit = { has_country_flag = TFRKP_HN_DPK_lee_nakyeon }
+			country_event = { id = tfrkphn.1020 }
+		}
+		else = { country_event = { id = tfrkphn.1019 } }
 	}
 }
 
-country_event = { # 촛불 정신의 진보
+country_event = {
 	id = korea.287
-	title = korea.287.t
-	desc = korea.287.d
-	picture = GFX_report_event_287
+	hidden = yes
 	is_triggered_only = yes
 
-	immediate = {
-	}
-
-	option = {
-		add_stability = 0.05
-		name = korea.287.a
+	immediate = {	# 그림 갈림 (elec22_build.py)
+		if = {
+			limit = { has_country_flag = TFRKP_HN_DPK_lee_nakyeon }
+			country_event = { id = tfrkphn.1022 }
+		}
+		else = { country_event = { id = tfrkphn.1021 } }
 	}
 }
 
-country_event = { # 존경하는 박근혜 전 대통령
+country_event = {
 	id = korea.288
-	title = korea.288.t
-	desc = korea.288.d
-	picture = GFX_report_event_288
+	hidden = yes
 	is_triggered_only = yes
 
-	immediate = {
-	}
-
-	option = {
-		name = korea.288.a
-		set_temp_variable = { KOR_president_election_yoon_support_temp = 0.02 }
-		KOR_president_election_yoon_support_change_effect = yes
+	immediate = {	# 그림 갈림 (elec22_build.py)
+		if = {
+			limit = { has_country_flag = TFRKP_HN_DPK_lee_nakyeon }
+			country_event = { id = tfrkphn.1024 }
+		}
+		else = { country_event = { id = tfrkphn.1023 } }
 	}
 }
 
-country_event = { # 김포 20평대 2,3억 아파트
+country_event = {
 	id = korea.289
-	title = korea.289.t
-	desc = korea.289.d
-	picture = GFX_report_event_289
+	hidden = yes
 	is_triggered_only = yes
 
-	immediate = {
-	}
-
-	option = {
-		name = korea.289.a
-		set_temp_variable = { KOR_president_election_yoon_support_temp = 0.04 }
-		KOR_president_election_yoon_support_change_effect = yes
+	immediate = {	# 그림 갈림 (elec22_build.py)
+		if = {
+			limit = { has_country_flag = TFRKP_HN_DPK_lee_nakyeon }
+			country_event = { id = tfrkphn.1026 }
+		}
+		else = { country_event = { id = tfrkphn.1025 } }
 	}
 }
 
-country_event = { # 토론회 병크 (원전증설)
+country_event = {
 	id = korea.290
-	title = korea.290.t
-	desc = korea.290.d
-	picture = GFX_report_event_290
+	hidden = yes
 	is_triggered_only = yes
 
-	immediate = {
-	}
-
-	option = {
-		name = korea.290.a
-		set_temp_variable = { KOR_president_election_yoon_support_temp = 0.04 }
-		KOR_president_election_yoon_support_change_effect = yes
+	immediate = {	# 그림 갈림 (elec22_build.py)
+		if = {
+			limit = { has_country_flag = TFRKP_HN_DPK_lee_nakyeon }
+			country_event = { id = tfrkphn.1028 }
+		}
+		else = { country_event = { id = tfrkphn.1027 } }
 	}
 }
 

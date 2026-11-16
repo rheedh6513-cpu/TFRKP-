@@ -42,6 +42,31 @@ guiTypes = {
 			iconType = { name = "TFRKPHN_sd_23" position = { x = 256 y = 289 } spriteType = "GFX_TFRKPHN_sd_23" alwaystransparent = yes }
 			iconType = { name = "TFRKPHN_sd_24" position = { x = 133 y = 342 } spriteType = "GFX_TFRKPHN_sd_24" alwaystransparent = yes }
 			iconType = { name = "TFRKPHN_sd_25" position = { x = 165 y = 331 } spriteType = "GFX_TFRKPHN_sd_25" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_sd_mk1" position = { x = 310 y = 64 } spriteType = "GFX_TFRKPHN_sd_mark" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_sd_mk2" position = { x = 285 y = 102 } spriteType = "GFX_TFRKPHN_sd_mark" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_sd_mk3" position = { x = 359 y = 89 } spriteType = "GFX_TFRKPHN_sd_mark" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_sd_mk4" position = { x = 191 y = 135 } spriteType = "GFX_TFRKPHN_sd_mark" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_sd_mk5" position = { x = 293 y = 156 } spriteType = "GFX_TFRKPHN_sd_mark" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_sd_mk6" position = { x = 379 y = 167 } spriteType = "GFX_TFRKPHN_sd_mark" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_sd_mk7" position = { x = 204 y = 196 } spriteType = "GFX_TFRKPHN_sd_mark" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_sd_mk8" position = { x = 247 y = 171 } spriteType = "GFX_TFRKPHN_sd_mark" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_sd_mk9" position = { x = 336 y = 192 } spriteType = "GFX_TFRKPHN_sd_mark" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_sd_mk10" position = { x = 71 y = 220 } spriteType = "GFX_TFRKPHN_sd_mark" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_sd_mk11" position = { x = 174 y = 221 } spriteType = "GFX_TFRKPHN_sd_mark" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_sd_mk12" position = { x = 270 y = 221 } spriteType = "GFX_TFRKPHN_sd_mark" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_sd_mk13" position = { x = 320 y = 232 } spriteType = "GFX_TFRKPHN_sd_mark" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_sd_mk14" position = { x = 371 y = 237 } spriteType = "GFX_TFRKPHN_sd_mark" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_sd_mk15" position = { x = 442 y = 235 } spriteType = "GFX_TFRKPHN_sd_mark" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_sd_mk16" position = { x = 252 y = 257 } spriteType = "GFX_TFRKPHN_sd_mark" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_sd_mk17" position = { x = 110 y = 272 } spriteType = "GFX_TFRKPHN_sd_mark" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_sd_mk18" position = { x = 168 y = 280 } spriteType = "GFX_TFRKPHN_sd_mark" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_sd_mk19" position = { x = 408 y = 302 } spriteType = "GFX_TFRKPHN_sd_mark" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_sd_mk20" position = { x = 220 y = 307 } spriteType = "GFX_TFRKPHN_sd_mark" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_sd_mk21" position = { x = 109 y = 314 } spriteType = "GFX_TFRKPHN_sd_mark" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_sd_mk22" position = { x = 346 y = 313 } spriteType = "GFX_TFRKPHN_sd_mark" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_sd_mk23" position = { x = 310 y = 347 } spriteType = "GFX_TFRKPHN_sd_mark" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_sd_mk24" position = { x = 161 y = 363 } spriteType = "GFX_TFRKPHN_sd_mark" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_sd_mk25" position = { x = 212 y = 353 } spriteType = "GFX_TFRKPHN_sd_mark" alwaystransparent = yes }
 			iconType = { name = "TFRKPHN_sd_hit1" position = { x = 298 y = 73 } spriteType = "GFX_TFRKPHN_sd_hit" pdx_tooltip = "TFRKPHN_sd_tt1" }
 			iconType = { name = "TFRKPHN_sd_hit2" position = { x = 273 y = 111 } spriteType = "GFX_TFRKPHN_sd_hit" pdx_tooltip = "TFRKPHN_sd_tt2" }
 			iconType = { name = "TFRKPHN_sd_hit3" position = { x = 347 y = 98 } spriteType = "GFX_TFRKPHN_sd_hit" pdx_tooltip = "TFRKPHN_sd_tt3" }

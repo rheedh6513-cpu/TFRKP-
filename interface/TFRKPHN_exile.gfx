@@ -1,0 +1,19 @@
+spriteTypes = {
+	spriteType = { name = "GFX_TFRKPHN_exile_p695" texturefile = "gfx/event_pictures/TFRKPHN_exile_p695.png" }
+	spriteType = { name = "GFX_TFRKPHN_exile_p696" texturefile = "gfx/event_pictures/TFRKPHN_exile_p696.png" }
+	spriteType = { name = "GFX_TFRKPHN_exile_c1" texturefile = "gfx/event_pictures/TFRKPHN_exile_c1.png" }
+	spriteType = { name = "GFX_TFRKPHN_exile_c2" texturefile = "gfx/event_pictures/TFRKPHN_exile_c2.png" }
+	spriteType = { name = "GFX_TFRKPHN_exile_c3" texturefile = "gfx/event_pictures/TFRKPHN_exile_c3.png" }
+	spriteType = { name = "GFX_TFRKPHN_exile_c4" texturefile = "gfx/event_pictures/TFRKPHN_exile_c4.png" }
+	spriteType = { name = "GFX_TFRKPHN_exile_c5" texturefile = "gfx/event_pictures/TFRKPHN_exile_c5.png" }
+	spriteType = { name = "GFX_TFRKPHN_exile_c6" texturefile = "gfx/event_pictures/TFRKPHN_exile_c6.png" }
+	spriteType = { name = "GFX_TFRKPHN_exile_c7" texturefile = "gfx/event_pictures/TFRKPHN_exile_c7.png" }
+	spriteType = { name = "GFX_TFRKPHN_exile_c8" texturefile = "gfx/event_pictures/TFRKPHN_exile_c8.png" }
+	spriteType = { name = "GFX_TFRKPHN_exile_c9" texturefile = "gfx/event_pictures/TFRKPHN_exile_c9.png" }
+	spriteType = { name = "GFX_TFRKPHN_exile_c10" texturefile = "gfx/event_pictures/TFRKPHN_exile_c10.png" }
+	spriteType = { name = "GFX_TFRKPHN_exile_c11" texturefile = "gfx/event_pictures/TFRKPHN_exile_c11.png" }
+	spriteType = { name = "GFX_TFRKPHN_exile_c12" texturefile = "gfx/event_pictures/TFRKPHN_exile_c12.png" }
+	spriteType = { name = "GFX_TFRKPHN_exile_e687" texturefile = "gfx/event_pictures/TFRKPHN_exile_e687.png" }
+	spriteType = { name = "GFX_TFRKPHN_exile_e698" texturefile = "gfx/event_pictures/TFRKPHN_exile_e698.png" }
+	spriteType = { name = "GFX_TFRKPHN_exile_e688" texturefile = "gfx/event_pictures/TFRKPHN_exile_e688.png" }
+}

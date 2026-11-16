@@ -1,5 +1,6 @@
 ﻿l_korean:
  # 오세훈 중점의 효과 설명. oh_tree_build.py가 만든다.
+ TFRKPHN_oh_m4_need_tt:0 "망명 기업을 §Y5곳§! 이상 유치함 (지금 §Y[?TFRKPHN_ex_n|0]§!곳)"
  TFRKPHN_oh_fx_a2_tt:0 "서울 강북권 14개 구의 여당 지지도 §G+2§!\n서울 서남권 7개 구의 여당 지지도 §G+2§!"
  TFRKPHN_oh_fx_a2b_tt:0 "서울 동남권 4개 구의 여당 지지도 §G+3§!"
  TFRKPHN_oh_fx_b1_tt:0 "서울의 건물 칸 §G+2§!"
@@ -33,3 +34,7 @@
  TFRKPHN_oh_fx_e5_tt:0 "정치력 §G+50§!"
  TFRKPHN_oh_fx_e6_tt:0 "서울 강북권 14개 구의 여당 지지도 §G+2§!"
  TFRKPHN_oh_fx_h4_tt:0 "정치력 §G+50§!"
+ TFRKPHN_oh_fx_m1_tt:0 "결정 탭 §Y망명 기업 유치§!가 열립니다."
+ TFRKPHN_oh_fx_m2_tt:0 "서울에 §Y업무 지구§! §G1개§!와 건물 칸\n§Y망명 기업§! 변동치: 연구 속도 §G+1§!"
+ TFRKPHN_oh_fx_m3_tt:0 "국내 기업의 불만 §G-2§!"
+ TFRKPHN_oh_fx_m4_tt:0 "§Y망명 기업§! 변동치: 연구 속도 §G+2§!, 기업 가치 §G+2§!"

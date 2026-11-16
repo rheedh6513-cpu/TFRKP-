@@ -1,0 +1,19 @@
+# [안내] 신남방정책 탭. TFR 본체의 일본 탭(아시아 냉전 지도)과 같은 영향력 수치를 쓴다. nsp_build.py가 만든다.
+# 열리는 때: 홍준표 중점 「EADI 대응」을 끝냈거나(깃발 KOR_foreign_office_active) 오세훈 정부일 때, 그리고 일본이 우리와 같은 진영에서 아시아 냉전을 벌이고 있을 때.
+TFRKPHN_nsp_category = {
+	icon = GFX_decision_icon_KOR_foreign_office_korea_icon
+	priority = 199
+	scripted_gui = TFR_asian_cold_war_gui
+	visible_when_empty = yes
+	allowed = { original_tag = KOR }
+	visible = {
+		OR = {
+			has_country_flag = TFRKPHN_successor_oh_se_hoon
+			AND = { has_country_flag = TFRKP_HN_hong_president has_country_flag = KOR_foreign_office_active }
+		}
+		JAP = { exists = yes is_in_faction_with = KOR has_country_flag = JAP_cold_war_flag }
+		NOT = { has_global_flag = pan_asian_war_ongoing }
+		NOT = { has_global_flag = PRC_chinese_gaw_victory_global }
+		NOT = { has_global_flag = PRC_japanese_gaw_victory_global }
+	}
+}

@@ -1,0 +1,54 @@
+# [안내] 오세훈 정부 「PDTO 협력」 패널의 동작. pdto_build.py가 만든다.
+scripted_gui = {
+	TFRKPHN_pdto_gui = {
+		context_type = decision_category
+		window_name = TFRKPHN_pdto_container
+		triggers = {
+			TFRKPHN_pd_m1_visible = { JAP = { exists = yes is_in_faction_with = KOR } }
+			TFRKPHN_pd_g1_visible = { has_country_flag = TFRKPHN_pd_done_1_1 has_country_flag = TFRKPHN_pd_done_1_2 }
+			TFRKPHN_pd_m2_visible = { CHI = { exists = yes is_in_faction_with = KOR } }
+			TFRKPHN_pd_g2_visible = { has_country_flag = TFRKPHN_pd_done_2_1 has_country_flag = TFRKPHN_pd_done_2_2 }
+			TFRKPHN_pd_m3_visible = { RAJ = { exists = yes is_in_faction_with = KOR } }
+			TFRKPHN_pd_g3_visible = { has_country_flag = TFRKPHN_pd_done_3_1 }
+			TFRKPHN_pd_m4_visible = { VIN = { exists = yes is_in_faction_with = KOR } }
+			TFRKPHN_pd_g4_visible = { has_country_flag = TFRKPHN_pd_done_4_1 }
+			TFRKPHN_pd_m5_visible = { PHI = { exists = yes is_in_faction_with = KOR } }
+			TFRKPHN_pd_g5_visible = { has_country_flag = TFRKPHN_pd_done_5_1 }
+			TFRKPHN_pd_m6_visible = { AST = { exists = yes is_in_faction_with = KOR } }
+			TFRKPHN_pd_g6_visible = { has_country_flag = TFRKPHN_pd_done_6_1 }
+			TFRKPHN_pd_m7_visible = { INS = { exists = yes is_in_faction_with = KOR } }
+			TFRKPHN_pd_g7_visible = { has_country_flag = TFRKPHN_pd_done_7_1 }
+			TFRKPHN_pd_m8_visible = { SIA = { exists = yes is_in_faction_with = KOR } }
+			TFRKPHN_pd_g8_visible = { has_country_flag = TFRKPHN_pd_done_8_1 }
+			TFRKPHN_pd_r_PRC_visible = { PRC = { exists = yes OR = { tag = PRC is_in_faction_with = PRC } } }
+			TFRKPHN_pd_r_PRK_visible = { PRK = { exists = yes OR = { tag = PRC is_in_faction_with = PRC } } }
+			TFRKPHN_pd_r_PAK_visible = { PAK = { exists = yes OR = { tag = PRC is_in_faction_with = PRC } } }
+			TFRKPHN_pd_r_NEP_visible = { NEP = { exists = yes OR = { tag = PRC is_in_faction_with = PRC } } }
+			TFRKPHN_pd_r_BAN_visible = { BAN = { exists = yes OR = { tag = PRC is_in_faction_with = PRC } } }
+			TFRKPHN_pd_r_SRL_visible = { SRL = { exists = yes OR = { tag = PRC is_in_faction_with = PRC } } }
+			TFRKPHN_pd_r_LAO_visible = { LAO = { exists = yes OR = { tag = PRC is_in_faction_with = PRC } } }
+			TFRKPHN_pd_r_CAM_visible = { CAM = { exists = yes OR = { tag = PRC is_in_faction_with = PRC } } }
+			TFRKPHN_pd_r_BRM_visible = { BRM = { exists = yes OR = { tag = PRC is_in_faction_with = PRC } } }
+			TFRKPHN_pd_r_MAL_visible = { MAL = { exists = yes OR = { tag = PRC is_in_faction_with = PRC } } }
+			TFRKPHN_pd_r_BHU_visible = { BHU = { exists = yes OR = { tag = PRC is_in_faction_with = PRC } } }
+			TFRKPHN_pd_r_JAP_visible = { JAP = { exists = yes OR = { tag = PRC is_in_faction_with = PRC } } }
+			TFRKPHN_pd_r_CHI_visible = { CHI = { exists = yes OR = { tag = PRC is_in_faction_with = PRC } } }
+			TFRKPHN_pd_r_RAJ_visible = { RAJ = { exists = yes OR = { tag = PRC is_in_faction_with = PRC } } }
+			TFRKPHN_pd_r_VIN_visible = { VIN = { exists = yes OR = { tag = PRC is_in_faction_with = PRC } } }
+			TFRKPHN_pd_r_PHI_visible = { PHI = { exists = yes OR = { tag = PRC is_in_faction_with = PRC } } }
+			TFRKPHN_pd_r_AST_visible = { AST = { exists = yes OR = { tag = PRC is_in_faction_with = PRC } } }
+			TFRKPHN_pd_r_INS_visible = { INS = { exists = yes OR = { tag = PRC is_in_faction_with = PRC } } }
+			TFRKPHN_pd_r_SIA_visible = { SIA = { exists = yes OR = { tag = PRC is_in_faction_with = PRC } } }
+		}
+		effects = {
+			TFRKPHN_pd_b1_click = { set_variable = { TFRKPHN_pd_sel = 1 } }
+			TFRKPHN_pd_b2_click = { set_variable = { TFRKPHN_pd_sel = 2 } }
+			TFRKPHN_pd_b3_click = { set_variable = { TFRKPHN_pd_sel = 3 } }
+			TFRKPHN_pd_b4_click = { set_variable = { TFRKPHN_pd_sel = 4 } }
+			TFRKPHN_pd_b5_click = { set_variable = { TFRKPHN_pd_sel = 5 } }
+			TFRKPHN_pd_b6_click = { set_variable = { TFRKPHN_pd_sel = 6 } }
+			TFRKPHN_pd_b7_click = { set_variable = { TFRKPHN_pd_sel = 7 } }
+			TFRKPHN_pd_b8_click = { set_variable = { TFRKPHN_pd_sel = 8 } }
+		}
+	}
+}

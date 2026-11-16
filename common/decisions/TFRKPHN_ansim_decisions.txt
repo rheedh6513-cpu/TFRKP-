@@ -1,0 +1,83 @@
+# [안내] 오세훈 정부: 안심소득 결정. 한 단계씩 차례로 열린다. ansim_build.py가 만든다.
+TFRKPHN_oh_ansim_category = {
+	TFRKPHN_an_d1 = {
+		icon = GFX_decision_generic_welfare
+		cost = 40
+		days_remove = 60
+		fire_only_once = yes
+		visible = { check_variable = { TFRKPHN_an_stage = 0 } }
+		available = { always = yes }
+		complete_effect = { custom_effect_tooltip = TFRKPHN_an_wait1_tt }
+		remove_effect = {
+			custom_effect_tooltip = TFRKPHN_an_d1_tt
+			hidden_effect = {
+				set_variable = { TFRKPHN_an_stage = 1 }
+				add_to_variable = { TFRKPHN_an_pov = 0.001 } add_to_variable = { TFRKPHN_an_cg = 0.005 } set_variable = { TFRKPHN_sd_delta = 1 } TFRKPHN_sd_add_north = yes TFRKPHN_sd_refresh = yes
+				if = { limit = { NOT = { has_dynamic_modifier = { modifier = TFRKPHN_ansim } } } add_dynamic_modifier = { modifier = TFRKPHN_ansim } }
+				force_update_dynamic_modifier = yes
+				country_event = { id = tfrkphn.6621 }
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_an_d2 = {
+		icon = GFX_decision_generic_welfare
+		cost = 60
+		days_remove = 75
+		fire_only_once = yes
+		visible = { check_variable = { TFRKPHN_an_stage = 1 } }
+		available = { always = yes }
+		complete_effect = { custom_effect_tooltip = TFRKPHN_an_wait2_tt }
+		remove_effect = {
+			custom_effect_tooltip = TFRKPHN_an_d2_tt
+			hidden_effect = {
+				set_variable = { TFRKPHN_an_stage = 2 }
+				add_to_variable = { TFRKPHN_an_pov = 0.002 } add_to_variable = { TFRKPHN_an_cg = 0.01 } set_variable = { TFRKPHN_sd_delta = 1 } TFRKPHN_sd_add_north = yes set_variable = { TFRKPHN_sd_delta = 1 } TFRKPHN_sd_add_sw = yes TFRKPHN_sd_refresh = yes add_to_variable = { TFRKPHN_bk = 2 }
+				if = { limit = { NOT = { has_dynamic_modifier = { modifier = TFRKPHN_ansim } } } add_dynamic_modifier = { modifier = TFRKPHN_ansim } }
+				force_update_dynamic_modifier = yes
+				country_event = { id = tfrkphn.6622 }
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_an_d3 = {
+		icon = GFX_decision_generic_welfare
+		cost = 80
+		days_remove = 90
+		fire_only_once = yes
+		visible = { check_variable = { TFRKPHN_an_stage = 2 } }
+		available = { custom_trigger_tooltip = { tooltip = TFRKPHN_an_c5_tt has_completed_focus = TFRKPHN_oh_se_hoon_c5 } }
+		complete_effect = { custom_effect_tooltip = TFRKPHN_an_wait3_tt }
+		remove_effect = {
+			custom_effect_tooltip = TFRKPHN_an_d3_tt
+			hidden_effect = {
+				set_variable = { TFRKPHN_an_stage = 3 }
+				add_to_variable = { TFRKPHN_an_pov = 0.003 } add_to_variable = { TFRKPHN_an_cg = 0.02 } add_to_variable = { TFRKPHN_an_st = 0.03 } add_to_variable = { TFRKPHN_sd_gap = -1 } clamp_variable = { var = TFRKPHN_sd_gap min = 0 max = 10 } TFRKPHN_sd_refresh = yes add_to_variable = { TFRKPHN_bk = 3 }
+				if = { limit = { NOT = { has_dynamic_modifier = { modifier = TFRKPHN_ansim } } } add_dynamic_modifier = { modifier = TFRKPHN_ansim } }
+				force_update_dynamic_modifier = yes
+				country_event = { id = tfrkphn.6623 }
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_an_d4 = {
+		icon = GFX_decision_generic_welfare
+		cost = 50
+		days_remove = 60
+		fire_only_once = yes
+		visible = { check_variable = { TFRKPHN_an_stage = 3 } }
+		available = { always = yes }
+		complete_effect = { custom_effect_tooltip = TFRKPHN_an_wait4_tt }
+		remove_effect = {
+			custom_effect_tooltip = TFRKPHN_an_d4_tt
+			hidden_effect = {
+				set_variable = { TFRKPHN_an_stage = 4 }
+				add_to_variable = { TFRKPHN_an_cg = -0.015 } add_to_variable = { TFRKPHN_an_pv = 0.01 }
+				if = { limit = { NOT = { has_dynamic_modifier = { modifier = TFRKPHN_ansim } } } add_dynamic_modifier = { modifier = TFRKPHN_ansim } }
+				force_update_dynamic_modifier = yes
+				country_event = { id = tfrkphn.6624 }
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+}

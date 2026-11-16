@@ -1,30 +1,213 @@
-# [안내] 원본 PDTO 협력 이니셔티브 탭(KOR_pdto_cooperation_initiative_category)에 추가하는 결정.
-# [안내] 수정 방법: 모드 폴더의 TUTORIAL_KO.md 7~9장 참고. 새 이름에는 TFRKPHN_ 접두어를 붙이세요.
-KOR_pdto_cooperation_initiative_category = {
-	# 캄보디아 특공대 파견: 1회, PDTO 코인 1 + 정치력 50, 30일 뒤 PDTO 결속도 +10
-	TFRKPHN_pdto_cambodia_commando = {
-		icon = GFX_decision_generic_political_actions
-		cost = 25
-		days_remove = 30
+# [안내] 오세훈 정부: PDTO 협력 결정. 지도에서 고른 나라의 것만 보인다. pdto_build.py가 만든다.
+TFRKPHN_oh_pdto_category = {
+	TFRKPHN_pd_d1_1 = {
+		icon = GFX_decision_generic_construction
+		cost = 40
+		days_remove = 45
 		fire_only_once = yes
-		visible = { country_exists = CAM }
-		available = {
-			check_variable = { KOR_pdto_coin_var > 0 }
-			has_manpower > 999
-		}
-		complete_effect = {
-			subtract_from_variable = { KOR_pdto_coin_var = 1 }
-			custom_effect_tooltip = TFRKPHN_pdto_cambodia_cost_tt
-			add_manpower = -1000
-			custom_effect_tooltip = TFRKPHN_mnd_after_30_tt
-		}
+		visible = { check_variable = { TFRKPHN_pd_sel = 1 } }
+		available = { custom_trigger_tooltip = { tooltip = TFRKPHN_pd_need_tt JAP = { exists = yes is_in_faction_with = KOR } } }
+		complete_effect = { custom_effect_tooltip = TFRKPHN_pd_wait_tt }
 		remove_effect = {
-			add_to_variable = { KOR_pdto_cohesion_var = 10 }
-			custom_effect_tooltip = TFRKPHN_pdto_cambodia_cohesion_tt
-			army_experience = 15
-			add_manpower = 900
-			CAM = { add_opinion_modifier = { target = KOR modifier = TFRKPHN_postwar_friend } }
+			custom_effect_tooltip = TFRKPHN_pd_d1_1_tt
+			set_country_flag = TFRKPHN_pd_done_1_1
+			hidden_effect = {
+				add_to_variable = { TFRKPHN_pd_rs = 0.02 }
+				if = { limit = { NOT = { has_dynamic_modifier = { modifier = TFRKPHN_pdto_coop } } } add_dynamic_modifier = { modifier = TFRKPHN_pdto_coop } }
+				force_update_dynamic_modifier = yes
+				JAP = { add_opinion_modifier = { target = KOR modifier = TFRKPHN_pd_partner } }
+				country_event = { id = tfrkphn.6631 }
+			}
 		}
-		ai_will_do = { factor = 1 }
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_pd_d1_2 = {
+		icon = GFX_decision_generic_construction
+		cost = 40
+		days_remove = 45
+		fire_only_once = yes
+		visible = { check_variable = { TFRKPHN_pd_sel = 1 } }
+		available = { custom_trigger_tooltip = { tooltip = TFRKPHN_pd_need_tt JAP = { exists = yes is_in_faction_with = KOR } } }
+		complete_effect = { custom_effect_tooltip = TFRKPHN_pd_wait_tt }
+		remove_effect = {
+			custom_effect_tooltip = TFRKPHN_pd_d1_2_tt
+			set_country_flag = TFRKPHN_pd_done_1_2
+			hidden_effect = {
+				add_to_variable = { TFRKPHN_pd_bv = 0.02 }
+				if = { limit = { NOT = { has_dynamic_modifier = { modifier = TFRKPHN_pdto_coop } } } add_dynamic_modifier = { modifier = TFRKPHN_pdto_coop } }
+				force_update_dynamic_modifier = yes
+				JAP = { add_opinion_modifier = { target = KOR modifier = TFRKPHN_pd_partner } }
+				country_event = { id = tfrkphn.6632 }
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_pd_d2_1 = {
+		icon = GFX_decision_generic_construction
+		cost = 40
+		days_remove = 45
+		fire_only_once = yes
+		visible = { check_variable = { TFRKPHN_pd_sel = 2 } }
+		available = { custom_trigger_tooltip = { tooltip = TFRKPHN_pd_need_tt CHI = { exists = yes is_in_faction_with = KOR } } }
+		complete_effect = { custom_effect_tooltip = TFRKPHN_pd_wait_tt }
+		remove_effect = {
+			custom_effect_tooltip = TFRKPHN_pd_d2_1_tt
+			set_country_flag = TFRKPHN_pd_done_2_1
+			hidden_effect = {
+				add_to_variable = { TFRKPHN_pd_bv = 0.03 }
+				if = { limit = { NOT = { has_dynamic_modifier = { modifier = TFRKPHN_pdto_coop } } } add_dynamic_modifier = { modifier = TFRKPHN_pdto_coop } }
+				force_update_dynamic_modifier = yes
+				CHI = { add_opinion_modifier = { target = KOR modifier = TFRKPHN_pd_partner } }
+				country_event = { id = tfrkphn.6633 }
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_pd_d2_2 = {
+		icon = GFX_decision_generic_construction
+		cost = 40
+		days_remove = 45
+		fire_only_once = yes
+		visible = { check_variable = { TFRKPHN_pd_sel = 2 } }
+		available = { custom_trigger_tooltip = { tooltip = TFRKPHN_pd_need_tt CHI = { exists = yes is_in_faction_with = KOR } } }
+		complete_effect = { custom_effect_tooltip = TFRKPHN_pd_wait_tt }
+		remove_effect = {
+			custom_effect_tooltip = TFRKPHN_pd_d2_2_tt
+			set_country_flag = TFRKPHN_pd_done_2_2
+			hidden_effect = {
+				add_to_variable = { TFRKPHN_pd_cg = -0.02 }
+				if = { limit = { NOT = { has_dynamic_modifier = { modifier = TFRKPHN_pdto_coop } } } add_dynamic_modifier = { modifier = TFRKPHN_pdto_coop } }
+				force_update_dynamic_modifier = yes
+				CHI = { add_opinion_modifier = { target = KOR modifier = TFRKPHN_pd_partner } }
+				country_event = { id = tfrkphn.6634 }
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_pd_d3_1 = {
+		icon = GFX_decision_generic_construction
+		cost = 40
+		days_remove = 45
+		fire_only_once = yes
+		visible = { check_variable = { TFRKPHN_pd_sel = 3 } }
+		available = { custom_trigger_tooltip = { tooltip = TFRKPHN_pd_need_tt RAJ = { exists = yes is_in_faction_with = KOR } } }
+		complete_effect = { custom_effect_tooltip = TFRKPHN_pd_wait_tt }
+		remove_effect = {
+			custom_effect_tooltip = TFRKPHN_pd_d3_1_tt
+			set_country_flag = TFRKPHN_pd_done_3_1
+			hidden_effect = {
+				add_to_variable = { TFRKPHN_pd_ig = 0.02 }
+				if = { limit = { NOT = { has_dynamic_modifier = { modifier = TFRKPHN_pdto_coop } } } add_dynamic_modifier = { modifier = TFRKPHN_pdto_coop } }
+				force_update_dynamic_modifier = yes
+				RAJ = { add_opinion_modifier = { target = KOR modifier = TFRKPHN_pd_partner } }
+				country_event = { id = tfrkphn.6635 }
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_pd_d4_1 = {
+		icon = GFX_decision_generic_construction
+		cost = 40
+		days_remove = 45
+		fire_only_once = yes
+		visible = { check_variable = { TFRKPHN_pd_sel = 4 } }
+		available = { custom_trigger_tooltip = { tooltip = TFRKPHN_pd_need_tt VIN = { exists = yes is_in_faction_with = KOR } } }
+		complete_effect = { custom_effect_tooltip = TFRKPHN_pd_wait_tt }
+		remove_effect = {
+			custom_effect_tooltip = TFRKPHN_pd_d4_1_tt
+			set_country_flag = TFRKPHN_pd_done_4_1
+			hidden_effect = {
+				add_to_variable = { TFRKPHN_pd_cg = -0.02 }
+				if = { limit = { NOT = { has_dynamic_modifier = { modifier = TFRKPHN_pdto_coop } } } add_dynamic_modifier = { modifier = TFRKPHN_pdto_coop } }
+				force_update_dynamic_modifier = yes
+				VIN = { add_opinion_modifier = { target = KOR modifier = TFRKPHN_pd_partner } }
+				country_event = { id = tfrkphn.6636 }
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_pd_d5_1 = {
+		icon = GFX_decision_generic_construction
+		cost = 40
+		days_remove = 45
+		fire_only_once = yes
+		visible = { check_variable = { TFRKPHN_pd_sel = 5 } }
+		available = { custom_trigger_tooltip = { tooltip = TFRKPHN_pd_need_tt PHI = { exists = yes is_in_faction_with = KOR } } }
+		complete_effect = { custom_effect_tooltip = TFRKPHN_pd_wait_tt }
+		remove_effect = {
+			custom_effect_tooltip = TFRKPHN_pd_d5_1_tt
+			set_country_flag = TFRKPHN_pd_done_5_1
+			hidden_effect = {
+				add_to_variable = { TFRKPHN_pd_pv = 0.01 }
+				if = { limit = { NOT = { has_dynamic_modifier = { modifier = TFRKPHN_pdto_coop } } } add_dynamic_modifier = { modifier = TFRKPHN_pdto_coop } }
+				force_update_dynamic_modifier = yes
+				PHI = { add_opinion_modifier = { target = KOR modifier = TFRKPHN_pd_partner } }
+				country_event = { id = tfrkphn.6637 }
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_pd_d6_1 = {
+		icon = GFX_decision_generic_construction
+		cost = 40
+		days_remove = 45
+		fire_only_once = yes
+		visible = { check_variable = { TFRKPHN_pd_sel = 6 } }
+		available = { custom_trigger_tooltip = { tooltip = TFRKPHN_pd_need_tt AST = { exists = yes is_in_faction_with = KOR } } }
+		complete_effect = { custom_effect_tooltip = TFRKPHN_pd_wait_tt }
+		remove_effect = {
+			custom_effect_tooltip = TFRKPHN_pd_d6_1_tt
+			set_country_flag = TFRKPHN_pd_done_6_1
+			hidden_effect = {
+				add_to_variable = { TFRKPHN_pd_bs = 0.03 }
+				if = { limit = { NOT = { has_dynamic_modifier = { modifier = TFRKPHN_pdto_coop } } } add_dynamic_modifier = { modifier = TFRKPHN_pdto_coop } }
+				force_update_dynamic_modifier = yes
+				AST = { add_opinion_modifier = { target = KOR modifier = TFRKPHN_pd_partner } }
+				country_event = { id = tfrkphn.6638 }
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_pd_d7_1 = {
+		icon = GFX_decision_generic_construction
+		cost = 40
+		days_remove = 45
+		fire_only_once = yes
+		visible = { check_variable = { TFRKPHN_pd_sel = 7 } }
+		available = { custom_trigger_tooltip = { tooltip = TFRKPHN_pd_need_tt INS = { exists = yes is_in_faction_with = KOR } } }
+		complete_effect = { custom_effect_tooltip = TFRKPHN_pd_wait_tt }
+		remove_effect = {
+			custom_effect_tooltip = TFRKPHN_pd_d7_1_tt
+			set_country_flag = TFRKPHN_pd_done_7_1
+			hidden_effect = {
+				add_to_variable = { TFRKPHN_pd_bv = 0.01 } 869 = { if = { limit = { is_owned_by = KOR } add_extra_state_shared_building_slots = 1 add_building_construction = { type = industrial_complex level = 1 instant_build = yes } } }
+				if = { limit = { NOT = { has_dynamic_modifier = { modifier = TFRKPHN_pdto_coop } } } add_dynamic_modifier = { modifier = TFRKPHN_pdto_coop } }
+				force_update_dynamic_modifier = yes
+				INS = { add_opinion_modifier = { target = KOR modifier = TFRKPHN_pd_partner } }
+				country_event = { id = tfrkphn.6639 }
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_pd_d8_1 = {
+		icon = GFX_decision_generic_construction
+		cost = 40
+		days_remove = 45
+		fire_only_once = yes
+		visible = { check_variable = { TFRKPHN_pd_sel = 8 } }
+		available = { custom_trigger_tooltip = { tooltip = TFRKPHN_pd_need_tt SIA = { exists = yes is_in_faction_with = KOR } } }
+		complete_effect = { custom_effect_tooltip = TFRKPHN_pd_wait_tt }
+		remove_effect = {
+			custom_effect_tooltip = TFRKPHN_pd_d8_1_tt
+			set_country_flag = TFRKPHN_pd_done_8_1
+			hidden_effect = {
+				add_to_variable = { TFRKPHN_pd_cg = -0.02 }
+				if = { limit = { NOT = { has_dynamic_modifier = { modifier = TFRKPHN_pdto_coop } } } add_dynamic_modifier = { modifier = TFRKPHN_pdto_coop } }
+				force_update_dynamic_modifier = yes
+				SIA = { add_opinion_modifier = { target = KOR modifier = TFRKPHN_pd_partner } }
+				country_event = { id = tfrkphn.6640 }
+			}
+		}
+		ai_will_do = { factor = 0 }
 	}
 }

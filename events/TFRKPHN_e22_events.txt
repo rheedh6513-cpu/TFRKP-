@@ -1,0 +1,524 @@
+# [안내] 2022년 대선 선거 운동 이벤트의 그림 갈림. korea.N(보이지 않는 갈림)이 원래 그림 판(홀수)이나 새 그림 판(짝수)을 띄운다. elec22_build.py가 만든다.
+add_namespace = tfrkphn
+
+# korea.122 원래 그림
+country_event = {
+	id = tfrkphn.1001
+	title = korea.122.t
+	desc = korea.122.desc
+	picture = GFX_report_event_yoon_joon
+	is_triggered_only = yes
+
+	option = {
+		name = korea.122.a
+	}
+}
+
+# korea.122 새 그림 (청년의 꿈)
+country_event = {
+	id = tfrkphn.1002
+	title = korea.122.t
+	desc = korea.122.desc
+	picture = GFX_TFRKPHN_youth_dream
+	is_triggered_only = yes
+
+	option = {
+		name = korea.122.a
+	}
+}
+
+# korea.123 원래 그림
+country_event = {
+	id = tfrkphn.1003
+	title = korea.123.t
+	desc = korea.123.desc
+	picture = GFX_report_event_yoon_suncheon
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			set_temp_variable = { KOR_president_election_lee_support_temp = 0.06 }
+			KOR_president_election_lee_support_change_effect = yes
+		}
+	}
+
+	option = {
+		name = korea.123.a
+		effect_tooltip = {
+			set_temp_variable = { KOR_president_election_lee_support_temp = 0.06 }
+			KOR_president_election_lee_support_change_effect = yes
+		}
+	}
+}
+
+# korea.123 새 그림 (말이 먼저 나갔다)
+country_event = {
+	id = tfrkphn.1004
+	title = korea.123.t
+	desc = korea.123.desc
+	picture = GFX_TFRKPHN_hong_speech
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			set_temp_variable = { KOR_president_election_lee_support_temp = 0.06 }
+			KOR_president_election_lee_support_change_effect = yes
+		}
+	}
+
+	option = {
+		name = korea.123.a
+		effect_tooltip = {
+			set_temp_variable = { KOR_president_election_lee_support_temp = 0.06 }
+			KOR_president_election_lee_support_change_effect = yes
+		}
+	}
+}
+
+# korea.124 원래 그림
+country_event = {
+	id = tfrkphn.1005
+	title = korea.124.t
+	desc = korea.124.desc
+	picture = GFX_report_event_yoon_sim_mistake
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			set_temp_variable = { KOR_president_election_lee_support_temp = 0.05 }
+			KOR_president_election_lee_support_change_effect = yes
+		}
+	}
+
+	option = {
+		name = korea.124.a
+		effect_tooltip = {
+			set_temp_variable = { KOR_president_election_lee_support_temp = 0.05 }
+			KOR_president_election_lee_support_change_effect = yes
+		}
+	}
+}
+
+# korea.124 새 그림 (핵에는 핵으로)
+country_event = {
+	id = tfrkphn.1006
+	title = korea.124.t
+	desc = korea.124.desc
+	picture = GFX_TFRKPHN_hyunmoo
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			set_temp_variable = { KOR_president_election_lee_support_temp = 0.05 }
+			KOR_president_election_lee_support_change_effect = yes
+		}
+	}
+
+	option = {
+		name = korea.124.a
+		effect_tooltip = {
+			set_temp_variable = { KOR_president_election_lee_support_temp = 0.05 }
+			KOR_president_election_lee_support_change_effect = yes
+		}
+	}
+}
+
+# korea.116 원래 그림
+country_event = {
+	id = tfrkphn.1007
+	title = korea.116.t
+	desc = korea.116.desc
+	picture = GFX_report_event_working_jm
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			set_temp_variable = { KOR_president_election_lee_support_temp = 0.03 }
+			KOR_president_election_lee_support_change_effect = yes
+		}
+	}
+
+	option = {
+		name = korea.116.a
+		set_temp_variable = { KOR_president_election_lee_support_temp = 0.03 }
+		KOR_president_election_lee_support_change_effect = yes
+	}
+}
+
+# korea.116 새 그림 (상대 후보의 유세)
+country_event = {
+	id = tfrkphn.1008
+	title = korea.116.t
+	desc = korea.116.desc
+	picture = GFX_TFRKPHN_yeouido_rally
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			set_temp_variable = { KOR_president_election_lee_support_temp = 0.03 }
+			KOR_president_election_lee_support_change_effect = yes
+		}
+	}
+
+	option = {
+		name = korea.116.a
+		set_temp_variable = { KOR_president_election_lee_support_temp = 0.03 }
+		KOR_president_election_lee_support_change_effect = yes
+	}
+}
+
+# korea.281 원래 그림
+country_event = {
+	id = tfrkphn.1009
+	title = korea.281.t
+	desc = korea.281.d
+	picture = GFX_report_event_281
+
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = { set_country_flag = TFRKPHN_seen_korea_281 }
+	}
+
+	option = {
+		name = korea.281.a
+	}
+}
+
+# korea.281 새 그림 (빈농의 맏아들)
+country_event = {
+	id = tfrkphn.1010
+	title = korea.281.t
+	desc = korea.281.d
+	picture = GFX_TFRKPHN_opp_lny
+
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = { set_country_flag = TFRKPHN_seen_korea_281 }
+	}
+
+	option = {
+		name = korea.281.a
+	}
+}
+
+# korea.282 원래 그림
+country_event = {
+	id = tfrkphn.1011
+	title = korea.282.t
+	desc = korea.282.d
+	picture = GFX_report_event_282
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			set_temp_variable = { KOR_president_election_yoon_support_temp = 0.03 }
+			KOR_president_election_yoon_support_change_effect = yes
+		}
+	}
+
+	option = {
+		name = korea.282.a
+		set_temp_variable = { KOR_president_election_yoon_support_temp = 0.03 }
+		KOR_president_election_yoon_support_change_effect = yes
+	}
+}
+
+# korea.282 새 그림 (조심스러운 유세)
+country_event = {
+	id = tfrkphn.1012
+	title = korea.282.t
+	desc = korea.282.d
+	picture = GFX_TFRKPHN_nak_who_choose
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			set_temp_variable = { KOR_president_election_yoon_support_temp = 0.03 }
+			KOR_president_election_yoon_support_change_effect = yes
+		}
+	}
+
+	option = {
+		name = korea.282.a
+		set_temp_variable = { KOR_president_election_yoon_support_temp = 0.03 }
+		KOR_president_election_yoon_support_change_effect = yes
+	}
+}
+
+# korea.283 원래 그림
+country_event = {
+	id = tfrkphn.1013
+	title = korea.283.t
+	desc = korea.283.d
+	picture = GFX_report_event_283
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = korea.283.a
+		set_temp_variable = { KOR_president_election_yoon_support_temp = 0.02 }
+		KOR_president_election_yoon_support_change_effect = yes
+	}
+}
+
+# korea.283 새 그림 (사면론의 그림자)
+country_event = {
+	id = tfrkphn.1014
+	title = korea.283.t
+	desc = korea.283.d
+	picture = GFX_TFRKPHN_opp_lny
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = korea.283.a
+		set_temp_variable = { KOR_president_election_yoon_support_temp = 0.02 }
+		KOR_president_election_yoon_support_change_effect = yes
+	}
+}
+
+# korea.284 원래 그림
+country_event = {
+	id = tfrkphn.1015
+	title = korea.284.t
+	desc = korea.284.d
+	picture = GFX_report_event_284
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = korea.284.a
+		set_temp_variable = { KOR_president_election_lee_support_temp = 0.02 }
+		KOR_president_election_lee_support_change_effect = yes
+	}
+}
+
+# korea.284 새 그림 (내 삶을 지켜주는 나라)
+country_event = {
+	id = tfrkphn.1016
+	title = korea.284.t
+	desc = korea.284.d
+	picture = GFX_TFRKPHN_nak_who_choose
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = korea.284.a
+		set_temp_variable = { KOR_president_election_lee_support_temp = 0.02 }
+		KOR_president_election_lee_support_change_effect = yes
+	}
+}
+
+# korea.285 원래 그림
+country_event = {
+	id = tfrkphn.1017
+	title = korea.285.t
+	desc = korea.285.d
+	picture = GFX_report_event_285
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = korea.285.a
+	}
+}
+
+# korea.285 새 그림 (심상정 후보의 사퇴)
+country_event = {
+	id = tfrkphn.1018
+	title = korea.285.t
+	desc = korea.285.d
+	picture = GFX_TFRKPHN_justice_party_hq
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = korea.285.a
+	}
+}
+
+# korea.286 원래 그림
+country_event = {
+	id = tfrkphn.1019
+	title = korea.286.t
+	desc = korea.286.d
+	picture = GFX_report_event_286
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = korea.286.a
+	}
+}
+
+# korea.286 새 그림 (경험이라는 무기)
+country_event = {
+	id = tfrkphn.1020
+	title = korea.286.t
+	desc = korea.286.d
+	picture = GFX_TFRKPHN_bank
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = korea.286.a
+	}
+}
+
+# korea.287 원래 그림
+country_event = {
+	id = tfrkphn.1021
+	title = korea.287.t
+	desc = korea.287.d
+	picture = GFX_report_event_287
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = {
+		add_stability = 0.05
+		name = korea.287.a
+	}
+}
+
+# korea.287 새 그림 (마지막 유세)
+country_event = {
+	id = tfrkphn.1022
+	title = korea.287.t
+	desc = korea.287.d
+	picture = GFX_TFRKPHN_gwanghwamun_night
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = {
+		add_stability = 0.05
+		name = korea.287.a
+	}
+}
+
+# korea.288 원래 그림
+country_event = {
+	id = tfrkphn.1023
+	title = korea.288.t
+	desc = korea.288.d
+	picture = GFX_report_event_288
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = korea.288.a
+		set_temp_variable = { KOR_president_election_yoon_support_temp = 0.02 }
+		KOR_president_election_yoon_support_change_effect = yes
+	}
+}
+
+# korea.288 새 그림 (총리의 책임)
+country_event = {
+	id = tfrkphn.1024
+	title = korea.288.t
+	desc = korea.288.d
+	picture = GFX_TFRKPHN_kbs
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = korea.288.a
+		set_temp_variable = { KOR_president_election_yoon_support_temp = 0.02 }
+		KOR_president_election_yoon_support_change_effect = yes
+	}
+}
+
+# korea.289 원래 그림
+country_event = {
+	id = tfrkphn.1025
+	title = korea.289.t
+	desc = korea.289.d
+	picture = GFX_report_event_289
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = korea.289.a
+		set_temp_variable = { KOR_president_election_yoon_support_temp = 0.04 }
+		KOR_president_election_yoon_support_change_effect = yes
+	}
+}
+
+# korea.289 새 그림 (사백 평)
+country_event = {
+	id = tfrkphn.1026
+	title = korea.289.t
+	desc = korea.289.d
+	picture = GFX_TFRKPHN_kbs
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = korea.289.a
+		set_temp_variable = { KOR_president_election_yoon_support_temp = 0.04 }
+		KOR_president_election_yoon_support_change_effect = yes
+	}
+}
+
+# korea.290 원래 그림
+country_event = {
+	id = tfrkphn.1027
+	title = korea.290.t
+	desc = korea.290.d
+	picture = GFX_report_event_290
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = korea.290.a
+		set_temp_variable = { KOR_president_election_yoon_support_temp = 0.04 }
+		KOR_president_election_yoon_support_change_effect = yes
+	}
+}
+
+# korea.290 새 그림 (탈원전)
+country_event = {
+	id = tfrkphn.1028
+	title = korea.290.t
+	desc = korea.290.d
+	picture = GFX_TFRKPHN_kori
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = korea.290.a
+		set_temp_variable = { KOR_president_election_yoon_support_temp = 0.04 }
+		KOR_president_election_yoon_support_change_effect = yes
+	}
+}

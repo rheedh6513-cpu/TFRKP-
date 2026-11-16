@@ -1,0 +1,8 @@
+# [안내] 망명 기업 변동치. 값은 변수로 움직인다. exile_build.py가 만든다.
+TFRKPHN_exile_corps = {
+	icon = GFX_idea_KOR_yoon_common_conservatism_dynamic_modifir_idea
+	research_speed_factor = TFRKPHN_ex_rs
+	business_value_factor = TFRKPHN_ex_bv
+	income_growth_factor = TFRKPHN_ex_ig
+	academic_development_monthly = TFRKPHN_ex_ac
+}

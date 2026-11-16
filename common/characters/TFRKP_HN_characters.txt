@@ -33,8 +33,15 @@ characters = {
 	}
 	KOR_oh_se_hoon_char = {
 		name = KOR_oh_se_hoon_char
+		portraits = {
+			civilian = {
+				large = GFX_portrait_KOR_oh_se_hoon
+			}
+		}
 		country_leader = {
 			ideology = korean_warm_conservatism
+			desc = KOR_oh_se_hoon_char_desc
+			traits = { TFRKPHN_trait_leader_comeback }
 			expire = "2065.1.1"
 			id = -1
 		}

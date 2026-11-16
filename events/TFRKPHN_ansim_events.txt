@@ -1,0 +1,42 @@
+# [안내] 오세훈 정부: 안심소득 단계 사건. ansim_build.py가 만든다.
+add_namespace = tfrkphn
+
+# 다섯 도시의 안심소득
+country_event = {
+	id = tfrkphn.6621
+	title = tfrkphn.6621.t
+	desc = tfrkphn.6621.d
+	picture = GFX_TFRKPHN_ansim_1
+	is_triggered_only = yes
+	option = { name = TFRKPHN_an_ok custom_effect_tooltip = TFRKPHN_an_d1_tt }
+}
+
+# 가장 어려운 집부터
+country_event = {
+	id = tfrkphn.6622
+	title = tfrkphn.6622.t
+	desc = tfrkphn.6622.d
+	picture = GFX_TFRKPHN_ansim_2
+	is_triggered_only = yes
+	option = { name = TFRKPHN_an_ok custom_effect_tooltip = TFRKPHN_an_d2_tt }
+}
+
+# 안심소득 전면 시행
+country_event = {
+	id = tfrkphn.6623
+	title = tfrkphn.6623.t
+	desc = tfrkphn.6623.d
+	picture = GFX_TFRKPHN_ansim_3
+	is_triggered_only = yes
+	option = { name = TFRKPHN_an_ok custom_effect_tooltip = TFRKPHN_an_d3_tt }
+}
+
+# 창구는 하나
+country_event = {
+	id = tfrkphn.6624
+	title = tfrkphn.6624.t
+	desc = tfrkphn.6624.d
+	picture = GFX_TFRKPHN_ansim_4
+	is_triggered_only = yes
+	option = { name = TFRKPHN_an_ok custom_effect_tooltip = TFRKPHN_an_d4_tt }
+}

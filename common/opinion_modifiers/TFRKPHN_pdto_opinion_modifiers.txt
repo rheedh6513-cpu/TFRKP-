@@ -1,0 +1,6 @@
+# [안내] PDTO 기업 협력으로 생기는 관계 보정. pdto_build.py가 만든다.
+opinion_modifiers = {
+	TFRKPHN_pd_partner = {
+		value = 15
+	}
+}

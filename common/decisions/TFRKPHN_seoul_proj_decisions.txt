@@ -1,0 +1,378 @@
+# [안내] 오세훈 정부: 서울 지도 탭의 구별 개발 사업 스물다섯 개. 구마다 한 번. seoul_build.py가 만든다.
+TFRKPHN_oh_seoul_category = {
+	TFRKPHN_sd_p1 = {
+		icon = GFX_decision_generic_construction
+		cost = 0
+		days_remove = 45
+		fire_only_once = yes
+		visible = { has_country_flag = TFRKPHN_successor_oh_se_hoon }
+		available = { num_of_civilian_factories_available_for_projects > 0 }
+		modifier = { civilian_factory_use = 1 }
+		complete_effect = { custom_effect_tooltip = TFRKPHN_sd_p_wait_tt }
+		remove_effect = {
+			custom_effect_tooltip = TFRKPHN_sd_p1_tt
+			hidden_effect = { add_to_variable = { TFRKPHN_sd_bv = 0.005 } add_to_variable = { TFRKPHN_sd_gap = -1 } add_to_variable = { TFRKPHN_sd_s1 = 4 } set_variable = { TFRKPHN_sd_m1 = 2 } TFRKPHN_sd_refresh = yes }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_sd_p2 = {
+		icon = GFX_decision_generic_construction
+		cost = 0
+		days_remove = 45
+		fire_only_once = yes
+		visible = { has_country_flag = TFRKPHN_successor_oh_se_hoon }
+		available = { num_of_civilian_factories_available_for_projects > 0 }
+		modifier = { civilian_factory_use = 1 }
+		complete_effect = { custom_effect_tooltip = TFRKPHN_sd_p_wait_tt }
+		remove_effect = {
+			custom_effect_tooltip = TFRKPHN_sd_p2_tt
+			hidden_effect = { add_to_variable = { TFRKPHN_sd_pov = 0.001 } add_to_variable = { TFRKPHN_sd_s2 = 4 } set_variable = { TFRKPHN_sd_m2 = 2 } TFRKPHN_sd_refresh = yes }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_sd_p3 = {
+		icon = GFX_decision_generic_construction
+		cost = 0
+		days_remove = 45
+		fire_only_once = yes
+		visible = { has_country_flag = TFRKPHN_successor_oh_se_hoon }
+		available = { num_of_civilian_factories_available_for_projects > 0 }
+		modifier = { civilian_factory_use = 1 }
+		complete_effect = { custom_effect_tooltip = TFRKPHN_sd_p_wait_tt }
+		remove_effect = {
+			custom_effect_tooltip = TFRKPHN_sd_p3_tt
+			hidden_effect = { add_to_variable = { TFRKPHN_sd_ac = 0.001 } add_to_variable = { TFRKPHN_sd_rs = 0.01 } add_to_variable = { TFRKPHN_sd_gap = -1 } add_to_variable = { TFRKPHN_sd_s3 = 4 } set_variable = { TFRKPHN_sd_m3 = 2 } TFRKPHN_sd_refresh = yes }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_sd_p4 = {
+		icon = GFX_decision_generic_construction
+		cost = 0
+		days_remove = 45
+		fire_only_once = yes
+		visible = { has_country_flag = TFRKPHN_successor_oh_se_hoon }
+		available = { num_of_civilian_factories_available_for_projects > 0 }
+		modifier = { civilian_factory_use = 1 }
+		complete_effect = { custom_effect_tooltip = TFRKPHN_sd_p_wait_tt }
+		remove_effect = {
+			custom_effect_tooltip = TFRKPHN_sd_p4_tt
+			hidden_effect = { add_to_variable = { TFRKPHN_sd_ig = 0.005 } add_to_variable = { TFRKPHN_sd_gap = -1 } add_to_variable = { TFRKPHN_sd_s4 = 4 } set_variable = { TFRKPHN_sd_m4 = 2 } TFRKPHN_sd_refresh = yes }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_sd_p5 = {
+		icon = GFX_decision_generic_construction
+		cost = 0
+		days_remove = 45
+		fire_only_once = yes
+		visible = { has_country_flag = TFRKPHN_successor_oh_se_hoon }
+		available = { num_of_civilian_factories_available_for_projects > 0 }
+		modifier = { civilian_factory_use = 1 }
+		complete_effect = { custom_effect_tooltip = TFRKPHN_sd_p_wait_tt }
+		remove_effect = {
+			custom_effect_tooltip = TFRKPHN_sd_p5_tt
+			hidden_effect = { add_to_variable = { TFRKPHN_sd_pov = 0.001 } add_to_variable = { TFRKPHN_sd_s5 = 4 } set_variable = { TFRKPHN_sd_m5 = 2 } TFRKPHN_sd_refresh = yes }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_sd_p6 = {
+		icon = GFX_decision_generic_construction
+		cost = 0
+		days_remove = 45
+		fire_only_once = yes
+		visible = { has_country_flag = TFRKPHN_successor_oh_se_hoon }
+		available = { num_of_civilian_factories_available_for_projects > 0 }
+		modifier = { civilian_factory_use = 1 }
+		complete_effect = { custom_effect_tooltip = TFRKPHN_sd_p_wait_tt }
+		remove_effect = {
+			custom_effect_tooltip = TFRKPHN_sd_p6_tt
+			hidden_effect = { add_to_variable = { TFRKPHN_sd_pov = 0.001 } add_to_variable = { TFRKPHN_sd_s6 = 4 } set_variable = { TFRKPHN_sd_m6 = 2 } TFRKPHN_sd_refresh = yes }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_sd_p7 = {
+		icon = GFX_decision_generic_construction
+		cost = 0
+		days_remove = 45
+		fire_only_once = yes
+		visible = { has_country_flag = TFRKPHN_successor_oh_se_hoon }
+		available = { num_of_civilian_factories_available_for_projects > 0 }
+		modifier = { civilian_factory_use = 1 }
+		complete_effect = { custom_effect_tooltip = TFRKPHN_sd_p_wait_tt }
+		remove_effect = {
+			custom_effect_tooltip = TFRKPHN_sd_p7_tt
+			hidden_effect = { add_to_variable = { TFRKPHN_sd_pv = 0.005 } add_to_variable = { TFRKPHN_sd_s7 = 4 } set_variable = { TFRKPHN_sd_m7 = 2 } TFRKPHN_sd_refresh = yes }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_sd_p8 = {
+		icon = GFX_decision_generic_construction
+		cost = 0
+		days_remove = 45
+		fire_only_once = yes
+		visible = { has_country_flag = TFRKPHN_successor_oh_se_hoon }
+		available = { num_of_civilian_factories_available_for_projects > 0 }
+		modifier = { civilian_factory_use = 1 }
+		complete_effect = { custom_effect_tooltip = TFRKPHN_sd_p_wait_tt }
+		remove_effect = {
+			custom_effect_tooltip = TFRKPHN_sd_p8_tt
+			hidden_effect = { add_offsite_building = { type = industrial_complex level = 1 } add_to_variable = { TFRKPHN_sd_s8 = 4 } set_variable = { TFRKPHN_sd_m8 = 2 } TFRKPHN_sd_refresh = yes }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_sd_p9 = {
+		icon = GFX_decision_generic_construction
+		cost = 0
+		days_remove = 45
+		fire_only_once = yes
+		visible = { has_country_flag = TFRKPHN_successor_oh_se_hoon }
+		available = { num_of_civilian_factories_available_for_projects > 0 }
+		modifier = { civilian_factory_use = 1 }
+		complete_effect = { custom_effect_tooltip = TFRKPHN_sd_p_wait_tt }
+		remove_effect = {
+			custom_effect_tooltip = TFRKPHN_sd_p9_tt
+			hidden_effect = { add_to_variable = { TFRKPHN_sd_bv = 0.005 } add_to_variable = { TFRKPHN_sd_s9 = 4 } set_variable = { TFRKPHN_sd_m9 = 2 } TFRKPHN_sd_refresh = yes }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_sd_p10 = {
+		icon = GFX_decision_generic_construction
+		cost = 0
+		days_remove = 45
+		fire_only_once = yes
+		visible = { has_country_flag = TFRKPHN_successor_oh_se_hoon }
+		available = { num_of_civilian_factories_available_for_projects > 0 }
+		modifier = { civilian_factory_use = 1 }
+		complete_effect = { custom_effect_tooltip = TFRKPHN_sd_p_wait_tt }
+		remove_effect = {
+			custom_effect_tooltip = TFRKPHN_sd_p10_tt
+			hidden_effect = { add_offsite_building = { type = industrial_complex level = 1 } add_to_variable = { TFRKPHN_sd_s10 = 4 } set_variable = { TFRKPHN_sd_m10 = 2 } TFRKPHN_sd_refresh = yes }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_sd_p11 = {
+		icon = GFX_decision_generic_construction
+		cost = 0
+		days_remove = 45
+		fire_only_once = yes
+		visible = { has_country_flag = TFRKPHN_successor_oh_se_hoon }
+		available = { num_of_civilian_factories_available_for_projects > 0 }
+		modifier = { civilian_factory_use = 1 }
+		complete_effect = { custom_effect_tooltip = TFRKPHN_sd_p_wait_tt }
+		remove_effect = {
+			custom_effect_tooltip = TFRKPHN_sd_p11_tt
+			hidden_effect = { add_offsite_building = { type = industrial_complex level = 1 } add_to_variable = { TFRKPHN_sd_s11 = 4 } set_variable = { TFRKPHN_sd_m11 = 2 } TFRKPHN_sd_refresh = yes }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_sd_p12 = {
+		icon = GFX_decision_generic_construction
+		cost = 0
+		days_remove = 45
+		fire_only_once = yes
+		visible = { has_country_flag = TFRKPHN_successor_oh_se_hoon }
+		available = { num_of_civilian_factories_available_for_projects > 0 }
+		modifier = { civilian_factory_use = 1 }
+		complete_effect = { custom_effect_tooltip = TFRKPHN_sd_p_wait_tt }
+		remove_effect = {
+			custom_effect_tooltip = TFRKPHN_sd_p12_tt
+			hidden_effect = { add_offsite_building = { type = industrial_complex level = 1 } add_to_variable = { TFRKPHN_sd_s12 = 4 } set_variable = { TFRKPHN_sd_m12 = 2 } TFRKPHN_sd_refresh = yes }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_sd_p13 = {
+		icon = GFX_decision_generic_construction
+		cost = 0
+		days_remove = 45
+		fire_only_once = yes
+		visible = { has_country_flag = TFRKPHN_successor_oh_se_hoon }
+		available = { num_of_civilian_factories_available_for_projects > 0 }
+		modifier = { civilian_factory_use = 1 }
+		complete_effect = { custom_effect_tooltip = TFRKPHN_sd_p_wait_tt }
+		remove_effect = {
+			custom_effect_tooltip = TFRKPHN_sd_p13_tt
+			hidden_effect = { add_offsite_building = { type = industrial_complex level = 1 } add_to_variable = { TFRKPHN_sd_s13 = 4 } set_variable = { TFRKPHN_sd_m13 = 2 } TFRKPHN_sd_refresh = yes }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_sd_p14 = {
+		icon = GFX_decision_generic_construction
+		cost = 0
+		days_remove = 45
+		fire_only_once = yes
+		visible = { has_country_flag = TFRKPHN_successor_oh_se_hoon }
+		available = { num_of_civilian_factories_available_for_projects > 0 }
+		modifier = { civilian_factory_use = 1 }
+		complete_effect = { custom_effect_tooltip = TFRKPHN_sd_p_wait_tt }
+		remove_effect = {
+			custom_effect_tooltip = TFRKPHN_sd_p14_tt
+			hidden_effect = { add_to_variable = { TFRKPHN_sd_bv = 0.005 } add_to_variable = { TFRKPHN_sd_s14 = 4 } set_variable = { TFRKPHN_sd_m14 = 2 } TFRKPHN_sd_refresh = yes }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_sd_p15 = {
+		icon = GFX_decision_generic_construction
+		cost = 0
+		days_remove = 45
+		fire_only_once = yes
+		visible = { has_country_flag = TFRKPHN_successor_oh_se_hoon }
+		available = { num_of_civilian_factories_available_for_projects > 0 }
+		modifier = { civilian_factory_use = 1 }
+		complete_effect = { custom_effect_tooltip = TFRKPHN_sd_p_wait_tt }
+		remove_effect = {
+			custom_effect_tooltip = TFRKPHN_sd_p15_tt
+			hidden_effect = { add_to_variable = { TFRKPHN_sd_bv = 0.005 } add_to_variable = { TFRKPHN_sd_s15 = 4 } set_variable = { TFRKPHN_sd_m15 = 2 } TFRKPHN_sd_refresh = yes }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_sd_p16 = {
+		icon = GFX_decision_generic_construction
+		cost = 0
+		days_remove = 45
+		fire_only_once = yes
+		visible = { has_country_flag = TFRKPHN_successor_oh_se_hoon }
+		available = { num_of_civilian_factories_available_for_projects > 0 }
+		modifier = { civilian_factory_use = 1 }
+		complete_effect = { custom_effect_tooltip = TFRKPHN_sd_p_wait_tt }
+		remove_effect = {
+			custom_effect_tooltip = TFRKPHN_sd_p16_tt
+			hidden_effect = { add_offsite_building = { type = industrial_complex level = 1 } add_to_variable = { TFRKPHN_sd_s16 = 4 } set_variable = { TFRKPHN_sd_m16 = 2 } TFRKPHN_sd_refresh = yes }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_sd_p17 = {
+		icon = GFX_decision_generic_construction
+		cost = 0
+		days_remove = 45
+		fire_only_once = yes
+		visible = { has_country_flag = TFRKPHN_successor_oh_se_hoon }
+		available = { num_of_civilian_factories_available_for_projects > 0 }
+		modifier = { civilian_factory_use = 1 }
+		complete_effect = { custom_effect_tooltip = TFRKPHN_sd_p_wait_tt }
+		remove_effect = {
+			custom_effect_tooltip = TFRKPHN_sd_p17_tt
+			hidden_effect = { add_to_variable = { TFRKPHN_sd_pv = 0.005 } add_to_variable = { TFRKPHN_sd_s17 = 4 } set_variable = { TFRKPHN_sd_m17 = 2 } TFRKPHN_sd_refresh = yes }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_sd_p18 = {
+		icon = GFX_decision_generic_construction
+		cost = 0
+		days_remove = 45
+		fire_only_once = yes
+		visible = { has_country_flag = TFRKPHN_successor_oh_se_hoon }
+		available = { num_of_civilian_factories_available_for_projects > 0 }
+		modifier = { civilian_factory_use = 1 }
+		complete_effect = { custom_effect_tooltip = TFRKPHN_sd_p_wait_tt }
+		remove_effect = {
+			custom_effect_tooltip = TFRKPHN_sd_p18_tt
+			hidden_effect = { add_offsite_building = { type = industrial_complex level = 1 } add_to_variable = { TFRKPHN_sd_s18 = 4 } set_variable = { TFRKPHN_sd_m18 = 2 } TFRKPHN_sd_refresh = yes }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_sd_p19 = {
+		icon = GFX_decision_generic_construction
+		cost = 0
+		days_remove = 45
+		fire_only_once = yes
+		visible = { has_country_flag = TFRKPHN_successor_oh_se_hoon }
+		available = { num_of_civilian_factories_available_for_projects > 0 }
+		modifier = { civilian_factory_use = 1 }
+		complete_effect = { custom_effect_tooltip = TFRKPHN_sd_p_wait_tt }
+		remove_effect = {
+			custom_effect_tooltip = TFRKPHN_sd_p19_tt
+			hidden_effect = { add_offsite_building = { type = industrial_complex level = 1 } add_to_variable = { TFRKPHN_sd_s19 = 4 } set_variable = { TFRKPHN_sd_m19 = 2 } TFRKPHN_sd_refresh = yes }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_sd_p20 = {
+		icon = GFX_decision_generic_construction
+		cost = 0
+		days_remove = 45
+		fire_only_once = yes
+		visible = { has_country_flag = TFRKPHN_successor_oh_se_hoon }
+		available = { num_of_civilian_factories_available_for_projects > 0 }
+		modifier = { civilian_factory_use = 1 }
+		complete_effect = { custom_effect_tooltip = TFRKPHN_sd_p_wait_tt }
+		remove_effect = {
+			custom_effect_tooltip = TFRKPHN_sd_p20_tt
+			hidden_effect = { add_to_variable = { TFRKPHN_sd_pv = 0.005 } add_to_variable = { TFRKPHN_sd_s20 = 4 } set_variable = { TFRKPHN_sd_m20 = 2 } TFRKPHN_sd_refresh = yes }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_sd_p21 = {
+		icon = GFX_decision_generic_construction
+		cost = 0
+		days_remove = 45
+		fire_only_once = yes
+		visible = { has_country_flag = TFRKPHN_successor_oh_se_hoon }
+		available = { num_of_civilian_factories_available_for_projects > 0 }
+		modifier = { civilian_factory_use = 1 }
+		complete_effect = { custom_effect_tooltip = TFRKPHN_sd_p_wait_tt }
+		remove_effect = {
+			custom_effect_tooltip = TFRKPHN_sd_p21_tt
+			hidden_effect = { add_to_variable = { TFRKPHN_sd_ig = 0.005 } add_to_variable = { TFRKPHN_sd_s21 = 4 } set_variable = { TFRKPHN_sd_m21 = 2 } TFRKPHN_sd_refresh = yes }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_sd_p22 = {
+		icon = GFX_decision_generic_construction
+		cost = 0
+		days_remove = 45
+		fire_only_once = yes
+		visible = { has_country_flag = TFRKPHN_successor_oh_se_hoon }
+		available = { num_of_civilian_factories_available_for_projects > 0 }
+		modifier = { civilian_factory_use = 1 }
+		complete_effect = { custom_effect_tooltip = TFRKPHN_sd_p_wait_tt }
+		remove_effect = {
+			custom_effect_tooltip = TFRKPHN_sd_p22_tt
+			hidden_effect = { add_offsite_building = { type = industrial_complex level = 1 } add_to_variable = { TFRKPHN_sd_s22 = 4 } set_variable = { TFRKPHN_sd_m22 = 2 } TFRKPHN_sd_refresh = yes }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_sd_p23 = {
+		icon = GFX_decision_generic_construction
+		cost = 0
+		days_remove = 45
+		fire_only_once = yes
+		visible = { has_country_flag = TFRKPHN_successor_oh_se_hoon }
+		available = { num_of_civilian_factories_available_for_projects > 0 }
+		modifier = { civilian_factory_use = 1 }
+		complete_effect = { custom_effect_tooltip = TFRKPHN_sd_p_wait_tt }
+		remove_effect = {
+			custom_effect_tooltip = TFRKPHN_sd_p23_tt
+			hidden_effect = { add_to_variable = { TFRKPHN_sd_ac = 0.001 } add_to_variable = { TFRKPHN_sd_rs = 0.01 } add_to_variable = { TFRKPHN_sd_s23 = 4 } set_variable = { TFRKPHN_sd_m23 = 2 } TFRKPHN_sd_refresh = yes }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_sd_p24 = {
+		icon = GFX_decision_generic_construction
+		cost = 0
+		days_remove = 45
+		fire_only_once = yes
+		visible = { has_country_flag = TFRKPHN_successor_oh_se_hoon }
+		available = { num_of_civilian_factories_available_for_projects > 0 }
+		modifier = { civilian_factory_use = 1 }
+		complete_effect = { custom_effect_tooltip = TFRKPHN_sd_p_wait_tt }
+		remove_effect = {
+			custom_effect_tooltip = TFRKPHN_sd_p24_tt
+			hidden_effect = { add_to_variable = { TFRKPHN_sd_ig = 0.005 } add_to_variable = { TFRKPHN_sd_s24 = 4 } set_variable = { TFRKPHN_sd_m24 = 2 } TFRKPHN_sd_refresh = yes }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_sd_p25 = {
+		icon = GFX_decision_generic_construction
+		cost = 0
+		days_remove = 45
+		fire_only_once = yes
+		visible = { has_country_flag = TFRKPHN_successor_oh_se_hoon }
+		available = { num_of_civilian_factories_available_for_projects > 0 }
+		modifier = { civilian_factory_use = 1 }
+		complete_effect = { custom_effect_tooltip = TFRKPHN_sd_p_wait_tt }
+		remove_effect = {
+			custom_effect_tooltip = TFRKPHN_sd_p25_tt
+			hidden_effect = { add_to_variable = { TFRKPHN_sd_ac = 0.001 } add_to_variable = { TFRKPHN_sd_rs = 0.01 } add_to_variable = { TFRKPHN_sd_s25 = 4 } set_variable = { TFRKPHN_sd_m25 = 2 } TFRKPHN_sd_refresh = yes }
+		}
+		ai_will_do = { factor = 0 }
+	}
+}

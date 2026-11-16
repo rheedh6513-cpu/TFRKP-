@@ -1,7 +1,104 @@
-# [안내] 오세훈 정부: 2030년 지방선거 (서울시장 경선, 야당 후보, 선거 결과). seoul_elec_build.py가 만든다.
+# [안내] 오세훈 정부: 서울시장 보궐선거(2027년 4월)와 2030년 지방선거. seoul_elec_build.py가 만든다.
 add_namespace = tfrkphn
 
-# 여당 서울시장 경선
+# 보궐선거: 여당 후보 경선 (플레이어가 고른다)
+country_event = {
+	id = tfrkphn.651
+	title = tfrkphn.651.t
+	desc = tfrkphn.651.d
+	picture = GFX_TFRKPHN_oh_party
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.651.a
+		custom_effect_tooltip = tfrkphn.651.a_tt
+		hidden_effect = { clr_country_flag = TFRKPHN_sd_run_chung clr_country_flag = TFRKPHN_sd_run_cho clr_country_flag = TFRKPHN_sd_run_yoon clr_country_flag = TFRKPHN_sd_run_kim set_country_flag = TFRKPHN_sd_run_chung set_variable = { TFRKPHN_sd_delta = 3 } TFRKPHN_sd_add_se = yes set_variable = { TFRKPHN_sd_delta = 3 } TFRKPHN_sd_add_north = yes set_variable = { TFRKPHN_sd_delta = 3 } TFRKPHN_sd_add_sw = yes TFRKPHN_sd_refresh = yes country_event = { id = tfrkphn.652 days = 5 } }
+	}
+	option = {
+		name = tfrkphn.651.b
+		trigger = { NOT = { has_idea = TFRKPHN_cho_eun_hee_HM } }
+		custom_effect_tooltip = tfrkphn.651.b_tt
+		hidden_effect = { clr_country_flag = TFRKPHN_sd_run_chung clr_country_flag = TFRKPHN_sd_run_cho clr_country_flag = TFRKPHN_sd_run_yoon clr_country_flag = TFRKPHN_sd_run_kim set_country_flag = TFRKPHN_sd_run_cho set_variable = { TFRKPHN_sd_delta = 4 } TFRKPHN_sd_add_se = yes set_variable = { TFRKPHN_sd_delta = 1 } TFRKPHN_sd_add_north = yes TFRKPHN_sd_refresh = yes country_event = { id = tfrkphn.652 days = 5 } }
+	}
+	option = {
+		name = tfrkphn.651.c
+		trigger = { has_idea = TFRKPHN_cho_eun_hee_HM }
+		custom_effect_tooltip = tfrkphn.651.c_tt
+		hidden_effect = { clr_country_flag = TFRKPHN_sd_run_chung clr_country_flag = TFRKPHN_sd_run_cho clr_country_flag = TFRKPHN_sd_run_yoon clr_country_flag = TFRKPHN_sd_run_kim set_country_flag = TFRKPHN_sd_run_yoon set_variable = { TFRKPHN_sd_delta = 2 } TFRKPHN_sd_add_se = yes set_variable = { TFRKPHN_sd_delta = 2 } TFRKPHN_sd_add_north = yes set_variable = { TFRKPHN_sd_delta = 2 } TFRKPHN_sd_add_sw = yes TFRKPHN_sd_refresh = yes country_event = { id = tfrkphn.652 days = 5 } }
+	}
+}
+
+# 보궐선거: 야당 후보 정원오
+country_event = {
+	id = tfrkphn.652
+	title = tfrkphn.652.t
+	desc = tfrkphn.652.d
+	picture = GFX_TFRKPHN_oh_seoul
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.652.a
+		custom_effect_tooltip = tfrkphn.652.a_tt
+		hidden_effect = { add_to_variable = { TFRKPHN_sd_s13 = -3 } set_variable = { TFRKPHN_sd_delta = -1 } TFRKPHN_sd_add_north = yes TFRKPHN_sd_refresh = yes }
+	}
+}
+
+# 보궐선거: 정몽준 후보일 때 나이와 공백
+country_event = {
+	id = tfrkphn.656
+	title = tfrkphn.656.t
+	desc = tfrkphn.656.d
+	picture = GFX_TFRKPHN_oh_seoul
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.656.a
+		custom_effect_tooltip = tfrkphn.656.a_tt
+		hidden_effect = { set_variable = { TFRKPHN_sd_delta = -2 } TFRKPHN_sd_add_north = yes TFRKPHN_sd_refresh = yes }
+	}
+}
+
+# 보궐선거 승리
+country_event = {
+	id = tfrkphn.653
+	title = tfrkphn.653.t
+	desc = tfrkphn.653.d
+	picture = GFX_TFRKPHN_oh_podium
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.653.a
+		add_stability = 0.02
+		add_political_power = 80
+		TFRKPHN_sd_mayor_reward = yes
+	}
+}
+
+# 보궐선거 패배
+country_event = {
+	id = tfrkphn.654
+	title = tfrkphn.654.t
+	desc = tfrkphn.654.d
+	picture = GFX_TFRKPHN_oh_bowed
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.654.a
+		add_stability = -0.03
+		add_political_power = -50
+	}
+}
+
+# 2030년: 현직 여당 시장의 재선 도전
+country_event = {
+	id = tfrkphn.655
+	title = tfrkphn.655.t
+	desc = tfrkphn.655.d
+	picture = GFX_TFRKPHN_oh_party
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.655.a
+		custom_effect_tooltip = tfrkphn.655.a_tt
+		hidden_effect = { set_variable = { TFRKPHN_sd_delta = 2 } TFRKPHN_sd_add_se = yes set_variable = { TFRKPHN_sd_delta = 2 } TFRKPHN_sd_add_north = yes set_variable = { TFRKPHN_sd_delta = 2 } TFRKPHN_sd_add_sw = yes TFRKPHN_sd_refresh = yes }
+	}
+}
+
+# 2030년: 야당 시장에 김병민이 도전
 country_event = {
 	id = tfrkphn.641
 	title = tfrkphn.641.t
@@ -11,46 +108,11 @@ country_event = {
 	option = {
 		name = tfrkphn.641.a
 		custom_effect_tooltip = tfrkphn.641.a_tt
-		set_country_flag = TFRKPHN_sd_cand_chung
-		hidden_effect = { set_variable = { TFRKPHN_sd_delta = 3 } TFRKPHN_sd_add_se = yes set_variable = { TFRKPHN_sd_delta = 3 } TFRKPHN_sd_add_north = yes set_variable = { TFRKPHN_sd_delta = 3 } TFRKPHN_sd_add_sw = yes TFRKPHN_sd_refresh = yes country_event = { id = tfrkphn.642 days = 5 } }
-	}
-	option = {
-		name = tfrkphn.641.b
-		custom_effect_tooltip = tfrkphn.641.b_tt
-		set_country_flag = TFRKPHN_sd_cand_kim
-		hidden_effect = { set_variable = { TFRKPHN_sd_delta = 3 } TFRKPHN_sd_add_se = yes set_variable = { TFRKPHN_sd_delta = 1 } TFRKPHN_sd_add_north = yes TFRKPHN_sd_refresh = yes country_event = { id = tfrkphn.642 days = 5 } }
+		hidden_effect = { clr_country_flag = TFRKPHN_sd_run_chung clr_country_flag = TFRKPHN_sd_run_cho clr_country_flag = TFRKPHN_sd_run_yoon clr_country_flag = TFRKPHN_sd_run_kim set_country_flag = TFRKPHN_sd_run_kim set_variable = { TFRKPHN_sd_delta = 3 } TFRKPHN_sd_add_se = yes set_variable = { TFRKPHN_sd_delta = 1 } TFRKPHN_sd_add_north = yes TFRKPHN_sd_refresh = yes }
 	}
 }
 
-# 야당 후보 확정
-country_event = {
-	id = tfrkphn.642
-	title = tfrkphn.642.t
-	desc = tfrkphn.642.d
-	picture = GFX_TFRKPHN_oh_seoul
-	is_triggered_only = yes
-	option = {
-		name = tfrkphn.642.a
-		custom_effect_tooltip = tfrkphn.642.a_tt
-		hidden_effect = { add_to_variable = { TFRKPHN_sd_s13 = -3 } set_variable = { TFRKPHN_sd_delta = -1 } TFRKPHN_sd_add_north = yes TFRKPHN_sd_refresh = yes }
-	}
-}
-
-# 정몽준 후보일 때 선거 3주 전: 나이와 공백
-country_event = {
-	id = tfrkphn.645
-	title = tfrkphn.645.t
-	desc = tfrkphn.645.d
-	picture = GFX_TFRKPHN_oh_seoul
-	is_triggered_only = yes
-	option = {
-		name = tfrkphn.645.a
-		custom_effect_tooltip = tfrkphn.645.a_tt
-		hidden_effect = { set_variable = { TFRKPHN_sd_delta = -2 } TFRKPHN_sd_add_north = yes TFRKPHN_sd_refresh = yes }
-	}
-}
-
-# 선거 결과: 시장 승리
+# 2030년 지방선거: 시장 승리
 country_event = {
 	id = tfrkphn.643
 	title = tfrkphn.643.t
@@ -60,13 +122,13 @@ country_event = {
 	option = {
 		name = tfrkphn.643.a
 		add_stability = 0.03
-		if = { limit = { has_country_flag = TFRKPHN_sd_cand_kim } add_political_power = 100 custom_effect_tooltip = tfrkphn.643.a_tt }
-		if = { limit = { has_country_flag = TFRKPHN_sd_cand_chung } add_political_power = 50 custom_effect_tooltip = tfrkphn.643.a_tt2 }
+		add_political_power = 100
+		if = { limit = { has_country_flag = TFRKPHN_sd_new_mayor } TFRKPHN_sd_mayor_reward = yes }
 		custom_effect_tooltip = TFRKPHN_sd_dist_tt
 	}
 }
 
-# 선거 결과: 시장 패배
+# 2030년 지방선거: 시장 패배
 country_event = {
 	id = tfrkphn.644
 	title = tfrkphn.644.t

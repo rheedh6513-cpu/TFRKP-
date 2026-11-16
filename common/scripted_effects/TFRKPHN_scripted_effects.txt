@@ -838,7 +838,8 @@ TFRKPHN_ge2027_lee_in_je_effect = {
 		clr_country_flag = TFRKPHN_amend_active
 		clr_country_flag = TFRKPHN_amend_ongoing
 	}
-	set_politics = { ruling_party = conservative elections_allowed = yes }
+	set_politics = { ruling_party = conservative elections_allowed = yes last_election = "2027.3.3" election_frequency = 60 }
+	if = { limit = { has_country_flag = TFRKPHN_term4_in_force } set_politics = { ruling_party = conservative elections_allowed = yes last_election = "2027.3.3" election_frequency = 48 } }
 	add_popularity = { ideology = conservative popularity = 0.15 }
 	hidden_effect = {
 		if = { limit = { NOT = { has_character = KOR_lee_in_je_char } } recruit_character = KOR_lee_in_je_char }
@@ -854,15 +855,19 @@ TFRKPHN_ge2027_oh_se_hoon_effect = {
 	clr_country_flag = TFRKP_HN_hong_president
 	clr_country_flag = TFRKPHN_amend_busy
 	set_country_flag = TFRKPHN_successor_oh_se_hoon
+	KOR_seoul_city_mayor_reset_effect = yes	# 대통령이 됐으니 시장 자리는 빈다 (mayor_fix.py)
+	country_event = { id = tfrkphn.640 days = 2 }	# 첫 인선 (mayor_fix.py)
 	clr_country_flag = TFRKPHN_successor_lee_in_je
 	add_to_variable = { TFRKPHN_oh_terms = 1 }
-	set_politics = { ruling_party = conservative elections_allowed = yes }
+	set_politics = { ruling_party = conservative elections_allowed = yes last_election = "2027.3.3" election_frequency = 60 }
+	if = { limit = { has_country_flag = TFRKPHN_term4_in_force } set_politics = { ruling_party = conservative elections_allowed = yes last_election = "2027.3.3" election_frequency = 48 } }
 	add_popularity = { ideology = conservative popularity = 0.15 }
 	hidden_effect = {
 		if = { limit = { NOT = { has_character = KOR_oh_se_hoon_char } } recruit_character = KOR_oh_se_hoon_char }
 		KOR_oh_se_hoon_char = { promote_character = korean_warm_conservatism }
 	}
 	TFRKPHN_term_start_effect = yes
+	TFRKPHN_army_keep_effect = yes	# 국방개혁 가지 기록 보존 (오세훈)
 	load_focus_tree = { tree = TFRKPHN_oh_se_hoon_tree keep_completed = no }
 	mark_focus_tree_layout_dirty = yes
 }
@@ -871,7 +876,8 @@ TFRKPHN_ge2027_cho_won_jin_effect = {
 	clr_country_flag = TFRKP_HN_hong_president
 	clr_country_flag = TFRKPHN_amend_busy
 	set_country_flag = TFRKPHN_successor_cho_won_jin
-	set_politics = { ruling_party = authoritarian_democrat elections_allowed = yes }
+	set_politics = { ruling_party = authoritarian_democrat elections_allowed = yes last_election = "2027.3.3" election_frequency = 60 }
+	if = { limit = { has_country_flag = TFRKPHN_term4_in_force } set_politics = { ruling_party = authoritarian_democrat elections_allowed = yes last_election = "2027.3.3" election_frequency = 48 } }
 	add_popularity = { ideology = authoritarian_democrat popularity = 0.15 }
 	set_party_name = { ideology = authoritarian_democrat name = TFRKPHN_party_cho_won_jin long_name = TFRKPHN_party_cho_won_jin_long }
 	hidden_effect = {
@@ -887,7 +893,8 @@ TFRKPHN_ge2027_ahn_cheol_soo_effect = {
 	clr_country_flag = TFRKP_HN_hong_president
 	clr_country_flag = TFRKPHN_amend_busy
 	set_country_flag = TFRKPHN_successor_ahn_cheol_soo
-	set_politics = { ruling_party = market_liberal elections_allowed = yes }
+	set_politics = { ruling_party = market_liberal elections_allowed = yes last_election = "2027.3.3" election_frequency = 60 }
+	if = { limit = { has_country_flag = TFRKPHN_term4_in_force } set_politics = { ruling_party = market_liberal elections_allowed = yes last_election = "2027.3.3" election_frequency = 48 } }
 	add_popularity = { ideology = market_liberal popularity = 0.15 }
 	set_party_name = { ideology = market_liberal name = TFRKPHN_party_ahn_cheol_soo long_name = TFRKPHN_party_ahn_cheol_soo_long }
 	hidden_effect = {
@@ -905,7 +912,8 @@ TFRKPHN_ge2027_hwang_kyo_ahn_effect = {
 	clr_country_flag = TFRKPHN_amend_busy
 	set_country_flag = TFRKPHN_successor_hwang_kyo_ahn
 	# 자유와혁신 = 권위주의 민주 그룹 (기반 모드의 황교안은 보수 계열이라 권위주의 민주 지도자 역할을 새로 붙인다)
-	set_politics = { ruling_party = authoritarian_democrat elections_allowed = yes }
+	set_politics = { ruling_party = authoritarian_democrat elections_allowed = yes last_election = "2027.3.3" election_frequency = 60 }
+	if = { limit = { has_country_flag = TFRKPHN_term4_in_force } set_politics = { ruling_party = authoritarian_democrat elections_allowed = yes last_election = "2027.3.3" election_frequency = 48 } }
 	add_popularity = { ideology = authoritarian_democrat popularity = 0.15 }
 	set_party_name = { ideology = authoritarian_democrat name = TFRKPHN_party_hwang_kyo_ahn long_name = TFRKPHN_party_hwang_kyo_ahn_long }
 	hidden_effect = {

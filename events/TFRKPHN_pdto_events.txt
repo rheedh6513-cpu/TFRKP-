@@ -1,0 +1,102 @@
+# [안내] 오세훈 정부: PDTO 기업 협력을 맺었을 때 뜨는 사건. pdto_build.py가 만든다.
+add_namespace = tfrkphn
+
+# 도쿄일렉트론과 장비 협력
+country_event = {
+	id = tfrkphn.6631
+	title = tfrkphn.6631.t
+	desc = tfrkphn.6631.d
+	picture = GFX_TFRKPHN_pdto_1_1
+	is_triggered_only = yes
+	option = { name = TFRKPHN_pd_ok custom_effect_tooltip = TFRKPHN_pd_d1_1_tt }
+}
+
+# 도요타와 부품을 나눠 쓰다
+country_event = {
+	id = tfrkphn.6632
+	title = tfrkphn.6632.t
+	desc = tfrkphn.6632.d
+	picture = GFX_TFRKPHN_pdto_1_2
+	is_triggered_only = yes
+	option = { name = TFRKPHN_pd_ok custom_effect_tooltip = TFRKPHN_pd_d1_2_tt }
+}
+
+# TSMC와 맺은 약속
+country_event = {
+	id = tfrkphn.6633
+	title = tfrkphn.6633.t
+	desc = tfrkphn.6633.d
+	picture = GFX_TFRKPHN_pdto_2_1
+	is_triggered_only = yes
+	option = { name = TFRKPHN_pd_ok custom_effect_tooltip = TFRKPHN_pd_d2_1_tt }
+}
+
+# 폭스콘의 새 조립 공장
+country_event = {
+	id = tfrkphn.6634
+	title = tfrkphn.6634.t
+	desc = tfrkphn.6634.d
+	picture = GFX_TFRKPHN_pdto_2_2
+	is_triggered_only = yes
+	option = { name = TFRKPHN_pd_ok custom_effect_tooltip = TFRKPHN_pd_d2_2_tt }
+}
+
+# 타타 그룹과 손잡다
+country_event = {
+	id = tfrkphn.6635
+	title = tfrkphn.6635.t
+	desc = tfrkphn.6635.d
+	picture = GFX_TFRKPHN_pdto_3_1
+	is_triggered_only = yes
+	option = { name = TFRKPHN_pd_ok custom_effect_tooltip = TFRKPHN_pd_d3_1_tt }
+}
+
+# 빈그룹의 유통망에 오르다
+country_event = {
+	id = tfrkphn.6636
+	title = tfrkphn.6636.t
+	desc = tfrkphn.6636.d
+	picture = GFX_TFRKPHN_pdto_4_1
+	is_triggered_only = yes
+	option = { name = TFRKPHN_pd_ok custom_effect_tooltip = TFRKPHN_pd_d4_1_tt }
+}
+
+# 산미겔의 공사 현장에서
+country_event = {
+	id = tfrkphn.6637
+	title = tfrkphn.6637.t
+	desc = tfrkphn.6637.d
+	picture = GFX_TFRKPHN_pdto_5_1
+	is_triggered_only = yes
+	option = { name = TFRKPHN_pd_ok custom_effect_tooltip = TFRKPHN_pd_d5_1_tt }
+}
+
+# BHP와 여러 해짜리 계약
+country_event = {
+	id = tfrkphn.6638
+	title = tfrkphn.6638.t
+	desc = tfrkphn.6638.d
+	picture = GFX_TFRKPHN_pdto_6_1
+	is_triggered_only = yes
+	option = { name = TFRKPHN_pd_ok custom_effect_tooltip = TFRKPHN_pd_d6_1_tt }
+}
+
+# 안탐의 니켈, 호남의 공장
+country_event = {
+	id = tfrkphn.6639
+	title = tfrkphn.6639.t
+	desc = tfrkphn.6639.d
+	picture = GFX_TFRKPHN_pdto_7_1
+	is_triggered_only = yes
+	option = { name = TFRKPHN_pd_ok custom_effect_tooltip = TFRKPHN_pd_d7_1_tt }
+}
+
+# CP 그룹과 먹거리 계약
+country_event = {
+	id = tfrkphn.6640
+	title = tfrkphn.6640.t
+	desc = tfrkphn.6640.d
+	picture = GFX_TFRKPHN_pdto_8_1
+	is_triggered_only = yes
+	option = { name = TFRKPHN_pd_ok custom_effect_tooltip = TFRKPHN_pd_d8_1_tt }
+}

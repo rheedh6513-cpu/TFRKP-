@@ -1,0 +1,21 @@
+# [안내] PDTO 협력 탭에서 고른 나라를 알려 주는 글. pdto_build.py가 만든다.
+defined_text = {
+	name = GetTFRKPHNPdSel
+	text = { trigger = { check_variable = { TFRKPHN_pd_sel = 1 } JAP = { exists = yes is_in_faction_with = KOR } } localization_key = TFRKPHN_pd_sel1_y }
+	text = { trigger = { check_variable = { TFRKPHN_pd_sel = 1 } } localization_key = TFRKPHN_pd_sel1_n }
+	text = { trigger = { check_variable = { TFRKPHN_pd_sel = 2 } CHI = { exists = yes is_in_faction_with = KOR } } localization_key = TFRKPHN_pd_sel2_y }
+	text = { trigger = { check_variable = { TFRKPHN_pd_sel = 2 } } localization_key = TFRKPHN_pd_sel2_n }
+	text = { trigger = { check_variable = { TFRKPHN_pd_sel = 3 } RAJ = { exists = yes is_in_faction_with = KOR } } localization_key = TFRKPHN_pd_sel3_y }
+	text = { trigger = { check_variable = { TFRKPHN_pd_sel = 3 } } localization_key = TFRKPHN_pd_sel3_n }
+	text = { trigger = { check_variable = { TFRKPHN_pd_sel = 4 } VIN = { exists = yes is_in_faction_with = KOR } } localization_key = TFRKPHN_pd_sel4_y }
+	text = { trigger = { check_variable = { TFRKPHN_pd_sel = 4 } } localization_key = TFRKPHN_pd_sel4_n }
+	text = { trigger = { check_variable = { TFRKPHN_pd_sel = 5 } PHI = { exists = yes is_in_faction_with = KOR } } localization_key = TFRKPHN_pd_sel5_y }
+	text = { trigger = { check_variable = { TFRKPHN_pd_sel = 5 } } localization_key = TFRKPHN_pd_sel5_n }
+	text = { trigger = { check_variable = { TFRKPHN_pd_sel = 6 } AST = { exists = yes is_in_faction_with = KOR } } localization_key = TFRKPHN_pd_sel6_y }
+	text = { trigger = { check_variable = { TFRKPHN_pd_sel = 6 } } localization_key = TFRKPHN_pd_sel6_n }
+	text = { trigger = { check_variable = { TFRKPHN_pd_sel = 7 } INS = { exists = yes is_in_faction_with = KOR } } localization_key = TFRKPHN_pd_sel7_y }
+	text = { trigger = { check_variable = { TFRKPHN_pd_sel = 7 } } localization_key = TFRKPHN_pd_sel7_n }
+	text = { trigger = { check_variable = { TFRKPHN_pd_sel = 8 } SIA = { exists = yes is_in_faction_with = KOR } } localization_key = TFRKPHN_pd_sel8_y }
+	text = { trigger = { check_variable = { TFRKPHN_pd_sel = 8 } } localization_key = TFRKPHN_pd_sel8_n }
+	text = { localization_key = TFRKPHN_pd_sel0 }
+}

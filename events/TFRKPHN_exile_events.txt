@@ -1,0 +1,216 @@
+# [안내] 오세훈 정부: 망명 기업 유치 사건. exile_build.py가 만든다.
+add_namespace = tfrkphn
+
+# 오픈AI
+country_event = {
+	id = tfrkphn.681
+	title = tfrkphn.681.t
+	desc = tfrkphn.681.d
+	picture = GFX_TFRKPHN_exile_c1
+	is_triggered_only = yes
+	option = { name = TFRKPHN_ex_ok custom_effect_tooltip = TFRKPHN_ex_d1_tt hidden_effect = { country_event = { id = tfrkphn.695 days = 20 } } }
+}
+
+# 구글
+country_event = {
+	id = tfrkphn.682
+	title = tfrkphn.682.t
+	desc = tfrkphn.682.d
+	picture = GFX_TFRKPHN_exile_c2
+	is_triggered_only = yes
+	option = { name = TFRKPHN_ex_ok custom_effect_tooltip = TFRKPHN_ex_d2_tt }
+}
+
+# 테슬라
+country_event = {
+	id = tfrkphn.683
+	title = tfrkphn.683.t
+	desc = tfrkphn.683.d
+	picture = GFX_TFRKPHN_exile_c3
+	is_triggered_only = yes
+	option = { name = TFRKPHN_ex_ok custom_effect_tooltip = TFRKPHN_ex_d3_tt }
+}
+
+# 엔비디아
+country_event = {
+	id = tfrkphn.684
+	title = tfrkphn.684.t
+	desc = tfrkphn.684.d
+	picture = GFX_TFRKPHN_exile_c4
+	is_triggered_only = yes
+	option = { name = TFRKPHN_ex_ok custom_effect_tooltip = TFRKPHN_ex_d4_tt hidden_effect = { country_event = { id = tfrkphn.696 days = 20 } } }
+}
+
+# 보잉
+country_event = {
+	id = tfrkphn.685
+	title = tfrkphn.685.t
+	desc = tfrkphn.685.d
+	picture = GFX_TFRKPHN_exile_c5
+	is_triggered_only = yes
+	option = { name = TFRKPHN_ex_ok custom_effect_tooltip = TFRKPHN_ex_d5_tt }
+}
+
+# 골드만삭스
+country_event = {
+	id = tfrkphn.686
+	title = tfrkphn.686.t
+	desc = tfrkphn.686.d
+	picture = GFX_TFRKPHN_exile_c6
+	is_triggered_only = yes
+	option = { name = TFRKPHN_ex_ok custom_effect_tooltip = TFRKPHN_ex_d6_tt }
+}
+
+# 마이크로소프트
+country_event = {
+	id = tfrkphn.691
+	title = tfrkphn.691.t
+	desc = tfrkphn.691.d
+	picture = GFX_TFRKPHN_exile_c7
+	is_triggered_only = yes
+	option = { name = TFRKPHN_ex_ok custom_effect_tooltip = TFRKPHN_ex_d7_tt }
+}
+
+# 화이자
+country_event = {
+	id = tfrkphn.692
+	title = tfrkphn.692.t
+	desc = tfrkphn.692.d
+	picture = GFX_TFRKPHN_exile_c8
+	is_triggered_only = yes
+	option = { name = TFRKPHN_ex_ok custom_effect_tooltip = TFRKPHN_ex_d8_tt }
+}
+
+# 록히드마틴
+country_event = {
+	id = tfrkphn.693
+	title = tfrkphn.693.t
+	desc = tfrkphn.693.d
+	picture = GFX_TFRKPHN_exile_c9
+	is_triggered_only = yes
+	option = { name = TFRKPHN_ex_ok custom_effect_tooltip = TFRKPHN_ex_d9_tt }
+}
+
+# 아마존
+country_event = {
+	id = tfrkphn.694
+	title = tfrkphn.694.t
+	desc = tfrkphn.694.d
+	picture = GFX_TFRKPHN_exile_c10
+	is_triggered_only = yes
+	option = { name = TFRKPHN_ex_ok custom_effect_tooltip = TFRKPHN_ex_d10_tt }
+}
+
+# 애플
+country_event = {
+	id = tfrkphn.6811
+	title = tfrkphn.6811.t
+	desc = tfrkphn.6811.d
+	picture = GFX_TFRKPHN_exile_c11
+	is_triggered_only = yes
+	option = { name = TFRKPHN_ex_ok custom_effect_tooltip = TFRKPHN_ex_d11_tt }
+}
+
+# 인텔
+country_event = {
+	id = tfrkphn.6812
+	title = tfrkphn.6812.t
+	desc = tfrkphn.6812.d
+	picture = GFX_TFRKPHN_exile_c12
+	is_triggered_only = yes
+	option = { name = TFRKPHN_ex_ok custom_effect_tooltip = TFRKPHN_ex_d12_tt }
+}
+
+# 샘 알트만, 서울에 남다
+country_event = {
+	id = tfrkphn.695
+	title = tfrkphn.695.t
+	desc = tfrkphn.695.d
+	picture = GFX_TFRKPHN_exile_p695
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.695.a
+		custom_effect_tooltip = TFRKPHN_ex_p695_tt
+		hidden_effect = { add_to_variable = { TFRKPHN_ex_rs = 0.01 } TFRKPHN_ex_refresh = yes }
+	}
+}
+
+# 젠슨 황, 대구에 오다
+country_event = {
+	id = tfrkphn.696
+	title = tfrkphn.696.t
+	desc = tfrkphn.696.d
+	picture = GFX_TFRKPHN_exile_p696
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.696.a
+		custom_effect_tooltip = TFRKPHN_ex_p696_tt
+		hidden_effect = { add_to_variable = { TFRKPHN_ex_bv = 0.01 } TFRKPHN_ex_refresh = yes }
+	}
+}
+
+# 역차별 논란 (불만이 3에 닿으면 한 번)
+country_event = {
+	id = tfrkphn.687
+	title = tfrkphn.687.t
+	desc = tfrkphn.687.d
+	picture = GFX_TFRKPHN_exile_e687
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.687.a
+		add_political_power = -75
+		custom_effect_tooltip = TFRKPHN_ex_gripe_reset_tt
+		hidden_effect = { set_variable = { TFRKPHN_ex_gripe = 0 } }
+	}
+	option = {
+		name = tfrkphn.687.b
+		add_stability = -0.03
+	}
+}
+
+# 두 번째 물결: 탭이 열리고 두 해 뒤, 미국이 아직 전쟁 중일 때만
+country_event = {
+	id = tfrkphn.697
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		if = { limit = { OR = { USA = { has_war = yes } USB = { has_war = yes } USC = { has_war = yes } } } country_event = { id = tfrkphn.698 } }
+	}
+}
+
+country_event = {
+	id = tfrkphn.698
+	title = tfrkphn.698.t
+	desc = tfrkphn.698.d
+	picture = GFX_TFRKPHN_exile_e698
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.698.a
+		set_country_flag = TFRKPHN_ex_wave2
+		custom_effect_tooltip = TFRKPHN_ex_wave2_tt
+		hidden_effect = {
+			add_to_variable = { TFRKPHN_ex_rs = 0.01 }
+			add_to_variable = { TFRKPHN_ex_gripe = 1 }
+			TFRKPHN_ex_refresh = yes
+		}
+	}
+}
+
+# 나눠 가진 유산 (첫 정착 두 해 뒤). 회사들은 초토화된 미대륙을 포기했고 남은 기반은 나라마다 나눠 가졌다는 설정 (사용자 지시 2026-11-16).
+country_event = {
+	id = tfrkphn.688
+	title = tfrkphn.688.t
+	desc = tfrkphn.688.d
+	picture = GFX_TFRKPHN_exile_e688
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.688.a
+		custom_effect_tooltip = TFRKPHN_ex_688a_tt
+		hidden_effect = { add_to_variable = { TFRKPHN_ex_rs = 0.02 } TFRKPHN_ex_refresh = yes }
+	}
+	option = {
+		name = tfrkphn.688.b
+		custom_effect_tooltip = TFRKPHN_ex_688b_tt
+		hidden_effect = { add_to_variable = { TFRKPHN_ex_bv = 0.02 } TFRKPHN_ex_refresh = yes }
+	}
+}

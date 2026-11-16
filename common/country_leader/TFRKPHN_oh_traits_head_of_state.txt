@@ -1,0 +1,11 @@
+# [안내] 오세훈 대통령의 지도자 특성. oh_portrait_fix.py가 만든다.
+leader_traits = {
+	TFRKPHN_trait_leader_comeback = {
+		random = no
+		stability_factor = 0.05
+		political_power_factor = 0.20
+		production_speed_buildings_factor = 0.07
+		business_value_factor = 0.03
+		ai_will_do = { factor = 1 }
+	}
+}

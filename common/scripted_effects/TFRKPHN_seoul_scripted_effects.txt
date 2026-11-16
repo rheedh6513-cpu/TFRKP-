@@ -29,10 +29,66 @@ TFRKPHN_sd_init = {
 	set_variable = { TFRKPHN_sd_s24 = 45 }   # 금천
 	set_variable = { TFRKPHN_sd_s25 = 44 }   # 관악
 	set_variable = { TFRKPHN_sd_gap = 6 }
+	set_variable = { TFRKPHN_sd_bv = 0 }
+	set_variable = { TFRKPHN_sd_pv = 0 }
+	set_variable = { TFRKPHN_sd_ig = 0 }
+	set_variable = { TFRKPHN_sd_ac = 0 }
+	set_variable = { TFRKPHN_sd_rs = 0 }
+	set_variable = { TFRKPHN_sd_pov = 0 }
+	set_variable = { TFRKPHN_sd_m1 = 1 }
+	set_variable = { TFRKPHN_sd_m2 = 1 }
+	set_variable = { TFRKPHN_sd_m3 = 1 }
+	set_variable = { TFRKPHN_sd_m4 = 1 }
+	set_variable = { TFRKPHN_sd_m5 = 1 }
+	set_variable = { TFRKPHN_sd_m6 = 1 }
+	set_variable = { TFRKPHN_sd_m7 = 1 }
+	set_variable = { TFRKPHN_sd_m8 = 1 }
+	set_variable = { TFRKPHN_sd_m9 = 1 }
+	set_variable = { TFRKPHN_sd_m10 = 1 }
+	set_variable = { TFRKPHN_sd_m11 = 1 }
+	set_variable = { TFRKPHN_sd_m12 = 1 }
+	set_variable = { TFRKPHN_sd_m13 = 1 }
+	set_variable = { TFRKPHN_sd_m14 = 1 }
+	set_variable = { TFRKPHN_sd_m15 = 1 }
+	set_variable = { TFRKPHN_sd_m16 = 1 }
+	set_variable = { TFRKPHN_sd_m17 = 1 }
+	set_variable = { TFRKPHN_sd_m18 = 1 }
+	set_variable = { TFRKPHN_sd_m19 = 1 }
+	set_variable = { TFRKPHN_sd_m20 = 1 }
+	set_variable = { TFRKPHN_sd_m21 = 1 }
+	set_variable = { TFRKPHN_sd_m22 = 1 }
+	set_variable = { TFRKPHN_sd_m23 = 1 }
+	set_variable = { TFRKPHN_sd_m24 = 1 }
+	set_variable = { TFRKPHN_sd_m25 = 1 }
 	set_variable = { TFRKPHN_sd_build = 0 }
 	TFRKPHN_sd_refresh = yes
 }
 TFRKPHN_sd_refresh = {
+	if = { limit = { check_variable = { TFRKPHN_sd_m1 < 1 } } set_variable = { TFRKPHN_sd_m1 = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_sd_m2 < 1 } } set_variable = { TFRKPHN_sd_m2 = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_sd_m3 < 1 } } set_variable = { TFRKPHN_sd_m3 = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_sd_m4 < 1 } } set_variable = { TFRKPHN_sd_m4 = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_sd_m5 < 1 } } set_variable = { TFRKPHN_sd_m5 = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_sd_m6 < 1 } } set_variable = { TFRKPHN_sd_m6 = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_sd_m7 < 1 } } set_variable = { TFRKPHN_sd_m7 = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_sd_m8 < 1 } } set_variable = { TFRKPHN_sd_m8 = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_sd_m9 < 1 } } set_variable = { TFRKPHN_sd_m9 = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_sd_m10 < 1 } } set_variable = { TFRKPHN_sd_m10 = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_sd_m11 < 1 } } set_variable = { TFRKPHN_sd_m11 = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_sd_m12 < 1 } } set_variable = { TFRKPHN_sd_m12 = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_sd_m13 < 1 } } set_variable = { TFRKPHN_sd_m13 = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_sd_m14 < 1 } } set_variable = { TFRKPHN_sd_m14 = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_sd_m15 < 1 } } set_variable = { TFRKPHN_sd_m15 = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_sd_m16 < 1 } } set_variable = { TFRKPHN_sd_m16 = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_sd_m17 < 1 } } set_variable = { TFRKPHN_sd_m17 = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_sd_m18 < 1 } } set_variable = { TFRKPHN_sd_m18 = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_sd_m19 < 1 } } set_variable = { TFRKPHN_sd_m19 = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_sd_m20 < 1 } } set_variable = { TFRKPHN_sd_m20 = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_sd_m21 < 1 } } set_variable = { TFRKPHN_sd_m21 = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_sd_m22 < 1 } } set_variable = { TFRKPHN_sd_m22 = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_sd_m23 < 1 } } set_variable = { TFRKPHN_sd_m23 = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_sd_m24 < 1 } } set_variable = { TFRKPHN_sd_m24 = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_sd_m25 < 1 } } set_variable = { TFRKPHN_sd_m25 = 1 } }
 	set_variable = { TFRKPHN_sd_gov = 0 }
 	set_variable = { TFRKPHN_sd_opp = 0 }
 	set_variable = { TFRKPHN_sd_toss = 0 }

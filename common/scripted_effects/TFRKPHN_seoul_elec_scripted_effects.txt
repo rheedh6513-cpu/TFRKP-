@@ -1,97 +1,132 @@
-# [안내] 오세훈 정부 2030년 지방선거 계산. seoul_elec_build.py가 만든다.
-# TFRKPHN_sd_h1~h25: 그 구를 여당이 이겼으면 1. TFRKPHN_sd_won: 여당이 이긴 구 수. TFRKPHN_sd_avg: 스물다섯 구 평균 지지도.
+# [안내] 오세훈 정부: 서울시장 보궐선거와 2030년 지방선거 계산. seoul_elec_build.py가 만든다.
+# TFRKPHN_sd_avg: 스물다섯 구 평균 지지도. TFRKPHN_sd_h1~h25: 구청장을 여당이 이겼으면 1. TFRKPHN_sd_won / TFRKPHN_sd_lost: 여야가 이긴 구 수.
+# 지금 여당 후보: TFRKPHN_sd_run_chung / cho / yoon / kim.  여당 시장이면 TFRKPHN_sd_mayor_gov.
+TFRKPHN_sd_calc_avg = {
+	set_variable = { TFRKPHN_sd_avg = 0 }
+	add_to_variable = { TFRKPHN_sd_avg = TFRKPHN_sd_s1 }
+	add_to_variable = { TFRKPHN_sd_avg = TFRKPHN_sd_s2 }
+	add_to_variable = { TFRKPHN_sd_avg = TFRKPHN_sd_s3 }
+	add_to_variable = { TFRKPHN_sd_avg = TFRKPHN_sd_s4 }
+	add_to_variable = { TFRKPHN_sd_avg = TFRKPHN_sd_s5 }
+	add_to_variable = { TFRKPHN_sd_avg = TFRKPHN_sd_s6 }
+	add_to_variable = { TFRKPHN_sd_avg = TFRKPHN_sd_s7 }
+	add_to_variable = { TFRKPHN_sd_avg = TFRKPHN_sd_s8 }
+	add_to_variable = { TFRKPHN_sd_avg = TFRKPHN_sd_s9 }
+	add_to_variable = { TFRKPHN_sd_avg = TFRKPHN_sd_s10 }
+	add_to_variable = { TFRKPHN_sd_avg = TFRKPHN_sd_s11 }
+	add_to_variable = { TFRKPHN_sd_avg = TFRKPHN_sd_s12 }
+	add_to_variable = { TFRKPHN_sd_avg = TFRKPHN_sd_s13 }
+	add_to_variable = { TFRKPHN_sd_avg = TFRKPHN_sd_s14 }
+	add_to_variable = { TFRKPHN_sd_avg = TFRKPHN_sd_s15 }
+	add_to_variable = { TFRKPHN_sd_avg = TFRKPHN_sd_s16 }
+	add_to_variable = { TFRKPHN_sd_avg = TFRKPHN_sd_s17 }
+	add_to_variable = { TFRKPHN_sd_avg = TFRKPHN_sd_s18 }
+	add_to_variable = { TFRKPHN_sd_avg = TFRKPHN_sd_s19 }
+	add_to_variable = { TFRKPHN_sd_avg = TFRKPHN_sd_s20 }
+	add_to_variable = { TFRKPHN_sd_avg = TFRKPHN_sd_s21 }
+	add_to_variable = { TFRKPHN_sd_avg = TFRKPHN_sd_s22 }
+	add_to_variable = { TFRKPHN_sd_avg = TFRKPHN_sd_s23 }
+	add_to_variable = { TFRKPHN_sd_avg = TFRKPHN_sd_s24 }
+	add_to_variable = { TFRKPHN_sd_avg = TFRKPHN_sd_s25 }
+	divide_variable = { TFRKPHN_sd_avg = 25 }
+}
+# 여당 후보가 시장이 된다: 지역 설명 상자의 시장 칸을 바꾼다
+TFRKPHN_sd_gov_takes_office = {
+	KOR_seoul_city_mayor_reset_effect = yes clr_country_flag = TFRKPHN_mayor_chung clr_country_flag = TFRKPHN_mayor_yoon clr_country_flag = TFRKPHN_mayor_kimbm
+	set_country_flag = TFRKPHN_sd_mayor_gov
+	if = { limit = { has_country_flag = TFRKPHN_sd_run_cho } set_country_flag = KOR_seoul_mayor_cho_eunhee }
+	if = { limit = { has_country_flag = TFRKPHN_sd_run_chung } set_country_flag = KOR_seoul_mayor_kim_jaesub set_country_flag = TFRKPHN_mayor_chung }
+	if = { limit = { has_country_flag = TFRKPHN_sd_run_yoon } set_country_flag = KOR_seoul_mayor_kim_jaesub set_country_flag = TFRKPHN_mayor_yoon }
+	if = { limit = { has_country_flag = TFRKPHN_sd_run_kim } set_country_flag = KOR_seoul_mayor_kim_jaesub set_country_flag = TFRKPHN_mayor_kimbm }
+}
+TFRKPHN_sd_opp_takes_office = {
+	KOR_seoul_city_mayor_reset_effect = yes clr_country_flag = TFRKPHN_mayor_chung clr_country_flag = TFRKPHN_mayor_yoon clr_country_flag = TFRKPHN_mayor_kimbm
+	clr_country_flag = TFRKPHN_sd_mayor_gov
+	set_country_flag = KOR_seoul_mayor_jeong_wonoh
+}
+# 새 시장이 친오계면 시청이 대통령실과 발을 맞춘다
+TFRKPHN_sd_mayor_reward = {
+	if = {
+		limit = { NOT = { has_country_flag = TFRKPHN_sd_run_chung } }
+		custom_effect_tooltip = TFRKPHN_sd_mayor_friend_tt
+		hidden_effect = { 1041 = { if = { limit = { is_owned_by = KOR } add_extra_state_shared_building_slots = 2 } } add_to_variable = { TFRKPHN_sd_gap = -1 } TFRKPHN_sd_refresh = yes }
+	}
+	if = { limit = { has_country_flag = TFRKPHN_sd_run_chung } custom_effect_tooltip = TFRKPHN_sd_mayor_own_tt }
+}
+# 2027년 4월 7일 서울시장 보궐선거
+TFRKPHN_sd_byelection = {
+	set_country_flag = TFRKPHN_sd_by_done
+	TFRKPHN_sd_calc_avg = yes
+	if = { limit = { check_variable = { TFRKPHN_sd_avg > 49.9 } } TFRKPHN_sd_gov_takes_office = yes country_event = { id = tfrkphn.653 } }
+	if = { limit = { check_variable = { TFRKPHN_sd_avg < 49.91 } } TFRKPHN_sd_opp_takes_office = yes country_event = { id = tfrkphn.654 } }
+}
+# 2030년 지방선거
 TFRKPHN_sd_election = {
 	set_country_flag = TFRKPHN_sd_elec_done
 	set_variable = { TFRKPHN_sd_won = 0 }
-	set_variable = { TFRKPHN_sd_avg = 0 }
 	set_variable = { TFRKPHN_sd_h1 = 0 }
 	if = { limit = { check_variable = { TFRKPHN_sd_s1 > 49.9 } } set_variable = { TFRKPHN_sd_h1 = 1 } add_to_variable = { TFRKPHN_sd_won = 1 } }
-	add_to_variable = { TFRKPHN_sd_avg = TFRKPHN_sd_s1 }
 	set_variable = { TFRKPHN_sd_h2 = 0 }
 	if = { limit = { check_variable = { TFRKPHN_sd_s2 > 49.9 } } set_variable = { TFRKPHN_sd_h2 = 1 } add_to_variable = { TFRKPHN_sd_won = 1 } }
-	add_to_variable = { TFRKPHN_sd_avg = TFRKPHN_sd_s2 }
 	set_variable = { TFRKPHN_sd_h3 = 0 }
 	if = { limit = { check_variable = { TFRKPHN_sd_s3 > 49.9 } } set_variable = { TFRKPHN_sd_h3 = 1 } add_to_variable = { TFRKPHN_sd_won = 1 } }
-	add_to_variable = { TFRKPHN_sd_avg = TFRKPHN_sd_s3 }
 	set_variable = { TFRKPHN_sd_h4 = 0 }
 	if = { limit = { check_variable = { TFRKPHN_sd_s4 > 49.9 } } set_variable = { TFRKPHN_sd_h4 = 1 } add_to_variable = { TFRKPHN_sd_won = 1 } }
-	add_to_variable = { TFRKPHN_sd_avg = TFRKPHN_sd_s4 }
 	set_variable = { TFRKPHN_sd_h5 = 0 }
 	if = { limit = { check_variable = { TFRKPHN_sd_s5 > 49.9 } } set_variable = { TFRKPHN_sd_h5 = 1 } add_to_variable = { TFRKPHN_sd_won = 1 } }
-	add_to_variable = { TFRKPHN_sd_avg = TFRKPHN_sd_s5 }
 	set_variable = { TFRKPHN_sd_h6 = 0 }
 	if = { limit = { check_variable = { TFRKPHN_sd_s6 > 49.9 } } set_variable = { TFRKPHN_sd_h6 = 1 } add_to_variable = { TFRKPHN_sd_won = 1 } }
-	add_to_variable = { TFRKPHN_sd_avg = TFRKPHN_sd_s6 }
 	set_variable = { TFRKPHN_sd_h7 = 0 }
 	if = { limit = { check_variable = { TFRKPHN_sd_s7 > 49.9 } } set_variable = { TFRKPHN_sd_h7 = 1 } add_to_variable = { TFRKPHN_sd_won = 1 } }
-	add_to_variable = { TFRKPHN_sd_avg = TFRKPHN_sd_s7 }
 	set_variable = { TFRKPHN_sd_h8 = 0 }
 	if = { limit = { check_variable = { TFRKPHN_sd_s8 > 49.9 } } set_variable = { TFRKPHN_sd_h8 = 1 } add_to_variable = { TFRKPHN_sd_won = 1 } }
-	add_to_variable = { TFRKPHN_sd_avg = TFRKPHN_sd_s8 }
 	set_variable = { TFRKPHN_sd_h9 = 0 }
 	if = { limit = { check_variable = { TFRKPHN_sd_s9 > 49.9 } } set_variable = { TFRKPHN_sd_h9 = 1 } add_to_variable = { TFRKPHN_sd_won = 1 } }
-	add_to_variable = { TFRKPHN_sd_avg = TFRKPHN_sd_s9 }
 	set_variable = { TFRKPHN_sd_h10 = 0 }
 	if = { limit = { check_variable = { TFRKPHN_sd_s10 > 49.9 } } set_variable = { TFRKPHN_sd_h10 = 1 } add_to_variable = { TFRKPHN_sd_won = 1 } }
-	add_to_variable = { TFRKPHN_sd_avg = TFRKPHN_sd_s10 }
 	set_variable = { TFRKPHN_sd_h11 = 0 }
 	if = { limit = { check_variable = { TFRKPHN_sd_s11 > 49.9 } } set_variable = { TFRKPHN_sd_h11 = 1 } add_to_variable = { TFRKPHN_sd_won = 1 } }
-	add_to_variable = { TFRKPHN_sd_avg = TFRKPHN_sd_s11 }
 	set_variable = { TFRKPHN_sd_h12 = 0 }
 	if = { limit = { check_variable = { TFRKPHN_sd_s12 > 49.9 } } set_variable = { TFRKPHN_sd_h12 = 1 } add_to_variable = { TFRKPHN_sd_won = 1 } }
-	add_to_variable = { TFRKPHN_sd_avg = TFRKPHN_sd_s12 }
 	set_variable = { TFRKPHN_sd_h13 = 0 }
 	if = { limit = { check_variable = { TFRKPHN_sd_s13 > 49.9 } } set_variable = { TFRKPHN_sd_h13 = 1 } add_to_variable = { TFRKPHN_sd_won = 1 } }
-	add_to_variable = { TFRKPHN_sd_avg = TFRKPHN_sd_s13 }
 	set_variable = { TFRKPHN_sd_h14 = 0 }
 	if = { limit = { check_variable = { TFRKPHN_sd_s14 > 49.9 } } set_variable = { TFRKPHN_sd_h14 = 1 } add_to_variable = { TFRKPHN_sd_won = 1 } }
-	add_to_variable = { TFRKPHN_sd_avg = TFRKPHN_sd_s14 }
 	set_variable = { TFRKPHN_sd_h15 = 0 }
 	if = { limit = { check_variable = { TFRKPHN_sd_s15 > 49.9 } } set_variable = { TFRKPHN_sd_h15 = 1 } add_to_variable = { TFRKPHN_sd_won = 1 } }
-	add_to_variable = { TFRKPHN_sd_avg = TFRKPHN_sd_s15 }
 	set_variable = { TFRKPHN_sd_h16 = 0 }
 	if = { limit = { check_variable = { TFRKPHN_sd_s16 > 49.9 } } set_variable = { TFRKPHN_sd_h16 = 1 } add_to_variable = { TFRKPHN_sd_won = 1 } }
-	add_to_variable = { TFRKPHN_sd_avg = TFRKPHN_sd_s16 }
 	set_variable = { TFRKPHN_sd_h17 = 0 }
 	if = { limit = { check_variable = { TFRKPHN_sd_s17 > 49.9 } } set_variable = { TFRKPHN_sd_h17 = 1 } add_to_variable = { TFRKPHN_sd_won = 1 } }
-	add_to_variable = { TFRKPHN_sd_avg = TFRKPHN_sd_s17 }
 	set_variable = { TFRKPHN_sd_h18 = 0 }
 	if = { limit = { check_variable = { TFRKPHN_sd_s18 > 49.9 } } set_variable = { TFRKPHN_sd_h18 = 1 } add_to_variable = { TFRKPHN_sd_won = 1 } }
-	add_to_variable = { TFRKPHN_sd_avg = TFRKPHN_sd_s18 }
 	set_variable = { TFRKPHN_sd_h19 = 0 }
 	if = { limit = { check_variable = { TFRKPHN_sd_s19 > 49.9 } } set_variable = { TFRKPHN_sd_h19 = 1 } add_to_variable = { TFRKPHN_sd_won = 1 } }
-	add_to_variable = { TFRKPHN_sd_avg = TFRKPHN_sd_s19 }
 	set_variable = { TFRKPHN_sd_h20 = 0 }
 	if = { limit = { check_variable = { TFRKPHN_sd_s20 > 49.9 } } set_variable = { TFRKPHN_sd_h20 = 1 } add_to_variable = { TFRKPHN_sd_won = 1 } }
-	add_to_variable = { TFRKPHN_sd_avg = TFRKPHN_sd_s20 }
 	set_variable = { TFRKPHN_sd_h21 = 0 }
 	if = { limit = { check_variable = { TFRKPHN_sd_s21 > 49.9 } } set_variable = { TFRKPHN_sd_h21 = 1 } add_to_variable = { TFRKPHN_sd_won = 1 } }
-	add_to_variable = { TFRKPHN_sd_avg = TFRKPHN_sd_s21 }
 	set_variable = { TFRKPHN_sd_h22 = 0 }
 	if = { limit = { check_variable = { TFRKPHN_sd_s22 > 49.9 } } set_variable = { TFRKPHN_sd_h22 = 1 } add_to_variable = { TFRKPHN_sd_won = 1 } }
-	add_to_variable = { TFRKPHN_sd_avg = TFRKPHN_sd_s22 }
 	set_variable = { TFRKPHN_sd_h23 = 0 }
 	if = { limit = { check_variable = { TFRKPHN_sd_s23 > 49.9 } } set_variable = { TFRKPHN_sd_h23 = 1 } add_to_variable = { TFRKPHN_sd_won = 1 } }
-	add_to_variable = { TFRKPHN_sd_avg = TFRKPHN_sd_s23 }
 	set_variable = { TFRKPHN_sd_h24 = 0 }
 	if = { limit = { check_variable = { TFRKPHN_sd_s24 > 49.9 } } set_variable = { TFRKPHN_sd_h24 = 1 } add_to_variable = { TFRKPHN_sd_won = 1 } }
-	add_to_variable = { TFRKPHN_sd_avg = TFRKPHN_sd_s24 }
 	set_variable = { TFRKPHN_sd_h25 = 0 }
 	if = { limit = { check_variable = { TFRKPHN_sd_s25 > 49.9 } } set_variable = { TFRKPHN_sd_h25 = 1 } add_to_variable = { TFRKPHN_sd_won = 1 } }
-	add_to_variable = { TFRKPHN_sd_avg = TFRKPHN_sd_s25 }
-	divide_variable = { TFRKPHN_sd_avg = 25 }
+	TFRKPHN_sd_calc_avg = yes
 	set_variable = { TFRKPHN_sd_lost = 25 }
 	subtract_from_variable = { TFRKPHN_sd_lost = TFRKPHN_sd_won }
 	# 구청장 과반(13곳 이상)이면 건설 속도가 오르고, 아니면 내려간다
 	set_variable = { TFRKPHN_sd_build = -0.03 }
 	if = { limit = { check_variable = { TFRKPHN_sd_won > 12.5 } } set_variable = { TFRKPHN_sd_build = 0.05 } }
 	TFRKPHN_sd_refresh = yes
+	clr_country_flag = TFRKPHN_sd_new_mayor
 	if = {
 		limit = { check_variable = { TFRKPHN_sd_avg > 49.9 } }
-		set_country_flag = TFRKPHN_sd_mayor_gov
-		# 친오계 시장이면 시청이 대통령과 발을 맞춘다: 건물 칸과 격차 완화. 거물급 시장은 자기 길을 간다.
-		if = { limit = { has_country_flag = TFRKPHN_sd_cand_kim } 1041 = { if = { limit = { is_owned_by = KOR } add_extra_state_shared_building_slots = 2 } } add_to_variable = { TFRKPHN_sd_gap = -1 } TFRKPHN_sd_refresh = yes }
+		if = { limit = { NOT = { has_country_flag = TFRKPHN_sd_mayor_gov } } set_country_flag = TFRKPHN_sd_new_mayor }	# 야당 시장을 꺾고 새로 들어간 경우만 보상
+		TFRKPHN_sd_gov_takes_office = yes
 		country_event = { id = tfrkphn.643 }
 	}
-	if = { limit = { NOT = { has_country_flag = TFRKPHN_sd_mayor_gov } } country_event = { id = tfrkphn.644 } }
+	if = { limit = { check_variable = { TFRKPHN_sd_avg < 49.91 } } TFRKPHN_sd_opp_takes_office = yes country_event = { id = tfrkphn.644 } }
 }

@@ -1,0 +1,6 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_portrait_KOR_oh_se_hoon"
+		texturefile = "gfx/leaders/KOR/TFRKPHN_oh_se_hoon.png"
+	}
+}

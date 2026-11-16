@@ -175,12 +175,26 @@ if = { limit = { has_country_flag = TFRKPHN_successor_lee_in_je has_country_flag
 # 이인제 정부 돌아오는 기업
 if = { limit = { has_country_flag = TFRKPHN_ut_on } TFRKPHN_ut_daily = yes }
 
-# 오세훈 정부 2030년 지방선거: 3월 경선, 6월 선거 (seoul_elec_build.py)
-if = { limit = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_country_flag = TFRKPHN_sd_inited date > 2030.2.28 NOT = { has_country_flag = TFRKPHN_sd_primary_done } } set_country_flag = TFRKPHN_sd_primary_done country_event = { id = tfrkphn.641 } }
+# >>> 서울 선거 (seoul_elec_build.py)
+if = { limit = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_country_flag = TFRKPHN_sd_inited date > 2027.3.15 date < 2027.4.5 NOT = { has_country_flag = TFRKPHN_sd_by_primary_done } } set_country_flag = TFRKPHN_sd_by_primary_done country_event = { id = tfrkphn.651 } }
+if = { limit = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_country_flag = TFRKPHN_sd_inited has_country_flag = TFRKPHN_sd_run_chung date > 2027.3.28 date < 2027.4.7 NOT = { has_country_flag = TFRKPHN_sd_gap_ev_done } } set_country_flag = TFRKPHN_sd_gap_ev_done country_event = { id = tfrkphn.656 } }
+if = { limit = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_country_flag = TFRKPHN_sd_inited date > 2027.4.7 date < 2027.6.1 NOT = { has_country_flag = TFRKPHN_sd_by_done } } TFRKPHN_sd_byelection = yes }
+if = { limit = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_country_flag = TFRKPHN_sd_inited date > 2030.2.28 NOT = { has_country_flag = TFRKPHN_sd_primary_done } }
+	set_country_flag = TFRKPHN_sd_primary_done
+	if = { limit = { has_country_flag = TFRKPHN_sd_mayor_gov } country_event = { id = tfrkphn.655 } }
+	if = { limit = { NOT = { has_country_flag = TFRKPHN_sd_mayor_gov } } country_event = { id = tfrkphn.641 } }
+}
 if = { limit = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_country_flag = TFRKPHN_sd_inited date > 2030.6.3 NOT = { has_country_flag = TFRKPHN_sd_elec_done } } TFRKPHN_sd_election = yes }
-
-# 오세훈 정부 2030년 지방선거: 정몽준 후보일 때 5월 이벤트 (seoul_elec_build.py)
-if = { limit = { has_country_flag = TFRKPHN_sd_cand_chung date > 2030.5.12 NOT = { has_country_flag = TFRKPHN_sd_gap_ev_done } } set_country_flag = TFRKPHN_sd_gap_ev_done country_event = { id = tfrkphn.645 } }
+# <<< 서울 선거
+# >>> 오세훈 총선과 반발 (oh_ge2028_build.py)
+if = { limit = { has_country_flag = TFRKPHN_successor_oh_se_hoon NOT = { has_country_flag = TFRKPHN_bk_1 } check_variable = { TFRKPHN_redev_n > 1.5 } } set_country_flag = TFRKPHN_bk_1 country_event = { id = tfrkphn.6611 days = 3 } }
+if = { limit = { has_country_flag = TFRKPHN_successor_oh_se_hoon NOT = { has_country_flag = TFRKPHN_bk_2 } check_variable = { TFRKPHN_mega_s1 > 2.5 } check_variable = { TFRKPHN_mega_s2 < 1.5 } check_variable = { TFRKPHN_mega_s3 < 1.5 } check_variable = { TFRKPHN_mega_s4 < 1.5 } check_variable = { TFRKPHN_mega_s5 < 1.5 } } set_country_flag = TFRKPHN_bk_2 country_event = { id = tfrkphn.6612 days = 3 } }
+if = { limit = { has_country_flag = TFRKPHN_successor_oh_se_hoon NOT = { has_country_flag = TFRKPHN_bk_3 } OR = { check_variable = { TFRKPHN_mega_s2 > 2.5 } check_variable = { TFRKPHN_mega_s3 > 2.5 } check_variable = { TFRKPHN_mega_s4 > 2.5 } check_variable = { TFRKPHN_mega_s5 > 2.5 } } } set_country_flag = TFRKPHN_bk_3 country_event = { id = tfrkphn.6613 days = 3 } }
+if = { limit = { has_country_flag = TFRKPHN_successor_oh_se_hoon NOT = { has_country_flag = TFRKPHN_bk_4 } check_variable = { TFRKPHN_ex_n > 2.5 } } set_country_flag = TFRKPHN_bk_4 country_event = { id = tfrkphn.6614 days = 3 } }
+if = { limit = { has_country_flag = TFRKPHN_successor_oh_se_hoon NOT = { has_country_flag = TFRKPHN_bk_5 } has_country_flag = TFRKPHN_sd_inited check_variable = { TFRKPHN_sd_gap > 7.5 } } set_country_flag = TFRKPHN_bk_5 country_event = { id = tfrkphn.6615 days = 3 } }
+if = { limit = { has_country_flag = TFRKPHN_successor_oh_se_hoon date > 2028.3.10 date < 2028.4.10 NOT = { has_country_flag = TFRKPHN_ge28_nom } } set_country_flag = TFRKPHN_ge28_nom country_event = { id = tfrkphn.6601 } }
+if = { limit = { has_country_flag = TFRKPHN_successor_oh_se_hoon date > 2028.4.12 NOT = { has_country_flag = TFRKPHN_ge28_done } } TFRKPHN_ge28_run = yes }
+# <<< 오세훈 총선과 반발
 
 # 오세훈 정부 서울 지도: 변수 첫 설정 (seoul_build.py)
 if = { limit = { has_country_flag = TFRKPHN_successor_oh_se_hoon NOT = { has_country_flag = TFRKPHN_sd_inited } } TFRKPHN_sd_init = yes }

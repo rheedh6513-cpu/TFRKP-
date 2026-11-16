@@ -1,0 +1,92 @@
+# [안내] 오세훈 정부: 철도 결정이 끝났을 때 뜨는 개통 사건. rail_build.py가 만든다.
+add_namespace = tfrkphn
+
+# 경부고속선 보강 개통
+country_event = {
+	id = tfrkphn.671
+	title = tfrkphn.671.t
+	desc = tfrkphn.671.d
+	picture = GFX_TFRKPHN_rail_open
+	is_triggered_only = yes
+	option = { name = TFRKPHN_rail_ev_ok add_political_power = 15 }
+}
+
+# 호남고속선 개통
+country_event = {
+	id = tfrkphn.672
+	title = tfrkphn.672.t
+	desc = tfrkphn.672.d
+	picture = GFX_TFRKPHN_rail_open
+	is_triggered_only = yes
+	option = { name = TFRKPHN_rail_ev_ok add_political_power = 15 }
+}
+
+# 전라선 개통
+country_event = {
+	id = tfrkphn.673
+	title = tfrkphn.673.t
+	desc = tfrkphn.673.d
+	picture = GFX_TFRKPHN_rail_open
+	is_triggered_only = yes
+	option = { name = TFRKPHN_rail_ev_ok add_political_power = 15 }
+}
+
+# 동해선 보강 개통
+country_event = {
+	id = tfrkphn.674
+	title = tfrkphn.674.t
+	desc = tfrkphn.674.d
+	picture = GFX_TFRKPHN_rail_open
+	is_triggered_only = yes
+	option = { name = TFRKPHN_rail_ev_ok add_political_power = 15 }
+}
+
+# 강릉선 보강 개통
+country_event = {
+	id = tfrkphn.675
+	title = tfrkphn.675.t
+	desc = tfrkphn.675.d
+	picture = GFX_TFRKPHN_rail_open
+	is_triggered_only = yes
+	option = { name = TFRKPHN_rail_ev_ok add_political_power = 15 }
+}
+
+# 경의선, 평양까지
+country_event = {
+	id = tfrkphn.676
+	title = tfrkphn.676.t
+	desc = tfrkphn.676.d
+	picture = GFX_TFRKPHN_rail_open_n
+	is_triggered_only = yes
+	option = { name = TFRKPHN_rail_ev_ok add_political_power = 15 }
+}
+
+# 경원선, 원산까지
+country_event = {
+	id = tfrkphn.677
+	title = tfrkphn.677.t
+	desc = tfrkphn.677.d
+	picture = GFX_TFRKPHN_rail_open_n
+	is_triggered_only = yes
+	option = { name = TFRKPHN_rail_ev_ok add_political_power = 15 }
+}
+
+# 동해북부선 개통
+country_event = {
+	id = tfrkphn.678
+	title = tfrkphn.678.t
+	desc = tfrkphn.678.d
+	picture = GFX_TFRKPHN_rail_open_n
+	is_triggered_only = yes
+	option = { name = TFRKPHN_rail_ev_ok add_political_power = 15 }
+}
+
+# 평의선 개통
+country_event = {
+	id = tfrkphn.679
+	title = tfrkphn.679.t
+	desc = tfrkphn.679.d
+	picture = GFX_TFRKPHN_rail_open_n
+	is_triggered_only = yes
+	option = { name = TFRKPHN_rail_ev_ok add_political_power = 15 }
+}

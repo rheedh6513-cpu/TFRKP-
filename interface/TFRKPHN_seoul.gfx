@@ -27,4 +27,5 @@ spriteTypes = {
 	spriteType = { name = "GFX_TFRKPHN_sd_river" texturefile = "gfx/interface/gui/TFRKPHN_seoul/TFRKPHN_sd_river.png" }
 	spriteType = { name = "GFX_TFRKPHN_sd_hit" texturefile = "gfx/interface/gui/TFRKPHN_seoul/TFRKPHN_sd_hit.png" }
 	spriteType = { name = "GFX_TFRKPHN_sd_legend" texturefile = "gfx/interface/gui/TFRKPHN_seoul/TFRKPHN_sd_legend.png" }
+	spriteType = { name = "GFX_TFRKPHN_sd_mark" texturefile = "gfx/interface/gui/TFRKPHN_seoul/TFRKPHN_sd_mark.png" noOfFrames = 2 }
 }

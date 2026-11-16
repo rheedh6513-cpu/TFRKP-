@@ -1,0 +1,32 @@
+# [안내] 신남방정책 결정. 대상 나라마다 하나씩 뜬다. nsp_build.py가 만든다.
+TFRKPHN_nsp_category = {
+	TFRKPHN_nsp_influence = {
+		icon = GFX_decision_generic_political_discourse
+		cost = 25
+		days_remove = 40
+		days_re_enable = 35
+		targets = { BRM VIN LAO CAM INS MAL PHI SIG SIA }
+		target_trigger = { FROM = { exists = yes is_in_faction = no has_war = no } }
+		visible = { FROM = { is_in_faction = no has_war = no } }
+		available = { custom_trigger_tooltip = { tooltip = TFRKPHN_nsp_need_tt JAP = { exists = yes is_in_faction_with = KOR has_country_flag = JAP_cold_war_flag } } }
+		complete_effect = { custom_effect_tooltip = TFRKPHN_nsp_wait_tt }
+		remove_effect = {
+			custom_effect_tooltip = TFRKPHN_nsp_fx_tt
+			FROM = { add_opinion_modifier = { target = KOR modifier = TFRKPHN_pd_partner } }
+			hidden_effect = {
+				FROM = {
+				if = { limit = { tag = BRM } set_temp_variable = { var = global.JAP_influence_BRM_var_temp value = 0.10 } JAP_add_BRM_influence = yes }
+				if = { limit = { tag = VIN } set_temp_variable = { var = global.JAP_influence_VIN_var_temp value = 0.10 } JAP_add_VIN_influence = yes }
+				if = { limit = { tag = LAO } set_temp_variable = { var = global.JAP_influence_LAO_var_temp value = 0.10 } JAP_add_LAO_influence = yes }
+				if = { limit = { tag = CAM } set_temp_variable = { var = global.JAP_influence_CAM_var_temp value = 0.10 } JAP_add_CAM_influence = yes }
+				if = { limit = { tag = INS } set_temp_variable = { var = global.JAP_influence_INS_var_temp value = 0.10 } JAP_add_INS_influence = yes }
+				if = { limit = { tag = MAL } set_temp_variable = { var = global.JAP_influence_MAL_var_temp value = 0.10 } JAP_add_MAL_influence = yes }
+				if = { limit = { tag = PHI } set_temp_variable = { var = global.JAP_influence_PHI_var_temp value = 0.10 } JAP_add_PHI_influence = yes }
+				if = { limit = { tag = SIG } set_temp_variable = { var = global.JAP_influence_SIG_var_temp value = 0.10 } JAP_add_SIG_influence = yes }
+				if = { limit = { tag = SIA } set_temp_variable = { var = global.JAP_influence_SIA_var_temp value = 0.10 } JAP_add_SIA_influence = yes }
+				}
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+}

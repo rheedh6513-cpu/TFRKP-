@@ -1,0 +1,7 @@
+﻿l_korean:
+ # 서울 지역 설명 상자의 시장 칸. 본편의 김재섭 칸을 빌린다. seoul_elec_build.py가 만든다.
+ KOR_seoul_city_mayor_kim_jaesub:0 "[GetTFRKPHNSeoulMayorGov]"
+ TFRKPHN_mayor_kim_jaesub_orig:0 "\n§Y서울특별시장:§!\n\n\n\n\n\n\n\n\n\n£GFX_kim_jaesub_Portrait\n\n\n\n\n\n\n\n§W         김재섭§!\n\n\n§Y집권 정당: §A국민의힘§!"
+ TFRKPHN_mayor_chung_txt:0 "\n§Y서울특별시장:§!\n\n\n\n\n\n\n\n\n\n£GFX_TFRKPHN_portrait_chung_mong_joon\n\n\n\n\n\n\n\n§W         정몽준§!\n\n\n§Y집권 정당: §A국민의힘§!"
+ TFRKPHN_mayor_yoon_txt:0 "\n§Y서울특별시장:§!\n\n\n\n\n\n\n\n\n\n£GFX_TFRKPHN_portrait_yoon_hee_sook\n\n\n\n\n\n\n\n§W         윤희숙§!\n\n\n§Y집권 정당: §A국민의힘§!"
+ TFRKPHN_mayor_kimbm_txt:0 "\n§Y서울특별시장:§!\n\n\n\n\n\n\n\n\n\n£GFX_TFRKPHN_portrait_kim_byung_min\n\n\n\n\n\n\n\n§W         김병민§!\n\n\n§Y집권 정당: §A국민의힘§!"
