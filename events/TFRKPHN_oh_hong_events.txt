@@ -1,0 +1,71 @@
+# [안내] 홍준표 루트: 오세훈 이야기 이벤트. 문구는 localisation/korean/TFRKPHN_oh_hong_l_korean.yml. oh_hong_build.py가 만든다.
+add_namespace = tfrkphn
+
+# 정부 출범 12일 뒤: 세 번
+country_event = {
+	id = tfrkphn.572
+	title = tfrkphn.572.t
+	desc = tfrkphn.572.d
+	picture = GFX_TFRKPHN_oh_bowed
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.572.a
+		add_political_power = 10
+	}
+	option = {
+		name = tfrkphn.572.b
+		add_stability = 0.01
+	}
+}
+
+# 서민 대통령 사흘 뒤: 안심소득
+country_event = {
+	id = tfrkphn.573
+	title = tfrkphn.573.t
+	desc = tfrkphn.573.d
+	picture = GFX_TFRKPHN_oh_seoul
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.573.a
+		add_political_power = 10
+	}
+	option = {
+		name = tfrkphn.573.b
+		add_political_power = -10
+		add_stability = 0.02
+	}
+}
+
+# 핵공유 협의체 엿새 뒤: 넛지
+country_event = {
+	id = tfrkphn.574
+	title = tfrkphn.574.t
+	desc = tfrkphn.574.d
+	picture = GFX_TFRKPHN_oh_pen
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.574.a
+		add_stability = 0.01
+	}
+	option = {
+		name = tfrkphn.574.b
+		add_political_power = 10
+	}
+}
+
+# 걸어온 길, 걸어가는 길 닷새 뒤: 당원과 국민이 정한다
+country_event = {
+	id = tfrkphn.575
+	title = tfrkphn.575.t
+	desc = tfrkphn.575.d
+	picture = GFX_TFRKPHN_oh_podium
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.575.a
+		add_political_power = 15
+	}
+}

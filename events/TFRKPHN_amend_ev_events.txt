@@ -1,0 +1,87 @@
+# [안내] 개헌 논의 도중의 이벤트 세 편. 문구는 localisation/korean/TFRKPHN_amend_ev_l_korean.yml. amend_ev_build.py가 만든다.
+add_namespace = tfrkphn
+
+# 이재명의 반대
+country_event = {
+	id = tfrkphn.592
+	title = tfrkphn.592.t
+	desc = tfrkphn.592.d
+	picture = GFX_TFRKPHN_ljm_amend
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.592.a
+		custom_effect_tooltip = TFRKPHN_amend_ev_m4
+		hidden_effect = { if = { limit = { has_country_flag = TFRKPHN_amend_ongoing } set_temp_variable = { TFRKPHN_amend_delta = -4 } TFRKPHN_amend_add_yes = yes } }
+	}
+	option = {
+		name = tfrkphn.592.b
+		custom_effect_tooltip = TFRKPHN_amend_ev_m2
+		hidden_effect = { if = { limit = { has_country_flag = TFRKPHN_amend_ongoing } set_temp_variable = { TFRKPHN_amend_delta = -2 } TFRKPHN_amend_add_yes = yes } }
+		add_political_power = -40
+	}
+}
+
+# 정청래의 찬성
+country_event = {
+	id = tfrkphn.593
+	title = tfrkphn.593.t
+	desc = tfrkphn.593.d
+	picture = GFX_TFRKPHN_jcr_side
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.593.a
+		custom_effect_tooltip = TFRKPHN_amend_ev_p5
+		hidden_effect = { if = { limit = { has_country_flag = TFRKPHN_amend_ongoing } set_temp_variable = { TFRKPHN_amend_delta = 5 } TFRKPHN_amend_add_yes = yes } }
+	}
+	option = {
+		name = tfrkphn.593.b
+		custom_effect_tooltip = TFRKPHN_amend_ev_p2
+		hidden_effect = { if = { limit = { has_country_flag = TFRKPHN_amend_ongoing } set_temp_variable = { TFRKPHN_amend_delta = 2 } TFRKPHN_amend_add_yes = yes } }
+		add_political_power = 20
+	}
+}
+
+# 여당의 공격
+country_event = {
+	id = tfrkphn.594
+	title = tfrkphn.594.t
+	desc = tfrkphn.594.d
+	picture = GFX_TFRKPHN_assembly_vote
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.594.a
+		add_stability = 0.01
+		add_political_power = -20
+	}
+	option = {
+		name = tfrkphn.594.b
+		custom_effect_tooltip = TFRKPHN_amend_ev_p2
+		hidden_effect = { if = { limit = { has_country_flag = TFRKPHN_amend_ongoing } set_temp_variable = { TFRKPHN_amend_delta = 2 } TFRKPHN_amend_add_yes = yes } }
+		add_stability = -0.02
+	}
+}
+
+# 숨은 이벤트: 개헌 논의가 아직 진행 중일 때만 넘긴다
+country_event = {
+	id = tfrkphn.595
+	hidden = yes
+	is_triggered_only = yes
+	immediate = { if = { limit = { has_country_flag = TFRKPHN_amend_ongoing } country_event = { id = tfrkphn.592 } } }
+}
+
+country_event = {
+	id = tfrkphn.596
+	hidden = yes
+	is_triggered_only = yes
+	immediate = { if = { limit = { has_country_flag = TFRKPHN_amend_ongoing } country_event = { id = tfrkphn.594 } } }
+}
+
+country_event = {
+	id = tfrkphn.597
+	hidden = yes
+	is_triggered_only = yes
+	immediate = { if = { limit = { has_country_flag = TFRKPHN_amend_ongoing } country_event = { id = tfrkphn.593 } } }
+}

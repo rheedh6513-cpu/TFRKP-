@@ -1,0 +1,75 @@
+# [안내] 이인제 루트: 오세훈 이야기 이벤트. 문구는 localisation/korean/TFRKPHN_oh_lee_l_korean.yml. oh_lee_build.py가 만든다.
+add_namespace = tfrkphn
+
+# 출발선에 다시 서서 엿새 뒤: 승복
+country_event = {
+	id = tfrkphn.576
+	title = tfrkphn.576.t
+	desc = tfrkphn.576.d
+	picture = GFX_TFRKPHN_oh_conv
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.576.a
+		add_political_power = 10
+	}
+	option = {
+		name = tfrkphn.576.b
+		add_stability = 0.01
+	}
+}
+
+# 핵 중점 나흘 뒤: 팻말과 넛지
+country_event = {
+	id = tfrkphn.577
+	title = tfrkphn.577.t
+	desc = tfrkphn.577.d
+	picture = GFX_TFRKPHN_oh_party
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.577.a
+		add_political_power = 10
+	}
+	option = {
+		name = tfrkphn.577.b
+		add_stability = 0.01
+	}
+}
+
+# 수레의 양바퀴 사흘 뒤: 안심소득, 다시
+country_event = {
+	id = tfrkphn.578
+	title = tfrkphn.578.t
+	desc = tfrkphn.578.d
+	picture = GFX_TFRKPHN_oh_walk
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.578.a
+		add_political_power = 10
+	}
+	option = {
+		name = tfrkphn.578.b
+		add_political_power = -10
+		add_stability = 0.02
+	}
+}
+
+# 통일은 경제다 나흘 뒤: 서울에서 배운 것
+country_event = {
+	id = tfrkphn.579
+	title = tfrkphn.579.t
+	desc = tfrkphn.579.d
+	picture = GFX_TFRKPHN_oh_office
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.579.a
+		add_stability = 0.01
+	}
+	option = {
+		name = tfrkphn.579.b
+		add_political_power = 10
+	}
+}

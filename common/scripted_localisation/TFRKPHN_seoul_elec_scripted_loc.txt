@@ -1,0 +1,37 @@
+# [안내] 2030년 지방선거 결과 글에 들어가는 이름들. seoul_elec_build.py가 만든다.
+defined_text = {
+	name = GetTFRKPHNSdCand
+	text = { trigger = { has_country_flag = TFRKPHN_sd_cand_chung } localization_key = TFRKPHN_sd_cand_chung }
+	text = { trigger = { has_country_flag = TFRKPHN_sd_cand_kim } localization_key = TFRKPHN_sd_cand_kim }
+	text = { localization_key = TFRKPHN_sd_cand_none }
+}
+defined_text = {
+	name = GetTFRKPHNSdK13
+	text = { trigger = { check_variable = { TFRKPHN_sd_h13 = 1 } } localization_key = TFRKPHN_sd_k13_g }
+	text = { localization_key = TFRKPHN_sd_k13_o }
+}
+defined_text = {
+	name = GetTFRKPHNSdK23
+	text = { trigger = { check_variable = { TFRKPHN_sd_h23 = 1 } } localization_key = TFRKPHN_sd_k23_g }
+	text = { localization_key = TFRKPHN_sd_k23_o }
+}
+defined_text = {
+	name = GetTFRKPHNSdK16
+	text = { trigger = { check_variable = { TFRKPHN_sd_h16 = 1 } } localization_key = TFRKPHN_sd_k16_g }
+	text = { localization_key = TFRKPHN_sd_k16_o }
+}
+defined_text = {
+	name = GetTFRKPHNSdK12
+	text = { trigger = { check_variable = { TFRKPHN_sd_h12 = 1 } } localization_key = TFRKPHN_sd_k12_g }
+	text = { localization_key = TFRKPHN_sd_k12_o }
+}
+defined_text = {
+	name = GetTFRKPHNSdK2
+	text = { trigger = { check_variable = { TFRKPHN_sd_h2 = 1 } } localization_key = TFRKPHN_sd_k2_g }
+	text = { localization_key = TFRKPHN_sd_k2_o }
+}
+defined_text = {
+	name = GetTFRKPHNSdK5
+	text = { trigger = { check_variable = { TFRKPHN_sd_h5 = 1 } } localization_key = TFRKPHN_sd_k5_g }
+	text = { localization_key = TFRKPHN_sd_k5_o }
+}

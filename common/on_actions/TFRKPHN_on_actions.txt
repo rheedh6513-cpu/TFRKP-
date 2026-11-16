@@ -175,6 +175,42 @@ if = { limit = { has_country_flag = TFRKPHN_successor_lee_in_je has_country_flag
 # 이인제 정부 돌아오는 기업
 if = { limit = { has_country_flag = TFRKPHN_ut_on } TFRKPHN_ut_daily = yes }
 
+# 오세훈 정부 2030년 지방선거: 3월 경선, 6월 선거 (seoul_elec_build.py)
+if = { limit = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_country_flag = TFRKPHN_sd_inited date > 2030.2.28 NOT = { has_country_flag = TFRKPHN_sd_primary_done } } set_country_flag = TFRKPHN_sd_primary_done country_event = { id = tfrkphn.641 } }
+if = { limit = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_country_flag = TFRKPHN_sd_inited date > 2030.6.3 NOT = { has_country_flag = TFRKPHN_sd_elec_done } } TFRKPHN_sd_election = yes }
+
+# 오세훈 정부 2030년 지방선거: 정몽준 후보일 때 5월 이벤트 (seoul_elec_build.py)
+if = { limit = { has_country_flag = TFRKPHN_sd_cand_chung date > 2030.5.12 NOT = { has_country_flag = TFRKPHN_sd_gap_ev_done } } set_country_flag = TFRKPHN_sd_gap_ev_done country_event = { id = tfrkphn.645 } }
+
+# 오세훈 정부 서울 지도: 변수 첫 설정 (seoul_build.py)
+if = { limit = { has_country_flag = TFRKPHN_successor_oh_se_hoon NOT = { has_country_flag = TFRKPHN_sd_inited } } TFRKPHN_sd_init = yes }
+
+# 오세훈 정부 메가시티 만들기: 변수 첫 설정 (mega_build.py)
+if = { limit = { has_country_flag = TFRKPHN_successor_oh_se_hoon NOT = { has_country_flag = TFRKPHN_mega_inited } } TFRKPHN_mega_init = yes }
+
+# 북한 내전: 항복한 평양 정부나 군사위원회가 괴뢰국으로 남지 않게 한다 (nkpuppet_fix.py)
+if = {
+	limit = { OR = { has_global_flag = TFRKPHN_nk_civil_war has_country_flag = TFRKPHN_fin_started has_country_flag = TFRKPHN_unified } }
+	every_other_country = {
+		limit = {
+			OR = { tag = PRK tag = CPK }
+			is_subject = yes
+			NOT = { is_subject_of = PRC }
+		}
+		every_owned_state = { add_core_of = KOR }
+		if = {
+			limit = { any_other_country = { has_country_flag = TFRKPHN_free_joseon exists = yes } }
+			random_other_country = {
+				limit = { has_country_flag = TFRKPHN_free_joseon exists = yes }
+				annex_country = { target = PREV transfer_troops = yes }
+			}
+		}
+		else = {
+			KOR = { annex_country = { target = PREV transfer_troops = yes } }
+		}
+	}
+}
+
 # 이인제 정부 북진 통일 마무리: 북한 내전에서 평양 정부와 군사위원회가 모두 무너지면 평양 입성 이벤트
 if = {
 	limit = {
@@ -404,7 +440,25 @@ if = {
 	}
 	set_country_flag = TFRKPHN_ge2027_done
 	TFRKPHN_hong_update_support_display = yes
-	if = {	# 전당대회에서 이인제 선출 (마지막 중점)
+	# 다음 대통령 정하기 (ge2027_order_fix.py)
+	if = {	# 개입 · 패전: 무조건 안철수
+		limit = { has_completed_focus = TFRKPHN_hong_b02_02 NOT = { has_global_flag = PRC_taiwan_war_lost } }
+		country_event = { id = tfrkphn.304 }
+	}
+	else_if = {	# 중립 · 승전: 무조건 황교안
+		limit = { NOT = { has_completed_focus = TFRKPHN_hong_b02_02 } has_global_flag = PRC_taiwan_war_lost }
+		country_event = { id = tfrkphn.305 }
+	}
+	else_if = {	# 중립 · 패전: 무조건 조원진
+		limit = { NOT = { has_completed_focus = TFRKPHN_hong_b02_02 } }
+		country_event = { id = tfrkphn.303 }
+	}
+	# 여기부터는 개입 · 승전
+	else_if = {	# 개헌 부결이면 무조건 오세훈 (amend_oh_fix.py)
+		limit = { has_country_flag = TFRKPHN_amend_rejected }
+		country_event = { id = tfrkphn.302 }
+	}
+	else_if = {	# 전당대회에서 이인제 선출 (마지막 중점)
 		limit = { has_country_flag = TFRKPHN_conv_lee }
 		country_event = { id = tfrkphn.701 }
 	}
@@ -412,25 +466,11 @@ if = {
 		limit = { has_country_flag = TFRKPHN_conv_oh }
 		country_event = { id = tfrkphn.302 }
 	}
-	else_if = {	# 개입 · 승전
-		limit = { has_completed_focus = TFRKPHN_hong_b02_02 has_global_flag = PRC_taiwan_war_lost }
-		if = {
-			limit = { check_variable = { TFRKPHN_support_avg > 39.999 } }	# 40% 이상이면 이인제
-			country_event = { id = tfrkphn.701 }
-		}
-		else = { country_event = { id = tfrkphn.302 } }
+	else_if = {	# 지지도 50 미만이면 무조건 오세훈 (amend_oh_fix.py)
+		limit = { check_variable = { TFRKPHN_support_avg < 50 } }
+		country_event = { id = tfrkphn.302 }
 	}
-	else_if = {	# 개입 · 패전
-		limit = { has_completed_focus = TFRKPHN_hong_b02_02 }
-		country_event = { id = tfrkphn.303 }
-	}
-	else_if = {	# 중립 · 승전
-		limit = { has_global_flag = PRC_taiwan_war_lost }
-		country_event = { id = tfrkphn.304 }
-	}
-	else = {	# 중립 · 패전
-		country_event = { id = tfrkphn.305 }
-	}
+	else = { country_event = { id = tfrkphn.701 } }	# 지지도 50 이상이면 이인제
 }
 
 # 제22대 총선(2024.4.10) 결과 이벤트: 홍준표 대통령 + 양안전쟁 참전 승전 경로

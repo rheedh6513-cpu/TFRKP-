@@ -1,0 +1,75 @@
+# [안내] 오세훈 정부 「서울 지도」 패널. 구 스물다섯 개가 여당 지지도에 따라 다섯 가지 색으로 칠해진다. seoul_build.py가 만든다.
+# [안내] 동작은 common/scripted_guis/TFRKPHN_seoul_scripted_guis.txt.
+guiTypes = {
+	containerWindowType = {
+		name = "TFRKPHN_seoul_container"
+		size = { width = 100%% height = 493 }
+		containerWindowType = {
+			name = "TFRKPHN_seoul_panel"
+			position = { x = 0 y = 0 }
+			size = { width = 500 height = 491 }
+			background = { name = "background" spriteType = "GFX_tiled_decisions_bg_small" alwaystransparent = yes }
+			containerWindowType = {
+				name = "TFRKPHN_seoul_title_container"
+				position = { x = 1 y = 0 }
+				size = { width = 498 height = 30 }
+				background = { name = "background" spriteType = "GFX_tiled_header_1" alwaystransparent = yes }
+				instantTextBoxType = { name = "TFRKPHN_sd_t_top" position = { x = -240 y = 2 } orientation = CENTER_UP text = "TFRKPHN_sd_t_top" font = "hoi_18mbs" format = left maxWidth = 300 alwaystransparent = yes }
+			}
+			iconType = { name = "TFRKPHN_sd_river" position = { x = 10 y = 34 } spriteType = "GFX_TFRKPHN_sd_river" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_sd_1" position = { x = 286 y = 36 } spriteType = "GFX_TFRKPHN_sd_1" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_sd_2" position = { x = 255 y = 60 } spriteType = "GFX_TFRKPHN_sd_2" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_sd_3" position = { x = 326 y = 44 } spriteType = "GFX_TFRKPHN_sd_3" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_sd_4" position = { x = 145 y = 97 } spriteType = "GFX_TFRKPHN_sd_4" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_sd_5" position = { x = 251 y = 129 } spriteType = "GFX_TFRKPHN_sd_5" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_sd_6" position = { x = 358 y = 151 } spriteType = "GFX_TFRKPHN_sd_6" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_sd_7" position = { x = 168 y = 168 } spriteType = "GFX_TFRKPHN_sd_7" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_sd_8" position = { x = 221 y = 134 } spriteType = "GFX_TFRKPHN_sd_8" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_sd_9" position = { x = 305 y = 171 } spriteType = "GFX_TFRKPHN_sd_9" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_sd_10" position = { x = 15 y = 180 } spriteType = "GFX_TFRKPHN_sd_10" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_sd_11" position = { x = 120 y = 194 } spriteType = "GFX_TFRKPHN_sd_11" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_sd_12" position = { x = 236 y = 222 } spriteType = "GFX_TFRKPHN_sd_12" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_sd_13" position = { x = 289 y = 221 } spriteType = "GFX_TFRKPHN_sd_13" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_sd_14" position = { x = 346 y = 220 } spriteType = "GFX_TFRKPHN_sd_14" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_sd_15" position = { x = 411 y = 207 } spriteType = "GFX_TFRKPHN_sd_15" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_sd_16" position = { x = 217 y = 246 } spriteType = "GFX_TFRKPHN_sd_16" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_sd_17" position = { x = 76 y = 251 } spriteType = "GFX_TFRKPHN_sd_17" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_sd_18" position = { x = 141 y = 248 } spriteType = "GFX_TFRKPHN_sd_18" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_sd_19" position = { x = 355 y = 264 } spriteType = "GFX_TFRKPHN_sd_19" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_sd_20" position = { x = 170 y = 299 } spriteType = "GFX_TFRKPHN_sd_20" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_sd_21" position = { x = 66 y = 299 } spriteType = "GFX_TFRKPHN_sd_21" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_sd_22" position = { x = 297 y = 274 } spriteType = "GFX_TFRKPHN_sd_22" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_sd_23" position = { x = 256 y = 289 } spriteType = "GFX_TFRKPHN_sd_23" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_sd_24" position = { x = 133 y = 342 } spriteType = "GFX_TFRKPHN_sd_24" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_sd_25" position = { x = 165 y = 331 } spriteType = "GFX_TFRKPHN_sd_25" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_sd_hit1" position = { x = 298 y = 73 } spriteType = "GFX_TFRKPHN_sd_hit" pdx_tooltip = "TFRKPHN_sd_tt1" }
+			iconType = { name = "TFRKPHN_sd_hit2" position = { x = 273 y = 111 } spriteType = "GFX_TFRKPHN_sd_hit" pdx_tooltip = "TFRKPHN_sd_tt2" }
+			iconType = { name = "TFRKPHN_sd_hit3" position = { x = 347 y = 98 } spriteType = "GFX_TFRKPHN_sd_hit" pdx_tooltip = "TFRKPHN_sd_tt3" }
+			iconType = { name = "TFRKPHN_sd_hit4" position = { x = 179 y = 144 } spriteType = "GFX_TFRKPHN_sd_hit" pdx_tooltip = "TFRKPHN_sd_tt4" }
+			iconType = { name = "TFRKPHN_sd_hit5" position = { x = 281 y = 165 } spriteType = "GFX_TFRKPHN_sd_hit" pdx_tooltip = "TFRKPHN_sd_tt5" }
+			iconType = { name = "TFRKPHN_sd_hit6" position = { x = 367 y = 176 } spriteType = "GFX_TFRKPHN_sd_hit" pdx_tooltip = "TFRKPHN_sd_tt6" }
+			iconType = { name = "TFRKPHN_sd_hit7" position = { x = 192 y = 205 } spriteType = "GFX_TFRKPHN_sd_hit" pdx_tooltip = "TFRKPHN_sd_tt7" }
+			iconType = { name = "TFRKPHN_sd_hit8" position = { x = 235 y = 180 } spriteType = "GFX_TFRKPHN_sd_hit" pdx_tooltip = "TFRKPHN_sd_tt8" }
+			iconType = { name = "TFRKPHN_sd_hit9" position = { x = 324 y = 201 } spriteType = "GFX_TFRKPHN_sd_hit" pdx_tooltip = "TFRKPHN_sd_tt9" }
+			iconType = { name = "TFRKPHN_sd_hit10" position = { x = 59 y = 229 } spriteType = "GFX_TFRKPHN_sd_hit" pdx_tooltip = "TFRKPHN_sd_tt10" }
+			iconType = { name = "TFRKPHN_sd_hit11" position = { x = 162 y = 230 } spriteType = "GFX_TFRKPHN_sd_hit" pdx_tooltip = "TFRKPHN_sd_tt11" }
+			iconType = { name = "TFRKPHN_sd_hit12" position = { x = 258 y = 230 } spriteType = "GFX_TFRKPHN_sd_hit" pdx_tooltip = "TFRKPHN_sd_tt12" }
+			iconType = { name = "TFRKPHN_sd_hit13" position = { x = 308 y = 241 } spriteType = "GFX_TFRKPHN_sd_hit" pdx_tooltip = "TFRKPHN_sd_tt13" }
+			iconType = { name = "TFRKPHN_sd_hit14" position = { x = 359 y = 246 } spriteType = "GFX_TFRKPHN_sd_hit" pdx_tooltip = "TFRKPHN_sd_tt14" }
+			iconType = { name = "TFRKPHN_sd_hit15" position = { x = 430 y = 244 } spriteType = "GFX_TFRKPHN_sd_hit" pdx_tooltip = "TFRKPHN_sd_tt15" }
+			iconType = { name = "TFRKPHN_sd_hit16" position = { x = 240 y = 266 } spriteType = "GFX_TFRKPHN_sd_hit" pdx_tooltip = "TFRKPHN_sd_tt16" }
+			iconType = { name = "TFRKPHN_sd_hit17" position = { x = 98 y = 281 } spriteType = "GFX_TFRKPHN_sd_hit" pdx_tooltip = "TFRKPHN_sd_tt17" }
+			iconType = { name = "TFRKPHN_sd_hit18" position = { x = 156 y = 289 } spriteType = "GFX_TFRKPHN_sd_hit" pdx_tooltip = "TFRKPHN_sd_tt18" }
+			iconType = { name = "TFRKPHN_sd_hit19" position = { x = 396 y = 311 } spriteType = "GFX_TFRKPHN_sd_hit" pdx_tooltip = "TFRKPHN_sd_tt19" }
+			iconType = { name = "TFRKPHN_sd_hit20" position = { x = 208 y = 316 } spriteType = "GFX_TFRKPHN_sd_hit" pdx_tooltip = "TFRKPHN_sd_tt20" }
+			iconType = { name = "TFRKPHN_sd_hit21" position = { x = 97 y = 323 } spriteType = "GFX_TFRKPHN_sd_hit" pdx_tooltip = "TFRKPHN_sd_tt21" }
+			iconType = { name = "TFRKPHN_sd_hit22" position = { x = 334 y = 322 } spriteType = "GFX_TFRKPHN_sd_hit" pdx_tooltip = "TFRKPHN_sd_tt22" }
+			iconType = { name = "TFRKPHN_sd_hit23" position = { x = 298 y = 356 } spriteType = "GFX_TFRKPHN_sd_hit" pdx_tooltip = "TFRKPHN_sd_tt23" }
+			iconType = { name = "TFRKPHN_sd_hit24" position = { x = 149 y = 372 } spriteType = "GFX_TFRKPHN_sd_hit" pdx_tooltip = "TFRKPHN_sd_tt24" }
+			iconType = { name = "TFRKPHN_sd_hit25" position = { x = 200 y = 362 } spriteType = "GFX_TFRKPHN_sd_hit" pdx_tooltip = "TFRKPHN_sd_tt25" }
+			iconType = { name = "TFRKPHN_sd_legend" position = { x = 100 y = 431 } spriteType = "GFX_TFRKPHN_sd_legend" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_sd_t_count" position = { x = 8 y = 447 } text = "TFRKPHN_sd_t_count" font = "hoi_16mbs" format = center maxWidth = 484 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_sd_t_gap" position = { x = 8 y = 467 } text = "TFRKPHN_sd_t_gap" font = "hoi_16mbs" format = center maxWidth = 484 maxHeight = 20 alwaystransparent = yes }
+		}
+	}
+}

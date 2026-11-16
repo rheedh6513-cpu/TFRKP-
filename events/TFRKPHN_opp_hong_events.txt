@@ -1,0 +1,70 @@
+# [안내] 홍준표 루트: 야당의 얼굴(이낙연, 이재명) 이벤트. 문구는 localisation/korean/TFRKPHN_opp_hong_l_korean.yml. opp_hong_build.py가 만든다.
+add_namespace = tfrkphn
+
+# 정부 출범 여드레 뒤: 패자의 전화
+country_event = {
+	id = tfrkphn.583
+	title = tfrkphn.583.t
+	desc = tfrkphn.583.d
+	picture = GFX_TFRKPHN_opp_lny
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.583.a
+		add_stability = 0.01
+	}
+	option = {
+		name = tfrkphn.583.b
+		add_political_power = 10
+	}
+}
+
+# 폭풍이 지나간 이후 나흘 뒤: 당권
+country_event = {
+	id = tfrkphn.584
+	title = tfrkphn.584.t
+	desc = tfrkphn.584.d
+	picture = GFX_TFRKPHN_opp_ljm
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.584.a
+		add_stability = 0.01
+	}
+	option = {
+		name = tfrkphn.584.b
+		add_political_power = 10
+	}
+}
+
+# 사법시험 부활 사흘 뒤: 뜻밖의 찬성
+country_event = {
+	id = tfrkphn.585
+	title = tfrkphn.585.t
+	desc = tfrkphn.585.d
+	picture = GFX_TFRKPHN_opp_ljm
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.585.a
+		add_stability = 0.01
+	}
+	option = {
+		name = tfrkphn.585.b
+		add_political_power = 10
+	}
+}
+
+# 대만지원법 표결 전날 밤의 야당 대표실. 선택지가 표결 이벤트 첫 장(tfrkphn.729)을 부른다
+country_event = {
+	id = tfrkphn.586
+	title = tfrkphn.586.t
+	desc = tfrkphn.586.d
+	picture = GFX_TFRKPHN_opp_ljm
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.586.a
+		hidden_effect = { country_event = { id = tfrkphn.729 } }
+	}
+}

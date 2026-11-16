@@ -1352,8 +1352,14 @@ country_event = {
 
 	option = {
 		name = tfrkphn.89.story_a
-		custom_effect_tooltip = TFRKPHN_conv_tt
+		if = { limit = { has_country_flag = TFRKPHN_amend_rejected } custom_effect_tooltip = TFRKPHN_conv_rejected_tt }
+		else = { custom_effect_tooltip = TFRKPHN_conv_tt }
+		# 개헌 부결이면 무조건 오세훈 (amend_oh_fix.py)
 		if = {
+			limit = { has_country_flag = TFRKPHN_amend_rejected }
+			country_event = { id = tfrkphn.91 }
+		}
+		else_if = {
 			limit = { check_variable = { TFRKPHN_support_avg > 49.999 } }
 			country_event = { id = tfrkphn.90 }
 		}
@@ -1576,7 +1582,7 @@ country_event = {
 country_event = {
 	id = tfrkphn.130
 	title = tfrkphn.130.t
-	desc = tfrkphn.130.desc
+	desc = tfrkphn.130.kp
 	picture = GFX_TFRKPHN_amend
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -1589,13 +1595,14 @@ country_event = {
 country_event = {
 	id = tfrkphn.131
 	title = tfrkphn.131.t
-	desc = tfrkphn.131.desc
+	desc = tfrkphn.131.kp
 	picture = GFX_TFRKPHN_amend
 	is_triggered_only = yes
 	fire_only_once = yes
 
 	option = {
 		name = tfrkphn.131.a
+		custom_effect_tooltip = TFRKPHN_amend_rejected_oh_tt	# amend_oh_fix.py
 	}
 }
 
@@ -1604,7 +1611,7 @@ country_event = {
 country_event = {
 	id = tfrkphn.132
 	title = tfrkphn.132.t
-	desc = tfrkphn.132.desc
+	desc = tfrkphn.132.kp
 	picture = GFX_TFRKPHN_amend
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -1617,7 +1624,7 @@ country_event = {
 country_event = {
 	id = tfrkphn.133
 	title = tfrkphn.133.t
-	desc = tfrkphn.133.desc
+	desc = tfrkphn.133.kp
 	picture = GFX_TFRKPHN_amend
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -1630,7 +1637,7 @@ country_event = {
 country_event = {
 	id = tfrkphn.134
 	title = tfrkphn.134.t
-	desc = tfrkphn.134.desc
+	desc = tfrkphn.134.kp
 	picture = GFX_TFRKPHN_amend
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -1643,7 +1650,7 @@ country_event = {
 country_event = {
 	id = tfrkphn.135
 	title = tfrkphn.135.t
-	desc = tfrkphn.135.desc
+	desc = tfrkphn.135.kp
 	picture = GFX_TFRKPHN_amend
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -1656,7 +1663,7 @@ country_event = {
 country_event = {
 	id = tfrkphn.136
 	title = tfrkphn.136.t
-	desc = tfrkphn.136.desc
+	desc = tfrkphn.136.kp
 	picture = GFX_TFRKPHN_amend
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -1669,7 +1676,7 @@ country_event = {
 country_event = {
 	id = tfrkphn.137
 	title = tfrkphn.137.t
-	desc = tfrkphn.137.desc
+	desc = tfrkphn.137.kp
 	picture = GFX_TFRKPHN_amend
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -1682,7 +1689,7 @@ country_event = {
 country_event = {
 	id = tfrkphn.138
 	title = tfrkphn.138.t
-	desc = tfrkphn.138.desc
+	desc = tfrkphn.138.kp
 	picture = GFX_TFRKPHN_amend
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -3309,15 +3316,29 @@ country_event = {
 
 	option = {
 		name = tfrkphn.265.story_a
-		hidden_effect = { country_event = { id = tfrkphn.266 days = 2 } }
+		hidden_effect = { country_event = { id = tfrkphn.866 days = 2 } }
 	}
 }
 
 # ===== 이인제 트리 「임기를 함께하는 내각」 2: 임명식 =====
+# >>> kp 266
+# 긴 글의 앞 장들. 마지막 선택지가 원래 이벤트 tfrkphn.266을 부른다 (hongkp_build.py)
+country_event = {
+	id = tfrkphn.866
+	title = tfrkphn.266.t
+	desc = tfrkphn.266.kp
+	picture = GFX_TFRKPHN_appointment
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.866.next
+		hidden_effect = { country_event = { id = tfrkphn.266 } }
+	}
+}
+# <<< kp 266
 country_event = {
 	id = tfrkphn.266
 	title = tfrkphn.266.t
-	desc = tfrkphn.266.story
+	desc = tfrkphn.266.kp2
 	picture = GFX_TFRKPHN_appointment
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -3332,7 +3353,7 @@ country_event = {
 country_event = {
 	id = tfrkphn.271
 	title = tfrkphn.271.t
-	desc = tfrkphn.271.story
+	desc = tfrkphn.271.kp
 	picture = GFX_TFRKPHN_empty_chair
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -3363,7 +3384,7 @@ country_event = {
 country_event = {
 	id = tfrkphn.272
 	title = tfrkphn.272.t
-	desc = tfrkphn.272.story
+	desc = tfrkphn.272.kp
 	picture = GFX_TFRKPHN_rice_price
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -3394,7 +3415,7 @@ country_event = {
 country_event = {
 	id = tfrkphn.273
 	title = tfrkphn.273.t
-	desc = tfrkphn.273.story
+	desc = tfrkphn.273.kp
 	picture = GFX_TFRKPHN_empty_chair
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -3425,7 +3446,7 @@ country_event = {
 country_event = {
 	id = tfrkphn.274
 	title = tfrkphn.274.t
-	desc = tfrkphn.274.story
+	desc = tfrkphn.274.kp
 	picture = GFX_TFRKPHN_vacancy
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -3456,7 +3477,7 @@ country_event = {
 country_event = {
 	id = tfrkphn.275
 	title = tfrkphn.275.t
-	desc = tfrkphn.275.story
+	desc = tfrkphn.275.kp
 	picture = GFX_TFRKPHN_moj
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -3491,7 +3512,7 @@ country_event = {
 country_event = {
 	id = tfrkphn.276
 	title = tfrkphn.276.t
-	desc = tfrkphn.276.story
+	desc = tfrkphn.276.kp
 	picture = GFX_TFRKPHN_motie
 	is_triggered_only = yes
 	fire_only_once = yes

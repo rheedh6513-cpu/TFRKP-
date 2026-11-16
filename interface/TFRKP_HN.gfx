@@ -247,6 +247,22 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/TFRKPHN_hong_ammo.png"
 	}
 	spriteType = {
+		name = "GFX_focus_TFRKPHN_hong_rejected"
+		texturefile = "gfx/interface/goals/TFRKPHN_hong_rejected.png"
+	}
+	spriteType = {
+		name = "GFX_focus_TFRKPHN_e22_new_wave"
+		texturefile = "gfx/interface/goals/TFRKPHN_e22_new_wave.png"
+	}
+	spriteType = {
+		name = "GFX_focus_TFRKPHN_e22_our_base"
+		texturefile = "gfx/interface/goals/TFRKPHN_e22_our_base.png"
+	}
+	spriteType = {
+		name = "GFX_focus_TFRKPHN_e22_nak_anyway"
+		texturefile = "gfx/interface/goals/TFRKPHN_e22_nak_anyway.png"
+	}
+	spriteType = {
 		name = "GFX_focus_TFRKPHN_e22_root"
 		texturefile = "gfx/interface/goals/TFRKPHN_e22_root.png"
 	}
@@ -841,6 +857,74 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_TFRKPHN_baekdu"
 		texturefile = "gfx/event_pictures/TFRKPHN_baekdu.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_maturity"
+		texturefile = "gfx/event_pictures/TFRKPHN_maturity.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_oh_bowed"
+		texturefile = "gfx/event_pictures/TFRKPHN_oh_bowed.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_oh_seoul"
+		texturefile = "gfx/event_pictures/TFRKPHN_oh_seoul.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_oh_pen"
+		texturefile = "gfx/event_pictures/TFRKPHN_oh_pen.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_oh_podium"
+		texturefile = "gfx/event_pictures/TFRKPHN_oh_podium.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_oh_party"
+		texturefile = "gfx/event_pictures/TFRKPHN_oh_party.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_oh_walk"
+		texturefile = "gfx/event_pictures/TFRKPHN_oh_walk.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_oh_office"
+		texturefile = "gfx/event_pictures/TFRKPHN_oh_office.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_opp_kbj"
+		texturefile = "gfx/event_pictures/TFRKPHN_opp_kbj.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_opp_lny"
+		texturefile = "gfx/event_pictures/TFRKPHN_opp_lny.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_opp_ljm"
+		texturefile = "gfx/event_pictures/TFRKPHN_opp_ljm.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_jcr_walk"
+		texturefile = "gfx/event_pictures/TFRKPHN_jcr_walk.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_jcr_smile"
+		texturefile = "gfx/event_pictures/TFRKPHN_jcr_smile.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_jcr_bowed"
+		texturefile = "gfx/event_pictures/TFRKPHN_jcr_bowed.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_jcr_side"
+		texturefile = "gfx/event_pictures/TFRKPHN_jcr_side.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_jcr_stage"
+		texturefile = "gfx/event_pictures/TFRKPHN_jcr_stage.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_ljm_amend"
+		texturefile = "gfx/event_pictures/TFRKPHN_ljm_amend.png"
 	}
 	spriteType = {
 		name = "GFX_TFRKPHN_oksae_run"

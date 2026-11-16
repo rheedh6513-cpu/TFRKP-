@@ -1,0 +1,57 @@
+# [안내] 이인제 루트: 야당의 얼굴(이재명, 이낙연, 김병주) 이벤트. 문구는 localisation/korean/TFRKPHN_opp_lee_l_korean.yml. opp_lee_build.py가 만든다.
+add_namespace = tfrkphn
+
+# 고용보험 2.0 사흘 뒤: 두 경기지사
+country_event = {
+	id = tfrkphn.580
+	title = tfrkphn.580.t
+	desc = tfrkphn.580.d
+	picture = GFX_TFRKPHN_opp_ljm
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.580.a
+		add_political_power = 10
+	}
+	option = {
+		name = tfrkphn.580.b
+		add_political_power = -10
+		add_stability = 0.02
+	}
+}
+
+# 책임총리제 나흘 뒤: 가장 오래 한 총리
+country_event = {
+	id = tfrkphn.581
+	title = tfrkphn.581.t
+	desc = tfrkphn.581.d
+	picture = GFX_TFRKPHN_opp_lny
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.581.a
+		add_stability = 0.01
+	}
+	option = {
+		name = tfrkphn.581.b
+		add_political_power = 10
+	}
+}
+
+# 국방개혁 2단계 사흘 뒤: 대장의 질문
+country_event = {
+	id = tfrkphn.582
+	title = tfrkphn.582.t
+	desc = tfrkphn.582.d
+	picture = GFX_TFRKPHN_opp_kbj
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = tfrkphn.582.a
+		add_stability = 0.01
+	}
+	option = {
+		name = tfrkphn.582.b
+		add_political_power = 10
+	}
+}

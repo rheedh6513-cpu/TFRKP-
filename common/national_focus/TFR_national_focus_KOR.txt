@@ -1325,7 +1325,7 @@ focus_tree = {
 
 	focus = {
 		id = TFRKPHN_e22_election_candlelight_dp
-		icon = GFX_focus_TFRKPHN_nak_destiny
+		icon = GFX_focus_TFRKPHN_e22_nak_anyway
 		prerequisite = { focus = TFRKPHN_e22_election_economy_dp }
 		relative_position_id = TFRKPHN_e22_election_economy_dp
 		cost = 3
@@ -1346,7 +1346,7 @@ focus_tree = {
 
 	focus = {
 		id = TFRKPHN_e22_election_our_ppp
-		icon = GFX_KOR_election_our_ppp
+		icon = GFX_focus_TFRKPHN_e22_our_base
 		prerequisite = { focus = TFRKPHN_e22_people_power_party }
 		relative_position_id = TFRKPHN_e22_people_power_party
 		mutually_exclusive = { focus = TFRKPHN_e22_election_new_ppp }
@@ -1361,7 +1361,7 @@ focus_tree = {
 
 	focus = {
 		id = TFRKPHN_e22_election_new_ppp
-		icon = GFX_KOR_election_new_ppp
+		icon = GFX_focus_TFRKPHN_e22_new_wave
 		prerequisite = { focus = TFRKPHN_e22_people_power_party }
 		relative_position_id = TFRKPHN_e22_people_power_party
 		mutually_exclusive = { focus = TFRKPHN_e22_election_our_ppp }

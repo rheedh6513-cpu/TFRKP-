@@ -1,0 +1,9 @@
+# [안내] 오세훈 정부: 메가시티 만들기. 뿌리 중점 「다시 성장이다」를 끝내면 열린다. mega_build.py가 만든다.
+TFRKPHN_oh_mega_category = {
+	icon = generic_construction
+	priority = 204
+	scripted_gui = TFRKPHN_mega_gui
+	visible_when_empty = yes
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_completed_focus = TFRKPHN_oh_se_hoon_b01_01 }
+}

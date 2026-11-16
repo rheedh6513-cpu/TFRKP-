@@ -1,0 +1,66 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_TFRKPHN_kim_byung_min"
+		texturefile = "gfx/interface/ideas/TFRKPHN_kim_byung_min.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_portrait_kim_byung_min"
+		texturefile = "gfx/leaders/KOR/TFRKPHN_kim_byung_min.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_idea_TFRKPHN_chung_mong_joon"
+		texturefile = "gfx/interface/ideas/TFRKPHN_chung_mong_joon.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_portrait_chung_mong_joon"
+		texturefile = "gfx/leaders/KOR/TFRKPHN_chung_mong_joon.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_portrait_cho_eun_hee"
+		texturefile = "gfx/leaders/KOR/TFRKPHN_cho_eun_hee.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_portrait_yoon_hee_sook"
+		texturefile = "gfx/leaders/KOR/TFRKPHN_yoon_hee_sook.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_idea_TFRKPHN_kang_chul_won"
+		texturefile = "gfx/interface/ideas/TFRKPHN_kang_chul_won.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_portrait_kang_chul_won"
+		texturefile = "gfx/leaders/KOR/TFRKPHN_kang_chul_won.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_idea_TFRKPHN_oh_shin_hwan"
+		texturefile = "gfx/interface/ideas/TFRKPHN_oh_shin_hwan.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_portrait_oh_shin_hwan"
+		texturefile = "gfx/leaders/KOR/TFRKPHN_oh_shin_hwan.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_idea_TFRKPHN_koh_dong_jin"
+		texturefile = "gfx/interface/ideas/TFRKPHN_koh_dong_jin.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_portrait_koh_dong_jin"
+		texturefile = "gfx/leaders/KOR/TFRKPHN_koh_dong_jin.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_idea_TFRKPHN_kim_keun_sik"
+		texturefile = "gfx/interface/ideas/TFRKPHN_kim_keun_sik.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_portrait_kim_keun_sik"
+		texturefile = "gfx/leaders/KOR/TFRKPHN_kim_keun_sik.png"
+		legacy_lazy_load = no
+	}
+}

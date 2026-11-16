@@ -252,6 +252,10 @@ TFRKPHN_amend_start = {
 	TFRKPHN_amend_refresh = yes
 	activate_mission = TFRKPHN_amend_deadline
 	activate_mission = TFRKPHN_amend_opposition_moves
+	# 논의 도중의 이벤트: 이재명의 반대, 여당의 공격, 정청래의 찬성 (amend_ev_build.py)
+	country_event = { id = tfrkphn.595 days = 30 }
+	country_event = { id = tfrkphn.596 days = 75 }
+	country_event = { id = tfrkphn.597 days = 120 }
 }
 
 # 임시 변수 TFRKPHN_amend_delta 만큼 찬성 의원 수를 바꾼다 (음수면 반대파로 이동)
@@ -846,6 +850,7 @@ TFRKPHN_ge2027_lee_in_je_effect = {
 	mark_focus_tree_layout_dirty = yes
 }
 TFRKPHN_ge2027_oh_se_hoon_effect = {
+	TFRKPHN_hong_cabinet_clear = yes
 	clr_country_flag = TFRKP_HN_hong_president
 	clr_country_flag = TFRKPHN_amend_busy
 	set_country_flag = TFRKPHN_successor_oh_se_hoon
@@ -862,6 +867,7 @@ TFRKPHN_ge2027_oh_se_hoon_effect = {
 	mark_focus_tree_layout_dirty = yes
 }
 TFRKPHN_ge2027_cho_won_jin_effect = {
+	TFRKPHN_hong_cabinet_clear = yes
 	clr_country_flag = TFRKP_HN_hong_president
 	clr_country_flag = TFRKPHN_amend_busy
 	set_country_flag = TFRKPHN_successor_cho_won_jin
@@ -877,6 +883,7 @@ TFRKPHN_ge2027_cho_won_jin_effect = {
 	mark_focus_tree_layout_dirty = yes
 }
 TFRKPHN_ge2027_ahn_cheol_soo_effect = {
+	TFRKPHN_hong_cabinet_clear = yes
 	clr_country_flag = TFRKP_HN_hong_president
 	clr_country_flag = TFRKPHN_amend_busy
 	set_country_flag = TFRKPHN_successor_ahn_cheol_soo
@@ -893,6 +900,7 @@ TFRKPHN_ge2027_ahn_cheol_soo_effect = {
 	mark_focus_tree_layout_dirty = yes
 }
 TFRKPHN_ge2027_hwang_kyo_ahn_effect = {
+	TFRKPHN_hong_cabinet_clear = yes
 	clr_country_flag = TFRKP_HN_hong_president
 	clr_country_flag = TFRKPHN_amend_busy
 	set_country_flag = TFRKPHN_successor_hwang_kyo_ahn
@@ -2177,4 +2185,16 @@ TFRKPHN_army_keep_effect = {
 	if = { limit = { has_completed_focus = KOR_yoon_after_navy_5 } set_country_flag = TFRKPHN_keepf_KOR_yoon_after_navy_5 }
 	if = { limit = { has_completed_focus = KOR_yoon_after_navy_6 } set_country_flag = TFRKPHN_keepf_KOR_yoon_after_navy_6 }
 	if = { limit = { has_completed_focus = KOR_yoon_army_upper } set_country_flag = TFRKPHN_keepf_KOR_yoon_army_upper }
+}
+
+# 홍준표 내각 장관을 알림 없이 물린다 (hongcab_fix.py)
+TFRKPHN_hong_cabinet_clear = {
+	hidden_effect = {
+		if = { limit = { has_idea = TFRKPHN_lee_in_je_HM } remove_ideas = TFRKPHN_lee_in_je_HM }
+		if = { limit = { has_idea = TFRKPHN_kim_dae_sik_FM } remove_ideas = TFRKPHN_kim_dae_sik_FM }
+		if = { limit = { has_idea = TFRKPHN_seo_byung_soo_EM } remove_ideas = TFRKPHN_seo_byung_soo_EM }
+		if = { limit = { has_idea = TFRKPHN_hong_il_pyo_IM } remove_ideas = TFRKPHN_hong_il_pyo_IM }
+		if = { limit = { has_idea = TFRKPHN_yoon_jae_ok_IntelM } remove_ideas = TFRKPHN_yoon_jae_ok_IntelM }
+		if = { limit = { has_idea = TFRKPHN_lim_jong_deuk_TM } remove_ideas = TFRKPHN_lim_jong_deuk_TM }
+	}
 }

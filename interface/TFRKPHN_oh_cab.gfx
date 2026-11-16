@@ -1,0 +1,10 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_TFRKPHN_cho_eun_hee"
+		texturefile = "gfx/interface/ideas/TFRKPHN_cho_eun_hee.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TFRKPHN_yoon_hee_sook"
+		texturefile = "gfx/interface/ideas/TFRKPHN_yoon_hee_sook.png"
+	}
+}

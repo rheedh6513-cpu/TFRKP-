@@ -1,0 +1,6 @@
+# [안내] 오세훈 정부 서울 지도: 강남과 강북의 격차에 따른 안정도. 값은 TFRKPHN_sd_refresh가 정한다. seoul_build.py가 만든다.
+TFRKPHN_sd_balance = {
+	icon = GFX_idea_KOR_yoon_common_conservatism_dynamic_modifir_idea
+	stability_factor = TFRKPHN_sd_bal
+	production_speed_buildings_factor = TFRKPHN_sd_build
+}

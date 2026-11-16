@@ -53,7 +53,7 @@ country_event = {
 	id = tfrkphn.531
 	title = tfrkphn.531.t
 	desc = tfrkphn.531.story
-	picture = GFX_TFRKPHN_lee_temp
+	picture = GFX_TFRKPHN_maturity
 	is_triggered_only = yes
 	fire_only_once = yes
 	option = { name = tfrkphn.531.a }

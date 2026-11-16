@@ -1,0 +1,21 @@
+# [안내] 오세훈 정부 국무총리 후보의 특성. oh_cab_build.py가 만든다.
+leader_traits = {
+	# 조은희 (국무총리)
+	TFRKPHN_trait_district_mayor = {
+		random = no
+		stability_factor = 0.05
+		production_speed_buildings_factor = 0.05
+	}
+	# 윤희숙 (국무총리)
+	TFRKPHN_trait_kdi_economist = {
+		random = no
+		consumer_goods_factor = -0.03
+		political_power_factor = 0.05
+	}
+	# 고동진 (경제 장관 칸: 산업통상자원부 장관)
+	TFRKPHN_trait_handset_chief = {
+		random = no
+		business_value_factor = 0.03
+		research_speed_factor = 0.03
+	}
+}

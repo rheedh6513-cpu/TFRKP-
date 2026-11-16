@@ -34,7 +34,7 @@ country_event = {
 country_event = {
 	id = tfrkphn.302
 	title = tfrkphn.302.t
-	desc = tfrkphn.302.desc
+	desc = tfrkphn.302.kp
 	picture = GFX_report_event_ppp_ge_win
 	is_triggered_only = yes
 
@@ -48,7 +48,7 @@ country_event = {
 country_event = {
 	id = tfrkphn.303
 	title = tfrkphn.303.t
-	desc = tfrkphn.303.desc
+	desc = tfrkphn.303.w
 	picture = GFX_report_event_ppp_ge_win
 	is_triggered_only = yes
 
@@ -62,7 +62,7 @@ country_event = {
 country_event = {
 	id = tfrkphn.304
 	title = tfrkphn.304.t
-	desc = tfrkphn.304.desc
+	desc = tfrkphn.304.w
 	picture = GFX_report_event_ppp_ge_win
 	is_triggered_only = yes
 
@@ -76,7 +76,7 @@ country_event = {
 country_event = {
 	id = tfrkphn.305
 	title = tfrkphn.305.t
-	desc = tfrkphn.305.desc
+	desc = tfrkphn.305.w
 	picture = GFX_report_event_ppp_ge_win
 	is_triggered_only = yes
 

@@ -25,6 +25,8 @@ focus_tree = {
 		cost = 4
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			hidden_effect = { country_event = { id = tfrkphn.583 days = 8 } }	# 야당의 얼굴 (opp_hong_build.py)
+			hidden_effect = { country_event = { id = tfrkphn.572 days = 12 } }	# 오세훈 이야기 (oh_hong_build.py)
 			hidden_effect = { country_event = { id = tfrkphn.568 days = 3 } }	# 변방에서 온 사람 (arc_build.py)
 			hidden_effect = { country_event = { id = tfrkphn.513 days = 5 } }	# 유승민 이야기 (yoo_hong_build.py)
 			add_stability = 0.10
@@ -41,6 +43,8 @@ focus_tree = {
 		prerequisite = { focus = TFRKPHN_hong_b01_01 }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			hidden_effect = { country_event = { id = tfrkphn.587 days = 40 } }	# 정청래 이야기 (jcr_build.py)
+			hidden_effect = { country_event = { id = tfrkphn.584 days = 4 } }	# 야당의 얼굴 (opp_hong_build.py)
 			hidden_effect = { country_event = { id = tfrkphn.563 days = 20 } }	# 쓸 만한 사람 (arc_build.py)
 			set_temp_variable = { income_var_temp = -15 }
 			add_income_with_inflation = yes
@@ -64,6 +68,7 @@ focus_tree = {
 		prerequisite = { focus = TFRKPHN_hong_b01_02 }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			hidden_effect = { country_event = { id = tfrkphn.585 days = 3 } }	# 야당의 얼굴 (opp_hong_build.py)
 			country_event = tfrkphn.778
 		}
 	}
@@ -146,6 +151,7 @@ focus_tree = {
 		prerequisite = { focus = TFRKPHN_hong_b01_04 }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			hidden_effect = { country_event = { id = tfrkphn.574 days = 6 } }	# 오세훈 이야기 (oh_hong_build.py)
 			hidden_effect = { country_event = { id = tfrkphn.564 days = 10 } }	# 반대 한 표 (arc_build.py)
 			country_event = tfrkphn.81
 		}
@@ -213,7 +219,7 @@ focus_tree = {
 		y = 0
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			country_event = tfrkphn.729
+			country_event = tfrkphn.586	# 표결 전날 밤을 거쳐 표결(729)로 (opp_hong_build.py)
 			hidden_effect = { country_event = { id = tfrkphn.85 days = 3 } }	# 여론조사 금지 (자동)
 		}
 	}
@@ -236,7 +242,7 @@ focus_tree = {
 
 	focus = {
 		id = TFRKPHN_hong_b02_03
-		icon = GFX_focus_TFRKPHN_taiwan_bill_rejected
+		icon = GFX_focus_TFRKPHN_hong_rejected
 		relative_position_id = TFRKPHN_hong_b02_01
 		prerequisite = { focus = TFRKPHN_hong_b02_01 }
 		mutually_exclusive = { focus = TFRKPHN_hong_b02_02 }
@@ -630,6 +636,7 @@ focus_tree = {
 		y = 1
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			hidden_effect = { country_event = { id = tfrkphn.589 days = 4 } }	# 정청래 이야기 (jcr_build.py)
 			country_event = tfrkphn.51
 			add_political_power = 100
 			add_stability = 0.05
@@ -787,6 +794,7 @@ focus_tree = {
 		y = 5
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			hidden_effect = { country_event = { id = tfrkphn.573 days = 3 } }	# 오세훈 이야기 (oh_hong_build.py)
 			custom_effect_tooltip = TFRKPHN_sp_jin_09_tt
 			hidden_effect = {
 				TFRKPHN_sp_jin_init = yes
@@ -1660,6 +1668,7 @@ focus_tree = {
 		y = 9
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			hidden_effect = { country_event = { id = tfrkphn.575 days = 5 } }	# 오세훈 이야기 (oh_hong_build.py)
 			hidden_effect = { country_event = { id = tfrkphn.517 days = 2 } }	# 유승민 이야기 (yoo_hong_build.py)
 			country_event = tfrkphn.774
 			add_stability = 0.05

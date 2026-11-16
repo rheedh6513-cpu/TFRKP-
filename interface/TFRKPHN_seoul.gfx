@@ -1,0 +1,30 @@
+spriteTypes = {
+	spriteType = { name = "GFX_TFRKPHN_sd_1" texturefile = "gfx/interface/gui/TFRKPHN_seoul/TFRKPHN_sd_1.png" noOfFrames = 5 }
+	spriteType = { name = "GFX_TFRKPHN_sd_2" texturefile = "gfx/interface/gui/TFRKPHN_seoul/TFRKPHN_sd_2.png" noOfFrames = 5 }
+	spriteType = { name = "GFX_TFRKPHN_sd_3" texturefile = "gfx/interface/gui/TFRKPHN_seoul/TFRKPHN_sd_3.png" noOfFrames = 5 }
+	spriteType = { name = "GFX_TFRKPHN_sd_4" texturefile = "gfx/interface/gui/TFRKPHN_seoul/TFRKPHN_sd_4.png" noOfFrames = 5 }
+	spriteType = { name = "GFX_TFRKPHN_sd_5" texturefile = "gfx/interface/gui/TFRKPHN_seoul/TFRKPHN_sd_5.png" noOfFrames = 5 }
+	spriteType = { name = "GFX_TFRKPHN_sd_6" texturefile = "gfx/interface/gui/TFRKPHN_seoul/TFRKPHN_sd_6.png" noOfFrames = 5 }
+	spriteType = { name = "GFX_TFRKPHN_sd_7" texturefile = "gfx/interface/gui/TFRKPHN_seoul/TFRKPHN_sd_7.png" noOfFrames = 5 }
+	spriteType = { name = "GFX_TFRKPHN_sd_8" texturefile = "gfx/interface/gui/TFRKPHN_seoul/TFRKPHN_sd_8.png" noOfFrames = 5 }
+	spriteType = { name = "GFX_TFRKPHN_sd_9" texturefile = "gfx/interface/gui/TFRKPHN_seoul/TFRKPHN_sd_9.png" noOfFrames = 5 }
+	spriteType = { name = "GFX_TFRKPHN_sd_10" texturefile = "gfx/interface/gui/TFRKPHN_seoul/TFRKPHN_sd_10.png" noOfFrames = 5 }
+	spriteType = { name = "GFX_TFRKPHN_sd_11" texturefile = "gfx/interface/gui/TFRKPHN_seoul/TFRKPHN_sd_11.png" noOfFrames = 5 }
+	spriteType = { name = "GFX_TFRKPHN_sd_12" texturefile = "gfx/interface/gui/TFRKPHN_seoul/TFRKPHN_sd_12.png" noOfFrames = 5 }
+	spriteType = { name = "GFX_TFRKPHN_sd_13" texturefile = "gfx/interface/gui/TFRKPHN_seoul/TFRKPHN_sd_13.png" noOfFrames = 5 }
+	spriteType = { name = "GFX_TFRKPHN_sd_14" texturefile = "gfx/interface/gui/TFRKPHN_seoul/TFRKPHN_sd_14.png" noOfFrames = 5 }
+	spriteType = { name = "GFX_TFRKPHN_sd_15" texturefile = "gfx/interface/gui/TFRKPHN_seoul/TFRKPHN_sd_15.png" noOfFrames = 5 }
+	spriteType = { name = "GFX_TFRKPHN_sd_16" texturefile = "gfx/interface/gui/TFRKPHN_seoul/TFRKPHN_sd_16.png" noOfFrames = 5 }
+	spriteType = { name = "GFX_TFRKPHN_sd_17" texturefile = "gfx/interface/gui/TFRKPHN_seoul/TFRKPHN_sd_17.png" noOfFrames = 5 }
+	spriteType = { name = "GFX_TFRKPHN_sd_18" texturefile = "gfx/interface/gui/TFRKPHN_seoul/TFRKPHN_sd_18.png" noOfFrames = 5 }
+	spriteType = { name = "GFX_TFRKPHN_sd_19" texturefile = "gfx/interface/gui/TFRKPHN_seoul/TFRKPHN_sd_19.png" noOfFrames = 5 }
+	spriteType = { name = "GFX_TFRKPHN_sd_20" texturefile = "gfx/interface/gui/TFRKPHN_seoul/TFRKPHN_sd_20.png" noOfFrames = 5 }
+	spriteType = { name = "GFX_TFRKPHN_sd_21" texturefile = "gfx/interface/gui/TFRKPHN_seoul/TFRKPHN_sd_21.png" noOfFrames = 5 }
+	spriteType = { name = "GFX_TFRKPHN_sd_22" texturefile = "gfx/interface/gui/TFRKPHN_seoul/TFRKPHN_sd_22.png" noOfFrames = 5 }
+	spriteType = { name = "GFX_TFRKPHN_sd_23" texturefile = "gfx/interface/gui/TFRKPHN_seoul/TFRKPHN_sd_23.png" noOfFrames = 5 }
+	spriteType = { name = "GFX_TFRKPHN_sd_24" texturefile = "gfx/interface/gui/TFRKPHN_seoul/TFRKPHN_sd_24.png" noOfFrames = 5 }
+	spriteType = { name = "GFX_TFRKPHN_sd_25" texturefile = "gfx/interface/gui/TFRKPHN_seoul/TFRKPHN_sd_25.png" noOfFrames = 5 }
+	spriteType = { name = "GFX_TFRKPHN_sd_river" texturefile = "gfx/interface/gui/TFRKPHN_seoul/TFRKPHN_sd_river.png" }
+	spriteType = { name = "GFX_TFRKPHN_sd_hit" texturefile = "gfx/interface/gui/TFRKPHN_seoul/TFRKPHN_sd_hit.png" }
+	spriteType = { name = "GFX_TFRKPHN_sd_legend" texturefile = "gfx/interface/gui/TFRKPHN_seoul/TFRKPHN_sd_legend.png" }
+}

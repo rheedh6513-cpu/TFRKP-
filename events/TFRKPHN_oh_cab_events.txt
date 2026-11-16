@@ -1,0 +1,22 @@
+# [안내] 오세훈 정부 첫 인선. 뿌리 중점 「다시 성장이다」 이틀 뒤에 한 번 뜬다. 총리만 고르고 나머지 다섯 자리는 함께 정해진다. oh_cab_build.py가 만든다.
+add_namespace = tfrkphn
+
+country_event = {
+	id = tfrkphn.640
+	title = tfrkphn.640.t
+	desc = tfrkphn.640.all
+	picture = GFX_TFRKPHN_oh_office
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.640.a
+		custom_effect_tooltip = tfrkphn.640.a_tt
+		add_ideas = TFRKPHN_cho_eun_hee_HM
+		TFRKPHN_oh_first_staff = yes
+	}
+	option = {
+		name = tfrkphn.640.b
+		custom_effect_tooltip = tfrkphn.640.b_tt
+		add_ideas = TFRKPHN_yoon_hee_sook_HM
+		TFRKPHN_oh_first_staff = yes
+	}
+}

@@ -1,0 +1,20 @@
+# [안내] 대한민국의 민심: 막말하기. rant_build.py가 만든다. 문구는 localisation/korean/TFRKPHN_rant_l_korean.yml.
+TFRKPHN_hong_minsim_category = {
+	TFRKPHN_hong_rant = {
+		icon = GFX_decision_generic_political_actions
+		cost = 0
+		days_re_enable = 14
+		priority = 900
+		visible = {
+			tag = KOR
+			has_country_flag = TFRKP_HN_hong_president
+		}
+		available = { always = yes }
+		complete_effect = {
+			add_political_power = 30
+			custom_effect_tooltip = TFRKPHN_hong_rant_tt
+			hidden_effect = { TFRKPHN_support_decay_random = yes TFRKPHN_hong_update_support_display = yes }
+		}
+		ai_will_do = { factor = 0 }
+	}
+}

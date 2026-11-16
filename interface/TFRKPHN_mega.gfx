@@ -1,0 +1,36 @@
+spriteTypes = {
+	spriteType = { name = "GFX_TFRKPHN_mega_bar" texturefile = "gfx/interface/gui/TFRKPHN_mega/TFRKPHN_mega_bar.png" noOfFrames = 26 }
+	spriteType = { name = "GFX_TFRKPHN_mega_mini" texturefile = "gfx/interface/gui/TFRKPHN_mega/TFRKPHN_mega_mini.png" noOfFrames = 6 }
+	spriteType = { name = "GFX_TFRKPHN_mega_card" texturefile = "gfx/interface/gui/TFRKPHN_mega/TFRKPHN_mega_card.png" }
+	spriteType = { name = "GFX_TFRKPHN_mega_city1" texturefile = "gfx/interface/gui/TFRKPHN_mega/TFRKPHN_mega_city1.png" noOfFrames = 6 }
+	spriteType = { name = "GFX_TFRKPHN_mega_city2" texturefile = "gfx/interface/gui/TFRKPHN_mega/TFRKPHN_mega_city2.png" noOfFrames = 6 }
+	spriteType = { name = "GFX_TFRKPHN_mega_city3" texturefile = "gfx/interface/gui/TFRKPHN_mega/TFRKPHN_mega_city3.png" noOfFrames = 6 }
+	spriteType = { name = "GFX_TFRKPHN_mega_city4" texturefile = "gfx/interface/gui/TFRKPHN_mega/TFRKPHN_mega_city4.png" noOfFrames = 6 }
+	spriteType = { name = "GFX_TFRKPHN_mega_city5" texturefile = "gfx/interface/gui/TFRKPHN_mega/TFRKPHN_mega_city5.png" noOfFrames = 6 }
+	spriteType = { name = "GFX_TFRKPHN_mega_site" texturefile = "gfx/event_pictures/TFRKPHN_mega_site.png" }
+	spriteType = { name = "GFX_TFRKPHN_mega_1_1" texturefile = "gfx/event_pictures/TFRKPHN_mega_1_1.png" }
+	spriteType = { name = "GFX_TFRKPHN_mega_1_2" texturefile = "gfx/event_pictures/TFRKPHN_mega_1_2.png" }
+	spriteType = { name = "GFX_TFRKPHN_mega_1_3" texturefile = "gfx/event_pictures/TFRKPHN_mega_1_3.png" }
+	spriteType = { name = "GFX_TFRKPHN_mega_1_4" texturefile = "gfx/event_pictures/TFRKPHN_mega_1_4.png" }
+	spriteType = { name = "GFX_TFRKPHN_mega_1_5" texturefile = "gfx/event_pictures/TFRKPHN_mega_1_5.png" }
+	spriteType = { name = "GFX_TFRKPHN_mega_2_1" texturefile = "gfx/event_pictures/TFRKPHN_mega_2_1.png" }
+	spriteType = { name = "GFX_TFRKPHN_mega_2_2" texturefile = "gfx/event_pictures/TFRKPHN_mega_2_2.png" }
+	spriteType = { name = "GFX_TFRKPHN_mega_2_3" texturefile = "gfx/event_pictures/TFRKPHN_mega_2_3.png" }
+	spriteType = { name = "GFX_TFRKPHN_mega_2_4" texturefile = "gfx/event_pictures/TFRKPHN_mega_2_4.png" }
+	spriteType = { name = "GFX_TFRKPHN_mega_2_5" texturefile = "gfx/event_pictures/TFRKPHN_mega_2_5.png" }
+	spriteType = { name = "GFX_TFRKPHN_mega_3_1" texturefile = "gfx/event_pictures/TFRKPHN_mega_3_1.png" }
+	spriteType = { name = "GFX_TFRKPHN_mega_3_2" texturefile = "gfx/event_pictures/TFRKPHN_mega_3_2.png" }
+	spriteType = { name = "GFX_TFRKPHN_mega_3_3" texturefile = "gfx/event_pictures/TFRKPHN_mega_3_3.png" }
+	spriteType = { name = "GFX_TFRKPHN_mega_3_4" texturefile = "gfx/event_pictures/TFRKPHN_mega_3_4.png" }
+	spriteType = { name = "GFX_TFRKPHN_mega_3_5" texturefile = "gfx/event_pictures/TFRKPHN_mega_3_5.png" }
+	spriteType = { name = "GFX_TFRKPHN_mega_4_1" texturefile = "gfx/event_pictures/TFRKPHN_mega_4_1.png" }
+	spriteType = { name = "GFX_TFRKPHN_mega_4_2" texturefile = "gfx/event_pictures/TFRKPHN_mega_4_2.png" }
+	spriteType = { name = "GFX_TFRKPHN_mega_4_3" texturefile = "gfx/event_pictures/TFRKPHN_mega_4_3.png" }
+	spriteType = { name = "GFX_TFRKPHN_mega_4_4" texturefile = "gfx/event_pictures/TFRKPHN_mega_4_4.png" }
+	spriteType = { name = "GFX_TFRKPHN_mega_4_5" texturefile = "gfx/event_pictures/TFRKPHN_mega_4_5.png" }
+	spriteType = { name = "GFX_TFRKPHN_mega_5_1" texturefile = "gfx/event_pictures/TFRKPHN_mega_5_1.png" }
+	spriteType = { name = "GFX_TFRKPHN_mega_5_2" texturefile = "gfx/event_pictures/TFRKPHN_mega_5_2.png" }
+	spriteType = { name = "GFX_TFRKPHN_mega_5_3" texturefile = "gfx/event_pictures/TFRKPHN_mega_5_3.png" }
+	spriteType = { name = "GFX_TFRKPHN_mega_5_4" texturefile = "gfx/event_pictures/TFRKPHN_mega_5_4.png" }
+	spriteType = { name = "GFX_TFRKPHN_mega_5_5" texturefile = "gfx/event_pictures/TFRKPHN_mega_5_5.png" }
+}

@@ -1,0 +1,20 @@
+# [안내] 오세훈 정부 「메가시티 만들기」 패널의 동작. mega_build.py가 만든다.
+scripted_gui = {
+	TFRKPHN_mega_gui = {
+		context_type = decision_category
+		window_name = TFRKPHN_mega_container
+		properties = {
+			TFRKPHN_mega_bar = { frame = TFRKPHN_mega_ft }
+			TFRKPHN_mega_city1 = { frame = TFRKPHN_mega_f1 }
+			TFRKPHN_mega_mini1 = { frame = TFRKPHN_mega_f1 }
+			TFRKPHN_mega_city2 = { frame = TFRKPHN_mega_f2 }
+			TFRKPHN_mega_mini2 = { frame = TFRKPHN_mega_f2 }
+			TFRKPHN_mega_city3 = { frame = TFRKPHN_mega_f3 }
+			TFRKPHN_mega_mini3 = { frame = TFRKPHN_mega_f3 }
+			TFRKPHN_mega_city4 = { frame = TFRKPHN_mega_f4 }
+			TFRKPHN_mega_mini4 = { frame = TFRKPHN_mega_f4 }
+			TFRKPHN_mega_city5 = { frame = TFRKPHN_mega_f5 }
+			TFRKPHN_mega_mini5 = { frame = TFRKPHN_mega_f5 }
+		}
+	}
+}
