@@ -194,8 +194,14 @@ if = { limit = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_country_fla
 if = { limit = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_country_flag = TFRKPHN_sd_inited date > 2030.6.3 NOT = { has_country_flag = TFRKPHN_sd_elec_done } } TFRKPHN_sd_election = yes }
 # <<< 서울 선거
 # >>> 시장과 도지사 칸 (gov_build.py)
-if = { limit = { has_country_flag = TFRKPHN_successor_oh_se_hoon NOT = { has_country_flag = TFRKPHN_gov_inited } } TFRKPHN_gov_setup = yes }
+if = { limit = { NOT = { has_country_flag = TFRKPHN_gov_inited } } TFRKPHN_gov_setup = yes }
+if = { limit = { NOT = { has_country_flag = TFRKPHN_gov_swapped } has_global_flag = TFRKP_mod_setup_global_flag } TFRKPHN_gov_swap = yes }	# KP가 광역시 칸을 붙인 뒤(on_startup)에 바꿔 끼운다
 if = { limit = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_country_flag = TFRKPHN_gj_merged NOT = { has_country_flag = TFRKPHN_gov_merged } } TFRKPHN_gov_merge = yes }
+if = { limit = { date > 2023.6.10 NOT = { has_country_flag = TFRKPHN_gangwon_special } } TFRKPHN_gov_gangwon_special = yes country_event = { id = tfrkphn.6741 } }	# 강원특별자치도 출범
+if = { limit = { date > 2024.1.17 NOT = { has_country_flag = TFRKPHN_jeonbuk_special } } TFRKPHN_gov_jeonbuk_special = yes country_event = { id = tfrkphn.6742 } }	# 전북특별자치도 출범
+if = { limit = { date > 2021.7.20 NOT = { has_country_flag = TFRKPHN_act_gyeongnam } } set_country_flag = TFRKPHN_act_gyeongnam country_event = { id = tfrkphn.6743 } }	# 경상남도지사 권한대행
+if = { limit = { date > 2021.8.11 NOT = { has_country_flag = TFRKPHN_act_jeju } } set_country_flag = TFRKPHN_act_jeju country_event = { id = tfrkphn.6744 } }	# 제주특별자치도지사 권한대행
+if = { limit = { date > 2021.10.24 NOT = { has_country_flag = TFRKP_HN_DPK_lee_nakyeon } NOT = { has_country_flag = TFRKPHN_act_gyeonggi } } set_country_flag = TFRKPHN_act_gyeonggi country_event = { id = tfrkphn.6745 } }	# 경기도지사 권한대행
 # <<< 시장과 도지사 칸
 # >>> 지방선거 상황실 (le30_build.py)
 if = { limit = { has_country_flag = TFRKPHN_successor_oh_se_hoon date > 2030.4.5 date < 2030.6.1 NOT = { has_country_flag = TFRKPHN_le_started } } set_country_flag = TFRKPHN_le_started country_event = { id = tfrkphn.6731 } }

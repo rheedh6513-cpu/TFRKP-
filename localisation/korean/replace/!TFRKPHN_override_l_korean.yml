@@ -1,0 +1,4 @@
+﻿l_korean:
+# [안내] KP 글을 덮어쓰는 열쇠만 모았다. 같은 내용이 zzzz_ 파일에도 있다. 게임이 먼저 읽은 쪽을 쓰든 나중 쪽을 쓰든 우리 글이 되게 하려고 이름을 맨 앞(!)과 맨 뒤(zzzz)로 둔다. gov_build.py가 만든다.
+ KOR_busan_city_mayor_cho_gyeongtae:0 "[GetTFRKPHNBusanMayor]"
+ KOR_seoul_city_mayor_kim_jaesub:0 "[GetTFRKPHNSeoulMayorGov]"

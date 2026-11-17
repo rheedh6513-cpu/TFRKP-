@@ -1,0 +1,62 @@
+# [안내] 특별자치도 출범 사건 (강원 2023년 6월 11일, 전북 2024년 1월 18일). 모든 루트에서 한 번씩 뜬다. gov_build.py가 만든다.
+add_namespace = tfrkphn
+
+country_event = {
+	id = tfrkphn.6741
+	title = tfrkphn.6741.t
+	desc = tfrkphn.6741.d
+	picture = GFX_TFRKPHN_gangwon_sp_ev
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6741.a
+		custom_effect_tooltip = tfrkphn.6741.a_tt
+	}
+}
+
+country_event = {
+	id = tfrkphn.6742
+	title = tfrkphn.6742.t
+	desc = tfrkphn.6742.d
+	picture = GFX_TFRKPHN_jeonbuk_sp_ev
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6742.a
+		custom_effect_tooltip = tfrkphn.6742.a_tt
+	}
+}
+
+country_event = {
+	id = tfrkphn.6743
+	title = tfrkphn.6743.t
+	desc = tfrkphn.6743.d
+	picture = GFX_TFRKPHN_act_gyeongnam_ev
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6743.a
+		custom_effect_tooltip = tfrkphn.6743.a_tt
+	}
+}
+
+country_event = {
+	id = tfrkphn.6744
+	title = tfrkphn.6744.t
+	desc = tfrkphn.6744.d
+	picture = GFX_TFRKPHN_act_jeju_ev
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6744.a
+		custom_effect_tooltip = tfrkphn.6744.a_tt
+	}
+}
+
+country_event = {
+	id = tfrkphn.6745
+	title = tfrkphn.6745.t
+	desc = tfrkphn.6745.d
+	picture = GFX_TFRKPHN_act_gyeonggi_ev
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6745.a
+		custom_effect_tooltip = tfrkphn.6745.a_tt
+	}
+}

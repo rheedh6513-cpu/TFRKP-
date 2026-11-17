@@ -1,4 +1,4 @@
-# [안내] 오세훈 정부: KP에 없는 도의 지역 변동치. 효과는 KP의 광역시 변동치(KOR_gwangju_city 등)와 같다. gov_build.py가 만든다.
+# [안내] 오세훈 정부: KP에 없는 도의 지역 변동치와, KP 광역시 변동치의 복제본(시장 칸을 달려고). 효과는 KP의 광역시 변동치(KOR_gwangju_city 등)와 같다. gov_build.py가 만든다.
 TFRKPHN_gyeonggi_do = { # 경기도
 	icon = GFX_modifiers_TFRKPHN_gyeonggi
 	enable = { is_controlled_by = KOR }
@@ -79,8 +79,98 @@ TFRKPHN_gyeongnam_do = { # 경상남도
 	local_building_slots = 1
 	local_supplies = 0.05
 }
+TFRKPHN_gangwon_sp = { # 강원특별자치도 (출범 뒤 TFRKPHN_gangwon_do 자리에 들어간다)
+	icon = GFX_modifiers_TFRKPHN_gangwon_sp
+	enable = { is_controlled_by = KOR }
+	remove_trigger = {
+		NOT = { is_owned_by = KOR }
+	}
+	state_production_speed_buildings_factor = 0.03
+	local_building_slots = 1
+	local_supplies = 0.05
+}
+TFRKPHN_jeonbuk_sp = { # 전북특별자치도 (출범 뒤 TFRKPHN_jeonbuk_do 자리에 들어간다)
+	icon = GFX_modifiers_TFRKPHN_jeonbuk_sp
+	enable = { is_controlled_by = KOR }
+	remove_trigger = {
+		NOT = { is_owned_by = KOR }
+	}
+	state_production_speed_buildings_factor = 0.03
+	local_building_slots = 1
+	local_supplies = 0.05
+}
 TFRKPHN_jeonnam_gwangju_city = { # 전남광주통합특별시 (통합 뒤 KOR_gwangju_city 자리에 들어간다)
+	icon = GFX_modifiers_TFRKPHN_jeonnam_gwangju
+	enable = { is_controlled_by = KOR }
+	remove_trigger = {
+		NOT = { is_owned_by = KOR }
+	}
+	state_production_speed_buildings_factor = 0.03
+	local_building_slots = 1
+	local_supplies = 0.05
+}
+TFRKPHN_daegu_city = { # KP KOR_daegu_city 복제, Daegu Metropolitan City
+	icon = GFX_modifiers_KOR_daegu
+	enable = { is_controlled_by = KOR }
+	remove_trigger = {
+		NOT = { is_owned_by = KOR }
+	}
+	state_production_speed_buildings_factor = 0.03
+	local_building_slots = 1
+	local_supplies = 0.05
+}
+TFRKPHN_incheon_city = { # KP KOR_incheon_city 복제, Incheon Metropolitan City
+	icon = GFX_modifiers_KOR_incheon
+	enable = { is_controlled_by = KOR }
+	remove_trigger = {
+		NOT = { is_owned_by = KOR }
+	}
+	state_production_speed_buildings_factor = 0.03
+	local_building_slots = 1
+	local_supplies = 0.05
+}
+TFRKPHN_gwangju_city = { # KP KOR_gwangju_city 복제, 광주광역시
 	icon = GFX_modifiers_KOR_gwangju
+	enable = { is_controlled_by = KOR }
+	remove_trigger = {
+		NOT = { is_owned_by = KOR }
+	}
+	state_production_speed_buildings_factor = 0.03
+	local_building_slots = 1
+	local_supplies = 0.05
+}
+TFRKPHN_daejeon_city = { # KP KOR_daejeon_city 복제, Daejeon Metropolitan City
+	icon = GFX_modifiers_KOR_daejeon
+	enable = { is_controlled_by = KOR }
+	remove_trigger = {
+		NOT = { is_owned_by = KOR }
+	}
+	state_production_speed_buildings_factor = 0.03
+	local_building_slots = 1
+	local_supplies = 0.05
+}
+TFRKPHN_ulsan_city = { # KP KOR_ulsan_city 복제, Ulsan Metropolitan City
+	icon = GFX_modifiers_KOR_ulsan
+	enable = { is_controlled_by = KOR }
+	remove_trigger = {
+		NOT = { is_owned_by = KOR }
+	}
+	state_production_speed_buildings_factor = 0.03
+	local_building_slots = 1
+	local_supplies = 0.05
+}
+TFRKPHN_sejong_city = { # KP KOR_sejong_special_city 복제, Sejong Special Self-Governing City
+	icon = GFX_modifiers_KOR_sejong
+	enable = { is_controlled_by = KOR }
+	remove_trigger = {
+		NOT = { is_owned_by = KOR }
+	}
+	state_production_speed_buildings_factor = 0.03
+	local_building_slots = 1
+	local_supplies = 0.05
+}
+TFRKPHN_jeju_city = { # KP KOR_jeju_special_self_governing_province 복제, Jeju Special Self-Governing Province
+	icon = GFX_modifiers_KOR_jeju
 	enable = { is_controlled_by = KOR }
 	remove_trigger = {
 		NOT = { is_owned_by = KOR }
