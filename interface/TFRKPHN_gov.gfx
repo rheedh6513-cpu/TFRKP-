@@ -12,13 +12,13 @@ spriteTypes = {
 	spriteType = { name = "GFX_modifiers_TFRKPHN_jeonbuk_sp" texturefile = "gfx/interface/state_modifiers/TFRKPHN_jeonbuk_sp.png" }
 	spriteType = { name = "GFX_modifiers_TFRKPHN_jeonnam_gwangju" texturefile = "gfx/interface/state_modifiers/TFRKPHN_jeonnam_gwangju.png" }
 	spriteType = { name = "GFX_TFRKPHN_gvp_choo_kyung_ho" texturefile = "gfx/interface/TFRKPHN_gov_frames/TFRKPHN_gvf_choo_kyung_ho.png" legacy_lazy_load = no }
-	spriteType = { name = "GFX_TFRKPHN_gvp_KOR_kim_bu_gyeom" texturefile = "gfx/leaders/KOR/KOR_kim_bu_gyeom.png" legacy_lazy_load = no }
+	spriteType = { name = "GFX_TFRKPHN_gvp_KOR_kim_bu_gyeom" texturefile = "gfx/interface/TFRKPHN_gov_frames/TFRKPHN_gvf_KOR_kim_bu_gyeom.png" legacy_lazy_load = no }
 	spriteType = { name = "GFX_TFRKPHN_gvp_kwon_young_jin" texturefile = "gfx/interface/TFRKPHN_gov_frames/TFRKPHN_gvf_kwon_young_jin.png" legacy_lazy_load = no }
 	spriteType = { name = "GFX_TFRKPHN_gvp_yoo_jeong_bok" texturefile = "gfx/interface/TFRKPHN_gov_frames/TFRKPHN_gvf_yoo_jeong_bok.png" legacy_lazy_load = no }
-	spriteType = { name = "GFX_TFRKPHN_gvp_KOR_park_chan_dae" texturefile = "gfx/leaders/KOR/KOR_park_chan_dae.png" legacy_lazy_load = no }
+	spriteType = { name = "GFX_TFRKPHN_gvp_KOR_park_chan_dae" texturefile = "gfx/interface/TFRKPHN_gov_frames/TFRKPHN_gvf_KOR_park_chan_dae.png" legacy_lazy_load = no }
 	spriteType = { name = "GFX_TFRKPHN_gvp_park_nam_choon" texturefile = "gfx/interface/TFRKPHN_gov_frames/TFRKPHN_gvf_park_nam_choon.png" legacy_lazy_load = no }
 	spriteType = { name = "GFX_TFRKPHN_gvp_lee_jung_hyun" texturefile = "gfx/interface/TFRKPHN_gov_frames/TFRKPHN_gvf_lee_jung_hyun.png" legacy_lazy_load = no }
-	spriteType = { name = "GFX_TFRKPHN_gvp_KOR_min_hyung_bae" texturefile = "gfx/leaders/KOR/KOR_min_hyung_bae.png" legacy_lazy_load = no }
+	spriteType = { name = "GFX_TFRKPHN_gvp_KOR_min_hyung_bae" texturefile = "gfx/interface/TFRKPHN_gov_frames/TFRKPHN_gvf_KOR_min_hyung_bae.png" legacy_lazy_load = no }
 	spriteType = { name = "GFX_TFRKPHN_gvp_kang_gi_jung" texturefile = "gfx/interface/TFRKPHN_gov_frames/TFRKPHN_gvf_kang_gi_jung.png" legacy_lazy_load = no }
 	spriteType = { name = "GFX_TFRKPHN_gvp_lee_yong_sup" texturefile = "gfx/interface/TFRKPHN_gov_frames/TFRKPHN_gvf_lee_yong_sup.png" legacy_lazy_load = no }
 	spriteType = { name = "GFX_TFRKPHN_gvp_lee_jang_woo" texturefile = "gfx/interface/TFRKPHN_gov_frames/TFRKPHN_gvf_lee_jang_woo.png" legacy_lazy_load = no }
@@ -30,8 +30,8 @@ spriteTypes = {
 	spriteType = { name = "GFX_TFRKPHN_gvp_cho_sang_ho" texturefile = "gfx/interface/TFRKPHN_gov_frames/TFRKPHN_gvf_cho_sang_ho.png" legacy_lazy_load = no }
 	spriteType = { name = "GFX_TFRKPHN_gvp_lee_choon_hee" texturefile = "gfx/interface/TFRKPHN_gov_frames/TFRKPHN_gvf_lee_choon_hee.png" legacy_lazy_load = no }
 	spriteType = { name = "GFX_TFRKPHN_gvp_kim_eun_hye" texturefile = "gfx/interface/TFRKPHN_gov_frames/TFRKPHN_gvf_kim_eun_hye.png" legacy_lazy_load = no }
-	spriteType = { name = "GFX_TFRKPHN_gvp_PD1_kim_dong_yeon" texturefile = "gfx/leaders/PD1/PD1_kim_dong_yeon.png" legacy_lazy_load = no }
-	spriteType = { name = "GFX_TFRKPHN_gvp_KOR_lee_jae_myung_nothing" texturefile = "gfx/leaders/KOR/KOR_lee_jae_myung_nothing.png" legacy_lazy_load = no }
+	spriteType = { name = "GFX_TFRKPHN_gvp_PD1_kim_dong_yeon" texturefile = "gfx/interface/TFRKPHN_gov_frames/TFRKPHN_gvf_PD1_kim_dong_yeon.png" legacy_lazy_load = no }
+	spriteType = { name = "GFX_TFRKPHN_gvp_KOR_lee_jae_myung_president" texturefile = "gfx/interface/TFRKPHN_gov_frames/TFRKPHN_gvf_KOR_lee_jae_myung_president.png" legacy_lazy_load = no }
 	spriteType = { name = "GFX_TFRKPHN_gvp_oh_byeong_kwon" texturefile = "gfx/interface/TFRKPHN_gov_frames/TFRKPHN_gvf_oh_byeong_kwon.png" legacy_lazy_load = no }
 	spriteType = { name = "GFX_TFRKPHN_gvp_kim_jin_tae" texturefile = "gfx/interface/TFRKPHN_gov_frames/TFRKPHN_gvf_kim_jin_tae.png" legacy_lazy_load = no }
 	spriteType = { name = "GFX_TFRKPHN_gvp_woo_sang_ho" texturefile = "gfx/interface/TFRKPHN_gov_frames/TFRKPHN_gvf_woo_sang_ho.png" legacy_lazy_load = no }
@@ -54,9 +54,9 @@ spriteTypes = {
 	spriteType = { name = "GFX_TFRKPHN_gvp_ha_byeong_pil" texturefile = "gfx/interface/TFRKPHN_gov_frames/TFRKPHN_gvf_ha_byeong_pil.png" legacy_lazy_load = no }
 	spriteType = { name = "GFX_TFRKPHN_gvp_heo_hyang_jin" texturefile = "gfx/interface/TFRKPHN_gov_frames/TFRKPHN_gvf_heo_hyang_jin.png" legacy_lazy_load = no }
 	spriteType = { name = "GFX_TFRKPHN_gvp_oh_young_hun" texturefile = "gfx/interface/TFRKPHN_gov_frames/TFRKPHN_gvf_oh_young_hun.png" legacy_lazy_load = no }
-	spriteType = { name = "GFX_TFRKPHN_gvp_KOR_won_hee_ryong" texturefile = "gfx/leaders/KOR/KOR_won_hee_ryong.png" legacy_lazy_load = no }
+	spriteType = { name = "GFX_TFRKPHN_gvp_KOR_won_hee_ryong" texturefile = "gfx/interface/TFRKPHN_gov_frames/TFRKPHN_gvf_KOR_won_hee_ryong.png" legacy_lazy_load = no }
 	spriteType = { name = "GFX_TFRKPHN_gvp_koo_man_seop" texturefile = "gfx/interface/TFRKPHN_gov_frames/TFRKPHN_gvf_koo_man_seop.png" legacy_lazy_load = no }
-	spriteType = { name = "GFX_TFRKPHN_gvp_KOR_han_dong_hoon" texturefile = "gfx/leaders/KOR/KOR_han_dong_hoon.png" legacy_lazy_load = no }
+	spriteType = { name = "GFX_TFRKPHN_gvp_KOR_han_dong_hoon" texturefile = "gfx/interface/TFRKPHN_gov_frames/TFRKPHN_gvf_KOR_han_dong_hoon.png" legacy_lazy_load = no }
 	spriteType = { name = "GFX_TFRKPHN_gangwon_sp_ev" texturefile = "gfx/event_pictures/TFRKPHN_gangwon_sp_ev.png" }
 	spriteType = { name = "GFX_TFRKPHN_jeonbuk_sp_ev" texturefile = "gfx/event_pictures/TFRKPHN_jeonbuk_sp_ev.png" }
 	spriteType = { name = "GFX_TFRKPHN_act_gyeongnam_ev" texturefile = "gfx/event_pictures/TFRKPHN_act_gyeongnam_ev.png" }
