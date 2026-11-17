@@ -195,7 +195,7 @@ if = { limit = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_country_fla
 # <<< 서울 선거
 # >>> 시장과 도지사 칸 (gov_build.py)
 if = { limit = { NOT = { has_country_flag = TFRKPHN_gov_inited } } TFRKPHN_gov_setup = yes }
-if = { limit = { NOT = { has_country_flag = TFRKPHN_gov_swapped } has_global_flag = TFRKP_mod_setup_global_flag } TFRKPHN_gov_swap = yes }	# KP가 광역시 칸을 붙인 뒤(on_startup)에 바꿔 끼운다
+if = { limit = { has_global_flag = TFRKP_mod_setup_global_flag OR = { 1411 = { has_dynamic_modifier = { modifier = KOR_daegu_city } } 1041 = { has_dynamic_modifier = { modifier = KOR_incheon_city } } 869 = { has_dynamic_modifier = { modifier = KOR_gwangju_city } } 525 = { has_dynamic_modifier = { modifier = KOR_daejeon_city } } 1410 = { has_dynamic_modifier = { modifier = KOR_ulsan_city } } 525 = { has_dynamic_modifier = { modifier = KOR_sejong_special_city } } 869 = { has_dynamic_modifier = { modifier = KOR_jeju_special_self_governing_province } } } } TFRKPHN_gov_swap = yes }	# KP가 광역시 칸을 붙인 뒤(on_startup)에 바꿔 끼운다
 if = { limit = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_country_flag = TFRKPHN_gj_merged NOT = { has_country_flag = TFRKPHN_gov_merged } } TFRKPHN_gov_merge = yes }
 if = { limit = { date > 2023.6.10 NOT = { has_country_flag = TFRKPHN_gangwon_special } } TFRKPHN_gov_gangwon_special = yes country_event = { id = tfrkphn.6741 } }	# 강원특별자치도 출범
 if = { limit = { date > 2024.1.17 NOT = { has_country_flag = TFRKPHN_jeonbuk_special } } TFRKPHN_gov_jeonbuk_special = yes country_event = { id = tfrkphn.6742 } }	# 전북특별자치도 출범

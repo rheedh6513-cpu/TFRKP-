@@ -1,0 +1,14 @@
+# [안내] 시장과 도지사 칸을 게임을 불러오는 순간부터 붙인다. gov_build.py가 만든다.
+on_actions = {
+	on_startup = {
+		effect = {
+			if = {
+				limit = { country_exists = KOR }
+				KOR = {
+					if = { limit = { NOT = { has_country_flag = TFRKPHN_gov_inited } } TFRKPHN_gov_setup = yes }
+					if = { limit = { has_global_flag = TFRKP_mod_setup_global_flag OR = { 1411 = { has_dynamic_modifier = { modifier = KOR_daegu_city } } 1041 = { has_dynamic_modifier = { modifier = KOR_incheon_city } } 869 = { has_dynamic_modifier = { modifier = KOR_gwangju_city } } 525 = { has_dynamic_modifier = { modifier = KOR_daejeon_city } } 1410 = { has_dynamic_modifier = { modifier = KOR_ulsan_city } } 525 = { has_dynamic_modifier = { modifier = KOR_sejong_special_city } } 869 = { has_dynamic_modifier = { modifier = KOR_jeju_special_self_governing_province } } } } TFRKPHN_gov_swap = yes }
+				}
+			}
+		}
+	}
+}
