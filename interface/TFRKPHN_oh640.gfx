@@ -1,0 +1,7 @@
+# [안내] 첫 인선 설명 상자에 쓰는 작은 초상 묶음. oh_cab_build.py가 만든다.
+spriteTypes = {
+	spriteType = { name = "GFX_TFRKPHN_oh640_cho" texturefile = "gfx/interface/TFRKPHN_oh640/TFRKPHN_oh640_cho.png" legacy_lazy_load = no }
+	spriteType = { name = "GFX_TFRKPHN_oh640_yoon" texturefile = "gfx/interface/TFRKPHN_oh640/TFRKPHN_oh640_yoon.png" legacy_lazy_load = no }
+	spriteType = { name = "GFX_TFRKPHN_oh640_staff" texturefile = "gfx/interface/TFRKPHN_oh640/TFRKPHN_oh640_staff.png" legacy_lazy_load = no }
+	spriteType = { name = "GFX_TFRKPHN_oh640_min" texturefile = "gfx/interface/TFRKPHN_oh640/TFRKPHN_oh640_min.png" legacy_lazy_load = no }
+}

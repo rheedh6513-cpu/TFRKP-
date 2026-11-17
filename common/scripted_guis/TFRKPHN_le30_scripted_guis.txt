@@ -64,6 +64,23 @@ scripted_gui = {
 			TFRKPHN_le_chip15_click = { set_variable = { TFRKPHN_le_sel = 15 } TFRKPHN_le_draw = yes }
 			TFRKPHN_le_chip16_click = { set_variable = { TFRKPHN_le_sel = 16 } TFRKPHN_le_draw = yes }
 			TFRKPHN_le_chip17_click = { set_variable = { TFRKPHN_le_sel = 17 } TFRKPHN_le_draw = yes }
+			TFRKPHN_le_r1_click = { set_variable = { TFRKPHN_le_sel = 1 } TFRKPHN_le_draw = yes }
+			TFRKPHN_le_r2_click = { set_variable = { TFRKPHN_le_sel = 2 } TFRKPHN_le_draw = yes }
+			TFRKPHN_le_r3_click = { set_variable = { TFRKPHN_le_sel = 3 } TFRKPHN_le_draw = yes }
+			TFRKPHN_le_r4_click = { set_variable = { TFRKPHN_le_sel = 4 } TFRKPHN_le_draw = yes }
+			TFRKPHN_le_r5_click = { set_variable = { TFRKPHN_le_sel = 5 } TFRKPHN_le_draw = yes }
+			TFRKPHN_le_r6_click = { set_variable = { TFRKPHN_le_sel = 6 } TFRKPHN_le_draw = yes }
+			TFRKPHN_le_r7_click = { set_variable = { TFRKPHN_le_sel = 7 } TFRKPHN_le_draw = yes }
+			TFRKPHN_le_r8_click = { set_variable = { TFRKPHN_le_sel = 8 } TFRKPHN_le_draw = yes }
+			TFRKPHN_le_r9_click = { set_variable = { TFRKPHN_le_sel = 9 } TFRKPHN_le_draw = yes }
+			TFRKPHN_le_r10_click = { set_variable = { TFRKPHN_le_sel = 10 } TFRKPHN_le_draw = yes }
+			TFRKPHN_le_r11_click = { set_variable = { TFRKPHN_le_sel = 11 } TFRKPHN_le_draw = yes }
+			TFRKPHN_le_r12_click = { set_variable = { TFRKPHN_le_sel = 12 } TFRKPHN_le_draw = yes }
+			TFRKPHN_le_r13_click = { set_variable = { TFRKPHN_le_sel = 13 } TFRKPHN_le_draw = yes }
+			TFRKPHN_le_r14_click = { set_variable = { TFRKPHN_le_sel = 14 } TFRKPHN_le_draw = yes }
+			TFRKPHN_le_r15_click = { set_variable = { TFRKPHN_le_sel = 15 } TFRKPHN_le_draw = yes }
+			TFRKPHN_le_r16_click = { set_variable = { TFRKPHN_le_sel = 16 } TFRKPHN_le_draw = yes }
+			TFRKPHN_le_r17_click = { set_variable = { TFRKPHN_le_sel = 17 } TFRKPHN_le_draw = yes }
 			TFRKPHN_le_chipm_click = { set_variable = { TFRKPHN_le_sel = 14 } TFRKPHN_le_draw = yes }
 			TFRKPHN_le_act1_click = { add_political_power = -15 TFRKPHN_le_act1 = yes }
 			TFRKPHN_le_act2_click = { add_political_power = -30 TFRKPHN_le_act2 = yes }
