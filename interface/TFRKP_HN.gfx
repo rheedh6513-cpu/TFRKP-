@@ -1329,6 +1329,18 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/TFRKPHN_secret_support.png"
 	}
 	spriteType = {
+		name = "GFX_focus_TFRKPHN_hong_hard_nk"
+		texturefile = "gfx/interface/goals/TFRKPHN_hong_hard_nk.png"
+	}
+	spriteType = {
+		name = "GFX_focus_TFRKPHN_lij_nuke_inherit"
+		texturefile = "gfx/interface/goals/TFRKPHN_lij_nuke_inherit.png"
+	}
+	spriteType = {
+		name = "GFX_focus_TFRKPHN_oh_start"
+		texturefile = "gfx/interface/goals/TFRKPHN_oh_start.png"
+	}
+	spriteType = {
 		name = "GFX_focus_TFRKPHN_volunteer_army"
 		texturefile = "gfx/interface/goals/TFRKPHN_volunteer_army.png"
 	}
@@ -1601,5 +1613,21 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_TFRKPHN_joo_hyung_hwan"
 		texturefile = "gfx/interface/ideas/TFRKPHN_joo_hyung_hwan.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_human_hong_lee"
+		texturefile = "gfx/interface/GUI/TFRKPHN_inlay/human_hong_lee.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_bg_hong_lee"
+		texturefile = "gfx/interface/GUI/TFRKPHN_inlay/bg_hong_lee.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_human_yoon_nak"
+		texturefile = "gfx/interface/GUI/TFRKPHN_inlay/human_yoon_nak.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_bg_yoon_nak"
+		texturefile = "gfx/interface/GUI/TFRKPHN_inlay/bg_yoon_nak.png"
 	}
 }

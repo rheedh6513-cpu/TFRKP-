@@ -13,7 +13,7 @@ focus_tree = {
 
 	focus = {
 		id = TFRKPHN_oh_se_hoon_b01_01
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_focus_TFRKPHN_oh_start
 		x = 16
 		y = 0
 		cost = 5

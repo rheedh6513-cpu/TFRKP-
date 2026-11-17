@@ -712,7 +712,7 @@ focus_tree = {
 
 	focus = {
 		id = TFRKPHN_lee_in_je_h2b
-		icon = GFX_goal_generic_secret_weapon
+		icon = GFX_focus_TFRKPHN_lij_nuke_inherit
 		x = 34
 		y = 2
 		cost = 5

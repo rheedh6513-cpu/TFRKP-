@@ -928,6 +928,7 @@ focus_tree = {
 
 	focus = {
 		id = KOR_2022_election
+		dynamic = yes	# TFRKP Hong Nak: 이름이 후보에 따라 바뀐다. 이게 없으면 이재명 대 홍준표 판에서도 이낙연 판 이름이 나왔다 (2026-11-17)
 		icon = GFX_KOR_2022_election
 		allow_branch = {
 			# TFRKP Hong Nak: 홍준표ㆍ이낙연 판에서는 아래 홍낙 전용 대선 계통도가 대신 나온다
@@ -961,6 +962,7 @@ focus_tree = {
 
 	focus = {
 		id = KOR_democratic_party
+		dynamic = yes	# TFRKP Hong Nak: 이름이 후보에 따라 바뀐다. 이게 없으면 이재명 대 홍준표 판에서도 이낙연 판 이름이 나왔다 (2026-11-17)
 		icon = GFX_KOR_democratic_party
 		available = {
 			has_country_flag = KOR_sided_with_lee
@@ -983,6 +985,7 @@ focus_tree = {
 
 	focus = {
 		id = KOR_people_power_party
+		dynamic = yes	# TFRKP Hong Nak: 이름이 후보에 따라 바뀐다. 이게 없으면 이재명 대 홍준표 판에서도 이낙연 판 이름이 나왔다 (2026-11-17)
 		icon = GFX_KOR_people_power_party
 		available = {
 			has_country_flag = KOR_sided_with_yoon
@@ -1007,6 +1010,7 @@ focus_tree = {
 
 	focus = {
 		id = KOR_election_left_dp
+		dynamic = yes	# TFRKP Hong Nak: 이름이 후보에 따라 바뀐다. 이게 없으면 이재명 대 홍준표 판에서도 이낙연 판 이름이 나왔다 (2026-11-17)
 		icon = GFX_KOR_election_left_dp
 		prerequisite = { focus = KOR_democratic_party }
 		relative_position_id = KOR_democratic_party
@@ -1028,6 +1032,7 @@ focus_tree = {
 
 	focus = {
 		id = KOR_election_middle_dp
+		dynamic = yes	# TFRKP Hong Nak: 이름이 후보에 따라 바뀐다. 이게 없으면 이재명 대 홍준표 판에서도 이낙연 판 이름이 나왔다 (2026-11-17)
 		icon = GFX_KOR_election_middle_dp
 		prerequisite = { focus = KOR_democratic_party }
 		relative_position_id = KOR_democratic_party
@@ -1048,6 +1053,7 @@ focus_tree = {
 
 	focus = {
 		id = KOR_election_economy_dp
+		dynamic = yes	# TFRKP Hong Nak: 이름이 후보에 따라 바뀐다. 이게 없으면 이재명 대 홍준표 판에서도 이낙연 판 이름이 나왔다 (2026-11-17)
 		icon = GFX_KOR_election_economy_dp
 		prerequisite = {
 			focus = KOR_election_left_dp
@@ -1071,6 +1077,7 @@ focus_tree = {
 
 	focus = {
 		id = KOR_election_candlelight_dp
+		dynamic = yes	# TFRKP Hong Nak: 이름이 후보에 따라 바뀐다. 이게 없으면 이재명 대 홍준표 판에서도 이낙연 판 이름이 나왔다 (2026-11-17)
 		icon = GFX_KOR_election_candlelight_dp
 		prerequisite = { focus = KOR_election_economy_dp }
 		relative_position_id = KOR_election_economy_dp
@@ -1092,6 +1099,7 @@ focus_tree = {
 
 	focus = {
 		id = KOR_election_our_ppp
+		dynamic = yes	# TFRKP Hong Nak: 이름이 후보에 따라 바뀐다. 이게 없으면 이재명 대 홍준표 판에서도 이낙연 판 이름이 나왔다 (2026-11-17)
 		icon = GFX_KOR_election_our_ppp
 		prerequisite = { focus = KOR_people_power_party }
 		relative_position_id = KOR_people_power_party
@@ -1107,6 +1115,7 @@ focus_tree = {
 
 	focus = {
 		id = KOR_election_new_ppp
+		dynamic = yes	# TFRKP Hong Nak: 이름이 후보에 따라 바뀐다. 이게 없으면 이재명 대 홍준표 판에서도 이낙연 판 이름이 나왔다 (2026-11-17)
 		icon = GFX_KOR_election_new_ppp
 		prerequisite = { focus = KOR_people_power_party }
 		relative_position_id = KOR_people_power_party
@@ -1123,6 +1132,7 @@ focus_tree = {
 
 	focus = {
 		id = KOR_election_attack_ppp
+		dynamic = yes	# TFRKP Hong Nak: 이름이 후보에 따라 바뀐다. 이게 없으면 이재명 대 홍준표 판에서도 이낙연 판 이름이 나왔다 (2026-11-17)
 		icon = GFX_KOR_election_attack_ppp
 		prerequisite = {
 			focus = KOR_election_our_ppp
@@ -1144,6 +1154,7 @@ focus_tree = {
 
 	focus = {
 		id = KOR_election_depend_ppp
+		dynamic = yes	# TFRKP Hong Nak: 이름이 후보에 따라 바뀐다. 이게 없으면 이재명 대 홍준표 판에서도 이낙연 판 이름이 나왔다 (2026-11-17)
 		icon = GFX_KOR_election_depend_ppp
 		prerequisite = { focus = KOR_election_attack_ppp }
 		relative_position_id = KOR_election_attack_ppp
@@ -1166,6 +1177,7 @@ focus_tree = {
 
 	focus = {
 		id = KOR_election_cheol_soo
+		dynamic = yes	# TFRKP Hong Nak: 이름이 후보에 따라 바뀐다. 이게 없으면 이재명 대 홍준표 판에서도 이낙연 판 이름이 나왔다 (2026-11-17)
 		icon = GFX_KOR_election_cheol_soo
 		prerequisite = {
 			focus = KOR_election_depend_ppp

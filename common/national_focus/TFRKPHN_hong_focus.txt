@@ -363,7 +363,7 @@ focus_tree = {
 
 	focus = {
 		id = TFRKPHN_hong_b02_09
-		icon = GFX_focus_TFRKPHN_hardline_north
+		icon = GFX_focus_TFRKPHN_hong_hard_nk
 		relative_position_id = TFRKPHN_hong_b02_05
 		prerequisite = { focus = TFRKPHN_hong_b02_05 }
 		cost = 4

@@ -53,8 +53,8 @@ defined_text = {
 	text = { trigger = { KOR = { has_country_flag = TFRKPHN_gv9_o } } localization_key = TFRKPHN_gov_gyeonggi_o }
 	text = { trigger = { date > 2022.6.30 } localization_key = TFRKPHN_gov_gyeonggi_i }
 	text = { trigger = { date < 2021.10.25 } localization_key = TFRKPHN_gov_gyeonggi_p0 }
-	text = { trigger = { date > 2021.10.25 KOR = { has_country_flag = TFRKP_HN_DPK_lee_nakyeon } } localization_key = TFRKPHN_gov_gyeonggi_p1 }
-	text = { trigger = { date > 2021.10.25 KOR = { NOT = { has_country_flag = TFRKP_HN_DPK_lee_nakyeon } } } localization_key = TFRKPHN_gov_gyeonggi_p2 }
+	text = { trigger = { date > 2021.10.24 KOR = { has_country_flag = TFRKP_HN_DPK_lee_nakyeon } } localization_key = TFRKPHN_gov_gyeonggi_p1 }
+	text = { trigger = { date > 2021.10.24 KOR = { NOT = { has_country_flag = TFRKP_HN_DPK_lee_nakyeon } } } localization_key = TFRKPHN_gov_gyeonggi_p2 }
 	text = { localization_key = TFRKPHN_gov_none }
 }
 defined_text = {
@@ -113,7 +113,7 @@ defined_text = {
 	text = { trigger = { KOR = { has_country_flag = TFRKPHN_gv16_o } } localization_key = TFRKPHN_gov_gyeongnam_o }
 	text = { trigger = { date > 2022.6.30 } localization_key = TFRKPHN_gov_gyeongnam_i }
 	text = { trigger = { date < 2021.7.21 } localization_key = TFRKPHN_gov_gyeongnam_p0 }
-	text = { trigger = { date > 2021.7.21 } localization_key = TFRKPHN_gov_gyeongnam_p1 }
+	text = { trigger = { date > 2021.7.20 } localization_key = TFRKPHN_gov_gyeongnam_p1 }
 	text = { localization_key = TFRKPHN_gov_none }
 }
 defined_text = {
@@ -122,7 +122,7 @@ defined_text = {
 	text = { trigger = { KOR = { has_country_flag = TFRKPHN_gv17_o } } localization_key = TFRKPHN_gov_jeju_o }
 	text = { trigger = { date > 2022.6.30 } localization_key = TFRKPHN_gov_jeju_i }
 	text = { trigger = { date < 2021.8.12 } localization_key = TFRKPHN_gov_jeju_p0 }
-	text = { trigger = { date > 2021.8.12 } localization_key = TFRKPHN_gov_jeju_p1 }
+	text = { trigger = { date > 2021.8.11 } localization_key = TFRKPHN_gov_jeju_p1 }
 	text = { localization_key = TFRKPHN_gov_none }
 }
 defined_text = {

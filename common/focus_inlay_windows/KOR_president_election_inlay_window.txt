@@ -11,13 +11,17 @@ KOR_president_election_inlay_window = {
 		background_icon = {
 			# TFRKP Hong Nak: 홍준표ㆍ이낙연 둘 다 후보면 원래 배경(윤석열ㆍ이재명 유세 사진) 대신 홍낙 유세 사진
 			GFX_TFRKPHN_bg_hong_nak = { OR = { has_country_flag = TFRKP_HN_PPP_hong has_global_flag = TFRKP_HN_G_hong } OR = { has_country_flag = TFRKP_HN_DPK_lee_nakyeon has_global_flag = TFRKP_HN_G_nak } }
+			# 한쪽만 홍낙 후보면 유세 사진도 반씩 (inlay_mix.py, 2026-11-17)
+			GFX_TFRKPHN_bg_hong_lee = { OR = { has_country_flag = TFRKP_HN_PPP_hong has_global_flag = TFRKP_HN_G_hong } NOT = { OR = { has_country_flag = TFRKP_HN_DPK_lee_nakyeon has_global_flag = TFRKP_HN_G_nak } } }
+			GFX_TFRKPHN_bg_yoon_nak = { OR = { has_country_flag = TFRKP_HN_DPK_lee_nakyeon has_global_flag = TFRKP_HN_G_nak } NOT = { OR = { has_country_flag = TFRKP_HN_PPP_hong has_global_flag = TFRKP_HN_G_hong } } }
 			GFX_KOR_president_election_background = yes
 		}
 		background_human_icon = {
 			# TFRKP Hong Nak: 고른 후보에 맞는 얼굴
 			GFX_TFRKPHN_human_hong_nak = { OR = { has_country_flag = TFRKP_HN_PPP_hong has_global_flag = TFRKP_HN_G_hong } OR = { has_country_flag = TFRKP_HN_DPK_lee_nakyeon has_global_flag = TFRKP_HN_G_nak } }
-			GFX_TFRKPHN_human_hong = { OR = { has_country_flag = TFRKP_HN_PPP_hong has_global_flag = TFRKP_HN_G_hong } }
-			GFX_TFRKPHN_human_nak = { OR = { has_country_flag = TFRKP_HN_DPK_lee_nakyeon has_global_flag = TFRKP_HN_G_nak } }
+			# 이재명 대 홍준표, 윤석열 대 이낙연: 두 사람 얼굴을 다 보인다 (전에는 홍준표나 이낙연 혼자만 나왔다)
+			GFX_TFRKPHN_human_hong_lee = { OR = { has_country_flag = TFRKP_HN_PPP_hong has_global_flag = TFRKP_HN_G_hong } }
+			GFX_TFRKPHN_human_yoon_nak = { OR = { has_country_flag = TFRKP_HN_DPK_lee_nakyeon has_global_flag = TFRKP_HN_G_nak } }
 			GFX_KOR_president_election_background_human = yes
 		}
 		background_line_icon = { GFX_KOR_president_election_background_line = yes }
