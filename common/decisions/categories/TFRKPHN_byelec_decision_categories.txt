@@ -1,0 +1,9 @@
+# [안내] 오세훈 정부: 서울시장 보궐선거 탭. 여당 경선이 끝난 날부터 선거일까지 보인다. byelec_tab_build.py가 만든다.
+TFRKPHN_oh_byelec_category = {
+	icon = generic_construction
+	priority = 204
+	scripted_gui = TFRKPHN_byelec_gui
+	visible_when_empty = yes
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_country_flag = TFRKPHN_sd_by_primary_done NOT = { has_country_flag = TFRKPHN_sd_by_done } }
+}

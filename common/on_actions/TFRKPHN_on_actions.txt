@@ -175,6 +175,13 @@ if = { limit = { has_country_flag = TFRKPHN_successor_lee_in_je has_country_flag
 # 이인제 정부 돌아오는 기업
 if = { limit = { has_country_flag = TFRKPHN_ut_on } TFRKPHN_ut_daily = yes }
 
+# >>> 보궐선거 탭 (byelec_tab_build.py)
+if = { limit = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_country_flag = TFRKPHN_sd_inited NOT = { has_country_flag = TFRKPHN_sd_hong_applied } } TFRKPHN_sd_from_hong = yes }
+if = { limit = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_country_flag = TFRKPHN_sd_by_primary_done date > 2027.4.7 NOT = { has_country_flag = TFRKPHN_sd_by_done } } TFRKPHN_by_count_start = yes }
+if = { limit = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_country_flag = TFRKPHN_sd_by_primary_done date > 2027.3.27 NOT = { has_country_flag = TFRKPHN_sd_by_done } NOT = { has_country_flag = TFRKPHN_by_debate_done } } set_country_flag = TFRKPHN_by_debate_done country_event = { id = tfrkphn.6651 } }
+if = { limit = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_country_flag = TFRKPHN_sd_by_primary_done NOT = { has_country_flag = TFRKPHN_sd_by_done } } add_to_variable = { TFRKPHN_by_opp_cd = 1 } if = { limit = { check_variable = { TFRKPHN_by_opp_cd > 2.5 } } TFRKPHN_by_opp_move = yes } TFRKPHN_by_poll = yes }
+if = { limit = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_country_flag = TFRKPHN_sd_by_done has_country_flag = TFRKPHN_by_count_done has_country_flag = TFRKPHN_sd_mayor_gov check_variable = { TFRKPHN_by_redev > 0.5 } NOT = { has_country_flag = TFRKPHN_by_promise_kept } } TFRKPHN_by_keep_promise = yes }
+# <<< 보궐선거 탭
 # >>> 서울 선거 (seoul_elec_build.py)
 if = { limit = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_country_flag = TFRKPHN_sd_inited date > 2027.3.15 date < 2027.4.5 NOT = { has_country_flag = TFRKPHN_sd_by_primary_done } } set_country_flag = TFRKPHN_sd_by_primary_done country_event = { id = tfrkphn.651 } }
 if = { limit = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_country_flag = TFRKPHN_sd_inited has_country_flag = TFRKPHN_sd_run_chung date > 2027.3.28 date < 2027.4.7 NOT = { has_country_flag = TFRKPHN_sd_gap_ev_done } } set_country_flag = TFRKPHN_sd_gap_ev_done country_event = { id = tfrkphn.656 } }
@@ -186,6 +193,17 @@ if = { limit = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_country_fla
 }
 if = { limit = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_country_flag = TFRKPHN_sd_inited date > 2030.6.3 NOT = { has_country_flag = TFRKPHN_sd_elec_done } } TFRKPHN_sd_election = yes }
 # <<< 서울 선거
+# >>> 시장과 도지사 칸 (gov_build.py)
+if = { limit = { has_country_flag = TFRKPHN_successor_oh_se_hoon NOT = { has_country_flag = TFRKPHN_gov_inited } } TFRKPHN_gov_setup = yes }
+if = { limit = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_country_flag = TFRKPHN_gj_merged NOT = { has_country_flag = TFRKPHN_gov_merged } } TFRKPHN_gov_merge = yes }
+# <<< 시장과 도지사 칸
+# >>> 지방선거 상황실 (le30_build.py)
+if = { limit = { has_country_flag = TFRKPHN_successor_oh_se_hoon date > 2030.4.5 date < 2030.6.1 NOT = { has_country_flag = TFRKPHN_le_started } } set_country_flag = TFRKPHN_le_started country_event = { id = tfrkphn.6731 } }
+if = { limit = { has_country_flag = TFRKPHN_successor_oh_se_hoon date < 2030.3.1 has_variable = TFRKPHN_mega_s3 check_variable = { TFRKPHN_mega_s3 > 1.5 } NOT = { has_country_flag = TFRKPHN_gj_asked } } set_country_flag = TFRKPHN_gj_asked set_country_flag = TFRKPHN_gj_by_mega country_event = { id = tfrkphn.6738 days = 5 } }
+if = { limit = { has_country_flag = TFRKPHN_successor_oh_se_hoon date > 2030.1.1 date < 2030.3.1 NOT = { has_country_flag = TFRKPHN_gj_asked } } set_country_flag = TFRKPHN_gj_asked country_event = { id = tfrkphn.6738 } }
+if = { limit = { has_country_flag = TFRKPHN_le_started has_variable = TFRKPHN_le_days NOT = { has_country_flag = TFRKPHN_le_done } } TFRKPHN_le_daily = yes }
+if = { limit = { has_country_flag = TFRKPHN_le_started has_variable = TFRKPHN_le_days date > 2030.6.3 NOT = { has_country_flag = TFRKPHN_le_done } } TFRKPHN_le_count = yes }
+# <<< 지방선거 상황실
 # >>> 오세훈 총선과 반발 (oh_ge2028_build.py)
 if = { limit = { has_country_flag = TFRKPHN_successor_oh_se_hoon NOT = { has_country_flag = TFRKPHN_bk_1 } check_variable = { TFRKPHN_redev_n > 1.5 } } set_country_flag = TFRKPHN_bk_1 country_event = { id = tfrkphn.6611 days = 3 } }
 if = { limit = { has_country_flag = TFRKPHN_successor_oh_se_hoon NOT = { has_country_flag = TFRKPHN_bk_2 } check_variable = { TFRKPHN_mega_s1 > 2.5 } check_variable = { TFRKPHN_mega_s2 < 1.5 } check_variable = { TFRKPHN_mega_s3 < 1.5 } check_variable = { TFRKPHN_mega_s4 < 1.5 } check_variable = { TFRKPHN_mega_s5 < 1.5 } } set_country_flag = TFRKPHN_bk_2 country_event = { id = tfrkphn.6612 days = 3 } }

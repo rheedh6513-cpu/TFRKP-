@@ -27,13 +27,17 @@ if (-not (Test-Path -LiteralPath (Join-Path $here 'descriptor.mod'))) {
 # 1) 모드 폴더 복사
 New-Item -ItemType Directory -Force -Path $dst | Out-Null
 if ((Resolve-Path -LiteralPath $here).Path.TrimEnd('\','/') -ne (Resolve-Path -LiteralPath $dst).Path.TrimEnd('\','/')) {
-    $skip = @('.git', '.github', 'install.bat', 'install.ps1')
+    $skip = @('.git', '.github')
     Get-ChildItem -LiteralPath $here -Force | Where-Object { $skip -notcontains $_.Name } |
         Copy-Item -Destination $dst -Recurse -Force
     Write-Host "복사 완료: $dst" -ForegroundColor Green
 } else {
     Write-Host "이미 mod 폴더 안에 있어서 복사는 건너뜁니다: $dst"
 }
+
+# 1-1) 옛 판에서 남은 파일 지우기 (남아 있으면 새 파일과 부딪힙니다)
+$old = @('interface\TFRKPHN_nk.gui','common\scripted_guis\TFRKPHN_nk_scripted_guis.txt','interface\TFRKPHN_bj.gui','common\scripted_guis\TFRKPHN_bj_scripted_guis.txt','common\decisions\categories\TFRKPHN_bj_decision_categories.txt')
+foreach ($o in $old) { $p = Join-Path $dst $o; if (Test-Path -LiteralPath $p) { Remove-Item -LiteralPath $p -Force; Write-Host "옛 파일 삭제: $o" } }
 
 # 2) 런처용 .mod 파일 만들기 (descriptor.mod 내용 + path)
 $lines = Get-Content -LiteralPath (Join-Path $dst 'descriptor.mod') -Encoding UTF8 |
@@ -67,4 +71,6 @@ Write-Host ' 1. Paradox 런처를 완전히 끄고 다시 켭니다.'
 Write-Host ' 2. 새 플레이세트를 만들고, 설치된 모드 목록에서 아래 순서로 추가합니다.'
 Write-Host '      The Fire Rises  ->  The Fire Rises: Korea Plus  ->  TFRKP Hong Nak'
 Write-Host ' 3. 한국어 패치 등 다른 모드는 TFRKP Hong Nak보다 위(먼저)에 둡니다.'
+Write-Host ''
+Write-Host '모드가 안 보이거나 실행이 안 되면 같은 폴더의 fix.bat을 더블클릭하세요.' -ForegroundColor Cyan
 Write-Host ''

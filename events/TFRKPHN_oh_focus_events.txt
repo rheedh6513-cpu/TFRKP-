@@ -1,0 +1,232 @@
+# [안내] 오세훈 중점 사건. 중점을 끝내면 하루 뒤에 뜬다. oh_focus_ev_build.py가 만든다.
+add_namespace = tfrkphn
+
+# 중도로 넓힌다 (중점 a2)
+country_event = {
+	id = tfrkphn.6701
+	title = tfrkphn.6701.t
+	desc = tfrkphn.6701.d
+	picture = GFX_TFRKPHN_oh_podium
+	is_triggered_only = yes
+	option = { name = tfrkphn.6701.a }
+}
+
+# 국민에게 묻는다 (중점 a4)
+country_event = {
+	id = tfrkphn.6702
+	title = tfrkphn.6702.t
+	desc = tfrkphn.6702.d
+	picture = GFX_TFRKPHN_oh_pen
+	is_triggered_only = yes
+	option = { name = tfrkphn.6702.a }
+}
+
+# 전시 통제를 걷는다 (중점 a5)
+country_event = {
+	id = tfrkphn.6703
+	title = tfrkphn.6703.t
+	desc = tfrkphn.6703.d
+	picture = GFX_TFRKPHN_oh_office
+	is_triggered_only = yes
+	option = { name = tfrkphn.6703.a }
+}
+
+# 돌아오지 못한 이들의 이름 (중점 a6)
+country_event = {
+	id = tfrkphn.6704
+	title = tfrkphn.6704.t
+	desc = tfrkphn.6704.d
+	picture = GFX_TFRKPHN_oh_bowed
+	is_triggered_only = yes
+	option = { name = tfrkphn.6704.a }
+}
+
+# 스피드 주택공급 (중점 b1)
+country_event = {
+	id = tfrkphn.6705
+	title = tfrkphn.6705.t
+	desc = tfrkphn.6705.d
+	picture = GFX_TFRKPHN_mega_1_2
+	is_triggered_only = yes
+	option = { name = tfrkphn.6705.a }
+}
+
+# 서른다섯 층의 벽 (중점 b3)
+country_event = {
+	id = tfrkphn.6706
+	title = tfrkphn.6706.t
+	desc = tfrkphn.6706.d
+	picture = GFX_TFRKPHN_oh_seoul
+	is_triggered_only = yes
+	option = { name = tfrkphn.6706.a }
+}
+
+# 상생주택 (중점 b6)
+country_event = {
+	id = tfrkphn.6707
+	title = tfrkphn.6707.t
+	desc = tfrkphn.6707.d
+	picture = GFX_TFRKPHN_mega_1_2
+	is_triggered_only = yes
+	option = { name = tfrkphn.6707.a }
+}
+
+# 약자와의 동행 (중점 c1)
+country_event = {
+	id = tfrkphn.6708
+	title = tfrkphn.6708.t
+	desc = tfrkphn.6708.d
+	picture = GFX_TFRKPHN_oh_walk
+	is_triggered_only = yes
+	option = { name = tfrkphn.6708.a }
+}
+
+# 서울런을 전국으로 (중점 c3)
+country_event = {
+	id = tfrkphn.6709
+	title = tfrkphn.6709.t
+	desc = tfrkphn.6709.d
+	picture = GFX_TFRKPHN_oh_pen
+	is_triggered_only = yes
+	option = { name = tfrkphn.6709.a }
+}
+
+# 청년취업사관학교 (중점 c6)
+country_event = {
+	id = tfrkphn.6710
+	title = tfrkphn.6710.t
+	desc = tfrkphn.6710.d
+	picture = GFX_TFRKPHN_oh_walk
+	is_triggered_only = yes
+	option = { name = tfrkphn.6710.a }
+}
+
+# 글로벌 TOP5 (중점 d1)
+country_event = {
+	id = tfrkphn.6711
+	title = tfrkphn.6711.t
+	desc = tfrkphn.6711.d
+	picture = GFX_TFRKPHN_oh_seoul
+	is_triggered_only = yes
+	option = { name = tfrkphn.6711.a }
+}
+
+# 여의도 디지털금융특구 (중점 d2)
+country_event = {
+	id = tfrkphn.6712
+	title = tfrkphn.6712.t
+	desc = tfrkphn.6712.d
+	picture = GFX_TFRKPHN_mega_1_3
+	is_triggered_only = yes
+	option = { name = tfrkphn.6712.a }
+}
+
+# 자부심을 디자인하다 (중점 d6)
+country_event = {
+	id = tfrkphn.6713
+	title = tfrkphn.6713.t
+	desc = tfrkphn.6713.d
+	picture = GFX_TFRKPHN_oh_pen
+	is_triggered_only = yes
+	option = { name = tfrkphn.6713.a }
+}
+
+# 망명 기업 특별법 (중점 m3)
+country_event = {
+	id = tfrkphn.6714
+	title = tfrkphn.6714.t
+	desc = tfrkphn.6714.d
+	picture = GFX_TFRKPHN_ansim_3
+	is_triggered_only = yes
+	option = { name = tfrkphn.6714.a }
+}
+
+# 이천오십 탄소중립 (중점 e3)
+country_event = {
+	id = tfrkphn.6715
+	title = tfrkphn.6715.t
+	desc = tfrkphn.6715.d
+	picture = GFX_TFRKPHN_oh_office
+	is_triggered_only = yes
+	option = { name = tfrkphn.6715.a }
+}
+
+# 지천 르네상스 (중점 e4)
+country_event = {
+	id = tfrkphn.6716
+	title = tfrkphn.6716.t
+	desc = tfrkphn.6716.d
+	picture = GFX_TFRKPHN_oh_walk
+	is_triggered_only = yes
+	option = { name = tfrkphn.6716.a }
+}
+
+# 넛지 (중점 h1)
+country_event = {
+	id = tfrkphn.6717
+	title = tfrkphn.6717.t
+	desc = tfrkphn.6717.d
+	picture = GFX_TFRKPHN_oh_podium
+	is_triggered_only = yes
+	option = { name = tfrkphn.6717.a }
+}
+
+# 삼불은 없다 (중점 h3)
+country_event = {
+	id = tfrkphn.6718
+	title = tfrkphn.6718.t
+	desc = tfrkphn.6718.d
+	picture = GFX_TFRKPHN_oh_office
+	is_triggered_only = yes
+	option = { name = tfrkphn.6718.a }
+}
+
+# 전시 편제를 푼다 (중점 h5)
+country_event = {
+	id = tfrkphn.6719
+	title = tfrkphn.6719.t
+	desc = tfrkphn.6719.d
+	picture = GFX_TFRKPHN_oh_walk
+	is_triggered_only = yes
+	option = { name = tfrkphn.6719.a }
+}
+
+# 다시 성장하는 대한민국 (중점 fin2)
+country_event = {
+	id = tfrkphn.6720
+	title = tfrkphn.6720.t
+	desc = tfrkphn.6720.d
+	picture = GFX_TFRKPHN_oh_podium
+	is_triggered_only = yes
+	option = { name = tfrkphn.6720.a }
+}
+
+# 미래 (중점 g2)
+country_event = {
+	id = tfrkphn.6721
+	title = tfrkphn.6721.t
+	desc = tfrkphn.6721.d
+	picture = GFX_TFRKPHN_oh_bowed
+	is_triggered_only = yes
+	option = { name = tfrkphn.6721.a }
+}
+
+# 따뜻한 보수 (중점 b01_01)
+country_event = {
+	id = tfrkphn.6722
+	title = tfrkphn.6722.t
+	desc = tfrkphn.6722.d
+	picture = GFX_TFRKPHN_oh_party
+	is_triggered_only = yes
+	option = { name = tfrkphn.6722.a }
+}
+
+# 나라 바로세우기 (중점 a1)
+country_event = {
+	id = tfrkphn.6723
+	title = tfrkphn.6723.t
+	desc = tfrkphn.6723.d
+	picture = GFX_TFRKPHN_oh_office
+	is_triggered_only = yes
+	option = { name = tfrkphn.6723.a }
+}

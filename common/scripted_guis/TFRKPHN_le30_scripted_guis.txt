@@ -1,0 +1,155 @@
+# [안내] 2030년 지방선거 상황실의 동작. le30_build.py가 만든다.
+scripted_gui = {
+	TFRKPHN_le_gui = {
+		context_type = player_context
+		parent_window_token = top_bar
+		window_name = "TFRKPHN_le_container"
+		visible = { has_country_flag = TFRKPHN_le_on }
+		ai_enabled = { always = no }
+		properties = {
+			TFRKPHN_le_r1 = { frame = TFRKPHN_le_f1 }
+			TFRKPHN_le_st1 = { frame = TFRKPHN_le_c1 }
+			TFRKPHN_le_r2 = { frame = TFRKPHN_le_f2 }
+			TFRKPHN_le_st2 = { frame = TFRKPHN_le_c2 }
+			TFRKPHN_le_r3 = { frame = TFRKPHN_le_f3 }
+			TFRKPHN_le_st3 = { frame = TFRKPHN_le_c3 }
+			TFRKPHN_le_r4 = { frame = TFRKPHN_le_f4 }
+			TFRKPHN_le_st4 = { frame = TFRKPHN_le_c4 }
+			TFRKPHN_le_r5 = { frame = TFRKPHN_le_f5 }
+			TFRKPHN_le_st5 = { frame = TFRKPHN_le_c5 }
+			TFRKPHN_le_r6 = { frame = TFRKPHN_le_f6 }
+			TFRKPHN_le_st6 = { frame = TFRKPHN_le_c6 }
+			TFRKPHN_le_r7 = { frame = TFRKPHN_le_f7 }
+			TFRKPHN_le_st7 = { frame = TFRKPHN_le_c7 }
+			TFRKPHN_le_r8 = { frame = TFRKPHN_le_f8 }
+			TFRKPHN_le_st8 = { frame = TFRKPHN_le_c8 }
+			TFRKPHN_le_r9 = { frame = TFRKPHN_le_f9 }
+			TFRKPHN_le_st9 = { frame = TFRKPHN_le_c9 }
+			TFRKPHN_le_r10 = { frame = TFRKPHN_le_f10 }
+			TFRKPHN_le_st10 = { frame = TFRKPHN_le_c10 }
+			TFRKPHN_le_r11 = { frame = TFRKPHN_le_f11 }
+			TFRKPHN_le_st11 = { frame = TFRKPHN_le_c11 }
+			TFRKPHN_le_r12 = { frame = TFRKPHN_le_f12 }
+			TFRKPHN_le_st12 = { frame = TFRKPHN_le_c12 }
+			TFRKPHN_le_r13 = { frame = TFRKPHN_le_f13 }
+			TFRKPHN_le_st13 = { frame = TFRKPHN_le_c13 }
+			TFRKPHN_le_r14 = { frame = TFRKPHN_le_f14 }
+			TFRKPHN_le_st14 = { frame = TFRKPHN_le_c14 }
+			TFRKPHN_le_r15 = { frame = TFRKPHN_le_f15 }
+			TFRKPHN_le_st15 = { frame = TFRKPHN_le_c15 }
+			TFRKPHN_le_r16 = { frame = TFRKPHN_le_f16 }
+			TFRKPHN_le_st16 = { frame = TFRKPHN_le_c16 }
+			TFRKPHN_le_r17 = { frame = TFRKPHN_le_f17 }
+			TFRKPHN_le_st17 = { frame = TFRKPHN_le_c17 }
+			TFRKPHN_le_stm = { frame = TFRKPHN_le_c14 }
+			TFRKPHN_le_cand = { frame = TFRKPHN_le_tf }
+			TFRKPHN_le_title = { frame = TFRKPHN_le_tf }
+			TFRKPHN_le_bar = { frame = TFRKPHN_le_barf }
+		}
+		effects = {
+			TFRKPHN_le_chip1_click = { set_variable = { TFRKPHN_le_sel = 1 } TFRKPHN_le_draw = yes }
+			TFRKPHN_le_chip2_click = { set_variable = { TFRKPHN_le_sel = 2 } TFRKPHN_le_draw = yes }
+			TFRKPHN_le_chip3_click = { set_variable = { TFRKPHN_le_sel = 3 } TFRKPHN_le_draw = yes }
+			TFRKPHN_le_chip4_click = { set_variable = { TFRKPHN_le_sel = 4 } TFRKPHN_le_draw = yes }
+			TFRKPHN_le_chip5_click = { set_variable = { TFRKPHN_le_sel = 5 } TFRKPHN_le_draw = yes }
+			TFRKPHN_le_chip6_click = { set_variable = { TFRKPHN_le_sel = 6 } TFRKPHN_le_draw = yes }
+			TFRKPHN_le_chip7_click = { set_variable = { TFRKPHN_le_sel = 7 } TFRKPHN_le_draw = yes }
+			TFRKPHN_le_chip8_click = { set_variable = { TFRKPHN_le_sel = 8 } TFRKPHN_le_draw = yes }
+			TFRKPHN_le_chip9_click = { set_variable = { TFRKPHN_le_sel = 9 } TFRKPHN_le_draw = yes }
+			TFRKPHN_le_chip10_click = { set_variable = { TFRKPHN_le_sel = 10 } TFRKPHN_le_draw = yes }
+			TFRKPHN_le_chip11_click = { set_variable = { TFRKPHN_le_sel = 11 } TFRKPHN_le_draw = yes }
+			TFRKPHN_le_chip12_click = { set_variable = { TFRKPHN_le_sel = 12 } TFRKPHN_le_draw = yes }
+			TFRKPHN_le_chip13_click = { set_variable = { TFRKPHN_le_sel = 13 } TFRKPHN_le_draw = yes }
+			TFRKPHN_le_chip14_click = { set_variable = { TFRKPHN_le_sel = 14 } TFRKPHN_le_draw = yes }
+			TFRKPHN_le_chip15_click = { set_variable = { TFRKPHN_le_sel = 15 } TFRKPHN_le_draw = yes }
+			TFRKPHN_le_chip16_click = { set_variable = { TFRKPHN_le_sel = 16 } TFRKPHN_le_draw = yes }
+			TFRKPHN_le_chip17_click = { set_variable = { TFRKPHN_le_sel = 17 } TFRKPHN_le_draw = yes }
+			TFRKPHN_le_chipm_click = { set_variable = { TFRKPHN_le_sel = 14 } TFRKPHN_le_draw = yes }
+			TFRKPHN_le_act1_click = { add_political_power = -15 TFRKPHN_le_act1 = yes }
+			TFRKPHN_le_act2_click = { add_political_power = -30 TFRKPHN_le_act2 = yes }
+			TFRKPHN_le_act3_click = { add_political_power = -20 TFRKPHN_le_act3 = yes }
+			TFRKPHN_le_act4_click = { add_political_power = -10 TFRKPHN_le_act4 = yes }
+			TFRKPHN_le_act5_click = { add_political_power = -20 TFRKPHN_le_act5 = yes }
+			TFRKPHN_le_act6_click = { add_political_power = -25 TFRKPHN_le_act6 = yes }
+			TFRKPHN_le_close_click = { clr_country_flag = TFRKPHN_le_on }
+		}
+		triggers = {
+			TFRKPHN_le_ring1_visible = { check_variable = { TFRKPHN_le_sel = 1 } }
+			TFRKPHN_le_ring2_visible = { check_variable = { TFRKPHN_le_sel = 2 } }
+			TFRKPHN_le_ring3_visible = { check_variable = { TFRKPHN_le_sel = 3 } }
+			TFRKPHN_le_ring4_visible = { check_variable = { TFRKPHN_le_sel = 4 } }
+			TFRKPHN_le_ring5_visible = { check_variable = { TFRKPHN_le_sel = 5 } NOT = { has_country_flag = TFRKPHN_gj_merged } }
+			TFRKPHN_le_chip5_visible = { NOT = { has_country_flag = TFRKPHN_gj_merged } }
+			TFRKPHN_le_st5_visible = { NOT = { has_country_flag = TFRKPHN_gj_merged } }
+			TFRKPHN_le_v5_visible = { NOT = { has_country_flag = TFRKPHN_gj_merged } }
+			TFRKPHN_le_ring6_visible = { check_variable = { TFRKPHN_le_sel = 6 } }
+			TFRKPHN_le_ring7_visible = { check_variable = { TFRKPHN_le_sel = 7 } }
+			TFRKPHN_le_ring8_visible = { check_variable = { TFRKPHN_le_sel = 8 } }
+			TFRKPHN_le_ring9_visible = { check_variable = { TFRKPHN_le_sel = 9 } }
+			TFRKPHN_le_ring10_visible = { check_variable = { TFRKPHN_le_sel = 10 } }
+			TFRKPHN_le_ring11_visible = { check_variable = { TFRKPHN_le_sel = 11 } }
+			TFRKPHN_le_ring12_visible = { check_variable = { TFRKPHN_le_sel = 12 } }
+			TFRKPHN_le_ring13_visible = { check_variable = { TFRKPHN_le_sel = 13 } }
+			TFRKPHN_le_ring14_visible = { check_variable = { TFRKPHN_le_sel = 14 } NOT = { has_country_flag = TFRKPHN_gj_merged } }
+			TFRKPHN_le_chip14_visible = { NOT = { has_country_flag = TFRKPHN_gj_merged } }
+			TFRKPHN_le_st14_visible = { NOT = { has_country_flag = TFRKPHN_gj_merged } }
+			TFRKPHN_le_v14_visible = { NOT = { has_country_flag = TFRKPHN_gj_merged } }
+			TFRKPHN_le_ring15_visible = { check_variable = { TFRKPHN_le_sel = 15 } }
+			TFRKPHN_le_ring16_visible = { check_variable = { TFRKPHN_le_sel = 16 } }
+			TFRKPHN_le_ring17_visible = { check_variable = { TFRKPHN_le_sel = 17 } }
+			TFRKPHN_le_chipm_visible = { has_country_flag = TFRKPHN_gj_merged }
+			TFRKPHN_le_stm_visible = { has_country_flag = TFRKPHN_gj_merged }
+			TFRKPHN_le_vm_visible = { has_country_flag = TFRKPHN_gj_merged }
+			TFRKPHN_le_ringm_visible = { has_country_flag = TFRKPHN_gj_merged check_variable = { TFRKPHN_le_sel = 14 } }
+			TFRKPHN_le_pg2_visible = { check_variable = { TFRKPHN_le_sel = 2 } }
+			TFRKPHN_le_po2_visible = { check_variable = { TFRKPHN_le_sel = 2 } }
+			TFRKPHN_le_pg3_visible = { check_variable = { TFRKPHN_le_sel = 3 } }
+			TFRKPHN_le_po3_visible = { check_variable = { TFRKPHN_le_sel = 3 } }
+			TFRKPHN_le_pg4_visible = { check_variable = { TFRKPHN_le_sel = 4 } }
+			TFRKPHN_le_po4_visible = { check_variable = { TFRKPHN_le_sel = 4 } }
+			TFRKPHN_le_pg6_visible = { check_variable = { TFRKPHN_le_sel = 6 } }
+			TFRKPHN_le_po6_visible = { check_variable = { TFRKPHN_le_sel = 6 } }
+			TFRKPHN_le_pg7_visible = { check_variable = { TFRKPHN_le_sel = 7 } }
+			TFRKPHN_le_po7_visible = { check_variable = { TFRKPHN_le_sel = 7 } }
+			TFRKPHN_le_pg8_visible = { check_variable = { TFRKPHN_le_sel = 8 } }
+			TFRKPHN_le_po8_visible = { check_variable = { TFRKPHN_le_sel = 8 } }
+			TFRKPHN_le_pg9_visible = { check_variable = { TFRKPHN_le_sel = 9 } }
+			TFRKPHN_le_po9_visible = { check_variable = { TFRKPHN_le_sel = 9 } }
+			TFRKPHN_le_pg10_visible = { check_variable = { TFRKPHN_le_sel = 10 } }
+			TFRKPHN_le_po10_visible = { check_variable = { TFRKPHN_le_sel = 10 } }
+			TFRKPHN_le_pg11_visible = { check_variable = { TFRKPHN_le_sel = 11 } }
+			TFRKPHN_le_po11_visible = { check_variable = { TFRKPHN_le_sel = 11 } }
+			TFRKPHN_le_pg12_visible = { check_variable = { TFRKPHN_le_sel = 12 } }
+			TFRKPHN_le_po12_visible = { check_variable = { TFRKPHN_le_sel = 12 } }
+			TFRKPHN_le_pg13_visible = { check_variable = { TFRKPHN_le_sel = 13 } }
+			TFRKPHN_le_po13_visible = { check_variable = { TFRKPHN_le_sel = 13 } }
+			TFRKPHN_le_pg14_visible = { check_variable = { TFRKPHN_le_sel = 14 } }
+			TFRKPHN_le_po14_visible = { check_variable = { TFRKPHN_le_sel = 14 } }
+			TFRKPHN_le_pg15_visible = { check_variable = { TFRKPHN_le_sel = 15 } }
+			TFRKPHN_le_po15_visible = { check_variable = { TFRKPHN_le_sel = 15 } }
+			TFRKPHN_le_pg16_visible = { check_variable = { TFRKPHN_le_sel = 16 } }
+			TFRKPHN_le_po16_visible = { check_variable = { TFRKPHN_le_sel = 16 } }
+			TFRKPHN_le_pg17_visible = { check_variable = { TFRKPHN_le_sel = 17 } }
+			TFRKPHN_le_po17_visible = { check_variable = { TFRKPHN_le_sel = 17 } }
+			TFRKPHN_le_cand_visible = { NOT = { check_variable = { TFRKPHN_le_sel = 1 } } }
+			TFRKPHN_le_frame_g_visible = { NOT = { check_variable = { TFRKPHN_le_sel = 1 } } }
+			TFRKPHN_le_frame_o_visible = { NOT = { check_variable = { TFRKPHN_le_sel = 1 } } }
+			TFRKPHN_le_sv_visible = { NOT = { check_variable = { TFRKPHN_le_sel = 1 } } }
+			TFRKPHN_le_so_visible = { NOT = { check_variable = { TFRKPHN_le_sel = 1 } } }
+			TFRKPHN_le_bar_visible = { NOT = { check_variable = { TFRKPHN_le_sel = 1 } } }
+			TFRKPHN_le_act1_click_enabled = { NOT = { has_country_flag = TFRKPHN_le_done } NOT = { check_variable = { TFRKPHN_le_sel = 1 } } has_political_power > 14.9 NOT = { has_country_flag = TFRKPHN_le_nomore } check_variable = { TFRKPHN_le_gsel < 6.5 } }
+			TFRKPHN_le_act1_visible = { NOT = { check_variable = { TFRKPHN_le_sel = 1 } } }
+			TFRKPHN_le_act2_click_enabled = { NOT = { has_country_flag = TFRKPHN_le_done } NOT = { check_variable = { TFRKPHN_le_sel = 1 } } has_political_power > 29.9 check_variable = { TFRKPHN_le_psel = 0 } check_variable = { TFRKPHN_le_gsel < 5.5 } }
+			TFRKPHN_le_act2_visible = { NOT = { check_variable = { TFRKPHN_le_sel = 1 } } }
+			TFRKPHN_le_act3_click_enabled = { NOT = { has_country_flag = TFRKPHN_le_done } NOT = { check_variable = { TFRKPHN_le_sel = 1 } } has_political_power > 19.9 check_variable = { TFRKPHN_le_gsel < 7.5 } }
+			TFRKPHN_le_act3_visible = { NOT = { check_variable = { TFRKPHN_le_sel = 1 } } }
+			TFRKPHN_le_act4_click_enabled = { NOT = { has_country_flag = TFRKPHN_le_done } NOT = { check_variable = { TFRKPHN_le_sel = 1 } } has_political_power > 9.9 check_variable = { TFRKPHN_le_gsel < 7.5 } }
+			TFRKPHN_le_act4_visible = { NOT = { check_variable = { TFRKPHN_le_sel = 1 } } }
+			TFRKPHN_le_act5_click_enabled = { NOT = { has_country_flag = TFRKPHN_le_done } NOT = { check_variable = { TFRKPHN_le_sel = 1 } } has_political_power > 19.9 check_variable = { TFRKPHN_le_gsel < 6.5 } check_variable = { TFRKPHN_le_sv > 47.4 } check_variable = { TFRKPHN_le_sv < 52.6 } }
+			TFRKPHN_le_act5_visible = { NOT = { check_variable = { TFRKPHN_le_sel = 1 } } }
+			TFRKPHN_le_act6_click_enabled = { NOT = { has_country_flag = TFRKPHN_le_done } NOT = { check_variable = { TFRKPHN_le_sel = 1 } } has_political_power > 24.9 check_variable = { TFRKPHN_le_gsel < 5.5 } }
+			TFRKPHN_le_act6_visible = { NOT = { check_variable = { TFRKPHN_le_sel = 1 } } }
+			TFRKPHN_le_seoul_visible = { check_variable = { TFRKPHN_le_sel = 1 } }
+		}
+	}
+}

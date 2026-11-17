@@ -1,0 +1,84 @@
+# [안내] 오세훈 정부 「서울시장 보궐선거」 패널. 지도에서 구를 누르고, 투표함 양옆의 단추로 그 구의 지지도를 올린다. byelec_tab_build.py가 만든다.
+# [안내] 동작은 common/scripted_guis/TFRKPHN_byelec_scripted_guis.txt.
+guiTypes = {
+	containerWindowType = {
+		name = "TFRKPHN_byelec_container"
+		size = { width = 100%% height = 654 }
+		containerWindowType = {
+			name = "TFRKPHN_byelec_panel"
+			position = { x = 0 y = 0 }
+			size = { width = 500 height = 652 }
+			background = { name = "background" spriteType = "GFX_tiled_decisions_bg_small" alwaystransparent = yes }
+			containerWindowType = {
+				name = "TFRKPHN_byelec_title_container"
+				position = { x = 1 y = 0 }
+				size = { width = 498 height = 30 }
+				background = { name = "background" spriteType = "GFX_tiled_header_1" alwaystransparent = yes }
+				instantTextBoxType = { name = "TFRKPHN_by_t_top" position = { x = -240 y = 2 } orientation = CENTER_UP text = "TFRKPHN_by_t_top" font = "hoi_18mbs" format = left maxWidth = 400 alwaystransparent = yes }
+			}
+			iconType = { name = "TFRKPHN_by_bg" position = { x = 1 y = 30 } spriteType = "GFX_TFRKPHN_by_bg" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_by_river" position = { x = 63 y = 36 } spriteType = "GFX_TFRKPHN_by_river" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_by_d1" position = { x = 224 y = 114 } spriteType = "GFX_TFRKPHN_by_d1" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_by_d2" position = { x = 149 y = 85 } spriteType = "GFX_TFRKPHN_by_d2" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_by_d3" position = { x = 280 y = 127 } spriteType = "GFX_TFRKPHN_by_d3" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_by_d4" position = { x = 250 y = 38 } spriteType = "GFX_TFRKPHN_by_d4" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_by_d5" position = { x = 67 y = 149 } spriteType = "GFX_TFRKPHN_by_d5" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_by_d6" position = { x = 107 y = 203 } spriteType = "GFX_TFRKPHN_by_d6" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_by_d7" position = { x = 184 y = 243 } spriteType = "GFX_TFRKPHN_by_d7" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_by_d8" position = { x = 255 y = 223 } spriteType = "GFX_TFRKPHN_by_d8" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_by_d9" position = { x = 332 y = 171 } spriteType = "GFX_TFRKPHN_by_d9" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_by_glow" position = { x = 53 y = 26 } spriteType = "GFX_TFRKPHN_by_glow" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_by_pin1" position = { x = 235 y = 145 } spriteType = "GFX_TFRKPHN_by_pin" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_by_pin2" position = { x = 185 y = 118 } spriteType = "GFX_TFRKPHN_by_pin" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_by_pin3" position = { x = 313 y = 140 } spriteType = "GFX_TFRKPHN_by_pin" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_by_pin4" position = { x = 284 y = 60 } spriteType = "GFX_TFRKPHN_by_pin" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_by_pin5" position = { x = 102 y = 164 } spriteType = "GFX_TFRKPHN_by_pin" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_by_pin6" position = { x = 149 y = 226 } spriteType = "GFX_TFRKPHN_by_pin" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_by_pin7" position = { x = 204 y = 243 } spriteType = "GFX_TFRKPHN_by_pin" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_by_pin8" position = { x = 291 y = 239 } spriteType = "GFX_TFRKPHN_by_pin" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_by_pin9" position = { x = 366 y = 193 } spriteType = "GFX_TFRKPHN_by_pin" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_by_opin1" position = { x = 271 y = 147 } spriteType = "GFX_TFRKPHN_by_opin" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_by_opin2" position = { x = 221 y = 120 } spriteType = "GFX_TFRKPHN_by_opin" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_by_opin3" position = { x = 349 y = 142 } spriteType = "GFX_TFRKPHN_by_opin" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_by_opin4" position = { x = 320 y = 62 } spriteType = "GFX_TFRKPHN_by_opin" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_by_opin5" position = { x = 138 y = 166 } spriteType = "GFX_TFRKPHN_by_opin" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_by_opin6" position = { x = 185 y = 228 } spriteType = "GFX_TFRKPHN_by_opin" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_by_opin7" position = { x = 240 y = 245 } spriteType = "GFX_TFRKPHN_by_opin" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_by_opin8" position = { x = 327 y = 241 } spriteType = "GFX_TFRKPHN_by_opin" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_by_opin9" position = { x = 402 y = 195 } spriteType = "GFX_TFRKPHN_by_opin" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_by_hit1" position = { x = 233 y = 176 } spriteType = "GFX_TFRKPHN_by_hit" pdx_tooltip = "TFRKPHN_by_hit1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_by_hit2" position = { x = 183 y = 149 } spriteType = "GFX_TFRKPHN_by_hit" pdx_tooltip = "TFRKPHN_by_hit2_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_by_hit3" position = { x = 311 y = 171 } spriteType = "GFX_TFRKPHN_by_hit" pdx_tooltip = "TFRKPHN_by_hit3_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_by_hit4" position = { x = 282 y = 91 } spriteType = "GFX_TFRKPHN_by_hit" pdx_tooltip = "TFRKPHN_by_hit4_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_by_hit5" position = { x = 100 y = 195 } spriteType = "GFX_TFRKPHN_by_hit" pdx_tooltip = "TFRKPHN_by_hit5_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_by_hit6" position = { x = 147 y = 257 } spriteType = "GFX_TFRKPHN_by_hit" pdx_tooltip = "TFRKPHN_by_hit6_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_by_hit7" position = { x = 202 y = 274 } spriteType = "GFX_TFRKPHN_by_hit" pdx_tooltip = "TFRKPHN_by_hit7_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_by_hit8" position = { x = 289 y = 270 } spriteType = "GFX_TFRKPHN_by_hit" pdx_tooltip = "TFRKPHN_by_hit8_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_by_hit9" position = { x = 364 y = 224 } spriteType = "GFX_TFRKPHN_by_hit" pdx_tooltip = "TFRKPHN_by_hit9_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_by_box" position = { x = 184 y = 398 } spriteType = "GFX_TFRKPHN_by_box" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_by_fall_a" position = { x = 195 y = 314 } spriteType = "GFX_TFRKPHN_by_fall" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_by_fall_b" position = { x = 195 y = 314 } spriteType = "GFX_TFRKPHN_by_fall" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_by_t_gain" position = { x = 175 y = 551 } text = "TFRKPHN_by_t_gain" font = "hoi_16mbs" format = center maxWidth = 150 maxHeight = 20 alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_by_card" position = { x = 10 y = 370 } spriteType = "GFX_TFRKPHN_by_card" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_by_t_sel" position = { x = 18 y = 372 } text = "TFRKPHN_by_t_sel" font = "hoi_16mbs" format = left maxWidth = 180 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_by_t_head" position = { x = 332 y = 372 } text = "TFRKPHN_by_t_head" font = "hoi_16mbs" format = right maxWidth = 150 maxHeight = 20 alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_by_b1" position = { x = 10 y = 408 } spriteType = "GFX_TFRKPHN_by_btn" pdx_tooltip = "TFRKPHN_by_b1_tt" clicksound = click_default }
+			instantTextBoxType = { name = "TFRKPHN_by_b1_n" position = { x = 18 y = 412 } text = "TFRKPHN_by_b1_n" font = "hoi_16mbs" format = left maxWidth = 138 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_by_b1_c" position = { x = 18 y = 434 } text = "TFRKPHN_by_b1_c" font = "hoi_16mbs" format = left maxWidth = 138 maxHeight = 20 alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_by_b2" position = { x = 10 y = 470 } spriteType = "GFX_TFRKPHN_by_btn" pdx_tooltip = "TFRKPHN_by_b2_tt" clicksound = click_default }
+			instantTextBoxType = { name = "TFRKPHN_by_b2_n" position = { x = 18 y = 474 } text = "TFRKPHN_by_b2_n" font = "hoi_16mbs" format = left maxWidth = 138 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_by_b2_c" position = { x = 18 y = 496 } text = "TFRKPHN_by_b2_c" font = "hoi_16mbs" format = left maxWidth = 138 maxHeight = 20 alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_by_b3" position = { x = 340 y = 408 } spriteType = "GFX_TFRKPHN_by_btn" pdx_tooltip = "TFRKPHN_by_b3_tt" clicksound = click_default }
+			instantTextBoxType = { name = "TFRKPHN_by_b3_n" position = { x = 348 y = 412 } text = "TFRKPHN_by_b3_n" font = "hoi_16mbs" format = left maxWidth = 138 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_by_b3_c" position = { x = 348 y = 434 } text = "TFRKPHN_by_b3_c" font = "hoi_16mbs" format = left maxWidth = 138 maxHeight = 20 alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_by_b4" position = { x = 340 y = 470 } spriteType = "GFX_TFRKPHN_by_btn" pdx_tooltip = "TFRKPHN_by_b4_tt" clicksound = click_default }
+			instantTextBoxType = { name = "TFRKPHN_by_b4_n" position = { x = 348 y = 474 } text = "TFRKPHN_by_b4_n" font = "hoi_16mbs" format = left maxWidth = 138 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_by_b4_c" position = { x = 348 y = 496 } text = "TFRKPHN_by_b4_c" font = "hoi_16mbs" format = left maxWidth = 138 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_by_t_gov" position = { x = 10 y = 572 } text = "TFRKPHN_by_t_gov" font = "hoi_16mbs" format = left maxWidth = 240 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_by_t_opp" position = { x = 250 y = 572 } text = "TFRKPHN_by_t_opp" font = "hoi_16mbs" format = right maxWidth = 240 maxHeight = 20 alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_by_bar" position = { x = 60 y = 594 } spriteType = "GFX_TFRKPHN_by_bar" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_by_t_oppat" position = { x = 10 y = 616 } text = "TFRKPHN_by_t_oppat" font = "hoi_16mbs" format = center maxWidth = 480 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_by_t_from" position = { x = 10 y = 634 } text = "TFRKPHN_by_t_from" font = "hoi_16mbs" format = center maxWidth = 480 maxHeight = 20 alwaystransparent = yes }
+		}
+	}
+}

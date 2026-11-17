@@ -1,0 +1,58 @@
+# [안내] 서울시장 보궐선거 패널의 글에 들어가는 이름들. byelec_tab_build.py가 만든다.
+defined_text = {
+	name = GetTFRKPHNBySel
+	text = { trigger = { check_variable = { TFRKPHN_by_sel = 1 } } localization_key = TFRKPHN_by_s1 }
+	text = { trigger = { check_variable = { TFRKPHN_by_sel = 2 } } localization_key = TFRKPHN_by_s2 }
+	text = { trigger = { check_variable = { TFRKPHN_by_sel = 3 } } localization_key = TFRKPHN_by_s3 }
+	text = { trigger = { check_variable = { TFRKPHN_by_sel = 4 } } localization_key = TFRKPHN_by_s4 }
+	text = { trigger = { check_variable = { TFRKPHN_by_sel = 5 } } localization_key = TFRKPHN_by_s5 }
+	text = { trigger = { check_variable = { TFRKPHN_by_sel = 6 } } localization_key = TFRKPHN_by_s6 }
+	text = { trigger = { check_variable = { TFRKPHN_by_sel = 7 } } localization_key = TFRKPHN_by_s7 }
+	text = { trigger = { check_variable = { TFRKPHN_by_sel = 8 } } localization_key = TFRKPHN_by_s8 }
+	text = { trigger = { check_variable = { TFRKPHN_by_sel = 9 } } localization_key = TFRKPHN_by_s9 }
+	text = { localization_key = TFRKPHN_by_s0 }
+}
+defined_text = {
+	name = GetTFRKPHNByLast
+	text = { trigger = { check_variable = { TFRKPHN_by_last_n = 1 } } localization_key = TFRKPHN_by_g1 }
+	text = { trigger = { check_variable = { TFRKPHN_by_last_n = 2 } } localization_key = TFRKPHN_by_g2 }
+	text = { trigger = { check_variable = { TFRKPHN_by_last_n = 3 } } localization_key = TFRKPHN_by_g3 }
+	text = { trigger = { check_variable = { TFRKPHN_by_last_n = 4 } } localization_key = TFRKPHN_by_g4 }
+	text = { trigger = { check_variable = { TFRKPHN_by_last_n = 5 } } localization_key = TFRKPHN_by_g5 }
+	text = { trigger = { check_variable = { TFRKPHN_by_last_n = 6 } } localization_key = TFRKPHN_by_g6 }
+	text = { trigger = { check_variable = { TFRKPHN_by_last_n = 7 } } localization_key = TFRKPHN_by_g7 }
+	text = { trigger = { check_variable = { TFRKPHN_by_last_n = 8 } } localization_key = TFRKPHN_by_g8 }
+	text = { trigger = { check_variable = { TFRKPHN_by_last_n = 9 } } localization_key = TFRKPHN_by_g9 }
+	text = { localization_key = TFRKPHN_by_g0 }
+}
+defined_text = {
+	name = GetTFRKPHNByOppAt
+	text = { trigger = { check_variable = { TFRKPHN_by_opp_at = 1 } } localization_key = TFRKPHN_by_g1 }
+	text = { trigger = { check_variable = { TFRKPHN_by_opp_at = 2 } } localization_key = TFRKPHN_by_g2 }
+	text = { trigger = { check_variable = { TFRKPHN_by_opp_at = 3 } } localization_key = TFRKPHN_by_g3 }
+	text = { trigger = { check_variable = { TFRKPHN_by_opp_at = 4 } } localization_key = TFRKPHN_by_g4 }
+	text = { trigger = { check_variable = { TFRKPHN_by_opp_at = 5 } } localization_key = TFRKPHN_by_g5 }
+	text = { trigger = { check_variable = { TFRKPHN_by_opp_at = 6 } } localization_key = TFRKPHN_by_g6 }
+	text = { trigger = { check_variable = { TFRKPHN_by_opp_at = 7 } } localization_key = TFRKPHN_by_g7 }
+	text = { trigger = { check_variable = { TFRKPHN_by_opp_at = 8 } } localization_key = TFRKPHN_by_g8 }
+	text = { trigger = { check_variable = { TFRKPHN_by_opp_at = 9 } } localization_key = TFRKPHN_by_g9 }
+	text = { localization_key = TFRKPHN_by_g0 }
+}
+defined_text = {
+	name = GetTFRKPHNByOppLine
+	text = { trigger = { check_variable = { TFRKPHN_by_opp_at > 0 } } localization_key = TFRKPHN_by_oppline_y }
+	text = { localization_key = TFRKPHN_by_oppline_n }
+}
+defined_text = {
+	name = GetTFRKPHNByHead
+	text = { trigger = { check_variable = { TFRKPHN_by_sel = 1 } } localization_key = TFRKPHN_by_head1 }
+	text = { trigger = { check_variable = { TFRKPHN_by_sel = 2 } } localization_key = TFRKPHN_by_head2 }
+	text = { trigger = { check_variable = { TFRKPHN_by_sel = 3 } } localization_key = TFRKPHN_by_head3 }
+	text = { trigger = { check_variable = { TFRKPHN_by_sel = 4 } } localization_key = TFRKPHN_by_head4 }
+	text = { trigger = { check_variable = { TFRKPHN_by_sel = 5 } } localization_key = TFRKPHN_by_head5 }
+	text = { trigger = { check_variable = { TFRKPHN_by_sel = 6 } } localization_key = TFRKPHN_by_head6 }
+	text = { trigger = { check_variable = { TFRKPHN_by_sel = 7 } } localization_key = TFRKPHN_by_head7 }
+	text = { trigger = { check_variable = { TFRKPHN_by_sel = 8 } } localization_key = TFRKPHN_by_head8 }
+	text = { trigger = { check_variable = { TFRKPHN_by_sel = 9 } } localization_key = TFRKPHN_by_head9 }
+	text = { localization_key = TFRKPHN_by_head_none }
+}

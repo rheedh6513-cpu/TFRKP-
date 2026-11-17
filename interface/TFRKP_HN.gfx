@@ -927,6 +927,38 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/TFRKPHN_ljm_amend.png"
 	}
 	spriteType = {
+		name = "GFX_TFRKPHN_hong_313"
+		texturefile = "gfx/event_pictures/TFRKPHN_hong_313.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_hong_312"
+		texturefile = "gfx/event_pictures/TFRKPHN_hong_312.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_hong_314"
+		texturefile = "gfx/event_pictures/TFRKPHN_hong_314.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_hong_315"
+		texturefile = "gfx/event_pictures/TFRKPHN_hong_315.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_hong_325"
+		texturefile = "gfx/event_pictures/TFRKPHN_hong_325.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_hong_324"
+		texturefile = "gfx/event_pictures/TFRKPHN_hong_324.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_oh_inaug"
+		texturefile = "gfx/event_pictures/TFRKPHN_oh_inaug.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_oh_640"
+		texturefile = "gfx/event_pictures/TFRKPHN_oh_640.png"
+	}
+	spriteType = {
 		name = "GFX_TFRKPHN_oksae_run"
 		texturefile = "gfx/event_pictures/TFRKPHN_oksae_run.png"
 	}

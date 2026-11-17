@@ -35,7 +35,7 @@ country_event = {
 	id = tfrkphn.302
 	title = tfrkphn.302.t
 	desc = tfrkphn.302.kp
-	picture = GFX_report_event_ppp_ge_win
+	picture = GFX_TFRKPHN_oh_inaug
 	is_triggered_only = yes
 
 	option = {
@@ -185,12 +185,12 @@ country_event = {
 	}
 }
 
-# 홍준표 주요 추진 정책: 전통경찰국 설립 (중점 b01_07)
+# 홍준표 주요 추진 정책: 국가수사국 설립 (중점 b01_07)
 country_event = {
 	id = tfrkphn.312
 	title = tfrkphn.312.t
 	desc = tfrkphn.312.kp
-	picture = GFX_report_event_generic_read_write
+	picture = GFX_TFRKPHN_hong_312
 	fire_only_once = yes
 	is_triggered_only = yes
 
@@ -207,7 +207,7 @@ country_event = {
 	id = tfrkphn.313
 	title = tfrkphn.313.t
 	desc = tfrkphn.313.news
-	picture = GFX_report_event_generic_read_write
+	picture = GFX_TFRKPHN_hong_313
 	fire_only_once = yes
 	is_triggered_only = yes
 
@@ -242,7 +242,7 @@ country_event = {
 	id = tfrkphn.314
 	title = tfrkphn.314.t
 	desc = tfrkphn.314.news
-	picture = GFX_report_event_generic_read_write
+	picture = GFX_TFRKPHN_hong_314
 	fire_only_once = yes
 	is_triggered_only = yes
 
@@ -277,7 +277,7 @@ country_event = {
 	id = tfrkphn.315
 	title = tfrkphn.315.t
 	desc = tfrkphn.315.news
-	picture = GFX_report_event_generic_read_write
+	picture = GFX_TFRKPHN_hong_315
 	fire_only_once = yes
 	is_triggered_only = yes
 
@@ -440,7 +440,7 @@ country_event = {
 	id = tfrkphn.324
 	title = tfrkphn.324.t
 	desc = tfrkphn.324.desc
-	picture = GFX_report_event_generic_read_write
+	picture = GFX_TFRKPHN_hong_324
 	is_triggered_only = yes
 	fire_only_once = yes
 
@@ -455,7 +455,7 @@ country_event = {
 	id = tfrkphn.325
 	title = tfrkphn.325.t
 	desc = tfrkphn.325.desc
-	picture = GFX_report_event_generic_read_write
+	picture = GFX_TFRKPHN_hong_325
 	is_triggered_only = yes
 
 	option = {
@@ -468,7 +468,7 @@ news_event = {
 	id = tfrkphn.326
 	title = tfrkphn.326.t
 	desc = tfrkphn.326.desc
-	picture = GFX_news_event_generic_read_write
+	picture = GFX_TFRKPHN_news_326
 	major = yes
 	is_triggered_only = yes
 

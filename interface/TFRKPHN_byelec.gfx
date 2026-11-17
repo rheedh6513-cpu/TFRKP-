@@ -1,0 +1,22 @@
+spriteTypes = {
+	spriteType = { name = "GFX_TFRKPHN_by_d1" texturefile = "gfx/interface/TFRKPHN_byelec/TFRKPHN_by_d1.png" noOfFrames = 5 }
+	spriteType = { name = "GFX_TFRKPHN_by_d2" texturefile = "gfx/interface/TFRKPHN_byelec/TFRKPHN_by_d2.png" noOfFrames = 5 }
+	spriteType = { name = "GFX_TFRKPHN_by_d3" texturefile = "gfx/interface/TFRKPHN_byelec/TFRKPHN_by_d3.png" noOfFrames = 5 }
+	spriteType = { name = "GFX_TFRKPHN_by_d4" texturefile = "gfx/interface/TFRKPHN_byelec/TFRKPHN_by_d4.png" noOfFrames = 5 }
+	spriteType = { name = "GFX_TFRKPHN_by_d5" texturefile = "gfx/interface/TFRKPHN_byelec/TFRKPHN_by_d5.png" noOfFrames = 5 }
+	spriteType = { name = "GFX_TFRKPHN_by_d6" texturefile = "gfx/interface/TFRKPHN_byelec/TFRKPHN_by_d6.png" noOfFrames = 5 }
+	spriteType = { name = "GFX_TFRKPHN_by_d7" texturefile = "gfx/interface/TFRKPHN_byelec/TFRKPHN_by_d7.png" noOfFrames = 5 }
+	spriteType = { name = "GFX_TFRKPHN_by_d8" texturefile = "gfx/interface/TFRKPHN_byelec/TFRKPHN_by_d8.png" noOfFrames = 5 }
+	spriteType = { name = "GFX_TFRKPHN_by_d9" texturefile = "gfx/interface/TFRKPHN_byelec/TFRKPHN_by_d9.png" noOfFrames = 5 }
+	spriteType = { name = "GFX_TFRKPHN_by_river" texturefile = "gfx/interface/TFRKPHN_byelec/TFRKPHN_by_river.png" }
+	spriteType = { name = "GFX_TFRKPHN_by_hit" texturefile = "gfx/interface/TFRKPHN_byelec/TFRKPHN_by_hit.png" }
+	spriteType = { name = "GFX_TFRKPHN_by_pin" texturefile = "gfx/interface/TFRKPHN_byelec/TFRKPHN_by_pin.png" }
+	spriteType = { name = "GFX_TFRKPHN_by_box" texturefile = "gfx/interface/TFRKPHN_byelec/TFRKPHN_by_box.png" }
+	spriteType = { name = "GFX_TFRKPHN_by_btn" texturefile = "gfx/interface/TFRKPHN_byelec/TFRKPHN_by_btn.png" }
+	spriteType = { name = "GFX_TFRKPHN_by_card" texturefile = "gfx/interface/TFRKPHN_byelec/TFRKPHN_by_card.png" }
+	spriteType = { name = "GFX_TFRKPHN_by_glow" texturefile = "gfx/interface/TFRKPHN_byelec/TFRKPHN_by_glow.png" }
+	spriteType = { name = "GFX_TFRKPHN_by_bg" texturefile = "gfx/interface/TFRKPHN_byelec/TFRKPHN_by_bg.png" }
+	spriteType = { name = "GFX_TFRKPHN_by_opin" texturefile = "gfx/interface/TFRKPHN_byelec/TFRKPHN_by_opin.png" }
+	spriteType = { name = "GFX_TFRKPHN_by_bar" texturefile = "gfx/interface/TFRKPHN_byelec/TFRKPHN_by_bar.png" noOfFrames = 21 }
+	frameAnimatedSpriteType = { name = "GFX_TFRKPHN_by_fall" texturefile = "gfx/interface/TFRKPHN_byelec/TFRKPHN_by_fall.png" noOfFrames = 12 animation_rate_fps = 14 looping = no play_on_show = yes pause_on_loop = 0.0 }
+}

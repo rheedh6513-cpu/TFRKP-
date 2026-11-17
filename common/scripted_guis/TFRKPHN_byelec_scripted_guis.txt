@@ -1,0 +1,122 @@
+# [안내] 오세훈 정부 「서울시장 보궐선거」 패널의 동작. byelec_tab_build.py가 만든다.
+scripted_gui = {
+	TFRKPHN_byelec_gui = {
+		context_type = decision_category
+		window_name = TFRKPHN_byelec_container
+		properties = {
+			TFRKPHN_by_bar = { frame = TFRKPHN_by_frame }
+			TFRKPHN_by_d1 = { frame = TFRKPHN_by_zf1 }
+			TFRKPHN_by_d2 = { frame = TFRKPHN_by_zf2 }
+			TFRKPHN_by_d3 = { frame = TFRKPHN_by_zf3 }
+			TFRKPHN_by_d4 = { frame = TFRKPHN_by_zf4 }
+			TFRKPHN_by_d5 = { frame = TFRKPHN_by_zf5 }
+			TFRKPHN_by_d6 = { frame = TFRKPHN_by_zf6 }
+			TFRKPHN_by_d7 = { frame = TFRKPHN_by_zf7 }
+			TFRKPHN_by_d8 = { frame = TFRKPHN_by_zf8 }
+			TFRKPHN_by_d9 = { frame = TFRKPHN_by_zf9 }
+		}
+		triggers = {
+			TFRKPHN_by_pin1_visible = { check_variable = { TFRKPHN_by_sel = 1 } }
+			TFRKPHN_by_pin2_visible = { check_variable = { TFRKPHN_by_sel = 2 } }
+			TFRKPHN_by_pin3_visible = { check_variable = { TFRKPHN_by_sel = 3 } }
+			TFRKPHN_by_pin4_visible = { check_variable = { TFRKPHN_by_sel = 4 } }
+			TFRKPHN_by_pin5_visible = { check_variable = { TFRKPHN_by_sel = 5 } }
+			TFRKPHN_by_pin6_visible = { check_variable = { TFRKPHN_by_sel = 6 } }
+			TFRKPHN_by_pin7_visible = { check_variable = { TFRKPHN_by_sel = 7 } }
+			TFRKPHN_by_pin8_visible = { check_variable = { TFRKPHN_by_sel = 8 } }
+			TFRKPHN_by_pin9_visible = { check_variable = { TFRKPHN_by_sel = 9 } }
+			TFRKPHN_by_opin1_visible = { check_variable = { TFRKPHN_by_opp_at = 1 } }
+			TFRKPHN_by_opin2_visible = { check_variable = { TFRKPHN_by_opp_at = 2 } }
+			TFRKPHN_by_opin3_visible = { check_variable = { TFRKPHN_by_opp_at = 3 } }
+			TFRKPHN_by_opin4_visible = { check_variable = { TFRKPHN_by_opp_at = 4 } }
+			TFRKPHN_by_opin5_visible = { check_variable = { TFRKPHN_by_opp_at = 5 } }
+			TFRKPHN_by_opin6_visible = { check_variable = { TFRKPHN_by_opp_at = 6 } }
+			TFRKPHN_by_opin7_visible = { check_variable = { TFRKPHN_by_opp_at = 7 } }
+			TFRKPHN_by_opin8_visible = { check_variable = { TFRKPHN_by_opp_at = 8 } }
+			TFRKPHN_by_opin9_visible = { check_variable = { TFRKPHN_by_opp_at = 9 } }
+			TFRKPHN_by_fall_a_visible = { check_variable = { TFRKPHN_by_anim = 1 } }
+			TFRKPHN_by_fall_b_visible = { check_variable = { TFRKPHN_by_anim = 2 } }
+			TFRKPHN_by_t_gain_visible = { check_variable = { TFRKPHN_by_anim > 0 } }
+			TFRKPHN_by_b1_click_enabled = { check_variable = { TFRKPHN_by_sel > 0 } has_political_power > 9 }
+			TFRKPHN_by_b2_click_enabled = { check_variable = { TFRKPHN_by_sel > 0 } has_political_power > 14 }
+			TFRKPHN_by_b3_click_enabled = { check_variable = { TFRKPHN_by_sel > 0 } has_political_power > 24 }
+			TFRKPHN_by_b4_click_enabled = { check_variable = { TFRKPHN_by_sel > 0 } has_political_power > 29 }
+		}
+		effects = {
+			TFRKPHN_by_hit1_click = { set_variable = { TFRKPHN_by_sel = 1 } }
+			TFRKPHN_by_hit2_click = { set_variable = { TFRKPHN_by_sel = 2 } }
+			TFRKPHN_by_hit3_click = { set_variable = { TFRKPHN_by_sel = 3 } }
+			TFRKPHN_by_hit4_click = { set_variable = { TFRKPHN_by_sel = 4 } }
+			TFRKPHN_by_hit5_click = { set_variable = { TFRKPHN_by_sel = 5 } }
+			TFRKPHN_by_hit6_click = { set_variable = { TFRKPHN_by_sel = 6 } }
+			TFRKPHN_by_hit7_click = { set_variable = { TFRKPHN_by_sel = 7 } }
+			TFRKPHN_by_hit8_click = { set_variable = { TFRKPHN_by_sel = 8 } }
+			TFRKPHN_by_hit9_click = { set_variable = { TFRKPHN_by_sel = 9 } }
+			TFRKPHN_by_b1_click = {
+				add_political_power = -10
+				if = { limit = { check_variable = { TFRKPHN_by_sel = 1 } } add_to_variable = { TFRKPHN_sd_s8 = 1 } clamp_variable = { var = TFRKPHN_sd_s8 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s12 = 1 } clamp_variable = { var = TFRKPHN_sd_s12 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s16 = 1 } clamp_variable = { var = TFRKPHN_sd_s16 min = 0 max = 100 } set_variable = { TFRKPHN_by_last = 1 } }
+				if = { limit = { check_variable = { TFRKPHN_by_sel = 2 } } add_to_variable = { TFRKPHN_sd_s4 = 1 } clamp_variable = { var = TFRKPHN_sd_s4 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s7 = 1 } clamp_variable = { var = TFRKPHN_sd_s7 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s11 = 1 } clamp_variable = { var = TFRKPHN_sd_s11 min = 0 max = 100 } set_variable = { TFRKPHN_by_last = 1 } }
+				if = { limit = { check_variable = { TFRKPHN_by_sel = 3 } } add_to_variable = { TFRKPHN_sd_s9 = 1 } clamp_variable = { var = TFRKPHN_sd_s9 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s13 = 1 } clamp_variable = { var = TFRKPHN_sd_s13 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s14 = 1 } clamp_variable = { var = TFRKPHN_sd_s14 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s6 = 1 } clamp_variable = { var = TFRKPHN_sd_s6 min = 0 max = 100 } set_variable = { TFRKPHN_by_last = 1 } }
+				if = { limit = { check_variable = { TFRKPHN_by_sel = 4 } } add_to_variable = { TFRKPHN_sd_s1 = 1 } clamp_variable = { var = TFRKPHN_sd_s1 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s2 = 1 } clamp_variable = { var = TFRKPHN_sd_s2 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s3 = 1 } clamp_variable = { var = TFRKPHN_sd_s3 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s5 = 1 } clamp_variable = { var = TFRKPHN_sd_s5 min = 0 max = 100 } set_variable = { TFRKPHN_by_last = 1 } }
+				if = { limit = { check_variable = { TFRKPHN_by_sel = 5 } } add_to_variable = { TFRKPHN_sd_s10 = 1 } clamp_variable = { var = TFRKPHN_sd_s10 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s17 = 1 } clamp_variable = { var = TFRKPHN_sd_s17 min = 0 max = 100 } set_variable = { TFRKPHN_by_last = 1 } }
+				if = { limit = { check_variable = { TFRKPHN_by_sel = 6 } } add_to_variable = { TFRKPHN_sd_s21 = 1 } clamp_variable = { var = TFRKPHN_sd_s21 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s24 = 1 } clamp_variable = { var = TFRKPHN_sd_s24 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s18 = 1 } clamp_variable = { var = TFRKPHN_sd_s18 min = 0 max = 100 } set_variable = { TFRKPHN_by_last = 1 } }
+				if = { limit = { check_variable = { TFRKPHN_by_sel = 7 } } add_to_variable = { TFRKPHN_sd_s20 = 1 } clamp_variable = { var = TFRKPHN_sd_s20 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s25 = 1 } clamp_variable = { var = TFRKPHN_sd_s25 min = 0 max = 100 } set_variable = { TFRKPHN_by_last = 1 } }
+				if = { limit = { check_variable = { TFRKPHN_by_sel = 8 } } add_to_variable = { TFRKPHN_sd_s23 = 1 } clamp_variable = { var = TFRKPHN_sd_s23 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s22 = 1 } clamp_variable = { var = TFRKPHN_sd_s22 min = 0 max = 100 } set_variable = { TFRKPHN_by_last = 1 } }
+				if = { limit = { check_variable = { TFRKPHN_by_sel = 9 } } add_to_variable = { TFRKPHN_sd_s19 = 1 } clamp_variable = { var = TFRKPHN_sd_s19 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s15 = 1 } clamp_variable = { var = TFRKPHN_sd_s15 min = 0 max = 100 } set_variable = { TFRKPHN_by_last = 1 } }
+				set_variable = { TFRKPHN_by_last_n = TFRKPHN_by_sel }
+				TFRKPHN_by_anim_next = yes
+				TFRKPHN_sd_refresh = yes
+				TFRKPHN_by_poll = yes
+			}
+			TFRKPHN_by_b2_click = {
+				add_political_power = -15
+				if = { limit = { check_variable = { TFRKPHN_by_sel = 1 } } add_to_variable = { TFRKPHN_sd_s8 = 3 } clamp_variable = { var = TFRKPHN_sd_s8 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s12 = 3 } clamp_variable = { var = TFRKPHN_sd_s12 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s16 = 3 } clamp_variable = { var = TFRKPHN_sd_s16 min = 0 max = 100 } set_variable = { TFRKPHN_by_last = 2 } }
+				if = { limit = { check_variable = { TFRKPHN_by_sel = 2 } } add_to_variable = { TFRKPHN_sd_s4 = 2 } clamp_variable = { var = TFRKPHN_sd_s4 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s7 = 3 } clamp_variable = { var = TFRKPHN_sd_s7 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s11 = 3 } clamp_variable = { var = TFRKPHN_sd_s11 min = 0 max = 100 } set_variable = { TFRKPHN_by_last = 2 } }
+				if = { limit = { check_variable = { TFRKPHN_by_sel = 3 } } add_to_variable = { TFRKPHN_sd_s9 = 3 } clamp_variable = { var = TFRKPHN_sd_s9 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s13 = 2 } clamp_variable = { var = TFRKPHN_sd_s13 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s14 = 3 } clamp_variable = { var = TFRKPHN_sd_s14 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s6 = 2 } clamp_variable = { var = TFRKPHN_sd_s6 min = 0 max = 100 } set_variable = { TFRKPHN_by_last = 2 } }
+				if = { limit = { check_variable = { TFRKPHN_by_sel = 4 } } add_to_variable = { TFRKPHN_sd_s1 = 3 } clamp_variable = { var = TFRKPHN_sd_s1 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s2 = 2 } clamp_variable = { var = TFRKPHN_sd_s2 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s3 = 2 } clamp_variable = { var = TFRKPHN_sd_s3 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s5 = 2 } clamp_variable = { var = TFRKPHN_sd_s5 min = 0 max = 100 } set_variable = { TFRKPHN_by_last = 2 } }
+				if = { limit = { check_variable = { TFRKPHN_by_sel = 5 } } add_to_variable = { TFRKPHN_sd_s10 = 3 } clamp_variable = { var = TFRKPHN_sd_s10 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s17 = 3 } clamp_variable = { var = TFRKPHN_sd_s17 min = 0 max = 100 } set_variable = { TFRKPHN_by_last = 2 } }
+				if = { limit = { check_variable = { TFRKPHN_by_sel = 6 } } add_to_variable = { TFRKPHN_sd_s21 = 3 } clamp_variable = { var = TFRKPHN_sd_s21 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s24 = 2 } clamp_variable = { var = TFRKPHN_sd_s24 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s18 = 3 } clamp_variable = { var = TFRKPHN_sd_s18 min = 0 max = 100 } set_variable = { TFRKPHN_by_last = 2 } }
+				if = { limit = { check_variable = { TFRKPHN_by_sel = 7 } } add_to_variable = { TFRKPHN_sd_s20 = 3 } clamp_variable = { var = TFRKPHN_sd_s20 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s25 = 2 } clamp_variable = { var = TFRKPHN_sd_s25 min = 0 max = 100 } set_variable = { TFRKPHN_by_last = 2 } }
+				if = { limit = { check_variable = { TFRKPHN_by_sel = 8 } } add_to_variable = { TFRKPHN_sd_s23 = 3 } clamp_variable = { var = TFRKPHN_sd_s23 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s22 = 3 } clamp_variable = { var = TFRKPHN_sd_s22 min = 0 max = 100 } set_variable = { TFRKPHN_by_last = 2 } }
+				if = { limit = { check_variable = { TFRKPHN_by_sel = 9 } } add_to_variable = { TFRKPHN_sd_s19 = 3 } clamp_variable = { var = TFRKPHN_sd_s19 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s15 = 3 } clamp_variable = { var = TFRKPHN_sd_s15 min = 0 max = 100 } set_variable = { TFRKPHN_by_last = 2 } }
+				set_variable = { TFRKPHN_by_last_n = TFRKPHN_by_sel }
+				TFRKPHN_by_anim_next = yes
+				TFRKPHN_sd_refresh = yes
+				TFRKPHN_by_poll = yes
+			}
+			TFRKPHN_by_b3_click = {
+				add_political_power = -25
+				if = { limit = { check_variable = { TFRKPHN_by_sel = 1 } } add_to_variable = { TFRKPHN_sd_s8 = 2 } clamp_variable = { var = TFRKPHN_sd_s8 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s12 = 2 } clamp_variable = { var = TFRKPHN_sd_s12 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s16 = 2 } clamp_variable = { var = TFRKPHN_sd_s16 min = 0 max = 100 } set_variable = { TFRKPHN_by_last = 2 } add_to_variable = { TFRKPHN_sd_s4 = 1 } clamp_variable = { var = TFRKPHN_sd_s4 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s7 = 1 } clamp_variable = { var = TFRKPHN_sd_s7 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s11 = 1 } clamp_variable = { var = TFRKPHN_sd_s11 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s9 = 1 } clamp_variable = { var = TFRKPHN_sd_s9 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s13 = 1 } clamp_variable = { var = TFRKPHN_sd_s13 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s14 = 1 } clamp_variable = { var = TFRKPHN_sd_s14 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s6 = 1 } clamp_variable = { var = TFRKPHN_sd_s6 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s1 = 1 } clamp_variable = { var = TFRKPHN_sd_s1 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s2 = 1 } clamp_variable = { var = TFRKPHN_sd_s2 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s3 = 1 } clamp_variable = { var = TFRKPHN_sd_s3 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s5 = 1 } clamp_variable = { var = TFRKPHN_sd_s5 min = 0 max = 100 } }
+				if = { limit = { check_variable = { TFRKPHN_by_sel = 2 } } add_to_variable = { TFRKPHN_sd_s4 = 2 } clamp_variable = { var = TFRKPHN_sd_s4 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s7 = 2 } clamp_variable = { var = TFRKPHN_sd_s7 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s11 = 2 } clamp_variable = { var = TFRKPHN_sd_s11 min = 0 max = 100 } set_variable = { TFRKPHN_by_last = 2 } add_to_variable = { TFRKPHN_sd_s8 = 1 } clamp_variable = { var = TFRKPHN_sd_s8 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s12 = 1 } clamp_variable = { var = TFRKPHN_sd_s12 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s16 = 1 } clamp_variable = { var = TFRKPHN_sd_s16 min = 0 max = 100 } }
+				if = { limit = { check_variable = { TFRKPHN_by_sel = 3 } } add_to_variable = { TFRKPHN_sd_s9 = 2 } clamp_variable = { var = TFRKPHN_sd_s9 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s13 = 2 } clamp_variable = { var = TFRKPHN_sd_s13 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s14 = 2 } clamp_variable = { var = TFRKPHN_sd_s14 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s6 = 2 } clamp_variable = { var = TFRKPHN_sd_s6 min = 0 max = 100 } set_variable = { TFRKPHN_by_last = 2 } add_to_variable = { TFRKPHN_sd_s8 = 1 } clamp_variable = { var = TFRKPHN_sd_s8 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s12 = 1 } clamp_variable = { var = TFRKPHN_sd_s12 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s16 = 1 } clamp_variable = { var = TFRKPHN_sd_s16 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s1 = 1 } clamp_variable = { var = TFRKPHN_sd_s1 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s2 = 1 } clamp_variable = { var = TFRKPHN_sd_s2 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s3 = 1 } clamp_variable = { var = TFRKPHN_sd_s3 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s5 = 1 } clamp_variable = { var = TFRKPHN_sd_s5 min = 0 max = 100 } }
+				if = { limit = { check_variable = { TFRKPHN_by_sel = 4 } } add_to_variable = { TFRKPHN_sd_s1 = 2 } clamp_variable = { var = TFRKPHN_sd_s1 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s2 = 2 } clamp_variable = { var = TFRKPHN_sd_s2 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s3 = 2 } clamp_variable = { var = TFRKPHN_sd_s3 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s5 = 2 } clamp_variable = { var = TFRKPHN_sd_s5 min = 0 max = 100 } set_variable = { TFRKPHN_by_last = 2 } add_to_variable = { TFRKPHN_sd_s8 = 1 } clamp_variable = { var = TFRKPHN_sd_s8 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s12 = 1 } clamp_variable = { var = TFRKPHN_sd_s12 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s16 = 1 } clamp_variable = { var = TFRKPHN_sd_s16 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s9 = 1 } clamp_variable = { var = TFRKPHN_sd_s9 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s13 = 1 } clamp_variable = { var = TFRKPHN_sd_s13 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s14 = 1 } clamp_variable = { var = TFRKPHN_sd_s14 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s6 = 1 } clamp_variable = { var = TFRKPHN_sd_s6 min = 0 max = 100 } }
+				if = { limit = { check_variable = { TFRKPHN_by_sel = 5 } } add_to_variable = { TFRKPHN_sd_s10 = 2 } clamp_variable = { var = TFRKPHN_sd_s10 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s17 = 2 } clamp_variable = { var = TFRKPHN_sd_s17 min = 0 max = 100 } set_variable = { TFRKPHN_by_last = 2 } add_to_variable = { TFRKPHN_sd_s21 = 1 } clamp_variable = { var = TFRKPHN_sd_s21 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s24 = 1 } clamp_variable = { var = TFRKPHN_sd_s24 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s18 = 1 } clamp_variable = { var = TFRKPHN_sd_s18 min = 0 max = 100 } }
+				if = { limit = { check_variable = { TFRKPHN_by_sel = 6 } } add_to_variable = { TFRKPHN_sd_s21 = 2 } clamp_variable = { var = TFRKPHN_sd_s21 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s24 = 2 } clamp_variable = { var = TFRKPHN_sd_s24 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s18 = 2 } clamp_variable = { var = TFRKPHN_sd_s18 min = 0 max = 100 } set_variable = { TFRKPHN_by_last = 2 } add_to_variable = { TFRKPHN_sd_s10 = 1 } clamp_variable = { var = TFRKPHN_sd_s10 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s17 = 1 } clamp_variable = { var = TFRKPHN_sd_s17 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s20 = 1 } clamp_variable = { var = TFRKPHN_sd_s20 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s25 = 1 } clamp_variable = { var = TFRKPHN_sd_s25 min = 0 max = 100 } }
+				if = { limit = { check_variable = { TFRKPHN_by_sel = 7 } } add_to_variable = { TFRKPHN_sd_s20 = 2 } clamp_variable = { var = TFRKPHN_sd_s20 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s25 = 2 } clamp_variable = { var = TFRKPHN_sd_s25 min = 0 max = 100 } set_variable = { TFRKPHN_by_last = 2 } add_to_variable = { TFRKPHN_sd_s21 = 1 } clamp_variable = { var = TFRKPHN_sd_s21 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s24 = 1 } clamp_variable = { var = TFRKPHN_sd_s24 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s18 = 1 } clamp_variable = { var = TFRKPHN_sd_s18 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s23 = 1 } clamp_variable = { var = TFRKPHN_sd_s23 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s22 = 1 } clamp_variable = { var = TFRKPHN_sd_s22 min = 0 max = 100 } }
+				if = { limit = { check_variable = { TFRKPHN_by_sel = 8 } } add_to_variable = { TFRKPHN_sd_s23 = 2 } clamp_variable = { var = TFRKPHN_sd_s23 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s22 = 2 } clamp_variable = { var = TFRKPHN_sd_s22 min = 0 max = 100 } set_variable = { TFRKPHN_by_last = 2 } add_to_variable = { TFRKPHN_sd_s20 = 1 } clamp_variable = { var = TFRKPHN_sd_s20 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s25 = 1 } clamp_variable = { var = TFRKPHN_sd_s25 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s19 = 1 } clamp_variable = { var = TFRKPHN_sd_s19 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s15 = 1 } clamp_variable = { var = TFRKPHN_sd_s15 min = 0 max = 100 } }
+				if = { limit = { check_variable = { TFRKPHN_by_sel = 9 } } add_to_variable = { TFRKPHN_sd_s19 = 2 } clamp_variable = { var = TFRKPHN_sd_s19 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s15 = 2 } clamp_variable = { var = TFRKPHN_sd_s15 min = 0 max = 100 } set_variable = { TFRKPHN_by_last = 2 } add_to_variable = { TFRKPHN_sd_s23 = 1 } clamp_variable = { var = TFRKPHN_sd_s23 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s22 = 1 } clamp_variable = { var = TFRKPHN_sd_s22 min = 0 max = 100 } }
+				set_variable = { TFRKPHN_by_last_n = TFRKPHN_by_sel }
+				TFRKPHN_by_anim_next = yes
+				TFRKPHN_sd_refresh = yes
+				TFRKPHN_by_poll = yes
+			}
+			TFRKPHN_by_b4_click = {
+				add_political_power = -30
+				if = { limit = { check_variable = { TFRKPHN_by_sel = 1 } } add_to_variable = { TFRKPHN_sd_s8 = 3 } clamp_variable = { var = TFRKPHN_sd_s8 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s12 = 3 } clamp_variable = { var = TFRKPHN_sd_s12 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s16 = 3 } clamp_variable = { var = TFRKPHN_sd_s16 min = 0 max = 100 } set_variable = { TFRKPHN_by_last = 3 } }
+				if = { limit = { check_variable = { TFRKPHN_by_sel = 2 } } add_to_variable = { TFRKPHN_sd_s4 = 3 } clamp_variable = { var = TFRKPHN_sd_s4 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s7 = 3 } clamp_variable = { var = TFRKPHN_sd_s7 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s11 = 3 } clamp_variable = { var = TFRKPHN_sd_s11 min = 0 max = 100 } set_variable = { TFRKPHN_by_last = 3 } }
+				if = { limit = { check_variable = { TFRKPHN_by_sel = 3 } } add_to_variable = { TFRKPHN_sd_s9 = 3 } clamp_variable = { var = TFRKPHN_sd_s9 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s13 = 3 } clamp_variable = { var = TFRKPHN_sd_s13 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s14 = 3 } clamp_variable = { var = TFRKPHN_sd_s14 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s6 = 3 } clamp_variable = { var = TFRKPHN_sd_s6 min = 0 max = 100 } set_variable = { TFRKPHN_by_last = 3 } }
+				if = { limit = { check_variable = { TFRKPHN_by_sel = 4 } } add_to_variable = { TFRKPHN_sd_s1 = 3 } clamp_variable = { var = TFRKPHN_sd_s1 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s2 = 3 } clamp_variable = { var = TFRKPHN_sd_s2 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s3 = 3 } clamp_variable = { var = TFRKPHN_sd_s3 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s5 = 3 } clamp_variable = { var = TFRKPHN_sd_s5 min = 0 max = 100 } set_variable = { TFRKPHN_by_last = 3 } }
+				if = { limit = { check_variable = { TFRKPHN_by_sel = 5 } } add_to_variable = { TFRKPHN_sd_s10 = 3 } clamp_variable = { var = TFRKPHN_sd_s10 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s17 = 3 } clamp_variable = { var = TFRKPHN_sd_s17 min = 0 max = 100 } set_variable = { TFRKPHN_by_last = 3 } }
+				if = { limit = { check_variable = { TFRKPHN_by_sel = 6 } } add_to_variable = { TFRKPHN_sd_s21 = 3 } clamp_variable = { var = TFRKPHN_sd_s21 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s24 = 3 } clamp_variable = { var = TFRKPHN_sd_s24 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s18 = 3 } clamp_variable = { var = TFRKPHN_sd_s18 min = 0 max = 100 } set_variable = { TFRKPHN_by_last = 3 } }
+				if = { limit = { check_variable = { TFRKPHN_by_sel = 7 } } add_to_variable = { TFRKPHN_sd_s20 = 3 } clamp_variable = { var = TFRKPHN_sd_s20 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s25 = 3 } clamp_variable = { var = TFRKPHN_sd_s25 min = 0 max = 100 } set_variable = { TFRKPHN_by_last = 3 } }
+				if = { limit = { check_variable = { TFRKPHN_by_sel = 8 } } add_to_variable = { TFRKPHN_sd_s23 = 3 } clamp_variable = { var = TFRKPHN_sd_s23 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s22 = 3 } clamp_variable = { var = TFRKPHN_sd_s22 min = 0 max = 100 } set_variable = { TFRKPHN_by_last = 3 } }
+				if = { limit = { check_variable = { TFRKPHN_by_sel = 9 } } add_to_variable = { TFRKPHN_sd_s19 = 3 } clamp_variable = { var = TFRKPHN_sd_s19 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s15 = 3 } clamp_variable = { var = TFRKPHN_sd_s15 min = 0 max = 100 } set_variable = { TFRKPHN_by_last = 3 } }
+				add_to_variable = { TFRKPHN_by_redev = 1 }
+				set_variable = { TFRKPHN_by_last_n = TFRKPHN_by_sel }
+				TFRKPHN_by_anim_next = yes
+				TFRKPHN_sd_refresh = yes
+				TFRKPHN_by_poll = yes
+			}
+		}
+	}
+}

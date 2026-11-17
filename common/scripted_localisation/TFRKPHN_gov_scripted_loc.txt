@@ -1,0 +1,117 @@
+# [안내] 오세훈 정부: 지역 설명 상자의 시장과 도지사 칸. gov_build.py가 만든다. (지역 범위에서 불리므로 KOR로 들어가서 깃발을 본다)
+defined_text = {
+	name = GetTFRKPHNGov_daegu
+	text = { trigger = { KOR = { has_country_flag = TFRKPHN_gv3_g } } localization_key = TFRKPHN_gov_daegu_g }
+	text = { trigger = { KOR = { has_country_flag = TFRKPHN_gv3_o } } localization_key = TFRKPHN_gov_daegu_o }
+	text = { trigger = { KOR = { has_country_flag = TFRKPHN_successor_oh_se_hoon } } localization_key = TFRKPHN_gov_daegu_i }
+	text = { localization_key = TFRKPHN_gov_none }
+}
+defined_text = {
+	name = GetTFRKPHNGov_incheon
+	text = { trigger = { KOR = { has_country_flag = TFRKPHN_gv4_g } } localization_key = TFRKPHN_gov_incheon_g }
+	text = { trigger = { KOR = { has_country_flag = TFRKPHN_gv4_o } } localization_key = TFRKPHN_gov_incheon_o }
+	text = { trigger = { KOR = { has_country_flag = TFRKPHN_successor_oh_se_hoon } } localization_key = TFRKPHN_gov_incheon_i }
+	text = { localization_key = TFRKPHN_gov_none }
+}
+defined_text = {
+	name = GetTFRKPHNGov_gwangju
+	text = { trigger = { KOR = { has_country_flag = TFRKPHN_gv14_g } } localization_key = TFRKPHN_gov_gwangju_g }
+	text = { trigger = { KOR = { has_country_flag = TFRKPHN_gv14_o } } localization_key = TFRKPHN_gov_gwangju_o }
+	text = { trigger = { KOR = { has_country_flag = TFRKPHN_successor_oh_se_hoon } } localization_key = TFRKPHN_gov_gwangju_i }
+	text = { localization_key = TFRKPHN_gov_none }
+}
+defined_text = {
+	name = GetTFRKPHNGov_daejeon
+	text = { trigger = { KOR = { has_country_flag = TFRKPHN_gv6_g } } localization_key = TFRKPHN_gov_daejeon_g }
+	text = { trigger = { KOR = { has_country_flag = TFRKPHN_gv6_o } } localization_key = TFRKPHN_gov_daejeon_o }
+	text = { trigger = { KOR = { has_country_flag = TFRKPHN_successor_oh_se_hoon } } localization_key = TFRKPHN_gov_daejeon_i }
+	text = { localization_key = TFRKPHN_gov_none }
+}
+defined_text = {
+	name = GetTFRKPHNGov_ulsan
+	text = { trigger = { KOR = { has_country_flag = TFRKPHN_gv7_g } } localization_key = TFRKPHN_gov_ulsan_g }
+	text = { trigger = { KOR = { has_country_flag = TFRKPHN_gv7_o } } localization_key = TFRKPHN_gov_ulsan_o }
+	text = { trigger = { KOR = { has_country_flag = TFRKPHN_successor_oh_se_hoon } } localization_key = TFRKPHN_gov_ulsan_i }
+	text = { localization_key = TFRKPHN_gov_none }
+}
+defined_text = {
+	name = GetTFRKPHNGov_sejong
+	text = { trigger = { KOR = { has_country_flag = TFRKPHN_gv8_g } } localization_key = TFRKPHN_gov_sejong_g }
+	text = { trigger = { KOR = { has_country_flag = TFRKPHN_gv8_o } } localization_key = TFRKPHN_gov_sejong_o }
+	text = { trigger = { KOR = { has_country_flag = TFRKPHN_successor_oh_se_hoon } } localization_key = TFRKPHN_gov_sejong_i }
+	text = { localization_key = TFRKPHN_gov_none }
+}
+defined_text = {
+	name = GetTFRKPHNGov_gyeonggi
+	text = { trigger = { KOR = { has_country_flag = TFRKPHN_gv9_g } } localization_key = TFRKPHN_gov_gyeonggi_g }
+	text = { trigger = { KOR = { has_country_flag = TFRKPHN_gv9_o } } localization_key = TFRKPHN_gov_gyeonggi_o }
+	text = { trigger = { KOR = { has_country_flag = TFRKPHN_successor_oh_se_hoon } } localization_key = TFRKPHN_gov_gyeonggi_i }
+	text = { localization_key = TFRKPHN_gov_none }
+}
+defined_text = {
+	name = GetTFRKPHNGov_gangwon
+	text = { trigger = { KOR = { has_country_flag = TFRKPHN_gv10_g } } localization_key = TFRKPHN_gov_gangwon_g }
+	text = { trigger = { KOR = { has_country_flag = TFRKPHN_gv10_o } } localization_key = TFRKPHN_gov_gangwon_o }
+	text = { trigger = { KOR = { has_country_flag = TFRKPHN_successor_oh_se_hoon } } localization_key = TFRKPHN_gov_gangwon_i }
+	text = { localization_key = TFRKPHN_gov_none }
+}
+defined_text = {
+	name = GetTFRKPHNGov_chungbuk
+	text = { trigger = { KOR = { has_country_flag = TFRKPHN_gv11_g } } localization_key = TFRKPHN_gov_chungbuk_g }
+	text = { trigger = { KOR = { has_country_flag = TFRKPHN_gv11_o } } localization_key = TFRKPHN_gov_chungbuk_o }
+	text = { trigger = { KOR = { has_country_flag = TFRKPHN_successor_oh_se_hoon } } localization_key = TFRKPHN_gov_chungbuk_i }
+	text = { localization_key = TFRKPHN_gov_none }
+}
+defined_text = {
+	name = GetTFRKPHNGov_chungnam
+	text = { trigger = { KOR = { has_country_flag = TFRKPHN_gv12_g } } localization_key = TFRKPHN_gov_chungnam_g }
+	text = { trigger = { KOR = { has_country_flag = TFRKPHN_gv12_o } } localization_key = TFRKPHN_gov_chungnam_o }
+	text = { trigger = { KOR = { has_country_flag = TFRKPHN_successor_oh_se_hoon } } localization_key = TFRKPHN_gov_chungnam_i }
+	text = { localization_key = TFRKPHN_gov_none }
+}
+defined_text = {
+	name = GetTFRKPHNGov_jeonbuk
+	text = { trigger = { KOR = { has_country_flag = TFRKPHN_gv13_g } } localization_key = TFRKPHN_gov_jeonbuk_g }
+	text = { trigger = { KOR = { has_country_flag = TFRKPHN_gv13_o } } localization_key = TFRKPHN_gov_jeonbuk_o }
+	text = { trigger = { KOR = { has_country_flag = TFRKPHN_successor_oh_se_hoon } } localization_key = TFRKPHN_gov_jeonbuk_i }
+	text = { localization_key = TFRKPHN_gov_none }
+}
+defined_text = {
+	name = GetTFRKPHNGov_jeonnam
+	text = { trigger = { KOR = { has_country_flag = TFRKPHN_gv14_g } } localization_key = TFRKPHN_gov_jeonnam_g }
+	text = { trigger = { KOR = { has_country_flag = TFRKPHN_gv14_o } } localization_key = TFRKPHN_gov_jeonnam_o }
+	text = { trigger = { KOR = { has_country_flag = TFRKPHN_successor_oh_se_hoon } } localization_key = TFRKPHN_gov_jeonnam_i }
+	text = { localization_key = TFRKPHN_gov_none }
+}
+defined_text = {
+	name = GetTFRKPHNGov_gyeongbuk
+	text = { trigger = { KOR = { has_country_flag = TFRKPHN_gv15_g } } localization_key = TFRKPHN_gov_gyeongbuk_g }
+	text = { trigger = { KOR = { has_country_flag = TFRKPHN_gv15_o } } localization_key = TFRKPHN_gov_gyeongbuk_o }
+	text = { trigger = { KOR = { has_country_flag = TFRKPHN_successor_oh_se_hoon } } localization_key = TFRKPHN_gov_gyeongbuk_i }
+	text = { localization_key = TFRKPHN_gov_none }
+}
+defined_text = {
+	name = GetTFRKPHNGov_gyeongnam
+	text = { trigger = { KOR = { has_country_flag = TFRKPHN_gv16_g } } localization_key = TFRKPHN_gov_gyeongnam_g }
+	text = { trigger = { KOR = { has_country_flag = TFRKPHN_gv16_o } } localization_key = TFRKPHN_gov_gyeongnam_o }
+	text = { trigger = { KOR = { has_country_flag = TFRKPHN_successor_oh_se_hoon } } localization_key = TFRKPHN_gov_gyeongnam_i }
+	text = { localization_key = TFRKPHN_gov_none }
+}
+defined_text = {
+	name = GetTFRKPHNGov_jeju
+	text = { trigger = { KOR = { has_country_flag = TFRKPHN_gv17_g } } localization_key = TFRKPHN_gov_jeju_g }
+	text = { trigger = { KOR = { has_country_flag = TFRKPHN_gv17_o } } localization_key = TFRKPHN_gov_jeju_o }
+	text = { trigger = { KOR = { has_country_flag = TFRKPHN_successor_oh_se_hoon } } localization_key = TFRKPHN_gov_jeju_i }
+	text = { localization_key = TFRKPHN_gov_none }
+}
+defined_text = {
+	name = GetTFRKPHNGov_jg
+	text = { trigger = { KOR = { has_country_flag = TFRKPHN_gv14_g } } localization_key = TFRKPHN_gov_gwangju_g }
+	text = { trigger = { KOR = { has_country_flag = TFRKPHN_gv14_o } } localization_key = TFRKPHN_gov_gwangju_o }
+	text = { localization_key = TFRKPHN_gov_jg_wait }
+}
+defined_text = {
+	name = GetTFRKPHNBusanMayor
+	text = { trigger = { KOR = { has_country_flag = TFRKPHN_busan_han } } localization_key = TFRKPHN_busan_han }
+	text = { localization_key = TFRKPHN_busan_cho_orig }
+}

@@ -1,0 +1,59 @@
+# [안내] 오세훈 정부: 시장과 도지사 칸의 효과. gov_build.py가 만든다.
+# 도 변동치를 한 번 붙인다
+TFRKPHN_gov_setup = {
+	set_country_flag = TFRKPHN_gov_inited
+	1041 = { if = { limit = { is_owned_by = KOR NOT = { has_dynamic_modifier = { modifier = TFRKPHN_gyeonggi_do } } } add_dynamic_modifier = { modifier = TFRKPHN_gyeonggi_do } } }
+	871 = { if = { limit = { is_owned_by = KOR NOT = { has_dynamic_modifier = { modifier = TFRKPHN_gangwon_do } } } add_dynamic_modifier = { modifier = TFRKPHN_gangwon_do } } }
+	525 = { if = { limit = { is_owned_by = KOR NOT = { has_dynamic_modifier = { modifier = TFRKPHN_chungbuk_do } } } add_dynamic_modifier = { modifier = TFRKPHN_chungbuk_do } } }
+	525 = { if = { limit = { is_owned_by = KOR NOT = { has_dynamic_modifier = { modifier = TFRKPHN_chungnam_do } } } add_dynamic_modifier = { modifier = TFRKPHN_chungnam_do } } }
+	869 = { if = { limit = { is_owned_by = KOR NOT = { has_dynamic_modifier = { modifier = TFRKPHN_jeonbuk_do } } } add_dynamic_modifier = { modifier = TFRKPHN_jeonbuk_do } } }
+	if = { limit = { NOT = { has_country_flag = TFRKPHN_gj_merged } }
+		869 = { if = { limit = { is_owned_by = KOR NOT = { has_dynamic_modifier = { modifier = TFRKPHN_jeonnam_do } } } add_dynamic_modifier = { modifier = TFRKPHN_jeonnam_do } } }
+	}
+	870 = { if = { limit = { is_owned_by = KOR NOT = { has_dynamic_modifier = { modifier = TFRKPHN_gyeongbuk_do } } } add_dynamic_modifier = { modifier = TFRKPHN_gyeongbuk_do } } }
+	1412 = { if = { limit = { is_owned_by = KOR NOT = { has_dynamic_modifier = { modifier = TFRKPHN_gyeongnam_do } } } add_dynamic_modifier = { modifier = TFRKPHN_gyeongnam_do } } }
+}
+# 광주와 전남이 통합되면 광주광역시 칸을 전남광주통합특별시 칸으로 바꾼다
+TFRKPHN_gov_merge = {
+	set_country_flag = TFRKPHN_gov_merged
+	869 = {
+		if = { limit = { has_dynamic_modifier = { modifier = KOR_gwangju_city } } remove_dynamic_modifier = { modifier = KOR_gwangju_city } }
+		if = { limit = { has_dynamic_modifier = { modifier = TFRKPHN_jeonnam_do } } remove_dynamic_modifier = { modifier = TFRKPHN_jeonnam_do } }
+		if = { limit = { is_owned_by = KOR NOT = { has_dynamic_modifier = { modifier = TFRKPHN_jeonnam_gwangju_city } } } add_dynamic_modifier = { modifier = TFRKPHN_jeonnam_gwangju_city } }
+	}
+}
+# 2030년 지방선거 결과를 지역 상자에 반영한다 (TFRKPHN_le_count가 부른다). TFRKPHN_gvN_g = 여당 후보가 이김, _o = 야당 후보가 이김.
+TFRKPHN_gov_result = {
+	if = { limit = { check_variable = { TFRKPHN_le_v3 > 49.9 } } set_country_flag = TFRKPHN_gv3_g }
+	else = { set_country_flag = TFRKPHN_gv3_o }
+	if = { limit = { check_variable = { TFRKPHN_le_v4 > 49.9 } } set_country_flag = TFRKPHN_gv4_g }
+	else = { set_country_flag = TFRKPHN_gv4_o }
+	if = { limit = { check_variable = { TFRKPHN_le_v6 > 49.9 } } set_country_flag = TFRKPHN_gv6_g }
+	else = { set_country_flag = TFRKPHN_gv6_o }
+	if = { limit = { check_variable = { TFRKPHN_le_v7 > 49.9 } } set_country_flag = TFRKPHN_gv7_g }
+	else = { set_country_flag = TFRKPHN_gv7_o }
+	if = { limit = { check_variable = { TFRKPHN_le_v8 > 49.9 } } set_country_flag = TFRKPHN_gv8_g }
+	else = { set_country_flag = TFRKPHN_gv8_o }
+	if = { limit = { check_variable = { TFRKPHN_le_v9 > 49.9 } } set_country_flag = TFRKPHN_gv9_g }
+	else = { set_country_flag = TFRKPHN_gv9_o }
+	if = { limit = { check_variable = { TFRKPHN_le_v10 > 49.9 } } set_country_flag = TFRKPHN_gv10_g }
+	else = { set_country_flag = TFRKPHN_gv10_o }
+	if = { limit = { check_variable = { TFRKPHN_le_v11 > 49.9 } } set_country_flag = TFRKPHN_gv11_g }
+	else = { set_country_flag = TFRKPHN_gv11_o }
+	if = { limit = { check_variable = { TFRKPHN_le_v12 > 49.9 } } set_country_flag = TFRKPHN_gv12_g }
+	else = { set_country_flag = TFRKPHN_gv12_o }
+	if = { limit = { check_variable = { TFRKPHN_le_v13 > 49.9 } } set_country_flag = TFRKPHN_gv13_g }
+	else = { set_country_flag = TFRKPHN_gv13_o }
+	if = { limit = { check_variable = { TFRKPHN_le_v14 > 49.9 } } set_country_flag = TFRKPHN_gv14_g }
+	else = { set_country_flag = TFRKPHN_gv14_o }
+	if = { limit = { check_variable = { TFRKPHN_le_v15 > 49.9 } } set_country_flag = TFRKPHN_gv15_g }
+	else = { set_country_flag = TFRKPHN_gv15_o }
+	if = { limit = { check_variable = { TFRKPHN_le_v16 > 49.9 } } set_country_flag = TFRKPHN_gv16_g }
+	else = { set_country_flag = TFRKPHN_gv16_o }
+	if = { limit = { check_variable = { TFRKPHN_le_v17 > 49.9 } } set_country_flag = TFRKPHN_gv17_g }
+	else = { set_country_flag = TFRKPHN_gv17_o }
+	KOR_busan_city_mayor_reset_effect = yes
+	clr_country_flag = TFRKPHN_busan_han
+	if = { limit = { check_variable = { TFRKPHN_le_v2 > 49.9 } } set_country_flag = KOR_busan_mayor_cho_gyeongtae set_country_flag = TFRKPHN_busan_han }
+	else = { set_country_flag = KOR_busan_mayor_jeon_jaesoo }
+}
