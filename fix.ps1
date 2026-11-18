@@ -100,7 +100,7 @@ if ($hasMod) {
     }
     if ($fixed -gt 0) { Fix "글 파일 $fixed 개의 저장 형식(UTF-8 BOM)을 바로잡았습니다." } else { Ok '글 파일의 저장 형식이 올바릅니다.' }
     # 설명서가 .yml.txt로 저장된 경우
-    Get-ChildItem -LiteralPath (Join-Path $dst 'localisation') -Recurse -Include '*.yml.txt','*.yml.yml' | ForEach-Object { Warn ("이름이 잘못된 글 파일: " + $_.Name + "  → 끝을 .yml로 고쳐 주세요.") }
+    Get-ChildItem -LiteralPath (Join-Path $dst 'localisation') -Recurse -File | Where-Object { $_.Name -like '*.yml.txt' -or $_.Name -like '*.yml.yml' } | ForEach-Object { Warn ("이름이 잘못된 글 파일: " + $_.Name + "  → 끝을 .yml로 고쳐 주세요.") }
 }
 
 # 6) 필요한 모드, 겹치는 모드

@@ -225,13 +225,13 @@ if = { limit = { has_country_flag = TFRKPHN_successor_oh_se_hoon NOT = { has_cou
 # >>> 홍준표 유족 (hong_grief_build.py)
 if = { limit = { has_country_flag = TFRKP_HN_hong_president has_completed_focus = TFRKPHN_hong_b02_02 NOT = { has_country_flag = TFRKPHN_grief_set } } set_country_flag = TFRKPHN_grief_set country_event = { id = tfrkphn.6970 days = 150 } }
 # <<< 홍준표 유족
-# >>> 여당 단체장
-if = { limit = { NOT = { has_country_flag = TFRKPHN_ally_tick } } set_country_flag = { flag = TFRKPHN_ally_tick days = 30 value = 1 } TFRKPHN_ally_apply = yes }
-# <<< 여당 단체장
 # >>> 재난 (safety_build.py)
 if = { limit = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_completed_focus = TFRKPHN_oh_se_hoon_e1 NOT = { has_country_flag = TFRKPHN_sf_tick } } set_country_flag = { flag = TFRKPHN_sf_tick days = 180 value = 1 }
 	random_list = { 50 = { } 25 = { if = { limit = { check_variable = { TFRKPHN_sf > 59.5 } } country_event = { id = tfrkphn.6976 } } else = { country_event = { id = tfrkphn.6979 } } } 25 = { if = { limit = { check_variable = { TFRKPHN_sf > 59.5 } } country_event = { id = tfrkphn.6977 } } else = { country_event = { id = tfrkphn.6980 } } } } }
 # <<< 재난
+# >>> 여당 단체장
+if = { limit = { NOT = { has_country_flag = TFRKPHN_ally_tick } } set_country_flag = { flag = TFRKPHN_ally_tick days = 30 value = 1 } TFRKPHN_ally_apply = yes }
+# <<< 여당 단체장
 # >>> 시장과 도지사 칸 (gov_build.py)
 if = { limit = { NOT = { has_country_flag = TFRKPHN_gov_inited } } TFRKPHN_gov_setup = yes }
 if = { limit = { has_global_flag = TFRKP_mod_setup_global_flag OR = { 1411 = { has_dynamic_modifier = { modifier = KOR_daegu_city } } 1041 = { has_dynamic_modifier = { modifier = KOR_incheon_city } } 869 = { has_dynamic_modifier = { modifier = KOR_gwangju_city } } 525 = { has_dynamic_modifier = { modifier = KOR_daejeon_city } } 1410 = { has_dynamic_modifier = { modifier = KOR_ulsan_city } } 525 = { has_dynamic_modifier = { modifier = KOR_sejong_special_city } } 869 = { has_dynamic_modifier = { modifier = KOR_jeju_special_self_governing_province } } } } TFRKPHN_gov_swap = yes }	# KP가 광역시 칸을 붙인 뒤(on_startup)에 바꿔 끼운다
