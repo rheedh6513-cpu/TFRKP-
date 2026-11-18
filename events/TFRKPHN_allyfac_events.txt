@@ -1,0 +1,18 @@
+# [안내] 여당 단체장 지역 공장 준공 소식. allyfac_build.py가 만든다.
+add_namespace = tfrkphn
+country_event = {
+	id = tfrkphn.6768
+	title = tfrkphn.6768.t
+	desc = tfrkphn.6768.d
+	picture = GFX_TFRKPHN_allyfac
+	is_triggered_only = yes
+	option = { name = tfrkphn.6768.a }
+}
+country_event = {
+	id = tfrkphn.6769
+	title = tfrkphn.6769.t
+	desc = tfrkphn.6769.d
+	picture = GFX_TFRKPHN_allyfac
+	is_triggered_only = yes
+	option = { name = tfrkphn.6769.a }
+}

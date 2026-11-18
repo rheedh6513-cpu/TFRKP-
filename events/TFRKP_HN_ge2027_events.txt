@@ -31,10 +31,24 @@ country_event = {
 	}
 }
 
+# >>> kp 302
+# 긴 글의 앞 장. 선택지가 원래 이벤트 tfrkphn.302를 부른다 (oh302_build.py)
+country_event = {
+	id = tfrkphn.702
+	title = tfrkphn.302.t
+	desc = tfrkphn.302.kp
+	picture = GFX_TFRKPHN_oh_inaug
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.702.next
+		hidden_effect = { country_event = { id = tfrkphn.302 } }
+	}
+}
+# <<< kp 302
 country_event = {
 	id = tfrkphn.302
 	title = tfrkphn.302.t
-	desc = tfrkphn.302.kp
+	desc = tfrkphn.302.kp2
 	picture = GFX_TFRKPHN_oh_inaug
 	is_triggered_only = yes
 

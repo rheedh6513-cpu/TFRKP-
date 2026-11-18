@@ -1,4 +1,30 @@
 spriteTypes = {
+	frameAnimatedSpriteType = { name = "GFX_TFRKPHN_mega_crane" texturefile = "gfx/interface/gui/TFRKPHN_mega/TFRKPHN_mega_crane.png" noOfFrames = 12 animation_rate_fps = 6 looping = yes play_on_show = yes }
+	spriteType = { name = "GFX_TFRKPHN_mega_th_5_5" texturefile = "gfx/interface/gui/TFRKPHN_mega/TFRKPHN_mega_th_5_5.png" }
+	spriteType = { name = "GFX_TFRKPHN_mega_th_5_4" texturefile = "gfx/interface/gui/TFRKPHN_mega/TFRKPHN_mega_th_5_4.png" }
+	spriteType = { name = "GFX_TFRKPHN_mega_th_5_3" texturefile = "gfx/interface/gui/TFRKPHN_mega/TFRKPHN_mega_th_5_3.png" }
+	spriteType = { name = "GFX_TFRKPHN_mega_th_5_2" texturefile = "gfx/interface/gui/TFRKPHN_mega/TFRKPHN_mega_th_5_2.png" }
+	spriteType = { name = "GFX_TFRKPHN_mega_th_5_1" texturefile = "gfx/interface/gui/TFRKPHN_mega/TFRKPHN_mega_th_5_1.png" }
+	spriteType = { name = "GFX_TFRKPHN_mega_th_4_5" texturefile = "gfx/interface/gui/TFRKPHN_mega/TFRKPHN_mega_th_4_5.png" }
+	spriteType = { name = "GFX_TFRKPHN_mega_th_4_4" texturefile = "gfx/interface/gui/TFRKPHN_mega/TFRKPHN_mega_th_4_4.png" }
+	spriteType = { name = "GFX_TFRKPHN_mega_th_4_3" texturefile = "gfx/interface/gui/TFRKPHN_mega/TFRKPHN_mega_th_4_3.png" }
+	spriteType = { name = "GFX_TFRKPHN_mega_th_4_2" texturefile = "gfx/interface/gui/TFRKPHN_mega/TFRKPHN_mega_th_4_2.png" }
+	spriteType = { name = "GFX_TFRKPHN_mega_th_4_1" texturefile = "gfx/interface/gui/TFRKPHN_mega/TFRKPHN_mega_th_4_1.png" }
+	spriteType = { name = "GFX_TFRKPHN_mega_th_3_5" texturefile = "gfx/interface/gui/TFRKPHN_mega/TFRKPHN_mega_th_3_5.png" }
+	spriteType = { name = "GFX_TFRKPHN_mega_th_3_4" texturefile = "gfx/interface/gui/TFRKPHN_mega/TFRKPHN_mega_th_3_4.png" }
+	spriteType = { name = "GFX_TFRKPHN_mega_th_3_3" texturefile = "gfx/interface/gui/TFRKPHN_mega/TFRKPHN_mega_th_3_3.png" }
+	spriteType = { name = "GFX_TFRKPHN_mega_th_3_2" texturefile = "gfx/interface/gui/TFRKPHN_mega/TFRKPHN_mega_th_3_2.png" }
+	spriteType = { name = "GFX_TFRKPHN_mega_th_3_1" texturefile = "gfx/interface/gui/TFRKPHN_mega/TFRKPHN_mega_th_3_1.png" }
+	spriteType = { name = "GFX_TFRKPHN_mega_th_2_5" texturefile = "gfx/interface/gui/TFRKPHN_mega/TFRKPHN_mega_th_2_5.png" }
+	spriteType = { name = "GFX_TFRKPHN_mega_th_2_4" texturefile = "gfx/interface/gui/TFRKPHN_mega/TFRKPHN_mega_th_2_4.png" }
+	spriteType = { name = "GFX_TFRKPHN_mega_th_2_3" texturefile = "gfx/interface/gui/TFRKPHN_mega/TFRKPHN_mega_th_2_3.png" }
+	spriteType = { name = "GFX_TFRKPHN_mega_th_2_2" texturefile = "gfx/interface/gui/TFRKPHN_mega/TFRKPHN_mega_th_2_2.png" }
+	spriteType = { name = "GFX_TFRKPHN_mega_th_2_1" texturefile = "gfx/interface/gui/TFRKPHN_mega/TFRKPHN_mega_th_2_1.png" }
+	spriteType = { name = "GFX_TFRKPHN_mega_th_1_5" texturefile = "gfx/interface/gui/TFRKPHN_mega/TFRKPHN_mega_th_1_5.png" }
+	spriteType = { name = "GFX_TFRKPHN_mega_th_1_4" texturefile = "gfx/interface/gui/TFRKPHN_mega/TFRKPHN_mega_th_1_4.png" }
+	spriteType = { name = "GFX_TFRKPHN_mega_th_1_3" texturefile = "gfx/interface/gui/TFRKPHN_mega/TFRKPHN_mega_th_1_3.png" }
+	spriteType = { name = "GFX_TFRKPHN_mega_th_1_2" texturefile = "gfx/interface/gui/TFRKPHN_mega/TFRKPHN_mega_th_1_2.png" }
+	spriteType = { name = "GFX_TFRKPHN_mega_th_1_1" texturefile = "gfx/interface/gui/TFRKPHN_mega/TFRKPHN_mega_th_1_1.png" }
 	spriteType = { name = "GFX_TFRKPHN_mega_bar" texturefile = "gfx/interface/gui/TFRKPHN_mega/TFRKPHN_mega_bar.png" noOfFrames = 26 }
 	spriteType = { name = "GFX_TFRKPHN_mega_mini" texturefile = "gfx/interface/gui/TFRKPHN_mega/TFRKPHN_mega_mini.png" noOfFrames = 6 }
 	spriteType = { name = "GFX_TFRKPHN_mega_card" texturefile = "gfx/interface/gui/TFRKPHN_mega/TFRKPHN_mega_card.png" }

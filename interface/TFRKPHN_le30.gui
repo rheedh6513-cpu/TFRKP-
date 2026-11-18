@@ -108,34 +108,94 @@ guiTypes = {
 		iconType = { name = "TFRKPHN_le_frame_o" position = { x = 890 y = 120 } spriteType = "GFX_TFRKPHN_le_frame_o" alwaystransparent = yes }
 		iconType = { name = "TFRKPHN_le_pg2" position = { x = 578 y = 122 } spriteType = "GFX_TFRKPHN_le_pg2" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_g2" }
 		iconType = { name = "TFRKPHN_le_po2" position = { x = 892 y = 122 } spriteType = "GFX_TFRKPHN_le_po2" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_o2" }
+		iconType = { name = "TFRKPHN_le_pg2v1" position = { x = 578 y = 122 } spriteType = "GFX_TFRKPHN_le_pg2v1" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_g2v1" }
+		iconType = { name = "TFRKPHN_le_po2v1" position = { x = 892 y = 122 } spriteType = "GFX_TFRKPHN_le_po2v1" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_o2v1" }
+		iconType = { name = "TFRKPHN_le_pg2v2" position = { x = 578 y = 122 } spriteType = "GFX_TFRKPHN_le_pg2v2" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_g2v2" }
+		iconType = { name = "TFRKPHN_le_po2v2" position = { x = 892 y = 122 } spriteType = "GFX_TFRKPHN_le_po2v2" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_o2v2" }
 		iconType = { name = "TFRKPHN_le_pg3" position = { x = 578 y = 122 } spriteType = "GFX_TFRKPHN_le_pg3" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_g3" }
 		iconType = { name = "TFRKPHN_le_po3" position = { x = 892 y = 122 } spriteType = "GFX_TFRKPHN_le_po3" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_o3" }
+		iconType = { name = "TFRKPHN_le_pg3v1" position = { x = 578 y = 122 } spriteType = "GFX_TFRKPHN_le_pg3v1" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_g3v1" }
+		iconType = { name = "TFRKPHN_le_po3v1" position = { x = 892 y = 122 } spriteType = "GFX_TFRKPHN_le_po3v1" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_o3v1" }
+		iconType = { name = "TFRKPHN_le_pg3v2" position = { x = 578 y = 122 } spriteType = "GFX_TFRKPHN_le_pg3v2" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_g3v2" }
+		iconType = { name = "TFRKPHN_le_po3v2" position = { x = 892 y = 122 } spriteType = "GFX_TFRKPHN_le_po3v2" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_o3v2" }
 		iconType = { name = "TFRKPHN_le_pg4" position = { x = 578 y = 122 } spriteType = "GFX_TFRKPHN_le_pg4" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_g4" }
 		iconType = { name = "TFRKPHN_le_po4" position = { x = 892 y = 122 } spriteType = "GFX_TFRKPHN_le_po4" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_o4" }
+		iconType = { name = "TFRKPHN_le_pg4v1" position = { x = 578 y = 122 } spriteType = "GFX_TFRKPHN_le_pg4v1" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_g4v1" }
+		iconType = { name = "TFRKPHN_le_po4v1" position = { x = 892 y = 122 } spriteType = "GFX_TFRKPHN_le_po4v1" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_o4v1" }
+		iconType = { name = "TFRKPHN_le_pg4v2" position = { x = 578 y = 122 } spriteType = "GFX_TFRKPHN_le_pg4v2" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_g4v2" }
+		iconType = { name = "TFRKPHN_le_po4v2" position = { x = 892 y = 122 } spriteType = "GFX_TFRKPHN_le_po4v2" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_o4v2" }
 		iconType = { name = "TFRKPHN_le_pg6" position = { x = 578 y = 122 } spriteType = "GFX_TFRKPHN_le_pg6" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_g6" }
 		iconType = { name = "TFRKPHN_le_po6" position = { x = 892 y = 122 } spriteType = "GFX_TFRKPHN_le_po6" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_o6" }
+		iconType = { name = "TFRKPHN_le_pg6v1" position = { x = 578 y = 122 } spriteType = "GFX_TFRKPHN_le_pg6v1" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_g6v1" }
+		iconType = { name = "TFRKPHN_le_po6v1" position = { x = 892 y = 122 } spriteType = "GFX_TFRKPHN_le_po6v1" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_o6v1" }
+		iconType = { name = "TFRKPHN_le_pg6v2" position = { x = 578 y = 122 } spriteType = "GFX_TFRKPHN_le_pg6v2" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_g6v2" }
+		iconType = { name = "TFRKPHN_le_po6v2" position = { x = 892 y = 122 } spriteType = "GFX_TFRKPHN_le_po6v2" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_o6v2" }
 		iconType = { name = "TFRKPHN_le_pg7" position = { x = 578 y = 122 } spriteType = "GFX_TFRKPHN_le_pg7" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_g7" }
 		iconType = { name = "TFRKPHN_le_po7" position = { x = 892 y = 122 } spriteType = "GFX_TFRKPHN_le_po7" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_o7" }
+		iconType = { name = "TFRKPHN_le_pg7v1" position = { x = 578 y = 122 } spriteType = "GFX_TFRKPHN_le_pg7v1" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_g7v1" }
+		iconType = { name = "TFRKPHN_le_po7v1" position = { x = 892 y = 122 } spriteType = "GFX_TFRKPHN_le_po7v1" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_o7v1" }
+		iconType = { name = "TFRKPHN_le_pg7v2" position = { x = 578 y = 122 } spriteType = "GFX_TFRKPHN_le_pg7v2" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_g7v2" }
+		iconType = { name = "TFRKPHN_le_po7v2" position = { x = 892 y = 122 } spriteType = "GFX_TFRKPHN_le_po7v2" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_o7v2" }
 		iconType = { name = "TFRKPHN_le_pg8" position = { x = 578 y = 122 } spriteType = "GFX_TFRKPHN_le_pg8" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_g8" }
 		iconType = { name = "TFRKPHN_le_po8" position = { x = 892 y = 122 } spriteType = "GFX_TFRKPHN_le_po8" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_o8" }
+		iconType = { name = "TFRKPHN_le_pg8v1" position = { x = 578 y = 122 } spriteType = "GFX_TFRKPHN_le_pg8v1" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_g8v1" }
+		iconType = { name = "TFRKPHN_le_po8v1" position = { x = 892 y = 122 } spriteType = "GFX_TFRKPHN_le_po8v1" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_o8v1" }
+		iconType = { name = "TFRKPHN_le_pg8v2" position = { x = 578 y = 122 } spriteType = "GFX_TFRKPHN_le_pg8v2" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_g8v2" }
+		iconType = { name = "TFRKPHN_le_po8v2" position = { x = 892 y = 122 } spriteType = "GFX_TFRKPHN_le_po8v2" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_o8v2" }
 		iconType = { name = "TFRKPHN_le_pg9" position = { x = 578 y = 122 } spriteType = "GFX_TFRKPHN_le_pg9" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_g9" }
 		iconType = { name = "TFRKPHN_le_po9" position = { x = 892 y = 122 } spriteType = "GFX_TFRKPHN_le_po9" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_o9" }
+		iconType = { name = "TFRKPHN_le_pg9v1" position = { x = 578 y = 122 } spriteType = "GFX_TFRKPHN_le_pg9v1" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_g9v1" }
+		iconType = { name = "TFRKPHN_le_po9v1" position = { x = 892 y = 122 } spriteType = "GFX_TFRKPHN_le_po9v1" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_o9v1" }
+		iconType = { name = "TFRKPHN_le_pg9v2" position = { x = 578 y = 122 } spriteType = "GFX_TFRKPHN_le_pg9v2" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_g9v2" }
+		iconType = { name = "TFRKPHN_le_po9v2" position = { x = 892 y = 122 } spriteType = "GFX_TFRKPHN_le_po9v2" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_o9v2" }
 		iconType = { name = "TFRKPHN_le_pg10" position = { x = 578 y = 122 } spriteType = "GFX_TFRKPHN_le_pg10" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_g10" }
 		iconType = { name = "TFRKPHN_le_po10" position = { x = 892 y = 122 } spriteType = "GFX_TFRKPHN_le_po10" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_o10" }
+		iconType = { name = "TFRKPHN_le_pg10v1" position = { x = 578 y = 122 } spriteType = "GFX_TFRKPHN_le_pg10v1" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_g10v1" }
+		iconType = { name = "TFRKPHN_le_po10v1" position = { x = 892 y = 122 } spriteType = "GFX_TFRKPHN_le_po10v1" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_o10v1" }
+		iconType = { name = "TFRKPHN_le_pg10v2" position = { x = 578 y = 122 } spriteType = "GFX_TFRKPHN_le_pg10v2" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_g10v2" }
+		iconType = { name = "TFRKPHN_le_po10v2" position = { x = 892 y = 122 } spriteType = "GFX_TFRKPHN_le_po10v2" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_o10v2" }
 		iconType = { name = "TFRKPHN_le_pg11" position = { x = 578 y = 122 } spriteType = "GFX_TFRKPHN_le_pg11" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_g11" }
 		iconType = { name = "TFRKPHN_le_po11" position = { x = 892 y = 122 } spriteType = "GFX_TFRKPHN_le_po11" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_o11" }
+		iconType = { name = "TFRKPHN_le_pg11v1" position = { x = 578 y = 122 } spriteType = "GFX_TFRKPHN_le_pg11v1" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_g11v1" }
+		iconType = { name = "TFRKPHN_le_po11v1" position = { x = 892 y = 122 } spriteType = "GFX_TFRKPHN_le_po11v1" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_o11v1" }
+		iconType = { name = "TFRKPHN_le_pg11v2" position = { x = 578 y = 122 } spriteType = "GFX_TFRKPHN_le_pg11v2" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_g11v2" }
+		iconType = { name = "TFRKPHN_le_po11v2" position = { x = 892 y = 122 } spriteType = "GFX_TFRKPHN_le_po11v2" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_o11v2" }
 		iconType = { name = "TFRKPHN_le_pg12" position = { x = 578 y = 122 } spriteType = "GFX_TFRKPHN_le_pg12" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_g12" }
 		iconType = { name = "TFRKPHN_le_po12" position = { x = 892 y = 122 } spriteType = "GFX_TFRKPHN_le_po12" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_o12" }
+		iconType = { name = "TFRKPHN_le_pg12v1" position = { x = 578 y = 122 } spriteType = "GFX_TFRKPHN_le_pg12v1" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_g12v1" }
+		iconType = { name = "TFRKPHN_le_po12v1" position = { x = 892 y = 122 } spriteType = "GFX_TFRKPHN_le_po12v1" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_o12v1" }
+		iconType = { name = "TFRKPHN_le_pg12v2" position = { x = 578 y = 122 } spriteType = "GFX_TFRKPHN_le_pg12v2" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_g12v2" }
+		iconType = { name = "TFRKPHN_le_po12v2" position = { x = 892 y = 122 } spriteType = "GFX_TFRKPHN_le_po12v2" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_o12v2" }
 		iconType = { name = "TFRKPHN_le_pg13" position = { x = 578 y = 122 } spriteType = "GFX_TFRKPHN_le_pg13" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_g13" }
 		iconType = { name = "TFRKPHN_le_po13" position = { x = 892 y = 122 } spriteType = "GFX_TFRKPHN_le_po13" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_o13" }
+		iconType = { name = "TFRKPHN_le_pg13v1" position = { x = 578 y = 122 } spriteType = "GFX_TFRKPHN_le_pg13v1" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_g13v1" }
+		iconType = { name = "TFRKPHN_le_po13v1" position = { x = 892 y = 122 } spriteType = "GFX_TFRKPHN_le_po13v1" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_o13v1" }
+		iconType = { name = "TFRKPHN_le_pg13v2" position = { x = 578 y = 122 } spriteType = "GFX_TFRKPHN_le_pg13v2" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_g13v2" }
+		iconType = { name = "TFRKPHN_le_po13v2" position = { x = 892 y = 122 } spriteType = "GFX_TFRKPHN_le_po13v2" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_o13v2" }
 		iconType = { name = "TFRKPHN_le_pg14" position = { x = 578 y = 122 } spriteType = "GFX_TFRKPHN_le_pg14" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_g14" }
 		iconType = { name = "TFRKPHN_le_po14" position = { x = 892 y = 122 } spriteType = "GFX_TFRKPHN_le_po14" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_o14" }
+		iconType = { name = "TFRKPHN_le_pg14v1" position = { x = 578 y = 122 } spriteType = "GFX_TFRKPHN_le_pg14v1" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_g14v1" }
+		iconType = { name = "TFRKPHN_le_po14v1" position = { x = 892 y = 122 } spriteType = "GFX_TFRKPHN_le_po14v1" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_o14v1" }
+		iconType = { name = "TFRKPHN_le_pg14v2" position = { x = 578 y = 122 } spriteType = "GFX_TFRKPHN_le_pg14v2" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_g14v2" }
+		iconType = { name = "TFRKPHN_le_po14v2" position = { x = 892 y = 122 } spriteType = "GFX_TFRKPHN_le_po14v2" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_o14v2" }
 		iconType = { name = "TFRKPHN_le_pg15" position = { x = 578 y = 122 } spriteType = "GFX_TFRKPHN_le_pg15" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_g15" }
 		iconType = { name = "TFRKPHN_le_po15" position = { x = 892 y = 122 } spriteType = "GFX_TFRKPHN_le_po15" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_o15" }
+		iconType = { name = "TFRKPHN_le_pg15v1" position = { x = 578 y = 122 } spriteType = "GFX_TFRKPHN_le_pg15v1" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_g15v1" }
+		iconType = { name = "TFRKPHN_le_po15v1" position = { x = 892 y = 122 } spriteType = "GFX_TFRKPHN_le_po15v1" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_o15v1" }
+		iconType = { name = "TFRKPHN_le_pg15v2" position = { x = 578 y = 122 } spriteType = "GFX_TFRKPHN_le_pg15v2" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_g15v2" }
+		iconType = { name = "TFRKPHN_le_po15v2" position = { x = 892 y = 122 } spriteType = "GFX_TFRKPHN_le_po15v2" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_o15v2" }
 		iconType = { name = "TFRKPHN_le_pg16" position = { x = 578 y = 122 } spriteType = "GFX_TFRKPHN_le_pg16" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_g16" }
 		iconType = { name = "TFRKPHN_le_po16" position = { x = 892 y = 122 } spriteType = "GFX_TFRKPHN_le_po16" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_o16" }
+		iconType = { name = "TFRKPHN_le_pg16v1" position = { x = 578 y = 122 } spriteType = "GFX_TFRKPHN_le_pg16v1" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_g16v1" }
+		iconType = { name = "TFRKPHN_le_po16v1" position = { x = 892 y = 122 } spriteType = "GFX_TFRKPHN_le_po16v1" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_o16v1" }
+		iconType = { name = "TFRKPHN_le_pg16v2" position = { x = 578 y = 122 } spriteType = "GFX_TFRKPHN_le_pg16v2" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_g16v2" }
+		iconType = { name = "TFRKPHN_le_po16v2" position = { x = 892 y = 122 } spriteType = "GFX_TFRKPHN_le_po16v2" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_o16v2" }
 		iconType = { name = "TFRKPHN_le_pg17" position = { x = 578 y = 122 } spriteType = "GFX_TFRKPHN_le_pg17" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_g17" }
 		iconType = { name = "TFRKPHN_le_po17" position = { x = 892 y = 122 } spriteType = "GFX_TFRKPHN_le_po17" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_o17" }
+		iconType = { name = "TFRKPHN_le_pg17v1" position = { x = 578 y = 122 } spriteType = "GFX_TFRKPHN_le_pg17v1" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_g17v1" }
+		iconType = { name = "TFRKPHN_le_po17v1" position = { x = 892 y = 122 } spriteType = "GFX_TFRKPHN_le_po17v1" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_o17v1" }
+		iconType = { name = "TFRKPHN_le_pg17v2" position = { x = 578 y = 122 } spriteType = "GFX_TFRKPHN_le_pg17v2" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_g17v2" }
+		iconType = { name = "TFRKPHN_le_po17v2" position = { x = 892 y = 122 } spriteType = "GFX_TFRKPHN_le_po17v2" scale = 0.45 pdx_tooltip = "TFRKPHN_le_bio_o17v2" }
 		buttonType = { name = "TFRKPHN_le_act1" position = { x = 578 y = 244 } spriteType = "GFX_TFRKPHN_le_act1" pdx_tooltip = "TFRKPHN_le_act1_tt" clicksound = click_default }
 		buttonType = { name = "TFRKPHN_le_act2" position = { x = 578 y = 282 } spriteType = "GFX_TFRKPHN_le_act2" pdx_tooltip = "TFRKPHN_le_act2_tt" clicksound = click_default }
 		buttonType = { name = "TFRKPHN_le_act3" position = { x = 578 y = 320 } spriteType = "GFX_TFRKPHN_le_act3" pdx_tooltip = "TFRKPHN_le_act3_tt" clicksound = click_default }
@@ -146,6 +206,25 @@ guiTypes = {
 		instantTextBoxType = { name = "TFRKPHN_le_med" position = { x = 724 y = 495 } text = "TFRKPHN_le_med" font = "hoi_16mbs" format = right maxWidth = 26 maxHeight = 20 alwaystransparent = yes }
 		instantTextBoxType = { name = "TFRKPHN_le_prom" position = { x = 724 y = 515 } text = "TFRKPHN_le_prom" font = "hoi_16mbs" format = right maxWidth = 26 maxHeight = 20 alwaystransparent = yes }
 		iconType = { name = "TFRKPHN_le_seoul" position = { x = 578 y = 120 } spriteType = "GFX_TFRKPHN_le_seoul" alwaystransparent = yes }
+		iconType = { name = "TFRKPHN_le_cz1" position = { x = 98 y = 137 } spriteType = "GFX_TFRKPHN_le_cz" alwaystransparent = yes }
+		iconType = { name = "TFRKPHN_le_cz2" position = { x = 357 y = 418 } spriteType = "GFX_TFRKPHN_le_cz" alwaystransparent = yes }
+		iconType = { name = "TFRKPHN_le_cz3" position = { x = 288 y = 329 } spriteType = "GFX_TFRKPHN_le_cz" alwaystransparent = yes }
+		iconType = { name = "TFRKPHN_le_cz4" position = { x = 82 y = 177 } spriteType = "GFX_TFRKPHN_le_cz" alwaystransparent = yes }
+		iconType = { name = "TFRKPHN_le_cz5" position = { x = 94 y = 400 } spriteType = "GFX_TFRKPHN_le_cz" alwaystransparent = yes }
+		iconType = { name = "TFRKPHN_le_cz6" position = { x = 219 y = 305 } spriteType = "GFX_TFRKPHN_le_cz" alwaystransparent = yes }
+		iconType = { name = "TFRKPHN_le_cz7" position = { x = 361 y = 355 } spriteType = "GFX_TFRKPHN_le_cz" alwaystransparent = yes }
+		iconType = { name = "TFRKPHN_le_cz8" position = { x = 114 y = 230 } spriteType = "GFX_TFRKPHN_le_cz" alwaystransparent = yes }
+		iconType = { name = "TFRKPHN_le_cz9" position = { x = 187 y = 190 } spriteType = "GFX_TFRKPHN_le_cz" alwaystransparent = yes }
+		iconType = { name = "TFRKPHN_le_cz10" position = { x = 264 y = 140 } spriteType = "GFX_TFRKPHN_le_cz" alwaystransparent = yes }
+		iconType = { name = "TFRKPHN_le_cz11" position = { x = 227 y = 230 } spriteType = "GFX_TFRKPHN_le_cz" alwaystransparent = yes }
+		iconType = { name = "TFRKPHN_le_cz12" position = { x = 114 y = 286 } spriteType = "GFX_TFRKPHN_le_cz" alwaystransparent = yes }
+		iconType = { name = "TFRKPHN_le_cz13" position = { x = 167 y = 343 } spriteType = "GFX_TFRKPHN_le_cz" alwaystransparent = yes }
+		iconType = { name = "TFRKPHN_le_cz14" position = { x = 151 y = 440 } spriteType = "GFX_TFRKPHN_le_cz" alwaystransparent = yes }
+		iconType = { name = "TFRKPHN_le_cz15" position = { x = 304 y = 270 } spriteType = "GFX_TFRKPHN_le_cz" alwaystransparent = yes }
+		iconType = { name = "TFRKPHN_le_cz16" position = { x = 260 y = 386 } spriteType = "GFX_TFRKPHN_le_cz" alwaystransparent = yes }
+		iconType = { name = "TFRKPHN_le_cz17" position = { x = 122 y = 540 } spriteType = "GFX_TFRKPHN_le_cz" alwaystransparent = yes }
+		iconType = { name = "TFRKPHN_le_czm" position = { x = 151 y = 440 } spriteType = "GFX_TFRKPHN_le_czm" alwaystransparent = yes }
+		iconType = { name = "TFRKPHN_le_shine" position = { x = 656 y = 194 } spriteType = "GFX_TFRKPHN_le_shine" alwaystransparent = yes }
 		buttonType = { name = "TFRKPHN_le_close" position = { x = 956 y = 11 } spriteType = "GFX_TFRKPHN_le_close" clicksound = click_default }
 	}
 }

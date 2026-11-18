@@ -5,5 +5,5 @@ TFRKPHN_oh_byelec_category = {
 	scripted_gui = TFRKPHN_byelec_gui
 	visible_when_empty = yes
 	allowed = { original_tag = KOR }
-	visible = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_country_flag = TFRKPHN_sd_by_primary_done NOT = { has_country_flag = TFRKPHN_sd_by_done } }
+	visible = { OR = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_country_flag = TFRKPHN_sd_lee_by } has_country_flag = TFRKPHN_sd_by_primary_done NOT = { has_country_flag = TFRKPHN_sd_by_done } }
 }

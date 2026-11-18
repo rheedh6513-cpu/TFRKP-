@@ -1,0 +1,24 @@
+# [안내] 서울런 확대 탭의 SLU 졸업식 버튼. slearn_build.py가 만든다.
+scripted_gui = {
+	TFRKPHN_sl_gui = {
+		context_type = decision_category
+		window_name = "TFRKPHN_sl_container"
+		effects = {
+			TFRKPHN_sl_bq_click = { country_event = { id = tfrkphn.6900 } }
+			TFRKPHN_sl_bp_click = { random_list = { 10 = { country_event = { id = tfrkphn.6901 } } 10 = { country_event = { id = tfrkphn.6902 } } 10 = { country_event = { id = tfrkphn.6903 } } 10 = { country_event = { id = tfrkphn.6904 } } 10 = { country_event = { id = tfrkphn.6905 } } 10 = { country_event = { id = tfrkphn.6906 } } 10 = { country_event = { id = tfrkphn.6907 } } 10 = { country_event = { id = tfrkphn.6908 } } 10 = { country_event = { id = tfrkphn.6909 } } 10 = { country_event = { id = tfrkphn.6910 } } 10 = { country_event = { id = tfrkphn.6911 } } 10 = { country_event = { id = tfrkphn.6912 } } 10 = { country_event = { id = tfrkphn.6913 } } 10 = { country_event = { id = tfrkphn.6914 } } 10 = { country_event = { id = tfrkphn.6915 } } 10 = { country_event = { id = tfrkphn.6916 } } 10 = { country_event = { id = tfrkphn.6917 } } } }
+			TFRKPHN_sl_bg_click = { country_event = { id = tfrkphn.6929 } }
+			TFRKPHN_sl_btn_click = {
+				if = { limit = { check_variable = { TFRKPHN_sl_claim < 5 } check_variable = { TFRKPHN_sl > TFRKPHN_sl_next } }
+					add_political_power = 30
+					set_temp_variable = { society_development_var_temp = 0.03 } add_society_development = yes
+					add_to_variable = { TFRKPHN_sl_claim = 1 } TFRKPHN_sl_apply = yes
+				}
+			}
+		}
+		triggers = {
+			TFRKPHN_sl_btn_click_enabled = { check_variable = { TFRKPHN_sl_claim < 5 } check_variable = { TFRKPHN_sl > TFRKPHN_sl_next } }
+			TFRKPHN_sl_ready_visible = { check_variable = { TFRKPHN_sl_claim < 5 } check_variable = { TFRKPHN_sl > TFRKPHN_sl_next } }
+			TFRKPHN_sl_wait_visible = { NOT = { AND = { check_variable = { TFRKPHN_sl_claim < 5 } check_variable = { TFRKPHN_sl > TFRKPHN_sl_next } } } }
+		}
+	}
+}

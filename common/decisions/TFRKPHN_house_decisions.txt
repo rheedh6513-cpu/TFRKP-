@@ -1,0 +1,57 @@
+# [안내] 31만 호 결정. house_build.py가 만든다.
+TFRKPHN_hs_category = {
+	TFRKPHN_hs_speed = {
+		icon = GFX_decision_generic_construction
+		cost = 40
+		visible = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_completed_focus = TFRKPHN_oh_se_hoon_b1 }
+		available = { check_variable = { TFRKPHN_hs < 31 } num_of_civilian_factories_available_for_projects > 0 }
+		days_remove = 90
+		modifier = { civilian_factory_use = 1 }
+		complete_effect = { custom_effect_tooltip = TFRKPHN_hs_speed_tt }
+		remove_effect = { hidden_effect = { add_to_variable = { TFRKPHN_hs = 4 } clamp_variable = { var = TFRKPHN_hs min = 0 max = 31 } TFRKPHN_hs_apply = yes add_to_variable = { TFRKPHN_bk = -1 } } }
+		ai_will_do = { factor = 1 }
+	}
+	TFRKPHN_hs_fast = {
+		icon = GFX_decision_generic_construction
+		cost = 50
+		fire_only_once = yes
+		visible = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_completed_focus = TFRKPHN_oh_se_hoon_b1 }
+		available = { check_variable = { TFRKPHN_hs < 31 } num_of_civilian_factories_available_for_projects > 0 }
+		days_remove = 120
+		modifier = { civilian_factory_use = 1 }
+		complete_effect = { custom_effect_tooltip = TFRKPHN_hs_fast_tt }
+		remove_effect = { hidden_effect = { add_to_variable = { TFRKPHN_hs = 5 } clamp_variable = { var = TFRKPHN_hs min = 0 max = 31 } TFRKPHN_hs_apply = yes } }
+		ai_will_do = { factor = 1 }
+	}
+	TFRKPHN_hs_moa = {
+		icon = GFX_decision_generic_construction
+		cost = 25
+		visible = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_completed_focus = TFRKPHN_oh_se_hoon_b1 }
+		available = { check_variable = { TFRKPHN_hs < 31 } }
+		days_remove = 60
+		complete_effect = { custom_effect_tooltip = TFRKPHN_hs_moa_tt }
+		remove_effect = { hidden_effect = { add_to_variable = { TFRKPHN_hs = 2 } clamp_variable = { var = TFRKPHN_hs min = 0 max = 31 } TFRKPHN_hs_apply = yes } }
+		ai_will_do = { factor = 1 }
+	}
+	TFRKPHN_hs_ss = {
+		icon = GFX_decision_generic_construction
+		cost = 40
+		visible = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_completed_focus = TFRKPHN_oh_se_hoon_b1 }
+		available = { check_variable = { TFRKPHN_hs < 31 } }
+		days_remove = 90
+		complete_effect = { custom_effect_tooltip = TFRKPHN_hs_ss_tt }
+		remove_effect = { hidden_effect = { add_to_variable = { TFRKPHN_hs = 3 } clamp_variable = { var = TFRKPHN_hs min = 0 max = 31 } TFRKPHN_hs_apply = yes add_to_variable = { TFRKPHN_bk = 1 } } }
+		ai_will_do = { factor = 1 }
+	}
+	TFRKPHN_hs_mega = {
+		icon = GFX_decision_generic_construction
+		cost = 50
+		visible = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_completed_focus = TFRKPHN_oh_se_hoon_b1 }
+		available = { check_variable = { TFRKPHN_hs < 31 } num_of_civilian_factories_available_for_projects > 0 OR = { check_variable = { TFRKPHN_mega_s1 > 2.5 } check_variable = { TFRKPHN_mega_s2 > 2.5 } check_variable = { TFRKPHN_mega_s3 > 2.5 } check_variable = { TFRKPHN_mega_s4 > 2.5 } check_variable = { TFRKPHN_mega_s5 > 2.5 } } }
+		days_remove = 120
+		modifier = { civilian_factory_use = 1 }
+		complete_effect = { custom_effect_tooltip = TFRKPHN_hs_mega_tt }
+		remove_effect = { hidden_effect = { set_temp_variable = { hs_m = 2 } if = { limit = { check_variable = { TFRKPHN_mega_s1 > 2.5 } } add_to_temp_variable = { hs_m = 1 } } if = { limit = { check_variable = { TFRKPHN_mega_s2 > 2.5 } } add_to_temp_variable = { hs_m = 1 } } if = { limit = { check_variable = { TFRKPHN_mega_s3 > 2.5 } } add_to_temp_variable = { hs_m = 1 } } if = { limit = { check_variable = { TFRKPHN_mega_s4 > 2.5 } } add_to_temp_variable = { hs_m = 1 } } if = { limit = { check_variable = { TFRKPHN_mega_s5 > 2.5 } } add_to_temp_variable = { hs_m = 1 } } add_to_variable = { TFRKPHN_hs = hs_m } clamp_variable = { var = TFRKPHN_hs min = 0 max = 31 } TFRKPHN_hs_apply = yes } }
+		ai_will_do = { factor = 1 }
+	}
+}

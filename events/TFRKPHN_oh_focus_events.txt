@@ -21,7 +21,7 @@ country_event = {
 	option = { name = tfrkphn.6702.a }
 }
 
-# 전시 통제를 걷는다 (중점 a5)
+# 비상 조치를 걷는다 (중점 a5)
 country_event = {
 	id = tfrkphn.6703
 	title = tfrkphn.6703.t
@@ -181,7 +181,7 @@ country_event = {
 	option = { name = tfrkphn.6718.a }
 }
 
-# 전시 편제를 푼다 (중점 h5)
+# 비상 태세를 푼다 (중점 h5)
 country_event = {
 	id = tfrkphn.6719
 	title = tfrkphn.6719.t
@@ -211,11 +211,22 @@ country_event = {
 	option = { name = tfrkphn.6721.a }
 }
 
-# 따뜻한 보수 (중점 b01_01)
+# 따뜻한 보수 (중점 b01_01, 앞 장)
 country_event = {
 	id = tfrkphn.6722
 	title = tfrkphn.6722.t
 	desc = tfrkphn.6722.d
+	picture = GFX_TFRKPHN_oh_party
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6722.next
+		hidden_effect = { country_event = { id = tfrkphn.6822 } }
+	}
+}
+country_event = {
+	id = tfrkphn.6822
+	title = tfrkphn.6722.t
+	desc = tfrkphn.6822.d
 	picture = GFX_TFRKPHN_oh_party
 	is_triggered_only = yes
 	option = { name = tfrkphn.6722.a }

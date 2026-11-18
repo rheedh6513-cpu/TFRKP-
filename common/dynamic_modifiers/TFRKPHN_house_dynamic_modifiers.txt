@@ -1,0 +1,6 @@
+# [안내] 31만 호. house_build.py가 만든다.
+TFRKPHN_house = {
+	icon = GFX_modifiers_TFRKPHN_local_ally
+	stability_factor = TFRKPHN_hs_st
+	production_speed_buildings_factor = TFRKPHN_hs_bd
+}

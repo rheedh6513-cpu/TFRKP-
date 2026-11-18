@@ -1,0 +1,8 @@
+spriteTypes = {
+	spriteType = { name = "GFX_TFRKPHN_sl_cat_picture" texturefile = "gfx/interface/decisions/TFRKPHN_sl_cat_picture.png" }
+	spriteType = { name = "GFX_decision_TFRKPHN_sl_slu" texturefile = "gfx/interface/decisions/TFRKPHN_sl_slu.png" }
+	spriteType = { name = "GFX_TFRKPHN_sl_slu_big" texturefile = "gfx/interface/decisions/TFRKPHN_sl_slu_big.png" }
+	spriteType = { name = "GFX_TFRKPHN_sl_btn_q" texturefile = "gfx/interface/decisions/TFRKPHN_sl_btn_q.png" }
+	spriteType = { name = "GFX_TFRKPHN_sl_btn_p" texturefile = "gfx/interface/decisions/TFRKPHN_sl_btn_p.png" }
+	spriteType = { name = "GFX_TFRKPHN_sl_btn_g" texturefile = "gfx/interface/decisions/TFRKPHN_sl_btn_g.png" }
+}

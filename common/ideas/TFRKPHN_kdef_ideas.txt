@@ -1,0 +1,64 @@
+# [안내] 오세훈 판 K-방산 국민정신. kdef_build.py가 만든다.
+ideas = {
+	country = {
+		TFRKPHN_kdef_1 = {
+			picture = generic_production_bonus
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = 0.05
+				production_factory_max_efficiency_factor = 0.05
+			}
+			equipment_bonus = {
+				modern_tank_chassis = { build_cost_ic = -0.05 instant = yes }
+				light_tank_chassis = { build_cost_ic = -0.05 instant = yes }
+				small_plane_airframe = { build_cost_ic = -0.05 instant = yes }
+			}
+		}
+		TFRKPHN_kdef_2 = {
+			picture = generic_production_bonus
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = 0.08
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+			}
+			equipment_bonus = {
+				modern_tank_chassis = { build_cost_ic = -0.12 instant = yes }
+				light_tank_chassis = { build_cost_ic = -0.12 instant = yes }
+				small_plane_airframe = { build_cost_ic = -0.05 instant = yes }
+			}
+		}
+		TFRKPHN_kdef_3 = {
+			picture = generic_production_bonus
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = 0.1
+				production_factory_max_efficiency_factor = 0.08
+				production_factory_efficiency_gain_factor = 0.08
+			}
+			equipment_bonus = {
+				modern_tank_chassis = { build_cost_ic = -0.12 instant = yes }
+				light_tank_chassis = { build_cost_ic = -0.12 instant = yes }
+				small_plane_airframe = { build_cost_ic = -0.12 instant = yes }
+			}
+		}
+		TFRKPHN_kdef_4 = {
+			picture = generic_production_bonus
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = 0.12
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+			}
+			equipment_bonus = {
+				modern_tank_chassis = { build_cost_ic = -0.15 instant = yes }
+				light_tank_chassis = { build_cost_ic = -0.15 instant = yes }
+				small_plane_airframe = { build_cost_ic = -0.15 instant = yes }
+			}
+		}
+	}
+}

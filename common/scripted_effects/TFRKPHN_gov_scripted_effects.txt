@@ -75,6 +75,40 @@ TFRKPHN_gov_jeonbuk_special = {
 		if = { limit = { is_owned_by = KOR NOT = { has_dynamic_modifier = { modifier = TFRKPHN_jeonbuk_sp } } } add_dynamic_modifier = { modifier = TFRKPHN_jeonbuk_sp } }
 	}
 }
+# 2026년 지방선거 결과를 적는다 (TFRKPHN_l6_count가 부른다). TFRKPHN_g6_N_p = 국민의힘 후보가 이김, _d = 더불어민주당 후보가 이김. 서울은 실제 결과(오세훈)대로라 적지 않는다.
+TFRKPHN_gov_result26 = {
+	if = { limit = { check_variable = { TFRKPHN_l6_v3 > 49.9 } } set_country_flag = TFRKPHN_g6_3_p }
+	else = { set_country_flag = TFRKPHN_g6_3_d }
+	if = { limit = { check_variable = { TFRKPHN_l6_v4 > 49.9 } } set_country_flag = TFRKPHN_g6_4_p }
+	else = { set_country_flag = TFRKPHN_g6_4_d }
+	if = { limit = { check_variable = { TFRKPHN_l6_v6 > 49.9 } } set_country_flag = TFRKPHN_g6_6_p }
+	else = { set_country_flag = TFRKPHN_g6_6_d }
+	if = { limit = { check_variable = { TFRKPHN_l6_v7 > 49.9 } } set_country_flag = TFRKPHN_g6_7_p }
+	else = { set_country_flag = TFRKPHN_g6_7_d }
+	if = { limit = { check_variable = { TFRKPHN_l6_v8 > 49.9 } } set_country_flag = TFRKPHN_g6_8_p }
+	else = { set_country_flag = TFRKPHN_g6_8_d }
+	if = { limit = { check_variable = { TFRKPHN_l6_v9 > 49.9 } } set_country_flag = TFRKPHN_g6_9_p }
+	else = { set_country_flag = TFRKPHN_g6_9_d }
+	if = { limit = { check_variable = { TFRKPHN_l6_v10 > 49.9 } } set_country_flag = TFRKPHN_g6_10_p }
+	else = { set_country_flag = TFRKPHN_g6_10_d }
+	if = { limit = { check_variable = { TFRKPHN_l6_v11 > 49.9 } } set_country_flag = TFRKPHN_g6_11_p }
+	else = { set_country_flag = TFRKPHN_g6_11_d }
+	if = { limit = { check_variable = { TFRKPHN_l6_v12 > 49.9 } } set_country_flag = TFRKPHN_g6_12_p }
+	else = { set_country_flag = TFRKPHN_g6_12_d }
+	if = { limit = { check_variable = { TFRKPHN_l6_v13 > 49.9 } } set_country_flag = TFRKPHN_g6_13_p }
+	else = { set_country_flag = TFRKPHN_g6_13_d }
+	if = { limit = { check_variable = { TFRKPHN_l6_v14 > 49.9 } } set_country_flag = TFRKPHN_g6_14_p }
+	else = { set_country_flag = TFRKPHN_g6_14_d }
+	if = { limit = { check_variable = { TFRKPHN_l6_v15 > 49.9 } } set_country_flag = TFRKPHN_g6_15_p }
+	else = { set_country_flag = TFRKPHN_g6_15_d }
+	if = { limit = { check_variable = { TFRKPHN_l6_v16 > 49.9 } } set_country_flag = TFRKPHN_g6_16_p }
+	else = { set_country_flag = TFRKPHN_g6_16_d }
+	if = { limit = { check_variable = { TFRKPHN_l6_v17 > 49.9 } } set_country_flag = TFRKPHN_g6_17_p }
+	else = { set_country_flag = TFRKPHN_g6_17_d }
+	KOR_busan_city_mayor_reset_effect = yes
+	if = { limit = { check_variable = { TFRKPHN_l6_v2 > 49.9 } } set_country_flag = KOR_busan_mayor_park_hyeongjoon set_country_flag = TFRKPHN_g6_2_p }
+	else = { set_country_flag = KOR_busan_mayor_jeon_jaesoo set_country_flag = TFRKPHN_g6_2_d }
+}
 # 2030년 지방선거 결과를 지역 상자에 반영한다 (TFRKPHN_le_count가 부른다). TFRKPHN_gvN_g = 여당 후보가 이김, _o = 야당 후보가 이김.
 TFRKPHN_gov_result = {
 	if = { limit = { check_variable = { TFRKPHN_le_v3 > 49.9 } } set_country_flag = TFRKPHN_gv3_g }

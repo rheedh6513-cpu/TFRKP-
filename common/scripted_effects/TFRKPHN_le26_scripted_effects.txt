@@ -1,0 +1,661 @@
+# [안내] 2030년 지방선거 상황실의 계산. le26_build.py가 만든다.
+# 변수: TFRKPHN_l6_v1~17 = 자리마다 여당 후보 지지(50을 넘기면 이긴다), TFRKPHN_l6_c1~17 = 딱지 띠 색(1 여당 우세, 2 경합, 3 야당 우세), TFRKPHN_l6_f1~17 = 땅 색 단계(1~6 파랑, 7~12 빨강, 50이 기준), TFRKPHN_l6_n1~17 = 공천(0 아직, 1 지역 기반, 2 중앙 인사, 3 신인),
+#   TFRKPHN_l6_g1~17 = 행동으로 올린 지지(자리마다 8까지), TFRKPHN_l6_p1~17 = 지역 사업 약속을 했으면 1, TFRKPHN_l6_sel = 고른 자리, TFRKPHN_l6_med = 선거 개입 논란, TFRKPHN_l6_prom = 약속 수, TFRKPHN_l6_days = 남은 날, TFRKPHN_l6_wins = 이긴 자리 수
+# 자리 번호: 1 서울시장, 2 부산시장, 3 대구시장, 4 인천시장, 5 광주시장, 6 대전시장, 7 울산시장, 8 세종시장, 9 경기도지사, 10 강원특별자치도지사, 11 충북도지사, 12 충남도지사, 13 전북특별자치도지사, 14 전남도지사, 15 경북도지사, 16 경남도지사, 17 제주도지사
+# 서울(1번)은 서울 지도 탭의 TFRKPHN_sd_avg를 그대로 읽는다.
+TFRKPHN_l6_start = {
+	set_country_flag = TFRKPHN_l6_started
+	set_country_flag = TFRKPHN_l6_on
+	# 여당: 보수 정부면 국민의힘(sign 1), 아니면 더불어민주당(sign -1). 지지 숫자는 늘 국민의힘 후보 지지라서 행동은 sign을 곱해 여당 쪽으로 민다
+	set_variable = { TFRKPHN_l6_sign = -1 }
+	if = { limit = { OR = { has_government = conservative has_government = authoritarian_democrat has_government = nationalist } } set_variable = { TFRKPHN_l6_sign = 1 } }
+	set_variable = { TFRKPHN_l6_neg = 0 }
+	subtract_from_variable = { TFRKPHN_l6_neg = TFRKPHN_l6_sign }
+	if = { limit = { check_variable = { TFRKPHN_l6_sign > 0 } } set_country_flag = TFRKPHN_l6_ppp_rules }
+	else = { clr_country_flag = TFRKPHN_l6_ppp_rules }
+	set_variable = { TFRKPHN_l6_days = 59 }
+	set_variable = { TFRKPHN_l6_sel = 9 }
+	set_variable = { TFRKPHN_l6_med = 0 }
+	set_variable = { TFRKPHN_l6_prom = 0 }
+	set_variable = { TFRKPHN_l6_opp_cd = 0 }
+	set_country_flag = TFRKPHN_gj_merged	# 광주전남은 무조건 통합 (사건 6738을 못 봤어도)
+	set_variable = { TFRKPHN_l6_total = 17 }
+	if = { limit = { has_country_flag = TFRKPHN_gj_merged } set_variable = { TFRKPHN_l6_total = 16 } }
+	# 전국에 고루 붙는 것: 안심소득 단계, 2028년 총선 결과, 개발 반발, 역차별 논란
+	set_temp_variable = { le_all = 0 }
+	if = { limit = { has_variable = TFRKPHN_an_stage } add_to_temp_variable = { le_all = TFRKPHN_an_stage } }
+	if = { limit = { has_variable = TFRKPHN_ge28 check_variable = { TFRKPHN_ge28 > 150.5 } } add_to_temp_variable = { le_all = 2 } }
+	if = { limit = { has_variable = TFRKPHN_ge28 check_variable = { TFRKPHN_ge28 < 120.5 } } add_to_temp_variable = { le_all = -2 } }
+	if = { limit = { has_variable = TFRKPHN_ex_gripe } set_temp_variable = { le_t = TFRKPHN_ex_gripe } multiply_temp_variable = { le_t = 0.5 } subtract_from_temp_variable = { le_all = le_t } }
+	if = { limit = { has_variable = TFRKPHN_bk } set_temp_variable = { le_t = TFRKPHN_bk } multiply_temp_variable = { le_t = 0.5 } clamp_temp_variable = { var = le_t min = -3 max = 3 } add_to_temp_variable = { le_all = le_t } }
+	clamp_temp_variable = { var = le_all min = -5 max = 6 }
+	set_temp_variable = { le_z1 = 0 }
+	if = { limit = { has_variable = TFRKPHN_mega_s1 } set_temp_variable = { le_z1 = TFRKPHN_mega_s1 } multiply_temp_variable = { le_z1 = 1.5 } }
+	set_temp_variable = { le_z2 = 0 }
+	if = { limit = { has_variable = TFRKPHN_mega_s2 } set_temp_variable = { le_z2 = TFRKPHN_mega_s2 } multiply_temp_variable = { le_z2 = 1.5 } }
+	set_temp_variable = { le_z3 = 0 }
+	if = { limit = { has_variable = TFRKPHN_mega_s3 } set_temp_variable = { le_z3 = TFRKPHN_mega_s3 } multiply_temp_variable = { le_z3 = 1.5 } }
+	set_temp_variable = { le_z4 = 0 }
+	if = { limit = { has_variable = TFRKPHN_mega_s4 } set_temp_variable = { le_z4 = TFRKPHN_mega_s4 } multiply_temp_variable = { le_z4 = 1.5 } }
+	set_temp_variable = { le_z5 = 0 }
+	if = { limit = { has_variable = TFRKPHN_mega_s5 } set_temp_variable = { le_z5 = TFRKPHN_mega_s5 } multiply_temp_variable = { le_z5 = 1.5 } }
+	set_variable = { TFRKPHN_l6_v1 = 51 }
+	add_to_variable = { TFRKPHN_l6_v1 = le_all }
+	add_to_variable = { TFRKPHN_l6_v1 = le_z1 }
+	round_variable = TFRKPHN_l6_v1
+	set_variable = { TFRKPHN_l6_n1 = 0 } if = { limit = { check_variable = { TFRKPHN_l6_sign > 0 } } set_variable = { TFRKPHN_l6_n1 = 1 } }
+	set_variable = { TFRKPHN_l6_g1 = 0 }
+	set_variable = { TFRKPHN_l6_p1 = 0 }
+	set_variable = { TFRKPHN_l6_v2 = 46 }
+	add_to_variable = { TFRKPHN_l6_v2 = le_all }
+	add_to_variable = { TFRKPHN_l6_v2 = le_z5 }
+	round_variable = TFRKPHN_l6_v2
+	set_variable = { TFRKPHN_l6_n2 = 0 } if = { limit = { check_variable = { TFRKPHN_l6_sign > 0 } } set_variable = { TFRKPHN_l6_n2 = 1 } }
+	set_variable = { TFRKPHN_l6_g2 = 0 }
+	set_variable = { TFRKPHN_l6_p2 = 0 }
+	set_variable = { TFRKPHN_l6_v3 = 58 }
+	add_to_variable = { TFRKPHN_l6_v3 = le_all }
+	add_to_variable = { TFRKPHN_l6_v3 = le_z4 }
+	round_variable = TFRKPHN_l6_v3
+	set_variable = { TFRKPHN_l6_n3 = 0 } if = { limit = { check_variable = { TFRKPHN_l6_sign > 0 } } set_variable = { TFRKPHN_l6_n3 = 1 } }
+	set_variable = { TFRKPHN_l6_g3 = 0 }
+	set_variable = { TFRKPHN_l6_p3 = 0 }
+	set_variable = { TFRKPHN_l6_v4 = 45 }
+	add_to_variable = { TFRKPHN_l6_v4 = le_all }
+	add_to_variable = { TFRKPHN_l6_v4 = le_z1 }
+	round_variable = TFRKPHN_l6_v4
+	set_variable = { TFRKPHN_l6_n4 = 0 } if = { limit = { check_variable = { TFRKPHN_l6_sign > 0 } } set_variable = { TFRKPHN_l6_n4 = 1 } }
+	set_variable = { TFRKPHN_l6_g4 = 0 }
+	set_variable = { TFRKPHN_l6_p4 = 0 }
+	set_variable = { TFRKPHN_l6_v5 = 22 }
+	add_to_variable = { TFRKPHN_l6_v5 = le_all }
+	add_to_variable = { TFRKPHN_l6_v5 = le_z3 }
+	round_variable = TFRKPHN_l6_v5
+	set_variable = { TFRKPHN_l6_n5 = 0 }
+	set_variable = { TFRKPHN_l6_g5 = 0 }
+	set_variable = { TFRKPHN_l6_p5 = 0 }
+	set_variable = { TFRKPHN_l6_v6 = 46 }
+	add_to_variable = { TFRKPHN_l6_v6 = le_all }
+	add_to_variable = { TFRKPHN_l6_v6 = le_z2 }
+	round_variable = TFRKPHN_l6_v6
+	set_variable = { TFRKPHN_l6_n6 = 0 } if = { limit = { check_variable = { TFRKPHN_l6_sign > 0 } } set_variable = { TFRKPHN_l6_n6 = 1 } }
+	set_variable = { TFRKPHN_l6_g6 = 0 }
+	set_variable = { TFRKPHN_l6_p6 = 0 }
+	set_variable = { TFRKPHN_l6_v7 = 46 }
+	add_to_variable = { TFRKPHN_l6_v7 = le_all }
+	add_to_variable = { TFRKPHN_l6_v7 = le_z5 }
+	round_variable = TFRKPHN_l6_v7
+	set_variable = { TFRKPHN_l6_n7 = 0 } if = { limit = { check_variable = { TFRKPHN_l6_sign > 0 } } set_variable = { TFRKPHN_l6_n7 = 1 } }
+	set_variable = { TFRKPHN_l6_g7 = 0 }
+	set_variable = { TFRKPHN_l6_p7 = 0 }
+	set_variable = { TFRKPHN_l6_v8 = 41 }
+	add_to_variable = { TFRKPHN_l6_v8 = le_all }
+	add_to_variable = { TFRKPHN_l6_v8 = le_z2 }
+	round_variable = TFRKPHN_l6_v8
+	set_variable = { TFRKPHN_l6_n8 = 0 } if = { limit = { check_variable = { TFRKPHN_l6_sign > 0 } } set_variable = { TFRKPHN_l6_n8 = 1 } }
+	set_variable = { TFRKPHN_l6_g8 = 0 }
+	set_variable = { TFRKPHN_l6_p8 = 0 }
+	set_variable = { TFRKPHN_l6_v9 = 43 }
+	add_to_variable = { TFRKPHN_l6_v9 = le_all }
+	add_to_variable = { TFRKPHN_l6_v9 = le_z1 }
+	round_variable = TFRKPHN_l6_v9
+	set_variable = { TFRKPHN_l6_n9 = 0 }
+	set_variable = { TFRKPHN_l6_g9 = 0 }
+	set_variable = { TFRKPHN_l6_p9 = 0 }
+	set_variable = { TFRKPHN_l6_v10 = 47 }
+	add_to_variable = { TFRKPHN_l6_v10 = le_all }
+	round_variable = TFRKPHN_l6_v10
+	set_variable = { TFRKPHN_l6_n10 = 0 } if = { limit = { check_variable = { TFRKPHN_l6_sign > 0 } } set_variable = { TFRKPHN_l6_n10 = 1 } }
+	set_variable = { TFRKPHN_l6_g10 = 0 }
+	set_variable = { TFRKPHN_l6_p10 = 0 }
+	set_variable = { TFRKPHN_l6_v11 = 47 }
+	add_to_variable = { TFRKPHN_l6_v11 = le_all }
+	add_to_variable = { TFRKPHN_l6_v11 = le_z2 }
+	round_variable = TFRKPHN_l6_v11
+	set_variable = { TFRKPHN_l6_n11 = 0 } if = { limit = { check_variable = { TFRKPHN_l6_sign > 0 } } set_variable = { TFRKPHN_l6_n11 = 1 } }
+	set_variable = { TFRKPHN_l6_g11 = 0 }
+	set_variable = { TFRKPHN_l6_p11 = 0 }
+	set_variable = { TFRKPHN_l6_v12 = 47 }
+	add_to_variable = { TFRKPHN_l6_v12 = le_all }
+	add_to_variable = { TFRKPHN_l6_v12 = le_z2 }
+	round_variable = TFRKPHN_l6_v12
+	set_variable = { TFRKPHN_l6_n12 = 0 } if = { limit = { check_variable = { TFRKPHN_l6_sign > 0 } } set_variable = { TFRKPHN_l6_n12 = 1 } }
+	set_variable = { TFRKPHN_l6_g12 = 0 }
+	set_variable = { TFRKPHN_l6_p12 = 0 }
+	set_variable = { TFRKPHN_l6_v13 = 25 }
+	add_to_variable = { TFRKPHN_l6_v13 = le_all }
+	add_to_variable = { TFRKPHN_l6_v13 = le_z3 }
+	round_variable = TFRKPHN_l6_v13
+	set_variable = { TFRKPHN_l6_n13 = 0 }
+	set_variable = { TFRKPHN_l6_g13 = 0 }
+	set_variable = { TFRKPHN_l6_p13 = 0 }
+	set_variable = { TFRKPHN_l6_v14 = 22 }
+	add_to_variable = { TFRKPHN_l6_v14 = le_all }
+	add_to_variable = { TFRKPHN_l6_v14 = le_z3 }
+	round_variable = TFRKPHN_l6_v14
+	set_variable = { TFRKPHN_l6_n14 = 0 }
+	set_variable = { TFRKPHN_l6_g14 = 0 }
+	set_variable = { TFRKPHN_l6_p14 = 0 }
+	set_variable = { TFRKPHN_l6_v15 = 62 }
+	add_to_variable = { TFRKPHN_l6_v15 = le_all }
+	add_to_variable = { TFRKPHN_l6_v15 = le_z4 }
+	round_variable = TFRKPHN_l6_v15
+	set_variable = { TFRKPHN_l6_n15 = 0 } if = { limit = { check_variable = { TFRKPHN_l6_sign > 0 } } set_variable = { TFRKPHN_l6_n15 = 1 } }
+	set_variable = { TFRKPHN_l6_g15 = 0 }
+	set_variable = { TFRKPHN_l6_p15 = 0 }
+	set_variable = { TFRKPHN_l6_v16 = 51 }
+	add_to_variable = { TFRKPHN_l6_v16 = le_all }
+	add_to_variable = { TFRKPHN_l6_v16 = le_z5 }
+	round_variable = TFRKPHN_l6_v16
+	set_variable = { TFRKPHN_l6_n16 = 0 } if = { limit = { check_variable = { TFRKPHN_l6_sign > 0 } } set_variable = { TFRKPHN_l6_n16 = 1 } }
+	set_variable = { TFRKPHN_l6_g16 = 0 }
+	set_variable = { TFRKPHN_l6_p16 = 0 }
+	set_variable = { TFRKPHN_l6_v17 = 41 }
+	add_to_variable = { TFRKPHN_l6_v17 = le_all }
+	round_variable = TFRKPHN_l6_v17
+	set_variable = { TFRKPHN_l6_n17 = 0 }
+	set_variable = { TFRKPHN_l6_g17 = 0 }
+	set_variable = { TFRKPHN_l6_p17 = 0 }
+	TFRKPHN_l6_draw = yes
+}
+# 숫자와 색을 다시 맞춘다. 광주전남 통합 뒤에는 광주(5번)가 전남(14번)을 그대로 따르고 집계에서 빠진다.
+TFRKPHN_l6_draw = {
+	set_variable = { TFRKPHN_l6_v1 = 51 }	# 서울은 실제 결과(오세훈 재선)대로
+	set_variable = { TFRKPHN_l6_cr = 0 }
+	set_variable = { TFRKPHN_l6_cg = 0 }
+	set_variable = { TFRKPHN_l6_cb = 0 }
+	if = { limit = { has_country_flag = TFRKPHN_gj_merged } set_variable = { TFRKPHN_l6_v5 = TFRKPHN_l6_v14 } if = { limit = { check_variable = { TFRKPHN_l6_sel = 5 } } set_variable = { TFRKPHN_l6_sel = 14 } } }
+	clamp_variable = { var = TFRKPHN_l6_v1 min = 5 max = 95 }
+	set_temp_variable = { le_k = TFRKPHN_l6_v1 }
+	subtract_from_temp_variable = { le_k = 50 }
+	if = { limit = { check_variable = { le_k < 0 } } multiply_temp_variable = { le_k = -1 } }
+	divide_temp_variable = { le_k = 4 }
+	round_temp_variable = le_k
+	clamp_temp_variable = { var = le_k min = 0 max = 5 }
+	if = { limit = { check_variable = { TFRKPHN_l6_v1 > 49.9 } } set_variable = { TFRKPHN_l6_f1 = 7 } add_to_variable = { TFRKPHN_l6_f1 = le_k } }
+	else = { set_variable = { TFRKPHN_l6_f1 = 6 } subtract_from_variable = { TFRKPHN_l6_f1 = le_k } }
+	set_variable = { TFRKPHN_l6_c1 = 2 }
+	if = { limit = { check_variable = { TFRKPHN_l6_v1 > 52.5 } } set_variable = { TFRKPHN_l6_c1 = 1 } add_to_variable = { TFRKPHN_l6_cr = 1 } }
+	else_if = { limit = { check_variable = { TFRKPHN_l6_v1 < 47.5 } } set_variable = { TFRKPHN_l6_c1 = 3 } add_to_variable = { TFRKPHN_l6_cb = 1 } }
+	else = { add_to_variable = { TFRKPHN_l6_cg = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_l6_sel = 1 } } set_variable = { TFRKPHN_l6_sv = TFRKPHN_l6_v1 } set_variable = { TFRKPHN_l6_nsel = TFRKPHN_l6_n1 } set_variable = { TFRKPHN_l6_gsel = TFRKPHN_l6_g1 } set_variable = { TFRKPHN_l6_psel = TFRKPHN_l6_p1 } }
+	clamp_variable = { var = TFRKPHN_l6_v2 min = 5 max = 95 }
+	set_temp_variable = { le_k = TFRKPHN_l6_v2 }
+	subtract_from_temp_variable = { le_k = 50 }
+	if = { limit = { check_variable = { le_k < 0 } } multiply_temp_variable = { le_k = -1 } }
+	divide_temp_variable = { le_k = 4 }
+	round_temp_variable = le_k
+	clamp_temp_variable = { var = le_k min = 0 max = 5 }
+	if = { limit = { check_variable = { TFRKPHN_l6_v2 > 49.9 } } set_variable = { TFRKPHN_l6_f2 = 7 } add_to_variable = { TFRKPHN_l6_f2 = le_k } }
+	else = { set_variable = { TFRKPHN_l6_f2 = 6 } subtract_from_variable = { TFRKPHN_l6_f2 = le_k } }
+	set_variable = { TFRKPHN_l6_c2 = 2 }
+	if = { limit = { check_variable = { TFRKPHN_l6_v2 > 52.5 } } set_variable = { TFRKPHN_l6_c2 = 1 } add_to_variable = { TFRKPHN_l6_cr = 1 } }
+	else_if = { limit = { check_variable = { TFRKPHN_l6_v2 < 47.5 } } set_variable = { TFRKPHN_l6_c2 = 3 } add_to_variable = { TFRKPHN_l6_cb = 1 } }
+	else = { add_to_variable = { TFRKPHN_l6_cg = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_l6_sel = 2 } } set_variable = { TFRKPHN_l6_sv = TFRKPHN_l6_v2 } set_variable = { TFRKPHN_l6_nsel = TFRKPHN_l6_n2 } set_variable = { TFRKPHN_l6_gsel = TFRKPHN_l6_g2 } set_variable = { TFRKPHN_l6_psel = TFRKPHN_l6_p2 } }
+	clamp_variable = { var = TFRKPHN_l6_v3 min = 5 max = 95 }
+	set_temp_variable = { le_k = TFRKPHN_l6_v3 }
+	subtract_from_temp_variable = { le_k = 50 }
+	if = { limit = { check_variable = { le_k < 0 } } multiply_temp_variable = { le_k = -1 } }
+	divide_temp_variable = { le_k = 4 }
+	round_temp_variable = le_k
+	clamp_temp_variable = { var = le_k min = 0 max = 5 }
+	if = { limit = { check_variable = { TFRKPHN_l6_v3 > 49.9 } } set_variable = { TFRKPHN_l6_f3 = 7 } add_to_variable = { TFRKPHN_l6_f3 = le_k } }
+	else = { set_variable = { TFRKPHN_l6_f3 = 6 } subtract_from_variable = { TFRKPHN_l6_f3 = le_k } }
+	set_variable = { TFRKPHN_l6_c3 = 2 }
+	if = { limit = { check_variable = { TFRKPHN_l6_v3 > 52.5 } } set_variable = { TFRKPHN_l6_c3 = 1 } add_to_variable = { TFRKPHN_l6_cr = 1 } }
+	else_if = { limit = { check_variable = { TFRKPHN_l6_v3 < 47.5 } } set_variable = { TFRKPHN_l6_c3 = 3 } add_to_variable = { TFRKPHN_l6_cb = 1 } }
+	else = { add_to_variable = { TFRKPHN_l6_cg = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_l6_sel = 3 } } set_variable = { TFRKPHN_l6_sv = TFRKPHN_l6_v3 } set_variable = { TFRKPHN_l6_nsel = TFRKPHN_l6_n3 } set_variable = { TFRKPHN_l6_gsel = TFRKPHN_l6_g3 } set_variable = { TFRKPHN_l6_psel = TFRKPHN_l6_p3 } }
+	clamp_variable = { var = TFRKPHN_l6_v4 min = 5 max = 95 }
+	set_temp_variable = { le_k = TFRKPHN_l6_v4 }
+	subtract_from_temp_variable = { le_k = 50 }
+	if = { limit = { check_variable = { le_k < 0 } } multiply_temp_variable = { le_k = -1 } }
+	divide_temp_variable = { le_k = 4 }
+	round_temp_variable = le_k
+	clamp_temp_variable = { var = le_k min = 0 max = 5 }
+	if = { limit = { check_variable = { TFRKPHN_l6_v4 > 49.9 } } set_variable = { TFRKPHN_l6_f4 = 7 } add_to_variable = { TFRKPHN_l6_f4 = le_k } }
+	else = { set_variable = { TFRKPHN_l6_f4 = 6 } subtract_from_variable = { TFRKPHN_l6_f4 = le_k } }
+	set_variable = { TFRKPHN_l6_c4 = 2 }
+	if = { limit = { check_variable = { TFRKPHN_l6_v4 > 52.5 } } set_variable = { TFRKPHN_l6_c4 = 1 } add_to_variable = { TFRKPHN_l6_cr = 1 } }
+	else_if = { limit = { check_variable = { TFRKPHN_l6_v4 < 47.5 } } set_variable = { TFRKPHN_l6_c4 = 3 } add_to_variable = { TFRKPHN_l6_cb = 1 } }
+	else = { add_to_variable = { TFRKPHN_l6_cg = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_l6_sel = 4 } } set_variable = { TFRKPHN_l6_sv = TFRKPHN_l6_v4 } set_variable = { TFRKPHN_l6_nsel = TFRKPHN_l6_n4 } set_variable = { TFRKPHN_l6_gsel = TFRKPHN_l6_g4 } set_variable = { TFRKPHN_l6_psel = TFRKPHN_l6_p4 } }
+	clamp_variable = { var = TFRKPHN_l6_v5 min = 5 max = 95 }
+	set_temp_variable = { le_k = TFRKPHN_l6_v5 }
+	subtract_from_temp_variable = { le_k = 50 }
+	if = { limit = { check_variable = { le_k < 0 } } multiply_temp_variable = { le_k = -1 } }
+	divide_temp_variable = { le_k = 4 }
+	round_temp_variable = le_k
+	clamp_temp_variable = { var = le_k min = 0 max = 5 }
+	if = { limit = { check_variable = { TFRKPHN_l6_v5 > 49.9 } } set_variable = { TFRKPHN_l6_f5 = 7 } add_to_variable = { TFRKPHN_l6_f5 = le_k } }
+	else = { set_variable = { TFRKPHN_l6_f5 = 6 } subtract_from_variable = { TFRKPHN_l6_f5 = le_k } }
+	set_variable = { TFRKPHN_l6_c5 = 2 }
+	if = { limit = { check_variable = { TFRKPHN_l6_v5 > 52.5 } } set_variable = { TFRKPHN_l6_c5 = 1 } add_to_variable = { TFRKPHN_l6_cr = 1 } }
+	else_if = { limit = { check_variable = { TFRKPHN_l6_v5 < 47.5 } } set_variable = { TFRKPHN_l6_c5 = 3 } add_to_variable = { TFRKPHN_l6_cb = 1 } }
+	else = { add_to_variable = { TFRKPHN_l6_cg = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_l6_sel = 5 } } set_variable = { TFRKPHN_l6_sv = TFRKPHN_l6_v5 } set_variable = { TFRKPHN_l6_nsel = TFRKPHN_l6_n5 } set_variable = { TFRKPHN_l6_gsel = TFRKPHN_l6_g5 } set_variable = { TFRKPHN_l6_psel = TFRKPHN_l6_p5 } }
+	clamp_variable = { var = TFRKPHN_l6_v6 min = 5 max = 95 }
+	set_temp_variable = { le_k = TFRKPHN_l6_v6 }
+	subtract_from_temp_variable = { le_k = 50 }
+	if = { limit = { check_variable = { le_k < 0 } } multiply_temp_variable = { le_k = -1 } }
+	divide_temp_variable = { le_k = 4 }
+	round_temp_variable = le_k
+	clamp_temp_variable = { var = le_k min = 0 max = 5 }
+	if = { limit = { check_variable = { TFRKPHN_l6_v6 > 49.9 } } set_variable = { TFRKPHN_l6_f6 = 7 } add_to_variable = { TFRKPHN_l6_f6 = le_k } }
+	else = { set_variable = { TFRKPHN_l6_f6 = 6 } subtract_from_variable = { TFRKPHN_l6_f6 = le_k } }
+	set_variable = { TFRKPHN_l6_c6 = 2 }
+	if = { limit = { check_variable = { TFRKPHN_l6_v6 > 52.5 } } set_variable = { TFRKPHN_l6_c6 = 1 } add_to_variable = { TFRKPHN_l6_cr = 1 } }
+	else_if = { limit = { check_variable = { TFRKPHN_l6_v6 < 47.5 } } set_variable = { TFRKPHN_l6_c6 = 3 } add_to_variable = { TFRKPHN_l6_cb = 1 } }
+	else = { add_to_variable = { TFRKPHN_l6_cg = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_l6_sel = 6 } } set_variable = { TFRKPHN_l6_sv = TFRKPHN_l6_v6 } set_variable = { TFRKPHN_l6_nsel = TFRKPHN_l6_n6 } set_variable = { TFRKPHN_l6_gsel = TFRKPHN_l6_g6 } set_variable = { TFRKPHN_l6_psel = TFRKPHN_l6_p6 } }
+	clamp_variable = { var = TFRKPHN_l6_v7 min = 5 max = 95 }
+	set_temp_variable = { le_k = TFRKPHN_l6_v7 }
+	subtract_from_temp_variable = { le_k = 50 }
+	if = { limit = { check_variable = { le_k < 0 } } multiply_temp_variable = { le_k = -1 } }
+	divide_temp_variable = { le_k = 4 }
+	round_temp_variable = le_k
+	clamp_temp_variable = { var = le_k min = 0 max = 5 }
+	if = { limit = { check_variable = { TFRKPHN_l6_v7 > 49.9 } } set_variable = { TFRKPHN_l6_f7 = 7 } add_to_variable = { TFRKPHN_l6_f7 = le_k } }
+	else = { set_variable = { TFRKPHN_l6_f7 = 6 } subtract_from_variable = { TFRKPHN_l6_f7 = le_k } }
+	set_variable = { TFRKPHN_l6_c7 = 2 }
+	if = { limit = { check_variable = { TFRKPHN_l6_v7 > 52.5 } } set_variable = { TFRKPHN_l6_c7 = 1 } add_to_variable = { TFRKPHN_l6_cr = 1 } }
+	else_if = { limit = { check_variable = { TFRKPHN_l6_v7 < 47.5 } } set_variable = { TFRKPHN_l6_c7 = 3 } add_to_variable = { TFRKPHN_l6_cb = 1 } }
+	else = { add_to_variable = { TFRKPHN_l6_cg = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_l6_sel = 7 } } set_variable = { TFRKPHN_l6_sv = TFRKPHN_l6_v7 } set_variable = { TFRKPHN_l6_nsel = TFRKPHN_l6_n7 } set_variable = { TFRKPHN_l6_gsel = TFRKPHN_l6_g7 } set_variable = { TFRKPHN_l6_psel = TFRKPHN_l6_p7 } }
+	clamp_variable = { var = TFRKPHN_l6_v8 min = 5 max = 95 }
+	set_temp_variable = { le_k = TFRKPHN_l6_v8 }
+	subtract_from_temp_variable = { le_k = 50 }
+	if = { limit = { check_variable = { le_k < 0 } } multiply_temp_variable = { le_k = -1 } }
+	divide_temp_variable = { le_k = 4 }
+	round_temp_variable = le_k
+	clamp_temp_variable = { var = le_k min = 0 max = 5 }
+	if = { limit = { check_variable = { TFRKPHN_l6_v8 > 49.9 } } set_variable = { TFRKPHN_l6_f8 = 7 } add_to_variable = { TFRKPHN_l6_f8 = le_k } }
+	else = { set_variable = { TFRKPHN_l6_f8 = 6 } subtract_from_variable = { TFRKPHN_l6_f8 = le_k } }
+	set_variable = { TFRKPHN_l6_c8 = 2 }
+	if = { limit = { check_variable = { TFRKPHN_l6_v8 > 52.5 } } set_variable = { TFRKPHN_l6_c8 = 1 } add_to_variable = { TFRKPHN_l6_cr = 1 } }
+	else_if = { limit = { check_variable = { TFRKPHN_l6_v8 < 47.5 } } set_variable = { TFRKPHN_l6_c8 = 3 } add_to_variable = { TFRKPHN_l6_cb = 1 } }
+	else = { add_to_variable = { TFRKPHN_l6_cg = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_l6_sel = 8 } } set_variable = { TFRKPHN_l6_sv = TFRKPHN_l6_v8 } set_variable = { TFRKPHN_l6_nsel = TFRKPHN_l6_n8 } set_variable = { TFRKPHN_l6_gsel = TFRKPHN_l6_g8 } set_variable = { TFRKPHN_l6_psel = TFRKPHN_l6_p8 } }
+	clamp_variable = { var = TFRKPHN_l6_v9 min = 5 max = 95 }
+	set_temp_variable = { le_k = TFRKPHN_l6_v9 }
+	subtract_from_temp_variable = { le_k = 50 }
+	if = { limit = { check_variable = { le_k < 0 } } multiply_temp_variable = { le_k = -1 } }
+	divide_temp_variable = { le_k = 4 }
+	round_temp_variable = le_k
+	clamp_temp_variable = { var = le_k min = 0 max = 5 }
+	if = { limit = { check_variable = { TFRKPHN_l6_v9 > 49.9 } } set_variable = { TFRKPHN_l6_f9 = 7 } add_to_variable = { TFRKPHN_l6_f9 = le_k } }
+	else = { set_variable = { TFRKPHN_l6_f9 = 6 } subtract_from_variable = { TFRKPHN_l6_f9 = le_k } }
+	set_variable = { TFRKPHN_l6_c9 = 2 }
+	if = { limit = { check_variable = { TFRKPHN_l6_v9 > 52.5 } } set_variable = { TFRKPHN_l6_c9 = 1 } add_to_variable = { TFRKPHN_l6_cr = 1 } }
+	else_if = { limit = { check_variable = { TFRKPHN_l6_v9 < 47.5 } } set_variable = { TFRKPHN_l6_c9 = 3 } add_to_variable = { TFRKPHN_l6_cb = 1 } }
+	else = { add_to_variable = { TFRKPHN_l6_cg = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_l6_sel = 9 } } set_variable = { TFRKPHN_l6_sv = TFRKPHN_l6_v9 } set_variable = { TFRKPHN_l6_nsel = TFRKPHN_l6_n9 } set_variable = { TFRKPHN_l6_gsel = TFRKPHN_l6_g9 } set_variable = { TFRKPHN_l6_psel = TFRKPHN_l6_p9 } }
+	clamp_variable = { var = TFRKPHN_l6_v10 min = 5 max = 95 }
+	set_temp_variable = { le_k = TFRKPHN_l6_v10 }
+	subtract_from_temp_variable = { le_k = 50 }
+	if = { limit = { check_variable = { le_k < 0 } } multiply_temp_variable = { le_k = -1 } }
+	divide_temp_variable = { le_k = 4 }
+	round_temp_variable = le_k
+	clamp_temp_variable = { var = le_k min = 0 max = 5 }
+	if = { limit = { check_variable = { TFRKPHN_l6_v10 > 49.9 } } set_variable = { TFRKPHN_l6_f10 = 7 } add_to_variable = { TFRKPHN_l6_f10 = le_k } }
+	else = { set_variable = { TFRKPHN_l6_f10 = 6 } subtract_from_variable = { TFRKPHN_l6_f10 = le_k } }
+	set_variable = { TFRKPHN_l6_c10 = 2 }
+	if = { limit = { check_variable = { TFRKPHN_l6_v10 > 52.5 } } set_variable = { TFRKPHN_l6_c10 = 1 } add_to_variable = { TFRKPHN_l6_cr = 1 } }
+	else_if = { limit = { check_variable = { TFRKPHN_l6_v10 < 47.5 } } set_variable = { TFRKPHN_l6_c10 = 3 } add_to_variable = { TFRKPHN_l6_cb = 1 } }
+	else = { add_to_variable = { TFRKPHN_l6_cg = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_l6_sel = 10 } } set_variable = { TFRKPHN_l6_sv = TFRKPHN_l6_v10 } set_variable = { TFRKPHN_l6_nsel = TFRKPHN_l6_n10 } set_variable = { TFRKPHN_l6_gsel = TFRKPHN_l6_g10 } set_variable = { TFRKPHN_l6_psel = TFRKPHN_l6_p10 } }
+	clamp_variable = { var = TFRKPHN_l6_v11 min = 5 max = 95 }
+	set_temp_variable = { le_k = TFRKPHN_l6_v11 }
+	subtract_from_temp_variable = { le_k = 50 }
+	if = { limit = { check_variable = { le_k < 0 } } multiply_temp_variable = { le_k = -1 } }
+	divide_temp_variable = { le_k = 4 }
+	round_temp_variable = le_k
+	clamp_temp_variable = { var = le_k min = 0 max = 5 }
+	if = { limit = { check_variable = { TFRKPHN_l6_v11 > 49.9 } } set_variable = { TFRKPHN_l6_f11 = 7 } add_to_variable = { TFRKPHN_l6_f11 = le_k } }
+	else = { set_variable = { TFRKPHN_l6_f11 = 6 } subtract_from_variable = { TFRKPHN_l6_f11 = le_k } }
+	set_variable = { TFRKPHN_l6_c11 = 2 }
+	if = { limit = { check_variable = { TFRKPHN_l6_v11 > 52.5 } } set_variable = { TFRKPHN_l6_c11 = 1 } add_to_variable = { TFRKPHN_l6_cr = 1 } }
+	else_if = { limit = { check_variable = { TFRKPHN_l6_v11 < 47.5 } } set_variable = { TFRKPHN_l6_c11 = 3 } add_to_variable = { TFRKPHN_l6_cb = 1 } }
+	else = { add_to_variable = { TFRKPHN_l6_cg = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_l6_sel = 11 } } set_variable = { TFRKPHN_l6_sv = TFRKPHN_l6_v11 } set_variable = { TFRKPHN_l6_nsel = TFRKPHN_l6_n11 } set_variable = { TFRKPHN_l6_gsel = TFRKPHN_l6_g11 } set_variable = { TFRKPHN_l6_psel = TFRKPHN_l6_p11 } }
+	clamp_variable = { var = TFRKPHN_l6_v12 min = 5 max = 95 }
+	set_temp_variable = { le_k = TFRKPHN_l6_v12 }
+	subtract_from_temp_variable = { le_k = 50 }
+	if = { limit = { check_variable = { le_k < 0 } } multiply_temp_variable = { le_k = -1 } }
+	divide_temp_variable = { le_k = 4 }
+	round_temp_variable = le_k
+	clamp_temp_variable = { var = le_k min = 0 max = 5 }
+	if = { limit = { check_variable = { TFRKPHN_l6_v12 > 49.9 } } set_variable = { TFRKPHN_l6_f12 = 7 } add_to_variable = { TFRKPHN_l6_f12 = le_k } }
+	else = { set_variable = { TFRKPHN_l6_f12 = 6 } subtract_from_variable = { TFRKPHN_l6_f12 = le_k } }
+	set_variable = { TFRKPHN_l6_c12 = 2 }
+	if = { limit = { check_variable = { TFRKPHN_l6_v12 > 52.5 } } set_variable = { TFRKPHN_l6_c12 = 1 } add_to_variable = { TFRKPHN_l6_cr = 1 } }
+	else_if = { limit = { check_variable = { TFRKPHN_l6_v12 < 47.5 } } set_variable = { TFRKPHN_l6_c12 = 3 } add_to_variable = { TFRKPHN_l6_cb = 1 } }
+	else = { add_to_variable = { TFRKPHN_l6_cg = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_l6_sel = 12 } } set_variable = { TFRKPHN_l6_sv = TFRKPHN_l6_v12 } set_variable = { TFRKPHN_l6_nsel = TFRKPHN_l6_n12 } set_variable = { TFRKPHN_l6_gsel = TFRKPHN_l6_g12 } set_variable = { TFRKPHN_l6_psel = TFRKPHN_l6_p12 } }
+	clamp_variable = { var = TFRKPHN_l6_v13 min = 5 max = 95 }
+	set_temp_variable = { le_k = TFRKPHN_l6_v13 }
+	subtract_from_temp_variable = { le_k = 50 }
+	if = { limit = { check_variable = { le_k < 0 } } multiply_temp_variable = { le_k = -1 } }
+	divide_temp_variable = { le_k = 4 }
+	round_temp_variable = le_k
+	clamp_temp_variable = { var = le_k min = 0 max = 5 }
+	if = { limit = { check_variable = { TFRKPHN_l6_v13 > 49.9 } } set_variable = { TFRKPHN_l6_f13 = 7 } add_to_variable = { TFRKPHN_l6_f13 = le_k } }
+	else = { set_variable = { TFRKPHN_l6_f13 = 6 } subtract_from_variable = { TFRKPHN_l6_f13 = le_k } }
+	set_variable = { TFRKPHN_l6_c13 = 2 }
+	if = { limit = { check_variable = { TFRKPHN_l6_v13 > 52.5 } } set_variable = { TFRKPHN_l6_c13 = 1 } add_to_variable = { TFRKPHN_l6_cr = 1 } }
+	else_if = { limit = { check_variable = { TFRKPHN_l6_v13 < 47.5 } } set_variable = { TFRKPHN_l6_c13 = 3 } add_to_variable = { TFRKPHN_l6_cb = 1 } }
+	else = { add_to_variable = { TFRKPHN_l6_cg = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_l6_sel = 13 } } set_variable = { TFRKPHN_l6_sv = TFRKPHN_l6_v13 } set_variable = { TFRKPHN_l6_nsel = TFRKPHN_l6_n13 } set_variable = { TFRKPHN_l6_gsel = TFRKPHN_l6_g13 } set_variable = { TFRKPHN_l6_psel = TFRKPHN_l6_p13 } }
+	clamp_variable = { var = TFRKPHN_l6_v14 min = 5 max = 95 }
+	set_temp_variable = { le_k = TFRKPHN_l6_v14 }
+	subtract_from_temp_variable = { le_k = 50 }
+	if = { limit = { check_variable = { le_k < 0 } } multiply_temp_variable = { le_k = -1 } }
+	divide_temp_variable = { le_k = 4 }
+	round_temp_variable = le_k
+	clamp_temp_variable = { var = le_k min = 0 max = 5 }
+	if = { limit = { check_variable = { TFRKPHN_l6_v14 > 49.9 } } set_variable = { TFRKPHN_l6_f14 = 7 } add_to_variable = { TFRKPHN_l6_f14 = le_k } }
+	else = { set_variable = { TFRKPHN_l6_f14 = 6 } subtract_from_variable = { TFRKPHN_l6_f14 = le_k } }
+	set_variable = { TFRKPHN_l6_c14 = 2 }
+	if = { limit = { check_variable = { TFRKPHN_l6_v14 > 52.5 } } set_variable = { TFRKPHN_l6_c14 = 1 } add_to_variable = { TFRKPHN_l6_cr = 1 } }
+	else_if = { limit = { check_variable = { TFRKPHN_l6_v14 < 47.5 } } set_variable = { TFRKPHN_l6_c14 = 3 } add_to_variable = { TFRKPHN_l6_cb = 1 } }
+	else = { add_to_variable = { TFRKPHN_l6_cg = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_l6_sel = 14 } } set_variable = { TFRKPHN_l6_sv = TFRKPHN_l6_v14 } set_variable = { TFRKPHN_l6_nsel = TFRKPHN_l6_n14 } set_variable = { TFRKPHN_l6_gsel = TFRKPHN_l6_g14 } set_variable = { TFRKPHN_l6_psel = TFRKPHN_l6_p14 } }
+	clamp_variable = { var = TFRKPHN_l6_v15 min = 5 max = 95 }
+	set_temp_variable = { le_k = TFRKPHN_l6_v15 }
+	subtract_from_temp_variable = { le_k = 50 }
+	if = { limit = { check_variable = { le_k < 0 } } multiply_temp_variable = { le_k = -1 } }
+	divide_temp_variable = { le_k = 4 }
+	round_temp_variable = le_k
+	clamp_temp_variable = { var = le_k min = 0 max = 5 }
+	if = { limit = { check_variable = { TFRKPHN_l6_v15 > 49.9 } } set_variable = { TFRKPHN_l6_f15 = 7 } add_to_variable = { TFRKPHN_l6_f15 = le_k } }
+	else = { set_variable = { TFRKPHN_l6_f15 = 6 } subtract_from_variable = { TFRKPHN_l6_f15 = le_k } }
+	set_variable = { TFRKPHN_l6_c15 = 2 }
+	if = { limit = { check_variable = { TFRKPHN_l6_v15 > 52.5 } } set_variable = { TFRKPHN_l6_c15 = 1 } add_to_variable = { TFRKPHN_l6_cr = 1 } }
+	else_if = { limit = { check_variable = { TFRKPHN_l6_v15 < 47.5 } } set_variable = { TFRKPHN_l6_c15 = 3 } add_to_variable = { TFRKPHN_l6_cb = 1 } }
+	else = { add_to_variable = { TFRKPHN_l6_cg = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_l6_sel = 15 } } set_variable = { TFRKPHN_l6_sv = TFRKPHN_l6_v15 } set_variable = { TFRKPHN_l6_nsel = TFRKPHN_l6_n15 } set_variable = { TFRKPHN_l6_gsel = TFRKPHN_l6_g15 } set_variable = { TFRKPHN_l6_psel = TFRKPHN_l6_p15 } }
+	clamp_variable = { var = TFRKPHN_l6_v16 min = 5 max = 95 }
+	set_temp_variable = { le_k = TFRKPHN_l6_v16 }
+	subtract_from_temp_variable = { le_k = 50 }
+	if = { limit = { check_variable = { le_k < 0 } } multiply_temp_variable = { le_k = -1 } }
+	divide_temp_variable = { le_k = 4 }
+	round_temp_variable = le_k
+	clamp_temp_variable = { var = le_k min = 0 max = 5 }
+	if = { limit = { check_variable = { TFRKPHN_l6_v16 > 49.9 } } set_variable = { TFRKPHN_l6_f16 = 7 } add_to_variable = { TFRKPHN_l6_f16 = le_k } }
+	else = { set_variable = { TFRKPHN_l6_f16 = 6 } subtract_from_variable = { TFRKPHN_l6_f16 = le_k } }
+	set_variable = { TFRKPHN_l6_c16 = 2 }
+	if = { limit = { check_variable = { TFRKPHN_l6_v16 > 52.5 } } set_variable = { TFRKPHN_l6_c16 = 1 } add_to_variable = { TFRKPHN_l6_cr = 1 } }
+	else_if = { limit = { check_variable = { TFRKPHN_l6_v16 < 47.5 } } set_variable = { TFRKPHN_l6_c16 = 3 } add_to_variable = { TFRKPHN_l6_cb = 1 } }
+	else = { add_to_variable = { TFRKPHN_l6_cg = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_l6_sel = 16 } } set_variable = { TFRKPHN_l6_sv = TFRKPHN_l6_v16 } set_variable = { TFRKPHN_l6_nsel = TFRKPHN_l6_n16 } set_variable = { TFRKPHN_l6_gsel = TFRKPHN_l6_g16 } set_variable = { TFRKPHN_l6_psel = TFRKPHN_l6_p16 } }
+	clamp_variable = { var = TFRKPHN_l6_v17 min = 5 max = 95 }
+	set_temp_variable = { le_k = TFRKPHN_l6_v17 }
+	subtract_from_temp_variable = { le_k = 50 }
+	if = { limit = { check_variable = { le_k < 0 } } multiply_temp_variable = { le_k = -1 } }
+	divide_temp_variable = { le_k = 4 }
+	round_temp_variable = le_k
+	clamp_temp_variable = { var = le_k min = 0 max = 5 }
+	if = { limit = { check_variable = { TFRKPHN_l6_v17 > 49.9 } } set_variable = { TFRKPHN_l6_f17 = 7 } add_to_variable = { TFRKPHN_l6_f17 = le_k } }
+	else = { set_variable = { TFRKPHN_l6_f17 = 6 } subtract_from_variable = { TFRKPHN_l6_f17 = le_k } }
+	set_variable = { TFRKPHN_l6_c17 = 2 }
+	if = { limit = { check_variable = { TFRKPHN_l6_v17 > 52.5 } } set_variable = { TFRKPHN_l6_c17 = 1 } add_to_variable = { TFRKPHN_l6_cr = 1 } }
+	else_if = { limit = { check_variable = { TFRKPHN_l6_v17 < 47.5 } } set_variable = { TFRKPHN_l6_c17 = 3 } add_to_variable = { TFRKPHN_l6_cb = 1 } }
+	else = { add_to_variable = { TFRKPHN_l6_cg = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_l6_sel = 17 } } set_variable = { TFRKPHN_l6_sv = TFRKPHN_l6_v17 } set_variable = { TFRKPHN_l6_nsel = TFRKPHN_l6_n17 } set_variable = { TFRKPHN_l6_gsel = TFRKPHN_l6_g17 } set_variable = { TFRKPHN_l6_psel = TFRKPHN_l6_p17 } }
+	# 통합 뒤에는 광주를 집계에서 뺀다
+	if = { limit = { has_country_flag = TFRKPHN_gj_merged }
+		if = { limit = { check_variable = { TFRKPHN_l6_c5 = 1 } } add_to_variable = { TFRKPHN_l6_cr = -1 } }
+		if = { limit = { check_variable = { TFRKPHN_l6_c5 = 2 } } add_to_variable = { TFRKPHN_l6_cg = -1 } }
+		if = { limit = { check_variable = { TFRKPHN_l6_c5 = 3 } } add_to_variable = { TFRKPHN_l6_cb = -1 } }
+	}
+	set_variable = { TFRKPHN_l6_tf = TFRKPHN_l6_sel }
+	if = { limit = { has_country_flag = TFRKPHN_gj_merged check_variable = { TFRKPHN_l6_sel = 14 } } set_variable = { TFRKPHN_l6_tf = 18 } }
+	set_variable = { TFRKPHN_l6_cf = TFRKPHN_l6_tf }
+	set_variable = { TFRKPHN_l6_so = 100 }
+	subtract_from_variable = { TFRKPHN_l6_so = TFRKPHN_l6_sv }
+	set_variable = { TFRKPHN_l6_barf = TFRKPHN_l6_sv }
+	divide_variable = { TFRKPHN_l6_barf = 5 }
+	round_variable = TFRKPHN_l6_barf
+	add_to_variable = { TFRKPHN_l6_barf = 1 }
+	clamp_variable = { var = TFRKPHN_l6_barf min = 1 max = 21 }
+}
+# 자리 le_i에 le_d만큼 더한다. le_cap = 1이면 행동으로 올린 지지에 넣어 센다 (자리마다 8까지).
+TFRKPHN_l6_add = {
+	if = { limit = { check_variable = { le_i = 2 } }
+		if = { limit = { check_variable = { le_cap = 1 } } set_temp_variable = { le_room = 8 } subtract_from_temp_variable = { le_room = TFRKPHN_l6_g2 } if = { limit = { check_variable = { le_d > le_room } } set_temp_variable = { le_d = le_room } } add_to_variable = { TFRKPHN_l6_g2 = le_d } }
+		if = { limit = { NOT = { AND = { check_variable = { le_shield = 1 } check_variable = { TFRKPHN_l6_n2 = 1 } } } } set_temp_variable = { le_ds = le_d } multiply_temp_variable = { le_ds = TFRKPHN_l6_sign } add_to_variable = { TFRKPHN_l6_v2 = le_ds } }
+	}
+	if = { limit = { check_variable = { le_i = 3 } }
+		if = { limit = { check_variable = { le_cap = 1 } } set_temp_variable = { le_room = 8 } subtract_from_temp_variable = { le_room = TFRKPHN_l6_g3 } if = { limit = { check_variable = { le_d > le_room } } set_temp_variable = { le_d = le_room } } add_to_variable = { TFRKPHN_l6_g3 = le_d } }
+		if = { limit = { NOT = { AND = { check_variable = { le_shield = 1 } check_variable = { TFRKPHN_l6_n3 = 1 } } } } set_temp_variable = { le_ds = le_d } multiply_temp_variable = { le_ds = TFRKPHN_l6_sign } add_to_variable = { TFRKPHN_l6_v3 = le_ds } }
+	}
+	if = { limit = { check_variable = { le_i = 4 } }
+		if = { limit = { check_variable = { le_cap = 1 } } set_temp_variable = { le_room = 8 } subtract_from_temp_variable = { le_room = TFRKPHN_l6_g4 } if = { limit = { check_variable = { le_d > le_room } } set_temp_variable = { le_d = le_room } } add_to_variable = { TFRKPHN_l6_g4 = le_d } }
+		if = { limit = { NOT = { AND = { check_variable = { le_shield = 1 } check_variable = { TFRKPHN_l6_n4 = 1 } } } } set_temp_variable = { le_ds = le_d } multiply_temp_variable = { le_ds = TFRKPHN_l6_sign } add_to_variable = { TFRKPHN_l6_v4 = le_ds } }
+	}
+	if = { limit = { check_variable = { le_i = 5 } }
+		if = { limit = { check_variable = { le_cap = 1 } } set_temp_variable = { le_room = 8 } subtract_from_temp_variable = { le_room = TFRKPHN_l6_g5 } if = { limit = { check_variable = { le_d > le_room } } set_temp_variable = { le_d = le_room } } add_to_variable = { TFRKPHN_l6_g5 = le_d } }
+		if = { limit = { NOT = { AND = { check_variable = { le_shield = 1 } check_variable = { TFRKPHN_l6_n5 = 1 } } } } set_temp_variable = { le_ds = le_d } multiply_temp_variable = { le_ds = TFRKPHN_l6_sign } add_to_variable = { TFRKPHN_l6_v5 = le_ds } }
+	}
+	if = { limit = { check_variable = { le_i = 6 } }
+		if = { limit = { check_variable = { le_cap = 1 } } set_temp_variable = { le_room = 8 } subtract_from_temp_variable = { le_room = TFRKPHN_l6_g6 } if = { limit = { check_variable = { le_d > le_room } } set_temp_variable = { le_d = le_room } } add_to_variable = { TFRKPHN_l6_g6 = le_d } }
+		if = { limit = { NOT = { AND = { check_variable = { le_shield = 1 } check_variable = { TFRKPHN_l6_n6 = 1 } } } } set_temp_variable = { le_ds = le_d } multiply_temp_variable = { le_ds = TFRKPHN_l6_sign } add_to_variable = { TFRKPHN_l6_v6 = le_ds } }
+	}
+	if = { limit = { check_variable = { le_i = 7 } }
+		if = { limit = { check_variable = { le_cap = 1 } } set_temp_variable = { le_room = 8 } subtract_from_temp_variable = { le_room = TFRKPHN_l6_g7 } if = { limit = { check_variable = { le_d > le_room } } set_temp_variable = { le_d = le_room } } add_to_variable = { TFRKPHN_l6_g7 = le_d } }
+		if = { limit = { NOT = { AND = { check_variable = { le_shield = 1 } check_variable = { TFRKPHN_l6_n7 = 1 } } } } set_temp_variable = { le_ds = le_d } multiply_temp_variable = { le_ds = TFRKPHN_l6_sign } add_to_variable = { TFRKPHN_l6_v7 = le_ds } }
+	}
+	if = { limit = { check_variable = { le_i = 8 } }
+		if = { limit = { check_variable = { le_cap = 1 } } set_temp_variable = { le_room = 8 } subtract_from_temp_variable = { le_room = TFRKPHN_l6_g8 } if = { limit = { check_variable = { le_d > le_room } } set_temp_variable = { le_d = le_room } } add_to_variable = { TFRKPHN_l6_g8 = le_d } }
+		if = { limit = { NOT = { AND = { check_variable = { le_shield = 1 } check_variable = { TFRKPHN_l6_n8 = 1 } } } } set_temp_variable = { le_ds = le_d } multiply_temp_variable = { le_ds = TFRKPHN_l6_sign } add_to_variable = { TFRKPHN_l6_v8 = le_ds } }
+	}
+	if = { limit = { check_variable = { le_i = 9 } }
+		if = { limit = { check_variable = { le_cap = 1 } } set_temp_variable = { le_room = 8 } subtract_from_temp_variable = { le_room = TFRKPHN_l6_g9 } if = { limit = { check_variable = { le_d > le_room } } set_temp_variable = { le_d = le_room } } add_to_variable = { TFRKPHN_l6_g9 = le_d } }
+		if = { limit = { NOT = { AND = { check_variable = { le_shield = 1 } check_variable = { TFRKPHN_l6_n9 = 1 } } } } set_temp_variable = { le_ds = le_d } multiply_temp_variable = { le_ds = TFRKPHN_l6_sign } add_to_variable = { TFRKPHN_l6_v9 = le_ds } }
+	}
+	if = { limit = { check_variable = { le_i = 10 } }
+		if = { limit = { check_variable = { le_cap = 1 } } set_temp_variable = { le_room = 8 } subtract_from_temp_variable = { le_room = TFRKPHN_l6_g10 } if = { limit = { check_variable = { le_d > le_room } } set_temp_variable = { le_d = le_room } } add_to_variable = { TFRKPHN_l6_g10 = le_d } }
+		if = { limit = { NOT = { AND = { check_variable = { le_shield = 1 } check_variable = { TFRKPHN_l6_n10 = 1 } } } } set_temp_variable = { le_ds = le_d } multiply_temp_variable = { le_ds = TFRKPHN_l6_sign } add_to_variable = { TFRKPHN_l6_v10 = le_ds } }
+	}
+	if = { limit = { check_variable = { le_i = 11 } }
+		if = { limit = { check_variable = { le_cap = 1 } } set_temp_variable = { le_room = 8 } subtract_from_temp_variable = { le_room = TFRKPHN_l6_g11 } if = { limit = { check_variable = { le_d > le_room } } set_temp_variable = { le_d = le_room } } add_to_variable = { TFRKPHN_l6_g11 = le_d } }
+		if = { limit = { NOT = { AND = { check_variable = { le_shield = 1 } check_variable = { TFRKPHN_l6_n11 = 1 } } } } set_temp_variable = { le_ds = le_d } multiply_temp_variable = { le_ds = TFRKPHN_l6_sign } add_to_variable = { TFRKPHN_l6_v11 = le_ds } }
+	}
+	if = { limit = { check_variable = { le_i = 12 } }
+		if = { limit = { check_variable = { le_cap = 1 } } set_temp_variable = { le_room = 8 } subtract_from_temp_variable = { le_room = TFRKPHN_l6_g12 } if = { limit = { check_variable = { le_d > le_room } } set_temp_variable = { le_d = le_room } } add_to_variable = { TFRKPHN_l6_g12 = le_d } }
+		if = { limit = { NOT = { AND = { check_variable = { le_shield = 1 } check_variable = { TFRKPHN_l6_n12 = 1 } } } } set_temp_variable = { le_ds = le_d } multiply_temp_variable = { le_ds = TFRKPHN_l6_sign } add_to_variable = { TFRKPHN_l6_v12 = le_ds } }
+	}
+	if = { limit = { check_variable = { le_i = 13 } }
+		if = { limit = { check_variable = { le_cap = 1 } } set_temp_variable = { le_room = 8 } subtract_from_temp_variable = { le_room = TFRKPHN_l6_g13 } if = { limit = { check_variable = { le_d > le_room } } set_temp_variable = { le_d = le_room } } add_to_variable = { TFRKPHN_l6_g13 = le_d } }
+		if = { limit = { NOT = { AND = { check_variable = { le_shield = 1 } check_variable = { TFRKPHN_l6_n13 = 1 } } } } set_temp_variable = { le_ds = le_d } multiply_temp_variable = { le_ds = TFRKPHN_l6_sign } add_to_variable = { TFRKPHN_l6_v13 = le_ds } }
+	}
+	if = { limit = { check_variable = { le_i = 14 } }
+		if = { limit = { check_variable = { le_cap = 1 } } set_temp_variable = { le_room = 8 } subtract_from_temp_variable = { le_room = TFRKPHN_l6_g14 } if = { limit = { check_variable = { le_d > le_room } } set_temp_variable = { le_d = le_room } } add_to_variable = { TFRKPHN_l6_g14 = le_d } }
+		if = { limit = { NOT = { AND = { check_variable = { le_shield = 1 } check_variable = { TFRKPHN_l6_n14 = 1 } } } } set_temp_variable = { le_ds = le_d } multiply_temp_variable = { le_ds = TFRKPHN_l6_sign } add_to_variable = { TFRKPHN_l6_v14 = le_ds } }
+	}
+	if = { limit = { check_variable = { le_i = 15 } }
+		if = { limit = { check_variable = { le_cap = 1 } } set_temp_variable = { le_room = 8 } subtract_from_temp_variable = { le_room = TFRKPHN_l6_g15 } if = { limit = { check_variable = { le_d > le_room } } set_temp_variable = { le_d = le_room } } add_to_variable = { TFRKPHN_l6_g15 = le_d } }
+		if = { limit = { NOT = { AND = { check_variable = { le_shield = 1 } check_variable = { TFRKPHN_l6_n15 = 1 } } } } set_temp_variable = { le_ds = le_d } multiply_temp_variable = { le_ds = TFRKPHN_l6_sign } add_to_variable = { TFRKPHN_l6_v15 = le_ds } }
+	}
+	if = { limit = { check_variable = { le_i = 16 } }
+		if = { limit = { check_variable = { le_cap = 1 } } set_temp_variable = { le_room = 8 } subtract_from_temp_variable = { le_room = TFRKPHN_l6_g16 } if = { limit = { check_variable = { le_d > le_room } } set_temp_variable = { le_d = le_room } } add_to_variable = { TFRKPHN_l6_g16 = le_d } }
+		if = { limit = { NOT = { AND = { check_variable = { le_shield = 1 } check_variable = { TFRKPHN_l6_n16 = 1 } } } } set_temp_variable = { le_ds = le_d } multiply_temp_variable = { le_ds = TFRKPHN_l6_sign } add_to_variable = { TFRKPHN_l6_v16 = le_ds } }
+	}
+	if = { limit = { check_variable = { le_i = 17 } }
+		if = { limit = { check_variable = { le_cap = 1 } } set_temp_variable = { le_room = 8 } subtract_from_temp_variable = { le_room = TFRKPHN_l6_g17 } if = { limit = { check_variable = { le_d > le_room } } set_temp_variable = { le_d = le_room } } add_to_variable = { TFRKPHN_l6_g17 = le_d } }
+		if = { limit = { NOT = { AND = { check_variable = { le_shield = 1 } check_variable = { TFRKPHN_l6_n17 = 1 } } } } set_temp_variable = { le_ds = le_d } multiply_temp_variable = { le_ds = TFRKPHN_l6_sign } add_to_variable = { TFRKPHN_l6_v17 = le_ds } }
+	}
+}
+# 행동 (정치력은 단추에서 뺀다)
+TFRKPHN_l6_act1 = {
+	set_temp_variable = { le_i = TFRKPHN_l6_sel }
+	set_temp_variable = { le_d = 2 }
+	set_temp_variable = { le_cap = 1 }
+	TFRKPHN_l6_add = yes
+	add_to_variable = { TFRKPHN_l6_med = 1 }
+	if = { limit = { check_variable = { TFRKPHN_l6_med > 3.5 } NOT = { has_country_flag = TFRKPHN_l6_med_fired } } set_country_flag = TFRKPHN_l6_med_fired country_event = { id = tfrkphn.6753 days = 1 } }
+	TFRKPHN_l6_draw = yes
+}
+TFRKPHN_l6_act2 = {
+	set_temp_variable = { le_i = TFRKPHN_l6_sel }
+	set_temp_variable = { le_d = 3 }
+	set_temp_variable = { le_cap = 1 }
+	TFRKPHN_l6_add = yes
+	add_to_variable = { TFRKPHN_l6_prom = 1 }
+	if = { limit = { check_variable = { TFRKPHN_l6_sel = 2 } } set_variable = { TFRKPHN_l6_p2 = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_l6_sel = 3 } } set_variable = { TFRKPHN_l6_p3 = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_l6_sel = 4 } } set_variable = { TFRKPHN_l6_p4 = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_l6_sel = 5 } } set_variable = { TFRKPHN_l6_p5 = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_l6_sel = 6 } } set_variable = { TFRKPHN_l6_p6 = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_l6_sel = 7 } } set_variable = { TFRKPHN_l6_p7 = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_l6_sel = 8 } } set_variable = { TFRKPHN_l6_p8 = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_l6_sel = 9 } } set_variable = { TFRKPHN_l6_p9 = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_l6_sel = 10 } } set_variable = { TFRKPHN_l6_p10 = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_l6_sel = 11 } } set_variable = { TFRKPHN_l6_p11 = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_l6_sel = 12 } } set_variable = { TFRKPHN_l6_p12 = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_l6_sel = 13 } } set_variable = { TFRKPHN_l6_p13 = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_l6_sel = 14 } } set_variable = { TFRKPHN_l6_p14 = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_l6_sel = 15 } } set_variable = { TFRKPHN_l6_p15 = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_l6_sel = 16 } } set_variable = { TFRKPHN_l6_p16 = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_l6_sel = 17 } } set_variable = { TFRKPHN_l6_p17 = 1 } }
+	TFRKPHN_l6_draw = yes
+}
+TFRKPHN_l6_act3 = {
+	set_temp_variable = { le_cap = 1 }
+	if = { limit = { OR = { check_variable = { TFRKPHN_l6_sel = 4 } check_variable = { TFRKPHN_l6_sel = 9 } } }
+		set_temp_variable = { le_i = 4 } set_temp_variable = { le_d = 1 } TFRKPHN_l6_add = yes
+		set_temp_variable = { le_i = 9 } set_temp_variable = { le_d = 1 } TFRKPHN_l6_add = yes
+	}
+	if = { limit = { OR = { check_variable = { TFRKPHN_l6_sel = 6 } check_variable = { TFRKPHN_l6_sel = 8 } check_variable = { TFRKPHN_l6_sel = 11 } check_variable = { TFRKPHN_l6_sel = 12 } } }
+		set_temp_variable = { le_i = 6 } set_temp_variable = { le_d = 1 } TFRKPHN_l6_add = yes
+		set_temp_variable = { le_i = 8 } set_temp_variable = { le_d = 1 } TFRKPHN_l6_add = yes
+		set_temp_variable = { le_i = 11 } set_temp_variable = { le_d = 1 } TFRKPHN_l6_add = yes
+		set_temp_variable = { le_i = 12 } set_temp_variable = { le_d = 1 } TFRKPHN_l6_add = yes
+	}
+	if = { limit = { OR = { check_variable = { TFRKPHN_l6_sel = 5 } check_variable = { TFRKPHN_l6_sel = 13 } check_variable = { TFRKPHN_l6_sel = 14 } } }
+		set_temp_variable = { le_i = 5 } set_temp_variable = { le_d = 1 } TFRKPHN_l6_add = yes
+		set_temp_variable = { le_i = 13 } set_temp_variable = { le_d = 1 } TFRKPHN_l6_add = yes
+		set_temp_variable = { le_i = 14 } set_temp_variable = { le_d = 1 } TFRKPHN_l6_add = yes
+	}
+	if = { limit = { OR = { check_variable = { TFRKPHN_l6_sel = 3 } check_variable = { TFRKPHN_l6_sel = 15 } } }
+		set_temp_variable = { le_i = 3 } set_temp_variable = { le_d = 1 } TFRKPHN_l6_add = yes
+		set_temp_variable = { le_i = 15 } set_temp_variable = { le_d = 1 } TFRKPHN_l6_add = yes
+	}
+	if = { limit = { OR = { check_variable = { TFRKPHN_l6_sel = 2 } check_variable = { TFRKPHN_l6_sel = 7 } check_variable = { TFRKPHN_l6_sel = 16 } } }
+		set_temp_variable = { le_i = 2 } set_temp_variable = { le_d = 1 } TFRKPHN_l6_add = yes
+		set_temp_variable = { le_i = 7 } set_temp_variable = { le_d = 1 } TFRKPHN_l6_add = yes
+		set_temp_variable = { le_i = 16 } set_temp_variable = { le_d = 1 } TFRKPHN_l6_add = yes
+	}
+	if = { limit = { OR = { check_variable = { TFRKPHN_l6_sel = 10 } check_variable = { TFRKPHN_l6_sel = 17 } } } set_temp_variable = { le_i = TFRKPHN_l6_sel } set_temp_variable = { le_d = 1 } TFRKPHN_l6_add = yes }
+	TFRKPHN_l6_draw = yes
+}
+TFRKPHN_l6_act4 = {
+	set_temp_variable = { le_i = TFRKPHN_l6_sel }
+	set_temp_variable = { le_d = 1 }
+	set_temp_variable = { le_cap = 1 }
+	TFRKPHN_l6_add = yes
+	TFRKPHN_l6_draw = yes
+}
+TFRKPHN_l6_act5 = {
+	set_temp_variable = { le_i = TFRKPHN_l6_sel }
+	set_temp_variable = { le_d = 2 }
+	set_temp_variable = { le_cap = 1 }
+	TFRKPHN_l6_add = yes
+	TFRKPHN_l6_draw = yes
+}
+# 상대 후보 검증: 열에 일곱은 +3, 셋은 역풍으로 -2 (역풍은 올린 지지에 넣어 세지 않는다)
+TFRKPHN_l6_act6 = {
+	set_temp_variable = { le_i = TFRKPHN_l6_sel }
+	random_list = {
+		70 = { set_temp_variable = { le_d = 3 } set_temp_variable = { le_cap = 1 } }
+		30 = { set_temp_variable = { le_d = -2 } }
+	}
+	TFRKPHN_l6_add = yes
+	TFRKPHN_l6_draw = yes
+}
+# 야당의 공세: 닷새마다 두 자리에서 지지 1.5를 깎는다. 여당 현직이 나오는 자리(TFRKPHN_l6_n = 1)는 버틴다.
+TFRKPHN_l6_opp = {
+	set_variable = { TFRKPHN_l6_opp_cd = 0 }
+	set_temp_variable = { le_shield = 1 }
+	set_temp_variable = { le_d = -1.5 }
+	random_list = {
+		10 = { set_temp_variable = { le_i = 2 } }
+		10 = { set_temp_variable = { le_i = 3 } }
+		10 = { set_temp_variable = { le_i = 4 } }
+		10 = { set_temp_variable = { le_i = 5 } }
+		10 = { set_temp_variable = { le_i = 6 } }
+		10 = { set_temp_variable = { le_i = 7 } }
+		10 = { set_temp_variable = { le_i = 8 } }
+		10 = { set_temp_variable = { le_i = 9 } }
+	}
+	TFRKPHN_l6_add = yes
+	random_list = {
+		10 = { set_temp_variable = { le_i = 10 } }
+		10 = { set_temp_variable = { le_i = 11 } }
+		10 = { set_temp_variable = { le_i = 12 } }
+		10 = { set_temp_variable = { le_i = 13 } }
+		10 = { set_temp_variable = { le_i = 14 } }
+		10 = { set_temp_variable = { le_i = 15 } }
+		10 = { set_temp_variable = { le_i = 16 } }
+		10 = { set_temp_variable = { le_i = 17 } }
+	}
+	TFRKPHN_l6_add = yes
+}
+TFRKPHN_l6_daily = {
+	add_to_variable = { TFRKPHN_l6_days = -1 }
+	clamp_variable = { var = TFRKPHN_l6_days min = 0 max = 60 }
+	add_to_variable = { TFRKPHN_l6_opp_cd = 1 }
+	if = { limit = { check_variable = { TFRKPHN_l6_opp_cd > 4.5 } } TFRKPHN_l6_opp = yes }
+	TFRKPHN_l6_draw = yes
+}
+# 선거 개입 논란을 무릅쓰고 일정을 그대로 가면 모든 자리에서 1씩 빠진다
+TFRKPHN_l6_med_hit = {
+	add_to_variable = { TFRKPHN_l6_v2 = TFRKPHN_l6_neg }
+	add_to_variable = { TFRKPHN_l6_v3 = TFRKPHN_l6_neg }
+	add_to_variable = { TFRKPHN_l6_v4 = TFRKPHN_l6_neg }
+	add_to_variable = { TFRKPHN_l6_v5 = TFRKPHN_l6_neg }
+	add_to_variable = { TFRKPHN_l6_v6 = TFRKPHN_l6_neg }
+	add_to_variable = { TFRKPHN_l6_v7 = TFRKPHN_l6_neg }
+	add_to_variable = { TFRKPHN_l6_v8 = TFRKPHN_l6_neg }
+	add_to_variable = { TFRKPHN_l6_v9 = TFRKPHN_l6_neg }
+	add_to_variable = { TFRKPHN_l6_v10 = TFRKPHN_l6_neg }
+	add_to_variable = { TFRKPHN_l6_v11 = TFRKPHN_l6_neg }
+	add_to_variable = { TFRKPHN_l6_v12 = TFRKPHN_l6_neg }
+	add_to_variable = { TFRKPHN_l6_v13 = TFRKPHN_l6_neg }
+	add_to_variable = { TFRKPHN_l6_v14 = TFRKPHN_l6_neg }
+	add_to_variable = { TFRKPHN_l6_v15 = TFRKPHN_l6_neg }
+	add_to_variable = { TFRKPHN_l6_v16 = TFRKPHN_l6_neg }
+	add_to_variable = { TFRKPHN_l6_v17 = TFRKPHN_l6_neg }
+	TFRKPHN_l6_draw = yes
+}
+# 개표
+TFRKPHN_l6_count = {
+	set_country_flag = TFRKPHN_l6_done
+	clr_country_flag = TFRKPHN_l6_on
+	TFRKPHN_l6_draw = yes
+	set_variable = { TFRKPHN_l6_wins = 0 }
+	if = { limit = { check_variable = { TFRKPHN_l6_v1 > 49.9 } } add_to_variable = { TFRKPHN_l6_wins = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_l6_v2 > 49.9 } } add_to_variable = { TFRKPHN_l6_wins = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_l6_v3 > 49.9 } } add_to_variable = { TFRKPHN_l6_wins = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_l6_v4 > 49.9 } } add_to_variable = { TFRKPHN_l6_wins = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_l6_v5 > 49.9 } } add_to_variable = { TFRKPHN_l6_wins = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_l6_v6 > 49.9 } } add_to_variable = { TFRKPHN_l6_wins = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_l6_v7 > 49.9 } } add_to_variable = { TFRKPHN_l6_wins = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_l6_v8 > 49.9 } } add_to_variable = { TFRKPHN_l6_wins = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_l6_v9 > 49.9 } } add_to_variable = { TFRKPHN_l6_wins = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_l6_v10 > 49.9 } } add_to_variable = { TFRKPHN_l6_wins = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_l6_v11 > 49.9 } } add_to_variable = { TFRKPHN_l6_wins = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_l6_v12 > 49.9 } } add_to_variable = { TFRKPHN_l6_wins = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_l6_v13 > 49.9 } } add_to_variable = { TFRKPHN_l6_wins = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_l6_v14 > 49.9 } } add_to_variable = { TFRKPHN_l6_wins = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_l6_v15 > 49.9 } } add_to_variable = { TFRKPHN_l6_wins = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_l6_v16 > 49.9 } } add_to_variable = { TFRKPHN_l6_wins = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_l6_v17 > 49.9 } } add_to_variable = { TFRKPHN_l6_wins = 1 } }
+	if = { limit = { has_country_flag = TFRKPHN_gj_merged check_variable = { TFRKPHN_l6_v5 > 49.9 } } add_to_variable = { TFRKPHN_l6_wins = -1 } }
+	if = { limit = { check_variable = { TFRKPHN_l6_sign < 0 } } set_temp_variable = { le_t = TFRKPHN_l6_total } subtract_from_temp_variable = { le_t = TFRKPHN_l6_wins } set_variable = { TFRKPHN_l6_wins = le_t } }
+	TFRKPHN_gov_result26 = yes	# 지역 상자의 시장과 도지사를 바꾼다 (gov_build.py)
+	set_variable = { TFRKPHN_l6_cost = TFRKPHN_l6_prom }
+	multiply_variable = { TFRKPHN_l6_cost = -10 }
+	country_event = { id = tfrkphn.6754 }
+}

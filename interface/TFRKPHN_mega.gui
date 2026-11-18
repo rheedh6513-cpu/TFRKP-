@@ -41,6 +41,11 @@ guiTypes = {
 			instantTextBoxType = { name = "TFRKPHN_mega_n5" position = { x = 398 y = 186 } text = "TFRKPHN_mega_n5" font = "hoi_16mbs" format = center maxWidth = 96 maxHeight = 20 alwaystransparent = yes }
 			instantTextBoxType = { name = "TFRKPHN_mega_v5" position = { x = 398 y = 204 } text = "TFRKPHN_mega_v5" font = "hoi_16mbs" format = center maxWidth = 96 maxHeight = 20 alwaystransparent = yes }
 			iconType = { name = "TFRKPHN_mega_mini5" position = { x = 402 y = 224 } spriteType = "GFX_TFRKPHN_mega_mini" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_mega_crane1" position = { x = 8 y = 44 } spriteType = "GFX_TFRKPHN_mega_crane" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_mega_crane2" position = { x = 106 y = 44 } spriteType = "GFX_TFRKPHN_mega_crane" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_mega_crane3" position = { x = 204 y = 44 } spriteType = "GFX_TFRKPHN_mega_crane" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_mega_crane4" position = { x = 302 y = 44 } spriteType = "GFX_TFRKPHN_mega_crane" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_mega_crane5" position = { x = 400 y = 44 } spriteType = "GFX_TFRKPHN_mega_crane" alwaystransparent = yes }
 			instantTextBoxType = { name = "TFRKPHN_mega_t_total" position = { x = 8 y = 246 } text = "TFRKPHN_mega_t_total" font = "hoi_16mbs" format = center maxWidth = 484 maxHeight = 20 alwaystransparent = yes }
 			iconType = { name = "TFRKPHN_mega_bar" position = { x = 8 y = 268 } spriteType = "GFX_TFRKPHN_mega_bar" alwaystransparent = yes }
 		}

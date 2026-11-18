@@ -1,0 +1,19 @@
+# [안내] 오세훈 정부: 지방선거 상황실 여닫기. le26_build.py가 만든다.
+TFRKPHN_le26_category = {
+	TFRKPHN_l6_open = {
+		icon = GFX_decision_generic_political_discourse
+		cost = 0
+		visible = { NOT = { has_country_flag = TFRKPHN_l6_on } }
+		available = { always = yes }
+		complete_effect = { custom_effect_tooltip = TFRKPHN_l6_open_tt hidden_effect = { set_country_flag = TFRKPHN_l6_on TFRKPHN_l6_draw = yes } }
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_l6_shut = {
+		icon = GFX_decision_generic_political_discourse
+		cost = 0
+		visible = { has_country_flag = TFRKPHN_l6_on }
+		available = { always = yes }
+		complete_effect = { custom_effect_tooltip = TFRKPHN_l6_shut_tt hidden_effect = { clr_country_flag = TFRKPHN_l6_on } }
+		ai_will_do = { factor = 0 }
+	}
+}

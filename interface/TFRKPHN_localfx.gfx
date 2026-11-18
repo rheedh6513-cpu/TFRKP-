@@ -1,0 +1,3 @@
+spriteTypes = {
+	spriteType = { name = "GFX_modifiers_TFRKPHN_local_ally" texturefile = "gfx/interface/state_modifiers/TFRKPHN_local_ally.png" }
+}

@@ -1,0 +1,7 @@
+# [안내] 오세훈 정부: 2030년 지방선거. 창은 따로 뜨고 여기에는 여는 단추만 있다. le26_build.py가 만든다.
+TFRKPHN_le26_category = {
+	icon = generic_political_actions
+	priority = 206
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_l6_started NOT = { has_country_flag = TFRKPHN_l6_done } }
+}

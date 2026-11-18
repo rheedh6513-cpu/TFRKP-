@@ -1,0 +1,9 @@
+# [안내] le30 지방선거 사건 그림. le26_post.py가 만든다.
+spriteTypes = {
+	spriteType = { name = "GFX_TFRKPHN_le30_6731" texturefile = "gfx/event_pictures/TFRKPHN_le30_6731.png" }
+	spriteType = { name = "GFX_TFRKPHN_le30_6733" texturefile = "gfx/event_pictures/TFRKPHN_le30_6733.png" }
+	spriteType = { name = "GFX_TFRKPHN_le30_6735" texturefile = "gfx/event_pictures/TFRKPHN_le30_6735.png" }
+	spriteType = { name = "GFX_TFRKPHN_le30_6736" texturefile = "gfx/event_pictures/TFRKPHN_le30_6736.png" }
+	spriteType = { name = "GFX_TFRKPHN_le30_6737" texturefile = "gfx/event_pictures/TFRKPHN_le30_6737.png" }
+	spriteType = { name = "GFX_TFRKPHN_le30_6738" texturefile = "gfx/event_pictures/TFRKPHN_le30_6738.png" }
+}

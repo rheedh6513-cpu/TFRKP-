@@ -876,6 +876,7 @@ focus_tree = {
 
 
 
+
 	# >>> 대아대전 승전 엔딩 (gawend_build.py)
 	# PDTO가 대아대전에서 이기면 열린다 (깃발 PRC_japanese_gaw_victory_global). 1-3-2-1 모양.
 	focus = {
@@ -888,7 +889,6 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			hidden_effect = { country_event = { id = tfrkphn.591 days = 10 } }	# 정청래 이야기 (jcr_build.py)
 			country_event = { id = tfrkphn.562 }
 			hidden_effect = { scoped_play_song = "one_minute_of_silence" scoped_play_song = "TFRKP_TFRKPHN_FINISH_LINE" }	# 사용자가 준 곡 (music_add.py)
 		}

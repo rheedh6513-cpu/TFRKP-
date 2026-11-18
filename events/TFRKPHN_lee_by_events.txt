@@ -1,0 +1,91 @@
+# [안내] 이인제 판 서울시장 보궐선거 사건 (오세훈 판 사건을 복사해 그림과 글을 바꿨다). lee_by.py가 만든다.
+add_namespace = tfrkphn
+country_event = {
+	id = tfrkphn.6761
+	title = tfrkphn.651.t
+	desc = tfrkphn.6761.d
+	picture = GFX_TFRKPHN_lee_by_6761
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.651.a
+		custom_effect_tooltip = tfrkphn.651.a_tt
+		hidden_effect = { clr_country_flag = TFRKPHN_sd_run_chung clr_country_flag = TFRKPHN_sd_run_cho clr_country_flag = TFRKPHN_sd_run_yoon clr_country_flag = TFRKPHN_sd_run_kim set_country_flag = TFRKPHN_sd_run_chung set_variable = { TFRKPHN_sd_delta = 3 } TFRKPHN_sd_add_se = yes set_variable = { TFRKPHN_sd_delta = 3 } TFRKPHN_sd_add_north = yes set_variable = { TFRKPHN_sd_delta = 3 } TFRKPHN_sd_add_sw = yes TFRKPHN_sd_refresh = yes country_event = { id = tfrkphn.6762 days = 5 } }
+	}
+	option = {
+		name = tfrkphn.651.b
+		trigger = { NOT = { has_idea = TFRKPHN_cho_eun_hee_HM } }
+		custom_effect_tooltip = tfrkphn.651.b_tt
+		hidden_effect = { clr_country_flag = TFRKPHN_sd_run_chung clr_country_flag = TFRKPHN_sd_run_cho clr_country_flag = TFRKPHN_sd_run_yoon clr_country_flag = TFRKPHN_sd_run_kim set_country_flag = TFRKPHN_sd_run_cho set_variable = { TFRKPHN_sd_delta = 4 } TFRKPHN_sd_add_se = yes set_variable = { TFRKPHN_sd_delta = 1 } TFRKPHN_sd_add_north = yes TFRKPHN_sd_refresh = yes country_event = { id = tfrkphn.6762 days = 5 } }
+	}
+	option = {
+		name = tfrkphn.651.c
+		trigger = { has_idea = TFRKPHN_cho_eun_hee_HM }
+		custom_effect_tooltip = tfrkphn.651.c_tt
+		hidden_effect = { clr_country_flag = TFRKPHN_sd_run_chung clr_country_flag = TFRKPHN_sd_run_cho clr_country_flag = TFRKPHN_sd_run_yoon clr_country_flag = TFRKPHN_sd_run_kim set_country_flag = TFRKPHN_sd_run_yoon set_variable = { TFRKPHN_sd_delta = 2 } TFRKPHN_sd_add_se = yes set_variable = { TFRKPHN_sd_delta = 2 } TFRKPHN_sd_add_north = yes set_variable = { TFRKPHN_sd_delta = 2 } TFRKPHN_sd_add_sw = yes TFRKPHN_sd_refresh = yes country_event = { id = tfrkphn.6762 days = 5 } }
+	}
+}
+country_event = {
+	id = tfrkphn.6762
+	title = tfrkphn.6762.t
+	desc = tfrkphn.6762.d
+	picture = GFX_TFRKPHN_lee_by_6762
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.652.a
+		custom_effect_tooltip = tfrkphn.652.a_tt
+		hidden_effect = { add_to_variable = { TFRKPHN_sd_s13 = -3 } set_variable = { TFRKPHN_sd_delta = -1 } TFRKPHN_sd_add_north = yes TFRKPHN_sd_refresh = yes }
+	}
+}
+country_event = {
+	id = tfrkphn.6766
+	title = tfrkphn.6766.t
+	desc = tfrkphn.6766.d
+	picture = GFX_TFRKPHN_lee_by_6766
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.656.a
+		custom_effect_tooltip = tfrkphn.656.a_tt
+		hidden_effect = { set_variable = { TFRKPHN_sd_delta = -2 } TFRKPHN_sd_add_north = yes TFRKPHN_sd_refresh = yes }
+	}
+}
+country_event = {
+	id = tfrkphn.6763
+	title = tfrkphn.6763.t
+	desc = tfrkphn.6763.d
+	picture = GFX_TFRKPHN_lee_by_6763
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.653.a
+		add_stability = 0.02
+		add_political_power = 80
+		TFRKPHN_sd_mayor_reward = yes
+		hidden_effect = { country_event = { id = tfrkphn.6770 days = 45 } }
+	}
+}
+country_event = {
+	id = tfrkphn.6764
+	title = tfrkphn.6764.t
+	desc = tfrkphn.6764.d
+	picture = GFX_TFRKPHN_lee_by_6764
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.654.a
+		add_stability = -0.03
+		add_political_power = -50
+		hidden_effect = { country_event = { id = tfrkphn.6774 days = 45 } }
+	}
+}
+country_event = {
+	id = tfrkphn.6767
+	title = tfrkphn.6767.t
+	desc = tfrkphn.6767.d
+	picture = GFX_TFRKPHN_lee_by_6767
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.653.a
+		add_stability = 0.02
+		add_political_power = 80
+		TFRKPHN_sd_mayor_reward = yes
+		hidden_effect = { country_event = { id = tfrkphn.6772 days = 45 } }
+	}
+}

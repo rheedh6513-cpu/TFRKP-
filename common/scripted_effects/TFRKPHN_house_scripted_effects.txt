@@ -1,0 +1,11 @@
+# [안내] 31만 호. house_build.py가 만든다.
+TFRKPHN_hs_apply = {
+	set_variable = { TFRKPHN_hs_st = TFRKPHN_hs }
+	multiply_variable = { TFRKPHN_hs_st = 0.001 }
+	set_variable = { TFRKPHN_hs_bd = TFRKPHN_hs }
+	multiply_variable = { TFRKPHN_hs_bd = 0.002 }
+	set_variable = { TFRKPHN_hs_pct = TFRKPHN_hs }
+	multiply_variable = { TFRKPHN_hs_pct = 0.2 }
+	if = { limit = { NOT = { has_dynamic_modifier = { modifier = TFRKPHN_house } } } add_dynamic_modifier = { modifier = TFRKPHN_house } }
+	if = { limit = { check_variable = { TFRKPHN_hs > 30.5 } NOT = { has_country_flag = TFRKPHN_hs_done } } set_country_flag = TFRKPHN_hs_done country_event = { id = tfrkphn.6975 days = 1 } }
+}

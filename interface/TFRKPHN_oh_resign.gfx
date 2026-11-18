@@ -1,0 +1,3 @@
+spriteTypes = {
+	spriteType = { name = "GFX_TFRKPHN_oh_resign" texturefile = "gfx/event_pictures/TFRKPHN_oh_resign.png" }
+}

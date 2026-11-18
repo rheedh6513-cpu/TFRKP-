@@ -1,0 +1,6 @@
+# [안내] 나라 바로세우기 줄다리기. nara_build.py가 만든다.
+spriteTypes = {
+	frameAnimatedSpriteType = { name = "GFX_TFRKPHN_nr_rope1" texturefile = "gfx/interface/decisions/TFRKPHN_nr_rope1.png" noOfFrames = 21 animation_rate_fps = 0 looping = no play_on_show = no }
+	frameAnimatedSpriteType = { name = "GFX_TFRKPHN_nr_rope2" texturefile = "gfx/interface/decisions/TFRKPHN_nr_rope2.png" noOfFrames = 21 animation_rate_fps = 0 looping = no play_on_show = no }
+	frameAnimatedSpriteType = { name = "GFX_TFRKPHN_nr_rope3" texturefile = "gfx/interface/decisions/TFRKPHN_nr_rope3.png" noOfFrames = 21 animation_rate_fps = 0 looping = no play_on_show = no }
+}

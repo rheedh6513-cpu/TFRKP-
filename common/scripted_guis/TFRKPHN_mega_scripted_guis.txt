@@ -16,5 +16,12 @@ scripted_gui = {
 			TFRKPHN_mega_city5 = { frame = TFRKPHN_mega_f5 }
 			TFRKPHN_mega_mini5 = { frame = TFRKPHN_mega_f5 }
 		}
+		triggers = {
+			TFRKPHN_mega_crane1_visible = { has_decision = TFRKPHN_mega_d1 }
+			TFRKPHN_mega_crane2_visible = { has_decision = TFRKPHN_mega_d2 }
+			TFRKPHN_mega_crane3_visible = { has_decision = TFRKPHN_mega_d3 }
+			TFRKPHN_mega_crane4_visible = { has_decision = TFRKPHN_mega_d4 }
+			TFRKPHN_mega_crane5_visible = { has_decision = TFRKPHN_mega_d5 }
+		}
 	}
 }

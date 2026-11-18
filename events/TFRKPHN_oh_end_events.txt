@@ -1,0 +1,182 @@
+# [안내] 오세훈 판 엔딩 중점의 사건. oh_end_build.py가 만든다.
+add_namespace = tfrkphn
+country_event = {
+	id = tfrkphn.6787
+	title = tfrkphn.6787.t
+	desc = tfrkphn.6787.d
+	picture = GFX_TFRKPHN_dev_6779
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6787.next
+		hidden_effect = { country_event = { id = tfrkphn.6887 } }
+	}
+}
+country_event = {
+	id = tfrkphn.6887
+	title = tfrkphn.6787.t
+	desc = tfrkphn.6887.d
+	picture = GFX_TFRKPHN_dev_6779
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6787.a
+		add_stability = 0.02
+	}
+}
+country_event = {
+	id = tfrkphn.6783
+	title = tfrkphn.6783.t
+	desc = tfrkphn.6783.d
+	picture = GFX_TFRKPHN_dev_6777
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6783.next
+		hidden_effect = { country_event = { id = tfrkphn.6883 } }
+	}
+}
+country_event = {
+	id = tfrkphn.6883
+	title = tfrkphn.6783.t
+	desc = tfrkphn.6883.d
+	picture = GFX_TFRKPHN_dev_6777
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6783.a
+		add_stability = 0.02
+	}
+}
+country_event = {
+	id = tfrkphn.6782
+	title = tfrkphn.6782.t
+	desc = tfrkphn.6782.d
+	picture = GFX_TFRKPHN_oh28_6604
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6782.next
+		hidden_effect = { country_event = { id = tfrkphn.6882 } }
+	}
+}
+country_event = {
+	id = tfrkphn.6882
+	title = tfrkphn.6782.t
+	desc = tfrkphn.6882.d
+	picture = GFX_TFRKPHN_oh28_6604
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6782.a
+		add_stability = 0.03
+		add_political_power = 50
+	}
+}
+country_event = {
+	id = tfrkphn.6788
+	title = tfrkphn.6788.t
+	desc = tfrkphn.6788.d
+	picture = GFX_TFRKPHN_rail_open_n
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6788.next
+		hidden_effect = { country_event = { id = tfrkphn.6888 } }
+	}
+}
+country_event = {
+	id = tfrkphn.6888
+	title = tfrkphn.6788.t
+	desc = tfrkphn.6888.d
+	picture = GFX_TFRKPHN_rail_open_n
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6788.a
+		add_stability = 0.02
+	}
+}
+country_event = {
+	id = tfrkphn.6784
+	title = tfrkphn.6784.t
+	desc = tfrkphn.6784.d
+	picture = GFX_TFRKPHN_oh28_6604
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6784.next
+		hidden_effect = { country_event = { id = tfrkphn.6884 } }
+	}
+}
+country_event = {
+	id = tfrkphn.6884
+	title = tfrkphn.6784.t
+	desc = tfrkphn.6884.d
+	picture = GFX_TFRKPHN_oh28_6604
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6784.a
+		add_stability = 0.05
+		add_war_support = 0.05
+		custom_effect_tooltip = TFRKPHN_ohend_unify_tt
+		hidden_effect = {
+			every_other_country = {
+				limit = { is_subject_of = ROOT OR = { tag = PRK tag = CPK has_country_flag = TFRKPHN_free_joseon } }
+				ROOT = { annex_country = { target = PREV transfer_troops = yes } }
+			}
+			every_owned_state = { limit = { is_core_of = PRK NOT = { is_core_of = ROOT } } add_core_of = ROOT }
+			set_country_flag = TFRKPHN_oh_unified
+		}
+	}
+}
+country_event = {
+	id = tfrkphn.6785
+	title = tfrkphn.6785.t
+	desc = tfrkphn.6785.d
+	picture = GFX_TFRKPHN_dev_6781
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			set_variable = { TFRKPHN_rc_score = 0 }
+			if = { limit = { check_variable = { TFRKPHN_bk > -0.5 } } add_to_variable = { TFRKPHN_rc_score = 1 } }
+			set_temp_variable = { rc_m = TFRKPHN_mega_s1 } add_to_temp_variable = { rc_m = TFRKPHN_mega_s2 } add_to_temp_variable = { rc_m = TFRKPHN_mega_s3 } add_to_temp_variable = { rc_m = TFRKPHN_mega_s4 } add_to_temp_variable = { rc_m = TFRKPHN_mega_s5 }
+			set_variable = { TFRKPHN_rc_mega = rc_m }
+			if = { limit = { check_variable = { rc_m > 11.5 } } add_to_variable = { TFRKPHN_rc_score = 1 } }
+			if = { limit = { check_variable = { TFRKPHN_ge28 > 150 } } add_to_variable = { TFRKPHN_rc_score = 1 } }
+			if = { limit = { check_variable = { TFRKPHN_le_wins > 9.5 } } add_to_variable = { TFRKPHN_rc_score = 1 } }
+		}
+	}
+	option = {
+		name = tfrkphn.6785.next
+		hidden_effect = { country_event = { id = tfrkphn.6885 } }
+	}
+}
+country_event = {
+	id = tfrkphn.6885
+	title = tfrkphn.6785.t
+	desc = tfrkphn.6885.d
+	picture = GFX_TFRKPHN_dev_6781
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6785.a
+		if = { limit = { check_variable = { TFRKPHN_rc_score > 2.5 } } add_stability = 0.05 add_popularity = { ideology = conservative popularity = 0.05 } }
+		else_if = { limit = { check_variable = { TFRKPHN_rc_score > 1.5 } } add_stability = 0.02 }
+		else = { add_popularity = { ideology = conservative popularity = -0.05 } }
+	}
+}
+country_event = {
+	id = tfrkphn.6786
+	title = tfrkphn.6786.t
+	desc = tfrkphn.6786.d
+	picture = GFX_TFRKPHN_dev_6779
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6786.next
+		hidden_effect = { country_event = { id = tfrkphn.6886 } }
+	}
+}
+country_event = {
+	id = tfrkphn.6886
+	title = tfrkphn.6786.t
+	desc = { trigger = { check_variable = { TFRKPHN_rc_score > 1.5 } } text = tfrkphn.6886.d }
+	desc = { trigger = { check_variable = { TFRKPHN_rc_score < 1.5 } } text = tfrkphn.6886.d2 }
+	picture = GFX_TFRKPHN_dev_6779
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6786.a
+		add_political_power = 100
+		hidden_effect = { set_country_flag = TFRKPHN_oh_end_done }
+	}
+}

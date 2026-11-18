@@ -1,0 +1,172 @@
+# [안내] 2030년 지방선거 상황실 창. 화면 위쪽 막대(top_bar)에 매달린 큰 창이고 깃발 TFRKPHN_l6_on이 있을 때만 보인다. 끌어서 옮길 수 있다. le26_build.py가 만든다.
+guiTypes = {
+	containerWindowType = {
+		name = "TFRKPHN_l6_container"
+		position = { x = 545 y = 110 }
+		size = { width = 1000 height = 640 }
+		moveable = yes
+		background = { name = "TFRKPHN_l6_bg" spriteType = "GFX_TFRKPHN_l6_bg" }
+		buttonType = { name = "TFRKPHN_l6_r9" position = { x = 171 y = 99 } spriteType = "GFX_TFRKPHN_l6_r9" pdx_tooltip = "TFRKPHN_l6_chip9_tt" clicksound = click_default }
+		buttonType = { name = "TFRKPHN_l6_r10" position = { x = 219 y = 66 } spriteType = "GFX_TFRKPHN_l6_r10" pdx_tooltip = "TFRKPHN_l6_chip10_tt" clicksound = click_default }
+		buttonType = { name = "TFRKPHN_l6_r11" position = { x = 232 y = 202 } spriteType = "GFX_TFRKPHN_l6_r11" pdx_tooltip = "TFRKPHN_l6_chip11_tt" clicksound = click_default }
+		buttonType = { name = "TFRKPHN_l6_r12" position = { x = 137 y = 221 } spriteType = "GFX_TFRKPHN_l6_r12" pdx_tooltip = "TFRKPHN_l6_chip12_tt" clicksound = click_default }
+		buttonType = { name = "TFRKPHN_l6_r13" position = { x = 149 y = 312 } spriteType = "GFX_TFRKPHN_l6_r13" pdx_tooltip = "TFRKPHN_l6_chip13_tt" clicksound = click_default }
+		buttonType = { name = "TFRKPHN_l6_r14" position = { x = 56 y = 379 } spriteType = "GFX_TFRKPHN_l6_r14" pdx_tooltip = "TFRKPHN_l6_chip14_tt" clicksound = click_default }
+		buttonType = { name = "TFRKPHN_l6_r15" position = { x = 274 y = 213 } spriteType = "GFX_TFRKPHN_l6_r15" pdx_tooltip = "TFRKPHN_l6_chip15_tt" clicksound = click_default }
+		buttonType = { name = "TFRKPHN_l6_r16" position = { x = 257 y = 336 } spriteType = "GFX_TFRKPHN_l6_r16" pdx_tooltip = "TFRKPHN_l6_chip16_tt" clicksound = click_default }
+		buttonType = { name = "TFRKPHN_l6_r17" position = { x = 142 y = 571 } spriteType = "GFX_TFRKPHN_l6_r17" pdx_tooltip = "TFRKPHN_l6_chip17_tt" clicksound = click_default }
+		buttonType = { name = "TFRKPHN_l6_r1" position = { x = 191 y = 158 } spriteType = "GFX_TFRKPHN_l6_r1" pdx_tooltip = "TFRKPHN_l6_chip1_tt" clicksound = click_default }
+		buttonType = { name = "TFRKPHN_l6_r2" position = { x = 355 y = 389 } spriteType = "GFX_TFRKPHN_l6_r2" pdx_tooltip = "TFRKPHN_l6_chip2_tt" clicksound = click_default }
+		buttonType = { name = "TFRKPHN_l6_r3" position = { x = 319 y = 326 } spriteType = "GFX_TFRKPHN_l6_r3" pdx_tooltip = "TFRKPHN_l6_chip3_tt" clicksound = click_default }
+		buttonType = { name = "TFRKPHN_l6_r4" position = { x = 17 y = 129 } spriteType = "GFX_TFRKPHN_l6_r4" pdx_tooltip = "TFRKPHN_l6_chip4_tt" clicksound = click_default }
+		buttonType = { name = "TFRKPHN_l6_r5" position = { x = 182 y = 402 } spriteType = "GFX_TFRKPHN_l6_r5" pdx_tooltip = "TFRKPHN_l6_chip14_tt" clicksound = click_default }
+		buttonType = { name = "TFRKPHN_l6_r6" position = { x = 230 y = 278 } spriteType = "GFX_TFRKPHN_l6_r6" pdx_tooltip = "TFRKPHN_l6_chip6_tt" clicksound = click_default }
+		buttonType = { name = "TFRKPHN_l6_r7" position = { x = 369 y = 355 } spriteType = "GFX_TFRKPHN_l6_r7" pdx_tooltip = "TFRKPHN_l6_chip7_tt" clicksound = click_default }
+		buttonType = { name = "TFRKPHN_l6_r8" position = { x = 221 y = 254 } spriteType = "GFX_TFRKPHN_l6_r8" pdx_tooltip = "TFRKPHN_l6_chip8_tt" clicksound = click_default }
+		buttonType = { name = "TFRKPHN_l6_chip1" position = { x = 100 y = 139 } spriteType = "GFX_TFRKPHN_l6_chip1" pdx_tooltip = "TFRKPHN_l6_chip1_tt" clicksound = click_default }
+		iconType = { name = "TFRKPHN_l6_st1" position = { x = 104 y = 142 } spriteType = "GFX_TFRKPHN_l6_stripe" alwaystransparent = yes }
+		iconType = { name = "TFRKPHN_l6_ring1" position = { x = 98 y = 137 } spriteType = "GFX_TFRKPHN_l6_ring" alwaystransparent = yes }
+		instantTextBoxType = { name = "TFRKPHN_l6_v1" position = { x = 170 y = 141 } text = "TFRKPHN_l6_v1" font = "hoi_16mbs" format = right maxWidth = 26 maxHeight = 20 alwaystransparent = yes }
+		buttonType = { name = "TFRKPHN_l6_chip2" position = { x = 359 y = 420 } spriteType = "GFX_TFRKPHN_l6_chip2" pdx_tooltip = "TFRKPHN_l6_chip2_tt" clicksound = click_default }
+		iconType = { name = "TFRKPHN_l6_st2" position = { x = 363 y = 423 } spriteType = "GFX_TFRKPHN_l6_stripe" alwaystransparent = yes }
+		iconType = { name = "TFRKPHN_l6_ring2" position = { x = 357 y = 418 } spriteType = "GFX_TFRKPHN_l6_ring" alwaystransparent = yes }
+		instantTextBoxType = { name = "TFRKPHN_l6_v2" position = { x = 429 y = 422 } text = "TFRKPHN_l6_v2" font = "hoi_16mbs" format = right maxWidth = 26 maxHeight = 20 alwaystransparent = yes }
+		buttonType = { name = "TFRKPHN_l6_chip3" position = { x = 290 y = 331 } spriteType = "GFX_TFRKPHN_l6_chip3" pdx_tooltip = "TFRKPHN_l6_chip3_tt" clicksound = click_default }
+		iconType = { name = "TFRKPHN_l6_st3" position = { x = 294 y = 334 } spriteType = "GFX_TFRKPHN_l6_stripe" alwaystransparent = yes }
+		iconType = { name = "TFRKPHN_l6_ring3" position = { x = 288 y = 329 } spriteType = "GFX_TFRKPHN_l6_ring" alwaystransparent = yes }
+		instantTextBoxType = { name = "TFRKPHN_l6_v3" position = { x = 360 y = 333 } text = "TFRKPHN_l6_v3" font = "hoi_16mbs" format = right maxWidth = 26 maxHeight = 20 alwaystransparent = yes }
+		buttonType = { name = "TFRKPHN_l6_chip4" position = { x = 84 y = 179 } spriteType = "GFX_TFRKPHN_l6_chip4" pdx_tooltip = "TFRKPHN_l6_chip4_tt" clicksound = click_default }
+		iconType = { name = "TFRKPHN_l6_st4" position = { x = 88 y = 182 } spriteType = "GFX_TFRKPHN_l6_stripe" alwaystransparent = yes }
+		iconType = { name = "TFRKPHN_l6_ring4" position = { x = 82 y = 177 } spriteType = "GFX_TFRKPHN_l6_ring" alwaystransparent = yes }
+		instantTextBoxType = { name = "TFRKPHN_l6_v4" position = { x = 154 y = 181 } text = "TFRKPHN_l6_v4" font = "hoi_16mbs" format = right maxWidth = 26 maxHeight = 20 alwaystransparent = yes }
+		buttonType = { name = "TFRKPHN_l6_chip5" position = { x = 96 y = 402 } spriteType = "GFX_TFRKPHN_l6_chip5" pdx_tooltip = "TFRKPHN_l6_chip5_tt" clicksound = click_default }
+		iconType = { name = "TFRKPHN_l6_st5" position = { x = 100 y = 405 } spriteType = "GFX_TFRKPHN_l6_stripe" alwaystransparent = yes }
+		iconType = { name = "TFRKPHN_l6_ring5" position = { x = 94 y = 400 } spriteType = "GFX_TFRKPHN_l6_ring" alwaystransparent = yes }
+		instantTextBoxType = { name = "TFRKPHN_l6_v5" position = { x = 166 y = 404 } text = "TFRKPHN_l6_v5" font = "hoi_16mbs" format = right maxWidth = 26 maxHeight = 20 alwaystransparent = yes }
+		buttonType = { name = "TFRKPHN_l6_chip6" position = { x = 221 y = 307 } spriteType = "GFX_TFRKPHN_l6_chip6" pdx_tooltip = "TFRKPHN_l6_chip6_tt" clicksound = click_default }
+		iconType = { name = "TFRKPHN_l6_st6" position = { x = 225 y = 310 } spriteType = "GFX_TFRKPHN_l6_stripe" alwaystransparent = yes }
+		iconType = { name = "TFRKPHN_l6_ring6" position = { x = 219 y = 305 } spriteType = "GFX_TFRKPHN_l6_ring" alwaystransparent = yes }
+		instantTextBoxType = { name = "TFRKPHN_l6_v6" position = { x = 291 y = 309 } text = "TFRKPHN_l6_v6" font = "hoi_16mbs" format = right maxWidth = 26 maxHeight = 20 alwaystransparent = yes }
+		buttonType = { name = "TFRKPHN_l6_chip7" position = { x = 363 y = 357 } spriteType = "GFX_TFRKPHN_l6_chip7" pdx_tooltip = "TFRKPHN_l6_chip7_tt" clicksound = click_default }
+		iconType = { name = "TFRKPHN_l6_st7" position = { x = 367 y = 360 } spriteType = "GFX_TFRKPHN_l6_stripe" alwaystransparent = yes }
+		iconType = { name = "TFRKPHN_l6_ring7" position = { x = 361 y = 355 } spriteType = "GFX_TFRKPHN_l6_ring" alwaystransparent = yes }
+		instantTextBoxType = { name = "TFRKPHN_l6_v7" position = { x = 433 y = 359 } text = "TFRKPHN_l6_v7" font = "hoi_16mbs" format = right maxWidth = 26 maxHeight = 20 alwaystransparent = yes }
+		buttonType = { name = "TFRKPHN_l6_chip8" position = { x = 116 y = 232 } spriteType = "GFX_TFRKPHN_l6_chip8" pdx_tooltip = "TFRKPHN_l6_chip8_tt" clicksound = click_default }
+		iconType = { name = "TFRKPHN_l6_st8" position = { x = 120 y = 235 } spriteType = "GFX_TFRKPHN_l6_stripe" alwaystransparent = yes }
+		iconType = { name = "TFRKPHN_l6_ring8" position = { x = 114 y = 230 } spriteType = "GFX_TFRKPHN_l6_ring" alwaystransparent = yes }
+		instantTextBoxType = { name = "TFRKPHN_l6_v8" position = { x = 186 y = 234 } text = "TFRKPHN_l6_v8" font = "hoi_16mbs" format = right maxWidth = 26 maxHeight = 20 alwaystransparent = yes }
+		buttonType = { name = "TFRKPHN_l6_chip9" position = { x = 189 y = 192 } spriteType = "GFX_TFRKPHN_l6_chip9" pdx_tooltip = "TFRKPHN_l6_chip9_tt" clicksound = click_default }
+		iconType = { name = "TFRKPHN_l6_st9" position = { x = 193 y = 195 } spriteType = "GFX_TFRKPHN_l6_stripe" alwaystransparent = yes }
+		iconType = { name = "TFRKPHN_l6_ring9" position = { x = 187 y = 190 } spriteType = "GFX_TFRKPHN_l6_ring" alwaystransparent = yes }
+		instantTextBoxType = { name = "TFRKPHN_l6_v9" position = { x = 259 y = 194 } text = "TFRKPHN_l6_v9" font = "hoi_16mbs" format = right maxWidth = 26 maxHeight = 20 alwaystransparent = yes }
+		buttonType = { name = "TFRKPHN_l6_chip10" position = { x = 266 y = 142 } spriteType = "GFX_TFRKPHN_l6_chip10" pdx_tooltip = "TFRKPHN_l6_chip10_tt" clicksound = click_default }
+		iconType = { name = "TFRKPHN_l6_st10" position = { x = 270 y = 145 } spriteType = "GFX_TFRKPHN_l6_stripe" alwaystransparent = yes }
+		iconType = { name = "TFRKPHN_l6_ring10" position = { x = 264 y = 140 } spriteType = "GFX_TFRKPHN_l6_ring" alwaystransparent = yes }
+		instantTextBoxType = { name = "TFRKPHN_l6_v10" position = { x = 336 y = 144 } text = "TFRKPHN_l6_v10" font = "hoi_16mbs" format = right maxWidth = 26 maxHeight = 20 alwaystransparent = yes }
+		buttonType = { name = "TFRKPHN_l6_chip11" position = { x = 229 y = 232 } spriteType = "GFX_TFRKPHN_l6_chip11" pdx_tooltip = "TFRKPHN_l6_chip11_tt" clicksound = click_default }
+		iconType = { name = "TFRKPHN_l6_st11" position = { x = 233 y = 235 } spriteType = "GFX_TFRKPHN_l6_stripe" alwaystransparent = yes }
+		iconType = { name = "TFRKPHN_l6_ring11" position = { x = 227 y = 230 } spriteType = "GFX_TFRKPHN_l6_ring" alwaystransparent = yes }
+		instantTextBoxType = { name = "TFRKPHN_l6_v11" position = { x = 299 y = 234 } text = "TFRKPHN_l6_v11" font = "hoi_16mbs" format = right maxWidth = 26 maxHeight = 20 alwaystransparent = yes }
+		buttonType = { name = "TFRKPHN_l6_chip12" position = { x = 116 y = 288 } spriteType = "GFX_TFRKPHN_l6_chip12" pdx_tooltip = "TFRKPHN_l6_chip12_tt" clicksound = click_default }
+		iconType = { name = "TFRKPHN_l6_st12" position = { x = 120 y = 291 } spriteType = "GFX_TFRKPHN_l6_stripe" alwaystransparent = yes }
+		iconType = { name = "TFRKPHN_l6_ring12" position = { x = 114 y = 286 } spriteType = "GFX_TFRKPHN_l6_ring" alwaystransparent = yes }
+		instantTextBoxType = { name = "TFRKPHN_l6_v12" position = { x = 186 y = 290 } text = "TFRKPHN_l6_v12" font = "hoi_16mbs" format = right maxWidth = 26 maxHeight = 20 alwaystransparent = yes }
+		buttonType = { name = "TFRKPHN_l6_chip13" position = { x = 169 y = 345 } spriteType = "GFX_TFRKPHN_l6_chip13" pdx_tooltip = "TFRKPHN_l6_chip13_tt" clicksound = click_default }
+		iconType = { name = "TFRKPHN_l6_st13" position = { x = 173 y = 348 } spriteType = "GFX_TFRKPHN_l6_stripe" alwaystransparent = yes }
+		iconType = { name = "TFRKPHN_l6_ring13" position = { x = 167 y = 343 } spriteType = "GFX_TFRKPHN_l6_ring" alwaystransparent = yes }
+		instantTextBoxType = { name = "TFRKPHN_l6_v13" position = { x = 239 y = 347 } text = "TFRKPHN_l6_v13" font = "hoi_16mbs" format = right maxWidth = 26 maxHeight = 20 alwaystransparent = yes }
+		buttonType = { name = "TFRKPHN_l6_chip14" position = { x = 153 y = 442 } spriteType = "GFX_TFRKPHN_l6_chip14" pdx_tooltip = "TFRKPHN_l6_chip14_tt" clicksound = click_default }
+		iconType = { name = "TFRKPHN_l6_st14" position = { x = 157 y = 445 } spriteType = "GFX_TFRKPHN_l6_stripe" alwaystransparent = yes }
+		iconType = { name = "TFRKPHN_l6_ring14" position = { x = 151 y = 440 } spriteType = "GFX_TFRKPHN_l6_ring" alwaystransparent = yes }
+		instantTextBoxType = { name = "TFRKPHN_l6_v14" position = { x = 223 y = 444 } text = "TFRKPHN_l6_v14" font = "hoi_16mbs" format = right maxWidth = 26 maxHeight = 20 alwaystransparent = yes }
+		buttonType = { name = "TFRKPHN_l6_chip15" position = { x = 306 y = 272 } spriteType = "GFX_TFRKPHN_l6_chip15" pdx_tooltip = "TFRKPHN_l6_chip15_tt" clicksound = click_default }
+		iconType = { name = "TFRKPHN_l6_st15" position = { x = 310 y = 275 } spriteType = "GFX_TFRKPHN_l6_stripe" alwaystransparent = yes }
+		iconType = { name = "TFRKPHN_l6_ring15" position = { x = 304 y = 270 } spriteType = "GFX_TFRKPHN_l6_ring" alwaystransparent = yes }
+		instantTextBoxType = { name = "TFRKPHN_l6_v15" position = { x = 376 y = 274 } text = "TFRKPHN_l6_v15" font = "hoi_16mbs" format = right maxWidth = 26 maxHeight = 20 alwaystransparent = yes }
+		buttonType = { name = "TFRKPHN_l6_chip16" position = { x = 262 y = 388 } spriteType = "GFX_TFRKPHN_l6_chip16" pdx_tooltip = "TFRKPHN_l6_chip16_tt" clicksound = click_default }
+		iconType = { name = "TFRKPHN_l6_st16" position = { x = 266 y = 391 } spriteType = "GFX_TFRKPHN_l6_stripe" alwaystransparent = yes }
+		iconType = { name = "TFRKPHN_l6_ring16" position = { x = 260 y = 386 } spriteType = "GFX_TFRKPHN_l6_ring" alwaystransparent = yes }
+		instantTextBoxType = { name = "TFRKPHN_l6_v16" position = { x = 332 y = 390 } text = "TFRKPHN_l6_v16" font = "hoi_16mbs" format = right maxWidth = 26 maxHeight = 20 alwaystransparent = yes }
+		buttonType = { name = "TFRKPHN_l6_chip17" position = { x = 124 y = 542 } spriteType = "GFX_TFRKPHN_l6_chip17" pdx_tooltip = "TFRKPHN_l6_chip17_tt" clicksound = click_default }
+		iconType = { name = "TFRKPHN_l6_st17" position = { x = 128 y = 545 } spriteType = "GFX_TFRKPHN_l6_stripe" alwaystransparent = yes }
+		iconType = { name = "TFRKPHN_l6_ring17" position = { x = 122 y = 540 } spriteType = "GFX_TFRKPHN_l6_ring" alwaystransparent = yes }
+		instantTextBoxType = { name = "TFRKPHN_l6_v17" position = { x = 194 y = 544 } text = "TFRKPHN_l6_v17" font = "hoi_16mbs" format = right maxWidth = 26 maxHeight = 20 alwaystransparent = yes }
+		buttonType = { name = "TFRKPHN_l6_chipm" position = { x = 153 y = 442 } spriteType = "GFX_TFRKPHN_l6_chipm" pdx_tooltip = "TFRKPHN_l6_chipm_tt" clicksound = click_default }
+		iconType = { name = "TFRKPHN_l6_stm" position = { x = 157 y = 445 } spriteType = "GFX_TFRKPHN_l6_stripe" alwaystransparent = yes }
+		iconType = { name = "TFRKPHN_l6_ringm" position = { x = 151 y = 440 } spriteType = "GFX_TFRKPHN_l6_ringm" alwaystransparent = yes }
+		instantTextBoxType = { name = "TFRKPHN_l6_vm" position = { x = 273 y = 444 } text = "TFRKPHN_l6_vm" font = "hoi_16mbs" format = right maxWidth = 26 maxHeight = 20 alwaystransparent = yes }
+		instantTextBoxType = { name = "TFRKPHN_l6_days" position = { x = 338 y = 16 } text = "TFRKPHN_l6_days" font = "hoi_18mbs" format = right maxWidth = 34 maxHeight = 20 alwaystransparent = yes }
+		instantTextBoxType = { name = "TFRKPHN_l6_cr" position = { x = 658 y = 16 } text = "TFRKPHN_l6_cr" font = "hoi_18mbs" format = left maxWidth = 30 maxHeight = 20 alwaystransparent = yes }
+		instantTextBoxType = { name = "TFRKPHN_l6_cg" position = { x = 742 y = 16 } text = "TFRKPHN_l6_cg" font = "hoi_18mbs" format = left maxWidth = 30 maxHeight = 20 alwaystransparent = yes }
+		instantTextBoxType = { name = "TFRKPHN_l6_cb" position = { x = 906 y = 16 } text = "TFRKPHN_l6_cb" font = "hoi_18mbs" format = left maxWidth = 30 maxHeight = 20 alwaystransparent = yes }
+		iconType = { name = "TFRKPHN_l6_title" position = { x = 578 y = 74 } spriteType = "GFX_TFRKPHN_l6_title" alwaystransparent = yes }
+		iconType = { name = "TFRKPHN_l6_cand" position = { x = 656 y = 122 } spriteType = "GFX_TFRKPHN_l6_cand" alwaystransparent = yes }
+		instantTextBoxType = { name = "TFRKPHN_l6_sv" position = { x = 656 y = 170 } text = "TFRKPHN_l6_sv" font = "hoi_16mbs" format = left maxWidth = 100 maxHeight = 20 alwaystransparent = yes }
+		instantTextBoxType = { name = "TFRKPHN_l6_so" position = { x = 784 y = 170 } text = "TFRKPHN_l6_so" font = "hoi_16mbs" format = right maxWidth = 100 maxHeight = 20 alwaystransparent = yes }
+		iconType = { name = "TFRKPHN_l6_bar" position = { x = 656 y = 194 } spriteType = "GFX_TFRKPHN_l6_bar" alwaystransparent = yes }
+		iconType = { name = "TFRKPHN_l6_frame_g" position = { x = 576 y = 120 } spriteType = "GFX_TFRKPHN_l6_frame_g" alwaystransparent = yes }
+		iconType = { name = "TFRKPHN_l6_frame_o" position = { x = 890 y = 120 } spriteType = "GFX_TFRKPHN_l6_frame_o" alwaystransparent = yes }
+		iconType = { name = "TFRKPHN_l6_pg1" position = { x = 578 y = 122 } spriteType = "GFX_TFRKPHN_l6_pg1" scale = 0.45 pdx_tooltip = "TFRKPHN_l6_bio_g1" }
+		iconType = { name = "TFRKPHN_l6_po1" position = { x = 892 y = 122 } spriteType = "GFX_TFRKPHN_l6_po1" scale = 0.45 pdx_tooltip = "TFRKPHN_l6_bio_o1" }
+		iconType = { name = "TFRKPHN_l6_pg2" position = { x = 578 y = 122 } spriteType = "GFX_TFRKPHN_l6_pg2" scale = 0.45 pdx_tooltip = "TFRKPHN_l6_bio_g2" }
+		iconType = { name = "TFRKPHN_l6_po2" position = { x = 892 y = 122 } spriteType = "GFX_TFRKPHN_l6_po2" scale = 0.45 pdx_tooltip = "TFRKPHN_l6_bio_o2" }
+		iconType = { name = "TFRKPHN_l6_pg3" position = { x = 578 y = 122 } spriteType = "GFX_TFRKPHN_l6_pg3" scale = 0.45 pdx_tooltip = "TFRKPHN_l6_bio_g3" }
+		iconType = { name = "TFRKPHN_l6_po3" position = { x = 892 y = 122 } spriteType = "GFX_TFRKPHN_l6_po3" scale = 0.45 pdx_tooltip = "TFRKPHN_l6_bio_o3" }
+		iconType = { name = "TFRKPHN_l6_pg4" position = { x = 578 y = 122 } spriteType = "GFX_TFRKPHN_l6_pg4" scale = 0.45 pdx_tooltip = "TFRKPHN_l6_bio_g4" }
+		iconType = { name = "TFRKPHN_l6_po4" position = { x = 892 y = 122 } spriteType = "GFX_TFRKPHN_l6_po4" scale = 0.45 pdx_tooltip = "TFRKPHN_l6_bio_o4" }
+		iconType = { name = "TFRKPHN_l6_pg6" position = { x = 578 y = 122 } spriteType = "GFX_TFRKPHN_l6_pg6" scale = 0.45 pdx_tooltip = "TFRKPHN_l6_bio_g6" }
+		iconType = { name = "TFRKPHN_l6_po6" position = { x = 892 y = 122 } spriteType = "GFX_TFRKPHN_l6_po6" scale = 0.45 pdx_tooltip = "TFRKPHN_l6_bio_o6" }
+		iconType = { name = "TFRKPHN_l6_pg7" position = { x = 578 y = 122 } spriteType = "GFX_TFRKPHN_l6_pg7" scale = 0.45 pdx_tooltip = "TFRKPHN_l6_bio_g7" }
+		iconType = { name = "TFRKPHN_l6_po7" position = { x = 892 y = 122 } spriteType = "GFX_TFRKPHN_l6_po7" scale = 0.45 pdx_tooltip = "TFRKPHN_l6_bio_o7" }
+		iconType = { name = "TFRKPHN_l6_pg8" position = { x = 578 y = 122 } spriteType = "GFX_TFRKPHN_l6_pg8" scale = 0.45 pdx_tooltip = "TFRKPHN_l6_bio_g8" }
+		iconType = { name = "TFRKPHN_l6_po8" position = { x = 892 y = 122 } spriteType = "GFX_TFRKPHN_l6_po8" scale = 0.45 pdx_tooltip = "TFRKPHN_l6_bio_o8" }
+		iconType = { name = "TFRKPHN_l6_pg9" position = { x = 578 y = 122 } spriteType = "GFX_TFRKPHN_l6_pg9" scale = 0.45 pdx_tooltip = "TFRKPHN_l6_bio_g9" }
+		iconType = { name = "TFRKPHN_l6_po9" position = { x = 892 y = 122 } spriteType = "GFX_TFRKPHN_l6_po9" scale = 0.45 pdx_tooltip = "TFRKPHN_l6_bio_o9" }
+		iconType = { name = "TFRKPHN_l6_pg10" position = { x = 578 y = 122 } spriteType = "GFX_TFRKPHN_l6_pg10" scale = 0.45 pdx_tooltip = "TFRKPHN_l6_bio_g10" }
+		iconType = { name = "TFRKPHN_l6_po10" position = { x = 892 y = 122 } spriteType = "GFX_TFRKPHN_l6_po10" scale = 0.45 pdx_tooltip = "TFRKPHN_l6_bio_o10" }
+		iconType = { name = "TFRKPHN_l6_pg11" position = { x = 578 y = 122 } spriteType = "GFX_TFRKPHN_l6_pg11" scale = 0.45 pdx_tooltip = "TFRKPHN_l6_bio_g11" }
+		iconType = { name = "TFRKPHN_l6_po11" position = { x = 892 y = 122 } spriteType = "GFX_TFRKPHN_l6_po11" scale = 0.45 pdx_tooltip = "TFRKPHN_l6_bio_o11" }
+		iconType = { name = "TFRKPHN_l6_pg12" position = { x = 578 y = 122 } spriteType = "GFX_TFRKPHN_l6_pg12" scale = 0.45 pdx_tooltip = "TFRKPHN_l6_bio_g12" }
+		iconType = { name = "TFRKPHN_l6_po12" position = { x = 892 y = 122 } spriteType = "GFX_TFRKPHN_l6_po12" scale = 0.45 pdx_tooltip = "TFRKPHN_l6_bio_o12" }
+		iconType = { name = "TFRKPHN_l6_pg13" position = { x = 578 y = 122 } spriteType = "GFX_TFRKPHN_l6_pg13" scale = 0.45 pdx_tooltip = "TFRKPHN_l6_bio_g13" }
+		iconType = { name = "TFRKPHN_l6_po13" position = { x = 892 y = 122 } spriteType = "GFX_TFRKPHN_l6_po13" scale = 0.45 pdx_tooltip = "TFRKPHN_l6_bio_o13" }
+		iconType = { name = "TFRKPHN_l6_pg14" position = { x = 578 y = 122 } spriteType = "GFX_TFRKPHN_l6_pg14" scale = 0.45 pdx_tooltip = "TFRKPHN_l6_bio_g14" }
+		iconType = { name = "TFRKPHN_l6_po14" position = { x = 892 y = 122 } spriteType = "GFX_TFRKPHN_l6_po14" scale = 0.45 pdx_tooltip = "TFRKPHN_l6_bio_o14" }
+		iconType = { name = "TFRKPHN_l6_pg15" position = { x = 578 y = 122 } spriteType = "GFX_TFRKPHN_l6_pg15" scale = 0.45 pdx_tooltip = "TFRKPHN_l6_bio_g15" }
+		iconType = { name = "TFRKPHN_l6_po15" position = { x = 892 y = 122 } spriteType = "GFX_TFRKPHN_l6_po15" scale = 0.45 pdx_tooltip = "TFRKPHN_l6_bio_o15" }
+		iconType = { name = "TFRKPHN_l6_pg16" position = { x = 578 y = 122 } spriteType = "GFX_TFRKPHN_l6_pg16" scale = 0.45 pdx_tooltip = "TFRKPHN_l6_bio_g16" }
+		iconType = { name = "TFRKPHN_l6_po16" position = { x = 892 y = 122 } spriteType = "GFX_TFRKPHN_l6_po16" scale = 0.45 pdx_tooltip = "TFRKPHN_l6_bio_o16" }
+		iconType = { name = "TFRKPHN_l6_pg17" position = { x = 578 y = 122 } spriteType = "GFX_TFRKPHN_l6_pg17" scale = 0.45 pdx_tooltip = "TFRKPHN_l6_bio_g17" }
+		iconType = { name = "TFRKPHN_l6_po17" position = { x = 892 y = 122 } spriteType = "GFX_TFRKPHN_l6_po17" scale = 0.45 pdx_tooltip = "TFRKPHN_l6_bio_o17" }
+		buttonType = { name = "TFRKPHN_l6_act1" position = { x = 578 y = 244 } spriteType = "GFX_TFRKPHN_l6_act1" pdx_tooltip = "TFRKPHN_l6_act1_tt" clicksound = click_default }
+		buttonType = { name = "TFRKPHN_l6_act2" position = { x = 578 y = 282 } spriteType = "GFX_TFRKPHN_l6_act2" pdx_tooltip = "TFRKPHN_l6_act2_tt" clicksound = click_default }
+		buttonType = { name = "TFRKPHN_l6_act3" position = { x = 578 y = 320 } spriteType = "GFX_TFRKPHN_l6_act3" pdx_tooltip = "TFRKPHN_l6_act3_tt" clicksound = click_default }
+		buttonType = { name = "TFRKPHN_l6_act4" position = { x = 578 y = 358 } spriteType = "GFX_TFRKPHN_l6_act4" pdx_tooltip = "TFRKPHN_l6_act4_tt" clicksound = click_default }
+		buttonType = { name = "TFRKPHN_l6_act5" position = { x = 578 y = 396 } spriteType = "GFX_TFRKPHN_l6_act5" pdx_tooltip = "TFRKPHN_l6_act5_tt" clicksound = click_default }
+		buttonType = { name = "TFRKPHN_l6_act6" position = { x = 578 y = 434 } spriteType = "GFX_TFRKPHN_l6_act6" pdx_tooltip = "TFRKPHN_l6_act6_tt" clicksound = click_default }
+		instantTextBoxType = { name = "TFRKPHN_l6_g" position = { x = 724 y = 475 } text = "TFRKPHN_l6_g" font = "hoi_16mbs" format = right maxWidth = 26 maxHeight = 20 alwaystransparent = yes }
+		instantTextBoxType = { name = "TFRKPHN_l6_med" position = { x = 724 y = 495 } text = "TFRKPHN_l6_med" font = "hoi_16mbs" format = right maxWidth = 26 maxHeight = 20 alwaystransparent = yes }
+		instantTextBoxType = { name = "TFRKPHN_l6_prom" position = { x = 724 y = 515 } text = "TFRKPHN_l6_prom" font = "hoi_16mbs" format = right maxWidth = 26 maxHeight = 20 alwaystransparent = yes }
+		iconType = { name = "TFRKPHN_l6_seoul" position = { x = 578 y = 244 } spriteType = "GFX_TFRKPHN_l6_seoul" alwaystransparent = yes }
+		iconType = { name = "TFRKPHN_l6_cz1" position = { x = 98 y = 137 } spriteType = "GFX_TFRKPHN_l6_cz" alwaystransparent = yes }
+		iconType = { name = "TFRKPHN_l6_cz2" position = { x = 357 y = 418 } spriteType = "GFX_TFRKPHN_l6_cz" alwaystransparent = yes }
+		iconType = { name = "TFRKPHN_l6_cz3" position = { x = 288 y = 329 } spriteType = "GFX_TFRKPHN_l6_cz" alwaystransparent = yes }
+		iconType = { name = "TFRKPHN_l6_cz4" position = { x = 82 y = 177 } spriteType = "GFX_TFRKPHN_l6_cz" alwaystransparent = yes }
+		iconType = { name = "TFRKPHN_l6_cz5" position = { x = 94 y = 400 } spriteType = "GFX_TFRKPHN_l6_cz" alwaystransparent = yes }
+		iconType = { name = "TFRKPHN_l6_cz6" position = { x = 219 y = 305 } spriteType = "GFX_TFRKPHN_l6_cz" alwaystransparent = yes }
+		iconType = { name = "TFRKPHN_l6_cz7" position = { x = 361 y = 355 } spriteType = "GFX_TFRKPHN_l6_cz" alwaystransparent = yes }
+		iconType = { name = "TFRKPHN_l6_cz8" position = { x = 114 y = 230 } spriteType = "GFX_TFRKPHN_l6_cz" alwaystransparent = yes }
+		iconType = { name = "TFRKPHN_l6_cz9" position = { x = 187 y = 190 } spriteType = "GFX_TFRKPHN_l6_cz" alwaystransparent = yes }
+		iconType = { name = "TFRKPHN_l6_cz10" position = { x = 264 y = 140 } spriteType = "GFX_TFRKPHN_l6_cz" alwaystransparent = yes }
+		iconType = { name = "TFRKPHN_l6_cz11" position = { x = 227 y = 230 } spriteType = "GFX_TFRKPHN_l6_cz" alwaystransparent = yes }
+		iconType = { name = "TFRKPHN_l6_cz12" position = { x = 114 y = 286 } spriteType = "GFX_TFRKPHN_l6_cz" alwaystransparent = yes }
+		iconType = { name = "TFRKPHN_l6_cz13" position = { x = 167 y = 343 } spriteType = "GFX_TFRKPHN_l6_cz" alwaystransparent = yes }
+		iconType = { name = "TFRKPHN_l6_cz14" position = { x = 151 y = 440 } spriteType = "GFX_TFRKPHN_l6_cz" alwaystransparent = yes }
+		iconType = { name = "TFRKPHN_l6_cz15" position = { x = 304 y = 270 } spriteType = "GFX_TFRKPHN_l6_cz" alwaystransparent = yes }
+		iconType = { name = "TFRKPHN_l6_cz16" position = { x = 260 y = 386 } spriteType = "GFX_TFRKPHN_l6_cz" alwaystransparent = yes }
+		iconType = { name = "TFRKPHN_l6_cz17" position = { x = 122 y = 540 } spriteType = "GFX_TFRKPHN_l6_cz" alwaystransparent = yes }
+		iconType = { name = "TFRKPHN_l6_czm" position = { x = 151 y = 440 } spriteType = "GFX_TFRKPHN_l6_czm" alwaystransparent = yes }
+		iconType = { name = "TFRKPHN_l6_shine" position = { x = 656 y = 194 } spriteType = "GFX_TFRKPHN_l6_shine" alwaystransparent = yes }
+		buttonType = { name = "TFRKPHN_l6_close" position = { x = 956 y = 11 } spriteType = "GFX_TFRKPHN_l6_close" clicksound = click_default }
+	}
+}

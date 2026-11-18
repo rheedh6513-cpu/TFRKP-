@@ -1,0 +1,12 @@
+# [안내] 나라 바로세우기 줄다리기 패널. nara_build.py가 만든다.
+scripted_gui = {
+	TFRKPHN_nr_gui = {
+		context_type = decision_category
+		window_name = "TFRKPHN_nr_container"
+		properties = {
+			TFRKPHN_nr_rope1 = { frame = TFRKPHN_nr_f1 }
+			TFRKPHN_nr_rope2 = { frame = TFRKPHN_nr_f2 }
+			TFRKPHN_nr_rope3 = { frame = TFRKPHN_nr_f3 }
+		}
+	}
+}

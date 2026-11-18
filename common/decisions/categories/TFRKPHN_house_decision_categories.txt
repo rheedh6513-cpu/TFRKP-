@@ -1,0 +1,7 @@
+# [안내] 31만 호. house_build.py가 만든다.
+TFRKPHN_hs_category = {
+	icon = generic_construction
+	priority = 208
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_completed_focus = TFRKPHN_oh_se_hoon_b1 }
+}

@@ -1,0 +1,10 @@
+# [안내] 유니콘 쉰 개 달성. unicorn_build.py가 만든다.
+add_namespace = tfrkphn
+country_event = {
+	id = tfrkphn.6793
+	title = tfrkphn.6793.t
+	desc = tfrkphn.6793.d
+	picture = GFX_TFRKPHN_dev_6779
+	is_triggered_only = yes
+	option = { name = tfrkphn.6793.a add_political_power = 100 add_stability = 0.03 }
+}

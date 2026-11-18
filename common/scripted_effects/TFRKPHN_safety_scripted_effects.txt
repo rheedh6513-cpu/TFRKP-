@@ -1,0 +1,6 @@
+# [안내] 매뉴얼로 지키는 안전. safety_build.py가 만든다.
+TFRKPHN_sf_apply = {
+	set_variable = { TFRKPHN_sf_st = TFRKPHN_sf }
+	multiply_variable = { TFRKPHN_sf_st = 0.0005 }
+	if = { limit = { NOT = { has_dynamic_modifier = { modifier = TFRKPHN_safety } } } add_dynamic_modifier = { modifier = TFRKPHN_safety } }
+}

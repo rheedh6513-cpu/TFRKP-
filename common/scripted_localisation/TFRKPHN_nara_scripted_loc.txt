@@ -1,0 +1,19 @@
+# [안내] 나라 바로세우기. nara_build.py가 만든다.
+defined_text = {
+	name = GetTFRKPHNNr1
+	text = { trigger = { check_variable = { TFRKPHN_nr1 < -0.5 } } localization_key = TFRKPHN_nr1_left }
+	text = { trigger = { check_variable = { TFRKPHN_nr1 > 0.5 } } localization_key = TFRKPHN_nr1_right }
+	text = { localization_key = TFRKPHN_nr_mid }
+}
+defined_text = {
+	name = GetTFRKPHNNr2
+	text = { trigger = { check_variable = { TFRKPHN_nr2 < -0.5 } } localization_key = TFRKPHN_nr2_left }
+	text = { trigger = { check_variable = { TFRKPHN_nr2 > 0.5 } } localization_key = TFRKPHN_nr2_right }
+	text = { localization_key = TFRKPHN_nr_mid }
+}
+defined_text = {
+	name = GetTFRKPHNNr3
+	text = { trigger = { check_variable = { TFRKPHN_nr3 < -0.5 } } localization_key = TFRKPHN_nr3_left }
+	text = { trigger = { check_variable = { TFRKPHN_nr3 > 0.5 } } localization_key = TFRKPHN_nr3_right }
+	text = { localization_key = TFRKPHN_nr_mid }
+}

@@ -1,0 +1,6 @@
+# [안내] 유니콘 쉰 개. unicorn_build.py가 만든다.
+TFRKPHN_unicorn = {
+	icon = GFX_modifiers_TFRKPHN_local_ally
+	research_speed_factor = TFRKPHN_uni_bonus
+	production_speed_industrial_complex_factor = TFRKPHN_uni_bonus
+}

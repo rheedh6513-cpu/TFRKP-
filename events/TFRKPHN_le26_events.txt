@@ -1,0 +1,103 @@
+# [안내] 오세훈 정부: 2030년 지방선거 사건. le26_build.py가 만든다.
+add_namespace = tfrkphn
+
+country_event = {
+	id = tfrkphn.6751
+	title = tfrkphn.6751.t
+	desc = { trigger = { OR = { has_government = conservative has_government = authoritarian_democrat has_government = nationalist } } text = tfrkphn.6751.d }
+	desc = { trigger = { NOT = { OR = { has_government = conservative has_government = authoritarian_democrat has_government = nationalist } } } text = tfrkphn.6751.d2 }
+	picture = GFX_TFRKPHN_le26_6751
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6751.a
+		custom_effect_tooltip = tfrkphn.6751.a_tt
+		hidden_effect = { TFRKPHN_l6_start = yes }
+	}
+}
+country_event = {
+	id = tfrkphn.6753
+	title = tfrkphn.6753.t
+	desc = tfrkphn.6753.d
+	picture = GFX_TFRKPHN_le26_6753
+	is_triggered_only = yes
+	trigger = { NOT = { has_country_flag = TFRKPHN_l6_done } }
+	option = {
+		name = tfrkphn.6753.a
+		custom_effect_tooltip = tfrkphn.6753.a_tt
+		hidden_effect = { set_country_flag = TFRKPHN_l6_nomore }
+	}
+	option = {
+		name = tfrkphn.6753.b
+		custom_effect_tooltip = tfrkphn.6753.b_tt
+		hidden_effect = { TFRKPHN_l6_med_hit = yes }
+	}
+}
+country_event = {
+	id = tfrkphn.6754
+	title = tfrkphn.6754.t
+	desc = tfrkphn.6754.d
+	picture = GFX_TFRKPHN_le26_count_anim
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6754.a
+		hidden_effect = {
+			if = { limit = { check_variable = { TFRKPHN_l6_wins > 9.5 } } country_event = { id = tfrkphn.6755 hours = 6 } }
+			else_if = { limit = { check_variable = { TFRKPHN_l6_wins > 6.5 } } country_event = { id = tfrkphn.6756 hours = 6 } }
+			else = { country_event = { id = tfrkphn.6757 hours = 6 } }
+		}
+	}
+}
+country_event = {
+	id = tfrkphn.6755
+	title = tfrkphn.6755.t
+	desc = tfrkphn.6755.d
+	picture = GFX_TFRKPHN_le26_6755
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6755.a
+		#localfx
+		custom_effect_tooltip = TFRKPHN_ruling_up_tt
+		hidden_effect = { TFRKPHN_ruling_pop_up = yes }
+		custom_effect_tooltip = TFRKPHN_ally_tt
+		hidden_effect = { TFRKPHN_ally_apply = yes }
+		add_stability = 0.05
+		add_political_power = 100
+		if = { limit = { check_variable = { TFRKPHN_l6_prom > 0.5 } } custom_effect_tooltip = TFRKPHN_l6_prom_tt hidden_effect = { add_political_power = TFRKPHN_l6_cost } }
+		hidden_effect = { set_country_flag = TFRKPHN_l6_big_win }
+	}
+}
+country_event = {
+	id = tfrkphn.6756
+	title = tfrkphn.6756.t
+	desc = tfrkphn.6756.d
+	picture = GFX_TFRKPHN_le26_6756
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6756.a
+		#localfx
+		custom_effect_tooltip = TFRKPHN_ally_tt
+		hidden_effect = { TFRKPHN_ally_apply = yes }
+		add_political_power = 30
+		if = { limit = { check_variable = { TFRKPHN_l6_prom > 0.5 } } custom_effect_tooltip = TFRKPHN_l6_prom_tt hidden_effect = { add_political_power = TFRKPHN_l6_cost } }
+		hidden_effect = { set_country_flag = TFRKPHN_l6_half_win }
+	}
+}
+country_event = {
+	id = tfrkphn.6757
+	title = tfrkphn.6757.t
+	desc = tfrkphn.6757.d
+	picture = GFX_TFRKPHN_le26_6757
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6757.a
+		#localfx
+		custom_effect_tooltip = TFRKPHN_ruling_down_tt
+		hidden_effect = { TFRKPHN_ruling_pop_down = yes }
+		custom_effect_tooltip = TFRKPHN_ally_tt
+		hidden_effect = { TFRKPHN_ally_apply = yes }
+		add_stability = -0.05
+		add_political_power = -50
+		if = { limit = { check_variable = { TFRKPHN_l6_prom > 0.5 } } custom_effect_tooltip = TFRKPHN_l6_prom_tt hidden_effect = { add_political_power = TFRKPHN_l6_cost } }
+		hidden_effect = { set_country_flag = TFRKPHN_l6_lost }
+	}
+}

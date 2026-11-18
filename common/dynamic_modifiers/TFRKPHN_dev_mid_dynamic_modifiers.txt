@@ -1,0 +1,6 @@
+# [안내] 개발 가속. dev_mid_build.py가 만든다.
+TFRKPHN_dev_rush = {
+	icon = GFX_modifiers_TFRKPHN_local_ally
+	production_speed_buildings_factor = 0.10
+	stability_factor = -0.03
+}

@@ -10,6 +10,7 @@ country_event = {
 	option = {
 		name = tfrkphn.6741.a
 		custom_effect_tooltip = tfrkphn.6741.a_tt
+		hidden_effect = { TFRKPHN_gov_gangwon_special = yes }	# 콘솔로 띄워도 칸이 바뀌게
 	}
 }
 
@@ -22,6 +23,7 @@ country_event = {
 	option = {
 		name = tfrkphn.6742.a
 		custom_effect_tooltip = tfrkphn.6742.a_tt
+		hidden_effect = { TFRKPHN_gov_jeonbuk_special = yes }	# 콘솔로 띄워도 칸이 바뀌게
 	}
 }
 
@@ -34,6 +36,7 @@ country_event = {
 	option = {
 		name = tfrkphn.6743.a
 		custom_effect_tooltip = tfrkphn.6743.a_tt
+		hidden_effect = { set_country_flag = TFRKPHN_act_gyeongnam }	# 콘솔로 띄워도 칸이 바뀌게
 	}
 }
 
@@ -46,6 +49,7 @@ country_event = {
 	option = {
 		name = tfrkphn.6744.a
 		custom_effect_tooltip = tfrkphn.6744.a_tt
+		hidden_effect = { set_country_flag = TFRKPHN_act_jeju }	# 콘솔로 띄워도 칸이 바뀌게
 	}
 }
 
@@ -58,5 +62,6 @@ country_event = {
 	option = {
 		name = tfrkphn.6745.a
 		custom_effect_tooltip = tfrkphn.6745.a_tt
+		hidden_effect = { set_country_flag = TFRKPHN_act_gyeonggi }	# 콘솔로 띄워도 칸이 바뀌게
 	}
 }

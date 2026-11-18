@@ -1,0 +1,17 @@
+# [안내] 오세훈, 대선 경선을 위해 서울시장직을 내려놓다. oh_resign_build.py가 만든다.
+add_namespace = tfrkphn
+country_event = {
+	id = tfrkphn.6746
+	title = tfrkphn.6746.t
+	desc = tfrkphn.6746.d
+	picture = GFX_TFRKPHN_oh_resign
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6746.a
+		custom_effect_tooltip = tfrkphn.6746.a_tt
+		hidden_effect = {
+			set_country_flag = TFRKPHN_oh_resigned_run
+			KOR_seoul_city_mayor_reset_effect = yes
+		}
+	}
+}

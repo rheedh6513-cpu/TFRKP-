@@ -1,0 +1,749 @@
+# [안내] 서울런 탭의 질문, 연습, 성장. sl_quiz.py가 만든다.
+add_namespace = tfrkphn
+country_event = {
+	id = tfrkphn.6900
+	title = tfrkphn.6900.t
+	desc = tfrkphn.6900.d
+	picture = GFX_TFRKPHN_dev_6779
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6900.a
+	}
+}
+country_event = {
+	id = tfrkphn.6901
+	title = tfrkphn.6901.t
+	desc = tfrkphn.6901.d
+	picture = GFX_TFRKPHN_dev_6779
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6901.o0
+		country_event = { id = tfrkphn.6951 }
+	}
+	option = {
+		name = tfrkphn.6901.o1
+		country_event = { id = tfrkphn.6931 }
+	}
+	option = {
+		name = tfrkphn.6901.o2
+		country_event = { id = tfrkphn.6951 }
+	}
+	option = {
+		name = tfrkphn.6901.o3
+		country_event = { id = tfrkphn.6951 }
+	}
+}
+country_event = {
+	id = tfrkphn.6931
+	title = tfrkphn.6910.t
+	desc = tfrkphn.6931.d
+	picture = GFX_TFRKPHN_dev_6779
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6910.a
+	}
+}
+country_event = {
+	id = tfrkphn.6951
+	title = tfrkphn.6920.t
+	desc = tfrkphn.6951.d
+	picture = GFX_TFRKPHN_dev_6779
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6920.a
+	}
+}
+country_event = {
+	id = tfrkphn.6902
+	title = tfrkphn.6902.t
+	desc = tfrkphn.6902.d
+	picture = GFX_TFRKPHN_dev_6779
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6902.o0
+		country_event = { id = tfrkphn.6952 }
+	}
+	option = {
+		name = tfrkphn.6902.o1
+		country_event = { id = tfrkphn.6932 }
+	}
+	option = {
+		name = tfrkphn.6902.o2
+		country_event = { id = tfrkphn.6952 }
+	}
+}
+country_event = {
+	id = tfrkphn.6932
+	title = tfrkphn.6910.t
+	desc = tfrkphn.6932.d
+	picture = GFX_TFRKPHN_dev_6779
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6910.a
+	}
+}
+country_event = {
+	id = tfrkphn.6952
+	title = tfrkphn.6920.t
+	desc = tfrkphn.6952.d
+	picture = GFX_TFRKPHN_dev_6779
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6920.a
+	}
+}
+country_event = {
+	id = tfrkphn.6903
+	title = tfrkphn.6903.t
+	desc = tfrkphn.6903.d
+	picture = GFX_TFRKPHN_dev_6779
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6903.o0
+		country_event = { id = tfrkphn.6953 }
+	}
+	option = {
+		name = tfrkphn.6903.o1
+		country_event = { id = tfrkphn.6933 }
+	}
+	option = {
+		name = tfrkphn.6903.o2
+		country_event = { id = tfrkphn.6953 }
+	}
+	option = {
+		name = tfrkphn.6903.o3
+		country_event = { id = tfrkphn.6953 }
+	}
+}
+country_event = {
+	id = tfrkphn.6933
+	title = tfrkphn.6910.t
+	desc = tfrkphn.6933.d
+	picture = GFX_TFRKPHN_dev_6779
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6910.a
+	}
+}
+country_event = {
+	id = tfrkphn.6953
+	title = tfrkphn.6920.t
+	desc = tfrkphn.6953.d
+	picture = GFX_TFRKPHN_dev_6779
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6920.a
+	}
+}
+country_event = {
+	id = tfrkphn.6904
+	title = tfrkphn.6904.t
+	desc = tfrkphn.6904.d
+	picture = GFX_TFRKPHN_dev_6779
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6904.o0
+		country_event = { id = tfrkphn.6954 }
+	}
+	option = {
+		name = tfrkphn.6904.o1
+		country_event = { id = tfrkphn.6954 }
+	}
+	option = {
+		name = tfrkphn.6904.o2
+		country_event = { id = tfrkphn.6934 }
+	}
+	option = {
+		name = tfrkphn.6904.o3
+		country_event = { id = tfrkphn.6954 }
+	}
+}
+country_event = {
+	id = tfrkphn.6934
+	title = tfrkphn.6910.t
+	desc = tfrkphn.6934.d
+	picture = GFX_TFRKPHN_dev_6779
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6910.a
+	}
+}
+country_event = {
+	id = tfrkphn.6954
+	title = tfrkphn.6920.t
+	desc = tfrkphn.6954.d
+	picture = GFX_TFRKPHN_dev_6779
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6920.a
+	}
+}
+country_event = {
+	id = tfrkphn.6905
+	title = tfrkphn.6905.t
+	desc = tfrkphn.6905.d
+	picture = GFX_TFRKPHN_dev_6779
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6905.o0
+		country_event = { id = tfrkphn.6955 }
+	}
+	option = {
+		name = tfrkphn.6905.o1
+		country_event = { id = tfrkphn.6935 }
+	}
+	option = {
+		name = tfrkphn.6905.o2
+		country_event = { id = tfrkphn.6955 }
+	}
+	option = {
+		name = tfrkphn.6905.o3
+		country_event = { id = tfrkphn.6955 }
+	}
+}
+country_event = {
+	id = tfrkphn.6935
+	title = tfrkphn.6910.t
+	desc = tfrkphn.6935.d
+	picture = GFX_TFRKPHN_dev_6779
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6910.a
+	}
+}
+country_event = {
+	id = tfrkphn.6955
+	title = tfrkphn.6920.t
+	desc = tfrkphn.6955.d
+	picture = GFX_TFRKPHN_dev_6779
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6920.a
+	}
+}
+country_event = {
+	id = tfrkphn.6906
+	title = tfrkphn.6906.t
+	desc = tfrkphn.6906.d
+	picture = GFX_TFRKPHN_dev_6779
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6906.o0
+		country_event = { id = tfrkphn.6956 }
+	}
+	option = {
+		name = tfrkphn.6906.o1
+		country_event = { id = tfrkphn.6936 }
+	}
+	option = {
+		name = tfrkphn.6906.o2
+		country_event = { id = tfrkphn.6956 }
+	}
+	option = {
+		name = tfrkphn.6906.o3
+		country_event = { id = tfrkphn.6956 }
+	}
+}
+country_event = {
+	id = tfrkphn.6936
+	title = tfrkphn.6910.t
+	desc = tfrkphn.6936.d
+	picture = GFX_TFRKPHN_dev_6779
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6910.a
+	}
+}
+country_event = {
+	id = tfrkphn.6956
+	title = tfrkphn.6920.t
+	desc = tfrkphn.6956.d
+	picture = GFX_TFRKPHN_dev_6779
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6920.a
+	}
+}
+country_event = {
+	id = tfrkphn.6907
+	title = tfrkphn.6907.t
+	desc = tfrkphn.6907.d
+	picture = GFX_TFRKPHN_dev_6779
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6907.o0
+		country_event = { id = tfrkphn.6957 }
+	}
+	option = {
+		name = tfrkphn.6907.o1
+		country_event = { id = tfrkphn.6957 }
+	}
+	option = {
+		name = tfrkphn.6907.o2
+		country_event = { id = tfrkphn.6937 }
+	}
+	option = {
+		name = tfrkphn.6907.o3
+		country_event = { id = tfrkphn.6957 }
+	}
+}
+country_event = {
+	id = tfrkphn.6937
+	title = tfrkphn.6910.t
+	desc = tfrkphn.6937.d
+	picture = GFX_TFRKPHN_dev_6779
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6910.a
+	}
+}
+country_event = {
+	id = tfrkphn.6957
+	title = tfrkphn.6920.t
+	desc = tfrkphn.6957.d
+	picture = GFX_TFRKPHN_dev_6779
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6920.a
+	}
+}
+country_event = {
+	id = tfrkphn.6908
+	title = tfrkphn.6908.t
+	desc = tfrkphn.6908.d
+	picture = GFX_TFRKPHN_dev_6779
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6908.o0
+		country_event = { id = tfrkphn.6938 }
+	}
+	option = {
+		name = tfrkphn.6908.o1
+		country_event = { id = tfrkphn.6958 }
+	}
+	option = {
+		name = tfrkphn.6908.o2
+		country_event = { id = tfrkphn.6958 }
+	}
+	option = {
+		name = tfrkphn.6908.o3
+		country_event = { id = tfrkphn.6958 }
+	}
+}
+country_event = {
+	id = tfrkphn.6938
+	title = tfrkphn.6910.t
+	desc = tfrkphn.6938.d
+	picture = GFX_TFRKPHN_dev_6779
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6910.a
+	}
+}
+country_event = {
+	id = tfrkphn.6958
+	title = tfrkphn.6920.t
+	desc = tfrkphn.6958.d
+	picture = GFX_TFRKPHN_dev_6779
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6920.a
+	}
+}
+country_event = {
+	id = tfrkphn.6909
+	title = tfrkphn.6909.t
+	desc = tfrkphn.6909.d
+	picture = GFX_TFRKPHN_dev_6779
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6909.o0
+		country_event = { id = tfrkphn.6959 }
+	}
+	option = {
+		name = tfrkphn.6909.o1
+		country_event = { id = tfrkphn.6959 }
+	}
+	option = {
+		name = tfrkphn.6909.o2
+		country_event = { id = tfrkphn.6939 }
+	}
+	option = {
+		name = tfrkphn.6909.o3
+		country_event = { id = tfrkphn.6959 }
+	}
+}
+country_event = {
+	id = tfrkphn.6939
+	title = tfrkphn.6910.t
+	desc = tfrkphn.6939.d
+	picture = GFX_TFRKPHN_dev_6779
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6910.a
+	}
+}
+country_event = {
+	id = tfrkphn.6959
+	title = tfrkphn.6920.t
+	desc = tfrkphn.6959.d
+	picture = GFX_TFRKPHN_dev_6779
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6920.a
+	}
+}
+country_event = {
+	id = tfrkphn.6910
+	title = tfrkphn.6910.t
+	desc = tfrkphn.6910.d
+	picture = GFX_TFRKPHN_dev_6779
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6910.o0
+		country_event = { id = tfrkphn.6960 }
+	}
+	option = {
+		name = tfrkphn.6910.o1
+		country_event = { id = tfrkphn.6940 }
+	}
+	option = {
+		name = tfrkphn.6910.o2
+		country_event = { id = tfrkphn.6960 }
+	}
+	option = {
+		name = tfrkphn.6910.o3
+		country_event = { id = tfrkphn.6960 }
+	}
+}
+country_event = {
+	id = tfrkphn.6940
+	title = tfrkphn.6910.t
+	desc = tfrkphn.6940.d
+	picture = GFX_TFRKPHN_dev_6779
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6910.a
+	}
+}
+country_event = {
+	id = tfrkphn.6960
+	title = tfrkphn.6920.t
+	desc = tfrkphn.6960.d
+	picture = GFX_TFRKPHN_dev_6779
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6920.a
+	}
+}
+country_event = {
+	id = tfrkphn.6911
+	title = tfrkphn.6911.t
+	desc = tfrkphn.6911.d
+	picture = GFX_TFRKPHN_dev_6779
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6911.o0
+		country_event = { id = tfrkphn.6961 }
+	}
+	option = {
+		name = tfrkphn.6911.o1
+		country_event = { id = tfrkphn.6961 }
+	}
+	option = {
+		name = tfrkphn.6911.o2
+		country_event = { id = tfrkphn.6941 }
+	}
+	option = {
+		name = tfrkphn.6911.o3
+		country_event = { id = tfrkphn.6961 }
+	}
+}
+country_event = {
+	id = tfrkphn.6941
+	title = tfrkphn.6910.t
+	desc = tfrkphn.6941.d
+	picture = GFX_TFRKPHN_dev_6779
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6910.a
+	}
+}
+country_event = {
+	id = tfrkphn.6961
+	title = tfrkphn.6920.t
+	desc = tfrkphn.6961.d
+	picture = GFX_TFRKPHN_dev_6779
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6920.a
+	}
+}
+country_event = {
+	id = tfrkphn.6912
+	title = tfrkphn.6912.t
+	desc = tfrkphn.6912.d
+	picture = GFX_TFRKPHN_dev_6779
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6912.o0
+		country_event = { id = tfrkphn.6962 }
+	}
+	option = {
+		name = tfrkphn.6912.o1
+		country_event = { id = tfrkphn.6962 }
+	}
+	option = {
+		name = tfrkphn.6912.o2
+		country_event = { id = tfrkphn.6942 }
+	}
+	option = {
+		name = tfrkphn.6912.o3
+		country_event = { id = tfrkphn.6962 }
+	}
+}
+country_event = {
+	id = tfrkphn.6942
+	title = tfrkphn.6910.t
+	desc = tfrkphn.6942.d
+	picture = GFX_TFRKPHN_dev_6779
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6910.a
+	}
+}
+country_event = {
+	id = tfrkphn.6962
+	title = tfrkphn.6920.t
+	desc = tfrkphn.6962.d
+	picture = GFX_TFRKPHN_dev_6779
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6920.a
+	}
+}
+country_event = {
+	id = tfrkphn.6913
+	title = tfrkphn.6913.t
+	desc = tfrkphn.6913.d
+	picture = GFX_TFRKPHN_dev_6779
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6913.o0
+		country_event = { id = tfrkphn.6963 }
+	}
+	option = {
+		name = tfrkphn.6913.o1
+		country_event = { id = tfrkphn.6943 }
+	}
+	option = {
+		name = tfrkphn.6913.o2
+		country_event = { id = tfrkphn.6963 }
+	}
+	option = {
+		name = tfrkphn.6913.o3
+		country_event = { id = tfrkphn.6963 }
+	}
+}
+country_event = {
+	id = tfrkphn.6943
+	title = tfrkphn.6910.t
+	desc = tfrkphn.6943.d
+	picture = GFX_TFRKPHN_dev_6779
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6910.a
+	}
+}
+country_event = {
+	id = tfrkphn.6963
+	title = tfrkphn.6920.t
+	desc = tfrkphn.6963.d
+	picture = GFX_TFRKPHN_dev_6779
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6920.a
+	}
+}
+country_event = {
+	id = tfrkphn.6914
+	title = tfrkphn.6914.t
+	desc = tfrkphn.6914.d
+	picture = GFX_TFRKPHN_dev_6779
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6914.o0
+		country_event = { id = tfrkphn.6964 }
+	}
+	option = {
+		name = tfrkphn.6914.o1
+		country_event = { id = tfrkphn.6944 }
+	}
+	option = {
+		name = tfrkphn.6914.o2
+		country_event = { id = tfrkphn.6964 }
+	}
+	option = {
+		name = tfrkphn.6914.o3
+		country_event = { id = tfrkphn.6964 }
+	}
+}
+country_event = {
+	id = tfrkphn.6944
+	title = tfrkphn.6910.t
+	desc = tfrkphn.6944.d
+	picture = GFX_TFRKPHN_dev_6779
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6910.a
+	}
+}
+country_event = {
+	id = tfrkphn.6964
+	title = tfrkphn.6920.t
+	desc = tfrkphn.6964.d
+	picture = GFX_TFRKPHN_dev_6779
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6920.a
+	}
+}
+country_event = {
+	id = tfrkphn.6915
+	title = tfrkphn.6915.t
+	desc = tfrkphn.6915.d
+	picture = GFX_TFRKPHN_dev_6779
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6915.o0
+		country_event = { id = tfrkphn.6965 }
+	}
+	option = {
+		name = tfrkphn.6915.o1
+		country_event = { id = tfrkphn.6945 }
+	}
+	option = {
+		name = tfrkphn.6915.o2
+		country_event = { id = tfrkphn.6965 }
+	}
+	option = {
+		name = tfrkphn.6915.o3
+		country_event = { id = tfrkphn.6965 }
+	}
+}
+country_event = {
+	id = tfrkphn.6945
+	title = tfrkphn.6910.t
+	desc = tfrkphn.6945.d
+	picture = GFX_TFRKPHN_dev_6779
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6910.a
+	}
+}
+country_event = {
+	id = tfrkphn.6965
+	title = tfrkphn.6920.t
+	desc = tfrkphn.6965.d
+	picture = GFX_TFRKPHN_dev_6779
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6920.a
+	}
+}
+country_event = {
+	id = tfrkphn.6916
+	title = tfrkphn.6916.t
+	desc = tfrkphn.6916.d
+	picture = GFX_TFRKPHN_dev_6779
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6916.o0
+		country_event = { id = tfrkphn.6946 }
+	}
+	option = {
+		name = tfrkphn.6916.o1
+		country_event = { id = tfrkphn.6966 }
+	}
+	option = {
+		name = tfrkphn.6916.o2
+		country_event = { id = tfrkphn.6966 }
+	}
+	option = {
+		name = tfrkphn.6916.o3
+		country_event = { id = tfrkphn.6966 }
+	}
+}
+country_event = {
+	id = tfrkphn.6946
+	title = tfrkphn.6910.t
+	desc = tfrkphn.6946.d
+	picture = GFX_TFRKPHN_dev_6779
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6910.a
+	}
+}
+country_event = {
+	id = tfrkphn.6966
+	title = tfrkphn.6920.t
+	desc = tfrkphn.6966.d
+	picture = GFX_TFRKPHN_dev_6779
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6920.a
+	}
+}
+country_event = {
+	id = tfrkphn.6917
+	title = tfrkphn.6917.t
+	desc = tfrkphn.6917.d
+	picture = GFX_TFRKPHN_dev_6779
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6917.o0
+		country_event = { id = tfrkphn.6967 }
+	}
+	option = {
+		name = tfrkphn.6917.o1
+		country_event = { id = tfrkphn.6947 }
+	}
+	option = {
+		name = tfrkphn.6917.o2
+		country_event = { id = tfrkphn.6967 }
+	}
+	option = {
+		name = tfrkphn.6917.o3
+		country_event = { id = tfrkphn.6967 }
+	}
+}
+country_event = {
+	id = tfrkphn.6947
+	title = tfrkphn.6910.t
+	desc = tfrkphn.6947.d
+	picture = GFX_TFRKPHN_dev_6779
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6910.a
+	}
+}
+country_event = {
+	id = tfrkphn.6967
+	title = tfrkphn.6920.t
+	desc = tfrkphn.6967.d
+	picture = GFX_TFRKPHN_dev_6779
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6920.a
+	}
+}
+country_event = {
+	id = tfrkphn.6929
+	title = tfrkphn.6929.t
+	desc = tfrkphn.6929.d
+	picture = GFX_TFRKPHN_dev_6779
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6929.a
+	}
+}

@@ -1,0 +1,5 @@
+# [안내] 매뉴얼로 지키는 안전. safety_build.py가 만든다.
+TFRKPHN_safety = {
+	icon = GFX_modifiers_TFRKPHN_local_ally
+	stability_factor = TFRKPHN_sf_st
+}

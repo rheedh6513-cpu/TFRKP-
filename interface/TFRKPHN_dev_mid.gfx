@@ -1,0 +1,9 @@
+# [안내] 개발 중반 사건 그림. dev_mid_build.py가 만든다.
+spriteTypes = {
+	spriteType = { name = "GFX_TFRKPHN_dev_6776" texturefile = "gfx/event_pictures/TFRKPHN_dev_6776.png" }
+	spriteType = { name = "GFX_TFRKPHN_dev_6777" texturefile = "gfx/event_pictures/TFRKPHN_dev_6777.png" }
+	spriteType = { name = "GFX_TFRKPHN_dev_6778" texturefile = "gfx/event_pictures/TFRKPHN_dev_6778.png" }
+	spriteType = { name = "GFX_TFRKPHN_dev_6779" texturefile = "gfx/event_pictures/TFRKPHN_dev_6779.png" }
+	spriteType = { name = "GFX_TFRKPHN_dev_6780" texturefile = "gfx/event_pictures/TFRKPHN_dev_6780.png" }
+	spriteType = { name = "GFX_TFRKPHN_dev_6781" texturefile = "gfx/event_pictures/TFRKPHN_dev_6781.png" }
+}

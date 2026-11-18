@@ -1,0 +1,98 @@
+# [안내] 이인제 판: 보궐선거 뒤 서울시장 사건. lee_mayor_build.py가 만든다.
+add_namespace = tfrkphn
+country_event = {
+	id = tfrkphn.6770
+	title = tfrkphn.6770.t
+	desc = tfrkphn.6770.d
+	picture = GFX_TFRKPHN_lee_by_6763
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6770.a
+		add_political_power = -40
+		add_stability = 0.02
+		1041 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
+		hidden_effect = { set_country_flag = TFRKPHN_cho_fund country_event = { id = tfrkphn.6771 days = 240 } }
+	}
+	option = {
+		name = tfrkphn.6770.b
+		add_political_power = 20
+		add_stability = -0.01
+	}
+}
+country_event = {
+	id = tfrkphn.6771
+	title = tfrkphn.6771.t
+	desc = tfrkphn.6771.d
+	picture = GFX_TFRKPHN_lee_by_6763
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6771.a
+		add_stability = 0.02
+		custom_effect_tooltip = TFRKPHN_ruling_up_tt
+		hidden_effect = { TFRKPHN_ruling_pop_up = yes }
+	}
+}
+country_event = {
+	id = tfrkphn.6772
+	title = tfrkphn.6772.t
+	desc = tfrkphn.6772.d
+	picture = GFX_TFRKPHN_lee_by_6767
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6772.a
+		add_political_power = -50
+		add_stability = 0.02
+		hidden_effect = { set_country_flag = TFRKPHN_chung_met country_event = { id = tfrkphn.6773 days = 200 } }
+	}
+	option = {
+		name = tfrkphn.6772.b
+		add_political_power = 20
+		add_stability = -0.02
+		hidden_effect = { country_event = { id = tfrkphn.6773 days = 200 } }
+	}
+}
+country_event = {
+	id = tfrkphn.6773
+	title = tfrkphn.6773.t
+	desc = { trigger = { has_country_flag = TFRKPHN_chung_met } text = tfrkphn.6773.d }
+	desc = { trigger = { NOT = { has_country_flag = TFRKPHN_chung_met } } text = tfrkphn.6773.d2 }
+	picture = GFX_TFRKPHN_lee_by_6767
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6773.a
+		if = { limit = { has_country_flag = TFRKPHN_chung_met } add_political_power = 60 }
+		else = { custom_effect_tooltip = TFRKPHN_ruling_down_tt hidden_effect = { TFRKPHN_ruling_pop_down = yes } }
+	}
+}
+country_event = {
+	id = tfrkphn.6774
+	title = tfrkphn.6774.t
+	desc = tfrkphn.6774.d
+	picture = GFX_TFRKPHN_lee_by_6764
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6774.a
+		add_political_power = -40
+		add_stability = 0.03
+		hidden_effect = { set_country_flag = TFRKPHN_jwo_fund country_event = { id = tfrkphn.6775 days = 200 } }
+	}
+	option = {
+		name = tfrkphn.6774.b
+		add_political_power = 40
+		add_stability = -0.02
+		hidden_effect = { country_event = { id = tfrkphn.6775 days = 200 } }
+	}
+}
+country_event = {
+	id = tfrkphn.6775
+	title = tfrkphn.6775.t
+	desc = { trigger = { has_country_flag = TFRKPHN_jwo_fund } text = tfrkphn.6775.d }
+	desc = { trigger = { NOT = { has_country_flag = TFRKPHN_jwo_fund } } text = tfrkphn.6775.d2 }
+	picture = GFX_TFRKPHN_lee_by_6764
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6775.a
+		if = { limit = { has_country_flag = TFRKPHN_jwo_fund } add_stability = 0.02 }
+		else = { custom_effect_tooltip = TFRKPHN_ruling_down_tt hidden_effect = { TFRKPHN_ruling_pop_down = yes } }
+	}
+}

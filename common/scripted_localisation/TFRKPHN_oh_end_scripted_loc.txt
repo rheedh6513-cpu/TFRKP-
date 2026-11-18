@@ -1,0 +1,53 @@
+# [안내] 오세훈 판 성적표 문장. oh_end_build.py가 만든다.
+defined_text = {
+	name = GetTFRKPHNRcHouse
+	text = {
+		trigger = { check_variable = { TFRKPHN_bk > -0.5 } }
+		localization_key = TFRKPHN_rc_house_g
+	}
+	text = {
+		trigger = { always = yes }
+		localization_key = TFRKPHN_rc_house_b
+	}
+}
+defined_text = {
+	name = GetTFRKPHNRcMega
+	text = {
+		trigger = { check_variable = { TFRKPHN_rc_mega > 11.5 } }
+		localization_key = TFRKPHN_rc_mega_g
+	}
+	text = {
+		trigger = { check_variable = { TFRKPHN_rc_mega > 4.5 } }
+		localization_key = TFRKPHN_rc_mega_m
+	}
+	text = {
+		trigger = { always = yes }
+		localization_key = TFRKPHN_rc_mega_b
+	}
+}
+defined_text = {
+	name = GetTFRKPHNRcGe
+	text = {
+		trigger = { check_variable = { TFRKPHN_ge28 > 150 } }
+		localization_key = TFRKPHN_rc_ge_g
+	}
+	text = {
+		trigger = { always = yes }
+		localization_key = TFRKPHN_rc_ge_b
+	}
+}
+defined_text = {
+	name = GetTFRKPHNRcLe
+	text = {
+		trigger = { check_variable = { TFRKPHN_le_wins > 9.5 } }
+		localization_key = TFRKPHN_rc_le_g
+	}
+	text = {
+		trigger = { check_variable = { TFRKPHN_le_wins > 6.5 } }
+		localization_key = TFRKPHN_rc_le_m
+	}
+	text = {
+		trigger = { always = yes }
+		localization_key = TFRKPHN_rc_le_b
+	}
+}

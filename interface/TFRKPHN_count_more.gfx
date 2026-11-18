@@ -1,0 +1,7 @@
+# [안내] 개표 방송 애니메이션 그림. count_more.py가 만든다.
+spriteTypes = {
+	frameAnimatedSpriteType = { name = "GFX_TFRKPHN_count_6653" texturefile = "gfx/event_pictures/TFRKPHN_count_6653.png" noOfFrames = 16 animation_rate_fps = 4 looping = yes play_on_show = yes }
+	frameAnimatedSpriteType = { name = "GFX_TFRKPHN_count_6654" texturefile = "gfx/event_pictures/TFRKPHN_count_6654.png" noOfFrames = 16 animation_rate_fps = 4 looping = yes play_on_show = yes }
+	frameAnimatedSpriteType = { name = "GFX_TFRKPHN_count_6655" texturefile = "gfx/event_pictures/TFRKPHN_count_6655.png" noOfFrames = 16 animation_rate_fps = 4 looping = yes play_on_show = yes }
+	frameAnimatedSpriteType = { name = "GFX_TFRKPHN_count_6604" texturefile = "gfx/event_pictures/TFRKPHN_count_6604.png" noOfFrames = 16 animation_rate_fps = 4 looping = yes play_on_show = yes }
+}

@@ -1,0 +1,186 @@
+# [안내] 2030년 지방선거 상황실의 동작. le26_build.py가 만든다.
+scripted_gui = {
+	TFRKPHN_l6_gui = {
+		context_type = player_context
+		parent_window_token = top_bar
+		window_name = "TFRKPHN_l6_container"
+		visible = { has_country_flag = TFRKPHN_l6_on }
+		ai_enabled = { always = no }
+		properties = {
+			TFRKPHN_l6_r1 = { frame = TFRKPHN_l6_f1 }
+			TFRKPHN_l6_st1 = { frame = TFRKPHN_l6_c1 }
+			TFRKPHN_l6_r2 = { frame = TFRKPHN_l6_f2 }
+			TFRKPHN_l6_st2 = { frame = TFRKPHN_l6_c2 }
+			TFRKPHN_l6_r3 = { frame = TFRKPHN_l6_f3 }
+			TFRKPHN_l6_st3 = { frame = TFRKPHN_l6_c3 }
+			TFRKPHN_l6_r4 = { frame = TFRKPHN_l6_f4 }
+			TFRKPHN_l6_st4 = { frame = TFRKPHN_l6_c4 }
+			TFRKPHN_l6_r5 = { frame = TFRKPHN_l6_f5 }
+			TFRKPHN_l6_st5 = { frame = TFRKPHN_l6_c5 }
+			TFRKPHN_l6_r6 = { frame = TFRKPHN_l6_f6 }
+			TFRKPHN_l6_st6 = { frame = TFRKPHN_l6_c6 }
+			TFRKPHN_l6_r7 = { frame = TFRKPHN_l6_f7 }
+			TFRKPHN_l6_st7 = { frame = TFRKPHN_l6_c7 }
+			TFRKPHN_l6_r8 = { frame = TFRKPHN_l6_f8 }
+			TFRKPHN_l6_st8 = { frame = TFRKPHN_l6_c8 }
+			TFRKPHN_l6_r9 = { frame = TFRKPHN_l6_f9 }
+			TFRKPHN_l6_st9 = { frame = TFRKPHN_l6_c9 }
+			TFRKPHN_l6_r10 = { frame = TFRKPHN_l6_f10 }
+			TFRKPHN_l6_st10 = { frame = TFRKPHN_l6_c10 }
+			TFRKPHN_l6_r11 = { frame = TFRKPHN_l6_f11 }
+			TFRKPHN_l6_st11 = { frame = TFRKPHN_l6_c11 }
+			TFRKPHN_l6_r12 = { frame = TFRKPHN_l6_f12 }
+			TFRKPHN_l6_st12 = { frame = TFRKPHN_l6_c12 }
+			TFRKPHN_l6_r13 = { frame = TFRKPHN_l6_f13 }
+			TFRKPHN_l6_st13 = { frame = TFRKPHN_l6_c13 }
+			TFRKPHN_l6_r14 = { frame = TFRKPHN_l6_f14 }
+			TFRKPHN_l6_st14 = { frame = TFRKPHN_l6_c14 }
+			TFRKPHN_l6_r15 = { frame = TFRKPHN_l6_f15 }
+			TFRKPHN_l6_st15 = { frame = TFRKPHN_l6_c15 }
+			TFRKPHN_l6_r16 = { frame = TFRKPHN_l6_f16 }
+			TFRKPHN_l6_st16 = { frame = TFRKPHN_l6_c16 }
+			TFRKPHN_l6_r17 = { frame = TFRKPHN_l6_f17 }
+			TFRKPHN_l6_st17 = { frame = TFRKPHN_l6_c17 }
+			TFRKPHN_l6_stm = { frame = TFRKPHN_l6_c14 }
+			TFRKPHN_l6_cand = { frame = TFRKPHN_l6_cf }
+			TFRKPHN_l6_title = { frame = TFRKPHN_l6_tf }
+			TFRKPHN_l6_bar = { frame = TFRKPHN_l6_barf }
+		}
+		effects = {
+			TFRKPHN_l6_chip1_click = { set_variable = { TFRKPHN_l6_sel = 1 } TFRKPHN_l6_draw = yes }
+			TFRKPHN_l6_chip2_click = { set_variable = { TFRKPHN_l6_sel = 2 } TFRKPHN_l6_draw = yes }
+			TFRKPHN_l6_chip3_click = { set_variable = { TFRKPHN_l6_sel = 3 } TFRKPHN_l6_draw = yes }
+			TFRKPHN_l6_chip4_click = { set_variable = { TFRKPHN_l6_sel = 4 } TFRKPHN_l6_draw = yes }
+			TFRKPHN_l6_chip5_click = { set_variable = { TFRKPHN_l6_sel = 5 } TFRKPHN_l6_draw = yes }
+			TFRKPHN_l6_chip6_click = { set_variable = { TFRKPHN_l6_sel = 6 } TFRKPHN_l6_draw = yes }
+			TFRKPHN_l6_chip7_click = { set_variable = { TFRKPHN_l6_sel = 7 } TFRKPHN_l6_draw = yes }
+			TFRKPHN_l6_chip8_click = { set_variable = { TFRKPHN_l6_sel = 8 } TFRKPHN_l6_draw = yes }
+			TFRKPHN_l6_chip9_click = { set_variable = { TFRKPHN_l6_sel = 9 } TFRKPHN_l6_draw = yes }
+			TFRKPHN_l6_chip10_click = { set_variable = { TFRKPHN_l6_sel = 10 } TFRKPHN_l6_draw = yes }
+			TFRKPHN_l6_chip11_click = { set_variable = { TFRKPHN_l6_sel = 11 } TFRKPHN_l6_draw = yes }
+			TFRKPHN_l6_chip12_click = { set_variable = { TFRKPHN_l6_sel = 12 } TFRKPHN_l6_draw = yes }
+			TFRKPHN_l6_chip13_click = { set_variable = { TFRKPHN_l6_sel = 13 } TFRKPHN_l6_draw = yes }
+			TFRKPHN_l6_chip14_click = { set_variable = { TFRKPHN_l6_sel = 14 } TFRKPHN_l6_draw = yes }
+			TFRKPHN_l6_chip15_click = { set_variable = { TFRKPHN_l6_sel = 15 } TFRKPHN_l6_draw = yes }
+			TFRKPHN_l6_chip16_click = { set_variable = { TFRKPHN_l6_sel = 16 } TFRKPHN_l6_draw = yes }
+			TFRKPHN_l6_chip17_click = { set_variable = { TFRKPHN_l6_sel = 17 } TFRKPHN_l6_draw = yes }
+			TFRKPHN_l6_r1_click = { set_variable = { TFRKPHN_l6_sel = 1 } TFRKPHN_l6_draw = yes }
+			TFRKPHN_l6_r2_click = { set_variable = { TFRKPHN_l6_sel = 2 } TFRKPHN_l6_draw = yes }
+			TFRKPHN_l6_r3_click = { set_variable = { TFRKPHN_l6_sel = 3 } TFRKPHN_l6_draw = yes }
+			TFRKPHN_l6_r4_click = { set_variable = { TFRKPHN_l6_sel = 4 } TFRKPHN_l6_draw = yes }
+			TFRKPHN_l6_r5_click = { set_variable = { TFRKPHN_l6_sel = 5 } TFRKPHN_l6_draw = yes }
+			TFRKPHN_l6_r6_click = { set_variable = { TFRKPHN_l6_sel = 6 } TFRKPHN_l6_draw = yes }
+			TFRKPHN_l6_r7_click = { set_variable = { TFRKPHN_l6_sel = 7 } TFRKPHN_l6_draw = yes }
+			TFRKPHN_l6_r8_click = { set_variable = { TFRKPHN_l6_sel = 8 } TFRKPHN_l6_draw = yes }
+			TFRKPHN_l6_r9_click = { set_variable = { TFRKPHN_l6_sel = 9 } TFRKPHN_l6_draw = yes }
+			TFRKPHN_l6_r10_click = { set_variable = { TFRKPHN_l6_sel = 10 } TFRKPHN_l6_draw = yes }
+			TFRKPHN_l6_r11_click = { set_variable = { TFRKPHN_l6_sel = 11 } TFRKPHN_l6_draw = yes }
+			TFRKPHN_l6_r12_click = { set_variable = { TFRKPHN_l6_sel = 12 } TFRKPHN_l6_draw = yes }
+			TFRKPHN_l6_r13_click = { set_variable = { TFRKPHN_l6_sel = 13 } TFRKPHN_l6_draw = yes }
+			TFRKPHN_l6_r14_click = { set_variable = { TFRKPHN_l6_sel = 14 } TFRKPHN_l6_draw = yes }
+			TFRKPHN_l6_r15_click = { set_variable = { TFRKPHN_l6_sel = 15 } TFRKPHN_l6_draw = yes }
+			TFRKPHN_l6_r16_click = { set_variable = { TFRKPHN_l6_sel = 16 } TFRKPHN_l6_draw = yes }
+			TFRKPHN_l6_r17_click = { set_variable = { TFRKPHN_l6_sel = 17 } TFRKPHN_l6_draw = yes }
+			TFRKPHN_l6_chipm_click = { set_variable = { TFRKPHN_l6_sel = 14 } TFRKPHN_l6_draw = yes }
+			TFRKPHN_l6_act1_click = { add_political_power = -15 TFRKPHN_l6_act1 = yes }
+			TFRKPHN_l6_act2_click = { add_political_power = -30 TFRKPHN_l6_act2 = yes }
+			TFRKPHN_l6_act3_click = { add_political_power = -20 TFRKPHN_l6_act3 = yes }
+			TFRKPHN_l6_act4_click = { add_political_power = -10 TFRKPHN_l6_act4 = yes }
+			TFRKPHN_l6_act5_click = { add_political_power = -20 TFRKPHN_l6_act5 = yes }
+			TFRKPHN_l6_act6_click = { add_political_power = -25 TFRKPHN_l6_act6 = yes }
+			TFRKPHN_l6_close_click = { clr_country_flag = TFRKPHN_l6_on }
+		}
+		triggers = {
+			TFRKPHN_l6_cz1_visible = { NOT = { check_variable = { TFRKPHN_l6_sel = 1 } } check_variable = { TFRKPHN_l6_v1 > 44.9 } check_variable = { TFRKPHN_l6_v1 < 55.1 } }
+			TFRKPHN_l6_cz2_visible = { NOT = { check_variable = { TFRKPHN_l6_sel = 2 } } check_variable = { TFRKPHN_l6_v2 > 44.9 } check_variable = { TFRKPHN_l6_v2 < 55.1 } }
+			TFRKPHN_l6_cz3_visible = { NOT = { check_variable = { TFRKPHN_l6_sel = 3 } } check_variable = { TFRKPHN_l6_v3 > 44.9 } check_variable = { TFRKPHN_l6_v3 < 55.1 } }
+			TFRKPHN_l6_cz4_visible = { NOT = { check_variable = { TFRKPHN_l6_sel = 4 } } check_variable = { TFRKPHN_l6_v4 > 44.9 } check_variable = { TFRKPHN_l6_v4 < 55.1 } }
+			TFRKPHN_l6_cz5_visible = { NOT = { check_variable = { TFRKPHN_l6_sel = 5 } } check_variable = { TFRKPHN_l6_v5 > 44.9 } check_variable = { TFRKPHN_l6_v5 < 55.1 } NOT = { has_country_flag = TFRKPHN_gj_merged } }
+			TFRKPHN_l6_cz6_visible = { NOT = { check_variable = { TFRKPHN_l6_sel = 6 } } check_variable = { TFRKPHN_l6_v6 > 44.9 } check_variable = { TFRKPHN_l6_v6 < 55.1 } }
+			TFRKPHN_l6_cz7_visible = { NOT = { check_variable = { TFRKPHN_l6_sel = 7 } } check_variable = { TFRKPHN_l6_v7 > 44.9 } check_variable = { TFRKPHN_l6_v7 < 55.1 } }
+			TFRKPHN_l6_cz8_visible = { NOT = { check_variable = { TFRKPHN_l6_sel = 8 } } check_variable = { TFRKPHN_l6_v8 > 44.9 } check_variable = { TFRKPHN_l6_v8 < 55.1 } }
+			TFRKPHN_l6_cz9_visible = { NOT = { check_variable = { TFRKPHN_l6_sel = 9 } } check_variable = { TFRKPHN_l6_v9 > 44.9 } check_variable = { TFRKPHN_l6_v9 < 55.1 } }
+			TFRKPHN_l6_cz10_visible = { NOT = { check_variable = { TFRKPHN_l6_sel = 10 } } check_variable = { TFRKPHN_l6_v10 > 44.9 } check_variable = { TFRKPHN_l6_v10 < 55.1 } }
+			TFRKPHN_l6_cz11_visible = { NOT = { check_variable = { TFRKPHN_l6_sel = 11 } } check_variable = { TFRKPHN_l6_v11 > 44.9 } check_variable = { TFRKPHN_l6_v11 < 55.1 } }
+			TFRKPHN_l6_cz12_visible = { NOT = { check_variable = { TFRKPHN_l6_sel = 12 } } check_variable = { TFRKPHN_l6_v12 > 44.9 } check_variable = { TFRKPHN_l6_v12 < 55.1 } }
+			TFRKPHN_l6_cz13_visible = { NOT = { check_variable = { TFRKPHN_l6_sel = 13 } } check_variable = { TFRKPHN_l6_v13 > 44.9 } check_variable = { TFRKPHN_l6_v13 < 55.1 } }
+			TFRKPHN_l6_cz14_visible = { NOT = { check_variable = { TFRKPHN_l6_sel = 14 } } check_variable = { TFRKPHN_l6_v14 > 44.9 } check_variable = { TFRKPHN_l6_v14 < 55.1 } NOT = { has_country_flag = TFRKPHN_gj_merged } }
+			TFRKPHN_l6_cz15_visible = { NOT = { check_variable = { TFRKPHN_l6_sel = 15 } } check_variable = { TFRKPHN_l6_v15 > 44.9 } check_variable = { TFRKPHN_l6_v15 < 55.1 } }
+			TFRKPHN_l6_cz16_visible = { NOT = { check_variable = { TFRKPHN_l6_sel = 16 } } check_variable = { TFRKPHN_l6_v16 > 44.9 } check_variable = { TFRKPHN_l6_v16 < 55.1 } }
+			TFRKPHN_l6_cz17_visible = { NOT = { check_variable = { TFRKPHN_l6_sel = 17 } } check_variable = { TFRKPHN_l6_v17 > 44.9 } check_variable = { TFRKPHN_l6_v17 < 55.1 } }
+			TFRKPHN_l6_czm_visible = { has_country_flag = TFRKPHN_gj_merged NOT = { check_variable = { TFRKPHN_l6_sel = 14 } } check_variable = { TFRKPHN_l6_v14 > 44.9 } check_variable = { TFRKPHN_l6_v14 < 55.1 } }
+			TFRKPHN_l6_ring1_visible = { check_variable = { TFRKPHN_l6_sel = 1 } }
+			TFRKPHN_l6_ring2_visible = { check_variable = { TFRKPHN_l6_sel = 2 } }
+			TFRKPHN_l6_ring3_visible = { check_variable = { TFRKPHN_l6_sel = 3 } }
+			TFRKPHN_l6_ring4_visible = { check_variable = { TFRKPHN_l6_sel = 4 } }
+			TFRKPHN_l6_ring5_visible = { check_variable = { TFRKPHN_l6_sel = 5 } NOT = { has_country_flag = TFRKPHN_gj_merged } }
+			TFRKPHN_l6_chip5_visible = { NOT = { has_country_flag = TFRKPHN_gj_merged } }
+			TFRKPHN_l6_st5_visible = { NOT = { has_country_flag = TFRKPHN_gj_merged } }
+			TFRKPHN_l6_v5_visible = { NOT = { has_country_flag = TFRKPHN_gj_merged } }
+			TFRKPHN_l6_ring6_visible = { check_variable = { TFRKPHN_l6_sel = 6 } }
+			TFRKPHN_l6_ring7_visible = { check_variable = { TFRKPHN_l6_sel = 7 } }
+			TFRKPHN_l6_ring8_visible = { check_variable = { TFRKPHN_l6_sel = 8 } }
+			TFRKPHN_l6_ring9_visible = { check_variable = { TFRKPHN_l6_sel = 9 } }
+			TFRKPHN_l6_ring10_visible = { check_variable = { TFRKPHN_l6_sel = 10 } }
+			TFRKPHN_l6_ring11_visible = { check_variable = { TFRKPHN_l6_sel = 11 } }
+			TFRKPHN_l6_ring12_visible = { check_variable = { TFRKPHN_l6_sel = 12 } }
+			TFRKPHN_l6_ring13_visible = { check_variable = { TFRKPHN_l6_sel = 13 } }
+			TFRKPHN_l6_ring14_visible = { check_variable = { TFRKPHN_l6_sel = 14 } NOT = { has_country_flag = TFRKPHN_gj_merged } }
+			TFRKPHN_l6_chip14_visible = { NOT = { has_country_flag = TFRKPHN_gj_merged } }
+			TFRKPHN_l6_st14_visible = { NOT = { has_country_flag = TFRKPHN_gj_merged } }
+			TFRKPHN_l6_v14_visible = { NOT = { has_country_flag = TFRKPHN_gj_merged } }
+			TFRKPHN_l6_ring15_visible = { check_variable = { TFRKPHN_l6_sel = 15 } }
+			TFRKPHN_l6_ring16_visible = { check_variable = { TFRKPHN_l6_sel = 16 } }
+			TFRKPHN_l6_ring17_visible = { check_variable = { TFRKPHN_l6_sel = 17 } }
+			TFRKPHN_l6_chipm_visible = { has_country_flag = TFRKPHN_gj_merged }
+			TFRKPHN_l6_stm_visible = { has_country_flag = TFRKPHN_gj_merged }
+			TFRKPHN_l6_vm_visible = { has_country_flag = TFRKPHN_gj_merged }
+			TFRKPHN_l6_ringm_visible = { has_country_flag = TFRKPHN_gj_merged check_variable = { TFRKPHN_l6_sel = 14 } }
+			TFRKPHN_l6_pg1_visible = { check_variable = { TFRKPHN_l6_sel = 1 } }
+			TFRKPHN_l6_po1_visible = { check_variable = { TFRKPHN_l6_sel = 1 } }
+			TFRKPHN_l6_pg2_visible = { check_variable = { TFRKPHN_l6_sel = 2 } }
+			TFRKPHN_l6_po2_visible = { check_variable = { TFRKPHN_l6_sel = 2 } }
+			TFRKPHN_l6_pg3_visible = { check_variable = { TFRKPHN_l6_sel = 3 } }
+			TFRKPHN_l6_po3_visible = { check_variable = { TFRKPHN_l6_sel = 3 } }
+			TFRKPHN_l6_pg4_visible = { check_variable = { TFRKPHN_l6_sel = 4 } }
+			TFRKPHN_l6_po4_visible = { check_variable = { TFRKPHN_l6_sel = 4 } }
+			TFRKPHN_l6_pg6_visible = { check_variable = { TFRKPHN_l6_sel = 6 } }
+			TFRKPHN_l6_po6_visible = { check_variable = { TFRKPHN_l6_sel = 6 } }
+			TFRKPHN_l6_pg7_visible = { check_variable = { TFRKPHN_l6_sel = 7 } }
+			TFRKPHN_l6_po7_visible = { check_variable = { TFRKPHN_l6_sel = 7 } }
+			TFRKPHN_l6_pg8_visible = { check_variable = { TFRKPHN_l6_sel = 8 } }
+			TFRKPHN_l6_po8_visible = { check_variable = { TFRKPHN_l6_sel = 8 } }
+			TFRKPHN_l6_pg9_visible = { check_variable = { TFRKPHN_l6_sel = 9 } }
+			TFRKPHN_l6_po9_visible = { check_variable = { TFRKPHN_l6_sel = 9 } }
+			TFRKPHN_l6_pg10_visible = { check_variable = { TFRKPHN_l6_sel = 10 } }
+			TFRKPHN_l6_po10_visible = { check_variable = { TFRKPHN_l6_sel = 10 } }
+			TFRKPHN_l6_pg11_visible = { check_variable = { TFRKPHN_l6_sel = 11 } }
+			TFRKPHN_l6_po11_visible = { check_variable = { TFRKPHN_l6_sel = 11 } }
+			TFRKPHN_l6_pg12_visible = { check_variable = { TFRKPHN_l6_sel = 12 } }
+			TFRKPHN_l6_po12_visible = { check_variable = { TFRKPHN_l6_sel = 12 } }
+			TFRKPHN_l6_pg13_visible = { check_variable = { TFRKPHN_l6_sel = 13 } }
+			TFRKPHN_l6_po13_visible = { check_variable = { TFRKPHN_l6_sel = 13 } }
+			TFRKPHN_l6_pg14_visible = { check_variable = { TFRKPHN_l6_sel = 14 } }
+			TFRKPHN_l6_po14_visible = { check_variable = { TFRKPHN_l6_sel = 14 } }
+			TFRKPHN_l6_pg15_visible = { check_variable = { TFRKPHN_l6_sel = 15 } }
+			TFRKPHN_l6_po15_visible = { check_variable = { TFRKPHN_l6_sel = 15 } }
+			TFRKPHN_l6_pg16_visible = { check_variable = { TFRKPHN_l6_sel = 16 } }
+			TFRKPHN_l6_po16_visible = { check_variable = { TFRKPHN_l6_sel = 16 } }
+			TFRKPHN_l6_pg17_visible = { check_variable = { TFRKPHN_l6_sel = 17 } }
+			TFRKPHN_l6_po17_visible = { check_variable = { TFRKPHN_l6_sel = 17 } }
+			TFRKPHN_l6_act1_click_enabled = { NOT = { has_country_flag = TFRKPHN_l6_done } NOT = { check_variable = { TFRKPHN_l6_sel = 1 } } has_political_power > 14.9 NOT = { has_country_flag = TFRKPHN_l6_nomore } check_variable = { TFRKPHN_l6_gsel < 6.5 } }
+			TFRKPHN_l6_act1_visible = { NOT = { check_variable = { TFRKPHN_l6_sel = 1 } } }
+			TFRKPHN_l6_act2_click_enabled = { NOT = { has_country_flag = TFRKPHN_l6_done } NOT = { check_variable = { TFRKPHN_l6_sel = 1 } } has_political_power > 29.9 check_variable = { TFRKPHN_l6_psel = 0 } check_variable = { TFRKPHN_l6_gsel < 5.5 } }
+			TFRKPHN_l6_act2_visible = { NOT = { check_variable = { TFRKPHN_l6_sel = 1 } } }
+			TFRKPHN_l6_act3_click_enabled = { NOT = { has_country_flag = TFRKPHN_l6_done } NOT = { check_variable = { TFRKPHN_l6_sel = 1 } } has_political_power > 19.9 check_variable = { TFRKPHN_l6_gsel < 7.5 } }
+			TFRKPHN_l6_act3_visible = { NOT = { check_variable = { TFRKPHN_l6_sel = 1 } } }
+			TFRKPHN_l6_act4_click_enabled = { NOT = { has_country_flag = TFRKPHN_l6_done } NOT = { check_variable = { TFRKPHN_l6_sel = 1 } } has_political_power > 9.9 check_variable = { TFRKPHN_l6_gsel < 7.5 } }
+			TFRKPHN_l6_act4_visible = { NOT = { check_variable = { TFRKPHN_l6_sel = 1 } } }
+			TFRKPHN_l6_act5_click_enabled = { NOT = { has_country_flag = TFRKPHN_l6_done } NOT = { check_variable = { TFRKPHN_l6_sel = 1 } } has_political_power > 19.9 check_variable = { TFRKPHN_l6_gsel < 6.5 } check_variable = { TFRKPHN_l6_sv > 47.4 } check_variable = { TFRKPHN_l6_sv < 52.6 } }
+			TFRKPHN_l6_act5_visible = { NOT = { check_variable = { TFRKPHN_l6_sel = 1 } } }
+			TFRKPHN_l6_act6_click_enabled = { NOT = { has_country_flag = TFRKPHN_l6_done } NOT = { check_variable = { TFRKPHN_l6_sel = 1 } } has_political_power > 24.9 check_variable = { TFRKPHN_l6_gsel < 5.5 } }
+			TFRKPHN_l6_act6_visible = { NOT = { check_variable = { TFRKPHN_l6_sel = 1 } } }
+			TFRKPHN_l6_seoul_visible = { check_variable = { TFRKPHN_l6_sel = 1 } }
+		}
+	}
+}

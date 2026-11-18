@@ -1,0 +1,92 @@
+# [안내] 2030년 지방선거 상황실 그림. le26_build.py가 만든다.
+spriteTypes = {
+	frameAnimatedSpriteType = { name = "GFX_TFRKPHN_le26_count_anim" texturefile = "gfx/event_pictures/TFRKPHN_le26_count_anim.png" noOfFrames = 16 animation_rate_fps = 4 looping = yes play_on_show = yes }
+	frameAnimatedSpriteType = { name = "GFX_TFRKPHN_l6_shine" texturefile = "gfx/interface/TFRKPHN_le26/TFRKPHN_l6_shine.png" noOfFrames = 24 animation_rate_fps = 12 looping = yes play_on_show = yes }
+	frameAnimatedSpriteType = { name = "GFX_TFRKPHN_l6_czm" texturefile = "gfx/interface/TFRKPHN_le26/TFRKPHN_l6_czm.png" noOfFrames = 8 animation_rate_fps = 4 looping = yes play_on_show = yes }
+	frameAnimatedSpriteType = { name = "GFX_TFRKPHN_l6_cz" texturefile = "gfx/interface/TFRKPHN_le26/TFRKPHN_l6_cz.png" noOfFrames = 8 animation_rate_fps = 4 looping = yes play_on_show = yes }
+	spriteType = { name = "GFX_TFRKPHN_l6_bg" texturefile = "gfx/interface/TFRKPHN_le26/TFRKPHN_l6_bg.png" }
+	spriteType = { name = "GFX_TFRKPHN_l6_r1" texturefile = "gfx/interface/TFRKPHN_le26/TFRKPHN_l6_r1.png" noOfFrames = 12 }
+	spriteType = { name = "GFX_TFRKPHN_l6_r2" texturefile = "gfx/interface/TFRKPHN_le26/TFRKPHN_l6_r2.png" noOfFrames = 12 }
+	spriteType = { name = "GFX_TFRKPHN_l6_r3" texturefile = "gfx/interface/TFRKPHN_le26/TFRKPHN_l6_r3.png" noOfFrames = 12 }
+	spriteType = { name = "GFX_TFRKPHN_l6_r4" texturefile = "gfx/interface/TFRKPHN_le26/TFRKPHN_l6_r4.png" noOfFrames = 12 }
+	spriteType = { name = "GFX_TFRKPHN_l6_r5" texturefile = "gfx/interface/TFRKPHN_le26/TFRKPHN_l6_r5.png" noOfFrames = 12 }
+	spriteType = { name = "GFX_TFRKPHN_l6_r6" texturefile = "gfx/interface/TFRKPHN_le26/TFRKPHN_l6_r6.png" noOfFrames = 12 }
+	spriteType = { name = "GFX_TFRKPHN_l6_r7" texturefile = "gfx/interface/TFRKPHN_le26/TFRKPHN_l6_r7.png" noOfFrames = 12 }
+	spriteType = { name = "GFX_TFRKPHN_l6_r8" texturefile = "gfx/interface/TFRKPHN_le26/TFRKPHN_l6_r8.png" noOfFrames = 12 }
+	spriteType = { name = "GFX_TFRKPHN_l6_r9" texturefile = "gfx/interface/TFRKPHN_le26/TFRKPHN_l6_r9.png" noOfFrames = 12 }
+	spriteType = { name = "GFX_TFRKPHN_l6_r10" texturefile = "gfx/interface/TFRKPHN_le26/TFRKPHN_l6_r10.png" noOfFrames = 12 }
+	spriteType = { name = "GFX_TFRKPHN_l6_r11" texturefile = "gfx/interface/TFRKPHN_le26/TFRKPHN_l6_r11.png" noOfFrames = 12 }
+	spriteType = { name = "GFX_TFRKPHN_l6_r12" texturefile = "gfx/interface/TFRKPHN_le26/TFRKPHN_l6_r12.png" noOfFrames = 12 }
+	spriteType = { name = "GFX_TFRKPHN_l6_r13" texturefile = "gfx/interface/TFRKPHN_le26/TFRKPHN_l6_r13.png" noOfFrames = 12 }
+	spriteType = { name = "GFX_TFRKPHN_l6_r14" texturefile = "gfx/interface/TFRKPHN_le26/TFRKPHN_l6_r14.png" noOfFrames = 12 }
+	spriteType = { name = "GFX_TFRKPHN_l6_r15" texturefile = "gfx/interface/TFRKPHN_le26/TFRKPHN_l6_r15.png" noOfFrames = 12 }
+	spriteType = { name = "GFX_TFRKPHN_l6_r16" texturefile = "gfx/interface/TFRKPHN_le26/TFRKPHN_l6_r16.png" noOfFrames = 12 }
+	spriteType = { name = "GFX_TFRKPHN_l6_r17" texturefile = "gfx/interface/TFRKPHN_le26/TFRKPHN_l6_r17.png" noOfFrames = 12 }
+	spriteType = { name = "GFX_TFRKPHN_l6_chip1" texturefile = "gfx/interface/TFRKPHN_le26/TFRKPHN_l6_chip1.png" }
+	spriteType = { name = "GFX_TFRKPHN_l6_chip2" texturefile = "gfx/interface/TFRKPHN_le26/TFRKPHN_l6_chip2.png" }
+	spriteType = { name = "GFX_TFRKPHN_l6_chip3" texturefile = "gfx/interface/TFRKPHN_le26/TFRKPHN_l6_chip3.png" }
+	spriteType = { name = "GFX_TFRKPHN_l6_chip4" texturefile = "gfx/interface/TFRKPHN_le26/TFRKPHN_l6_chip4.png" }
+	spriteType = { name = "GFX_TFRKPHN_l6_chip5" texturefile = "gfx/interface/TFRKPHN_le26/TFRKPHN_l6_chip5.png" }
+	spriteType = { name = "GFX_TFRKPHN_l6_chip6" texturefile = "gfx/interface/TFRKPHN_le26/TFRKPHN_l6_chip6.png" }
+	spriteType = { name = "GFX_TFRKPHN_l6_chip7" texturefile = "gfx/interface/TFRKPHN_le26/TFRKPHN_l6_chip7.png" }
+	spriteType = { name = "GFX_TFRKPHN_l6_chip8" texturefile = "gfx/interface/TFRKPHN_le26/TFRKPHN_l6_chip8.png" }
+	spriteType = { name = "GFX_TFRKPHN_l6_chip9" texturefile = "gfx/interface/TFRKPHN_le26/TFRKPHN_l6_chip9.png" }
+	spriteType = { name = "GFX_TFRKPHN_l6_chip10" texturefile = "gfx/interface/TFRKPHN_le26/TFRKPHN_l6_chip10.png" }
+	spriteType = { name = "GFX_TFRKPHN_l6_chip11" texturefile = "gfx/interface/TFRKPHN_le26/TFRKPHN_l6_chip11.png" }
+	spriteType = { name = "GFX_TFRKPHN_l6_chip12" texturefile = "gfx/interface/TFRKPHN_le26/TFRKPHN_l6_chip12.png" }
+	spriteType = { name = "GFX_TFRKPHN_l6_chip13" texturefile = "gfx/interface/TFRKPHN_le26/TFRKPHN_l6_chip13.png" }
+	spriteType = { name = "GFX_TFRKPHN_l6_chip14" texturefile = "gfx/interface/TFRKPHN_le26/TFRKPHN_l6_chip14.png" }
+	spriteType = { name = "GFX_TFRKPHN_l6_chip15" texturefile = "gfx/interface/TFRKPHN_le26/TFRKPHN_l6_chip15.png" }
+	spriteType = { name = "GFX_TFRKPHN_l6_chip16" texturefile = "gfx/interface/TFRKPHN_le26/TFRKPHN_l6_chip16.png" }
+	spriteType = { name = "GFX_TFRKPHN_l6_chip17" texturefile = "gfx/interface/TFRKPHN_le26/TFRKPHN_l6_chip17.png" }
+	spriteType = { name = "GFX_TFRKPHN_l6_chipm" texturefile = "gfx/interface/TFRKPHN_le26/TFRKPHN_l6_chipm.png" }
+	frameAnimatedSpriteType = { name = "GFX_TFRKPHN_l6_ringm" texturefile = "gfx/interface/TFRKPHN_le26/TFRKPHN_l6_ringm_a.png" noOfFrames = 12 animation_rate_fps = 10 looping = yes play_on_show = yes }
+	spriteType = { name = "GFX_TFRKPHN_l6_stripe" texturefile = "gfx/interface/TFRKPHN_le26/TFRKPHN_l6_stripe.png" noOfFrames = 3 }
+	frameAnimatedSpriteType = { name = "GFX_TFRKPHN_l6_ring" texturefile = "gfx/interface/TFRKPHN_le26/TFRKPHN_l6_ring_a.png" noOfFrames = 12 animation_rate_fps = 10 looping = yes play_on_show = yes }
+	spriteType = { name = "GFX_TFRKPHN_l6_title" texturefile = "gfx/interface/TFRKPHN_le26/TFRKPHN_l6_title.png" noOfFrames = 18 }
+	spriteType = { name = "GFX_TFRKPHN_l6_bar" texturefile = "gfx/interface/TFRKPHN_le26/TFRKPHN_l6_bar.png" noOfFrames = 21 }
+	spriteType = { name = "GFX_TFRKPHN_l6_cand" texturefile = "gfx/interface/TFRKPHN_le26/TFRKPHN_l6_cand.png" noOfFrames = 18 }
+	spriteType = { name = "GFX_TFRKPHN_l6_noface" texturefile = "gfx/interface/TFRKPHN_le26/TFRKPHN_l6_noface.png" }
+	spriteType = { name = "GFX_TFRKPHN_l6_frame_g" texturefile = "gfx/interface/TFRKPHN_le26/TFRKPHN_l6_frame_g.png" }
+	spriteType = { name = "GFX_TFRKPHN_l6_frame_o" texturefile = "gfx/interface/TFRKPHN_le26/TFRKPHN_l6_frame_o.png" }
+	spriteType = { name = "GFX_TFRKPHN_l6_pg1" texturefile = "gfx/leaders/KOR/TFRKPHN_oh_se_hoon.png" }
+	spriteType = { name = "GFX_TFRKPHN_l6_po1" texturefile = "gfx/leaders/KOR/KOR_chong_won_oh.png" }
+	spriteType = { name = "GFX_TFRKPHN_l6_pg2" texturefile = "gfx/leaders/KOR/TFRKPHN_park_hyeong_joon.png" }
+	spriteType = { name = "GFX_TFRKPHN_l6_po2" texturefile = "gfx/leaders/KOR/TFRKPHN_chun_jae_soo.png" }
+	spriteType = { name = "GFX_TFRKPHN_l6_pg3" texturefile = "gfx/leaders/KOR/TFRKPHN_choo_kyung_ho.png" }
+	spriteType = { name = "GFX_TFRKPHN_l6_po3" texturefile = "gfx/leaders/KOR/KOR_kim_bu_gyeom.png" }
+	spriteType = { name = "GFX_TFRKPHN_l6_pg4" texturefile = "gfx/leaders/KOR/TFRKPHN_yoo_jeong_bok.png" }
+	spriteType = { name = "GFX_TFRKPHN_l6_po4" texturefile = "gfx/leaders/KOR/KOR_park_chan_dae.png" }
+	spriteType = { name = "GFX_TFRKPHN_l6_pg6" texturefile = "gfx/leaders/KOR/TFRKPHN_lee_jang_woo.png" }
+	spriteType = { name = "GFX_TFRKPHN_l6_po6" texturefile = "gfx/leaders/KOR/TFRKPHN_heo_tae_jeong.png" }
+	spriteType = { name = "GFX_TFRKPHN_l6_pg7" texturefile = "gfx/leaders/KOR/TFRKPHN_kim_doo_gyeom.png" }
+	spriteType = { name = "GFX_TFRKPHN_l6_po7" texturefile = "gfx/leaders/KOR/TFRKPHN_kim_sang_wook.png" }
+	spriteType = { name = "GFX_TFRKPHN_l6_pg8" texturefile = "gfx/leaders/KOR/TFRKPHN_choi_min_ho.png" }
+	spriteType = { name = "GFX_TFRKPHN_l6_po8" texturefile = "gfx/leaders/KOR/TFRKPHN_cho_sang_ho.png" }
+	spriteType = { name = "GFX_TFRKPHN_l6_pg9" texturefile = "gfx/leaders/KOR/TFRKPHN_yang_hyang_ja.png" }
+	spriteType = { name = "GFX_TFRKPHN_l6_po9" texturefile = "gfx/leaders/KOR/KOR_chu_mi_ae.png" }
+	spriteType = { name = "GFX_TFRKPHN_l6_pg10" texturefile = "gfx/leaders/KOR/TFRKPHN_kim_jin_tae.png" }
+	spriteType = { name = "GFX_TFRKPHN_l6_po10" texturefile = "gfx/leaders/KOR/TFRKPHN_woo_sang_ho.png" }
+	spriteType = { name = "GFX_TFRKPHN_l6_pg11" texturefile = "gfx/leaders/KOR/TFRKPHN_kim_young_hwan.png" }
+	spriteType = { name = "GFX_TFRKPHN_l6_po11" texturefile = "gfx/leaders/KOR/TFRKPHN_shin_yong_han.png" }
+	spriteType = { name = "GFX_TFRKPHN_l6_pg12" texturefile = "gfx/leaders/KOR/TFRKPHN_kim_tae_heum.png" }
+	spriteType = { name = "GFX_TFRKPHN_l6_po12" texturefile = "gfx/leaders/KOR/TFRKPHN_park_soo_hyun.png" }
+	spriteType = { name = "GFX_TFRKPHN_l6_pg13" texturefile = "gfx/leaders/KOR/TFRKPHN_yang_jung_moo.png" }
+	spriteType = { name = "GFX_TFRKPHN_l6_po13" texturefile = "gfx/leaders/KOR/TFRKPHN_lee_won_taek.png" }
+	spriteType = { name = "GFX_TFRKPHN_l6_pg14" texturefile = "gfx/leaders/KOR/TFRKPHN_lee_jung_hyun.png" }
+	spriteType = { name = "GFX_TFRKPHN_l6_po14" texturefile = "gfx/leaders/KOR/KOR_min_hyung_bae.png" }
+	spriteType = { name = "GFX_TFRKPHN_l6_pg15" texturefile = "gfx/leaders/KOR/TFRKPHN_lee_cheol_woo.png" }
+	spriteType = { name = "GFX_TFRKPHN_l6_po15" texturefile = "gfx/leaders/KOR/TFRKPHN_oh_jung_ki.png" }
+	spriteType = { name = "GFX_TFRKPHN_l6_pg16" texturefile = "gfx/leaders/KOR/TFRKPHN_park_wan_su.png" }
+	spriteType = { name = "GFX_TFRKPHN_l6_po16" texturefile = "gfx/leaders/KOR/TFRKPHN_kim_kyoung_soo.png" }
+	spriteType = { name = "GFX_TFRKPHN_l6_pg17" texturefile = "gfx/leaders/KOR/TFRKPHN_moon_sung_yoo.png" }
+	spriteType = { name = "GFX_TFRKPHN_l6_po17" texturefile = "gfx/leaders/KOR/TFRKPHN_wi_sung_gon.png" }
+	spriteType = { name = "GFX_TFRKPHN_l6_act1" texturefile = "gfx/interface/TFRKPHN_le26/TFRKPHN_l6_act1.png" }
+	spriteType = { name = "GFX_TFRKPHN_l6_act2" texturefile = "gfx/interface/TFRKPHN_le26/TFRKPHN_l6_act2.png" }
+	spriteType = { name = "GFX_TFRKPHN_l6_act3" texturefile = "gfx/interface/TFRKPHN_le26/TFRKPHN_l6_act3.png" }
+	spriteType = { name = "GFX_TFRKPHN_l6_act4" texturefile = "gfx/interface/TFRKPHN_le26/TFRKPHN_l6_act4.png" }
+	spriteType = { name = "GFX_TFRKPHN_l6_act5" texturefile = "gfx/interface/TFRKPHN_le26/TFRKPHN_l6_act5.png" }
+	spriteType = { name = "GFX_TFRKPHN_l6_act6" texturefile = "gfx/interface/TFRKPHN_le26/TFRKPHN_l6_act6.png" }
+	spriteType = { name = "GFX_TFRKPHN_l6_seoul" texturefile = "gfx/interface/TFRKPHN_le26/TFRKPHN_l6_seoul.png" }
+	spriteType = { name = "GFX_TFRKPHN_l6_close" texturefile = "gfx/interface/TFRKPHN_le26/TFRKPHN_l6_close.png" }
+}

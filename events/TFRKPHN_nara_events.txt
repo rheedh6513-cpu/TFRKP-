@@ -1,0 +1,21 @@
+# [안내] 나라 바로세우기 끝. nara_build.py가 만든다.
+add_namespace = tfrkphn
+country_event = {
+	id = tfrkphn.6972
+	title = tfrkphn.6972.t
+	desc = tfrkphn.6972.d
+	picture = GFX_TFRKPHN_dev_6779
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6972.next
+		hidden_effect = { country_event = { id = tfrkphn.6973 } }
+	}
+}
+country_event = {
+	id = tfrkphn.6973
+	title = tfrkphn.6972.t
+	desc = tfrkphn.6973.d
+	picture = GFX_TFRKPHN_dev_6779
+	is_triggered_only = yes
+	option = { name = tfrkphn.6972.a add_stability = 0.05 add_political_power = 100 }
+}

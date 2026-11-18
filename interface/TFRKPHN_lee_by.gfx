@@ -1,0 +1,8 @@
+spriteTypes = {
+	spriteType = { name = "GFX_TFRKPHN_lee_by_6761" texturefile = "gfx/event_pictures/TFRKPHN_lee_by_6761.png" }
+	spriteType = { name = "GFX_TFRKPHN_lee_by_6762" texturefile = "gfx/event_pictures/TFRKPHN_lee_by_6762.png" }
+	spriteType = { name = "GFX_TFRKPHN_lee_by_6766" texturefile = "gfx/event_pictures/TFRKPHN_lee_by_6766.png" }
+	spriteType = { name = "GFX_TFRKPHN_lee_by_6763" texturefile = "gfx/event_pictures/TFRKPHN_lee_by_6763.png" }
+	spriteType = { name = "GFX_TFRKPHN_lee_by_6764" texturefile = "gfx/event_pictures/TFRKPHN_lee_by_6764.png" }
+	spriteType = { name = "GFX_TFRKPHN_lee_by_6767" texturefile = "gfx/event_pictures/TFRKPHN_lee_by_6767.png" }
+}

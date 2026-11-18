@@ -1,0 +1,64 @@
+# [안내] 오세훈 판 K-방산 결정. kdef_build.py가 만든다.
+TFRKPHN_kdef_category = {
+	TFRKPHN_kdef_law = {
+		icon = GFX_decision_generic_industry
+		cost = 75
+		fire_only_once = yes
+		visible = { has_country_flag = TFRKPHN_successor_oh_se_hoon }
+		complete_effect = {
+			add_ideas = TFRKPHN_kdef_1
+			set_country_flag = TFRKPHN_kdef_law_done
+			country_event = { id = tfrkphn.6789 }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	TFRKPHN_kdef_tank = {
+		icon = GFX_decision_generic_industry
+		cost = 50
+		fire_only_once = yes
+		visible = { has_country_flag = TFRKPHN_successor_oh_se_hoon }
+		available = { has_country_flag = TFRKPHN_kdef_law_done num_of_civilian_factories_available_for_projects > 0 }
+		days_remove = 90
+		modifier = { civilian_factory_use = 1 }
+		complete_effect = { custom_effect_tooltip = TFRKPHN_kdef_wait_tt }
+		remove_effect = {
+			swap_ideas = { remove_idea = TFRKPHN_kdef_1 add_idea = TFRKPHN_kdef_2 }
+			set_country_flag = TFRKPHN_kdef_tank_done
+			country_event = { id = tfrkphn.6790 }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	TFRKPHN_kdef_jet = {
+		icon = GFX_decision_generic_industry
+		cost = 50
+		fire_only_once = yes
+		visible = { has_country_flag = TFRKPHN_successor_oh_se_hoon }
+		available = { has_country_flag = TFRKPHN_kdef_tank_done num_of_civilian_factories_available_for_projects > 0 }
+		days_remove = 120
+		modifier = { civilian_factory_use = 1 }
+		complete_effect = { custom_effect_tooltip = TFRKPHN_kdef_wait_tt }
+		remove_effect = {
+			swap_ideas = { remove_idea = TFRKPHN_kdef_2 add_idea = TFRKPHN_kdef_3 }
+			set_country_flag = TFRKPHN_kdef_jet_done
+			country_event = { id = tfrkphn.6791 }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	TFRKPHN_kdef_cluster = {
+		icon = GFX_decision_generic_industry
+		cost = 75
+		fire_only_once = yes
+		visible = { has_country_flag = TFRKPHN_successor_oh_se_hoon }
+		available = { has_country_flag = TFRKPHN_kdef_jet_done num_of_civilian_factories_available_for_projects > 0 }
+		days_remove = 180
+		modifier = { civilian_factory_use = 1 }
+		complete_effect = { custom_effect_tooltip = TFRKPHN_kdef_wait_tt }
+		remove_effect = {
+			swap_ideas = { remove_idea = TFRKPHN_kdef_3 add_idea = TFRKPHN_kdef_4 }
+			set_country_flag = TFRKPHN_kdef_cluster_done
+			random_owned_controlled_state = { limit = { is_core_of = ROOT } add_extra_state_shared_building_slots = 2 add_building_construction = { type = arms_factory level = 2 instant_build = yes } }
+			country_event = { id = tfrkphn.6792 }
+		}
+		ai_will_do = { factor = 1 }
+	}
+}

@@ -1,0 +1,78 @@
+# [안내] K-방산 사건. kdef_build.py가 만든다. 글이 길면 n과 n+100 두 사건으로 나뉜다(KP 엔딩 길이, 사용자 2026-11-18).
+add_namespace = tfrkphn
+country_event = {
+	id = tfrkphn.6789
+	title = tfrkphn.6789.t
+	desc = tfrkphn.6789.d
+	picture = GFX_TFRKPHN_dev_6779
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6789.next
+		hidden_effect = { country_event = { id = tfrkphn.6889 } }
+	}
+}
+country_event = {
+	id = tfrkphn.6889
+	title = tfrkphn.6789.t
+	desc = tfrkphn.6889.d
+	picture = GFX_TFRKPHN_dev_6779
+	is_triggered_only = yes
+	option = { name = tfrkphn.6789.a }
+}
+country_event = {
+	id = tfrkphn.6790
+	title = tfrkphn.6790.t
+	desc = tfrkphn.6790.d
+	picture = GFX_TFRKPHN_dev_6776
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6790.next
+		hidden_effect = { country_event = { id = tfrkphn.6890 } }
+	}
+}
+country_event = {
+	id = tfrkphn.6890
+	title = tfrkphn.6790.t
+	desc = tfrkphn.6890.d
+	picture = GFX_TFRKPHN_dev_6776
+	is_triggered_only = yes
+	option = { name = tfrkphn.6790.a }
+}
+country_event = {
+	id = tfrkphn.6791
+	title = tfrkphn.6791.t
+	desc = tfrkphn.6791.d
+	picture = GFX_TFRKPHN_dev_6777
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6791.next
+		hidden_effect = { country_event = { id = tfrkphn.6891 } }
+	}
+}
+country_event = {
+	id = tfrkphn.6891
+	title = tfrkphn.6791.t
+	desc = tfrkphn.6891.d
+	picture = GFX_TFRKPHN_dev_6777
+	is_triggered_only = yes
+	option = { name = tfrkphn.6791.a }
+}
+country_event = {
+	id = tfrkphn.6792
+	title = tfrkphn.6792.t
+	desc = tfrkphn.6792.d
+	picture = GFX_TFRKPHN_dev_6777
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6792.next
+		hidden_effect = { country_event = { id = tfrkphn.6892 } }
+	}
+}
+country_event = {
+	id = tfrkphn.6892
+	title = tfrkphn.6792.t
+	desc = tfrkphn.6892.d
+	picture = GFX_TFRKPHN_dev_6777
+	is_triggered_only = yes
+	option = { name = tfrkphn.6792.a }
+}

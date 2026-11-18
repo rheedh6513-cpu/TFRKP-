@@ -1,0 +1,70 @@
+# [안내] 매뉴얼로 지키는 안전 결정. safety_build.py가 만든다.
+TFRKPHN_sf_category = {
+	TFRKPHN_sf_tunnel = {
+		icon = GFX_decision_generic_civil_support
+		cost = 50
+		fire_only_once = yes
+		visible = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_completed_focus = TFRKPHN_oh_se_hoon_e1 }
+		available = { check_variable = { TFRKPHN_sf < 100 } num_of_civilian_factories_available_for_projects > 0 }
+		days_remove = 180
+		modifier = { civilian_factory_use = 1 }
+		complete_effect = { custom_effect_tooltip = TFRKPHN_sf_tunnel_tt }
+		remove_effect = { hidden_effect = { add_to_variable = { TFRKPHN_sf = 25 } clamp_variable = { var = TFRKPHN_sf min = 0 max = 100 } TFRKPHN_sf_apply = yes } }
+		ai_will_do = { factor = 1 }
+	}
+	TFRKPHN_sf_banjiha = {
+		icon = GFX_decision_generic_civil_support
+		cost = 40
+		fire_only_once = yes
+		visible = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_completed_focus = TFRKPHN_oh_se_hoon_e1 }
+		available = { check_variable = { TFRKPHN_sf < 100 } }
+		days_remove = 120
+		complete_effect = { custom_effect_tooltip = TFRKPHN_sf_banjiha_tt }
+		remove_effect = { hidden_effect = { add_to_variable = { TFRKPHN_sf = 15 } clamp_variable = { var = TFRKPHN_sf min = 0 max = 100 } TFRKPHN_sf_apply = yes } }
+		ai_will_do = { factor = 1 }
+	}
+	TFRKPHN_sf_crowd = {
+		icon = GFX_decision_generic_civil_support
+		cost = 25
+		fire_only_once = yes
+		visible = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_completed_focus = TFRKPHN_oh_se_hoon_e1 }
+		available = { check_variable = { TFRKPHN_sf < 100 } }
+		days_remove = 60
+		complete_effect = { custom_effect_tooltip = TFRKPHN_sf_crowd_tt }
+		remove_effect = { hidden_effect = { add_to_variable = { TFRKPHN_sf = 10 } clamp_variable = { var = TFRKPHN_sf min = 0 max = 100 } TFRKPHN_sf_apply = yes } }
+		ai_will_do = { factor = 1 }
+	}
+	TFRKPHN_sf_seismic = {
+		icon = GFX_decision_generic_civil_support
+		cost = 40
+		fire_only_once = yes
+		visible = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_completed_focus = TFRKPHN_oh_se_hoon_e1 }
+		available = { check_variable = { TFRKPHN_sf < 100 } num_of_civilian_factories_available_for_projects > 0 }
+		days_remove = 120
+		modifier = { civilian_factory_use = 1 }
+		complete_effect = { custom_effect_tooltip = TFRKPHN_sf_seismic_tt }
+		remove_effect = { hidden_effect = { add_to_variable = { TFRKPHN_sf = 15 } clamp_variable = { var = TFRKPHN_sf min = 0 max = 100 } TFRKPHN_sf_apply = yes } }
+		ai_will_do = { factor = 1 }
+	}
+	TFRKPHN_sf_alert = {
+		icon = GFX_decision_generic_civil_support
+		cost = 20
+		fire_only_once = yes
+		visible = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_completed_focus = TFRKPHN_oh_se_hoon_e1 }
+		available = { check_variable = { TFRKPHN_sf < 100 } }
+		days_remove = 60
+		complete_effect = { custom_effect_tooltip = TFRKPHN_sf_alert_tt }
+		remove_effect = { hidden_effect = { add_to_variable = { TFRKPHN_sf = 10 } clamp_variable = { var = TFRKPHN_sf min = 0 max = 100 } TFRKPHN_sf_apply = yes } }
+		ai_will_do = { factor = 1 }
+	}
+	TFRKPHN_sf_drill = {
+		icon = GFX_decision_generic_civil_support
+		cost = 15
+		visible = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_completed_focus = TFRKPHN_oh_se_hoon_e1 }
+		available = { check_variable = { TFRKPHN_sf < 100 } }
+		days_remove = 60
+		complete_effect = { custom_effect_tooltip = TFRKPHN_sf_drill_tt }
+		remove_effect = { hidden_effect = { add_to_variable = { TFRKPHN_sf = 5 } clamp_variable = { var = TFRKPHN_sf min = 0 max = 100 } TFRKPHN_sf_apply = yes } }
+		ai_will_do = { factor = 1 }
+	}
+}

@@ -1,0 +1,56 @@
+# [안내] 서울런 확대 결정. slearn_build.py가 만든다.
+TFRKPHN_sl_category = {
+	TFRKPHN_sl_open = {
+		icon = GFX_decision_generic_research
+		cost = 50
+		fire_only_once = yes
+		visible = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_completed_focus = TFRKPHN_oh_se_hoon_c1 }
+		available = { check_variable = { TFRKPHN_sl < 50 } }
+		days_remove = 60
+		complete_effect = { custom_effect_tooltip = TFRKPHN_sl_open_tt }
+		remove_effect = { hidden_effect = { add_to_variable = { TFRKPHN_sl = 10 } clamp_variable = { var = TFRKPHN_sl min = 0 max = 50 } TFRKPHN_sl_apply = yes } }
+		ai_will_do = { factor = 1 }
+	}
+	TFRKPHN_sl_teach = {
+		icon = GFX_decision_generic_research
+		cost = 25
+		visible = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_completed_focus = TFRKPHN_oh_se_hoon_c1 }
+		available = { check_variable = { TFRKPHN_sl < 50 } }
+		days_remove = 60
+		complete_effect = { custom_effect_tooltip = TFRKPHN_sl_teach_tt }
+		remove_effect = { hidden_effect = { add_to_variable = { TFRKPHN_sl = 3 } clamp_variable = { var = TFRKPHN_sl min = 0 max = 50 } TFRKPHN_sl_apply = yes } }
+		ai_will_do = { factor = 1 }
+	}
+	TFRKPHN_sl_device = {
+		icon = GFX_decision_generic_research
+		cost = 40
+		visible = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_completed_focus = TFRKPHN_oh_se_hoon_c1 }
+		available = { check_variable = { TFRKPHN_sl < 50 } num_of_civilian_factories_available_for_projects > 0 }
+		days_remove = 90
+		modifier = { civilian_factory_use = 1 }
+		complete_effect = { custom_effect_tooltip = TFRKPHN_sl_device_tt }
+		remove_effect = { hidden_effect = { add_to_variable = { TFRKPHN_sl = 5 } clamp_variable = { var = TFRKPHN_sl min = 0 max = 50 } TFRKPHN_sl_apply = yes } }
+		ai_will_do = { factor = 1 }
+	}
+	TFRKPHN_sl_mega = {
+		icon = GFX_decision_generic_research
+		cost = 50
+		visible = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_completed_focus = TFRKPHN_oh_se_hoon_c1 }
+		available = { check_variable = { TFRKPHN_sl < 50 } num_of_civilian_factories_available_for_projects > 0 OR = { check_variable = { TFRKPHN_mega_s1 > 2.5 } check_variable = { TFRKPHN_mega_s2 > 2.5 } check_variable = { TFRKPHN_mega_s3 > 2.5 } check_variable = { TFRKPHN_mega_s4 > 2.5 } check_variable = { TFRKPHN_mega_s5 > 2.5 } } }
+		days_remove = 120
+		modifier = { civilian_factory_use = 1 }
+		complete_effect = { custom_effect_tooltip = TFRKPHN_sl_mega_tt }
+		remove_effect = { hidden_effect = { set_temp_variable = { sl_m = 2 } if = { limit = { check_variable = { TFRKPHN_mega_s1 > 2.5 } } add_to_temp_variable = { sl_m = 1 } } if = { limit = { check_variable = { TFRKPHN_mega_s2 > 2.5 } } add_to_temp_variable = { sl_m = 1 } } if = { limit = { check_variable = { TFRKPHN_mega_s3 > 2.5 } } add_to_temp_variable = { sl_m = 1 } } if = { limit = { check_variable = { TFRKPHN_mega_s4 > 2.5 } } add_to_temp_variable = { sl_m = 1 } } if = { limit = { check_variable = { TFRKPHN_mega_s5 > 2.5 } } add_to_temp_variable = { sl_m = 1 } } add_to_variable = { TFRKPHN_sl = sl_m } clamp_variable = { var = TFRKPHN_sl min = 0 max = 50 } TFRKPHN_sl_apply = yes } }
+		ai_will_do = { factor = 1 }
+	}
+	TFRKPHN_sl_mentor = {
+		icon = GFX_decision_generic_research
+		cost = 10
+		visible = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_completed_focus = TFRKPHN_oh_se_hoon_c1 }
+		available = { check_variable = { TFRKPHN_sl < 50 } check_variable = { TFRKPHN_sl > 14.5 } }
+		days_remove = 60
+		complete_effect = { custom_effect_tooltip = TFRKPHN_sl_mentor_tt }
+		remove_effect = { hidden_effect = { add_to_variable = { TFRKPHN_sl = 2 } clamp_variable = { var = TFRKPHN_sl min = 0 max = 50 } TFRKPHN_sl_apply = yes } }
+		ai_will_do = { factor = 1 }
+	}
+}

@@ -1,0 +1,7 @@
+# [안내] 여당 단체장 지역 공장 유치. allyfac_build.py가 만든다.
+TFRKPHN_allyfac_category = {
+	icon = generic_construction
+	priority = 203
+	allowed = { original_tag = KOR }
+	visible = { any_owned_state = { has_dynamic_modifier = { modifier = TFRKPHN_local_ally } } }
+}

@@ -1,0 +1,7 @@
+# [안내] 여당 단체장 보너스. localelec_fx.py가 만든다.
+TFRKPHN_local_ally = {
+	icon = GFX_modifiers_TFRKPHN_local_ally
+	enable = { is_controlled_by = KOR }
+	remove_trigger = { NOT = { is_owned_by = KOR } }
+	state_production_speed_buildings_factor = TFRKPHN_ally_bonus
+}
