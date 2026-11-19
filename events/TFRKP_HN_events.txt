@@ -27,14 +27,23 @@ country_event = {
 
 	option = {
 		name = tfrkphn.1.a
-		ai_chance = { base = 100 }
+		# AI: 이재명이면 윤석열, 이낙연이면 홍준표. 상대 당이 아직이면 반반
+		ai_chance = {
+			base = 50
+			modifier = { factor = 100 has_country_flag = TFRKP_HN_DPK_lee_jaemyung }
+			modifier = { factor = 0 has_country_flag = TFRKP_HN_DPK_lee_nakyeon }
+		}
 		custom_effect_tooltip = TFRKPHN_tt_yoon
 		set_country_flag = TFRKP_HN_PPP_yoon
 	}
 
 	option = {
 		name = tfrkphn.1.b
-		ai_chance = { base = 0 }
+		ai_chance = {
+			base = 50
+			modifier = { factor = 100 has_country_flag = TFRKP_HN_DPK_lee_nakyeon }
+			modifier = { factor = 0 has_country_flag = TFRKP_HN_DPK_lee_jaemyung }
+		}
 		custom_effect_tooltip = TFRKPHN_tt_hong
 		set_country_flag = TFRKP_HN_PPP_hong
 		set_global_flag = TFRKP_HN_G_hong
@@ -66,14 +75,23 @@ country_event = {
 
 	option = {
 		name = tfrkphn.2.a
-		ai_chance = { base = 100 }
+		# AI: 윤석열이면 이재명, 홍준표면 이낙연. 상대 당이 아직이면 반반
+		ai_chance = {
+			base = 50
+			modifier = { factor = 100 has_country_flag = TFRKP_HN_PPP_yoon }
+			modifier = { factor = 0 has_country_flag = TFRKP_HN_PPP_hong }
+		}
 		custom_effect_tooltip = TFRKPHN_tt_lee_jaemyung
 		set_country_flag = TFRKP_HN_DPK_lee_jaemyung
 	}
 
 	option = {
 		name = tfrkphn.2.b
-		ai_chance = { base = 0 }
+		ai_chance = {
+			base = 50
+			modifier = { factor = 100 has_country_flag = TFRKP_HN_PPP_hong }
+			modifier = { factor = 0 has_country_flag = TFRKP_HN_PPP_yoon }
+		}
 		custom_effect_tooltip = TFRKPHN_tt_lee_nakyeon
 		set_country_flag = TFRKP_HN_DPK_lee_nakyeon
 		set_global_flag = TFRKP_HN_G_nak
@@ -2043,7 +2061,8 @@ country_event = { # 20대 후보 선택 (GFX_TFRKPHN_choice_korea_hong_nak)
 			country_event = { id = korea.283 days = 5 }
 		}
 		ai_chance = {
-			factor = 1
+			base = 0 # 지금은 홍루트만
+			modifier = { has_game_rule = { rule = TFRKP_2022_president_election option = TFRKP_2022_president_election_lee } add = 1 }
 			modifier = {
 				has_game_rule = {
 					rule = TFRKP_2022_president_election
@@ -2087,7 +2106,8 @@ country_event = { # 20대 후보 선택 (GFX_TFRKPHN_choice_korea_hong)
 			country_event = { id = korea.283 days = 5 }
 		}
 		ai_chance = {
-			factor = 1
+			base = 0 # 지금은 홍루트만
+			modifier = { has_game_rule = { rule = TFRKP_2022_president_election option = TFRKP_2022_president_election_lee } add = 1 }
 			modifier = {
 				has_game_rule = {
 					rule = TFRKP_2022_president_election
@@ -2131,7 +2151,8 @@ country_event = { # 20대 후보 선택 (GFX_TFRKPHN_choice_korea_nak)
 			country_event = { id = korea.283 days = 5 }
 		}
 		ai_chance = {
-			factor = 1
+			base = 0 # 지금은 보수 후보 당선만
+			modifier = { has_game_rule = { rule = TFRKP_2022_president_election option = TFRKP_2022_president_election_lee } add = 1 }
 			modifier = {
 				has_game_rule = {
 					rule = TFRKP_2022_president_election
@@ -2175,7 +2196,8 @@ country_event = { # 20대 후보 선택 (GFX_report_event_choice_korea)
 			country_event = { id = korea.283 days = 5 }
 		}
 		ai_chance = {
-			factor = 1
+			base = 0 # 지금은 보수 후보 당선만
+			modifier = { has_game_rule = { rule = TFRKP_2022_president_election option = TFRKP_2022_president_election_lee } add = 1 }
 			modifier = {
 				has_game_rule = {
 					rule = TFRKP_2022_president_election
@@ -2690,14 +2712,13 @@ country_event = {
 country_event = {
 	id = tfrkphn.245
 	title = tfrkphn.245.t
-	desc = tfrkphn.245.desc
-	picture = GFX_TFRKPHN_lee_in_je
+	desc = TFRKPHN_lg_245_a
+	picture = GFX_TFRKPHN_lee_oath
 	is_triggered_only = yes
-
+	immediate = { hidden_effect = { news_event = { id = tfrkphn.6995 hours = 6 } } }	# 세계 뉴스 (elec27_news.py)
 	option = {
-		name = tfrkphn.245.a
-		custom_effect_tooltip = TFRKPHN_ge2027_lee_in_je_tt
-		TFRKPHN_ge2027_lee_in_je_effect = yes
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8004 } }
 	}
 }
 
@@ -2705,11 +2726,27 @@ country_event = {
 	id = tfrkphn.246
 	title = tfrkphn.246.t
 	desc = tfrkphn.246.desc
-	picture = GFX_TFRKPHN_oh_conv
+	picture = GFX_TFRKPHN_oh_oath
+	is_triggered_only = yes
+	immediate = { hidden_effect = { news_event = { id = tfrkphn.6996 hours = 6 } } }	# 세계 뉴스 (elec27_news.py)
+
+	option = {
+		name = tfrkphn.246.next
+		hidden_effect = { country_event = { id = tfrkphn.346 } }
+	}
+}
+
+# 오세훈 당선 둘째 화면 (oh246_long.py)
+country_event = {
+	id = tfrkphn.346
+	title = tfrkphn.246.t
+	desc = tfrkphn.346.desc
+	picture = GFX_TFRKPHN_oh_oath
 	is_triggered_only = yes
 
 	option = {
 		name = tfrkphn.246.a
+		custom_effect_tooltip = TFRKPHN_oh_path_tt	# 홍준표의 우경화 문구와 맞물림 (oh_path_tt.py)
 		custom_effect_tooltip = TFRKPHN_ge2027_oh_se_hoon_tt
 		TFRKPHN_ge2027_oh_se_hoon_effect = yes
 	}

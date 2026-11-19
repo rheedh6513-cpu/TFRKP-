@@ -24,7 +24,7 @@ TFRKPHN_nr_apply = {
 	add_to_variable = { TFRKPHN_nr_f3 = 1 }
 	set_variable = { TFRKPHN_nr_a3 = TFRKPHN_nr3 }
 	if = { limit = { check_variable = { TFRKPHN_nr3 < 0 } } multiply_variable = { TFRKPHN_nr_a3 = -1 } }
-	if = { limit = { check_variable = { TFRKPHN_nr1 > 24.5 } check_variable = { TFRKPHN_nr2 > 24.5 } check_variable = { TFRKPHN_nr3 > 24.5 } NOT = { has_country_flag = TFRKPHN_nr_done } } set_country_flag = TFRKPHN_nr_done country_event = { id = tfrkphn.6972 days = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_nr1 > 24.5 } check_variable = { TFRKPHN_nr2 > 24.5 } check_variable = { TFRKPHN_nr3 > 24.5 } NOT = { has_country_flag = TFRKPHN_nr_done } } set_country_flag = TFRKPHN_nr_done set_country_flag = { flag = TFRKPHN_nr_fade value = 1 days = 30 } country_event = { id = tfrkphn.6972 days = 1 } }
 }
 TFRKPHN_nr_start = {
 	set_variable = { TFRKPHN_nr1 = -25 }

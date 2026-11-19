@@ -4954,8 +4954,10 @@ country_event = { # 김정은의 신변이상 -> 김여정 교체
 	desc = korea.189.desc
 	picture = GFX_report_event_kim_death
 	is_triggered_only = yes
+	trigger = { NOT = { has_country_flag = TFRKPHN_kju_captured } }	# TFRKP Hong Nak: 오세훈 판에서 먼저 생포했으면 뜨지 않는다 (kju_build.py)
 
 	immediate = {
+		set_country_flag = TFRKPHN_k189_done	# TFRKP Hong Nak: 신변 이상이 먼저 떴다는 표시 (kju_build.py)
 		hidden_effect = {
 			PRK = {
 				PRK_kim_yojong_char = {

@@ -1,0 +1,28 @@
+# [안내] 당 개혁 탭. 동작은 common/scripted_guis/TFRKPHN_partypanel_scripted_guis.txt. partypanel_build.py가 만든다.
+guiTypes = {
+	containerWindowType = {
+		name = "TFRKPHN_pr_container"
+		size = { width = 100%% height = 400 }
+		instantTextBoxType = { name = "TFRKPHN_pr_head" position = { x = 0 y = 4 } text = "TFRKPHN_pr_head" font = "hoi_24header" format = center maxWidth = 500 alwaystransparent = yes }
+		iconType = { name = "TFRKPHN_pr_oh" position = { x = 20 y = 38 } spriteType = "GFX_TFRKPHN_pr_oh" alwaystransparent = yes }
+		iconType = { name = "TFRKPHN_pr_jang_face" position = { x = 394 y = 40 } spriteType = "GFX_TFRKPHN_pr_jang_face" scale = 0.54 pdx_tooltip = "TFRKPHN_pr_jang_tt" }
+		iconType = { name = "TFRKPHN_pr_jang" position = { x = 392 y = 38 } spriteType = "GFX_TFRKPHN_pr_jang" alwaystransparent = yes }
+		instantTextBoxType = { name = "TFRKPHN_pr_n_oh" position = { x = 4 y = 156 } text = "TFRKPHN_pr_n_oh" font = "hoi_16mbs" format = center maxWidth = 120 alwaystransparent = yes }
+		instantTextBoxType = { name = "TFRKPHN_pr_n_jang" position = { x = 376 y = 156 } text = "TFRKPHN_pr_n_jang" font = "hoi_16mbs" format = center maxWidth = 120 alwaystransparent = yes }
+		iconType = { name = "TFRKPHN_pr_bar_sup" position = { x = 44 y = 180 } spriteType = "GFX_TFRKPHN_pr_bar_sup" alwaystransparent = yes }
+		iconType = { name = "TFRKPHN_pr_bar_bk" position = { x = 416 y = 180 } spriteType = "GFX_TFRKPHN_pr_bar_bk" alwaystransparent = yes }
+		instantTextBoxType = { name = "TFRKPHN_pr_v_sup" position = { x = 4 y = 354 } text = "TFRKPHN_pr_v_sup" font = "hoi_16mbs" format = center maxWidth = 120 alwaystransparent = yes }
+		instantTextBoxType = { name = "TFRKPHN_pr_v_bk" position = { x = 376 y = 354 } text = "TFRKPHN_pr_v_bk" font = "hoi_16mbs" format = center maxWidth = 120 alwaystransparent = yes }
+		buttonType = { name = "TFRKPHN_pr_b_plat" position = { x = 140 y = 44 } spriteType = "GFX_TFRKPHN_pr_b_plat" pdx_tooltip = "TFRKPHN_pr_b_plat_tt" clicksound = click_default }
+		iconType = { name = "TFRKPHN_pr_d_plat" position = { x = 140 y = 44 } spriteType = "GFX_TFRKPHN_pr_b_plat_done" pdx_tooltip = "TFRKPHN_pr_b_plat_tt" }
+		buttonType = { name = "TFRKPHN_pr_b_nom" position = { x = 140 y = 106 } spriteType = "GFX_TFRKPHN_pr_b_nom" pdx_tooltip = "TFRKPHN_pr_b_nom_tt" clicksound = click_default }
+		iconType = { name = "TFRKPHN_pr_d_nom" position = { x = 140 y = 106 } spriteType = "GFX_TFRKPHN_pr_b_nom_done" pdx_tooltip = "TFRKPHN_pr_b_nom_tt" }
+		buttonType = { name = "TFRKPHN_pr_b_youth" position = { x = 140 y = 168 } spriteType = "GFX_TFRKPHN_pr_b_youth" pdx_tooltip = "TFRKPHN_pr_b_youth_tt" clicksound = click_default }
+		iconType = { name = "TFRKPHN_pr_d_youth" position = { x = 140 y = 168 } spriteType = "GFX_TFRKPHN_pr_b_youth_done" pdx_tooltip = "TFRKPHN_pr_b_youth_tt" }
+		buttonType = { name = "TFRKPHN_pr_b_emerg" position = { x = 140 y = 230 } spriteType = "GFX_TFRKPHN_pr_b_emerg" pdx_tooltip = "TFRKPHN_pr_b_emerg_tt" clicksound = click_default }
+		iconType = { name = "TFRKPHN_pr_d_emerg" position = { x = 140 y = 230 } spriteType = "GFX_TFRKPHN_pr_b_emerg_done" pdx_tooltip = "TFRKPHN_pr_b_emerg_tt" }
+		buttonType = { name = "TFRKPHN_pr_b_pers" position = { x = 140 y = 292 } spriteType = "GFX_TFRKPHN_pr_b_pers" pdx_tooltip = "TFRKPHN_pr_b_pers_tt" clicksound = click_default }
+		iconType = { name = "TFRKPHN_pr_d_pers" position = { x = 140 y = 292 } spriteType = "GFX_TFRKPHN_pr_b_pers_done" pdx_tooltip = "TFRKPHN_pr_b_pers_tt" }
+		instantTextBoxType = { name = "TFRKPHN_pr_goal" position = { x = 0 y = 376 } text = "TFRKPHN_pr_goal" font = "hoi_16mbs" format = center maxWidth = 500 alwaystransparent = yes }
+	}
+}

@@ -4,7 +4,7 @@ country_event = {
 	id = tfrkphn.6972
 	title = tfrkphn.6972.t
 	desc = tfrkphn.6972.d
-	picture = GFX_TFRKPHN_dev_6779
+	picture = GFX_TFRKPHN_nr_6972
 	is_triggered_only = yes
 	option = {
 		name = tfrkphn.6972.next
@@ -15,7 +15,7 @@ country_event = {
 	id = tfrkphn.6973
 	title = tfrkphn.6972.t
 	desc = tfrkphn.6973.d
-	picture = GFX_TFRKPHN_dev_6779
+	picture = GFX_TFRKPHN_nr_6972
 	is_triggered_only = yes
 	option = { name = tfrkphn.6972.a add_stability = 0.05 add_political_power = 100 }
 }

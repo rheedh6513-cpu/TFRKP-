@@ -3,5 +3,5 @@ TFRKPHN_oh_ansim_category = {
 	icon = generic_construction
 	priority = 198
 	allowed = { original_tag = KOR }
-	visible = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_completed_focus = TFRKPHN_oh_se_hoon_c2 }
+	visible = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_completed_focus = TFRKPHN_oh_se_hoon_c2  OR = { NOT = { has_country_flag = TFRKPHN_fd_oh_ansim } has_country_flag = TFRKPHN_fdt_oh_ansim }}
 }

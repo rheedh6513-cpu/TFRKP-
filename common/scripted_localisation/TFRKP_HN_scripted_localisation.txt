@@ -272,7 +272,7 @@ defined_text = {
 }
 defined_text = {
 	name = TFRKP_HN_x_korea_81_desc
-	text = { trigger = { has_country_flag = TFRKP_HN_PPP_hong } localization_key = TFRKP_HN_x_korea_81_desc_tmp }
+	text = { trigger = { has_country_flag = TFRKP_HN_PPP_hong } localization_key = TFRKPHN_e22_81_d }
 	text = { localization_key = TFRKP_HN_x_korea_81_desc_orig }
 }
 defined_text = {

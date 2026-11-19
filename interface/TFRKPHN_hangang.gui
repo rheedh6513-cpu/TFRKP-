@@ -1,0 +1,16 @@
+# [안내] 그레이트 한강 지도 패널. 동작은 common/scripted_guis/TFRKPHN_hangang_scripted_guis.txt. hangmap_build.py가 만든다.
+guiTypes = {
+	containerWindowType = {
+		name = "TFRKPHN_hg_container"
+		size = { width = 100%% height = 336 }
+		buttonType = { name = "TFRKPHN_hg_tab1" position = { x = 95 y = 4 } spriteType = "GFX_TFRKPHN_hg_tab1" clicksound = click_default }
+		buttonType = { name = "TFRKPHN_hg_tab2" position = { x = 255 y = 4 } spriteType = "GFX_TFRKPHN_hg_tab2" clicksound = click_default }
+		iconType = { name = "TFRKPHN_hg_map" position = { x = 5 y = 32 } spriteType = "GFX_TFRKPHN_hg_map" alwaystransparent = yes }
+		iconType = { name = "TFRKPHN_hg_basin" position = { x = 5 y = 32 } spriteType = "GFX_TFRKPHN_hg_basin" alwaystransparent = yes }
+		buttonType = { name = "TFRKPHN_hg_b_bus" position = { x = 119 y = 158 } spriteType = "GFX_TFRKPHN_hg_btn_bus" pdx_tooltip = "TFRKPHN_hg_b_bus_tt" clicksound = click_default }
+		buttonType = { name = "TFRKPHN_hg_b_imjin" position = { x = 59 y = 91 } spriteType = "GFX_TFRKPHN_hg_btn" pdx_tooltip = "TFRKPHN_hg_b_imjin_tt" clicksound = click_default }
+		buttonType = { name = "TFRKPHN_hg_b_bukhan" position = { x = 259 y = 71 } spriteType = "GFX_TFRKPHN_hg_btn" pdx_tooltip = "TFRKPHN_hg_b_bukhan_tt" clicksound = click_default }
+		buttonType = { name = "TFRKPHN_hg_b_paldang" position = { x = 167 y = 151 } spriteType = "GFX_TFRKPHN_hg_btn" pdx_tooltip = "TFRKPHN_hg_b_paldang_tt" clicksound = click_default }
+		buttonType = { name = "TFRKPHN_hg_b_namhan" position = { x = 310 y = 294 } spriteType = "GFX_TFRKPHN_hg_btn" pdx_tooltip = "TFRKPHN_hg_b_namhan_tt" clicksound = click_default }
+	}
+}

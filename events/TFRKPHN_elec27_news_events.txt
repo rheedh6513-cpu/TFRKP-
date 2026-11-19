@@ -1,0 +1,26 @@
+# [안내] 2027 대선 세계 뉴스. elec27_news.py가 만든다.
+add_namespace = tfrkphn
+news_event = {
+	id = tfrkphn.6995
+	title = tfrkphn.6995.t
+	desc = tfrkphn.6995.d
+	picture = GFX_TFRKPHN_e27_news_lee
+	major = yes
+	is_triggered_only = yes
+	option = { name = tfrkphn.6995.kor trigger = { tag = KOR } }
+	option = { name = tfrkphn.6995.jap trigger = { tag = JAP } }
+	option = { name = tfrkphn.6995.prc trigger = { tag = PRC } }
+	option = { name = tfrkphn.6995.etc trigger = { NOT = { tag = KOR tag = JAP tag = PRC } } }
+}
+news_event = {
+	id = tfrkphn.6996
+	title = tfrkphn.6996.t
+	desc = tfrkphn.6996.d
+	picture = GFX_TFRKPHN_e27_news_oh
+	major = yes
+	is_triggered_only = yes
+	option = { name = tfrkphn.6996.kor trigger = { tag = KOR } }
+	option = { name = tfrkphn.6996.jap trigger = { tag = JAP } }
+	option = { name = tfrkphn.6996.prc trigger = { tag = PRC } }
+	option = { name = tfrkphn.6996.etc trigger = { NOT = { tag = KOR tag = JAP tag = PRC } } }
+}

@@ -3,4 +3,5 @@ spriteTypes = {
 	frameAnimatedSpriteType = { name = "GFX_TFRKPHN_nr_rope1" texturefile = "gfx/interface/decisions/TFRKPHN_nr_rope1.png" noOfFrames = 21 animation_rate_fps = 0 looping = no play_on_show = no }
 	frameAnimatedSpriteType = { name = "GFX_TFRKPHN_nr_rope2" texturefile = "gfx/interface/decisions/TFRKPHN_nr_rope2.png" noOfFrames = 21 animation_rate_fps = 0 looping = no play_on_show = no }
 	frameAnimatedSpriteType = { name = "GFX_TFRKPHN_nr_rope3" texturefile = "gfx/interface/decisions/TFRKPHN_nr_rope3.png" noOfFrames = 21 animation_rate_fps = 0 looping = no play_on_show = no }
+	spriteType = { name = "GFX_TFRKPHN_nr_6972" texturefile = "gfx/event_pictures/TFRKPHN_nr_6972.png" }
 }

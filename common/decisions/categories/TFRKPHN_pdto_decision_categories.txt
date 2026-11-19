@@ -5,5 +5,5 @@ TFRKPHN_oh_pdto_category = {
 	scripted_gui = TFRKPHN_pdto_gui
 	visible_when_empty = yes
 	allowed = { original_tag = KOR }
-	visible = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_completed_focus = TFRKPHN_oh_se_hoon_b01_01 }
+	visible = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_completed_focus = TFRKPHN_oh_se_hoon_b01_01  OR = { NOT = { has_country_flag = TFRKPHN_fd_oh_pdto } has_country_flag = TFRKPHN_fdt_oh_pdto }}
 }

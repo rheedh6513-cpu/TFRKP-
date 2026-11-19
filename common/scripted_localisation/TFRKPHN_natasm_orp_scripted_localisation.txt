@@ -1,0 +1,16 @@
+# [안내] 국회 탭 우리공화당 칸. orp_build.py가 만든다.
+defined_text = {
+	name = TFRKPHN_NA_name
+	text = { trigger = { check_variable = { KOR_NatAsm_faction = 6 } } localization_key = TFRKPHN_NA_orp_name }
+	text = { localization_key = TFRKPHN_NA_kp_name }
+}
+defined_text = {
+	name = TFRKPHN_NA_desc
+	text = { trigger = { check_variable = { KOR_NatAsm_faction = 6 } } localization_key = TFRKPHN_NA_orp_desc }
+	text = { localization_key = TFRKPHN_NA_kp_desc }
+}
+defined_text = {
+	name = TFRKPHN_NA_orp_line
+	text = { trigger = { check_variable = { KOR_NatAsm_ORP_seats > 0 } } localization_key = TFRKPHN_NA_orp_line_on }
+	text = { localization_key = TFRKPHN_NA_empty }
+}

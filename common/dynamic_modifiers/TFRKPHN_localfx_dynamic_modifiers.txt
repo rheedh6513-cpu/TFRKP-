@@ -5,3 +5,9 @@ TFRKPHN_local_ally = {
 	remove_trigger = { NOT = { is_owned_by = KOR } }
 	state_production_speed_buildings_factor = TFRKPHN_ally_bonus
 }
+TFRKPHN_local_ally_dp = {
+	icon = GFX_modifiers_TFRKPHN_local_ally_dp
+	enable = { is_controlled_by = KOR }
+	remove_trigger = { NOT = { is_owned_by = KOR } }
+	state_production_speed_buildings_factor = TFRKPHN_ally_bonus
+}

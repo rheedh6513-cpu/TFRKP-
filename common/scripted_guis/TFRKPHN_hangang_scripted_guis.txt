@@ -1,0 +1,39 @@
+# [안내] 그레이트 한강 지도 패널. hangmap_build.py가 만든다.
+scripted_gui = {
+	TFRKPHN_hg_gui = {
+		context_type = decision_category
+		window_name = "TFRKPHN_hg_container"
+		properties = {
+			TFRKPHN_hg_b_bus = { frame = TFRKPHN_hgm_bus }
+			TFRKPHN_hg_b_imjin = { frame = TFRKPHN_hgm_imjin }
+			TFRKPHN_hg_b_bukhan = { frame = TFRKPHN_hgm_bukhan }
+			TFRKPHN_hg_b_paldang = { frame = TFRKPHN_hgm_paldang }
+			TFRKPHN_hg_b_namhan = { frame = TFRKPHN_hgm_namhan }
+			TFRKPHN_hg_tab1 = { frame = TFRKPHN_hg_t1f }
+			TFRKPHN_hg_tab2 = { frame = TFRKPHN_hg_t2f }
+		}
+		effects = {
+			TFRKPHN_hg_b_bus_click = { if = { limit = { check_variable = { TFRKPHN_hgm_bus < 1.5 } has_political_power > 49 } add_political_power = -50 set_variable = { TFRKPHN_hgm_bus = 2 } country_event = { id = tfrkphn.6987 days = 90 } } }
+			TFRKPHN_hg_b_imjin_click = { if = { limit = { check_variable = { TFRKPHN_hgm_imjin < 1.5 } has_political_power > 59 } add_political_power = -60 set_variable = { TFRKPHN_hgm_imjin = 2 } country_event = { id = tfrkphn.6991 days = 90 } } }
+			TFRKPHN_hg_b_bukhan_click = { if = { limit = { check_variable = { TFRKPHN_hgm_bukhan < 1.5 } has_political_power > 74 } add_political_power = -75 set_variable = { TFRKPHN_hgm_bukhan = 2 } country_event = { id = tfrkphn.6988 days = 120 } } }
+			TFRKPHN_hg_b_paldang_click = { if = { limit = { check_variable = { TFRKPHN_hgm_paldang < 1.5 } has_political_power > 59 } add_political_power = -60 set_variable = { TFRKPHN_hgm_paldang = 2 } country_event = { id = tfrkphn.6990 days = 90 } } }
+			TFRKPHN_hg_b_namhan_click = { if = { limit = { check_variable = { TFRKPHN_hgm_namhan < 1.5 } has_political_power > 74 } add_political_power = -75 set_variable = { TFRKPHN_hgm_namhan = 2 } country_event = { id = tfrkphn.6989 days = 120 } } }
+			TFRKPHN_hg_tab1_click = { set_variable = { TFRKPHN_hg_vw = 0 } set_variable = { TFRKPHN_hg_t1f = 2 } set_variable = { TFRKPHN_hg_t2f = 1 } }
+			TFRKPHN_hg_tab2_click = { set_variable = { TFRKPHN_hg_vw = 1 } set_variable = { TFRKPHN_hg_t1f = 1 } set_variable = { TFRKPHN_hg_t2f = 2 } }
+		}
+		triggers = {
+			TFRKPHN_hg_map_visible = { NOT = { check_variable = { TFRKPHN_hg_vw = 1 } } }
+			TFRKPHN_hg_basin_visible = { check_variable = { TFRKPHN_hg_vw = 1 } }
+			TFRKPHN_hg_b_bus_visible = { NOT = { check_variable = { TFRKPHN_hg_vw = 1 } } }
+			TFRKPHN_hg_b_imjin_visible = { NOT = { check_variable = { TFRKPHN_hg_vw = 1 } } }
+			TFRKPHN_hg_b_bukhan_visible = { NOT = { check_variable = { TFRKPHN_hg_vw = 1 } } }
+			TFRKPHN_hg_b_paldang_visible = { NOT = { check_variable = { TFRKPHN_hg_vw = 1 } } }
+			TFRKPHN_hg_b_namhan_visible = { NOT = { check_variable = { TFRKPHN_hg_vw = 1 } } }
+			TFRKPHN_hg_b_bus_click_enabled = { check_variable = { TFRKPHN_hgm_bus < 1.5 } has_political_power > 49 }
+			TFRKPHN_hg_b_imjin_click_enabled = { check_variable = { TFRKPHN_hgm_imjin < 1.5 } has_political_power > 59 1041 = { is_owned_by = KOR } }
+			TFRKPHN_hg_b_bukhan_click_enabled = { check_variable = { TFRKPHN_hgm_bukhan < 1.5 } has_political_power > 74 871 = { is_owned_by = KOR } }
+			TFRKPHN_hg_b_paldang_click_enabled = { check_variable = { TFRKPHN_hgm_paldang < 1.5 } has_political_power > 59 1041 = { is_owned_by = KOR } }
+			TFRKPHN_hg_b_namhan_click_enabled = { check_variable = { TFRKPHN_hgm_namhan < 1.5 } has_political_power > 74 525 = { is_owned_by = KOR } }
+		}
+	}
+}

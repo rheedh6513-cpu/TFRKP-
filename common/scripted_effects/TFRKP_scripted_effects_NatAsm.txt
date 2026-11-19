@@ -1,0 +1,538 @@
+KOR_init_NatAsm = {
+	set_temp_variable = { DP = 1 }
+	set_temp_variable = { PPP = 2 }
+	set_temp_variable = { JP = 3 }
+	set_temp_variable = { PP = 4 }
+	set_temp_variable = { Ind = 5 }
+	set_variable = { KOR_NatAsm_DP_seats = 133 }
+	set_variable = { KOR_NatAsm_PPP_seats = 110 }
+	set_variable = { KOR_NatAsm_JP_seats = 7 }
+	set_variable = { KOR_NatAsm_PP_seats = 28 }
+	set_variable = { KOR_NatAsm_Ind_seats = 22 }
+	KOR_rerender_NatAsm = yes
+}
+
+KOR_change_NatAsm_seats = {
+	set_temp_variable = { amount = KOR_NatAsm_seat_temp }
+	set_temp_variable = { KOR_NatAsm_faction = KOR_NatAsm_faction_temp }
+	if = {
+		limit = { check_variable = { KOR_NatAsm_seat_temp < 0 } }
+		multiply_temp_variable = { KOR_NatAsm_seat_temp = -1 }
+		custom_effect_tooltip = KOR_NatAsm_seat_temp_decrease_tt
+	}
+	else = { custom_effect_tooltip = KOR_NatAsm_seat_temp_increase_tt }
+	KOR_modify_NatAsm_seats = yes
+	hidden_effect = {
+		if = {
+			limit = { check_variable = { KOR_NatAsm_current_ordinance_id > 0 } }
+			KOR_check_votes_NatAsm = yes
+		}
+	}
+}
+
+KOR_change_NatAsm_seats_specific_1 = {
+	set_temp_variable = { amount = KOR_NatAsm_seat_temp }
+	set_temp_variable = { KOR_NatAsm_faction = KOR_NatAsm_faction_temp }
+	set_temp_variable = { KOR_NatAsm_faction_target = KOR_NatAsm_faction_target_temp }
+	if = {
+		limit = { check_variable = { KOR_NatAsm_seat_temp < 0 } }
+		multiply_temp_variable = { KOR_NatAsm_seat_temp = -1 }
+		custom_effect_tooltip = KOR_NatAsm_seat_specific_1_decrease_tt
+	}
+	else = { custom_effect_tooltip = KOR_NatAsm_seat_specific_1_increase_tt }
+	KOR_modify_NatAsm_seats_specific_1 = yes
+	hidden_effect = {
+		if = {
+			limit = { check_variable = { KOR_NatAsm_current_ordinance_id > 0 } }
+			KOR_check_votes_NatAsm = yes
+		}
+	}
+}
+
+KOR_modify_NatAsm_seats_specific_1 = {
+	if = {
+		limit = { check_variable = { KOR_NatAsm_faction = 1 } }
+		add_to_variable = { KOR_NatAsm_DP_seats = amount }
+	}
+	else_if = {
+		limit = { check_variable = { KOR_NatAsm_faction = 2 } }
+		add_to_variable = { KOR_NatAsm_PPP_seats = amount }
+	}
+	else_if = {
+		limit = { check_variable = { KOR_NatAsm_faction = 3 } }
+		add_to_variable = { KOR_NatAsm_JP_seats = amount }
+	}
+	else_if = {
+		limit = { check_variable = { KOR_NatAsm_faction = 4 } }
+		add_to_variable = { KOR_NatAsm_PP_seats = amount }
+	}
+	else_if = {
+		limit = { check_variable = { KOR_NatAsm_faction = 5 } }
+		add_to_variable = { KOR_NatAsm_Ind_seats = amount }
+	}
+
+	if = {
+		limit = { check_variable = { KOR_NatAsm_faction_target = 1 } }
+		subtract_from_variable = { KOR_NatAsm_DP_seats = amount }
+	}
+	else_if = {
+		limit = { check_variable = { KOR_NatAsm_faction_target = 2 } }
+		subtract_from_variable = { KOR_NatAsm_PPP_seats = amount }
+	}
+	else_if = {
+		limit = { check_variable = { KOR_NatAsm_faction_target = 3 } }
+		subtract_from_variable = { KOR_NatAsm_JP_seats = amount }
+	}
+	else_if = {
+		limit = { check_variable = { KOR_NatAsm_faction_target = 4 } }
+		subtract_from_variable = { KOR_NatAsm_PP_seats = amount }
+	}
+	else_if = {
+		limit = { check_variable = { KOR_NatAsm_faction_target = 5 } }
+		subtract_from_variable = { KOR_NatAsm_Ind_seats = amount }
+	}
+
+	KOR_check_NatAsm_negative_seats = yes
+	KOR_check_votes_NatAsm = yes
+	KOR_rerender_NatAsm = yes
+}
+
+KOR_check_votes_NatAsm = {
+	clamp_variable = {
+		var = KOR_NatAsm_faction_support^1
+		min = 0
+		max = KOR_NatAsm_DP_seats
+	}
+	clamp_variable = {
+		var = KOR_NatAsm_faction_support^2
+		min = 0
+		max = KOR_NatAsm_PPP_seats
+	}
+	clamp_variable = {
+		var = KOR_NatAsm_faction_support^3
+		min = 0
+		max = KOR_NatAsm_JP_seats
+	}
+	clamp_variable = {
+		var = KOR_NatAsm_faction_support^4
+		min = 0
+		max = KOR_NatAsm_PP_seats
+	}
+	clamp_variable = {
+		var = KOR_NatAsm_faction_support^5
+		min = 0
+		max = KOR_NatAsm_Ind_seats
+	}
+	for_each_loop = {
+		array = KOR_NatAsm_faction_support
+		index = i
+		value = val
+
+		if = {
+			limit = { check_variable = { i < 6 } }
+			round_variable = KOR_NatAsm_faction_support^i
+		}
+	}
+	set_temp_variable = { KOR_Current_Ordinance_Votes_temp = 0 }
+	for_each_loop = {
+		array = KOR_NatAsm_faction_support
+		add_to_temp_variable = { KOR_Current_Ordinance_Votes_temp = KOR_NatAsm_faction_support^i }
+	}
+	set_variable = { KOR_Current_Ordinance_Votes = KOR_Current_Ordinance_Votes_temp }
+}
+
+KOR_add_slight_probs = {
+	add_to_temp_variable = { DP_prob = 0.1 }
+	add_to_temp_variable = { PPP_prob = 0.1 }
+	add_to_temp_variable = { JP_prob = 0.1 }
+	add_to_temp_variable = { PP_prob = 0.1 }
+	add_to_temp_variable = { Ind_prob = 0.1 }
+}
+
+KOR_check_NatAsm_negative_seats = {
+	## Makes sure there are no factions that has negative seats, monke code, but it works
+	# - Scars
+	set_temp_variable = { negative = 0 }
+	if = {
+		limit = {
+			check_variable = { KOR_NatAsm_DP_seats < 0 }
+		}
+		add_to_temp_variable = { negative = KOR_NatAsm_DP_seats }
+		set_variable = { KOR_NatAsm_DP_seats = 0 }
+	}
+	if = {
+		limit = {
+			check_variable = { KOR_NatAsm_PPP_seats < 0 }
+		}
+		add_to_temp_variable = { negative = KOR_NatAsm_PPP_seats }
+		set_variable = { KOR_NatAsm_PPP_seats = 0 }
+	}
+	if = {
+		limit = {
+			check_variable = { KOR_NatAsm_JP_seats < 0 }
+		}
+		add_to_temp_variable = { negative = KOR_NatAsm_JP_seats }
+		set_variable = { KOR_NatAsm_JP_seats = 0 }
+	}
+	if = {
+		limit = {
+			check_variable = { KOR_NatAsm_PP_seats < 0 }
+		}
+		add_to_temp_variable = { negative = KOR_NatAsm_PP_seats }
+		set_variable = { KOR_NatAsm_PP_seats = 0 }
+	}
+	if = {
+		limit = {
+			check_variable = { KOR_NatAsm_Ind_seats < 0 }
+		}
+		add_to_temp_variable = { negative = KOR_NatAsm_Ind_seats }
+		set_variable = { KOR_NatAsm_Ind_seats = 0 }
+	}
+	multiply_temp_variable = { negative = -1 }
+	add_to_temp_array = { most_seats = KOR_NatAsm_DP_seats }
+	add_to_temp_array = { most_seats = KOR_NatAsm_PPP_seats }
+	add_to_temp_array = { most_seats = KOR_NatAsm_JP_seats }
+	add_to_temp_array = { most_seats = KOR_NatAsm_PP_seats }
+	add_to_temp_array = { most_seats = KOR_NatAsm_Ind_seats }
+	find_highest_in_array = {
+		array = most_seats
+		index = most
+	}
+	add_to_temp_variable = { most = 1 }
+	if = {
+		limit = { check_variable = { most = 1 } }
+		add_to_variable = { KOR_NatAsm_DP_seats = negative }
+	}
+	else_if = {
+		limit = { check_variable = { most = 2 } }
+		add_to_variable = { KOR_NatAsm_PPP_seats = negative }
+	}
+	else_if = {
+		limit = { check_variable = { most = 3 } }
+		add_to_variable = { KOR_NatAsm_JP_seats = negative }
+	}
+	else_if = {
+		limit = { check_variable = { most = 4 } }
+		add_to_variable = { KOR_NatAsm_PP_seats = negative }
+	}
+	else_if = {
+		limit = { check_variable = { most = 5 } }
+		add_to_variable = { KOR_NatAsm_Ind_seats = negative }
+	}
+}
+
+# Adds `amount` (positive or negative) seats to `KOR_NatAsm_faction`, taking or giving to other factions
+# Used by the GNG_[add/sub]_[1/3/5/10]_seat_[faction] scripted effects
+KOR_modify_NatAsm_seats = {
+	set_temp_variable = { unit = 1 }
+	set_temp_variable = { KOR_NatAsm_max_seats_temp = 300 }
+	if = {
+		limit = { has_country_flag = KOR_NatAsm_460_seats_flag }
+		set_temp_variable = { KOR_NatAsm_max_seats_temp = 460 }
+	}
+	if = {
+		limit = { check_variable = { amount < 0 } }
+		multiply_temp_variable = { amount = -1 }
+
+		multiply_temp_variable = { unit = -1 }
+	}
+
+	for_loop_effect = {
+		start = 0
+		end = amount
+		value = i
+
+		set_temp_variable = { DP_prob = KOR_NatAsm_DP_seats }
+		set_temp_variable = { PPP_prob = KOR_NatAsm_PPP_seats }
+		set_temp_variable = { JP_prob = KOR_NatAsm_JP_seats }
+		set_temp_variable = { PP_prob = KOR_NatAsm_PP_seats }
+		set_temp_variable = { Ind_prob = KOR_NatAsm_Ind_seats }
+
+		if = {
+			limit = { check_variable = { unit < 0 } }
+		}
+
+
+		# Determine if we can actually add or remove a seat from the specified faction
+		set_temp_variable = { ok = 1 }
+		if = {
+			limit = {
+				check_variable = { KOR_NatAsm_faction = 1 }
+				OR = { check_variable = { KOR_NatAsm_DP_seats < KOR_NatAsm_max_seats_temp } check_variable = { unit < 0 } }
+				OR = { check_variable = { KOR_NatAsm_DP_seats > 0 } check_variable = { unit > 0 } }
+			}
+			if = {
+				limit = {
+					check_variable = { KOR_NatAsm_DP_seats = KOR_NatAsm_max_seats_temp }
+					check_variable = { unit < 0 }
+				}
+				KOR_add_slight_probs = yes
+			}
+			add_to_variable = { KOR_NatAsm_DP_seats = unit }
+			set_temp_variable = { DP_prob = 0 }
+		}
+		else_if = {
+			limit = {
+				check_variable = { KOR_NatAsm_faction = 2 }
+				OR = { check_variable = { KOR_NatAsm_PPP_seats < KOR_NatAsm_max_seats_temp } check_variable = { unit < 0 } }
+				OR = { check_variable = { KOR_NatAsm_PPP_seats > 0 } check_variable = { unit > 0 } }
+			}
+			if = {
+				limit = {
+					check_variable = { KOR_NatAsm_PPP_seats = KOR_NatAsm_max_seats_temp }
+					check_variable = { unit < 0 }
+				}
+				KOR_add_slight_probs = yes
+			}
+			add_to_variable = { KOR_NatAsm_PPP_seats = unit }
+			set_temp_variable = { PPP_prob = 0 }
+		}
+		else_if = {
+			limit = {
+				check_variable = { KOR_NatAsm_faction = 3 }
+				OR = { check_variable = { KOR_NatAsm_JP_seats < KOR_NatAsm_max_seats_temp } check_variable = { unit < 0 } }
+				OR = { check_variable = { KOR_NatAsm_JP_seats > 0 } check_variable = { unit > 0 } }
+			}
+			if = {
+				limit = {
+					check_variable = { KOR_NatAsm_JP_seats = KOR_NatAsm_max_seats_temp }
+					check_variable = { unit < 0 }
+				}
+				KOR_add_slight_probs = yes
+			}
+			add_to_variable = { KOR_NatAsm_JP_seats = unit }
+			set_temp_variable = { JP_prob = 0 }
+		}
+		else_if = {
+			limit = {
+				check_variable = { KOR_NatAsm_faction = 4 }
+				OR = { check_variable = { KOR_NatAsm_PP_seats < KOR_NatAsm_max_seats_temp } check_variable = { unit < 0 } }
+				OR = { check_variable = { KOR_NatAsm_PP_seats > 0 } check_variable = { unit > 0 } }
+			}
+			if = {
+				limit = {
+					check_variable = { KOR_NatAsm_PP_seats = KOR_NatAsm_max_seats_temp }
+					check_variable = { unit < 0 }
+				}
+				KOR_add_slight_probs = yes
+			}
+			add_to_variable = { KOR_NatAsm_PP_seats = unit }
+			set_temp_variable = { PP_prob = 0 }
+		}
+		else_if = {
+			limit = {
+				check_variable = { KOR_NatAsm_faction = 5 }
+				OR = { check_variable = { KOR_NatAsm_Ind_seats < KOR_NatAsm_max_seats_temp } check_variable = { unit < 0 } }
+				OR = { check_variable = { KOR_NatAsm_Ind_seats > 0 } check_variable = { unit > 0 } }
+			}
+			if = {
+				limit = {
+					check_variable = { KOR_NatAsm_Ind_seats = KOR_NatAsm_max_seats_temp }
+					check_variable = { unit < 0 }
+				}
+				KOR_add_slight_probs = yes
+			}
+			add_to_variable = { KOR_NatAsm_Ind_seats = unit }
+			set_temp_variable = { Ind_prob = 0 }
+		}
+		else = {
+			set_temp_variable = { ok = 0 }
+		}
+
+		# # Block adding or subtracting from factions not currently in play
+		# if = {
+		# 	limit = { has_country_flag = GNG_legco_stage_2 }
+		# 	set_temp_variable = { Ind_prob = 0 }
+		# 	set_temp_variable = { PP_prob = 0 }
+		# }
+		# else = {
+		# 	set_temp_variable = { cheungkong_prob = 0 }
+		# 	set_temp_variable = { hitachi_prob = 0 }
+		# }
+		# #Block CK and Sony from taking from eachother
+		# if = {
+		# 	limit = { check_variable = { KOR_NatAsm_faction = 3 } }
+		# 	set_temp_variable = { cheungkong_prob = 0 }
+		# }
+		# if = {
+		# 	limit = { check_variable = { KOR_NatAsm_faction = 6 } }
+		# 	set_temp_variable = { DP_prob = 0 }
+		# }
+
+		# Use weighted random to pick the target
+		if = {
+			limit = { check_variable = { ok = 1 } }
+
+			random_list = {
+				var:DP_prob = {
+					subtract_from_variable = { KOR_NatAsm_DP_seats = unit }
+				}
+				var:PPP_prob = {
+					subtract_from_variable = { KOR_NatAsm_PPP_seats = unit }
+				}
+				var:JP_prob = {
+					subtract_from_variable = { KOR_NatAsm_JP_seats = unit }
+				}
+				var:PP_prob = {
+					subtract_from_variable = { KOR_NatAsm_PP_seats = unit }
+				}
+				var:Ind_prob = {
+					subtract_from_variable = { KOR_NatAsm_Ind_seats = unit }
+				}
+			}
+		}
+	}
+	KOR_check_votes_NatAsm = yes
+	KOR_rerender_NatAsm = yes
+}
+
+KOR_rerender_NatAsm = {	# TFRKPHN: 우리공화당 칸 추가 (orp_build.py)
+	if = { limit = { NOT = { has_variable = KOR_NatAsm_ORP_seats } } set_variable = { KOR_NatAsm_ORP_seats = 0 } }
+	set_temp_variable = { KOR_NatAsm_DP_seats_temp = KOR_NatAsm_DP_seats }
+	set_temp_variable = { KOR_NatAsm_PPP_seats_temp = KOR_NatAsm_PPP_seats }
+	set_temp_variable = { KOR_NatAsm_ORP_seats_temp = KOR_NatAsm_ORP_seats }
+	set_temp_variable = { KOR_NatAsm_JP_seats_temp = KOR_NatAsm_JP_seats }
+	set_temp_variable = { KOR_NatAsm_PP_seats_temp = KOR_NatAsm_PP_seats }
+	set_temp_variable = { KOR_NatAsm_Ind_seats_temp = KOR_NatAsm_Ind_seats }
+	set_temp_variable = { KOR_NatAsm_seats_per_percent_temp = 3 }
+	if = {
+		limit = { has_country_flag = KOR_NatAsm_460_seats_flag }
+		set_temp_variable = { KOR_NatAsm_seats_per_percent_temp = 4.6 }
+	}
+	divide_temp_variable = { KOR_NatAsm_DP_seats_temp = KOR_NatAsm_seats_per_percent_temp }
+	divide_temp_variable = { KOR_NatAsm_PPP_seats_temp = KOR_NatAsm_seats_per_percent_temp }
+	divide_temp_variable = { KOR_NatAsm_ORP_seats_temp = KOR_NatAsm_seats_per_percent_temp }
+	divide_temp_variable = { KOR_NatAsm_JP_seats_temp = KOR_NatAsm_seats_per_percent_temp }
+	divide_temp_variable = { KOR_NatAsm_PP_seats_temp = KOR_NatAsm_seats_per_percent_temp }
+	divide_temp_variable = { KOR_NatAsm_Ind_seats_temp = KOR_NatAsm_seats_per_percent_temp }
+	round_temp_variable = KOR_NatAsm_DP_seats_temp
+	round_temp_variable = KOR_NatAsm_PPP_seats_temp
+	round_temp_variable = KOR_NatAsm_ORP_seats_temp
+	round_temp_variable = KOR_NatAsm_JP_seats_temp
+	round_temp_variable = KOR_NatAsm_PP_seats_temp
+	round_temp_variable = KOR_NatAsm_Ind_seats_temp
+
+	set_variable = { KOR_PPP_left = -1 }
+	set_variable = { KOR_Ind_left = -1 }
+
+	clear_array = KOR_NatAsm_factions
+	add_to_array = { KOR_NatAsm_factions = 1 }
+	add_to_array = { KOR_NatAsm_factions = 2 }
+	if = { limit = { check_variable = { KOR_NatAsm_ORP_seats > 0 } } add_to_array = { KOR_NatAsm_factions = 6 } }
+	add_to_array = { KOR_NatAsm_factions = 3 }
+	add_to_array = { KOR_NatAsm_factions = 4 }
+	add_to_array = { KOR_NatAsm_factions = 5 }
+
+	set_variable = { KOR_DP_right = KOR_NatAsm_DP_seats_temp }
+
+	set_variable = { KOR_PPP_left = KOR_DP_right }
+	set_variable = { KOR_PPP_right = KOR_PPP_left }
+	add_to_variable = { KOR_PPP_right = KOR_NatAsm_PPP_seats_temp }
+
+	set_variable = { KOR_ORP_left = KOR_PPP_right }
+	set_variable = { KOR_ORP_right = KOR_ORP_left }
+	add_to_variable = { KOR_ORP_right = KOR_NatAsm_ORP_seats_temp }
+
+	set_variable = { KOR_PP_left = KOR_ORP_right }
+	set_variable = { KOR_PP_right = KOR_PP_left }
+	add_to_variable = { KOR_PP_right = KOR_NatAsm_PP_seats_temp }
+
+	set_variable = { KOR_JP_left = KOR_PP_right }
+	set_variable = { KOR_JP_right = KOR_JP_left }
+	add_to_variable = { KOR_JP_right = KOR_NatAsm_JP_seats_temp }
+
+	set_variable = { KOR_Ind_left = KOR_JP_right }
+	set_variable = { KOR_Ind_display = KOR_Ind_left }
+
+	set_variable = { KOR_JP_display = KOR_JP_left }
+	multiply_variable = { KOR_JP_display = 1000 }
+	add_to_variable = { KOR_JP_display = KOR_JP_right }
+
+	set_variable = { KOR_PP_display = KOR_PP_left }
+	multiply_variable = { KOR_PP_display = 1000 }
+	add_to_variable = { KOR_PP_display = KOR_PP_right }
+
+	set_variable = { KOR_ORP_display = KOR_ORP_left }
+	multiply_variable = { KOR_ORP_display = 1000 }
+	add_to_variable = { KOR_ORP_display = KOR_ORP_right }
+
+	set_variable = { KOR_PPP_display = KOR_PPP_left }
+	multiply_variable = { KOR_PPP_display = 1000 }
+	add_to_variable = { KOR_PPP_display = KOR_PPP_right }
+
+
+	clear_array = KOR_NatAsm_faction
+	resize_array = {
+		array = KOR_NatAsm_faction
+		value = 1
+		size = KOR_DP_right
+	}
+	resize_array = {
+		array = KOR_NatAsm_faction
+		value = 2
+		size = KOR_PPP_right
+	}
+	resize_array = {
+		array = KOR_NatAsm_faction
+		value = 6
+		size = KOR_ORP_right
+	}
+	resize_array = {
+		array = KOR_NatAsm_faction
+		value = 4
+		size = KOR_PP_right
+	}
+	resize_array = {
+		array = KOR_NatAsm_faction
+		value = 3
+		size = KOR_JP_right
+	}
+	resize_array = {
+		array = KOR_NatAsm_faction
+		value = 5
+		size = 100
+	}
+}
+KOR_NatAsm_remove_speaker_effect = {
+	clr_country_flag = speaker_moon_hee_sang
+	clr_country_flag = speaker_park_byeong_seug
+	clr_country_flag = speaker_kim_jin_pyo
+	clr_country_flag = speaker_woo_won_shik
+	clr_country_flag = speaker_jeong_dong_yeong
+	clr_country_flag = speaker_cho_jeong_shik
+	clr_country_flag = speaker_lee_in_yeong
+	clr_country_flag = speaker_jeong_seong_ho
+	clr_country_flag = speaker_jeong_cheong_rae
+	clr_country_flag = speaker_cho_seung_rae
+	clr_country_flag = speaker_jeong_jin_seok
+	clr_country_flag = speaker_cho_gyeong_tae
+	clr_country_flag = speaker_ha_tae_gyung
+	clr_country_flag = speaker_kim_tae_ho
+	clr_country_flag = speaker_jang_dong_hyeok
+	clr_country_flag = speaker_bae_hyeon_jin
+	clr_country_flag = speaker_seol_hoon
+	clr_country_flag = speaker_joo_ho_yeong
+	clr_country_flag = speaker_park_ji_won
+	clr_country_flag = speaker_kwon_yeong_se
+	clr_country_flag = speaker_song_yeong_gil
+	clr_country_flag = speaker_hong_yeong_pyo
+	clr_country_flag = speaker_yoon_sang_hyeon
+	clr_country_flag = speaker_kim_ki_hyeon
+	clr_country_flag = speaker_kim_hak_yong
+	clr_country_flag = speaker_roh_woon_rae
+	clr_country_flag = speaker_yu_eui_dong
+	clr_country_flag = speaker_an_kyu_baek
+	clr_country_flag = speaker_kim_tae_nyeon
+	clr_country_flag = speaker_jeon_byung_heon
+	clr_country_flag = speaker_ahn_cheol_soo
+	clr_country_flag = speaker_na_kyung_won
+	clr_country_flag = speaker_sim_sang_jung
+	clr_country_flag = speaker_yoon_ho_jung
+	clr_country_flag = speaker_kim_jong_min
+	clr_country_flag = speaker_kim_se_yeon
+	clr_country_flag = speaker_kim_seon_dong
+	clr_country_flag = speaker_lee_hak_yeong
+	clr_country_flag = speaker_min_hong_cheol
+	clr_country_flag = speaker_kang_eun_mi
+	clr_country_flag = speaker_kim_jong_hoon
+}

@@ -214,6 +214,15 @@ if = { limit = { original_tag = KOR date > 2026.4.3 date < 2026.6.1 NOT = { has_
 if = { limit = { has_country_flag = TFRKPHN_l6_started has_variable = TFRKPHN_l6_days NOT = { has_country_flag = TFRKPHN_l6_done } } TFRKPHN_l6_daily = yes }
 if = { limit = { has_country_flag = TFRKPHN_l6_started has_variable = TFRKPHN_l6_days date > 2026.6.2 NOT = { has_country_flag = TFRKPHN_l6_done } } TFRKPHN_l6_count = yes }
 # <<< 2026 지방선거 상황실
+# >>> 홍준표 유족 (hong_grief_build.py)
+if = { limit = { has_country_flag = TFRKP_HN_hong_president has_completed_focus = TFRKPHN_hong_b02_02 NOT = { has_country_flag = TFRKPHN_grief_set } } set_country_flag = TFRKPHN_grief_set country_event = { id = tfrkphn.6970 days = 150 } }
+# <<< 홍준표 유족
+# >>> 여당 단체장
+if = { limit = { NOT = { has_country_flag = TFRKPHN_ally_tick } } set_country_flag = { flag = TFRKPHN_ally_tick days = 30 value = 1 } TFRKPHN_ally_apply = yes }
+# <<< 여당 단체장
+# >>> 김정은 생포 (kju_build.py)
+if = { limit = { original_tag = KOR has_country_flag = TFRKPHN_successor_oh_se_hoon NOT = { has_country_flag = TFRKPHN_kju_captured } NOT = { has_country_flag = TFRKPHN_k189_done } OR = { NOT = { country_exists = PRK } PRK = { has_capitulated = yes } } } set_country_flag = TFRKPHN_kju_captured country_event = { id = tfrkphn.6993 days = 2 } }
+# <<< 김정은 생포
 # >>> 개발 중반 (dev_mid_build.py)
 if = { limit = { has_country_flag = TFRKPHN_successor_oh_se_hoon NOT = { has_country_flag = TFRKPHN_dev_1 } has_completed_focus = TFRKPHN_oh_se_hoon_b01_01 date > 2027.8.31 } set_country_flag = TFRKPHN_dev_1 country_event = { id = tfrkphn.6776 } }
 if = { limit = { has_country_flag = TFRKPHN_successor_oh_se_hoon NOT = { has_country_flag = TFRKPHN_dev_2 } has_country_flag = TFRKPHN_dev_1 has_completed_focus = TFRKPHN_oh_se_hoon_b1 has_completed_focus = TFRKPHN_oh_se_hoon_b2 } set_country_flag = TFRKPHN_dev_2 country_event = { id = tfrkphn.6777 } }
@@ -222,16 +231,28 @@ if = { limit = { has_country_flag = TFRKPHN_successor_oh_se_hoon NOT = { has_cou
 if = { limit = { has_country_flag = TFRKPHN_successor_oh_se_hoon NOT = { has_country_flag = TFRKPHN_dev_6 } has_country_flag = TFRKPHN_dev_1 date > 2028.2.11 date < 2028.4.12 } set_country_flag = TFRKPHN_dev_6 country_event = { id = tfrkphn.6781 } }
 if = { limit = { has_country_flag = TFRKPHN_successor_oh_se_hoon NOT = { has_country_flag = TFRKPHN_dev_4 } has_country_flag = TFRKPHN_ge28_done date > 2028.6.10 } set_country_flag = TFRKPHN_dev_4 country_event = { id = tfrkphn.6779 } }
 # <<< 개발 중반
-# >>> 홍준표 유족 (hong_grief_build.py)
-if = { limit = { has_country_flag = TFRKP_HN_hong_president has_completed_focus = TFRKPHN_hong_b02_02 NOT = { has_country_flag = TFRKPHN_grief_set } } set_country_flag = TFRKPHN_grief_set country_event = { id = tfrkphn.6970 days = 150 } }
-# <<< 홍준표 유족
 # >>> 재난 (safety_build.py)
 if = { limit = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_completed_focus = TFRKPHN_oh_se_hoon_e1 NOT = { has_country_flag = TFRKPHN_sf_tick } } set_country_flag = { flag = TFRKPHN_sf_tick days = 180 value = 1 }
 	random_list = { 50 = { } 25 = { if = { limit = { check_variable = { TFRKPHN_sf > 59.5 } } country_event = { id = tfrkphn.6976 } } else = { country_event = { id = tfrkphn.6979 } } } 25 = { if = { limit = { check_variable = { TFRKPHN_sf > 59.5 } } country_event = { id = tfrkphn.6977 } } else = { country_event = { id = tfrkphn.6980 } } } } }
 # <<< 재난
-# >>> 여당 단체장
-if = { limit = { NOT = { has_country_flag = TFRKPHN_ally_tick } } set_country_flag = { flag = TFRKPHN_ally_tick days = 30 value = 1 } TFRKPHN_ally_apply = yes }
-# <<< 여당 단체장
+# >>> 강경파의 반격 (oh_hard_build.py)
+if = { limit = { original_tag = KOR has_country_flag = TFRKPHN_successor_oh_se_hoon NOT = { has_country_flag = TFRKPHN_pr_split } has_completed_focus = TFRKPHN_oh_se_hoon_a3 NOT = { has_country_flag = TFRKPHN_hd_6997 } } set_country_flag = TFRKPHN_hd_6997 country_event = { id = tfrkphn.6997 days = 3 } }
+if = { limit = { original_tag = KOR has_country_flag = TFRKPHN_successor_oh_se_hoon NOT = { has_country_flag = TFRKPHN_pr_split } has_completed_focus = TFRKPHN_oh_se_hoon_c5 NOT = { has_country_flag = TFRKPHN_hd_6998 } } set_country_flag = TFRKPHN_hd_6998 country_event = { id = tfrkphn.6998 days = 3 } }
+if = { limit = { original_tag = KOR has_country_flag = TFRKPHN_successor_oh_se_hoon NOT = { has_country_flag = TFRKPHN_pr_split } has_completed_focus = TFRKPHN_oh_se_hoon_h5 NOT = { has_country_flag = TFRKPHN_hd_6999 } } set_country_flag = TFRKPHN_hd_6999 country_event = { id = tfrkphn.6999 days = 3 } }
+if = { limit = { original_tag = KOR has_country_flag = TFRKPHN_successor_oh_se_hoon NOT = { has_country_flag = TFRKPHN_pr_split } has_completed_focus = TFRKPHN_oh_se_hoon_e3 NOT = { has_country_flag = TFRKPHN_hd_7000 } } set_country_flag = TFRKPHN_hd_7000 country_event = { id = tfrkphn.7000 days = 3 } }
+# <<< 강경파의 반격
+# >>> 끝난 탭 정리 (fade_build.py)
+if = { limit = { original_tag = KOR NOT = { has_country_flag = TFRKPHN_fd_oh_ansim } has_country_flag = TFRKPHN_dn_TFRKPHN_an_d1 has_country_flag = TFRKPHN_dn_TFRKPHN_an_d2 has_country_flag = TFRKPHN_dn_TFRKPHN_an_d3 has_country_flag = TFRKPHN_dn_TFRKPHN_an_d4 } set_country_flag = TFRKPHN_fd_oh_ansim set_country_flag = { flag = TFRKPHN_fdt_oh_ansim value = 1 days = 30 } }
+if = { limit = { original_tag = KOR NOT = { has_country_flag = TFRKPHN_fd_oh_exile } has_country_flag = TFRKPHN_dn_TFRKPHN_ex_d1 has_country_flag = TFRKPHN_dn_TFRKPHN_ex_d2 has_country_flag = TFRKPHN_dn_TFRKPHN_ex_d3 has_country_flag = TFRKPHN_dn_TFRKPHN_ex_d4 has_country_flag = TFRKPHN_dn_TFRKPHN_ex_d5 has_country_flag = TFRKPHN_dn_TFRKPHN_ex_d6 has_country_flag = TFRKPHN_dn_TFRKPHN_ex_d7 has_country_flag = TFRKPHN_dn_TFRKPHN_ex_d8 has_country_flag = TFRKPHN_dn_TFRKPHN_ex_d9 has_country_flag = TFRKPHN_dn_TFRKPHN_ex_d10 has_country_flag = TFRKPHN_dn_TFRKPHN_ex_d11 has_country_flag = TFRKPHN_dn_TFRKPHN_ex_d12 } set_country_flag = TFRKPHN_fd_oh_exile set_country_flag = { flag = TFRKPHN_fdt_oh_exile value = 1 days = 30 } }
+if = { limit = { original_tag = KOR NOT = { has_country_flag = TFRKPHN_fd_kdef } has_country_flag = TFRKPHN_dn_TFRKPHN_kdef_law has_country_flag = TFRKPHN_dn_TFRKPHN_kdef_tank has_country_flag = TFRKPHN_dn_TFRKPHN_kdef_jet has_country_flag = TFRKPHN_dn_TFRKPHN_kdef_cluster } set_country_flag = TFRKPHN_fd_kdef set_country_flag = { flag = TFRKPHN_fdt_kdef value = 1 days = 30 } }
+if = { limit = { original_tag = KOR NOT = { has_country_flag = TFRKPHN_fd_oh_pdto } has_country_flag = TFRKPHN_dn_TFRKPHN_pd_d1_1 has_country_flag = TFRKPHN_dn_TFRKPHN_pd_d1_2 has_country_flag = TFRKPHN_dn_TFRKPHN_pd_d2_1 has_country_flag = TFRKPHN_dn_TFRKPHN_pd_d2_2 has_country_flag = TFRKPHN_dn_TFRKPHN_pd_d3_1 has_country_flag = TFRKPHN_dn_TFRKPHN_pd_d4_1 has_country_flag = TFRKPHN_dn_TFRKPHN_pd_d5_1 has_country_flag = TFRKPHN_dn_TFRKPHN_pd_d6_1 has_country_flag = TFRKPHN_dn_TFRKPHN_pd_d7_1 has_country_flag = TFRKPHN_dn_TFRKPHN_pd_d8_1 } set_country_flag = TFRKPHN_fd_oh_pdto set_country_flag = { flag = TFRKPHN_fdt_oh_pdto value = 1 days = 30 } }
+if = { limit = { original_tag = KOR NOT = { has_country_flag = TFRKPHN_fd_dd } has_country_flag = TFRKPHN_dd_done } set_country_flag = TFRKPHN_fd_dd set_country_flag = { flag = TFRKPHN_fdt_dd value = 1 days = 30 } }
+if = { limit = { original_tag = KOR NOT = { has_country_flag = TFRKPHN_fd_hs } has_country_flag = TFRKPHN_hs_done } set_country_flag = TFRKPHN_fd_hs set_country_flag = { flag = TFRKPHN_fdt_hs value = 1 days = 30 } }
+if = { limit = { original_tag = KOR NOT = { has_country_flag = TFRKPHN_fd_sl } has_country_flag = TFRKPHN_sl_done check_variable = { TFRKPHN_sl_claim > 4.5 } } set_country_flag = TFRKPHN_fd_sl set_country_flag = { flag = TFRKPHN_fdt_sl value = 1 days = 30 } }
+if = { limit = { original_tag = KOR NOT = { has_country_flag = TFRKPHN_fd_uni } has_country_flag = TFRKPHN_uni_done } set_country_flag = TFRKPHN_fd_uni set_country_flag = { flag = TFRKPHN_fdt_uni value = 1 days = 30 } }
+if = { limit = { original_tag = KOR NOT = { has_country_flag = TFRKPHN_fd_hg } has_country_flag = TFRKPHN_hg_done has_country_flag = TFRKPHN_hg_done2 } set_country_flag = TFRKPHN_fd_hg set_country_flag = { flag = TFRKPHN_fdt_hg value = 1 days = 30 } }
+if = { limit = { original_tag = KOR NOT = { has_country_flag = TFRKPHN_fd_chb } has_country_flag = TFRKPHN_chb_all_done } set_country_flag = TFRKPHN_fd_chb set_country_flag = { flag = TFRKPHN_fdt_chb value = 1 days = 30 } }
+# <<< 끝난 탭 정리
 # >>> 시장과 도지사 칸 (gov_build.py)
 if = { limit = { NOT = { has_country_flag = TFRKPHN_gov_inited } } TFRKPHN_gov_setup = yes }
 if = { limit = { has_global_flag = TFRKP_mod_setup_global_flag OR = { 1411 = { has_dynamic_modifier = { modifier = KOR_daegu_city } } 1041 = { has_dynamic_modifier = { modifier = KOR_incheon_city } } 869 = { has_dynamic_modifier = { modifier = KOR_gwangju_city } } 525 = { has_dynamic_modifier = { modifier = KOR_daejeon_city } } 1410 = { has_dynamic_modifier = { modifier = KOR_ulsan_city } } 525 = { has_dynamic_modifier = { modifier = KOR_sejong_special_city } } 869 = { has_dynamic_modifier = { modifier = KOR_jeju_special_self_governing_province } } } } TFRKPHN_gov_swap = yes }	# KP가 광역시 칸을 붙인 뒤(on_startup)에 바꿔 끼운다

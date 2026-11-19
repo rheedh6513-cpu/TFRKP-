@@ -28,59 +28,135 @@ TFRKPHN_ally_apply = {
 	if = { limit = { OR = { AND = { check_variable = { ally_rp = 1 } OR = { has_country_flag = TFRKPHN_gv17_g AND = { NOT = { has_country_flag = TFRKPHN_gv17_o } NOT = { has_country_flag = TFRKPHN_gv17_g } date > 2026.6.30 has_country_flag = TFRKPHN_g6_17_p } } } AND = { check_variable = { ally_rp = 0 } OR = { has_country_flag = TFRKPHN_gv17_o AND = { NOT = { has_country_flag = TFRKPHN_gv17_g } NOT = { has_country_flag = TFRKPHN_gv17_o } date > 2026.6.30 has_country_flag = TFRKPHN_g6_17_d } AND = { date > 2022.6.30 NOT = { has_country_flag = TFRKPHN_gv17_g } NOT = { has_country_flag = TFRKPHN_gv17_o } NOT = { AND = { date > 2026.6.30 OR = { has_country_flag = TFRKPHN_g6_17_p has_country_flag = TFRKPHN_g6_17_d } } } } } } } } 869 = { add_to_variable = { TFRKPHN_ally_n = 1 } } }	# 제주특별자치도지사
 	if = { limit = { OR = { AND = { check_variable = { ally_rp = 1 } OR = { has_country_flag = KOR_seoul_mayor_oh_sehoon has_country_flag = KOR_seoul_mayor_cho_eunhee has_country_flag = KOR_seoul_mayor_kim_jaesub } } AND = { check_variable = { ally_rp = 0 } OR = { has_country_flag = KOR_seoul_mayor_park_wonsoon has_country_flag = KOR_seoul_mayor_jeong_wonoh has_country_flag = KOR_seoul_mayor_lee_nakyeon has_country_flag = KOR_seoul_mayor_jeong_cheongrae has_country_flag = KOR_seoul_mayor_park_joomin } } } } 1041 = { add_to_variable = { TFRKPHN_ally_n = 1 } } }	# 서울특별시장
 	if = { limit = { OR = { AND = { check_variable = { ally_rp = 1 } OR = { has_country_flag = KOR_busan_mayor_park_hyeongjoon has_country_flag = KOR_busan_mayor_cho_gyeongtae } } AND = { check_variable = { ally_rp = 0 } has_country_flag = KOR_busan_mayor_jeon_jaesoo } } } 1409 = { add_to_variable = { TFRKPHN_ally_n = 1 } } }	# 부산광역시장
-	525 = {
-		set_variable = { TFRKPHN_ally_bonus = TFRKPHN_ally_n }
-		multiply_variable = { TFRKPHN_ally_bonus = 0.03 }
-		if = { limit = { check_variable = { TFRKPHN_ally_n > 0 } is_owned_by = KOR NOT = { has_dynamic_modifier = { modifier = TFRKPHN_local_ally } } } add_dynamic_modifier = { modifier = TFRKPHN_local_ally } }
-		if = { limit = { check_variable = { TFRKPHN_ally_n < 1 } has_dynamic_modifier = { modifier = TFRKPHN_local_ally } } remove_dynamic_modifier = { modifier = TFRKPHN_local_ally } }
+	if = { limit = { check_variable = { ally_rp = 1 } }
+		525 = {
+			set_variable = { TFRKPHN_ally_bonus = TFRKPHN_ally_n }
+			multiply_variable = { TFRKPHN_ally_bonus = 0.03 }
+			if = { limit = { has_dynamic_modifier = { modifier = TFRKPHN_local_ally_dp } } remove_dynamic_modifier = { modifier = TFRKPHN_local_ally_dp } }
+			if = { limit = { check_variable = { TFRKPHN_ally_n > 0 } is_owned_by = KOR NOT = { has_dynamic_modifier = { modifier = TFRKPHN_local_ally } } } add_dynamic_modifier = { modifier = TFRKPHN_local_ally } }
+			if = { limit = { check_variable = { TFRKPHN_ally_n < 1 } has_dynamic_modifier = { modifier = TFRKPHN_local_ally } } remove_dynamic_modifier = { modifier = TFRKPHN_local_ally } }
+		}
+		869 = {
+			set_variable = { TFRKPHN_ally_bonus = TFRKPHN_ally_n }
+			multiply_variable = { TFRKPHN_ally_bonus = 0.03 }
+			if = { limit = { has_dynamic_modifier = { modifier = TFRKPHN_local_ally_dp } } remove_dynamic_modifier = { modifier = TFRKPHN_local_ally_dp } }
+			if = { limit = { check_variable = { TFRKPHN_ally_n > 0 } is_owned_by = KOR NOT = { has_dynamic_modifier = { modifier = TFRKPHN_local_ally } } } add_dynamic_modifier = { modifier = TFRKPHN_local_ally } }
+			if = { limit = { check_variable = { TFRKPHN_ally_n < 1 } has_dynamic_modifier = { modifier = TFRKPHN_local_ally } } remove_dynamic_modifier = { modifier = TFRKPHN_local_ally } }
+		}
+		870 = {
+			set_variable = { TFRKPHN_ally_bonus = TFRKPHN_ally_n }
+			multiply_variable = { TFRKPHN_ally_bonus = 0.03 }
+			if = { limit = { has_dynamic_modifier = { modifier = TFRKPHN_local_ally_dp } } remove_dynamic_modifier = { modifier = TFRKPHN_local_ally_dp } }
+			if = { limit = { check_variable = { TFRKPHN_ally_n > 0 } is_owned_by = KOR NOT = { has_dynamic_modifier = { modifier = TFRKPHN_local_ally } } } add_dynamic_modifier = { modifier = TFRKPHN_local_ally } }
+			if = { limit = { check_variable = { TFRKPHN_ally_n < 1 } has_dynamic_modifier = { modifier = TFRKPHN_local_ally } } remove_dynamic_modifier = { modifier = TFRKPHN_local_ally } }
+		}
+		871 = {
+			set_variable = { TFRKPHN_ally_bonus = TFRKPHN_ally_n }
+			multiply_variable = { TFRKPHN_ally_bonus = 0.03 }
+			if = { limit = { has_dynamic_modifier = { modifier = TFRKPHN_local_ally_dp } } remove_dynamic_modifier = { modifier = TFRKPHN_local_ally_dp } }
+			if = { limit = { check_variable = { TFRKPHN_ally_n > 0 } is_owned_by = KOR NOT = { has_dynamic_modifier = { modifier = TFRKPHN_local_ally } } } add_dynamic_modifier = { modifier = TFRKPHN_local_ally } }
+			if = { limit = { check_variable = { TFRKPHN_ally_n < 1 } has_dynamic_modifier = { modifier = TFRKPHN_local_ally } } remove_dynamic_modifier = { modifier = TFRKPHN_local_ally } }
+		}
+		1041 = {
+			set_variable = { TFRKPHN_ally_bonus = TFRKPHN_ally_n }
+			multiply_variable = { TFRKPHN_ally_bonus = 0.03 }
+			if = { limit = { has_dynamic_modifier = { modifier = TFRKPHN_local_ally_dp } } remove_dynamic_modifier = { modifier = TFRKPHN_local_ally_dp } }
+			if = { limit = { check_variable = { TFRKPHN_ally_n > 0 } is_owned_by = KOR NOT = { has_dynamic_modifier = { modifier = TFRKPHN_local_ally } } } add_dynamic_modifier = { modifier = TFRKPHN_local_ally } }
+			if = { limit = { check_variable = { TFRKPHN_ally_n < 1 } has_dynamic_modifier = { modifier = TFRKPHN_local_ally } } remove_dynamic_modifier = { modifier = TFRKPHN_local_ally } }
+		}
+		1409 = {
+			set_variable = { TFRKPHN_ally_bonus = TFRKPHN_ally_n }
+			multiply_variable = { TFRKPHN_ally_bonus = 0.03 }
+			if = { limit = { has_dynamic_modifier = { modifier = TFRKPHN_local_ally_dp } } remove_dynamic_modifier = { modifier = TFRKPHN_local_ally_dp } }
+			if = { limit = { check_variable = { TFRKPHN_ally_n > 0 } is_owned_by = KOR NOT = { has_dynamic_modifier = { modifier = TFRKPHN_local_ally } } } add_dynamic_modifier = { modifier = TFRKPHN_local_ally } }
+			if = { limit = { check_variable = { TFRKPHN_ally_n < 1 } has_dynamic_modifier = { modifier = TFRKPHN_local_ally } } remove_dynamic_modifier = { modifier = TFRKPHN_local_ally } }
+		}
+		1410 = {
+			set_variable = { TFRKPHN_ally_bonus = TFRKPHN_ally_n }
+			multiply_variable = { TFRKPHN_ally_bonus = 0.03 }
+			if = { limit = { has_dynamic_modifier = { modifier = TFRKPHN_local_ally_dp } } remove_dynamic_modifier = { modifier = TFRKPHN_local_ally_dp } }
+			if = { limit = { check_variable = { TFRKPHN_ally_n > 0 } is_owned_by = KOR NOT = { has_dynamic_modifier = { modifier = TFRKPHN_local_ally } } } add_dynamic_modifier = { modifier = TFRKPHN_local_ally } }
+			if = { limit = { check_variable = { TFRKPHN_ally_n < 1 } has_dynamic_modifier = { modifier = TFRKPHN_local_ally } } remove_dynamic_modifier = { modifier = TFRKPHN_local_ally } }
+		}
+		1411 = {
+			set_variable = { TFRKPHN_ally_bonus = TFRKPHN_ally_n }
+			multiply_variable = { TFRKPHN_ally_bonus = 0.03 }
+			if = { limit = { has_dynamic_modifier = { modifier = TFRKPHN_local_ally_dp } } remove_dynamic_modifier = { modifier = TFRKPHN_local_ally_dp } }
+			if = { limit = { check_variable = { TFRKPHN_ally_n > 0 } is_owned_by = KOR NOT = { has_dynamic_modifier = { modifier = TFRKPHN_local_ally } } } add_dynamic_modifier = { modifier = TFRKPHN_local_ally } }
+			if = { limit = { check_variable = { TFRKPHN_ally_n < 1 } has_dynamic_modifier = { modifier = TFRKPHN_local_ally } } remove_dynamic_modifier = { modifier = TFRKPHN_local_ally } }
+		}
+		1412 = {
+			set_variable = { TFRKPHN_ally_bonus = TFRKPHN_ally_n }
+			multiply_variable = { TFRKPHN_ally_bonus = 0.03 }
+			if = { limit = { has_dynamic_modifier = { modifier = TFRKPHN_local_ally_dp } } remove_dynamic_modifier = { modifier = TFRKPHN_local_ally_dp } }
+			if = { limit = { check_variable = { TFRKPHN_ally_n > 0 } is_owned_by = KOR NOT = { has_dynamic_modifier = { modifier = TFRKPHN_local_ally } } } add_dynamic_modifier = { modifier = TFRKPHN_local_ally } }
+			if = { limit = { check_variable = { TFRKPHN_ally_n < 1 } has_dynamic_modifier = { modifier = TFRKPHN_local_ally } } remove_dynamic_modifier = { modifier = TFRKPHN_local_ally } }
+		}
 	}
-	869 = {
-		set_variable = { TFRKPHN_ally_bonus = TFRKPHN_ally_n }
-		multiply_variable = { TFRKPHN_ally_bonus = 0.03 }
-		if = { limit = { check_variable = { TFRKPHN_ally_n > 0 } is_owned_by = KOR NOT = { has_dynamic_modifier = { modifier = TFRKPHN_local_ally } } } add_dynamic_modifier = { modifier = TFRKPHN_local_ally } }
-		if = { limit = { check_variable = { TFRKPHN_ally_n < 1 } has_dynamic_modifier = { modifier = TFRKPHN_local_ally } } remove_dynamic_modifier = { modifier = TFRKPHN_local_ally } }
-	}
-	870 = {
-		set_variable = { TFRKPHN_ally_bonus = TFRKPHN_ally_n }
-		multiply_variable = { TFRKPHN_ally_bonus = 0.03 }
-		if = { limit = { check_variable = { TFRKPHN_ally_n > 0 } is_owned_by = KOR NOT = { has_dynamic_modifier = { modifier = TFRKPHN_local_ally } } } add_dynamic_modifier = { modifier = TFRKPHN_local_ally } }
-		if = { limit = { check_variable = { TFRKPHN_ally_n < 1 } has_dynamic_modifier = { modifier = TFRKPHN_local_ally } } remove_dynamic_modifier = { modifier = TFRKPHN_local_ally } }
-	}
-	871 = {
-		set_variable = { TFRKPHN_ally_bonus = TFRKPHN_ally_n }
-		multiply_variable = { TFRKPHN_ally_bonus = 0.03 }
-		if = { limit = { check_variable = { TFRKPHN_ally_n > 0 } is_owned_by = KOR NOT = { has_dynamic_modifier = { modifier = TFRKPHN_local_ally } } } add_dynamic_modifier = { modifier = TFRKPHN_local_ally } }
-		if = { limit = { check_variable = { TFRKPHN_ally_n < 1 } has_dynamic_modifier = { modifier = TFRKPHN_local_ally } } remove_dynamic_modifier = { modifier = TFRKPHN_local_ally } }
-	}
-	1041 = {
-		set_variable = { TFRKPHN_ally_bonus = TFRKPHN_ally_n }
-		multiply_variable = { TFRKPHN_ally_bonus = 0.03 }
-		if = { limit = { check_variable = { TFRKPHN_ally_n > 0 } is_owned_by = KOR NOT = { has_dynamic_modifier = { modifier = TFRKPHN_local_ally } } } add_dynamic_modifier = { modifier = TFRKPHN_local_ally } }
-		if = { limit = { check_variable = { TFRKPHN_ally_n < 1 } has_dynamic_modifier = { modifier = TFRKPHN_local_ally } } remove_dynamic_modifier = { modifier = TFRKPHN_local_ally } }
-	}
-	1409 = {
-		set_variable = { TFRKPHN_ally_bonus = TFRKPHN_ally_n }
-		multiply_variable = { TFRKPHN_ally_bonus = 0.03 }
-		if = { limit = { check_variable = { TFRKPHN_ally_n > 0 } is_owned_by = KOR NOT = { has_dynamic_modifier = { modifier = TFRKPHN_local_ally } } } add_dynamic_modifier = { modifier = TFRKPHN_local_ally } }
-		if = { limit = { check_variable = { TFRKPHN_ally_n < 1 } has_dynamic_modifier = { modifier = TFRKPHN_local_ally } } remove_dynamic_modifier = { modifier = TFRKPHN_local_ally } }
-	}
-	1410 = {
-		set_variable = { TFRKPHN_ally_bonus = TFRKPHN_ally_n }
-		multiply_variable = { TFRKPHN_ally_bonus = 0.03 }
-		if = { limit = { check_variable = { TFRKPHN_ally_n > 0 } is_owned_by = KOR NOT = { has_dynamic_modifier = { modifier = TFRKPHN_local_ally } } } add_dynamic_modifier = { modifier = TFRKPHN_local_ally } }
-		if = { limit = { check_variable = { TFRKPHN_ally_n < 1 } has_dynamic_modifier = { modifier = TFRKPHN_local_ally } } remove_dynamic_modifier = { modifier = TFRKPHN_local_ally } }
-	}
-	1411 = {
-		set_variable = { TFRKPHN_ally_bonus = TFRKPHN_ally_n }
-		multiply_variable = { TFRKPHN_ally_bonus = 0.03 }
-		if = { limit = { check_variable = { TFRKPHN_ally_n > 0 } is_owned_by = KOR NOT = { has_dynamic_modifier = { modifier = TFRKPHN_local_ally } } } add_dynamic_modifier = { modifier = TFRKPHN_local_ally } }
-		if = { limit = { check_variable = { TFRKPHN_ally_n < 1 } has_dynamic_modifier = { modifier = TFRKPHN_local_ally } } remove_dynamic_modifier = { modifier = TFRKPHN_local_ally } }
-	}
-	1412 = {
-		set_variable = { TFRKPHN_ally_bonus = TFRKPHN_ally_n }
-		multiply_variable = { TFRKPHN_ally_bonus = 0.03 }
-		if = { limit = { check_variable = { TFRKPHN_ally_n > 0 } is_owned_by = KOR NOT = { has_dynamic_modifier = { modifier = TFRKPHN_local_ally } } } add_dynamic_modifier = { modifier = TFRKPHN_local_ally } }
-		if = { limit = { check_variable = { TFRKPHN_ally_n < 1 } has_dynamic_modifier = { modifier = TFRKPHN_local_ally } } remove_dynamic_modifier = { modifier = TFRKPHN_local_ally } }
+	else = {
+		525 = {
+			set_variable = { TFRKPHN_ally_bonus = TFRKPHN_ally_n }
+			multiply_variable = { TFRKPHN_ally_bonus = 0.03 }
+			if = { limit = { has_dynamic_modifier = { modifier = TFRKPHN_local_ally } } remove_dynamic_modifier = { modifier = TFRKPHN_local_ally } }
+			if = { limit = { check_variable = { TFRKPHN_ally_n > 0 } is_owned_by = KOR NOT = { has_dynamic_modifier = { modifier = TFRKPHN_local_ally_dp } } } add_dynamic_modifier = { modifier = TFRKPHN_local_ally_dp } }
+			if = { limit = { check_variable = { TFRKPHN_ally_n < 1 } has_dynamic_modifier = { modifier = TFRKPHN_local_ally_dp } } remove_dynamic_modifier = { modifier = TFRKPHN_local_ally_dp } }
+		}
+		869 = {
+			set_variable = { TFRKPHN_ally_bonus = TFRKPHN_ally_n }
+			multiply_variable = { TFRKPHN_ally_bonus = 0.03 }
+			if = { limit = { has_dynamic_modifier = { modifier = TFRKPHN_local_ally } } remove_dynamic_modifier = { modifier = TFRKPHN_local_ally } }
+			if = { limit = { check_variable = { TFRKPHN_ally_n > 0 } is_owned_by = KOR NOT = { has_dynamic_modifier = { modifier = TFRKPHN_local_ally_dp } } } add_dynamic_modifier = { modifier = TFRKPHN_local_ally_dp } }
+			if = { limit = { check_variable = { TFRKPHN_ally_n < 1 } has_dynamic_modifier = { modifier = TFRKPHN_local_ally_dp } } remove_dynamic_modifier = { modifier = TFRKPHN_local_ally_dp } }
+		}
+		870 = {
+			set_variable = { TFRKPHN_ally_bonus = TFRKPHN_ally_n }
+			multiply_variable = { TFRKPHN_ally_bonus = 0.03 }
+			if = { limit = { has_dynamic_modifier = { modifier = TFRKPHN_local_ally } } remove_dynamic_modifier = { modifier = TFRKPHN_local_ally } }
+			if = { limit = { check_variable = { TFRKPHN_ally_n > 0 } is_owned_by = KOR NOT = { has_dynamic_modifier = { modifier = TFRKPHN_local_ally_dp } } } add_dynamic_modifier = { modifier = TFRKPHN_local_ally_dp } }
+			if = { limit = { check_variable = { TFRKPHN_ally_n < 1 } has_dynamic_modifier = { modifier = TFRKPHN_local_ally_dp } } remove_dynamic_modifier = { modifier = TFRKPHN_local_ally_dp } }
+		}
+		871 = {
+			set_variable = { TFRKPHN_ally_bonus = TFRKPHN_ally_n }
+			multiply_variable = { TFRKPHN_ally_bonus = 0.03 }
+			if = { limit = { has_dynamic_modifier = { modifier = TFRKPHN_local_ally } } remove_dynamic_modifier = { modifier = TFRKPHN_local_ally } }
+			if = { limit = { check_variable = { TFRKPHN_ally_n > 0 } is_owned_by = KOR NOT = { has_dynamic_modifier = { modifier = TFRKPHN_local_ally_dp } } } add_dynamic_modifier = { modifier = TFRKPHN_local_ally_dp } }
+			if = { limit = { check_variable = { TFRKPHN_ally_n < 1 } has_dynamic_modifier = { modifier = TFRKPHN_local_ally_dp } } remove_dynamic_modifier = { modifier = TFRKPHN_local_ally_dp } }
+		}
+		1041 = {
+			set_variable = { TFRKPHN_ally_bonus = TFRKPHN_ally_n }
+			multiply_variable = { TFRKPHN_ally_bonus = 0.03 }
+			if = { limit = { has_dynamic_modifier = { modifier = TFRKPHN_local_ally } } remove_dynamic_modifier = { modifier = TFRKPHN_local_ally } }
+			if = { limit = { check_variable = { TFRKPHN_ally_n > 0 } is_owned_by = KOR NOT = { has_dynamic_modifier = { modifier = TFRKPHN_local_ally_dp } } } add_dynamic_modifier = { modifier = TFRKPHN_local_ally_dp } }
+			if = { limit = { check_variable = { TFRKPHN_ally_n < 1 } has_dynamic_modifier = { modifier = TFRKPHN_local_ally_dp } } remove_dynamic_modifier = { modifier = TFRKPHN_local_ally_dp } }
+		}
+		1409 = {
+			set_variable = { TFRKPHN_ally_bonus = TFRKPHN_ally_n }
+			multiply_variable = { TFRKPHN_ally_bonus = 0.03 }
+			if = { limit = { has_dynamic_modifier = { modifier = TFRKPHN_local_ally } } remove_dynamic_modifier = { modifier = TFRKPHN_local_ally } }
+			if = { limit = { check_variable = { TFRKPHN_ally_n > 0 } is_owned_by = KOR NOT = { has_dynamic_modifier = { modifier = TFRKPHN_local_ally_dp } } } add_dynamic_modifier = { modifier = TFRKPHN_local_ally_dp } }
+			if = { limit = { check_variable = { TFRKPHN_ally_n < 1 } has_dynamic_modifier = { modifier = TFRKPHN_local_ally_dp } } remove_dynamic_modifier = { modifier = TFRKPHN_local_ally_dp } }
+		}
+		1410 = {
+			set_variable = { TFRKPHN_ally_bonus = TFRKPHN_ally_n }
+			multiply_variable = { TFRKPHN_ally_bonus = 0.03 }
+			if = { limit = { has_dynamic_modifier = { modifier = TFRKPHN_local_ally } } remove_dynamic_modifier = { modifier = TFRKPHN_local_ally } }
+			if = { limit = { check_variable = { TFRKPHN_ally_n > 0 } is_owned_by = KOR NOT = { has_dynamic_modifier = { modifier = TFRKPHN_local_ally_dp } } } add_dynamic_modifier = { modifier = TFRKPHN_local_ally_dp } }
+			if = { limit = { check_variable = { TFRKPHN_ally_n < 1 } has_dynamic_modifier = { modifier = TFRKPHN_local_ally_dp } } remove_dynamic_modifier = { modifier = TFRKPHN_local_ally_dp } }
+		}
+		1411 = {
+			set_variable = { TFRKPHN_ally_bonus = TFRKPHN_ally_n }
+			multiply_variable = { TFRKPHN_ally_bonus = 0.03 }
+			if = { limit = { has_dynamic_modifier = { modifier = TFRKPHN_local_ally } } remove_dynamic_modifier = { modifier = TFRKPHN_local_ally } }
+			if = { limit = { check_variable = { TFRKPHN_ally_n > 0 } is_owned_by = KOR NOT = { has_dynamic_modifier = { modifier = TFRKPHN_local_ally_dp } } } add_dynamic_modifier = { modifier = TFRKPHN_local_ally_dp } }
+			if = { limit = { check_variable = { TFRKPHN_ally_n < 1 } has_dynamic_modifier = { modifier = TFRKPHN_local_ally_dp } } remove_dynamic_modifier = { modifier = TFRKPHN_local_ally_dp } }
+		}
+		1412 = {
+			set_variable = { TFRKPHN_ally_bonus = TFRKPHN_ally_n }
+			multiply_variable = { TFRKPHN_ally_bonus = 0.03 }
+			if = { limit = { has_dynamic_modifier = { modifier = TFRKPHN_local_ally } } remove_dynamic_modifier = { modifier = TFRKPHN_local_ally } }
+			if = { limit = { check_variable = { TFRKPHN_ally_n > 0 } is_owned_by = KOR NOT = { has_dynamic_modifier = { modifier = TFRKPHN_local_ally_dp } } } add_dynamic_modifier = { modifier = TFRKPHN_local_ally_dp } }
+			if = { limit = { check_variable = { TFRKPHN_ally_n < 1 } has_dynamic_modifier = { modifier = TFRKPHN_local_ally_dp } } remove_dynamic_modifier = { modifier = TFRKPHN_local_ally_dp } }
+		}
 	}
 }
 TFRKPHN_ruling_pop_up = {

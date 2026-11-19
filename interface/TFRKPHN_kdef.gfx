@@ -1,3 +1,7 @@
 # [안내] K-방산 사건 그림. kdef_build.py가 만든다.
 spriteTypes = {
+	spriteType = { name = "GFX_TFRKPHN_kdef_6789" texturefile = "gfx/event_pictures/TFRKPHN_kdef_6789.png" }
+	spriteType = { name = "GFX_TFRKPHN_kdef_6790" texturefile = "gfx/event_pictures/TFRKPHN_kdef_6790.png" }
+	spriteType = { name = "GFX_TFRKPHN_kdef_6791" texturefile = "gfx/event_pictures/TFRKPHN_kdef_6791.png" }
+	spriteType = { name = "GFX_TFRKPHN_kdef_6792" texturefile = "gfx/event_pictures/TFRKPHN_kdef_6792.png" }
 }

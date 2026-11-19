@@ -1,0 +1,11 @@
+spriteTypes = {
+	spriteType = { name = "GFX_modifiers_TFRKPHN_dam" texturefile = "gfx/interface/state_modifiers/TFRKPHN_dam.png" }
+	spriteType = { name = "GFX_TFRKPHN_hg_map" texturefile = "gfx/interface/decisions/TFRKPHN_hg_map.png" }
+	spriteType = { name = "GFX_TFRKPHN_hg_6985" texturefile = "gfx/event_pictures/TFRKPHN_hg_6985.png" }
+	spriteType = { name = "GFX_TFRKPHN_hg_6986" texturefile = "gfx/event_pictures/TFRKPHN_hg_6986.png" }
+	spriteType = { name = "GFX_TFRKPHN_hg_basin" texturefile = "gfx/interface/decisions/TFRKPHN_hg_basin.png" }
+	frameAnimatedSpriteType = { name = "GFX_TFRKPHN_hg_tab1" texturefile = "gfx/interface/decisions/TFRKPHN_hg_tab1.png" noOfFrames = 2 animation_rate_fps = 0 looping = no play_on_show = no }
+	frameAnimatedSpriteType = { name = "GFX_TFRKPHN_hg_tab2" texturefile = "gfx/interface/decisions/TFRKPHN_hg_tab2.png" noOfFrames = 2 animation_rate_fps = 0 looping = no play_on_show = no }
+	frameAnimatedSpriteType = { name = "GFX_TFRKPHN_hg_btn" texturefile = "gfx/interface/decisions/TFRKPHN_hg_btn.png" noOfFrames = 3 animation_rate_fps = 0 looping = no play_on_show = no }
+	frameAnimatedSpriteType = { name = "GFX_TFRKPHN_hg_btn_bus" texturefile = "gfx/interface/decisions/TFRKPHN_hg_btn_bus.png" noOfFrames = 3 animation_rate_fps = 0 looping = no play_on_show = no }
+}

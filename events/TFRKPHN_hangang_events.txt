@@ -1,0 +1,49 @@
+# [안내] 그레이트 한강. hangang_build.py가 만든다.
+add_namespace = tfrkphn
+country_event = {
+	id = tfrkphn.6985
+	title = tfrkphn.6985.t
+	desc = tfrkphn.6985.d
+	picture = GFX_TFRKPHN_hg_6985
+	is_triggered_only = yes
+	option = { name = tfrkphn.6985.a add_stability = 0.03 add_political_power = 75 }
+}
+country_event = {
+	id = tfrkphn.6986
+	title = tfrkphn.6986.t
+	desc = tfrkphn.6986.d
+	picture = GFX_TFRKPHN_hg_6986
+	is_triggered_only = yes
+	option = { name = tfrkphn.6986.a add_stability = 0.02 add_political_power = 50 }
+}
+# >>> 지도 완공 (숨은 사건)
+country_event = {
+	id = tfrkphn.6987
+	hidden = yes
+	is_triggered_only = yes
+	immediate = { set_variable = { TFRKPHN_hgm_bus = 3 } set_country_flag = TFRKPHN_hg_bus 1041 = { if = { limit = { is_owned_by = KOR } add_building_construction = { type = infrastructure level = 1 instant_build = yes } } } 525 = { if = { limit = { is_owned_by = KOR } add_building_construction = { type = infrastructure level = 1 instant_build = yes } } } if = { limit = { has_country_flag = TFRKPHN_hg_bus has_country_flag = TFRKPHN_hg_river has_country_flag = TFRKPHN_hg_tunnel NOT = { has_country_flag = TFRKPHN_hg_done } } set_country_flag = TFRKPHN_hg_done country_event = { id = tfrkphn.6985 days = 1 } } }
+}
+country_event = {
+	id = tfrkphn.6991
+	hidden = yes
+	is_triggered_only = yes
+	immediate = { set_variable = { TFRKPHN_hgm_imjin = 3 } set_country_flag = TFRKPHN_hg_imjin 1041 = { if = { limit = { is_owned_by = KOR } add_extra_state_shared_building_slots = 1 add_building_construction = { type = power_plant level = 1 instant_build = yes } add_dynamic_modifier = { modifier = TFRKPHN_dam_imjin } } } add_to_variable = { TFRKPHN_sf = 15 } clamp_variable = { var = TFRKPHN_sf min = 0 max = 100 } TFRKPHN_sf_apply = yes if = { limit = { has_country_flag = TFRKPHN_hg_bukhan has_country_flag = TFRKPHN_hg_namhan has_country_flag = TFRKPHN_hg_paldang has_country_flag = TFRKPHN_hg_imjin NOT = { has_country_flag = TFRKPHN_hg_done2 } } set_country_flag = TFRKPHN_hg_done2 country_event = { id = tfrkphn.6986 days = 1 } } }
+}
+country_event = {
+	id = tfrkphn.6988
+	hidden = yes
+	is_triggered_only = yes
+	immediate = { set_variable = { TFRKPHN_hgm_bukhan = 3 } set_country_flag = TFRKPHN_hg_bukhan 871 = { if = { limit = { is_owned_by = KOR } add_extra_state_shared_building_slots = 1 add_building_construction = { type = power_plant level = 1 instant_build = yes } add_dynamic_modifier = { modifier = TFRKPHN_dam_bukhan } } } add_to_variable = { TFRKPHN_sf = 10 } clamp_variable = { var = TFRKPHN_sf min = 0 max = 100 } TFRKPHN_sf_apply = yes if = { limit = { has_country_flag = TFRKPHN_hg_bukhan has_country_flag = TFRKPHN_hg_namhan has_country_flag = TFRKPHN_hg_paldang has_country_flag = TFRKPHN_hg_imjin NOT = { has_country_flag = TFRKPHN_hg_done2 } } set_country_flag = TFRKPHN_hg_done2 country_event = { id = tfrkphn.6986 days = 1 } } }
+}
+country_event = {
+	id = tfrkphn.6990
+	hidden = yes
+	is_triggered_only = yes
+	immediate = { set_variable = { TFRKPHN_hgm_paldang = 3 } set_country_flag = TFRKPHN_hg_paldang 1041 = { if = { limit = { is_owned_by = KOR } add_extra_state_shared_building_slots = 1 add_building_construction = { type = power_plant level = 1 instant_build = yes } add_dynamic_modifier = { modifier = TFRKPHN_dam_paldang } } } add_to_variable = { TFRKPHN_sf = 5 } clamp_variable = { var = TFRKPHN_sf min = 0 max = 100 } TFRKPHN_sf_apply = yes if = { limit = { has_country_flag = TFRKPHN_hg_bukhan has_country_flag = TFRKPHN_hg_namhan has_country_flag = TFRKPHN_hg_paldang has_country_flag = TFRKPHN_hg_imjin NOT = { has_country_flag = TFRKPHN_hg_done2 } } set_country_flag = TFRKPHN_hg_done2 country_event = { id = tfrkphn.6986 days = 1 } } }
+}
+country_event = {
+	id = tfrkphn.6989
+	hidden = yes
+	is_triggered_only = yes
+	immediate = { set_variable = { TFRKPHN_hgm_namhan = 3 } set_country_flag = TFRKPHN_hg_namhan 525 = { if = { limit = { is_owned_by = KOR } add_extra_state_shared_building_slots = 1 add_building_construction = { type = power_plant level = 1 instant_build = yes } add_dynamic_modifier = { modifier = TFRKPHN_dam_namhan } } } add_to_variable = { TFRKPHN_sf = 10 } clamp_variable = { var = TFRKPHN_sf min = 0 max = 100 } TFRKPHN_sf_apply = yes if = { limit = { has_country_flag = TFRKPHN_hg_bukhan has_country_flag = TFRKPHN_hg_namhan has_country_flag = TFRKPHN_hg_paldang has_country_flag = TFRKPHN_hg_imjin NOT = { has_country_flag = TFRKPHN_hg_done2 } } set_country_flag = TFRKPHN_hg_done2 country_event = { id = tfrkphn.6986 days = 1 } } }
+}

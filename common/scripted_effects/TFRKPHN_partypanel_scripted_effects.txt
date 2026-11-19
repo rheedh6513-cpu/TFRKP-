@@ -1,0 +1,16 @@
+# [안내] 당 개혁 탭. partypanel_build.py가 만든다.
+TFRKPHN_pr_apply = {
+	clamp_variable = { var = TFRKPHN_pr_sup min = 0 max = 100 }
+	clamp_variable = { var = TFRKPHN_pr_bk min = 0 max = 100 }
+	set_variable = { TFRKPHN_pr_fs = TFRKPHN_pr_sup }
+	divide_variable = { TFRKPHN_pr_fs = 5 }
+	round_variable = TFRKPHN_pr_fs
+	add_to_variable = { TFRKPHN_pr_fs = 1 }
+	set_variable = { TFRKPHN_pr_fb = TFRKPHN_pr_bk }
+	divide_variable = { TFRKPHN_pr_fb = 5 }
+	round_variable = TFRKPHN_pr_fb
+	add_to_variable = { TFRKPHN_pr_fb = 1 }
+	if = { limit = { check_variable = { TFRKPHN_pr_bk > 59.5 } NOT = { has_country_flag = TFRKPHN_pr_warn } } set_country_flag = TFRKPHN_pr_warn country_event = { id = tfrkphn.6983 days = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_pr_sup > 99.5 } NOT = { has_country_flag = TFRKPHN_pr_done } } set_country_flag = TFRKPHN_pr_done set_country_flag = { flag = TFRKPHN_pr_fade value = 1 days = 30 } country_event = { id = tfrkphn.6984 days = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_pr_bk > 99.5 } NOT = { has_country_flag = TFRKPHN_pr_split } } set_country_flag = TFRKPHN_pr_split set_country_flag = { flag = TFRKPHN_pr_fade value = 1 days = 30 } country_event = { id = tfrkphn.6992 days = 1 } }
+}

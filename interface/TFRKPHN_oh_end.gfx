@@ -1,3 +1,11 @@
 # [안내] 오세훈 판 끝 사건 그림. oh_end_build.py가 만든다.
 spriteTypes = {
+	spriteType = { name = "GFX_TFRKPHN_ohend_6787" texturefile = "gfx/event_pictures/TFRKPHN_ohend_6787.png" }
+	spriteType = { name = "GFX_TFRKPHN_ohend_6783" texturefile = "gfx/event_pictures/TFRKPHN_ohend_6783.png" }
+	spriteType = { name = "GFX_TFRKPHN_ohend_6782" texturefile = "gfx/event_pictures/TFRKPHN_ohend_6782.png" }
+	spriteType = { name = "GFX_TFRKPHN_ohend_6788" texturefile = "gfx/event_pictures/TFRKPHN_ohend_6788.png" }
+	spriteType = { name = "GFX_TFRKPHN_ohend_6784" texturefile = "gfx/event_pictures/TFRKPHN_ohend_6784.png" }
+	spriteType = { name = "GFX_TFRKPHN_ohend_6785" texturefile = "gfx/event_pictures/TFRKPHN_ohend_6785.png" }
+	spriteType = { name = "GFX_TFRKPHN_ohend_6786" texturefile = "gfx/event_pictures/TFRKPHN_ohend_6786.png" }
+	spriteType = { name = "GFX_TFRKPHN_ohend_6887" texturefile = "gfx/event_pictures/TFRKPHN_ohend_6887.png" }
 }

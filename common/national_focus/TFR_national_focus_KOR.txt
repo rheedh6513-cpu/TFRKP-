@@ -964,8 +964,9 @@ focus_tree = {
 		id = KOR_democratic_party
 		dynamic = yes	# TFRKP Hong Nak: 이름이 후보에 따라 바뀐다. 이게 없으면 이재명 대 홍준표 판에서도 이낙연 판 이름이 나왔다 (2026-11-17)
 		icon = GFX_KOR_democratic_party
-		available = {
-			has_country_flag = KOR_sided_with_lee
+		available = {	# TFRKP Hong Nak: 후보 이름이 맞게 나오도록 (elec22_tt_fix.py)
+			if = { limit = { has_country_flag = TFRKP_HN_DPK_lee_nakyeon } custom_trigger_tooltip = { tooltip = TFRKPHN_sided_nak_tt has_country_flag = KOR_sided_with_lee } }
+			else = { has_country_flag = KOR_sided_with_lee }
 		}
 		prerequisite = { focus = KOR_2022_election }
 		relative_position_id = KOR_2022_election
@@ -987,8 +988,9 @@ focus_tree = {
 		id = KOR_people_power_party
 		dynamic = yes	# TFRKP Hong Nak: 이름이 후보에 따라 바뀐다. 이게 없으면 이재명 대 홍준표 판에서도 이낙연 판 이름이 나왔다 (2026-11-17)
 		icon = GFX_KOR_people_power_party
-		available = {
-			has_country_flag = KOR_sided_with_yoon
+		available = {	# TFRKP Hong Nak: 후보 이름이 맞게 나오도록 (elec22_tt_fix.py)
+			if = { limit = { has_country_flag = TFRKP_HN_PPP_hong } custom_trigger_tooltip = { tooltip = TFRKPHN_sided_hong_tt has_country_flag = KOR_sided_with_yoon } }
+			else = { has_country_flag = KOR_sided_with_yoon }
 		}
 		prerequisite = { focus = KOR_2022_election }
 		relative_position_id = KOR_2022_election
@@ -1228,8 +1230,9 @@ focus_tree = {
 	focus = {
 		id = TFRKPHN_e22_democratic_party
 		icon = GFX_focus_TFRKPHN_nak_flag
-		available = {
-			has_country_flag = KOR_sided_with_lee
+		available = {	# TFRKP Hong Nak: 후보 이름이 맞게 나오도록 (elec22_tt_fix.py)
+			if = { limit = { has_country_flag = TFRKP_HN_DPK_lee_nakyeon } custom_trigger_tooltip = { tooltip = TFRKPHN_sided_nak_tt has_country_flag = KOR_sided_with_lee } }
+			else = { has_country_flag = KOR_sided_with_lee }
 		}
 		prerequisite = { focus = TFRKPHN_e22_2022_election }
 		relative_position_id = TFRKPHN_e22_2022_election
@@ -1250,8 +1253,9 @@ focus_tree = {
 	focus = {
 		id = TFRKPHN_e22_people_power_party
 		icon = GFX_KOR_people_power_party
-		available = {
-			has_country_flag = KOR_sided_with_yoon
+		available = {	# TFRKP Hong Nak: 후보 이름이 맞게 나오도록 (elec22_tt_fix.py)
+			if = { limit = { has_country_flag = TFRKP_HN_PPP_hong } custom_trigger_tooltip = { tooltip = TFRKPHN_sided_hong_tt has_country_flag = KOR_sided_with_yoon } }
+			else = { has_country_flag = KOR_sided_with_yoon }
 		}
 		prerequisite = { focus = TFRKPHN_e22_2022_election }
 		relative_position_id = TFRKPHN_e22_2022_election

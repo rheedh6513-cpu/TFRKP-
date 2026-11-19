@@ -1,3 +1,4 @@
 spriteTypes = {
 	spriteType = { name = "GFX_modifiers_TFRKPHN_local_ally" texturefile = "gfx/interface/state_modifiers/TFRKPHN_local_ally.png" }
+	spriteType = { name = "GFX_modifiers_TFRKPHN_local_ally_dp" texturefile = "gfx/interface/state_modifiers/TFRKPHN_local_ally_dp.png" }
 }

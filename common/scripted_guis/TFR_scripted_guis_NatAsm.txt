@@ -1,0 +1,49 @@
+scripted_gui = {
+	TFR_KOR_national_assembly = {
+		context_type = decision_category
+		window_name = TFR_KOR_national_assembly_container
+
+		properties = {
+			NatAsm_DP_bar = {
+				frame = KOR_DP_right
+			}
+			NatAsm_ORP_bar = {
+				frame = KOR_ORP_display
+			}
+			NatAsm_PPP_bar = {
+				frame = KOR_PPP_display
+			}
+			NatAsm_JP_bar = {
+				frame = KOR_JP_display
+			}
+			NatAsm_PP_bar = {
+				frame = KOR_PP_display
+			}
+			NatAsm_Ind_bar = {
+				frame = KOR_Ind_display
+			}
+			NatAsm_member_icon = {
+				frame = KOR_NatAsm_faction
+			}
+		}
+		triggers = {
+			NatAsm_cover_visible = {
+				OR = {
+					has_country_flag = KOR_yoon_under_martial_law
+					has_country_flag = KOR_NatAsm_dismentled_flag
+				}
+				NOT = { has_country_flag = KOR_NatAsm_new_established_flag }
+			}
+		}
+		dynamic_lists = {
+			NatAsm_member_grid = {
+				array = KOR_NatAsm_factions
+				index = KOR_NatAsm_faction_idx
+				value = KOR_NatAsm_faction
+				change_scope = no
+				entry_container = NatAsm_member_entry
+			}
+		}
+	}
+
+}

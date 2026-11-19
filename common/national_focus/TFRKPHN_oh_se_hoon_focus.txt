@@ -58,7 +58,7 @@ focus_tree = {
 			add_political_power = 50
 			add_popularity = { ideology = conservative popularity = 0.03 }
 			custom_effect_tooltip = TFRKPHN_oh_fx_a2_tt
-			hidden_effect = { set_variable = { TFRKPHN_sd_delta = 2 } TFRKPHN_sd_add_north = yes set_variable = { TFRKPHN_sd_delta = 2 } TFRKPHN_sd_add_sw = yes TFRKPHN_sd_refresh = yes }
+			hidden_effect = { set_variable = { TFRKPHN_sd_delta = 2 } TFRKPHN_sd_add_north = yes set_variable = { TFRKPHN_sd_delta = 2 } TFRKPHN_sd_add_sw = yes TFRKPHN_sd_refresh = yes country_event = { id = tfrkphn.6982 days = 20 } }
 			hidden_effect = { country_event = { id = tfrkphn.6701 days = 1 } }
 		}
 	}
@@ -331,7 +331,7 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 50
 			custom_effect_tooltip = TFRKPHN_oh_fx_c2_tt
-			hidden_effect = { set_variable = { TFRKPHN_sd_delta = 2 } TFRKPHN_sd_add_north = yes TFRKPHN_sd_refresh = yes }
+			hidden_effect = { set_variable = { TFRKPHN_sd_delta = 2 } TFRKPHN_sd_add_north = yes TFRKPHN_sd_refresh = yes set_variable = { TFRKPHN_dd = 2 } TFRKPHN_dd_apply = yes }
 		}
 	}
 
@@ -365,7 +365,7 @@ focus_tree = {
 			add_political_power = 50
 			add_stability = 0.03
 			custom_effect_tooltip = TFRKPHN_oh_fx_c5_tt
-			hidden_effect = { add_to_variable = { TFRKPHN_sd_gap = -1 } TFRKPHN_sd_refresh = yes set_variable = { TFRKPHN_sd_delta = 2 } TFRKPHN_sd_add_se = yes set_variable = { TFRKPHN_sd_delta = 2 } TFRKPHN_sd_add_north = yes set_variable = { TFRKPHN_sd_delta = 2 } TFRKPHN_sd_add_sw = yes TFRKPHN_sd_refresh = yes }
+			hidden_effect = { add_to_variable = { TFRKPHN_sd_gap = -1 } TFRKPHN_sd_refresh = yes set_variable = { TFRKPHN_sd_delta = 2 } TFRKPHN_sd_add_se = yes set_variable = { TFRKPHN_sd_delta = 2 } TFRKPHN_sd_add_north = yes set_variable = { TFRKPHN_sd_delta = 2 } TFRKPHN_sd_add_sw = yes TFRKPHN_sd_refresh = yes add_to_variable = { TFRKPHN_dd = 8 } clamp_variable = { var = TFRKPHN_dd min = 0 max = 60 } TFRKPHN_dd_apply = yes }
 		}
 	}
 
@@ -702,7 +702,7 @@ focus_tree = {
 			add_political_power = 50
 			add_stability = 0.02
 			custom_effect_tooltip = TFRKPHN_oh_fx_e4_tt
-			hidden_effect = { set_variable = { TFRKPHN_sd_delta = 1 } TFRKPHN_sd_add_north = yes set_variable = { TFRKPHN_sd_delta = 1 } TFRKPHN_sd_add_sw = yes TFRKPHN_sd_refresh = yes }
+			hidden_effect = { set_variable = { TFRKPHN_sd_delta = 1 } TFRKPHN_sd_add_north = yes set_variable = { TFRKPHN_sd_delta = 1 } TFRKPHN_sd_add_sw = yes TFRKPHN_sd_refresh = yes TFRKPHN_hg_init = yes }
 			hidden_effect = { country_event = { id = tfrkphn.6716 days = 1 } }
 		}
 	}
@@ -917,6 +917,16 @@ focus_tree = {
 			hidden_effect = { country_event = { id = tfrkphn.6721 days = 1 } }
 		}
 	}
+
+
+
+
+
+
+
+
+
+
 
 	# >>> 오세훈 판 엔딩 (oh_end_build.py)
 	# PDTO가 대아대전에서 이기면 열린다 (깃발 PRC_japanese_gaw_victory_global). 이인제 판 엔딩과 같은 1-3-2-1 모양.

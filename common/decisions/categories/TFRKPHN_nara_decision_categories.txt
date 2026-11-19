@@ -5,5 +5,5 @@ TFRKPHN_nr_category = {
 	visible_when_empty = yes
 	priority = 207
 	allowed = { original_tag = KOR }
-	visible = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_completed_focus = TFRKPHN_oh_se_hoon_a1 }
+	visible = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_completed_focus = TFRKPHN_oh_se_hoon_a1 OR = { NOT = { has_country_flag = TFRKPHN_nr_done } has_country_flag = TFRKPHN_nr_fade } }
 }

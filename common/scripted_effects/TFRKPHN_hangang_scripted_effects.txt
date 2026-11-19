@@ -1,0 +1,9 @@
+# [안내] 그레이트 한강 지도 버튼 처음값. hangmap_build.py가 만든다.
+TFRKPHN_hg_init = {
+	if = { limit = { check_variable = { TFRKPHN_hg_t1f < 0.5 } } set_variable = { TFRKPHN_hg_t1f = 2 } set_variable = { TFRKPHN_hg_t2f = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_hgm_bus < 0.5 } } set_variable = { TFRKPHN_hgm_bus = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_hgm_imjin < 0.5 } } set_variable = { TFRKPHN_hgm_imjin = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_hgm_bukhan < 0.5 } } set_variable = { TFRKPHN_hgm_bukhan = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_hgm_paldang < 0.5 } } set_variable = { TFRKPHN_hgm_paldang = 1 } }
+	if = { limit = { check_variable = { TFRKPHN_hgm_namhan < 0.5 } } set_variable = { TFRKPHN_hgm_namhan = 1 } }
+}

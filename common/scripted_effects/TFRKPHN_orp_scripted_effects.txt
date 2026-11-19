@@ -1,0 +1,11 @@
+# [안내] 우리공화당 원내 진입. orp_build.py가 만든다.
+TFRKPHN_orp_form = {
+	set_country_flag = TFRKPHN_orp_formed
+	set_variable = { NA_show_ORP = 1 }
+	set_temp_variable = { TFRKPHN_orp_n = 14 }
+	if = { limit = { check_variable = { KOR_NatAsm_PPP_seats < 14 } } set_temp_variable = { TFRKPHN_orp_n = KOR_NatAsm_PPP_seats } }
+	subtract_from_variable = { KOR_NatAsm_PPP_seats = TFRKPHN_orp_n }
+	if = { limit = { NOT = { has_variable = KOR_NatAsm_ORP_seats } } set_variable = { KOR_NatAsm_ORP_seats = 0 } }
+	add_to_variable = { KOR_NatAsm_ORP_seats = TFRKPHN_orp_n }
+	KOR_rerender_NatAsm = yes
+}

@@ -1,0 +1,27 @@
+# [안내] 그레이트 한강 결정. hangang_build.py가 만든다.
+TFRKPHN_hg_category = {
+	TFRKPHN_hg_river = {
+		icon = GFX_decision_generic_construction
+		cost = 75
+		fire_only_once = yes
+		visible = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_completed_focus = TFRKPHN_oh_se_hoon_e4 }
+		available = { always = yes num_of_civilian_factories_available_for_projects > 0 }
+		days_remove = 150
+		modifier = { civilian_factory_use = 1 }
+		complete_effect = { custom_effect_tooltip = TFRKPHN_hg_river_tt }
+		remove_effect = { hidden_effect = { set_country_flag = TFRKPHN_hg_river 1041 = { if = { limit = { is_owned_by = KOR } add_extra_state_shared_building_slots = 2 } } add_to_variable = { TFRKPHN_bk = 1 } if = { limit = { has_country_flag = TFRKPHN_hg_bus has_country_flag = TFRKPHN_hg_river has_country_flag = TFRKPHN_hg_tunnel NOT = { has_country_flag = TFRKPHN_hg_done } } set_country_flag = TFRKPHN_hg_done country_event = { id = tfrkphn.6985 days = 1 } } } }
+		ai_will_do = { factor = 1 }
+	}
+	TFRKPHN_hg_tunnel = {
+		icon = GFX_decision_generic_construction
+		cost = 60
+		fire_only_once = yes
+		visible = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_completed_focus = TFRKPHN_oh_se_hoon_e4 }
+		available = { always = yes num_of_civilian_factories_available_for_projects > 0 }
+		days_remove = 180
+		modifier = { civilian_factory_use = 1 }
+		complete_effect = { custom_effect_tooltip = TFRKPHN_hg_tunnel_tt }
+		remove_effect = { hidden_effect = { set_country_flag = TFRKPHN_hg_tunnel add_to_variable = { TFRKPHN_sf = 20 } clamp_variable = { var = TFRKPHN_sf min = 0 max = 100 } TFRKPHN_sf_apply = yes if = { limit = { has_country_flag = TFRKPHN_hg_bus has_country_flag = TFRKPHN_hg_river has_country_flag = TFRKPHN_hg_tunnel NOT = { has_country_flag = TFRKPHN_hg_done } } set_country_flag = TFRKPHN_hg_done country_event = { id = tfrkphn.6985 days = 1 } } } }
+		ai_will_do = { factor = 1 }
+	}
+}

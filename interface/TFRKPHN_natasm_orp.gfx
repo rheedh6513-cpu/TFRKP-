@@ -1,0 +1,25 @@
+spriteTypes = {
+	progressbartype = {
+		name = GFX_TFRKPHN_ORP_Bar
+		textureFile1 = "gfx/interface/GUI/national_assembly/PPP.dds"
+		textureFile2 = "gfx/interface/GUI/national_assembly/empty.dds"
+		color = { 0 0.655 0.235 0 }
+		colortwo = { 0 0 0 0 }
+		size = {
+			x = 350
+			y = 350
+		}
+		effectFile = "gfx/FX/progress_radial_legco.shader"
+		steps = 100000
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_orp_texticon"
+		texturefile = "gfx/interface/GUI/TFRKPHN_natasm/orp_texticon.png"
+	}
+	spriteType = {
+		name = "GFX_TFRKPHN_NatAsm_party_icon"
+		texturefile = "gfx/interface/GUI/TFRKPHN_natasm/parties_icon_orp.png"
+		noOfFrames = 9
+	}
+	spriteType = { name = "GFX_TFRKPHN_orp_7001" texturefile = "gfx/event_pictures/TFRKPHN_orp_7001.png" }
+}

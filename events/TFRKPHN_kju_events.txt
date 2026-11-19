@@ -1,0 +1,24 @@
+# [안내] 김정은 생포. kju_build.py가 만든다.
+add_namespace = tfrkphn
+country_event = {
+	id = tfrkphn.6993
+	title = tfrkphn.6993.t
+	desc = tfrkphn.6993.d
+	picture = GFX_TFRKPHN_kju_6993
+	is_triggered_only = yes
+	immediate = { hidden_effect = { news_event = { id = tfrkphn.6994 hours = 6 } } }	# 전 세계 뉴스 (사용자 2026-11-19)
+	option = { name = tfrkphn.6993.a add_stability = 0.03 add_political_power = 75 set_country_flag = TFRKPHN_kju_icc }
+	option = { name = tfrkphn.6993.b add_war_support = 0.05 add_stability = 0.02 set_country_flag = TFRKPHN_kju_home }
+}
+news_event = {
+	id = tfrkphn.6994
+	title = tfrkphn.6994.t
+	desc = tfrkphn.6994.d
+	picture = GFX_TFRKPHN_kju_news
+	major = yes
+	is_triggered_only = yes
+	option = { name = tfrkphn.6994.kor trigger = { tag = KOR } }
+	option = { name = tfrkphn.6994.prc trigger = { tag = PRC } }
+	option = { name = tfrkphn.6994.jap trigger = { tag = JAP } }
+	option = { name = tfrkphn.6994.etc trigger = { NOT = { tag = KOR tag = PRC tag = JAP } } }
+}

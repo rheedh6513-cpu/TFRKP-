@@ -1,0 +1,7 @@
+# [안내] 디딤돌소득. didim_build.py가 만든다.
+TFRKPHN_didim = {
+	icon = GFX_modifiers_TFRKPHN_local_ally
+	poverty_development_monthly = TFRKPHN_dd_pov
+	stability_factor = TFRKPHN_dd_st
+	consumer_goods_factor = TFRKPHN_dd_cg
+}

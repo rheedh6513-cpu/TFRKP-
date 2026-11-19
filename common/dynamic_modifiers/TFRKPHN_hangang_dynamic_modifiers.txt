@@ -1,0 +1,29 @@
+# [안내] 한강 유역 댐 지역 변동치. hangang_build.py가 만든다.
+TFRKPHN_dam_bukhan = {
+	icon = GFX_modifiers_TFRKPHN_dam
+	enable = { always = yes }
+	remove_trigger = { NOT = { is_owned_by = KOR } }
+	state_production_speed_buildings_factor = 0.1
+	local_supplies = 0.2
+}
+TFRKPHN_dam_namhan = {
+	icon = GFX_modifiers_TFRKPHN_dam
+	enable = { always = yes }
+	remove_trigger = { NOT = { is_owned_by = KOR } }
+	state_production_speed_buildings_factor = 0.1
+	local_supplies = 0.2
+}
+TFRKPHN_dam_paldang = {
+	icon = GFX_modifiers_TFRKPHN_dam
+	enable = { always = yes }
+	remove_trigger = { NOT = { is_owned_by = KOR } }
+	state_production_speed_buildings_factor = 0.1
+	local_supplies = 0.2
+}
+TFRKPHN_dam_imjin = {
+	icon = GFX_modifiers_TFRKPHN_dam
+	enable = { always = yes }
+	remove_trigger = { NOT = { is_owned_by = KOR } }
+	state_production_speed_buildings_factor = 0.1
+	local_supplies = 0.2
+}

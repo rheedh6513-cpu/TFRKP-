@@ -1,0 +1,6 @@
+﻿l_korean:
+ # [안내] 2022 대선 지지율 툴팁과 후보 조건 글. elec22_tt_fix.py가 만든다. KP 키를 덮어쓰려고 이름을 zzzz_로 둔다.
+ KOR_president_election_yoon_support_change_tooltip:0 "§A[TFRKP_HN_ppp_name]§! §Y지지율§! 변화: [?KOR_president_election_yoon_support_temp|=+%1]"
+ KOR_president_election_lee_support_change_tooltip:0 "§P[TFRKP_HN_dpk_name]§! §Y지지율§! 변화: [?KOR_president_election_lee_support_temp|=+%1]"
+ TFRKPHN_sided_hong_tt:0 "§A홍준표§! §Y후보§!를 선택함"
+ TFRKPHN_sided_nak_tt:0 "§P이낙연§! §Y후보§!를 선택함"

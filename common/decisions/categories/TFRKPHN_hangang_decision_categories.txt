@@ -1,0 +1,9 @@
+# [안내] 그레이트 한강. hangang_build.py가 만든다.
+TFRKPHN_hg_category = {
+	icon = generic_construction
+	scripted_gui = TFRKPHN_hg_gui
+	visible_when_empty = yes
+	priority = 206
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_completed_focus = TFRKPHN_oh_se_hoon_e4  OR = { NOT = { has_country_flag = TFRKPHN_fd_hg } has_country_flag = TFRKPHN_fdt_hg }}
+}

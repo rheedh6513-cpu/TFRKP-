@@ -1,0 +1,19 @@
+spriteTypes = {
+	spriteType = { name = "GFX_TFRKPHN_pr_oh" texturefile = "gfx/interface/decisions/TFRKPHN_pr_oh.png" }
+	spriteType = { name = "GFX_TFRKPHN_pr_jang" texturefile = "gfx/interface/decisions/TFRKPHN_pr_jang.png" }
+	spriteType = { name = "GFX_TFRKPHN_pr_jang_face" texturefile = "gfx/leaders/KOR/KOR_jang_dong_hyeok.png" }
+	frameAnimatedSpriteType = { name = "GFX_TFRKPHN_pr_bar_sup" texturefile = "gfx/interface/decisions/TFRKPHN_pr_bar_sup.png" noOfFrames = 21 animation_rate_fps = 0 looping = no play_on_show = no }
+	frameAnimatedSpriteType = { name = "GFX_TFRKPHN_pr_bar_bk" texturefile = "gfx/interface/decisions/TFRKPHN_pr_bar_bk.png" noOfFrames = 21 animation_rate_fps = 0 looping = no play_on_show = no }
+	spriteType = { name = "GFX_TFRKPHN_pr_b_plat" texturefile = "gfx/interface/decisions/TFRKPHN_pr_b_plat.png" }
+	spriteType = { name = "GFX_TFRKPHN_pr_b_plat_done" texturefile = "gfx/interface/decisions/TFRKPHN_pr_b_plat_done.png" }
+	spriteType = { name = "GFX_TFRKPHN_pr_b_nom" texturefile = "gfx/interface/decisions/TFRKPHN_pr_b_nom.png" }
+	spriteType = { name = "GFX_TFRKPHN_pr_b_nom_done" texturefile = "gfx/interface/decisions/TFRKPHN_pr_b_nom_done.png" }
+	spriteType = { name = "GFX_TFRKPHN_pr_b_youth" texturefile = "gfx/interface/decisions/TFRKPHN_pr_b_youth.png" }
+	spriteType = { name = "GFX_TFRKPHN_pr_b_youth_done" texturefile = "gfx/interface/decisions/TFRKPHN_pr_b_youth_done.png" }
+	spriteType = { name = "GFX_TFRKPHN_pr_b_emerg" texturefile = "gfx/interface/decisions/TFRKPHN_pr_b_emerg.png" }
+	spriteType = { name = "GFX_TFRKPHN_pr_b_emerg_done" texturefile = "gfx/interface/decisions/TFRKPHN_pr_b_emerg_done.png" }
+	spriteType = { name = "GFX_TFRKPHN_pr_b_pers" texturefile = "gfx/interface/decisions/TFRKPHN_pr_b_pers.png" }
+	spriteType = { name = "GFX_TFRKPHN_pr_b_pers_done" texturefile = "gfx/interface/decisions/TFRKPHN_pr_b_pers_done.png" }
+	spriteType = { name = "GFX_TFRKPHN_pr_6992" texturefile = "gfx/event_pictures/TFRKPHN_pr_6992.png" }
+	spriteType = { name = "GFX_TFRKPHN_pr_6984" texturefile = "gfx/event_pictures/TFRKPHN_pr_6984.png" }
+}

@@ -1,0 +1,35 @@
+# [안내] 당 개혁 탭. partypanel_build.py가 만든다.
+scripted_gui = {
+	TFRKPHN_pr_gui = {
+		context_type = decision_category
+		window_name = "TFRKPHN_pr_container"
+		properties = {
+			TFRKPHN_pr_bar_sup = { frame = TFRKPHN_pr_fs }
+			TFRKPHN_pr_bar_bk = { frame = TFRKPHN_pr_fb }
+		}
+		effects = {
+			TFRKPHN_pr_b_plat_click = { if = { limit = { NOT = { has_country_flag = TFRKPHN_pr_plat } has_political_power > 49 NOT = { has_country_flag = TFRKPHN_pr_done } } add_political_power = -50 set_country_flag = TFRKPHN_pr_plat add_to_variable = { TFRKPHN_pr_sup = 20 } add_to_variable = { TFRKPHN_pr_bk = 10 } TFRKPHN_pr_apply = yes } }
+			TFRKPHN_pr_b_nom_click = { if = { limit = { NOT = { has_country_flag = TFRKPHN_pr_nom } has_political_power > 74 NOT = { has_country_flag = TFRKPHN_pr_done } } add_political_power = -75 set_country_flag = TFRKPHN_pr_nom add_to_variable = { TFRKPHN_pr_sup = 20 } add_to_variable = { TFRKPHN_pr_bk = 20 } TFRKPHN_pr_apply = yes } }
+			TFRKPHN_pr_b_youth_click = { if = { limit = { NOT = { has_country_flag = TFRKPHN_pr_youth } has_political_power > 39 NOT = { has_country_flag = TFRKPHN_pr_done } } add_political_power = -40 set_country_flag = TFRKPHN_pr_youth add_to_variable = { TFRKPHN_pr_sup = 15 } add_to_variable = { TFRKPHN_pr_bk = 5 } TFRKPHN_pr_apply = yes } }
+			TFRKPHN_pr_b_emerg_click = { if = { limit = { NOT = { has_country_flag = TFRKPHN_pr_emerg } has_political_power > 49 NOT = { has_country_flag = TFRKPHN_pr_done } } add_political_power = -50 set_country_flag = TFRKPHN_pr_emerg add_to_variable = { TFRKPHN_pr_sup = 15 } add_to_variable = { TFRKPHN_pr_bk = 10 } TFRKPHN_pr_apply = yes } }
+			TFRKPHN_pr_b_pers_click = { if = { limit = { NOT = { has_country_flag = TFRKPHN_pr_cool } has_political_power > 59 NOT = { has_country_flag = TFRKPHN_pr_done } } add_political_power = -60 set_country_flag = { flag = TFRKPHN_pr_cool value = 1 days = 60 } add_to_variable = { TFRKPHN_pr_sup = 0 } add_to_variable = { TFRKPHN_pr_bk = -15 } TFRKPHN_pr_apply = yes } }
+		}
+		triggers = {
+			TFRKPHN_pr_b_plat_visible = { NOT = { has_country_flag = TFRKPHN_pr_plat } }
+			TFRKPHN_pr_d_plat_visible = { NOT = { NOT = { has_country_flag = TFRKPHN_pr_plat } } }
+			TFRKPHN_pr_b_plat_click_enabled = { has_political_power > 49 NOT = { has_country_flag = TFRKPHN_pr_done } }
+			TFRKPHN_pr_b_nom_visible = { NOT = { has_country_flag = TFRKPHN_pr_nom } }
+			TFRKPHN_pr_d_nom_visible = { NOT = { NOT = { has_country_flag = TFRKPHN_pr_nom } } }
+			TFRKPHN_pr_b_nom_click_enabled = { has_political_power > 74 NOT = { has_country_flag = TFRKPHN_pr_done } }
+			TFRKPHN_pr_b_youth_visible = { NOT = { has_country_flag = TFRKPHN_pr_youth } }
+			TFRKPHN_pr_d_youth_visible = { NOT = { NOT = { has_country_flag = TFRKPHN_pr_youth } } }
+			TFRKPHN_pr_b_youth_click_enabled = { has_political_power > 39 NOT = { has_country_flag = TFRKPHN_pr_done } }
+			TFRKPHN_pr_b_emerg_visible = { NOT = { has_country_flag = TFRKPHN_pr_emerg } }
+			TFRKPHN_pr_d_emerg_visible = { NOT = { NOT = { has_country_flag = TFRKPHN_pr_emerg } } }
+			TFRKPHN_pr_b_emerg_click_enabled = { has_political_power > 49 NOT = { has_country_flag = TFRKPHN_pr_done } }
+			TFRKPHN_pr_b_pers_visible = { NOT = { has_country_flag = TFRKPHN_pr_cool } }
+			TFRKPHN_pr_d_pers_visible = { NOT = { NOT = { has_country_flag = TFRKPHN_pr_cool } } }
+			TFRKPHN_pr_b_pers_click_enabled = { has_political_power > 59 NOT = { has_country_flag = TFRKPHN_pr_done } }
+		}
+	}
+}

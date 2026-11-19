@@ -1,0 +1,128 @@
+guiTypes = {
+	containerWindowType = {
+		name = "TFR_KOR_national_assembly_container"
+		clipping = no
+		size = { width = 0 height = 420 }
+
+		containerWindowType = {
+			name = "NatAsm_diagram_container"
+			position = { x = 70 y = -150 }
+			iconType = {
+				name = "NatAsm_Ind_bar"
+				quadTextureSprite = "GFX_KOR_Ind_Bar"
+				position = { x = 0 y = 0 }
+				alwaystransparent = yes
+				pdx_tooltip = NatAsm_diagram_tt
+			}
+			iconType = {
+				name = "NatAsm_JP_bar"
+				quadTextureSprite = "GFX_KOR_JP_Bar"
+				position = { x = 0 y = 0 }
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "NatAsm_PP_bar"
+				quadTextureSprite = "GFX_KOR_PP_Bar"
+				position = { x = 0 y = 0 }
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "NatAsm_ORP_bar"
+				quadTextureSprite = "GFX_TFRKPHN_ORP_Bar"
+				position = { x = 0 y = 0 }
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "NatAsm_PPP_bar"
+				quadTextureSprite = "GFX_KOR_PPP_Bar"
+				position = { x = 0 y = 0 }
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "NatAsm_DP_bar"
+				quadTextureSprite = "GFX_KOR_DP_Bar"
+				position = { x = 0 y = 0 }
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "NatAsm_overlay"
+				quadTextureSprite = "GFX_KOR_NatAsm_Overlay"
+				position = { x = -64 y = 139 }
+				#alwaystransparent = yes
+				pdx_tooltip = KOR_NatAsm_diagram_tt
+			}
+
+			iconType = {
+				name = "NatAsm_logo"
+				quadTextureSprite = "GFX_KOR_NatAsm_Logo"
+				position = { x = 131 y = 298 }
+				pdx_tooltip = KOR_NatAsm_logo_tt
+			}
+
+		}
+
+		containerWindowType = {
+			name = "parliament_seat_list_container"
+			size = { width = 290 height = 150 }
+
+			verticalScrollbar = "right_vertical_slider"
+			position = { x = 15 y = 250 }
+
+			background = {
+				name = "Background"
+				quadTextureSprite ="GFX_tiled_window_transparent"
+			}
+
+			gridboxtype = {
+				name = "parliament_seat_counts"
+				position = { x = -85 y = 0 }
+				size = { width = 300 height = 0 }
+				slotsize = { width = 170 height = 50 }
+				add_horizontal = no
+			}
+		}
+
+		containerWindowType = {
+			name = "member_container"
+			position = { x = 100 y = 250 }
+	
+			gridboxtype = {
+				name = "NatAsm_member_grid"
+				position = { x = 70 y = 15 }
+				size = { width = 100%% height = 100%% }
+				slotsize = { width = 200 height = 25 }
+				max_slots_vertical = 10
+				add_horizontal = no
+			}
+		}
+		iconType = {
+			name = "NatAsm_cover"
+			spriteType = "GFX_KOR_NatAsm_cover"
+			position = { x = 6 y = -15 }
+		}	
+	}
+	containerWindowType = {
+        name = "NatAsm_member_entry"
+        position = { x = 0 y = 0 }
+		size = { width = 200 height = 18 }
+		
+		iconType = {
+			name = "NatAsm_member_icon"
+			spriteType = "GFX_TFRKPHN_NatAsm_party_icon"
+			position = { x = -23 y = -3 }
+			pdx_tooltip = "TFRKPHN_NatAsm_member_loc"
+		}
+
+		instantTextboxType = {
+			name = "NatAsm_member_text"
+			position = { x = 0 y = 0 }
+			font = "VCR02_12"
+			maxWidth = 250
+			maxHeight = 16
+			format = left
+			text = "TFRKPHN_NatAsm_member_text"
+			pdx_tooltip = "TFRKPHN_NatAsm_member_loc"
+		}
+    }
+}
+

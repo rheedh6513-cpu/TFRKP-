@@ -1,0 +1,36 @@
+# [안내] 보수 정당 개혁. party_build.py가 만든다.
+add_namespace = tfrkphn
+country_event = {
+	id = tfrkphn.6982
+	title = tfrkphn.6982.t
+	desc = tfrkphn.6982.d
+	picture = GFX_TFRKPHN_oh_party
+	is_triggered_only = yes
+	option = { name = tfrkphn.6982.a add_political_power = -25 add_stability = 0.01 hidden_effect = { set_variable = { TFRKPHN_sd_delta = 2 } TFRKPHN_sd_add_north = yes TFRKPHN_sd_refresh = yes } custom_effect_tooltip = TFRKPHN_pt_n2_tt set_country_flag = TFRKPHN_pt_open set_variable = { TFRKPHN_pr_sup = 30 } set_variable = { TFRKPHN_pr_bk = 25 } TFRKPHN_pr_apply = yes custom_effect_tooltip = TFRKPHN_pr_open_tt }
+	option = { name = tfrkphn.6982.b add_political_power = 25 }
+}
+country_event = {
+	id = tfrkphn.6983
+	title = tfrkphn.6983.t
+	desc = tfrkphn.6983.d
+	picture = GFX_TFRKPHN_bid_briefing
+	is_triggered_only = yes
+	option = { name = tfrkphn.6983.a add_political_power = -50 add_stability = 0.02 add_to_variable = { TFRKPHN_pr_bk = -10 } TFRKPHN_pr_apply = yes custom_effect_tooltip = TFRKPHN_pr_6983a_tt }
+	option = { name = tfrkphn.6983.b add_stability = -0.02 hidden_effect = { set_variable = { TFRKPHN_sd_delta = 3 } TFRKPHN_sd_add_north = yes TFRKPHN_sd_refresh = yes set_variable = { TFRKPHN_sd_delta = 2 } TFRKPHN_sd_add_sw = yes TFRKPHN_sd_refresh = yes } custom_effect_tooltip = TFRKPHN_pt_n3_tt set_country_flag = TFRKPHN_pt_nominate add_to_variable = { TFRKPHN_pr_sup = 5 } add_to_variable = { TFRKPHN_pr_bk = 10 } TFRKPHN_pr_apply = yes custom_effect_tooltip = TFRKPHN_pr_6983b_tt }
+}
+country_event = {
+	id = tfrkphn.6984
+	title = tfrkphn.6984.t
+	desc = tfrkphn.6984.d
+	picture = GFX_TFRKPHN_pr_6984
+	is_triggered_only = yes
+	option = { name = tfrkphn.6984.a add_stability = 0.03 add_war_support = -0.02 add_political_power = 50 hidden_effect = { set_variable = { TFRKPHN_sd_delta = 2 } TFRKPHN_sd_add_north = yes set_variable = { TFRKPHN_sd_delta = 2 } TFRKPHN_sd_add_sw = yes set_variable = { TFRKPHN_sd_delta = 2 } TFRKPHN_sd_add_se = yes TFRKPHN_sd_refresh = yes } custom_effect_tooltip = TFRKPHN_pt_all2_tt }
+}
+country_event = {
+	id = tfrkphn.6992
+	title = tfrkphn.6992.t
+	desc = tfrkphn.6992.d
+	picture = GFX_TFRKPHN_pr_6992
+	is_triggered_only = yes
+	option = { name = tfrkphn.6992.a add_stability = -0.05 add_political_power = -50 add_to_variable = { TFRKPHN_pr_sup = -20 } add_to_variable = { TFRKPHN_pr_bk = -40 } TFRKPHN_pr_apply = yes hidden_effect = { set_variable = { TFRKPHN_sd_delta = -2 } TFRKPHN_sd_add_north = yes set_variable = { TFRKPHN_sd_delta = -2 } TFRKPHN_sd_add_sw = yes set_variable = { TFRKPHN_sd_delta = -2 } TFRKPHN_sd_add_se = yes TFRKPHN_sd_refresh = yes } custom_effect_tooltip = TFRKPHN_pr_6992_tt custom_effect_tooltip = TFRKPHN_pr_6992_orp_tt TFRKPHN_orp_form = yes }
+}

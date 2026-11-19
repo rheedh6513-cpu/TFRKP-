@@ -23,6 +23,7 @@ TFRKPHN_ge28_run = {
 	set_variable = { KOR_NatAsm_JP_seats = 4 }
 	set_variable = { KOR_NatAsm_PP_seats = 6 }
 	set_variable = { KOR_NatAsm_Ind_seats = 2 }
+	if = { limit = { has_country_flag = TFRKPHN_orp_formed } set_variable = { KOR_NatAsm_ORP_seats = 9 } subtract_from_variable = { KOR_NatAsm_PPP_seats = 9 } country_event = { id = tfrkphn.7001 days = 3 } }	# 우리공화당: 총선에서 아홉 석 (orp_build.py)
 	KOR_rerender_NatAsm = yes
 	if = { limit = { has_country_flag = TFRKPHN_bicameral } TFRKPHN_senate_setup = yes }
 	if = { limit = { check_variable = { TFRKPHN_ge28 > 179.5 } } country_event = { id = tfrkphn.6603 } }

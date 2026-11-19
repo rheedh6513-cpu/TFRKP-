@@ -3,5 +3,5 @@ TFRKPHN_kdef_category = {
 	icon = generic_construction
 	priority = 204
 	allowed = { original_tag = KOR }
-	visible = { has_country_flag = TFRKPHN_successor_oh_se_hoon }
+	visible = { has_country_flag = TFRKPHN_successor_oh_se_hoon  OR = { NOT = { has_country_flag = TFRKPHN_fd_kdef } has_country_flag = TFRKPHN_fdt_kdef }}
 }

@@ -20,7 +20,7 @@ country_event = {
 country_event = {
 	id = tfrkphn.301
 	title = tfrkphn.301.t
-	desc = tfrkphn.301.kp2
+	desc = TFRKPHN_lg_301_a
 	picture = GFX_report_event_ppp_ge_win
 	is_triggered_only = yes
 
@@ -62,35 +62,31 @@ country_event = {
 country_event = {
 	id = tfrkphn.303
 	title = tfrkphn.303.t
-	desc = tfrkphn.303.w
+	desc = TFRKPHN_lg_303_a
 	picture = GFX_report_event_ppp_ge_win
 	is_triggered_only = yes
-
 	option = {
-		name = tfrkphn.303.a
-		custom_effect_tooltip = TFRKPHN_ge2027_cho_won_jin_tt
-		TFRKPHN_ge2027_cho_won_jin_effect = yes
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8000 } }
 	}
 }
 
 country_event = {
 	id = tfrkphn.304
 	title = tfrkphn.304.t
-	desc = tfrkphn.304.w
+	desc = TFRKPHN_lg_304_a
 	picture = GFX_report_event_ppp_ge_win
 	is_triggered_only = yes
-
 	option = {
-		name = tfrkphn.304.a
-		custom_effect_tooltip = TFRKPHN_ge2027_ahn_cheol_soo_tt
-		TFRKPHN_ge2027_ahn_cheol_soo_effect = yes
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8001 } }
 	}
 }
 
 country_event = {
 	id = tfrkphn.305
 	title = tfrkphn.305.t
-	desc = tfrkphn.305.w
+	desc = TFRKPHN_lg_305_a
 	picture = GFX_report_event_ppp_ge_win
 	is_triggered_only = yes
 
@@ -203,16 +199,13 @@ country_event = {
 country_event = {
 	id = tfrkphn.312
 	title = tfrkphn.312.t
-	desc = tfrkphn.312.kp
+	desc = TFRKPHN_lg_312_a
 	picture = GFX_TFRKPHN_hong_312
 	fire_only_once = yes
 	is_triggered_only = yes
-
 	option = {
-		name = tfrkphn.312.a
-		add_stability = 0.03
-		add_political_power = -25
-		set_country_flag = TFRKPHN_reform_police_bureau
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8002 } }
 	}
 }
 
@@ -439,13 +432,13 @@ country_event = {
 country_event = {
 	id = tfrkphn.323
 	title = tfrkphn.323.t
-	desc = tfrkphn.323.desc
+	desc = TFRKPHN_lg_323_a
 	picture = GFX_TFRKPHN_hwagae
 	fire_only_once = yes
 	is_triggered_only = yes
-
 	option = {
-		name = tfrkphn.323.a
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8003 } }
 	}
 }
 
@@ -453,7 +446,7 @@ country_event = {
 country_event = {
 	id = tfrkphn.324
 	title = tfrkphn.324.t
-	desc = tfrkphn.324.desc
+	desc = TFRKPHN_lg_324_a
 	picture = GFX_TFRKPHN_hong_324
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -468,7 +461,7 @@ country_event = {
 country_event = {
 	id = tfrkphn.325
 	title = tfrkphn.325.t
-	desc = tfrkphn.325.desc
+	desc = TFRKPHN_lg_325_a
 	picture = GFX_TFRKPHN_hong_325
 	is_triggered_only = yes
 
@@ -481,7 +474,7 @@ country_event = {
 news_event = {
 	id = tfrkphn.326
 	title = tfrkphn.326.t
-	desc = tfrkphn.326.desc
+	desc = TFRKPHN_lg_326_a
 	picture = GFX_TFRKPHN_news_326
 	major = yes
 	is_triggered_only = yes
@@ -495,7 +488,7 @@ news_event = {
 news_event = {
 	id = tfrkphn.327
 	title = tfrkphn.327.t
-	desc = tfrkphn.327.desc
+	desc = TFRKPHN_lg_327_a
 	picture = GFX_TFRKPHN_east_sea_blast
 	major = yes
 	is_triggered_only = yes

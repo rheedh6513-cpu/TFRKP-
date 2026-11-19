@@ -5,7 +5,7 @@ TFRKPHN_kdef_category = {
 		cost = 75
 		fire_only_once = yes
 		visible = { has_country_flag = TFRKPHN_successor_oh_se_hoon }
-		complete_effect = {
+		complete_effect = { set_country_flag = TFRKPHN_dn_TFRKPHN_kdef_law
 			add_ideas = TFRKPHN_kdef_1
 			set_country_flag = TFRKPHN_kdef_law_done
 			country_event = { id = tfrkphn.6789 }
@@ -20,7 +20,7 @@ TFRKPHN_kdef_category = {
 		available = { has_country_flag = TFRKPHN_kdef_law_done num_of_civilian_factories_available_for_projects > 0 }
 		days_remove = 90
 		modifier = { civilian_factory_use = 1 }
-		complete_effect = { custom_effect_tooltip = TFRKPHN_kdef_wait_tt }
+		complete_effect = { set_country_flag = TFRKPHN_dn_TFRKPHN_kdef_tank custom_effect_tooltip = TFRKPHN_kdef_wait_tt }
 		remove_effect = {
 			swap_ideas = { remove_idea = TFRKPHN_kdef_1 add_idea = TFRKPHN_kdef_2 }
 			set_country_flag = TFRKPHN_kdef_tank_done
@@ -36,7 +36,7 @@ TFRKPHN_kdef_category = {
 		available = { has_country_flag = TFRKPHN_kdef_tank_done num_of_civilian_factories_available_for_projects > 0 }
 		days_remove = 120
 		modifier = { civilian_factory_use = 1 }
-		complete_effect = { custom_effect_tooltip = TFRKPHN_kdef_wait_tt }
+		complete_effect = { set_country_flag = TFRKPHN_dn_TFRKPHN_kdef_jet custom_effect_tooltip = TFRKPHN_kdef_wait_tt }
 		remove_effect = {
 			swap_ideas = { remove_idea = TFRKPHN_kdef_2 add_idea = TFRKPHN_kdef_3 }
 			set_country_flag = TFRKPHN_kdef_jet_done
@@ -52,7 +52,7 @@ TFRKPHN_kdef_category = {
 		available = { has_country_flag = TFRKPHN_kdef_jet_done num_of_civilian_factories_available_for_projects > 0 }
 		days_remove = 180
 		modifier = { civilian_factory_use = 1 }
-		complete_effect = { custom_effect_tooltip = TFRKPHN_kdef_wait_tt }
+		complete_effect = { set_country_flag = TFRKPHN_dn_TFRKPHN_kdef_cluster custom_effect_tooltip = TFRKPHN_kdef_wait_tt }
 		remove_effect = {
 			swap_ideas = { remove_idea = TFRKPHN_kdef_3 add_idea = TFRKPHN_kdef_4 }
 			set_country_flag = TFRKPHN_kdef_cluster_done

@@ -4,7 +4,7 @@ country_event = {
 	id = tfrkphn.6770
 	title = tfrkphn.6770.t
 	desc = tfrkphn.6770.d
-	picture = GFX_TFRKPHN_lee_by_6763
+	picture = GFX_TFRKPHN_lm_6770
 	is_triggered_only = yes
 	option = {
 		name = tfrkphn.6770.a
@@ -36,7 +36,7 @@ country_event = {
 	id = tfrkphn.6772
 	title = tfrkphn.6772.t
 	desc = tfrkphn.6772.d
-	picture = GFX_TFRKPHN_lee_by_6767
+	picture = GFX_TFRKPHN_lm_6772
 	is_triggered_only = yes
 	option = {
 		name = tfrkphn.6772.a
@@ -56,7 +56,7 @@ country_event = {
 	title = tfrkphn.6773.t
 	desc = { trigger = { has_country_flag = TFRKPHN_chung_met } text = tfrkphn.6773.d }
 	desc = { trigger = { NOT = { has_country_flag = TFRKPHN_chung_met } } text = tfrkphn.6773.d2 }
-	picture = GFX_TFRKPHN_lee_by_6767
+	picture = GFX_TFRKPHN_lm_6773
 	is_triggered_only = yes
 	option = {
 		name = tfrkphn.6773.a
