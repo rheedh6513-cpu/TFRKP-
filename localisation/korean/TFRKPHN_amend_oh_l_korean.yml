@@ -1,4 +1,4 @@
 ﻿l_korean:
  # 개헌 부결이면 무조건 오세훈. amend_oh_fix.py가 만든다.
- TFRKPHN_amend_rejected_oh_tt:0 "개헌을 앞세웠던 쪽은 힘을 잃는다.\n다음 대통령 선거에서 여당 후보는 §Y오세훈§!이 된다."
- TFRKPHN_conv_rejected_tt:0 "개헌이 부결됐기 때문에 지지율과 상관없이 §Y오세훈§!이 후보가 된다."
+ TFRKPHN_amend_rejected_oh_tt:0 "개헌을 앞세웠던 쪽은 힘을 잃습니다.\n다음 대통령 선거에서 여당 후보는 §Y오세훈§!이 됩니다."
+ TFRKPHN_conv_rejected_tt:0 "개헌이 부결됐기 때문에 지지율과 상관없이 §Y오세훈§!이 후보가 됩니다."

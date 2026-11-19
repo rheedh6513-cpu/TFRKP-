@@ -11,6 +11,6 @@ defined_text = {
 }
 defined_text = {
 	name = TFRKPHN_NA_orp_line
-	text = { trigger = { check_variable = { KOR_NatAsm_ORP_seats > 0 } } localization_key = TFRKPHN_NA_orp_line_on }
+	text = { localization_key = TFRKPHN_NA_orp_line_on }
 	text = { localization_key = TFRKPHN_NA_empty }
 }

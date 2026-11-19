@@ -418,7 +418,7 @@ KOR_rerender_NatAsm = {	# TFRKPHN: 우리공화당 칸 추가 (orp_build.py)
 	clear_array = KOR_NatAsm_factions
 	add_to_array = { KOR_NatAsm_factions = 1 }
 	add_to_array = { KOR_NatAsm_factions = 2 }
-	if = { limit = { check_variable = { KOR_NatAsm_ORP_seats > 0 } } add_to_array = { KOR_NatAsm_factions = 6 } }
+	add_to_array = { KOR_NatAsm_factions = 6 }	# 처음부터 목록에 둔다 (2020년 총선 뒤 원외라 0석, 2026-11-19)
 	add_to_array = { KOR_NatAsm_factions = 3 }
 	add_to_array = { KOR_NatAsm_factions = 4 }
 	add_to_array = { KOR_NatAsm_factions = 5 }

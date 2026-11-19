@@ -1,9 +1,9 @@
 ﻿l_korean:
  TFRKPHN_NatAsm_member_text:0 "[TFRKPHN_NA_name]"
  TFRKPHN_NatAsm_member_loc:0 "[TFRKPHN_NA_desc]"
- TFRKPHN_NA_orp_name:0 "§G우리공화당§! ([?KOR_NatAsm_ORP_seats]석)"
+ TFRKPHN_NA_orp_name:0 "우익 정당 ([?KOR_NatAsm_ORP_seats]석)"
  TFRKPHN_NA_kp_name:0 "[GetNatAsmPartyName] ([GetKORNatAsmSeatsDynamic])"
  TFRKPHN_NA_kp_desc:0 "[GetNatAsmPartyDesc]"
- TFRKPHN_NA_orp_desc:0 "£GFX_TFRKPHN_orp_texticon §G우리공화당§!\n\n오세훈 정부의 당 개혁에 반발해 여당을 떠난 강경파 의원들이 합류한 우익 정당이다. 전쟁을 이긴 원칙을 지키겠다고 내세우며, 원내에서 여당과 따로 움직인다.\n§W------------§!\n원내 의석: §G[?KOR_NatAsm_ORP_seats]석§!"
- TFRKPHN_NA_orp_line_on:0 "\n£GFX_TFRKPHN_orp_texticon §G우리공화당§!: [?KOR_NatAsm_ORP_seats]석"
+ TFRKPHN_NA_orp_desc:0 "£GFX_TFRKPHN_orp_texticon §W우익 정당§!\n\n£GFX_TFRKPHN_orp_texticon §W우익 정당§!§L들은 박근혜 전 대통령 탄핵에 반대한 태극기 집회를 기반으로 등장한 정당들입니다. 이들은 보수 정당보다 더 강한 반공과 안보를 내세우며, 원내에서 보수 정당과 따로 움직입니다.§!\n§W------------§!\n§W원내 우익 정당 목록§!\n§G£GFX_TFRKPHN_orp_texticon 우리공화당§!"
+ TFRKPHN_NA_orp_line_on:0 "\n§W우익 정당§!: [?KOR_NatAsm_ORP_seats]석"
  TFRKPHN_NA_empty:0 ""

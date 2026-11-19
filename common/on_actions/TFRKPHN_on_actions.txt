@@ -206,9 +206,6 @@ if = { limit = { has_country_flag = TFRKPHN_l6_started has_variable = TFRKPHN_l6
 # >>> 홍준표 유족 (hong_grief_build.py)
 if = { limit = { has_country_flag = TFRKP_HN_hong_president has_completed_focus = TFRKPHN_hong_b02_02 NOT = { has_country_flag = TFRKPHN_grief_set } } set_country_flag = TFRKPHN_grief_set country_event = { id = tfrkphn.6970 days = 150 } }
 # <<< 홍준표 유족
-# >>> 김정은 생포 (kju_build.py)
-if = { limit = { original_tag = KOR has_country_flag = TFRKPHN_successor_oh_se_hoon NOT = { has_country_flag = TFRKPHN_kju_captured } NOT = { has_country_flag = TFRKPHN_k189_done } OR = { NOT = { country_exists = PRK } PRK = { has_capitulated = yes } } } set_country_flag = TFRKPHN_kju_captured country_event = { id = tfrkphn.6993 days = 2 } }
-# <<< 김정은 생포
 # >>> 개발 중반 (dev_mid_build.py)
 if = { limit = { has_country_flag = TFRKPHN_successor_oh_se_hoon NOT = { has_country_flag = TFRKPHN_dev_1 } has_completed_focus = TFRKPHN_oh_se_hoon_b01_01 date > 2027.8.31 } set_country_flag = TFRKPHN_dev_1 country_event = { id = tfrkphn.6776 } }
 if = { limit = { has_country_flag = TFRKPHN_successor_oh_se_hoon NOT = { has_country_flag = TFRKPHN_dev_2 } has_country_flag = TFRKPHN_dev_1 has_completed_focus = TFRKPHN_oh_se_hoon_b1 has_completed_focus = TFRKPHN_oh_se_hoon_b2 } set_country_flag = TFRKPHN_dev_2 country_event = { id = tfrkphn.6777 } }
@@ -221,20 +218,23 @@ if = { limit = { has_country_flag = TFRKPHN_successor_oh_se_hoon NOT = { has_cou
 if = { limit = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_completed_focus = TFRKPHN_oh_se_hoon_e1 NOT = { has_country_flag = TFRKPHN_sf_tick } } set_country_flag = { flag = TFRKPHN_sf_tick days = 180 value = 1 }
 	random_list = { 50 = { } 25 = { if = { limit = { check_variable = { TFRKPHN_sf > 59.5 } } country_event = { id = tfrkphn.6976 } } else = { country_event = { id = tfrkphn.6979 } } } 25 = { if = { limit = { check_variable = { TFRKPHN_sf > 59.5 } } country_event = { id = tfrkphn.6977 } } else = { country_event = { id = tfrkphn.6980 } } } } }
 # <<< 재난
+# >>> 대통령 자리 지키기 (KP 사건이 이준석 등을 보수 지도자로 올려도 대통령을 다시 앉힌다, 2026-11-19)
+if = { limit = { original_tag = KOR has_country_flag = TFRKP_HN_hong_president has_government = conservative has_character = KOR_hong_joon_pyo_char NOT = { has_country_leader = { character = KOR_hong_joon_pyo_char ruling_only = yes } } } KOR_hong_joon_pyo_char = { promote_character = korean_neoconservatism } }
+if = { limit = { original_tag = KOR has_country_flag = TFRKPHN_successor_lee_in_je has_government = conservative has_character = KOR_lee_in_je_char NOT = { has_country_leader = { character = KOR_lee_in_je_char ruling_only = yes } } } KOR_lee_in_je_char = { promote_character = korean_neoconservatism } }
+if = { limit = { original_tag = KOR has_country_flag = TFRKPHN_successor_oh_se_hoon has_government = conservative has_character = KOR_oh_se_hoon_char NOT = { has_country_leader = { character = KOR_oh_se_hoon_char ruling_only = yes } } } KOR_oh_se_hoon_char = { promote_character = korean_warm_conservatism } }
+# <<< 대통령 자리 지키기
 # >>> 강경파의 반격 (oh_hard_build.py)
 if = { limit = { original_tag = KOR has_country_flag = TFRKPHN_successor_oh_se_hoon NOT = { has_country_flag = TFRKPHN_pr_split } has_completed_focus = TFRKPHN_oh_se_hoon_a3 NOT = { has_country_flag = TFRKPHN_hd_6997 } } set_country_flag = TFRKPHN_hd_6997 country_event = { id = tfrkphn.6997 days = 3 } }
 if = { limit = { original_tag = KOR has_country_flag = TFRKPHN_successor_oh_se_hoon NOT = { has_country_flag = TFRKPHN_pr_split } has_completed_focus = TFRKPHN_oh_se_hoon_c5 NOT = { has_country_flag = TFRKPHN_hd_6998 } } set_country_flag = TFRKPHN_hd_6998 country_event = { id = tfrkphn.6998 days = 3 } }
 if = { limit = { original_tag = KOR has_country_flag = TFRKPHN_successor_oh_se_hoon NOT = { has_country_flag = TFRKPHN_pr_split } has_completed_focus = TFRKPHN_oh_se_hoon_h5 NOT = { has_country_flag = TFRKPHN_hd_6999 } } set_country_flag = TFRKPHN_hd_6999 country_event = { id = tfrkphn.6999 days = 3 } }
 if = { limit = { original_tag = KOR has_country_flag = TFRKPHN_successor_oh_se_hoon NOT = { has_country_flag = TFRKPHN_pr_split } has_completed_focus = TFRKPHN_oh_se_hoon_e3 NOT = { has_country_flag = TFRKPHN_hd_7000 } } set_country_flag = TFRKPHN_hd_7000 country_event = { id = tfrkphn.7000 days = 3 } }
 # <<< 강경파의 반격
-# >>> 대통령 자리 지키기 (KP 사건이 이준석 등을 보수 지도자로 올려도 대통령을 다시 앉힌다, 2026-11-19)
-if = { limit = { original_tag = KOR has_country_flag = TFRKP_HN_hong_president has_government = conservative has_character = KOR_hong_joon_pyo_char NOT = { has_country_leader = { character = KOR_hong_joon_pyo_char ruling_only = yes } } } KOR_hong_joon_pyo_char = { promote_character = korean_neoconservatism } }
-if = { limit = { original_tag = KOR has_country_flag = TFRKPHN_successor_lee_in_je has_government = conservative has_character = KOR_lee_in_je_char NOT = { has_country_leader = { character = KOR_lee_in_je_char ruling_only = yes } } } KOR_lee_in_je_char = { promote_character = korean_neoconservatism } }
-if = { limit = { original_tag = KOR has_country_flag = TFRKPHN_successor_oh_se_hoon has_government = conservative has_character = KOR_oh_se_hoon_char NOT = { has_country_leader = { character = KOR_oh_se_hoon_char ruling_only = yes } } } KOR_oh_se_hoon_char = { promote_character = korean_warm_conservatism } }
-# <<< 대통령 자리 지키기
 # >>> 여당 단체장
 if = { limit = { NOT = { has_country_flag = TFRKPHN_ally_tick } } set_country_flag = { flag = TFRKPHN_ally_tick days = 30 value = 1 } TFRKPHN_ally_apply = yes }
 # <<< 여당 단체장
+# >>> 김정은 생포 (kju_build.py)
+if = { limit = { original_tag = KOR has_country_flag = TFRKPHN_successor_oh_se_hoon NOT = { has_country_flag = TFRKPHN_kju_captured } NOT = { has_country_flag = TFRKPHN_k189_done } OR = { NOT = { country_exists = PRK } PRK = { has_capitulated = yes } } } set_country_flag = TFRKPHN_kju_captured country_event = { id = tfrkphn.6993 days = 2 } }
+# <<< 김정은 생포
 # >>> 끝난 탭 정리 (fade_build.py)
 if = { limit = { original_tag = KOR NOT = { has_country_flag = TFRKPHN_fd_oh_ansim } has_country_flag = TFRKPHN_dn_TFRKPHN_an_d1 has_country_flag = TFRKPHN_dn_TFRKPHN_an_d2 has_country_flag = TFRKPHN_dn_TFRKPHN_an_d3 has_country_flag = TFRKPHN_dn_TFRKPHN_an_d4 } set_country_flag = TFRKPHN_fd_oh_ansim set_country_flag = { flag = TFRKPHN_fdt_oh_ansim value = 1 days = 30 } }
 if = { limit = { original_tag = KOR NOT = { has_country_flag = TFRKPHN_fd_oh_exile } has_country_flag = TFRKPHN_dn_TFRKPHN_ex_d1 has_country_flag = TFRKPHN_dn_TFRKPHN_ex_d2 has_country_flag = TFRKPHN_dn_TFRKPHN_ex_d3 has_country_flag = TFRKPHN_dn_TFRKPHN_ex_d4 has_country_flag = TFRKPHN_dn_TFRKPHN_ex_d5 has_country_flag = TFRKPHN_dn_TFRKPHN_ex_d6 has_country_flag = TFRKPHN_dn_TFRKPHN_ex_d7 has_country_flag = TFRKPHN_dn_TFRKPHN_ex_d8 has_country_flag = TFRKPHN_dn_TFRKPHN_ex_d9 has_country_flag = TFRKPHN_dn_TFRKPHN_ex_d10 has_country_flag = TFRKPHN_dn_TFRKPHN_ex_d11 has_country_flag = TFRKPHN_dn_TFRKPHN_ex_d12 } set_country_flag = TFRKPHN_fd_oh_exile set_country_flag = { flag = TFRKPHN_fdt_oh_exile value = 1 days = 30 } }
