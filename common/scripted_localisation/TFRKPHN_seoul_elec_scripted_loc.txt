@@ -5,7 +5,13 @@ defined_text = {
 	text = { trigger = { has_country_flag = TFRKPHN_sd_run_cho } localization_key = TFRKPHN_sd_cand_cho }
 	text = { trigger = { has_country_flag = TFRKPHN_sd_run_yoon } localization_key = TFRKPHN_sd_cand_yoon }
 	text = { trigger = { has_country_flag = TFRKPHN_sd_run_kim } localization_key = TFRKPHN_sd_cand_kim }
+	text = { trigger = { has_country_flag = TFRKPHN_sd_run_na } localization_key = TFRKPHN_sd_cand_na }
 	text = { localization_key = TFRKPHN_sd_cand_none }
+}
+defined_text = {
+	name = GetTFRKPHNByNaPara
+	text = { trigger = { check_variable = { TFRKPHN_support_seoul > 49.9 } } localization_key = TFRKPHN_by_para_na }
+	text = { localization_key = TFRKPHN_by_para_two }
 }
 defined_text = {
 	name = GetTFRKPHNByOther

@@ -189,17 +189,6 @@ if = { limit = { OR = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_coun
 if = { limit = { OR = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_country_flag = TFRKPHN_sd_lee_by } has_country_flag = TFRKPHN_sd_by_primary_done NOT = { has_country_flag = TFRKPHN_sd_by_done } } add_to_variable = { TFRKPHN_by_opp_cd = 1 } if = { limit = { check_variable = { TFRKPHN_by_opp_cd > 2.5 } } TFRKPHN_by_opp_move = yes } TFRKPHN_by_poll = yes }
 if = { limit = { OR = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_country_flag = TFRKPHN_sd_lee_by } has_country_flag = TFRKPHN_sd_by_done has_country_flag = TFRKPHN_by_count_done has_country_flag = TFRKPHN_sd_mayor_gov check_variable = { TFRKPHN_by_redev > 0.5 } NOT = { has_country_flag = TFRKPHN_by_promise_kept } } TFRKPHN_by_keep_promise = yes }
 # <<< 보궐선거 탭
-# >>> 서울 선거 (seoul_elec_build.py)
-if = { limit = { OR = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_country_flag = TFRKPHN_sd_lee_by } has_country_flag = TFRKPHN_sd_inited date > 2027.3.15 date < 2027.4.5 NOT = { has_country_flag = TFRKPHN_sd_by_primary_done } } set_country_flag = TFRKPHN_sd_by_primary_done if = { limit = { has_country_flag = TFRKPHN_sd_lee_by } country_event = { id = tfrkphn.6761 } } else = { country_event = { id = tfrkphn.651 } } }
-if = { limit = { OR = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_country_flag = TFRKPHN_sd_lee_by } has_country_flag = TFRKPHN_sd_inited has_country_flag = TFRKPHN_sd_run_chung date > 2027.3.28 date < 2027.4.7 NOT = { has_country_flag = TFRKPHN_sd_gap_ev_done } } set_country_flag = TFRKPHN_sd_gap_ev_done if = { limit = { has_country_flag = TFRKPHN_sd_lee_by } country_event = { id = tfrkphn.6766 } } else = { country_event = { id = tfrkphn.656 } } }
-if = { limit = { OR = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_country_flag = TFRKPHN_sd_lee_by } has_country_flag = TFRKPHN_sd_inited date > 2027.4.7 date < 2027.6.1 NOT = { has_country_flag = TFRKPHN_sd_by_done } } TFRKPHN_sd_byelection = yes }
-if = { limit = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_country_flag = TFRKPHN_sd_inited date > 2030.2.28 NOT = { has_country_flag = TFRKPHN_sd_primary_done } }
-	set_country_flag = TFRKPHN_sd_primary_done
-	if = { limit = { has_country_flag = TFRKPHN_sd_mayor_gov } country_event = { id = tfrkphn.655 } }
-	if = { limit = { NOT = { has_country_flag = TFRKPHN_sd_mayor_gov } } country_event = { id = tfrkphn.641 } }
-}
-if = { limit = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_country_flag = TFRKPHN_sd_inited date > 2030.6.3 NOT = { has_country_flag = TFRKPHN_sd_elec_done } } TFRKPHN_sd_election = yes }
-# <<< 서울 선거
 # >>> 오세훈 총선과 반발 (oh_ge2028_build.py)
 if = { limit = { has_country_flag = TFRKPHN_successor_oh_se_hoon NOT = { has_country_flag = TFRKPHN_bk_1 } check_variable = { TFRKPHN_redev_n > 1.5 } } set_country_flag = TFRKPHN_bk_1 country_event = { id = tfrkphn.6611 days = 3 } }
 if = { limit = { has_country_flag = TFRKPHN_successor_oh_se_hoon NOT = { has_country_flag = TFRKPHN_bk_2 } check_variable = { TFRKPHN_mega_s1 > 2.5 } check_variable = { TFRKPHN_mega_s2 < 1.5 } check_variable = { TFRKPHN_mega_s3 < 1.5 } check_variable = { TFRKPHN_mega_s4 < 1.5 } check_variable = { TFRKPHN_mega_s5 < 1.5 } } set_country_flag = TFRKPHN_bk_2 country_event = { id = tfrkphn.6612 days = 3 } }
@@ -274,6 +263,18 @@ if = { limit = { date > 2026.2.28 NOT = { has_country_flag = TFRKPHN_gj_asked } 
 if = { limit = { has_country_flag = TFRKPHN_le_started has_variable = TFRKPHN_le_days NOT = { has_country_flag = TFRKPHN_le_done } } TFRKPHN_le_daily = yes }
 if = { limit = { has_country_flag = TFRKPHN_le_started has_variable = TFRKPHN_le_days date > 2030.6.3 NOT = { has_country_flag = TFRKPHN_le_done } } TFRKPHN_le_count = yes }
 # <<< 지방선거 상황실
+
+# >>> 서울 선거 (seoul_elec_build.py)
+if = { limit = { OR = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_country_flag = TFRKPHN_sd_lee_by } has_country_flag = TFRKPHN_sd_inited date > 2027.3.15 date < 2027.4.5 NOT = { has_country_flag = TFRKPHN_sd_by_primary_done } } set_country_flag = TFRKPHN_sd_by_primary_done if = { limit = { has_country_flag = TFRKPHN_sd_lee_by } country_event = { id = tfrkphn.6761 } } else = { country_event = { id = tfrkphn.651 } } }
+if = { limit = { OR = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_country_flag = TFRKPHN_sd_lee_by } has_country_flag = TFRKPHN_sd_inited has_country_flag = TFRKPHN_sd_run_chung date > 2027.3.28 date < 2027.4.7 NOT = { has_country_flag = TFRKPHN_sd_gap_ev_done } } set_country_flag = TFRKPHN_sd_gap_ev_done if = { limit = { has_country_flag = TFRKPHN_sd_lee_by } country_event = { id = tfrkphn.6766 } } else = { country_event = { id = tfrkphn.656 } } }
+if = { limit = { OR = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_country_flag = TFRKPHN_sd_lee_by } has_country_flag = TFRKPHN_sd_inited date > 2027.4.7 date < 2027.6.1 NOT = { has_country_flag = TFRKPHN_sd_by_done } } TFRKPHN_sd_byelection = yes }
+if = { limit = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_country_flag = TFRKPHN_sd_inited date > 2030.2.28 NOT = { has_country_flag = TFRKPHN_sd_primary_done } }
+	set_country_flag = TFRKPHN_sd_primary_done
+	if = { limit = { has_country_flag = TFRKPHN_sd_mayor_gov } country_event = { id = tfrkphn.655 } }
+	if = { limit = { NOT = { has_country_flag = TFRKPHN_sd_mayor_gov } } country_event = { id = tfrkphn.641 } }
+}
+if = { limit = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_country_flag = TFRKPHN_sd_inited date > 2030.6.3 NOT = { has_country_flag = TFRKPHN_sd_elec_done } } TFRKPHN_sd_election = yes }
+# <<< 서울 선거
 
 # 오세훈 정부 서울 지도: 변수 첫 설정 (seoul_build.py)
 if = { limit = { has_country_flag = TFRKPHN_successor_oh_se_hoon NOT = { has_country_flag = TFRKPHN_sd_inited } } TFRKPHN_sd_init = yes }

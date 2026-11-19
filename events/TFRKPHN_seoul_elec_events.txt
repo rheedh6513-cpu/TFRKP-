@@ -1,7 +1,7 @@
 # [안내] 오세훈 정부: 서울시장 보궐선거(2027년 4월)와 2030년 지방선거. seoul_elec_build.py가 만든다.
 add_namespace = tfrkphn
 
-# 보궐선거: 여당 후보 경선 (플레이어가 고른다)
+# 보궐선거: 여당 후보 경선 (플레이어가 고른다). 나경원은 2026-11-19 사용자 요청으로 더함
 country_event = {
 	id = tfrkphn.651
 	title = tfrkphn.651.t
@@ -11,19 +11,25 @@ country_event = {
 	option = {
 		name = tfrkphn.651.a
 		custom_effect_tooltip = tfrkphn.651.a_tt
-		hidden_effect = { clr_country_flag = TFRKPHN_sd_run_chung clr_country_flag = TFRKPHN_sd_run_cho clr_country_flag = TFRKPHN_sd_run_yoon clr_country_flag = TFRKPHN_sd_run_kim set_country_flag = TFRKPHN_sd_run_chung set_variable = { TFRKPHN_sd_delta = 3 } TFRKPHN_sd_add_se = yes set_variable = { TFRKPHN_sd_delta = 3 } TFRKPHN_sd_add_north = yes set_variable = { TFRKPHN_sd_delta = 3 } TFRKPHN_sd_add_sw = yes TFRKPHN_sd_refresh = yes country_event = { id = tfrkphn.652 days = 5 } }
+		hidden_effect = { clr_country_flag = TFRKPHN_sd_run_chung clr_country_flag = TFRKPHN_sd_run_cho clr_country_flag = TFRKPHN_sd_run_yoon clr_country_flag = TFRKPHN_sd_run_kim clr_country_flag = TFRKPHN_sd_run_na set_country_flag = TFRKPHN_sd_run_chung set_variable = { TFRKPHN_sd_delta = 3 } TFRKPHN_sd_add_se = yes set_variable = { TFRKPHN_sd_delta = 3 } TFRKPHN_sd_add_north = yes set_variable = { TFRKPHN_sd_delta = 3 } TFRKPHN_sd_add_sw = yes TFRKPHN_sd_refresh = yes country_event = { id = tfrkphn.652 days = 5 } }
 	}
 	option = {
 		name = tfrkphn.651.b
 		trigger = { NOT = { has_idea = TFRKPHN_cho_eun_hee_HM } }
 		custom_effect_tooltip = tfrkphn.651.b_tt
-		hidden_effect = { clr_country_flag = TFRKPHN_sd_run_chung clr_country_flag = TFRKPHN_sd_run_cho clr_country_flag = TFRKPHN_sd_run_yoon clr_country_flag = TFRKPHN_sd_run_kim set_country_flag = TFRKPHN_sd_run_cho set_variable = { TFRKPHN_sd_delta = 4 } TFRKPHN_sd_add_se = yes set_variable = { TFRKPHN_sd_delta = 1 } TFRKPHN_sd_add_north = yes TFRKPHN_sd_refresh = yes country_event = { id = tfrkphn.652 days = 5 } }
+		hidden_effect = { clr_country_flag = TFRKPHN_sd_run_chung clr_country_flag = TFRKPHN_sd_run_cho clr_country_flag = TFRKPHN_sd_run_yoon clr_country_flag = TFRKPHN_sd_run_kim clr_country_flag = TFRKPHN_sd_run_na set_country_flag = TFRKPHN_sd_run_cho set_variable = { TFRKPHN_sd_delta = 4 } TFRKPHN_sd_add_se = yes set_variable = { TFRKPHN_sd_delta = 1 } TFRKPHN_sd_add_north = yes TFRKPHN_sd_refresh = yes country_event = { id = tfrkphn.652 days = 5 } }
 	}
 	option = {
 		name = tfrkphn.651.c
 		trigger = { has_idea = TFRKPHN_cho_eun_hee_HM }
 		custom_effect_tooltip = tfrkphn.651.c_tt
-		hidden_effect = { clr_country_flag = TFRKPHN_sd_run_chung clr_country_flag = TFRKPHN_sd_run_cho clr_country_flag = TFRKPHN_sd_run_yoon clr_country_flag = TFRKPHN_sd_run_kim set_country_flag = TFRKPHN_sd_run_yoon set_variable = { TFRKPHN_sd_delta = 2 } TFRKPHN_sd_add_se = yes set_variable = { TFRKPHN_sd_delta = 2 } TFRKPHN_sd_add_north = yes set_variable = { TFRKPHN_sd_delta = 2 } TFRKPHN_sd_add_sw = yes TFRKPHN_sd_refresh = yes country_event = { id = tfrkphn.652 days = 5 } }
+		hidden_effect = { clr_country_flag = TFRKPHN_sd_run_chung clr_country_flag = TFRKPHN_sd_run_cho clr_country_flag = TFRKPHN_sd_run_yoon clr_country_flag = TFRKPHN_sd_run_kim clr_country_flag = TFRKPHN_sd_run_na set_country_flag = TFRKPHN_sd_run_yoon set_variable = { TFRKPHN_sd_delta = 2 } TFRKPHN_sd_add_se = yes set_variable = { TFRKPHN_sd_delta = 2 } TFRKPHN_sd_add_north = yes set_variable = { TFRKPHN_sd_delta = 2 } TFRKPHN_sd_add_sw = yes TFRKPHN_sd_refresh = yes country_event = { id = tfrkphn.652 days = 5 } }
+	}
+	option = {
+		name = tfrkphn.651.e
+		trigger = { check_variable = { TFRKPHN_support_seoul > 49.9 } }
+		custom_effect_tooltip = tfrkphn.651.e_tt
+		hidden_effect = { clr_country_flag = TFRKPHN_sd_run_chung clr_country_flag = TFRKPHN_sd_run_cho clr_country_flag = TFRKPHN_sd_run_yoon clr_country_flag = TFRKPHN_sd_run_kim clr_country_flag = TFRKPHN_sd_run_na set_country_flag = TFRKPHN_sd_run_na set_variable = { TFRKPHN_sd_delta = 3 } TFRKPHN_sd_add_sw = yes set_variable = { TFRKPHN_sd_delta = 2 } TFRKPHN_sd_add_se = yes TFRKPHN_sd_refresh = yes country_event = { id = tfrkphn.652 days = 5 } }
 	}
 }
 
@@ -108,7 +114,7 @@ country_event = {
 	option = {
 		name = tfrkphn.641.a
 		custom_effect_tooltip = tfrkphn.641.a_tt
-		hidden_effect = { clr_country_flag = TFRKPHN_sd_run_chung clr_country_flag = TFRKPHN_sd_run_cho clr_country_flag = TFRKPHN_sd_run_yoon clr_country_flag = TFRKPHN_sd_run_kim set_country_flag = TFRKPHN_sd_run_kim set_variable = { TFRKPHN_sd_delta = 3 } TFRKPHN_sd_add_se = yes set_variable = { TFRKPHN_sd_delta = 1 } TFRKPHN_sd_add_north = yes TFRKPHN_sd_refresh = yes }
+		hidden_effect = { clr_country_flag = TFRKPHN_sd_run_chung clr_country_flag = TFRKPHN_sd_run_cho clr_country_flag = TFRKPHN_sd_run_yoon clr_country_flag = TFRKPHN_sd_run_kim clr_country_flag = TFRKPHN_sd_run_na set_country_flag = TFRKPHN_sd_run_kim set_variable = { TFRKPHN_sd_delta = 3 } TFRKPHN_sd_add_se = yes set_variable = { TFRKPHN_sd_delta = 1 } TFRKPHN_sd_add_north = yes TFRKPHN_sd_refresh = yes }
 	}
 }
 

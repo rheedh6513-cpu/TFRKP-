@@ -4,5 +4,6 @@ defined_text = {
 	text = { trigger = { KOR = { has_country_flag = TFRKPHN_mayor_chung } } localization_key = TFRKPHN_mayor_chung_txt }
 	text = { trigger = { KOR = { has_country_flag = TFRKPHN_mayor_yoon } } localization_key = TFRKPHN_mayor_yoon_txt }
 	text = { trigger = { KOR = { has_country_flag = TFRKPHN_mayor_kimbm } } localization_key = TFRKPHN_mayor_kimbm_txt }
+	text = { trigger = { KOR = { has_country_flag = TFRKPHN_mayor_na } } localization_key = TFRKPHN_mayor_na_txt }
 	text = { localization_key = TFRKPHN_mayor_kim_jaesub_orig }
 }
