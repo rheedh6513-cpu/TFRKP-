@@ -1,5 +1,204 @@
 # [안내] KP 길이로 늘린 사건의 둘째 화면. long_apply.py가 만든다.
 add_namespace = tfrkphn
+# tfrkphn.31 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8239
+	title = tfrkphn.31.t
+	desc = TFRKPHN_lg_31_b
+	picture = GFX_TFRKPHN_ammo_bunker
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.31.a
+	}
+}
+# tfrkphn.32 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8240
+	title = tfrkphn.32.t
+	desc = TFRKPHN_lg_32_b
+	picture = GFX_TFRKPHN_kwangbok
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.32.a
+	}
+}
+# tfrkphn.34 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8241
+	title = tfrkphn.34.t
+	desc = TFRKPHN_lg_34_b
+	picture = GFX_TFRKPHN_yeonpyeong
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.34.a
+	}
+}
+# tfrkphn.35 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8242
+	title = tfrkphn.35.t
+	desc = TFRKPHN_lg_35_b
+	picture = GFX_TFRKPHN_nis_stars
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.35.a
+	}
+}
+# tfrkphn.36 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8243
+	title = tfrkphn.36.t
+	desc = TFRKPHN_lg_36_b
+	picture = GFX_TFRKPHN_yeouido_rally
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.36.a
+	}
+}
+# tfrkphn.37 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8244
+	title = tfrkphn.37.t
+	desc = TFRKPHN_lg_37_b
+	picture = GFX_TFRKPHN_shipyard
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.37.a
+	}
+}
+# tfrkphn.40 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8245
+	title = tfrkphn.40.t
+	desc = TFRKPHN_lg_40_b
+	picture = GFX_TFRKPHN_warsaw_signing
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.40.a
+	}
+}
+# tfrkphn.50 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8246
+	title = tfrkphn.50.t
+	desc = TFRKPHN_lg_50_b
+	picture = GFX_TFRKPHN_hong_office
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.50.a
+	}
+}
+# tfrkphn.58 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8247
+	title = tfrkphn.58.t
+	desc = TFRKPHN_lg_58_b
+	picture = GFX_TFRKPHN_seomin
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.58.a
+	}
+}
+# tfrkphn.75 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8248
+	title = tfrkphn.75.t
+	desc = TFRKPHN_lg_75_b
+	picture = GFX_TFRKPHN_const_court
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.75.a
+		add_political_power = 50
+		set_country_flag = TFRKPHN_reform_started
+	}
+}
+# tfrkphn.81 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8249
+	title = tfrkphn.81.t
+	desc = TFRKPHN_lg_81_b
+	picture = GFX_TFRKPHN_crisis_room
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.81.a
+		add_war_support = 0.04
+		add_stability = -0.02
+		set_country_flag = TFRKPHN_reform_nuclear_sharing
+	}
+}
+# tfrkphn.85 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8250
+	title = tfrkphn.85.t
+	desc = TFRKPHN_lg_85_b
+	picture = GFX_TFRKPHN_gallup_post
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.85.a
+		set_country_flag = TFRKPHN_poll_ban
+		custom_effect_tooltip = TFRKPHN_poll_ban_tt
+		add_war_support = 0.02
+	}
+}
+# tfrkphn.91 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8251
+	title = tfrkphn.91.t
+	desc = TFRKPHN_lg_91_b
+	picture = GFX_TFRKPHN_oh_conv
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.91.story_a
+		custom_effect_tooltip = TFRKPHN_conv_oh_tt
+		set_country_flag = TFRKPHN_conv_oh
+		clr_country_flag = TFRKPHN_conv_lee
+	}
+}
+# tfrkphn.130 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8252
+	title = tfrkphn.130.t
+	desc = TFRKPHN_lg_130_b
+	picture = GFX_TFRKPHN_amend
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.130.a
+	}
+}
+# tfrkphn.131 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8253
+	title = tfrkphn.131.t
+	desc = TFRKPHN_lg_131_b
+	picture = GFX_TFRKPHN_amend
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.131.a
+		custom_effect_tooltip = TFRKPHN_amend_rejected_oh_tt	# amend_oh_fix.py
+	}
+}
+# tfrkphn.132 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8254
+	title = tfrkphn.132.t
+	desc = TFRKPHN_lg_132_b
+	picture = GFX_TFRKPHN_amend
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.132.a
+	}
+}
+# tfrkphn.135 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8255
+	title = tfrkphn.135.t
+	desc = TFRKPHN_lg_135_b
+	picture = GFX_TFRKPHN_amend
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.135.a
+	}
+}
 # tfrkphn.230 둘째 화면 (long_apply.py)
 country_event = {
 	id = tfrkphn.8103

@@ -1,0 +1,22 @@
+# [안내] 탄핵 정국 (개입 패전 갈래). impeach_build.py가 만든다.
+TFRKPHN_imp_start = {
+	set_country_flag = TFRKPHN_imp_on
+	set_variable = { TFRKPHN_imp_def = 0 }
+	set_variable = { TFRKPHN_imp_tick = 0 }
+	TFRKPHN_imp_refresh = yes
+	activate_mission = TFRKPHN_imp_opposition_moves
+}
+TFRKPHN_imp_refresh = {
+	set_variable = { TFRKPHN_imp_opp = KOR_NatAsm_DP_seats }
+	add_to_variable = { TFRKPHN_imp_opp = KOR_NatAsm_JP_seats }
+	clamp_variable = { var = TFRKPHN_imp_opp min = 0 max = 300 }
+	set_variable = { TFRKPHN_imp_yes = TFRKPHN_imp_opp }
+	add_to_variable = { TFRKPHN_imp_yes = TFRKPHN_imp_def }
+	clamp_variable = { var = TFRKPHN_imp_yes min = 0 max = 300 }
+	if = {
+		limit = { check_variable = { TFRKPHN_imp_yes > 199.5 } check_variable = { TFRKPHN_imp_tick > 5.5 } OR = { has_completed_focus = TFRKPHN_hong_b05_07 has_completed_focus = TFRKPHN_hong_b05_08 } NOT = { has_country_flag = TFRKPHN_imp_done } }	# 최악의 결과 다음 하나(책임회피/역공시도)까지 찍을 시간을 준다 (사용자 2026-11-20 23시 35분, 36분)
+		set_country_flag = TFRKPHN_imp_ready
+		clr_country_flag = TFRKPHN_imp_on
+		country_event = { id = tfrkphn.7023 days = 1 }
+	}
+}

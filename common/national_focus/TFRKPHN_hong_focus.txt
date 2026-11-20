@@ -468,7 +468,7 @@ focus_tree = {
 	### 개입 패전 중점 (5-N, 참전했는데 중국이 이기면 나타남) ###
 	focus = {
 		id = TFRKPHN_hong_b05_01
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_focus_TFRKPHN_def_abyss
 		allow_branch = {
 			has_global_flag = PRC_taiwan_war_won
 			has_completed_focus = TFRKPHN_hong_b02_02
@@ -476,7 +476,7 @@ focus_tree = {
 		relative_position_id = TFRKPHN_hong_b01_01
 		x = 26
 		y = 0
-		cost = 2
+		cost = 3
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_stability = -0.10
@@ -486,28 +486,29 @@ focus_tree = {
 	}
 	focus = {
 		id = TFRKPHN_hong_b05_02
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_focus_TFRKPHN_def_fallout
 		relative_position_id = TFRKPHN_hong_b05_01
 		prerequisite = { focus = TFRKPHN_hong_b05_01 }
 		x = 0
 		y = 1
-		cost = 2
+		cost = 3
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_stability = -0.05
 			add_political_power = -50
 			custom_effect_tooltip = TFRKPHN_defeat_sup_m5_tt hidden_effect = { set_temp_variable = { TFRKPHN_support_delta = -5 } TFRKPHN_support_add_all = yes }
+			custom_effect_tooltip = TFRKPHN_imp_start_tt hidden_effect = { TFRKPHN_imp_start = yes }
 		}
 	}
 	focus = {
 		id = TFRKPHN_hong_b05_03
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_focus_TFRKPHN_def_anticom
 		relative_position_id = TFRKPHN_hong_b05_01
 		prerequisite = { focus = TFRKPHN_hong_b05_02 }
 		x = -2
 		y = 2
 		mutually_exclusive = { focus = TFRKPHN_hong_b05_04 focus = TFRKPHN_hong_b05_05 }
-		cost = 2
+		cost = 3
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_war_support = 0.05
@@ -517,13 +518,13 @@ focus_tree = {
 	}
 	focus = {
 		id = TFRKPHN_hong_b05_04
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_focus_TFRKPHN_def_coalition
 		relative_position_id = TFRKPHN_hong_b05_01
 		prerequisite = { focus = TFRKPHN_hong_b05_02 }
 		x = 0
 		y = 2
 		mutually_exclusive = { focus = TFRKPHN_hong_b05_03 focus = TFRKPHN_hong_b05_05 }
-		cost = 2
+		cost = 3
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_stability = 0.05
@@ -532,13 +533,13 @@ focus_tree = {
 	}
 	focus = {
 		id = TFRKPHN_hong_b05_05
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_focus_TFRKPHN_def_ahn
 		relative_position_id = TFRKPHN_hong_b05_01
 		prerequisite = { focus = TFRKPHN_hong_b05_02 }
 		x = 2
 		y = 2
 		mutually_exclusive = { focus = TFRKPHN_hong_b05_03 focus = TFRKPHN_hong_b05_04 }
-		cost = 2
+		cost = 3
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_stability = 0.02
@@ -553,7 +554,7 @@ focus_tree = {
 		prerequisite = { focus = TFRKPHN_hong_b05_03 focus = TFRKPHN_hong_b05_04 focus = TFRKPHN_hong_b05_05 }
 		x = 0
 		y = 3
-		cost = 2
+		cost = 3
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_stability = -0.05
@@ -568,11 +569,14 @@ focus_tree = {
 		x = -1
 		y = 4
 		mutually_exclusive = { focus = TFRKPHN_hong_b05_08 }
-		cost = 2
+		cost = 3
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			add_stability = 0.05
-			add_political_power = -50
+			add_political_power = 50
+			add_stability = -0.02
+			custom_effect_tooltip = TFRKPHN_defeat_sup_m3_tt hidden_effect = { set_temp_variable = { TFRKPHN_support_delta = -3 } TFRKPHN_support_add_all = yes }
+			set_country_flag = TFRKPHN_defeat_dodge
+			hidden_effect = { if = { limit = { has_country_flag = TFRKPHN_imp_on } TFRKPHN_imp_refresh = yes } }
 		}
 	}
 	focus = {
@@ -583,12 +587,15 @@ focus_tree = {
 		x = 1
 		y = 4
 		mutually_exclusive = { focus = TFRKPHN_hong_b05_07 }
-		cost = 2
+		cost = 3
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			add_stability = 0.03
-			add_political_power = -100
-			set_country_flag = TFRKPHN_defeat_resign
+			add_war_support = 0.05
+			add_political_power = -50
+			add_stability = -0.03
+			custom_effect_tooltip = TFRKPHN_defeat_sup_p2_tt hidden_effect = { set_temp_variable = { TFRKPHN_support_delta = 2 } TFRKPHN_support_add_all = yes }
+			set_country_flag = TFRKPHN_defeat_counter
+			hidden_effect = { if = { limit = { has_country_flag = TFRKPHN_imp_on } TFRKPHN_imp_refresh = yes } }
 		}
 	}
 	focus = {
@@ -598,10 +605,30 @@ focus_tree = {
 		prerequisite = { focus = TFRKPHN_hong_b05_07 focus = TFRKPHN_hong_b05_08 }
 		x = 0
 		y = 5
-		cost = 2
+		cost = 3
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_political_power = 25
+			custom_effect_tooltip = TFRKPHN_imp_rebel_tt hidden_effect = { if = { limit = { NOT = { has_country_flag = TFRKPHN_imp_done } } country_event = { id = tfrkphn.7025 days = 1 } } }
+		}
+	}
+	focus = {
+		id = TFRKPHN_hong_b05_10
+		icon = GFX_KOR_lee_defeat_21st_president_election
+		allow_branch = { has_country_flag = TFRKPHN_imp_done }
+		relative_position_id = TFRKPHN_hong_b05_01
+		x = 0
+		y = 6
+		cost = 10
+		available = { custom_trigger_tooltip = { tooltip = TFRKPHN_imp_elec_auto_tt always = no } }
+		cancelable = no
+		continue_if_invalid = yes
+		ai_will_do = { factor = 0 }
+		completion_reward = {
+			set_country_flag = TFRKPHN_imp_election_done
+			if = { limit = { has_country_flag = TFRKPHN_e21_unified has_country_flag = TFRKPHN_e21_cand_sim } country_event = tfrkphn.7034 }
+			else_if = { limit = { has_country_flag = TFRKPHN_e21_unified } country_event = tfrkphn.7030 }
+			else = { country_event = tfrkphn.7031 }
 		}
 	}
 	# <<< 개입 패전 갈래

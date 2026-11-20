@@ -1,0 +1,6 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_portrait_TFRKPHN_woo_won_shik"
+		texturefile = "gfx/leaders/KOR/TFRKPHN_woo_won_shik.png"
+	}
+}

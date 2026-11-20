@@ -1,0 +1,419 @@
+# [안내] 탄핵 정국 이벤트. impeach_build.py가 impeach_ev.py의 글로 만든다.
+add_namespace = tfrkphn
+country_event = {
+	id = tfrkphn.7020
+	title = tfrkphn.7020.t
+	desc = tfrkphn.7020.d
+	picture = GFX_TFRKPHN_imp_alone
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7020.a
+		add_stability = -0.02
+	}
+}
+country_event = {
+	id = tfrkphn.7021
+	title = tfrkphn.7021.t
+	desc = tfrkphn.7021.d
+	picture = GFX_report_event_ppp_ge_lose
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7021.a
+		add_stability = -0.02
+		add_political_power = -25
+	}
+}
+country_event = {
+	id = tfrkphn.7022
+	title = tfrkphn.7022.t
+	desc = tfrkphn.7022.d
+	picture = GFX_TFRKPHN_imp_doc
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7022.a
+		add_stability = -0.03
+	}
+}
+country_event = {
+	id = tfrkphn.7023
+	title = tfrkphn.7023.t
+	desc = tfrkphn.7023.d
+	picture = GFX_TFRKPHN_imp_gavel
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			set_country_flag = TFRKPHN_imp_done
+			clr_country_flag = TFRKPHN_imp_on
+			clr_country_flag = TFRKPHN_imp_ready
+			if = { limit = { NOT = { has_character = KOR_lee_in_je_char } } recruit_character = KOR_lee_in_je_char }
+			KOR_lee_in_je_char = { promote_character = korean_neoconservatism }
+			mark_focus_tree_layout_dirty = yes
+			country_event = { id = tfrkphn.7026 days = 70 }
+			country_event = { id = tfrkphn.7027 days = 10 }
+			country_event = { id = tfrkphn.7032 days = 25 }	# 사실상 4파전 (2026-11-20 23시 47분)	# 무너진 양당 (2026-11-20 23시 43분)	# 70일 뒤 제21대 대통령 선거 중점 완료 (2026-11-20 23시 41분)
+		}
+	}
+	option = {
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.7123 } }
+	}
+}
+country_event = {
+	id = tfrkphn.7123
+	title = tfrkphn.7023.t
+	desc = tfrkphn.7123.d
+	picture = GFX_TFRKPHN_imp_ev
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7023.a
+		custom_effect_tooltip = TFRKPHN_imp_acting_tt
+		add_stability = -0.10
+		add_political_power = -100
+	}
+}
+country_event = {
+	id = tfrkphn.7024
+	title = tfrkphn.7024.t
+	desc = tfrkphn.7024.d
+	picture = GFX_TFRKPHN_orp_7001
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			set_country_flag = TFRKPHN_orp_formed
+			set_variable = { NA_show_ORP = 1 }
+			set_temp_variable = { TFRKPHN_orp_n = 24 }
+			if = { limit = { check_variable = { KOR_NatAsm_PPP_seats < 24 } } set_temp_variable = { TFRKPHN_orp_n = KOR_NatAsm_PPP_seats } }
+			subtract_from_variable = { KOR_NatAsm_PPP_seats = TFRKPHN_orp_n }
+			if = { limit = { NOT = { has_variable = KOR_NatAsm_ORP_seats } } set_variable = { KOR_NatAsm_ORP_seats = 0 } }
+			add_to_variable = { KOR_NatAsm_ORP_seats = TFRKPHN_orp_n }
+			KOR_rerender_NatAsm = yes
+		}
+	}
+	option = {
+		name = tfrkphn.7024.a
+		custom_effect_tooltip = TFRKPHN_imp_orp_tt
+		add_stability = -0.03
+	}
+}
+country_event = {
+	id = tfrkphn.7025
+	title = tfrkphn.7025.t
+	desc = tfrkphn.7025.d
+	picture = GFX_TFRKPHN_imp_crowd
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			TFRKPHN_imp_refresh = yes
+			set_temp_variable = { imp_need = 212 }
+			subtract_from_temp_variable = { imp_need = TFRKPHN_imp_opp }
+			if = { limit = { check_variable = { TFRKPHN_imp_def < imp_need } } set_variable = { TFRKPHN_imp_def = imp_need } }
+			if = { limit = { check_variable = { TFRKPHN_imp_tick < 6 } } set_variable = { TFRKPHN_imp_tick = 6 } }
+			set_country_flag = TFRKPHN_imp_on
+			TFRKPHN_imp_refresh = yes
+		}
+	}
+	option = {
+		name = tfrkphn.7025.a
+		custom_effect_tooltip = TFRKPHN_imp_rebel_tt
+		add_political_power = -50
+	}
+}
+country_event = {
+	id = tfrkphn.7027
+	title = tfrkphn.7027.t
+	desc = tfrkphn.7027.d
+	picture = GFX_report_event_ppp_ge_lose
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7027.a
+		custom_effect_tooltip = TFRKPHN_e21_uni_tt
+		hidden_effect = {
+			set_country_flag = TFRKPHN_e21_talks
+			set_variable = { TFRKPHN_e21_uni = 30 }
+			if = { limit = { has_completed_focus = TFRKPHN_hong_b05_05 } add_to_variable = { TFRKPHN_e21_uni = 20 } }
+			if = { limit = { has_completed_focus = TFRKPHN_hong_b05_03 } add_to_variable = { TFRKPHN_e21_uni = -20 } }
+			activate_mission = TFRKPHN_e21_deadline
+		}
+	}
+}
+country_event = {
+	id = tfrkphn.7028
+	title = tfrkphn.7028.t
+	desc = tfrkphn.7028.d
+	picture = GFX_report_event_ppp_ge_lose
+	is_triggered_only = yes
+	immediate = { hidden_effect = { set_country_flag = TFRKPHN_e21_unified } }
+	option = {
+		name = tfrkphn.7028.ahn
+		custom_effect_tooltip = TFRKPHN_e21_pick_ahn_tt
+		set_country_flag = TFRKPHN_e21_cand_ahn
+		add_stability = 0.02
+	}
+	option = {
+		name = tfrkphn.7028.sim
+		custom_effect_tooltip = TFRKPHN_e21_pick_sim_tt
+		set_country_flag = TFRKPHN_e21_cand_sim
+		add_stability = 0.02
+		hidden_effect = { country_event = { id = tfrkphn.7036 days = 2 } news_event = { id = tfrkphn.7035 days = 7 } country_event = { id = tfrkphn.7037 days = 14 } }
+	}
+}
+country_event = {
+	id = tfrkphn.7029
+	title = tfrkphn.7029.t
+	desc = tfrkphn.7029.d
+	picture = GFX_report_event_ppp_ge_lose
+	is_triggered_only = yes
+	immediate = { hidden_effect = { set_country_flag = TFRKPHN_e21_split } }
+	option = {
+		name = tfrkphn.7029.a
+		add_stability = -0.03
+		hidden_effect = { country_event = { id = tfrkphn.7038 days = 5 } }
+	}
+}
+country_event = {
+	id = tfrkphn.7030
+	title = tfrkphn.7030.t
+	desc = tfrkphn.7030.d
+	picture = GFX_report_event_ppp_ge_lose
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			set_country_flag = TFRKPHN_e21_ahn
+			clr_country_flag = TFRKPHN_pres_cycle
+			set_party_name = { ideology = market_liberal long_name = TFRKPHN_e21_alliance_long name = TFRKPHN_e21_alliance }
+			add_popularity = { ideology = market_liberal popularity = 0.25 }
+			set_politics = { ruling_party = market_liberal elections_allowed = yes }
+			if = { limit = { NOT = { has_character = KOR_ahn_cheol_soo_char } } recruit_character = KOR_ahn_cheol_soo_char }
+			KOR_ahn_cheol_soo_char = { promote_character = yes }
+		}
+	}
+	option = {
+		name = tfrkphn.7030.a
+		custom_effect_tooltip = TFRKPHN_e21_ahn_tt
+		add_stability = 0.10
+	}
+}
+country_event = {
+	id = tfrkphn.7031
+	title = tfrkphn.7031.t
+	desc = tfrkphn.7031.d
+	picture = GFX_report_event_ppp_ge_lose
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			set_country_flag = TFRKPHN_e21_cho
+			clr_country_flag = TFRKPHN_pres_cycle
+			set_party_name = { ideology = authoritarian_democrat long_name = KOR_authoritarian_democrat_party_long name = KOR_authoritarian_democrat_party }
+			add_popularity = { ideology = authoritarian_democrat popularity = 0.25 }
+			set_politics = { ruling_party = authoritarian_democrat elections_allowed = yes }
+			if = { limit = { NOT = { has_character = KOR_cho_won_jin_char } } recruit_character = KOR_cho_won_jin_char }
+			KOR_cho_won_jin_char = { promote_character = yes }
+		}
+	}
+	option = {
+		name = tfrkphn.7031.a
+		custom_effect_tooltip = TFRKPHN_e21_cho_tt
+		add_stability = -0.05
+		add_war_support = 0.10
+		hidden_effect = { country_event = { id = tfrkphn.7039 days = 1 } }
+	}
+}
+country_event = {
+	id = tfrkphn.7032
+	title = tfrkphn.7032.t
+	desc = tfrkphn.7032.d
+	picture = GFX_report_event_ppp_ge_lose
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7032.a
+		add_political_power = 25
+	}
+}
+country_event = {
+	id = tfrkphn.7034
+	title = tfrkphn.7034.t
+	desc = tfrkphn.7034.d
+	picture = GFX_report_event_ppp_ge_lose
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			set_country_flag = TFRKPHN_e21_sim_pres
+			clr_country_flag = TFRKPHN_pres_cycle
+			set_party_name = { ideology = social_democrat long_name = TFRKPHN_e21_alliance_long name = TFRKPHN_e21_alliance }
+			add_popularity = { ideology = social_democrat popularity = 0.25 }
+			set_politics = { ruling_party = social_democrat elections_allowed = yes }
+			if = { limit = { NOT = { has_character = KOR_sim_sang_jung_char } } recruit_character = KOR_sim_sang_jung_char }
+			KOR_sim_sang_jung_char = { promote_character = yes }
+		}
+	}
+	option = {
+		name = tfrkphn.7034.a
+		custom_effect_tooltip = TFRKPHN_e21_sim_tt
+		add_stability = 0.10
+	}
+}
+country_event = {
+	id = tfrkphn.7038
+	title = tfrkphn.7038.t
+	desc = tfrkphn.7038.d
+	picture = GFX_TFRKPHN_e21_taegeuk
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7038.a
+		custom_effect_tooltip = TFRKPHN_e21_nohope_tt
+	}
+}
+country_event = {
+	id = tfrkphn.7039
+	title = tfrkphn.7039.t
+	desc = tfrkphn.7039.d
+	picture = GFX_TFRKPHN_e21_taegeuk
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7039.a
+		add_stability = -0.05
+		hidden_effect = { country_event = { id = tfrkphn.7040 days = 180 } }
+	}
+}
+country_event = {
+	id = tfrkphn.7040
+	title = tfrkphn.7040.t
+	desc = tfrkphn.7040.d
+	picture = GFX_report_event_ppp_ge_lose
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7040.a
+		custom_effect_tooltip = TFRKPHN_cho_block_tt
+		add_political_power = -50
+		hidden_effect = { country_event = { id = tfrkphn.7041 days = 12 } }
+	}
+	option = {
+		name = tfrkphn.7040.b
+		custom_effect_tooltip = TFRKPHN_cho_back_tt
+		add_political_power = -150
+		hidden_effect = { country_event = { id = tfrkphn.7042 days = 3 } }
+	}
+}
+country_event = {
+	id = tfrkphn.7041
+	title = tfrkphn.7041.t
+	desc = tfrkphn.7041.d
+	picture = GFX_TFRKPHN_e21_shell
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7041.a
+		custom_effect_tooltip = TFRKPHN_cho_newconst_tt
+		add_stability = -0.15
+		add_war_support = 0.05
+		set_country_flag = TFRKPHN_cho_new_const
+	}
+}
+country_event = {
+	id = tfrkphn.7042
+	title = tfrkphn.7042.t
+	desc = tfrkphn.7042.d
+	picture = GFX_TFRKPHN_e21_aug
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7042.a
+		add_stability = -0.05
+		set_country_flag = TFRKPHN_cho_backed_down
+		hidden_effect = { country_event = { id = tfrkphn.7043 days = 60 } }
+	}
+}
+country_event = {
+	id = tfrkphn.7043
+	title = tfrkphn.7043.t
+	desc = tfrkphn.7043.d
+	picture = GFX_TFRKPHN_imp_gavel
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			set_country_flag = TFRKPHN_cho_removed
+			set_politics = { ruling_party = conservative elections_allowed = yes }
+			if = { limit = { NOT = { has_character = KOR_lee_in_je_char } } recruit_character = KOR_lee_in_je_char }
+			KOR_lee_in_je_char = { promote_character = korean_neoconservatism }
+		}
+	}
+	option = {
+		name = tfrkphn.7043.a
+		custom_effect_tooltip = TFRKPHN_cho_removed_tt
+		add_stability = 0.05
+		hidden_effect = { country_event = { id = tfrkphn.7044 days = 60 } }
+	}
+}
+country_event = {
+	id = tfrkphn.7044
+	title = tfrkphn.7044.t
+	desc = tfrkphn.7044.d
+	picture = GFX_TFRKPHN_e21_aug
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			set_country_flag = TFRKPHN_woo_pres
+			clr_country_flag = TFRKPHN_pres_cycle
+			set_party_name = { ideology = social_liberal long_name = TFRKPHN_woo_party_long name = TFRKPHN_woo_party }
+			add_popularity = { ideology = social_liberal popularity = 0.25 }
+			set_politics = { ruling_party = social_liberal elections_allowed = yes }
+			if = { limit = { NOT = { has_character = TFRKPHN_woo_won_shik_char } } recruit_character = TFRKPHN_woo_won_shik_char }
+			TFRKPHN_woo_won_shik_char = { promote_character = yes }
+		}
+	}
+	option = {
+		name = tfrkphn.7044.a
+		custom_effect_tooltip = TFRKPHN_woo_pres_tt
+		add_stability = 0.10
+		hidden_effect = { country_event = { id = tfrkphn.7045 days = 120 } }
+	}
+}
+country_event = {
+	id = tfrkphn.7045
+	title = tfrkphn.7045.t
+	desc = tfrkphn.7045.d
+	picture = GFX_TFRKPHN_e21_23f
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7045.a
+		custom_effect_tooltip = TFRKPHN_woo_23f_tt
+		add_stability = 0.10
+		set_country_flag = TFRKPHN_woo_army_out
+	}
+}
+country_event = {
+	id = tfrkphn.7036
+	title = tfrkphn.7036.t
+	desc = tfrkphn.7036.d
+	picture = GFX_TFRKPHN_e21_signal
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7036.a
+	}
+}
+country_event = {
+	id = tfrkphn.7037
+	title = tfrkphn.7037.t
+	desc = tfrkphn.7037.d
+	picture = GFX_TFRKPHN_e21_hope
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7037.a
+	}
+}
+news_event = {
+	id = tfrkphn.7035
+	title = tfrkphn.7035.t
+	desc = tfrkphn.7035.d
+	picture = GFX_TFRKPHN_e21_poll
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7035.a
+	}
+}
+country_event = {
+	id = tfrkphn.7026
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		if = { limit = { NOT = { has_completed_focus = TFRKPHN_hong_b05_10 } } complete_national_focus = TFRKPHN_hong_b05_10 }
+	}
+}

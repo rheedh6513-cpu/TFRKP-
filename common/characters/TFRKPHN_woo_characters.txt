@@ -1,0 +1,12 @@
+# [안내] 우원식 (조원진 파면 뒤 무소속 대통령). impeach_build.py가 만든다.
+characters = {
+	TFRKPHN_woo_won_shik_char = {
+		name = TFRKPHN_woo_won_shik_char
+		portraits = { civilian = { large = GFX_portrait_TFRKPHN_woo_won_shik } }
+		country_leader = {
+			ideology = centrist
+			expire = "2065.1.1"
+			id = -1
+		}
+	}
+}

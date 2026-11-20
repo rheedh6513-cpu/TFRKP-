@@ -174,6 +174,9 @@ country_event = {
 	desc = { trigger = { check_variable = { TFRKPHN_rc_score < 1.5 } } text = tfrkphn.6886.d2 }
 	picture = GFX_TFRKPHN_ohend_6786
 	is_triggered_only = yes
+	immediate = {
+		if = { limit = { check_variable = { TFRKPHN_rc_score < 1.5 } } KOR_oh_se_hoon_char = { set_portraits = { civilian = { large = GFX_portrait_KOR_oh_se_hoon_low } } } }
+	}
 	option = {
 		name = tfrkphn.6786.a
 		add_political_power = 100

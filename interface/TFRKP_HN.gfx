@@ -263,6 +263,26 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/TFRKPHN_e22_nak_anyway.png"
 	}
 	spriteType = {
+		name = "GFX_focus_TFRKPHN_def_abyss"
+		texturefile = "gfx/interface/goals/TFRKPHN_def_abyss.png"
+	}
+	spriteType = {
+		name = "GFX_focus_TFRKPHN_def_fallout"
+		texturefile = "gfx/interface/goals/TFRKPHN_def_fallout.png"
+	}
+	spriteType = {
+		name = "GFX_focus_TFRKPHN_def_anticom"
+		texturefile = "gfx/interface/goals/TFRKPHN_def_anticom.png"
+	}
+	spriteType = {
+		name = "GFX_focus_TFRKPHN_def_coalition"
+		texturefile = "gfx/interface/goals/TFRKPHN_def_coalition.png"
+	}
+	spriteType = {
+		name = "GFX_focus_TFRKPHN_def_ahn"
+		texturefile = "gfx/interface/goals/TFRKPHN_def_ahn.png"
+	}
+	spriteType = {
 		name = "GFX_focus_TFRKPHN_e22_root"
 		texturefile = "gfx/interface/goals/TFRKPHN_e22_root.png"
 	}

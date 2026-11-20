@@ -41,6 +41,7 @@ on_actions = {
 					has_country_flag = TFRKP_HN_hong_president
 					has_government = conservative
 					NOT = { has_country_leader = { character = KOR_hong_joon_pyo_char ruling_only = yes } }
+					NOT = { has_country_flag = TFRKPHN_imp_done }	# 탄핵 뒤에는 권한대행 (impeach_build.py)
 				}
 				if = {
 					limit = { NOT = { has_character = KOR_hong_joon_pyo_char } }

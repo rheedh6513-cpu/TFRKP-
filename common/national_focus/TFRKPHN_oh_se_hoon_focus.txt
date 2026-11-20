@@ -926,6 +926,7 @@ focus_tree = {
 	}
 
 
+
 	# >>> 오세훈 판 엔딩 (oh_end_build.py)
 	# PDTO가 대아대전에서 이기면 열린다 (깃발 PRC_japanese_gaw_victory_global). 이인제 판 엔딩과 같은 1-3-2-1 모양.
 	focus = {

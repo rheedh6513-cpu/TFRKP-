@@ -1,0 +1,15 @@
+spriteTypes = {
+	spriteType = { name = "GFX_TFRKPHN_imp_cat_picture" texturefile = "gfx/interface/decisions/TFRKPHN_imp_cat_picture.png" }
+	spriteType = { name = "GFX_TFRKPHN_imp_ev" texturefile = "gfx/event_pictures/TFRKPHN_imp_ev.png" }
+	spriteType = { name = "GFX_TFRKPHN_e21_23f" texturefile = "gfx/event_pictures/TFRKPHN_e21_23f.png" }
+	spriteType = { name = "GFX_TFRKPHN_e21_aug" texturefile = "gfx/event_pictures/TFRKPHN_e21_aug.png" }
+	spriteType = { name = "GFX_TFRKPHN_e21_shell" texturefile = "gfx/event_pictures/TFRKPHN_e21_shell.png" }
+	spriteType = { name = "GFX_TFRKPHN_e21_taegeuk" texturefile = "gfx/event_pictures/TFRKPHN_e21_taegeuk.png" }
+	spriteType = { name = "GFX_TFRKPHN_e21_signal" texturefile = "gfx/event_pictures/TFRKPHN_e21_signal.png" }
+	spriteType = { name = "GFX_TFRKPHN_e21_hope" texturefile = "gfx/event_pictures/TFRKPHN_e21_hope.png" }
+	spriteType = { name = "GFX_TFRKPHN_imp_doc" texturefile = "gfx/event_pictures/TFRKPHN_imp_doc.png" }
+	spriteType = { name = "GFX_TFRKPHN_imp_gavel" texturefile = "gfx/event_pictures/TFRKPHN_imp_gavel.png" }
+	spriteType = { name = "GFX_TFRKPHN_imp_crowd" texturefile = "gfx/event_pictures/TFRKPHN_imp_crowd.png" }
+	spriteType = { name = "GFX_TFRKPHN_imp_alone" texturefile = "gfx/event_pictures/TFRKPHN_imp_alone.png" }
+	spriteType = { name = "GFX_TFRKPHN_e21_poll" texturefile = "gfx/event_pictures/TFRKPHN_e21_poll.png" }
+}

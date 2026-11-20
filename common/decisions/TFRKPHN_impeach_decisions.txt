@@ -1,0 +1,92 @@
+# [안내] 탄핵 정국 (개입 패전 갈래). impeach_build.py가 만든다.
+TFRKPHN_impeach_category = {
+	# 14일마다 여당 안의 반대파가 6명씩 는다 (on_daily_KOR에서 다시 켜 준다)
+	TFRKPHN_imp_opposition_moves = {
+		icon = GFX_decision_generic_political_actions
+		activation = { always = no }
+		available = { always = no }
+		is_good = no
+		days_mission_timeout = 14
+		timeout_effect = {
+			custom_effect_tooltip = TFRKPHN_imp_moves_tt
+			hidden_effect = {
+				if = {
+					limit = { has_country_flag = TFRKPHN_imp_on }
+					add_to_variable = { TFRKPHN_imp_def = 6 }
+					add_to_variable = { TFRKPHN_imp_tick = 1 }
+					if = { limit = { check_variable = { TFRKPHN_imp_tick = 1 } } country_event = { id = tfrkphn.7020 days = 1 } }
+					if = { limit = { check_variable = { TFRKPHN_imp_tick = 3 } } country_event = { id = tfrkphn.7021 days = 1 } }
+					if = { limit = { check_variable = { TFRKPHN_imp_tick = 4 } } country_event = { id = tfrkphn.7024 days = 1 } }
+					if = { limit = { check_variable = { TFRKPHN_imp_tick = 5 } } country_event = { id = tfrkphn.7022 days = 1 } }
+					TFRKPHN_imp_refresh = yes
+				}
+			}
+		}
+	}
+}
+TFRKPHN_e21_category = {
+	# 협상 시한 35일
+	TFRKPHN_e21_deadline = {
+		icon = GFX_decision_generic_political_discourse
+		activation = { always = no }
+		available = { always = no }
+		is_good = no
+		days_mission_timeout = 35
+		timeout_effect = {
+			custom_effect_tooltip = TFRKPHN_e21_deadline_tt
+			hidden_effect = {
+				clr_country_flag = TFRKPHN_e21_talks
+				if = { limit = { check_variable = { TFRKPHN_e21_uni > 49.5 } } country_event = tfrkphn.7028 }
+				else = { country_event = tfrkphn.7029 }
+			}
+		}
+	}
+	TFRKPHN_e21_ahn = {
+		icon = GFX_decision_generic_political_discourse
+		cost = 50
+		fire_only_once = yes
+		visible = { has_country_flag = TFRKPHN_e21_talks }
+		complete_effect = {
+			add_to_variable = { TFRKPHN_e21_uni = 10 }
+			clamp_variable = { var = TFRKPHN_e21_uni min = 0 max = 100 }
+			custom_effect_tooltip = TFRKPHN_e21_up10_tt
+		}
+		ai_will_do = { factor = 1 }
+	}
+	TFRKPHN_e21_sim = {
+		icon = GFX_decision_generic_political_discourse
+		cost = 50
+		fire_only_once = yes
+		visible = { has_country_flag = TFRKPHN_e21_talks }
+		complete_effect = {
+			add_to_variable = { TFRKPHN_e21_uni = 10 }
+			clamp_variable = { var = TFRKPHN_e21_uni min = 0 max = 100 }
+			custom_effect_tooltip = TFRKPHN_e21_up10_tt
+		}
+		ai_will_do = { factor = 1 }
+	}
+	TFRKPHN_e21_policy = {
+		icon = GFX_decision_generic_political_discourse
+		cost = 75
+		fire_only_once = yes
+		visible = { has_country_flag = TFRKPHN_e21_talks }
+		complete_effect = {
+			add_to_variable = { TFRKPHN_e21_uni = 15 }
+			clamp_variable = { var = TFRKPHN_e21_uni min = 0 max = 100 }
+			custom_effect_tooltip = TFRKPHN_e21_up15_tt
+		}
+		ai_will_do = { factor = 1 }
+	}
+	TFRKPHN_e21_meet = {
+		icon = GFX_decision_generic_political_discourse
+		cost = 50
+		fire_only_once = yes
+		visible = { has_country_flag = TFRKPHN_e21_talks }
+		complete_effect = {
+			add_to_variable = { TFRKPHN_e21_uni = 10 }
+			clamp_variable = { var = TFRKPHN_e21_uni min = 0 max = 100 }
+			custom_effect_tooltip = TFRKPHN_e21_up10_tt
+		}
+		ai_will_do = { factor = 1 }
+	}
+}
