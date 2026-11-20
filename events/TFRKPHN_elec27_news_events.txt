@@ -15,7 +15,7 @@ news_event = {
 news_event = {
 	id = tfrkphn.6996
 	title = tfrkphn.6996.t
-	desc = tfrkphn.6996.d
+	desc = TFRKPHN_lg_6996_a
 	picture = GFX_TFRKPHN_e27_news_oh
 	major = yes
 	is_triggered_only = yes
@@ -23,4 +23,28 @@ news_event = {
 	option = { name = tfrkphn.6996.jap trigger = { tag = JAP } }
 	option = { name = tfrkphn.6996.prc trigger = { tag = PRC } }
 	option = { name = tfrkphn.6996.etc trigger = { NOT = { tag = KOR tag = JAP tag = PRC } } }
+}
+news_event = {
+	id = tfrkphn.7018
+	title = tfrkphn.7018.t
+	desc = tfrkphn.7018.d
+	picture = GFX_TFRKPHN_e27_news_lee
+	major = yes
+	is_triggered_only = yes
+	option = { name = tfrkphn.7018.kor trigger = { tag = KOR } }
+	option = { name = tfrkphn.7018.jap trigger = { tag = JAP } }
+	option = { name = tfrkphn.7018.prc trigger = { tag = PRC } }
+	option = { name = tfrkphn.7018.etc trigger = { NOT = { tag = KOR tag = JAP tag = PRC } } }
+}
+news_event = {
+	id = tfrkphn.7019
+	title = tfrkphn.7019.t
+	desc = tfrkphn.7019.d
+	picture = GFX_TFRKPHN_e27_news_oh
+	major = yes
+	is_triggered_only = yes
+	option = { name = tfrkphn.7019.kor trigger = { tag = KOR } }
+	option = { name = tfrkphn.7019.jap trigger = { tag = JAP } }
+	option = { name = tfrkphn.7019.prc trigger = { tag = PRC } }
+	option = { name = tfrkphn.7019.etc trigger = { NOT = { tag = KOR tag = JAP tag = PRC } } }
 }

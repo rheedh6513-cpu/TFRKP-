@@ -2677,14 +2677,13 @@ country_event = {
 country_event = {
 	id = tfrkphn.230
 	title = tfrkphn.230.t
-	desc = tfrkphn.230.desc
+	desc = TFRKPHN_lg_230_a
 	picture = GFX_TFRKPHN_gallup_post
 	is_triggered_only = yes
 	fire_only_once = yes
-
 	option = {
-		name = tfrkphn.230.a
-		custom_effect_tooltip = TFRKPHN_poll_ban_lift_tt
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8103 } }
 	}
 }
 
@@ -2693,19 +2692,13 @@ country_event = {
 country_event = {
 	id = tfrkphn.241
 	title = tfrkphn.241.t
-	desc = tfrkphn.241.desc
+	desc = TFRKPHN_lg_241_a
 	picture = GFX_report_event_ppp_ge_win
 	is_triggered_only = yes
-
+	immediate = { hidden_effect = { if = { limit = { has_country_flag = TFRKPHN_successor_lee_in_je } news_event = { id = tfrkphn.7018 hours = 6 } } else_if = { limit = { has_country_flag = TFRKPHN_successor_oh_se_hoon } news_event = { id = tfrkphn.7019 hours = 6 } } } }	# 재선 세계 뉴스 (elec27_news.py)
 	option = {
-		name = tfrkphn.241.a
-		# 4년 중임제: 현직 재선 (두 번째 임기, 다음 대선에는 나올 수 없다)
-		if = { limit = { has_country_flag = TFRKPHN_successor_lee_in_je } add_to_variable = { TFRKPHN_lee_terms = 1 } }
-		if = { limit = { has_country_flag = TFRKPHN_successor_oh_se_hoon } add_to_variable = { TFRKPHN_oh_terms = 1 } }
-		set_country_flag = TFRKPHN_pres_term2
-		set_variable = { TFRKPHN_term_days = 1461 }
-		add_stability = 0.05
-		custom_effect_tooltip = TFRKPHN_term2_tt
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8104 } }
 	}
 }
 
@@ -2756,7 +2749,7 @@ country_event = {
 country_event = {
 	id = tfrkphn.250
 	title = tfrkphn.250.t
-	desc = tfrkphn.250.desc
+	desc = TFRKPHN_lg_250_a
 	picture = GFX_TFRKPHN_kju_target
 	is_triggered_only = yes
 
@@ -2802,9 +2795,9 @@ country_event = {
 		}
 		}
 	}
-
 	option = {
-		name = tfrkphn.250.a
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8105 } }
 	}
 }
 
@@ -2835,48 +2828,13 @@ news_event = {
 country_event = {
 	id = tfrkphn.252
 	title = tfrkphn.252.t
-	desc = tfrkphn.252.desc
+	desc = TFRKPHN_lg_252_a
 	picture = GFX_TFRKPHN_ibuk5do
 	is_triggered_only = yes
 	fire_only_once = yes
-
 	option = {
-		name = tfrkphn.252.a
-		custom_effect_tooltip = TFRKPHN_ibuk5do_tt
-		hidden_effect = {
-			random_country = {
-				limit = { has_country_flag = TFRKPHN_free_joseon }
-				set_cosmetic_tag = NK3_TFRKPHN_ibuk5do
-				# 평양 인민봉기위원회가 이북5도위원회에 합쳐진다
-				if = {
-					limit = { country_exists = PPK }
-					annex_country = { target = PPK transfer_troops = yes }
-					# 박현준이 대한민국으로 귀순한다
-					KOR = { country_event = { id = tfrkphn.258 days = 2 } }
-				}
-				# 개성은 대한민국으로 넘어간다
-				KOR = { add_state_core = 1044 }
-				1044 = { if = { limit = { NOT = { is_owned_by = KOR } } KOR = { transfer_state = 1044 } } }
-				set_politics = { ruling_party = authoritarian_democrat elections_allowed = no }
-				set_popularities = { authoritarian_democrat = 70 totalitarian_socialist = 30 }
-				set_party_name = { ideology = authoritarian_democrat long_name = TFRKPHN_ibuk5do_party_long name = TFRKPHN_ibuk5do_party }
-				retire_country_leader = yes
-				if = { limit = { NOT = { has_character = TFRKPHN_tae_yeongho_char } } recruit_character = TFRKPHN_tae_yeongho_char }
-				TFRKPHN_tae_yeongho_char = { promote_character = ultra_conservatism }	# 권위주의 민주 그룹
-				add_ideas = TFRKPHN_rok_army_support
-				KOR = { country_event = { id = tfrkphn.256 days = 1 } }
-				get_current_government_type = yes
-				ROOT = { puppet = PREV }
-				restore_previous_government_type = yes
-			}
-			# 괴뢰화로 끊긴 내전 다시 잇기
-			TFRKPHN_nk_rewar_effect = yes
-			# 중국: 김여정의 북한과 최룡해의 군사위원회 중 하나를 골라 괴뢰국으로
-			if = {
-				limit = { country_exists = PRC }
-				PRC = { country_event = { id = tfrkphn.255 days = 1 } }
-			}
-		}
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8106 } }
 	}
 }
 
@@ -2884,37 +2842,13 @@ country_event = {
 country_event = {
 	id = tfrkphn.255
 	title = tfrkphn.255.t
-	desc = tfrkphn.255.desc
+	desc = TFRKPHN_lg_255_a
 	picture = GFX_TFRKPHN_kju_target_news
 	is_triggered_only = yes
 	fire_only_once = yes
-
-	option = {	# 기존 북한 정부(김여정)
-		name = tfrkphn.255.a
-		trigger = { country_exists = PRK }
-		ai_chance = { base = 60 }
-		custom_effect_tooltip = tfrkphn.255.a.tt
-		hidden_effect = {
-			PRK = { get_current_government_type = yes }
-			ROOT = { puppet = PRK }
-			PRK = { restore_previous_government_type = yes }
-			TFRKPHN_nk_rewar_effect = yes
-		}
-	}
-	option = {	# 최룡해의 조선인민군 군사위원회
-		name = tfrkphn.255.b
-		trigger = { any_country = { has_country_flag = TFRKPHN_kpa_junta exists = yes } }
-		ai_chance = { base = 40 }
-		custom_effect_tooltip = tfrkphn.255.b.tt
-		hidden_effect = {
-			random_country = {
-				limit = { has_country_flag = TFRKPHN_kpa_junta exists = yes }
-				get_current_government_type = yes
-				ROOT = { puppet = PREV }
-				restore_previous_government_type = yes
-			}
-			TFRKPHN_nk_rewar_effect = yes
-		}
+	option = {
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8108 } }
 	}
 }
 
@@ -2922,16 +2856,13 @@ country_event = {
 country_event = {
 	id = tfrkphn.256
 	title = tfrkphn.256.t
-	desc = tfrkphn.256.desc
+	desc = TFRKPHN_lg_256_a
 	picture = GFX_TFRKPHN_kaesong
 	is_triggered_only = yes
 	fire_only_once = yes
-
 	option = {
-		name = tfrkphn.256.a
-		custom_effect_tooltip = tfrkphn.256.a.tt
-		add_war_support = 0.05
-		add_political_power = 25
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8109 } }
 	}
 }
 
@@ -2939,13 +2870,13 @@ country_event = {
 country_event = {
 	id = tfrkphn.258
 	title = tfrkphn.258.t
-	desc = tfrkphn.258.desc
+	desc = TFRKPHN_lg_258_a
 	picture = GFX_TFRKPHN_kaesong
 	is_triggered_only = yes
 	fire_only_once = yes
-
 	option = {
-		name = tfrkphn.258.a
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8110 } }
 	}
 }
 
@@ -2953,7 +2884,7 @@ country_event = {
 news_event = {
 	id = tfrkphn.253
 	title = tfrkphn.253.t
-	desc = tfrkphn.253.desc
+	desc = TFRKPHN_lg_253_a
 	picture = GFX_TFRKPHN_kju_target_news
 	major = yes
 	is_triggered_only = yes
@@ -2966,223 +2897,13 @@ news_event = {
 country_event = {
 	id = tfrkphn.254
 	title = tfrkphn.254.t
-	desc = tfrkphn.254.desc
+	desc = TFRKPHN_lg_254_a
 	picture = GFX_TFRKPHN_kju_target
 	is_triggered_only = yes
 	fire_only_once = yes
-
 	option = {
-		name = tfrkphn.254.a
-		# 콘솔에서 나라 코드를 빼고 띄워도(한국이 받아도) 효과는 항상 북한에 적용되게 한다
-		PRK = {
-		set_global_flag = PRK_Civil_War
-		set_global_flag = north_korean_civil_war
-		set_global_flag = TFRKPHN_nk_civil_war
-		add_stability = -0.25
-		# 김정은이 아직 남아 있으면(254 를 바로 띄운 경우 등) 확실히 물러나게
-		hidden_effect = {
-			set_country_flag = PRK_Kim_Is_Dead
-			if = { limit = { has_character = PRK_kim_jongun } retire_character = PRK_kim_jongun }
-			if = { limit = { NOT = { has_character = PRK_kim_yojong_char } } recruit_character = PRK_kim_yojong_char }
-		}
-		# 평양 정부 지도자: Korea Plus 원본 김여정 (korea.189 와 같은 방식)
-		PRK_kim_yojong_char = {
-			add_country_leader_role = {
-				country_leader = {
-					desc = PRK_kim_yojong_char_desc
-					ideology = jucheism
-					traits = { hos_cult_of_personality }
-				}
-				promote_leader = yes
-			}
-			add_country_leader_role = {
-				country_leader = {
-					desc = PRK_kim_yojong_char_desc
-					ideology = left_nationalism
-					traits = { hos_cult_of_personality }
-				}
-				promote_leader = yes
-			}
-		}
-		# 박정천: 쿠데타 실패 뒤 생사불명. 어느 진영에서도 장군·고문·지도자로 쓰지 못하게 은퇴시킨다
-		hidden_effect = {
-			if = { limit = { has_character = PRK_pak_jong_chon } retire_character = PRK_pak_jong_chon }
-			# 최룡해는 군사위원회(CPK)에만 있게: 평양 쪽에 남아 있는 TFR 원본 최룡해는 내보낸다
-			if = { limit = { has_character = PRK_cho_ryong_hae } retire_character = PRK_cho_ryong_hae }
-		}
-		# 1) 자유조선군 (남부): 전용 국가코드 FPK. 황해남도(1045)·개성(1044)·강원도(1042)를 점거
-		hidden_effect = {
-			FPK = {
-				add_state_core = 1045
-				add_state_core = 1044
-				add_state_core = 1042
-			}
-			1045 = { if = { limit = { is_owned_by = PRK } FPK = { transfer_state = 1045 } } }
-			1044 = { if = { limit = { is_owned_by = PRK } FPK = { transfer_state = 1044 } } }
-			1042 = { if = { limit = { is_owned_by = PRK } FPK = { transfer_state = 1042 } } }
-			# 북한 장비 비축분과 육군·공군·해군의 10%를 자유조선군으로 (먼저 넘긴다)
-			PRK = {
-				transfer_units_fraction = {
-					target = FPK
-					size = 0.1
-					stockpile_ratio = 0.1
-					army_ratio = 0.1
-					navy_ratio = 0.1
-					air_ratio = 0.1
-				}
-			}
-			FPK = {
-				set_country_flag = TFRKPHN_free_joseon
-				set_cosmetic_tag = TFRKPHN_free_joseon_ct
-				inherit_technology = PRK
-				set_politics = { ruling_party = authoritarian_democrat elections_allowed = no }
-				set_popularities = { authoritarian_democrat = 70 totalitarian_socialist = 30 }
-				set_capital = { state = 1045 }
-				set_party_name = { ideology = authoritarian_democrat long_name = TFRKPHN_free_joseon_party_long name = TFRKPHN_free_joseon_party }
-				if = { limit = { NOT = { has_character = TFRKPHN_adrian_hong_chang_char } } recruit_character = TFRKPHN_adrian_hong_chang_char }
-				TFRKPHN_adrian_hong_chang_char = { promote_character = interim_democracy_authoritarioan }
-				add_ideas = TFRKPHN_peoples_liberation_war
-				add_equipment_to_stockpile = { type = infantry_equipment amount = 5000 producer = PRK }
-				add_equipment_to_stockpile = { type = artillery_equipment amount = 500 producer = PRK }
-				add_manpower = 50000
-				division_template = {
-					name = "Jayu Joseon Bobyeong Sadan"
-					regiments = {
-						infantry = { x = 0 y = 0 }
-						infantry = { x = 0 y = 1 }
-						infantry = { x = 0 y = 2 }
-						infantry = { x = 1 y = 0 }
-						infantry = { x = 1 y = 1 }
-						infantry = { x = 1 y = 2 }
-					}
-				}
-				1045 = { create_unit = { division = "division_template = \"Jayu Joseon Bobyeong Sadan\" start_experience_factor = 0.3 start_equipment_factor = 0.8" owner = FPK count = 3 } }
-				1044 = { create_unit = { division = "division_template = \"Jayu Joseon Bobyeong Sadan\" start_experience_factor = 0.3 start_equipment_factor = 0.8" owner = FPK count = 2 } }
-				1042 = { create_unit = { division = "division_template = \"Jayu Joseon Bobyeong Sadan\" start_experience_factor = 0.3 start_equipment_factor = 0.8" owner = FPK count = 3 } }
-				declare_war_on = { target = PRK type = civil_war }
-			}
-		}
-		# 3) 평양 인민봉기위원회 (평양 1043): 시민과 일부 군이 들고일어난 네 번째 세력. 지도자 박현준
-		hidden_effect = {
-			PPK = { add_state_core = 1043 }
-			1043 = { if = { limit = { is_owned_by = PRK } PPK = { transfer_state = 1043 } } }
-			# 북한 장비 비축분과 육군·공군·해군의 원래 10%를 평양 봉기군으로. 자유조선군이 먼저 10%를 가져가 90%가 남았으므로 0.111 (= 0.1 / 0.9)
-			PRK = {
-				transfer_units_fraction = {
-					target = PPK
-					size = 0.111
-					stockpile_ratio = 0.111
-					army_ratio = 0.111
-					navy_ratio = 0.111
-					air_ratio = 0.111
-				}
-			}
-			PPK = {
-				set_country_flag = TFRKPHN_pyongyang_uprising
-				inherit_technology = PRK
-				if = { limit = { NOT = { has_character = TFRKPHN_hwang_jeong_yeop_char } } recruit_character = TFRKPHN_hwang_jeong_yeop_char }
-				set_politics = { ruling_party = conservative elections_allowed = no }
-				set_popularities = { conservative = 60 totalitarian_socialist = 40 }
-				set_capital = { state = 1043 }
-				TFRKPHN_hwang_jeong_yeop_char = { promote_character = korean_conservatism }
-				add_equipment_to_stockpile = { type = infantry_equipment amount = 6000 producer = PRK }
-				add_manpower = 60000
-				# 경보병(레인저) 6개 대대 사단 6개, 특수부대 4개 대대 사단 3개
-				division_template = {
-					name = "Pyongyang Bonggi Gyeongbobyeong Sadan"
-					regiments = {
-						rangers = { x = 0 y = 0 }
-						rangers = { x = 0 y = 1 }
-						rangers = { x = 0 y = 2 }
-						rangers = { x = 1 y = 0 }
-						rangers = { x = 1 y = 1 }
-						rangers = { x = 1 y = 2 }
-					}
-				}
-				division_template = {
-					name = "Pyongyang Bonggi Teuksu Sadan"
-					regiments = {
-						special_forces = { x = 0 y = 0 }
-						special_forces = { x = 0 y = 1 }
-						special_forces = { x = 1 y = 0 }
-						special_forces = { x = 1 y = 1 }
-					}
-				}
-				1043 = { create_unit = { division = "division_template = \"Pyongyang Bonggi Gyeongbobyeong Sadan\" start_experience_factor = 0.2 start_equipment_factor = 0.8" owner = PPK count = 6 } }
-				1043 = { create_unit = { division = "division_template = \"Pyongyang Bonggi Teuksu Sadan\" start_experience_factor = 0.5 start_equipment_factor = 0.9" owner = PPK count = 3 } }
-				declare_war_on = { target = PRK type = civil_war }
-			}
-			# 3일 뒤 자유조선군이 이북5도위원회로 바뀔 때 평양 봉기군도 합쳐진다 (tfrkphn.252)
-		}
-		# 2) 조선인민군 군사위원회 (동북부). 한 나라에서 기본 내전은 한 번만 일어나서,
-		#    전용 국가코드 CPK 에 주를 넘기고 사단을 직접 만들어 세 번째 세력으로 세운다.
-		hidden_effect = {
-			CPK = {
-				add_state_core = 872
-				add_state_core = 875
-				add_state_core = 873
-				add_state_core = 874
-			}
-			875 = { if = { limit = { is_owned_by = PRK } CPK = { transfer_state = 875 } } }
-			873 = { if = { limit = { is_owned_by = PRK } CPK = { transfer_state = 873 } } }
-			874 = { if = { limit = { is_owned_by = PRK } CPK = { transfer_state = 874 } } }
-			872 = { if = { limit = { is_owned_by = PRK } CPK = { transfer_state = 872 } } }
-			# 북한 장비 비축분과 육군·공군·해군의 원래 40%를 최룡해의 군사위원회로. 자유조선군과 평양 봉기군이 먼저 10%씩 가져가 80%가 남았으므로 0.5 (= 0.4 / 0.8). 아래에서 만드는 사단 10개는 따로 더해진다
-			PRK = {
-				transfer_units_fraction = {
-					target = CPK
-					size = 0.5
-					stockpile_ratio = 0.5
-					army_ratio = 0.5
-					navy_ratio = 0.5
-					air_ratio = 0.5
-				}
-			}
-			CPK = {
-				set_country_flag = TFRKPHN_kpa_junta
-				inherit_technology = PRK
-				if = { limit = { NOT = { has_character = TFRKPHN_cho_ryong_hae_char } } recruit_character = TFRKPHN_cho_ryong_hae_char }
-				set_cosmetic_tag = TFRKPHN_kpa_ct
-				set_politics = { ruling_party = nationalist elections_allowed = no }
-				set_popularities = { nationalist = 70 totalitarian_socialist = 30 }
-				set_capital = { state = 875 }
-				TFRKPHN_cho_ryong_hae_char = { promote_character = military_junta }
-				add_equipment_to_stockpile = { type = infantry_equipment amount = 6000 producer = PRK }
-				add_equipment_to_stockpile = { type = artillery_equipment amount = 600 producer = PRK }
-				add_manpower = 60000
-				division_template = {
-					name = "Inmingun Bobyeong Sadan"
-					regiments = {
-						infantry = { x = 0 y = 0 }
-						infantry = { x = 0 y = 1 }
-						infantry = { x = 0 y = 2 }
-						infantry = { x = 1 y = 0 }
-						infantry = { x = 1 y = 1 }
-						infantry = { x = 1 y = 2 }
-					}
-				}
-				875 = { create_unit = { division = "division_template = \"Inmingun Bobyeong Sadan\" start_experience_factor = 0.3 start_equipment_factor = 0.8" owner = CPK count = 4 } }
-				873 = { create_unit = { division = "division_template = \"Inmingun Bobyeong Sadan\" start_experience_factor = 0.3 start_equipment_factor = 0.8" owner = CPK count = 3 } }
-				874 = { create_unit = { division = "division_template = \"Inmingun Bobyeong Sadan\" start_experience_factor = 0.3 start_equipment_factor = 0.8" owner = CPK count = 3 } }
-				declare_war_on = { target = PRK type = civil_war }
-				if = { limit = { FPK = { exists = yes } } declare_war_on = { target = FPK type = annex_everything } }
-				add_ideas = TFRKPHN_pdto_bombing
-			}
-			# PDTO 연합국 폭격: 김여정의 북한(PRK)과 최룡해의 군사위원회(CPK)
-			PRK = { add_ideas = TFRKPHN_pdto_bombing }
-			# 북한 내전 슈퍼이벤트 (KP 슈퍼이벤트 창, 모든 플레이어)
-			if = {
-				limit = { NOT = { has_global_flag = super_events_off_flag } }
-				every_country = {
-					limit = { is_ai = no }
-					set_variable = { TFRKP_super_event = token:TFRKPHN_SE_NK_CIVIL_WAR }
-					scoped_play_song = "TFRKP_TFRKPHN_SE_NK_CIVIL_WAR"
-				}
-			}
-			# 3일 뒤 자유조선군 → 이북5도위원회 (한국 쪽 이벤트)
-			KOR = { country_event = { id = tfrkphn.252 days = 3 } }
-		}
-		}
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8107 } }
 	}
 }
 
@@ -3390,30 +3111,14 @@ country_event = {
 country_event = {
 	id = tfrkphn.271
 	title = tfrkphn.271.t
-	desc = tfrkphn.271.kp
+	desc = TFRKPHN_lg_271_a
 	picture = GFX_TFRKPHN_empty_chair
 	is_triggered_only = yes
 	fire_only_once = yes
 	trigger = { NOT = { has_country_flag = TFRKPHN_cab_nso_filled } }
 	option = {
-		name = tfrkphn.271.o1
-		TFRKPHN_cab_appoint_cho_tae_yong = yes
-	}
-	option = {
-		name = tfrkphn.271.o2
-		TFRKPHN_cab_appoint_jang_ho_jin = yes
-	}
-	option = {
-		name = tfrkphn.271.o3
-		TFRKPHN_cab_appoint_chun_young_woo = yes
-	}
-	option = {
-		name = tfrkphn.271.o4
-		TFRKPHN_cab_appoint_lee_do_hoon = yes
-	}
-	option = {
-		name = tfrkphn.271.o5
-		TFRKPHN_cab_appoint_park_cheol_hee = yes
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8111 } }
 	}
 }
 
@@ -3421,30 +3126,14 @@ country_event = {
 country_event = {
 	id = tfrkphn.272
 	title = tfrkphn.272.t
-	desc = tfrkphn.272.kp
+	desc = TFRKPHN_lg_272_a
 	picture = GFX_TFRKPHN_rice_price
 	is_triggered_only = yes
 	fire_only_once = yes
 	trigger = { NOT = { has_country_flag = TFRKPHN_cab_agri_filled } }
 	option = {
-		name = tfrkphn.272.o1
-		TFRKPHN_cab_appoint_kim_tae_heum = yes
-	}
-	option = {
-		name = tfrkphn.272.o2
-		TFRKPHN_cab_appoint_chung_hwang_keun = yes
-	}
-	option = {
-		name = tfrkphn.272.o3
-		TFRKPHN_cab_appoint_song_mi_ryung = yes
-	}
-	option = {
-		name = tfrkphn.272.o4
-		TFRKPHN_cab_appoint_lee_dong_phil = yes
-	}
-	option = {
-		name = tfrkphn.272.o5
-		TFRKPHN_cab_appoint_lee_yang_soo = yes
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8112 } }
 	}
 }
 
@@ -3452,30 +3141,14 @@ country_event = {
 country_event = {
 	id = tfrkphn.273
 	title = tfrkphn.273.t
-	desc = tfrkphn.273.kp
+	desc = TFRKPHN_lg_273_a
 	picture = GFX_TFRKPHN_empty_chair
 	is_triggered_only = yes
 	fire_only_once = yes
 	trigger = { NOT = { has_country_flag = TFRKPHN_cab_labor_filled } }
 	option = {
-		name = tfrkphn.273.o1
-		TFRKPHN_cab_appoint_lee_jung_sik = yes
-	}
-	option = {
-		name = tfrkphn.273.o2
-		TFRKPHN_cab_appoint_lim_i_ja = yes
-	}
-	option = {
-		name = tfrkphn.273.o3
-		TFRKPHN_cab_appoint_kwon_ki_seop = yes
-	}
-	option = {
-		name = tfrkphn.273.o4
-		TFRKPHN_cab_appoint_lee_ki_kweon = yes
-	}
-	option = {
-		name = tfrkphn.273.o5
-		TFRKPHN_cab_appoint_bang_ha_nam = yes
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8113 } }
 	}
 }
 
@@ -3483,30 +3156,14 @@ country_event = {
 country_event = {
 	id = tfrkphn.274
 	title = tfrkphn.274.t
-	desc = tfrkphn.274.kp
+	desc = TFRKPHN_lg_274_a
 	picture = GFX_TFRKPHN_vacancy
 	is_triggered_only = yes
 	fire_only_once = yes
 	trigger = { NOT = { has_country_flag = TFRKPHN_cab_unif_filled } }
 	option = {
-		name = tfrkphn.274.o1
-		TFRKPHN_cab_appoint_kim_yung_ho = yes
-	}
-	option = {
-		name = tfrkphn.274.o2
-		TFRKPHN_cab_appoint_hong_yong_pyo = yes
-	}
-	option = {
-		name = tfrkphn.274.o3
-		TFRKPHN_cab_appoint_ryoo_kihl_jae = yes
-	}
-	option = {
-		name = tfrkphn.274.o4
-		TFRKPHN_cab_appoint_kim_gi_woong = yes
-	}
-	option = {
-		name = tfrkphn.274.o5
-		TFRKPHN_cab_appoint_jo_gun_shik = yes
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8114 } }
 	}
 }
 
@@ -3514,7 +3171,7 @@ country_event = {
 country_event = {
 	id = tfrkphn.275
 	title = tfrkphn.275.t
-	desc = tfrkphn.275.kp
+	desc = TFRKPHN_lg_275_a
 	picture = GFX_TFRKPHN_moj
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -3549,30 +3206,14 @@ country_event = {
 country_event = {
 	id = tfrkphn.276
 	title = tfrkphn.276.t
-	desc = tfrkphn.276.kp
+	desc = TFRKPHN_lg_276_a
 	picture = GFX_TFRKPHN_motie
 	is_triggered_only = yes
 	fire_only_once = yes
 	trigger = { NOT = { has_country_flag = TFRKPHN_cab_trade_filled } }
 	option = {
-		name = tfrkphn.276.o1
-		TFRKPHN_cab_appoint_lee_chang_yang = yes
-	}
-	option = {
-		name = tfrkphn.276.o2
-		TFRKPHN_cab_appoint_bang_moon_kyu = yes
-	}
-	option = {
-		name = tfrkphn.276.o3
-		TFRKPHN_cab_appoint_ahn_duk_geun = yes
-	}
-	option = {
-		name = tfrkphn.276.o4
-		TFRKPHN_cab_appoint_yoon_sang_jick = yes
-	}
-	option = {
-		name = tfrkphn.276.o5
-		TFRKPHN_cab_appoint_joo_hyung_hwan = yes
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8115 } }
 	}
 }
 

@@ -33,26 +33,12 @@ country_event = {
 country_event = {
 	id = tfrkphn.525
 	title = tfrkphn.525.t
-	desc = tfrkphn.525.d
+	desc = TFRKPHN_lg_525_a
 	picture = GFX_TFRKPHN_money_path
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = {	# 계약 공개
-		name = tfrkphn.525.a
-		add_stability = 0.02
-		custom_effect_tooltip = tfrkphn.525.a_tt
-		hidden_effect = { add_to_variable = { TFRKPHN_chb_res = 5 } TFRKPHN_chb_check = yes }
-	}
-	option = {	# 퇴직 공직자 취업 제한
-		name = tfrkphn.525.b
-		add_political_power = -20
-		add_stability = 0.01
-		custom_effect_tooltip = tfrkphn.525.b_tt
-		hidden_effect = { add_to_variable = { TFRKPHN_chb_res = -5 } TFRKPHN_chb_check = yes }
-	}
-	option = {	# 정치자금 실명 공개
-		name = tfrkphn.525.c
-		add_political_power = -30
-		add_stability = 0.03
+	option = {
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8214 } }
 	}
 }

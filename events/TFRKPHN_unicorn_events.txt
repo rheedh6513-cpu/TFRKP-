@@ -3,7 +3,7 @@ add_namespace = tfrkphn
 country_event = {
 	id = tfrkphn.6793
 	title = tfrkphn.6793.t
-	desc = tfrkphn.6793.d
+	desc = TFRKPHN_lg_6793_a
 	picture = GFX_TFRKPHN_uni_6793
 	is_triggered_only = yes
 	option = { name = tfrkphn.6793.a add_political_power = 100 add_stability = 0.03 }

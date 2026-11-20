@@ -4,19 +4,11 @@ add_namespace = tfrkphn
 country_event = {
 	id = tfrkphn.640
 	title = tfrkphn.640.t
-	desc = tfrkphn.640.all
+	desc = TFRKPHN_lg_640_a
 	picture = GFX_TFRKPHN_oh_640
 	is_triggered_only = yes
 	option = {
-		name = tfrkphn.640.a
-		custom_effect_tooltip = tfrkphn.640.a_tt
-		add_ideas = TFRKPHN_cho_eun_hee_HM
-		TFRKPHN_oh_first_staff = yes
-	}
-	option = {
-		name = tfrkphn.640.b
-		custom_effect_tooltip = tfrkphn.640.b_tt
-		add_ideas = TFRKPHN_yoon_hee_sook_HM
-		TFRKPHN_oh_first_staff = yes
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8225 } }
 	}
 }

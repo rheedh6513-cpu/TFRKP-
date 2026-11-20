@@ -26,7 +26,8 @@ TFRKPHN_ge28_run = {
 	if = { limit = { has_country_flag = TFRKPHN_orp_formed } set_variable = { KOR_NatAsm_ORP_seats = 9 } subtract_from_variable = { KOR_NatAsm_PPP_seats = 9 } country_event = { id = tfrkphn.7001 days = 3 } }	# 우리공화당: 총선에서 아홉 석 (orp_build.py)
 	KOR_rerender_NatAsm = yes
 	if = { limit = { has_country_flag = TFRKPHN_bicameral } TFRKPHN_senate_setup = yes }
-	if = { limit = { check_variable = { TFRKPHN_ge28 > 179.5 } } country_event = { id = tfrkphn.6603 } }
+	if = { limit = { check_variable = { KOR_NatAsm_PPP_seats > 199.5 } } country_event = { id = tfrkphn.6606 } }	# 200석 이상: 개헌선 (사용자 2026-11-20)
+	if = { limit = { check_variable = { TFRKPHN_ge28 > 179.5 } check_variable = { KOR_NatAsm_PPP_seats < 199.5 } } country_event = { id = tfrkphn.6603 } }
 	if = { limit = { check_variable = { TFRKPHN_ge28 > 150.5 } check_variable = { TFRKPHN_ge28 < 179.5 } } country_event = { id = tfrkphn.6604 } }
 	if = { limit = { check_variable = { TFRKPHN_ge28 < 150.5 } } country_event = { id = tfrkphn.6605 } }
 }

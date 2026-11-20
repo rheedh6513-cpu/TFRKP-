@@ -5,7 +5,7 @@ add_namespace = tfrkphn
 country_event = {
 	id = tfrkphn.587
 	title = tfrkphn.587.t
-	desc = tfrkphn.587.d
+	desc = TFRKPHN_lg_587_a
 	picture = GFX_TFRKPHN_jcr_walk
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -23,17 +23,13 @@ country_event = {
 country_event = {
 	id = tfrkphn.588
 	title = tfrkphn.588.t
-	desc = tfrkphn.588.d
+	desc = TFRKPHN_lg_588_a
 	picture = GFX_TFRKPHN_jcr_smile
 	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
-		name = tfrkphn.588.a
-		add_stability = 0.01
-	}
-	option = {
-		name = tfrkphn.588.b
-		add_political_power = 10
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8205 } }
 	}
 }
 
@@ -41,7 +37,7 @@ country_event = {
 country_event = {
 	id = tfrkphn.589
 	title = tfrkphn.589.t
-	desc = tfrkphn.589.d
+	desc = TFRKPHN_lg_589_a
 	picture = GFX_TFRKPHN_jcr_bowed
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -55,7 +51,7 @@ country_event = {
 country_event = {
 	id = tfrkphn.590
 	title = tfrkphn.590.t
-	desc = tfrkphn.590.d
+	desc = TFRKPHN_lg_590_a
 	picture = GFX_TFRKPHN_jcr_side
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -73,7 +69,7 @@ country_event = {
 country_event = {
 	id = tfrkphn.591
 	title = tfrkphn.591.t
-	desc = tfrkphn.591.d
+	desc = TFRKPHN_lg_591_a
 	picture = GFX_TFRKPHN_jcr_stage
 	is_triggered_only = yes
 	fire_only_once = yes

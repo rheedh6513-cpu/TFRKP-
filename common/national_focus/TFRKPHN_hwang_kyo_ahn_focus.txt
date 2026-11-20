@@ -23,4 +23,71 @@ focus_tree = {
 			add_stability = 0.03
 		}
 	}
+	# >>> 늘린 중점 (alt27_tree_build.py)
+	focus = {
+		id = TFRKPHN_hwang_kyo_ahn_h1
+		icon = GFX_goal_generic_political_pressure
+		x = 2
+		y = 1
+		cost = 5
+		prerequisite = { focus = TFRKPHN_hwang_kyo_ahn_b01_01 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 50 add_stability = 0.02
+		}
+	}
+
+	focus = {
+		id = TFRKPHN_hwang_kyo_ahn_h2
+		icon = GFX_goal_generic_major_alliance
+		x = 4
+		y = 1
+		cost = 5
+		prerequisite = { focus = TFRKPHN_hwang_kyo_ahn_b01_01 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_war_support = 0.05 add_stability = -0.03
+		}
+	}
+
+	focus = {
+		id = TFRKPHN_hwang_kyo_ahn_h3
+		icon = GFX_goal_generic_army_doctrines
+		x = 2
+		y = 2
+		cost = 5
+		prerequisite = { focus = TFRKPHN_hwang_kyo_ahn_h1 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			army_experience = 20 add_war_support = 0.03
+		}
+	}
+
+	focus = {
+		id = TFRKPHN_hwang_kyo_ahn_h4
+		icon = GFX_goal_generic_consumer_goods
+		x = 4
+		y = 2
+		cost = 5
+		prerequisite = { focus = TFRKPHN_hwang_kyo_ahn_h2 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_stability = 0.04
+		}
+	}
+
+	focus = {
+		id = TFRKPHN_hwang_kyo_ahn_h5
+		icon = GFX_goal_generic_national_unity
+		x = 3
+		y = 3
+		cost = 5
+		prerequisite = { focus = TFRKPHN_hwang_kyo_ahn_h3 focus = TFRKPHN_hwang_kyo_ahn_h4 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_stability = 0.05 add_political_power = 50
+		}
+	}
+
+	# <<< 늘린 중점
 }

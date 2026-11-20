@@ -4,13 +4,12 @@ add_namespace = tfrkphn
 country_event = {
 	id = tfrkphn.6731
 	title = tfrkphn.6731.t
-	desc = tfrkphn.6731.d
+	desc = TFRKPHN_lg_6731_a
 	picture = GFX_TFRKPHN_le30_6731
 	is_triggered_only = yes
 	option = {
-		name = tfrkphn.6731.a
-		custom_effect_tooltip = tfrkphn.6731.a_tt
-		hidden_effect = { TFRKPHN_le_start = yes }
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8226 } }
 	}
 }
 country_event = {
@@ -35,7 +34,7 @@ country_event = {
 country_event = {
 	id = tfrkphn.6734
 	title = tfrkphn.6734.t
-	desc = tfrkphn.6734.d
+	desc = TFRKPHN_lg_6734_a
 	picture = GFX_TFRKPHN_le30_count_anim
 	is_triggered_only = yes
 	option = {
@@ -63,54 +62,33 @@ country_event = {
 country_event = {
 	id = tfrkphn.6735
 	title = tfrkphn.6735.t
-	desc = tfrkphn.6735.d
+	desc = TFRKPHN_lg_6735_a
 	picture = GFX_TFRKPHN_le30_6735
 	is_triggered_only = yes
 	option = {
-		name = tfrkphn.6735.a
-		#localfx
-		custom_effect_tooltip = TFRKPHN_ruling_up_tt
-		hidden_effect = { TFRKPHN_ruling_pop_up = yes }
-		custom_effect_tooltip = TFRKPHN_ally_tt
-		hidden_effect = { TFRKPHN_ally_apply = yes }
-		add_stability = 0.05
-		add_political_power = 100
-		if = { limit = { check_variable = { TFRKPHN_le_prom > 0.5 } } custom_effect_tooltip = TFRKPHN_le_prom_tt hidden_effect = { add_political_power = TFRKPHN_le_cost } }
-		hidden_effect = { set_country_flag = TFRKPHN_le_big_win }
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8227 } }
 	}
 }
 country_event = {
 	id = tfrkphn.6736
 	title = tfrkphn.6736.t
-	desc = tfrkphn.6736.d
+	desc = TFRKPHN_lg_6736_a
 	picture = GFX_TFRKPHN_le30_6736
 	is_triggered_only = yes
 	option = {
-		name = tfrkphn.6736.a
-		#localfx
-		custom_effect_tooltip = TFRKPHN_ally_tt
-		hidden_effect = { TFRKPHN_ally_apply = yes }
-		add_political_power = 30
-		if = { limit = { check_variable = { TFRKPHN_le_prom > 0.5 } } custom_effect_tooltip = TFRKPHN_le_prom_tt hidden_effect = { add_political_power = TFRKPHN_le_cost } }
-		hidden_effect = { set_country_flag = TFRKPHN_le_half_win }
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8228 } }
 	}
 }
 country_event = {
 	id = tfrkphn.6737
 	title = tfrkphn.6737.t
-	desc = tfrkphn.6737.d
+	desc = TFRKPHN_lg_6737_a
 	picture = GFX_TFRKPHN_le30_6737
 	is_triggered_only = yes
 	option = {
-		name = tfrkphn.6737.a
-		#localfx
-		custom_effect_tooltip = TFRKPHN_ruling_down_tt
-		hidden_effect = { TFRKPHN_ruling_pop_down = yes }
-		custom_effect_tooltip = TFRKPHN_ally_tt
-		hidden_effect = { TFRKPHN_ally_apply = yes }
-		add_stability = -0.05
-		add_political_power = -50
-		if = { limit = { check_variable = { TFRKPHN_le_prom > 0.5 } } custom_effect_tooltip = TFRKPHN_le_prom_tt hidden_effect = { add_political_power = TFRKPHN_le_cost } }
-		hidden_effect = { set_country_flag = TFRKPHN_le_lost }
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8229 } }
 	}
 }

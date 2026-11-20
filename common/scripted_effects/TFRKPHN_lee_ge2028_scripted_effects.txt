@@ -1,0 +1,33 @@
+# [안내] 이인제 정부: 2028년 총선 계산. lee_ge2028_build.py가 만든다.
+TFRKPHN_lge28_run = {
+	set_country_flag = TFRKPHN_lge28_done
+	set_variable = { TFRKPHN_lge28 = 150 }
+	if = { limit = { has_stability > 0.8 } add_to_variable = { TFRKPHN_lge28 = 20 } }
+	else_if = { limit = { has_stability > 0.7 } add_to_variable = { TFRKPHN_lge28 = 12 } }
+	else_if = { limit = { has_stability > 0.5 } add_to_variable = { TFRKPHN_lge28 = 6 } }
+	else_if = { limit = { has_stability < 0.3 } add_to_variable = { TFRKPHN_lge28 = -10 } }
+	if = { limit = { has_completed_focus = TFRKPHN_lee_in_je_a2 } add_to_variable = { TFRKPHN_lge28 = 4 } }
+	if = { limit = { has_completed_focus = TFRKPHN_lee_in_je_a2b } add_to_variable = { TFRKPHN_lge28 = -2 } }
+	if = { limit = { has_completed_focus = TFRKPHN_lee_in_je_a6 } add_to_variable = { TFRKPHN_lge28 = 4 } }
+	if = { limit = { has_completed_focus = TFRKPHN_lee_in_je_b5 } add_to_variable = { TFRKPHN_lge28 = 6 } }
+	if = { limit = { has_completed_focus = TFRKPHN_lee_in_je_d2 } add_to_variable = { TFRKPHN_lge28 = 3 } }
+	if = { limit = { has_completed_focus = TFRKPHN_lee_in_je_d2b } add_to_variable = { TFRKPHN_lge28 = -6 } }
+	if = { limit = { has_completed_focus = TFRKPHN_lee_in_je_d4 } add_to_variable = { TFRKPHN_lge28 = -4 } }
+	if = { limit = { has_completed_focus = TFRKPHN_lee_in_je_e2 } add_to_variable = { TFRKPHN_lge28 = 3 } }
+	if = { limit = { has_completed_focus = TFRKPHN_lee_in_je_e3 } add_to_variable = { TFRKPHN_lge28 = 2 } }
+	if = { limit = { has_completed_focus = TFRKPHN_lee_in_je_e4 } add_to_variable = { TFRKPHN_lge28 = 4 } }
+	if = { limit = { has_completed_focus = TFRKPHN_lee_in_je_h6 } add_to_variable = { TFRKPHN_lge28 = 3 } }
+	add_to_variable = { TFRKPHN_lge28 = TFRKPHN_lge28_bonus }
+	clamp_variable = { var = TFRKPHN_lge28 min = 110 max = 210 }
+	set_variable = { KOR_NatAsm_PPP_seats = TFRKPHN_lge28 }
+	set_variable = { KOR_NatAsm_DP_seats = 288 }
+	subtract_from_variable = { KOR_NatAsm_DP_seats = TFRKPHN_lge28 }
+	set_variable = { KOR_NatAsm_JP_seats = 4 }
+	set_variable = { KOR_NatAsm_PP_seats = 6 }
+	set_variable = { KOR_NatAsm_Ind_seats = 2 }
+	KOR_rerender_NatAsm = yes
+	if = { limit = { check_variable = { TFRKPHN_lge28 > 199.5 } } country_event = { id = tfrkphn.7013 } }
+	else_if = { limit = { check_variable = { TFRKPHN_lge28 > 179.5 } } country_event = { id = tfrkphn.7009 } }
+	else_if = { limit = { check_variable = { TFRKPHN_lge28 > 150.5 } } country_event = { id = tfrkphn.7010 } }
+	else = { country_event = { id = tfrkphn.7011 } }
+}

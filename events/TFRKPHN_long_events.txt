@@ -1,5 +1,35 @@
 # [안내] KP 길이로 늘린 사건의 둘째 화면. long_apply.py가 만든다.
 add_namespace = tfrkphn
+# tfrkphn.230 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8103
+	title = tfrkphn.230.t
+	desc = TFRKPHN_lg_230_b
+	picture = GFX_TFRKPHN_gallup_post
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.230.a
+		custom_effect_tooltip = TFRKPHN_poll_ban_lift_tt
+	}
+}
+# tfrkphn.241 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8104
+	title = tfrkphn.241.t
+	desc = TFRKPHN_lg_241_b
+	picture = GFX_report_event_ppp_ge_win
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.241.a
+		# 4년 중임제: 현직 재선 (두 번째 임기, 다음 대선에는 나올 수 없다)
+		if = { limit = { has_country_flag = TFRKPHN_successor_lee_in_je } add_to_variable = { TFRKPHN_lee_terms = 1 } }
+		if = { limit = { has_country_flag = TFRKPHN_successor_oh_se_hoon } add_to_variable = { TFRKPHN_oh_terms = 1 } }
+		set_country_flag = TFRKPHN_pres_term2
+		set_variable = { TFRKPHN_term_days = 1461 }
+		add_stability = 0.05
+		custom_effect_tooltip = TFRKPHN_term2_tt
+	}
+}
 # tfrkphn.245 둘째 화면 (long_apply.py)
 country_event = {
 	id = tfrkphn.8004
@@ -12,6 +42,643 @@ country_event = {
 		custom_effect_tooltip = TFRKPHN_lee_path_tt	# 홍준표의 우경화 문구와 맞물림 (oh_path_tt.py)
 		custom_effect_tooltip = TFRKPHN_ge2027_lee_in_je_tt
 		TFRKPHN_ge2027_lee_in_je_effect = yes
+	}
+}
+# tfrkphn.250 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8105
+	title = tfrkphn.250.t
+	desc = TFRKPHN_lg_250_b
+	picture = GFX_TFRKPHN_kju_target
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.250.a
+	}
+}
+# tfrkphn.252 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8106
+	title = tfrkphn.252.t
+	desc = TFRKPHN_lg_252_b
+	picture = GFX_TFRKPHN_ibuk5do
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.252.a
+		custom_effect_tooltip = TFRKPHN_ibuk5do_tt
+		hidden_effect = {
+			random_country = {
+				limit = { has_country_flag = TFRKPHN_free_joseon }
+				set_cosmetic_tag = NK3_TFRKPHN_ibuk5do
+				# 평양 인민봉기위원회가 이북5도위원회에 합쳐진다
+				if = {
+					limit = { country_exists = PPK }
+					annex_country = { target = PPK transfer_troops = yes }
+					# 박현준이 대한민국으로 귀순한다
+					KOR = { country_event = { id = tfrkphn.258 days = 2 } }
+				}
+				# 개성은 대한민국으로 넘어간다
+				KOR = { add_state_core = 1044 }
+				1044 = { if = { limit = { NOT = { is_owned_by = KOR } } KOR = { transfer_state = 1044 } } }
+				set_politics = { ruling_party = authoritarian_democrat elections_allowed = no }
+				set_popularities = { authoritarian_democrat = 70 totalitarian_socialist = 30 }
+				set_party_name = { ideology = authoritarian_democrat long_name = TFRKPHN_ibuk5do_party_long name = TFRKPHN_ibuk5do_party }
+				retire_country_leader = yes
+				if = { limit = { NOT = { has_character = TFRKPHN_tae_yeongho_char } } recruit_character = TFRKPHN_tae_yeongho_char }
+				TFRKPHN_tae_yeongho_char = { promote_character = ultra_conservatism }	# 권위주의 민주 그룹
+				add_ideas = TFRKPHN_rok_army_support
+				KOR = { country_event = { id = tfrkphn.256 days = 1 } }
+				get_current_government_type = yes
+				ROOT = { puppet = PREV }
+				restore_previous_government_type = yes
+			}
+			# 괴뢰화로 끊긴 내전 다시 잇기
+			TFRKPHN_nk_rewar_effect = yes
+			# 중국: 김여정의 북한과 최룡해의 군사위원회 중 하나를 골라 괴뢰국으로
+			if = {
+				limit = { country_exists = PRC }
+				PRC = { country_event = { id = tfrkphn.255 days = 1 } }
+			}
+		}
+	}
+}
+# tfrkphn.254 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8107
+	title = tfrkphn.254.t
+	desc = TFRKPHN_lg_254_b
+	picture = GFX_TFRKPHN_kju_target
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.254.a
+		# 콘솔에서 나라 코드를 빼고 띄워도(한국이 받아도) 효과는 항상 북한에 적용되게 한다
+		PRK = {
+		set_global_flag = PRK_Civil_War
+		set_global_flag = north_korean_civil_war
+		set_global_flag = TFRKPHN_nk_civil_war
+		add_stability = -0.25
+		# 김정은이 아직 남아 있으면(254 를 바로 띄운 경우 등) 확실히 물러나게
+		hidden_effect = {
+			set_country_flag = PRK_Kim_Is_Dead
+			if = { limit = { has_character = PRK_kim_jongun } retire_character = PRK_kim_jongun }
+			if = { limit = { NOT = { has_character = PRK_kim_yojong_char } } recruit_character = PRK_kim_yojong_char }
+		}
+		# 평양 정부 지도자: Korea Plus 원본 김여정 (korea.189 와 같은 방식)
+		PRK_kim_yojong_char = {
+			add_country_leader_role = {
+				country_leader = {
+					desc = PRK_kim_yojong_char_desc
+					ideology = jucheism
+					traits = { hos_cult_of_personality }
+				}
+				promote_leader = yes
+			}
+			add_country_leader_role = {
+				country_leader = {
+					desc = PRK_kim_yojong_char_desc
+					ideology = left_nationalism
+					traits = { hos_cult_of_personality }
+				}
+				promote_leader = yes
+			}
+		}
+		# 박정천: 쿠데타 실패 뒤 생사불명. 어느 진영에서도 장군·고문·지도자로 쓰지 못하게 은퇴시킨다
+		hidden_effect = {
+			if = { limit = { has_character = PRK_pak_jong_chon } retire_character = PRK_pak_jong_chon }
+			# 최룡해는 군사위원회(CPK)에만 있게: 평양 쪽에 남아 있는 TFR 원본 최룡해는 내보낸다
+			if = { limit = { has_character = PRK_cho_ryong_hae } retire_character = PRK_cho_ryong_hae }
+		}
+		# 1) 자유조선군 (남부): 전용 국가코드 FPK. 황해남도(1045)·개성(1044)·강원도(1042)를 점거
+		hidden_effect = {
+			FPK = {
+				add_state_core = 1045
+				add_state_core = 1044
+				add_state_core = 1042
+			}
+			1045 = { if = { limit = { is_owned_by = PRK } FPK = { transfer_state = 1045 } } }
+			1044 = { if = { limit = { is_owned_by = PRK } FPK = { transfer_state = 1044 } } }
+			1042 = { if = { limit = { is_owned_by = PRK } FPK = { transfer_state = 1042 } } }
+			# 북한 장비 비축분과 육군·공군·해군의 10%를 자유조선군으로 (먼저 넘긴다)
+			PRK = {
+				transfer_units_fraction = {
+					target = FPK
+					size = 0.1
+					stockpile_ratio = 0.1
+					army_ratio = 0.1
+					navy_ratio = 0.1
+					air_ratio = 0.1
+				}
+			}
+			FPK = {
+				set_country_flag = TFRKPHN_free_joseon
+				set_cosmetic_tag = TFRKPHN_free_joseon_ct
+				inherit_technology = PRK
+				set_politics = { ruling_party = authoritarian_democrat elections_allowed = no }
+				set_popularities = { authoritarian_democrat = 70 totalitarian_socialist = 30 }
+				set_capital = { state = 1045 }
+				set_party_name = { ideology = authoritarian_democrat long_name = TFRKPHN_free_joseon_party_long name = TFRKPHN_free_joseon_party }
+				if = { limit = { NOT = { has_character = TFRKPHN_adrian_hong_chang_char } } recruit_character = TFRKPHN_adrian_hong_chang_char }
+				TFRKPHN_adrian_hong_chang_char = { promote_character = interim_democracy_authoritarioan }
+				add_ideas = TFRKPHN_peoples_liberation_war
+				add_equipment_to_stockpile = { type = infantry_equipment amount = 5000 producer = PRK }
+				add_equipment_to_stockpile = { type = artillery_equipment amount = 500 producer = PRK }
+				add_manpower = 50000
+				division_template = {
+					name = "Jayu Joseon Bobyeong Sadan"
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+					}
+				}
+				1045 = { create_unit = { division = "division_template = \"Jayu Joseon Bobyeong Sadan\" start_experience_factor = 0.3 start_equipment_factor = 0.8" owner = FPK count = 3 } }
+				1044 = { create_unit = { division = "division_template = \"Jayu Joseon Bobyeong Sadan\" start_experience_factor = 0.3 start_equipment_factor = 0.8" owner = FPK count = 2 } }
+				1042 = { create_unit = { division = "division_template = \"Jayu Joseon Bobyeong Sadan\" start_experience_factor = 0.3 start_equipment_factor = 0.8" owner = FPK count = 3 } }
+				declare_war_on = { target = PRK type = civil_war }
+			}
+		}
+		# 3) 평양 인민봉기위원회 (평양 1043): 시민과 일부 군이 들고일어난 네 번째 세력. 지도자 박현준
+		hidden_effect = {
+			PPK = { add_state_core = 1043 }
+			1043 = { if = { limit = { is_owned_by = PRK } PPK = { transfer_state = 1043 } } }
+			# 북한 장비 비축분과 육군·공군·해군의 원래 10%를 평양 봉기군으로. 자유조선군이 먼저 10%를 가져가 90%가 남았으므로 0.111 (= 0.1 / 0.9)
+			PRK = {
+				transfer_units_fraction = {
+					target = PPK
+					size = 0.111
+					stockpile_ratio = 0.111
+					army_ratio = 0.111
+					navy_ratio = 0.111
+					air_ratio = 0.111
+				}
+			}
+			PPK = {
+				set_country_flag = TFRKPHN_pyongyang_uprising
+				inherit_technology = PRK
+				if = { limit = { NOT = { has_character = TFRKPHN_hwang_jeong_yeop_char } } recruit_character = TFRKPHN_hwang_jeong_yeop_char }
+				set_politics = { ruling_party = conservative elections_allowed = no }
+				set_popularities = { conservative = 60 totalitarian_socialist = 40 }
+				set_capital = { state = 1043 }
+				TFRKPHN_hwang_jeong_yeop_char = { promote_character = korean_conservatism }
+				add_equipment_to_stockpile = { type = infantry_equipment amount = 6000 producer = PRK }
+				add_manpower = 60000
+				# 경보병(레인저) 6개 대대 사단 6개, 특수부대 4개 대대 사단 3개
+				division_template = {
+					name = "Pyongyang Bonggi Gyeongbobyeong Sadan"
+					regiments = {
+						rangers = { x = 0 y = 0 }
+						rangers = { x = 0 y = 1 }
+						rangers = { x = 0 y = 2 }
+						rangers = { x = 1 y = 0 }
+						rangers = { x = 1 y = 1 }
+						rangers = { x = 1 y = 2 }
+					}
+				}
+				division_template = {
+					name = "Pyongyang Bonggi Teuksu Sadan"
+					regiments = {
+						special_forces = { x = 0 y = 0 }
+						special_forces = { x = 0 y = 1 }
+						special_forces = { x = 1 y = 0 }
+						special_forces = { x = 1 y = 1 }
+					}
+				}
+				1043 = { create_unit = { division = "division_template = \"Pyongyang Bonggi Gyeongbobyeong Sadan\" start_experience_factor = 0.2 start_equipment_factor = 0.8" owner = PPK count = 6 } }
+				1043 = { create_unit = { division = "division_template = \"Pyongyang Bonggi Teuksu Sadan\" start_experience_factor = 0.5 start_equipment_factor = 0.9" owner = PPK count = 3 } }
+				declare_war_on = { target = PRK type = civil_war }
+			}
+			# 3일 뒤 자유조선군이 이북5도위원회로 바뀔 때 평양 봉기군도 합쳐진다 (tfrkphn.252)
+		}
+		# 2) 조선인민군 군사위원회 (동북부). 한 나라에서 기본 내전은 한 번만 일어나서,
+		#    전용 국가코드 CPK 에 주를 넘기고 사단을 직접 만들어 세 번째 세력으로 세운다.
+		hidden_effect = {
+			CPK = {
+				add_state_core = 872
+				add_state_core = 875
+				add_state_core = 873
+				add_state_core = 874
+			}
+			875 = { if = { limit = { is_owned_by = PRK } CPK = { transfer_state = 875 } } }
+			873 = { if = { limit = { is_owned_by = PRK } CPK = { transfer_state = 873 } } }
+			874 = { if = { limit = { is_owned_by = PRK } CPK = { transfer_state = 874 } } }
+			872 = { if = { limit = { is_owned_by = PRK } CPK = { transfer_state = 872 } } }
+			# 북한 장비 비축분과 육군·공군·해군의 원래 40%를 최룡해의 군사위원회로. 자유조선군과 평양 봉기군이 먼저 10%씩 가져가 80%가 남았으므로 0.5 (= 0.4 / 0.8). 아래에서 만드는 사단 10개는 따로 더해진다
+			PRK = {
+				transfer_units_fraction = {
+					target = CPK
+					size = 0.5
+					stockpile_ratio = 0.5
+					army_ratio = 0.5
+					navy_ratio = 0.5
+					air_ratio = 0.5
+				}
+			}
+			CPK = {
+				set_country_flag = TFRKPHN_kpa_junta
+				inherit_technology = PRK
+				if = { limit = { NOT = { has_character = TFRKPHN_cho_ryong_hae_char } } recruit_character = TFRKPHN_cho_ryong_hae_char }
+				set_cosmetic_tag = TFRKPHN_kpa_ct
+				set_politics = { ruling_party = nationalist elections_allowed = no }
+				set_popularities = { nationalist = 70 totalitarian_socialist = 30 }
+				set_capital = { state = 875 }
+				TFRKPHN_cho_ryong_hae_char = { promote_character = military_junta }
+				add_equipment_to_stockpile = { type = infantry_equipment amount = 6000 producer = PRK }
+				add_equipment_to_stockpile = { type = artillery_equipment amount = 600 producer = PRK }
+				add_manpower = 60000
+				division_template = {
+					name = "Inmingun Bobyeong Sadan"
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+					}
+				}
+				875 = { create_unit = { division = "division_template = \"Inmingun Bobyeong Sadan\" start_experience_factor = 0.3 start_equipment_factor = 0.8" owner = CPK count = 4 } }
+				873 = { create_unit = { division = "division_template = \"Inmingun Bobyeong Sadan\" start_experience_factor = 0.3 start_equipment_factor = 0.8" owner = CPK count = 3 } }
+				874 = { create_unit = { division = "division_template = \"Inmingun Bobyeong Sadan\" start_experience_factor = 0.3 start_equipment_factor = 0.8" owner = CPK count = 3 } }
+				declare_war_on = { target = PRK type = civil_war }
+				if = { limit = { FPK = { exists = yes } } declare_war_on = { target = FPK type = annex_everything } }
+				add_ideas = TFRKPHN_pdto_bombing
+			}
+			# PDTO 연합국 폭격: 김여정의 북한(PRK)과 최룡해의 군사위원회(CPK)
+			PRK = { add_ideas = TFRKPHN_pdto_bombing }
+			# 북한 내전 슈퍼이벤트 (KP 슈퍼이벤트 창, 모든 플레이어)
+			if = {
+				limit = { NOT = { has_global_flag = super_events_off_flag } }
+				every_country = {
+					limit = { is_ai = no }
+					set_variable = { TFRKP_super_event = token:TFRKPHN_SE_NK_CIVIL_WAR }
+					scoped_play_song = "TFRKP_TFRKPHN_SE_NK_CIVIL_WAR"
+				}
+			}
+			# 3일 뒤 자유조선군 → 이북5도위원회 (한국 쪽 이벤트)
+			KOR = { country_event = { id = tfrkphn.252 days = 3 } }
+		}
+		}
+	}
+}
+# tfrkphn.255 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8108
+	title = tfrkphn.255.t
+	desc = TFRKPHN_lg_255_b
+	picture = GFX_TFRKPHN_kju_target_news
+	is_triggered_only = yes
+	option = {	# 기존 북한 정부(김여정)
+		name = tfrkphn.255.a
+		trigger = { country_exists = PRK }
+		ai_chance = { base = 60 }
+		custom_effect_tooltip = tfrkphn.255.a.tt
+		hidden_effect = {
+			PRK = { get_current_government_type = yes }
+			ROOT = { puppet = PRK }
+			PRK = { restore_previous_government_type = yes }
+			TFRKPHN_nk_rewar_effect = yes
+		}
+	}
+	option = {	# 최룡해의 조선인민군 군사위원회
+		name = tfrkphn.255.b
+		trigger = { any_country = { has_country_flag = TFRKPHN_kpa_junta exists = yes } }
+		ai_chance = { base = 40 }
+		custom_effect_tooltip = tfrkphn.255.b.tt
+		hidden_effect = {
+			random_country = {
+				limit = { has_country_flag = TFRKPHN_kpa_junta exists = yes }
+				get_current_government_type = yes
+				ROOT = { puppet = PREV }
+				restore_previous_government_type = yes
+			}
+			TFRKPHN_nk_rewar_effect = yes
+		}
+	}
+}
+# tfrkphn.256 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8109
+	title = tfrkphn.256.t
+	desc = TFRKPHN_lg_256_b
+	picture = GFX_TFRKPHN_kaesong
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.256.a
+		custom_effect_tooltip = tfrkphn.256.a.tt
+		add_war_support = 0.05
+		add_political_power = 25
+	}
+}
+# tfrkphn.258 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8110
+	title = tfrkphn.258.t
+	desc = TFRKPHN_lg_258_b
+	picture = GFX_TFRKPHN_kaesong
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.258.a
+	}
+}
+# tfrkphn.271 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8111
+	title = tfrkphn.271.t
+	desc = TFRKPHN_lg_271_b
+	picture = GFX_TFRKPHN_empty_chair
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.271.o1
+		TFRKPHN_cab_appoint_cho_tae_yong = yes
+	}
+	option = {
+		name = tfrkphn.271.o2
+		TFRKPHN_cab_appoint_jang_ho_jin = yes
+	}
+	option = {
+		name = tfrkphn.271.o3
+		TFRKPHN_cab_appoint_chun_young_woo = yes
+	}
+	option = {
+		name = tfrkphn.271.o4
+		TFRKPHN_cab_appoint_lee_do_hoon = yes
+	}
+	option = {
+		name = tfrkphn.271.o5
+		TFRKPHN_cab_appoint_park_cheol_hee = yes
+	}
+}
+# tfrkphn.272 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8112
+	title = tfrkphn.272.t
+	desc = TFRKPHN_lg_272_b
+	picture = GFX_TFRKPHN_rice_price
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.272.o1
+		TFRKPHN_cab_appoint_kim_tae_heum = yes
+	}
+	option = {
+		name = tfrkphn.272.o2
+		TFRKPHN_cab_appoint_chung_hwang_keun = yes
+	}
+	option = {
+		name = tfrkphn.272.o3
+		TFRKPHN_cab_appoint_song_mi_ryung = yes
+	}
+	option = {
+		name = tfrkphn.272.o4
+		TFRKPHN_cab_appoint_lee_dong_phil = yes
+	}
+	option = {
+		name = tfrkphn.272.o5
+		TFRKPHN_cab_appoint_lee_yang_soo = yes
+	}
+}
+# tfrkphn.273 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8113
+	title = tfrkphn.273.t
+	desc = TFRKPHN_lg_273_b
+	picture = GFX_TFRKPHN_empty_chair
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.273.o1
+		TFRKPHN_cab_appoint_lee_jung_sik = yes
+	}
+	option = {
+		name = tfrkphn.273.o2
+		TFRKPHN_cab_appoint_lim_i_ja = yes
+	}
+	option = {
+		name = tfrkphn.273.o3
+		TFRKPHN_cab_appoint_kwon_ki_seop = yes
+	}
+	option = {
+		name = tfrkphn.273.o4
+		TFRKPHN_cab_appoint_lee_ki_kweon = yes
+	}
+	option = {
+		name = tfrkphn.273.o5
+		TFRKPHN_cab_appoint_bang_ha_nam = yes
+	}
+}
+# tfrkphn.274 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8114
+	title = tfrkphn.274.t
+	desc = TFRKPHN_lg_274_b
+	picture = GFX_TFRKPHN_vacancy
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.274.o1
+		TFRKPHN_cab_appoint_kim_yung_ho = yes
+	}
+	option = {
+		name = tfrkphn.274.o2
+		TFRKPHN_cab_appoint_hong_yong_pyo = yes
+	}
+	option = {
+		name = tfrkphn.274.o3
+		TFRKPHN_cab_appoint_ryoo_kihl_jae = yes
+	}
+	option = {
+		name = tfrkphn.274.o4
+		TFRKPHN_cab_appoint_kim_gi_woong = yes
+	}
+	option = {
+		name = tfrkphn.274.o5
+		TFRKPHN_cab_appoint_jo_gun_shik = yes
+	}
+}
+# tfrkphn.276 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8115
+	title = tfrkphn.276.t
+	desc = TFRKPHN_lg_276_b
+	picture = GFX_TFRKPHN_motie
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.276.o1
+		TFRKPHN_cab_appoint_lee_chang_yang = yes
+	}
+	option = {
+		name = tfrkphn.276.o2
+		TFRKPHN_cab_appoint_bang_moon_kyu = yes
+	}
+	option = {
+		name = tfrkphn.276.o3
+		TFRKPHN_cab_appoint_ahn_duk_geun = yes
+	}
+	option = {
+		name = tfrkphn.276.o4
+		TFRKPHN_cab_appoint_yoon_sang_jick = yes
+	}
+	option = {
+		name = tfrkphn.276.o5
+		TFRKPHN_cab_appoint_joo_hyung_hwan = yes
+	}
+}
+# tfrkphn.286 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8166
+	title = tfrkphn.286.t
+	desc = TFRKPHN_lg_286_b
+	picture = GFX_TFRKPHN_resign
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.resign.a
+		add_political_power = -40
+		custom_effect_tooltip = tfrkphn.286.a_tt
+		hidden_effect = { clr_country_flag = TFRKPHN_dept_ev add_to_variable = { TFRKPHN_dept_t_pm = 15 } TFRKPHN_dept_update = yes }
+	}
+	option = {
+		name = tfrkphn.resign.b
+		custom_effect_tooltip = tfrkphn.286.b_tt
+		hidden_effect = { clr_country_flag = TFRKPHN_dept_ev add_to_variable = { TFRKPHN_dept_t_pm = 25 } subtract_from_variable = { TFRKPHN_dept_t_em = 10 } TFRKPHN_dept_update = yes }
+	}
+}
+# tfrkphn.287 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8167
+	title = tfrkphn.287.t
+	desc = TFRKPHN_lg_287_b
+	picture = GFX_TFRKPHN_resign
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.resign.a
+		add_political_power = -40
+		custom_effect_tooltip = tfrkphn.287.a_tt
+		hidden_effect = { clr_country_flag = TFRKPHN_dept_ev add_to_variable = { TFRKPHN_dept_t_fm = 15 } TFRKPHN_dept_update = yes }
+	}
+	option = {
+		name = tfrkphn.resign.b
+		custom_effect_tooltip = tfrkphn.287.b_tt
+		hidden_effect = { clr_country_flag = TFRKPHN_dept_ev add_to_variable = { TFRKPHN_dept_t_fm = 25 } subtract_from_variable = { TFRKPHN_dept_t_nis = 10 } TFRKPHN_dept_update = yes }
+	}
+}
+# tfrkphn.288 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8168
+	title = tfrkphn.288.t
+	desc = TFRKPHN_lg_288_b
+	picture = GFX_TFRKPHN_resign
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.resign.a
+		add_political_power = -40
+		custom_effect_tooltip = tfrkphn.288.a_tt
+		hidden_effect = { clr_country_flag = TFRKPHN_dept_ev add_to_variable = { TFRKPHN_dept_t_em = 15 } TFRKPHN_dept_update = yes }
+	}
+	option = {
+		name = tfrkphn.resign.b
+		custom_effect_tooltip = tfrkphn.288.b_tt
+		hidden_effect = { clr_country_flag = TFRKPHN_dept_ev add_to_variable = { TFRKPHN_dept_t_em = 25 } subtract_from_variable = { TFRKPHN_dept_t_dm = 10 } TFRKPHN_dept_update = yes }
+	}
+}
+# tfrkphn.290 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8169
+	title = tfrkphn.290.t
+	desc = TFRKPHN_lg_290_b
+	picture = GFX_TFRKPHN_resign
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.resign.a
+		add_political_power = -40
+		custom_effect_tooltip = tfrkphn.290.a_tt
+		hidden_effect = { clr_country_flag = TFRKPHN_dept_ev add_to_variable = { TFRKPHN_dept_t_nis = 15 } TFRKPHN_dept_update = yes }
+	}
+	option = {
+		name = tfrkphn.resign.b
+		custom_effect_tooltip = tfrkphn.290.b_tt
+		hidden_effect = { clr_country_flag = TFRKPHN_dept_ev add_to_variable = { TFRKPHN_dept_t_nis = 25 } subtract_from_variable = { TFRKPHN_dept_t_im = 10 } TFRKPHN_dept_update = yes }
+	}
+}
+# tfrkphn.291 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8170
+	title = tfrkphn.291.t
+	desc = TFRKPHN_lg_291_b
+	picture = GFX_TFRKPHN_resign
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.resign.a
+		add_political_power = -40
+		custom_effect_tooltip = tfrkphn.291.a_tt
+		hidden_effect = { clr_country_flag = TFRKPHN_dept_ev add_to_variable = { TFRKPHN_dept_t_dm = 15 } TFRKPHN_dept_update = yes }
+	}
+	option = {
+		name = tfrkphn.resign.b
+		custom_effect_tooltip = tfrkphn.291.b_tt
+		hidden_effect = { clr_country_flag = TFRKPHN_dept_ev add_to_variable = { TFRKPHN_dept_t_dm = 25 } subtract_from_variable = { TFRKPHN_dept_t_em = 10 } TFRKPHN_dept_update = yes }
+	}
+}
+# tfrkphn.295 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8171
+	title = tfrkphn.295.t
+	desc = TFRKPHN_lg_295_b
+	picture = GFX_TFRKPHN_cabinet
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.295.a
+		add_stability = -0.03
+		custom_effect_tooltip = tfrkphn.295.tt
+		hidden_effect = { clr_country_flag = TFRKPHN_dept_ev if = { limit = { check_variable = { TFRKPHN_dept_who = 1 } } set_variable = { TFRKPHN_dept_t_pm = 35 } } if = { limit = { check_variable = { TFRKPHN_dept_who = 2 } } set_variable = { TFRKPHN_dept_t_fm = 35 } } if = { limit = { check_variable = { TFRKPHN_dept_who = 3 } } set_variable = { TFRKPHN_dept_t_em = 35 } } if = { limit = { check_variable = { TFRKPHN_dept_who = 4 } } set_variable = { TFRKPHN_dept_t_im = 35 } } if = { limit = { check_variable = { TFRKPHN_dept_who = 6 } } set_variable = { TFRKPHN_dept_t_dm = 35 } } TFRKPHN_dept_update = yes }
+	}
+	option = {
+		name = tfrkphn.295.b
+		add_political_power = -30
+		add_stability = -0.01
+		custom_effect_tooltip = tfrkphn.295.tt
+		hidden_effect = { clr_country_flag = TFRKPHN_dept_ev if = { limit = { check_variable = { TFRKPHN_dept_who = 1 } } set_variable = { TFRKPHN_dept_t_pm = 35 } } if = { limit = { check_variable = { TFRKPHN_dept_who = 2 } } set_variable = { TFRKPHN_dept_t_fm = 35 } } if = { limit = { check_variable = { TFRKPHN_dept_who = 3 } } set_variable = { TFRKPHN_dept_t_em = 35 } } if = { limit = { check_variable = { TFRKPHN_dept_who = 4 } } set_variable = { TFRKPHN_dept_t_im = 35 } } if = { limit = { check_variable = { TFRKPHN_dept_who = 6 } } set_variable = { TFRKPHN_dept_t_dm = 35 } } TFRKPHN_dept_update = yes }
+	}
+}
+# tfrkphn.296 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8172
+	title = tfrkphn.296.t
+	desc = TFRKPHN_lg_296_b
+	picture = GFX_TFRKPHN_cabinet
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.296.a
+		add_political_power = -60
+		custom_effect_tooltip = tfrkphn.296.a_tt
+		hidden_effect = { clr_country_flag = TFRKPHN_dept_ev if = { limit = { check_variable = { TFRKPHN_dept_t_pm < 31 } } add_to_variable = { TFRKPHN_dept_t_pm = 10 } } if = { limit = { check_variable = { TFRKPHN_dept_t_fm < 31 } } add_to_variable = { TFRKPHN_dept_t_fm = 10 } } if = { limit = { check_variable = { TFRKPHN_dept_t_em < 31 } } add_to_variable = { TFRKPHN_dept_t_em = 10 } } if = { limit = { check_variable = { TFRKPHN_dept_t_im < 31 } } add_to_variable = { TFRKPHN_dept_t_im = 10 } } if = { limit = { check_variable = { TFRKPHN_dept_t_nis < 31 } } add_to_variable = { TFRKPHN_dept_t_nis = 10 } } if = { limit = { check_variable = { TFRKPHN_dept_t_dm < 31 } } add_to_variable = { TFRKPHN_dept_t_dm = 10 } } TFRKPHN_dept_update = yes }
+	}
+	option = {
+		name = tfrkphn.296.b
+		add_stability = -0.02
+		hidden_effect = { clr_country_flag = TFRKPHN_dept_ev }
+	}
+}
+# tfrkphn.297 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8116
+	title = tfrkphn.297.t
+	desc = TFRKPHN_lg_297_b
+	picture = GFX_TFRKPHN_nk_market
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.297.a
+		add_war_support = 0.03
+	}
+}
+# tfrkphn.298 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8117
+	title = tfrkphn.298.t
+	desc = TFRKPHN_lg_298_b
+	picture = GFX_TFRKPHN_nk_riot
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.298.a
+		custom_effect_tooltip = tfrkphn.298.tt
 	}
 }
 # tfrkphn.303 둘째 화면 (long_apply.py)
@@ -64,4 +731,2981 @@ country_event = {
 	option = {
 		name = tfrkphn.323.a
 	}
+}
+# tfrkphn.441 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8118
+	title = tfrkphn.441.t
+	desc = TFRKPHN_lg_441_b
+	picture = GFX_TFRKPHN_nk_market
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.441.a
+		custom_effect_tooltip = tfrkphn.441.a_tt
+		hidden_effect = { TFRKPHN_nk_all_d_2 = yes }
+	}
+}
+# tfrkphn.443 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8119
+	title = tfrkphn.443.t
+	desc = TFRKPHN_lg_443_b
+	picture = GFX_TFRKPHN_nk_defect
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.443.a
+		custom_effect_tooltip = tfrkphn.443.a_tt
+		add_war_support = 0.02
+		hidden_effect = { TFRKPHN_nk_all_d_3 = yes }
+	}
+	option = {
+		name = tfrkphn.443.b
+		custom_effect_tooltip = tfrkphn.443.b_tt
+		add_political_power = 30
+		hidden_effect = { TFRKPHN_nk_all_m_4 = yes }
+	}
+}
+# tfrkphn.444 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8120
+	title = tfrkphn.444.t
+	desc = TFRKPHN_lg_444_b
+	picture = GFX_TFRKPHN_nk_defect
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.444.a
+		custom_effect_tooltip = tfrkphn.444.a_tt
+		hidden_effect = { TFRKPHN_nk_get_jet = yes }
+	}
+}
+# tfrkphn.445 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8121
+	title = tfrkphn.445.t
+	desc = TFRKPHN_lg_445_b
+	picture = GFX_TFRKPHN_nk_protest
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.445.a
+		custom_effect_tooltip = tfrkphn.445.a_tt
+		hidden_effect = { if = { limit = { country_exists = PRK } PRK = { add_stability = -0.03 } } }
+		hidden_effect = { TFRKPHN_nk_all_d_4 = yes }
+	}
+}
+# tfrkphn.446 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8122
+	title = tfrkphn.446.t
+	desc = TFRKPHN_lg_446_b
+	picture = GFX_TFRKPHN_nk_protest
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.446.a
+		custom_effect_tooltip = tfrkphn.446.a_tt
+		hidden_effect = { if = { limit = { country_exists = PRK } PRK = { add_war_support = -0.03 } } }
+		hidden_effect = { TFRKPHN_nk_all_m_5 = yes }
+	}
+}
+# tfrkphn.447 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8123
+	title = tfrkphn.447.t
+	desc = TFRKPHN_lg_447_b
+	picture = GFX_TFRKPHN_nk_defect
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.447.a
+		custom_effect_tooltip = tfrkphn.447.a_tt
+		hidden_effect = { TFRKPHN_nk_all_m_3 = yes }
+	}
+}
+# tfrkphn.448 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8124
+	title = tfrkphn.448.t
+	desc = TFRKPHN_lg_448_b
+	picture = GFX_TFRKPHN_nk_defect
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.448.a
+		custom_effect_tooltip = tfrkphn.448.a_tt
+		hidden_effect = { TFRKPHN_nk_all_d_2 = yes }
+		hidden_effect = { TFRKPHN_nk_all_m_3 = yes }
+	}
+}
+# tfrkphn.449 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8125
+	title = tfrkphn.449.t
+	desc = TFRKPHN_lg_449_b
+	picture = GFX_TFRKPHN_nk_defect
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.449.a
+		custom_effect_tooltip = tfrkphn.449.a_tt
+		add_political_power = 25
+		hidden_effect = { TFRKPHN_nk_all_d_2 = yes }
+	}
+}
+# tfrkphn.450 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8126
+	title = tfrkphn.450.t
+	desc = TFRKPHN_lg_450_b
+	picture = GFX_TFRKPHN_nk_riot
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.450.a
+		custom_effect_tooltip = tfrkphn.450.a_tt
+		hidden_effect = { if = { limit = { country_exists = PRK } PRK = { add_stability = -0.05 } } }
+		hidden_effect = { TFRKPHN_nk_all_d_5 = yes }
+	}
+	option = {
+		name = tfrkphn.450.b
+		custom_effect_tooltip = tfrkphn.450.b_tt
+		hidden_effect = { if = { limit = { country_exists = PRK } PRK = { add_war_support = -0.05 } } }
+		hidden_effect = { TFRKPHN_nk_all_m_4 = yes }
+	}
+}
+# tfrkphn.451 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8127
+	title = tfrkphn.451.t
+	desc = TFRKPHN_lg_451_b
+	picture = GFX_TFRKPHN_nk_riot
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.451.a
+		custom_effect_tooltip = tfrkphn.451.a_tt
+		hidden_effect = { if = { limit = { country_exists = PRK } PRK = { add_stability = -0.05 } } }
+		hidden_effect = { TFRKPHN_nk_all_d_4 = yes }
+		hidden_effect = { TFRKPHN_nk_all_m_4 = yes }
+	}
+	option = {
+		name = tfrkphn.451.b
+		custom_effect_tooltip = tfrkphn.451.b_tt
+		hidden_effect = { TFRKPHN_nk_all_d_2 = yes }
+	}
+}
+# tfrkphn.452 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8128
+	title = tfrkphn.452.t
+	desc = TFRKPHN_lg_452_b
+	picture = GFX_TFRKPHN_nk_defect
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.452.a
+		custom_effect_tooltip = tfrkphn.452.a_tt
+		hidden_effect = { TFRKPHN_nk_get_tank = yes }
+	}
+}
+# tfrkphn.456 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8129
+	title = tfrkphn.456.t
+	desc = TFRKPHN_lg_456_b
+	picture = GFX_TFRKPHN_nk_kjc
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.456.a
+		custom_effect_tooltip = tfrkphn.456.a_tt
+		add_war_support = 0.05
+		hidden_effect = {
+			if = { limit = { country_exists = PRK } PRK = { add_stability = -0.1 add_war_support = -0.1 } }
+			TFRKPHN_nk_all_m_5 = yes
+		}
+	}
+	option = {
+		name = tfrkphn.456.b
+		custom_effect_tooltip = tfrkphn.456.b_tt
+		add_political_power = 100
+		hidden_effect = {
+			if = { limit = { country_exists = PRK } PRK = { add_stability = -0.1 } }
+		}
+	}
+}
+# tfrkphn.457 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8130
+	title = tfrkphn.457.t
+	desc = TFRKPHN_lg_457_b
+	picture = GFX_TFRKPHN_nk_riot
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.457.a
+		custom_effect_tooltip = tfrkphn.457.tt
+		hidden_effect = { if = { limit = { country_exists = PRK } PRK = { add_stability = -0.1 add_war_support = -0.1 } } }
+	}
+}
+# tfrkphn.459 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8131
+	title = tfrkphn.459.t
+	desc = TFRKPHN_lg_459_b
+	picture = GFX_TFRKPHN_nk_riot
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.459.a
+		custom_effect_tooltip = tfrkphn.459.tt
+		hidden_effect = {
+			add_to_variable = { TFRKPHN_nk_d_py = 30 }
+			set_variable = { TFRKPHN_nk_m_cp = 100 }
+			TFRKPHN_nk_update = yes
+			if = { limit = { country_exists = PRK } PRK = { add_stability = -0.1 } }
+		}
+	}
+}
+# tfrkphn.460 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8180
+	title = tfrkphn.460.t
+	desc = TFRKPHN_lg_460_b
+	picture = GFX_TFRKPHN_oplan
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.460.a
+		TFRKPHN_bj_stage1 = yes
+		add_command_power = 30
+		custom_effect_tooltip = tfrkphn.460.a_tt
+		hidden_effect = { TFRKPHN_bj_axis_a = yes }
+	}
+	option = {
+		name = tfrkphn.460.b
+		TFRKPHN_bj_stage1 = yes
+		add_command_power = 30
+		custom_effect_tooltip = tfrkphn.460.b_tt
+		hidden_effect = { TFRKPHN_bj_axis_n = yes }
+	}
+}
+# tfrkphn.461 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8181
+	title = tfrkphn.461.t
+	desc = TFRKPHN_lg_461_b
+	picture = GFX_TFRKPHN_mobilized
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.461.a
+		hidden_effect = { country_event = { id = tfrkphn.491 days = 2 } }	# 김지원 하사의 탄약 지급 이야기 (fin_build.py)
+		TFRKPHN_bj_stage2 = yes
+		add_manpower = 100000
+		add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 5000 producer = KOR }
+		add_equipment_to_stockpile = { type = support_equipment amount = 800 producer = KOR }
+	}
+}
+# tfrkphn.462 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8182
+	title = tfrkphn.462.t
+	desc = TFRKPHN_lg_462_b
+	picture = GFX_TFRKPHN_north_ready
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.462.a
+		hidden_effect = { country_event = { id = tfrkphn.497 days = 3 } }	# 홍준표: 전쟁을 해 본 사람 (hong_build.py)
+		TFRKPHN_bj_stage3 = yes
+		custom_effect_tooltip = tfrkphn.462.tt
+		hidden_effect = {
+			country_event = { id = tfrkphn.463 days = 7 }
+		}
+	}
+}
+# tfrkphn.464 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8183
+	title = tfrkphn.464.t
+	desc = TFRKPHN_lg_464_b
+	picture = GFX_TFRKPHN_landing_fleet
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.464.a
+		navy_experience = 50
+		custom_effect_tooltip = tfrkphn.464.tt
+		hidden_effect = {
+			TFRKPHN_bj_axis_n = yes
+			if = { limit = { country_exists = PRK } PRK = { add_war_support = -0.05 } }
+		}
+	}
+}
+# tfrkphn.466 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8184
+	title = tfrkphn.466.t
+	desc = TFRKPHN_lg_466_b
+	picture = GFX_TFRKPHN_yoo_lee
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.466.a
+		set_country_flag = TFRKPHN_chb_open
+		custom_effect_tooltip = tfrkphn.466.open_tt
+		custom_effect_tooltip = tfrkphn.466.a_tt
+		hidden_effect = { TFRKPHN_job_start = yes add_to_variable = { TFRKPHN_job_lab = 5 } TFRKPHN_job_update = yes TFRKPHN_chb_check = yes country_event = { id = tfrkphn.469 days = 3 } }
+	}
+	option = {
+		name = tfrkphn.466.b
+		set_country_flag = TFRKPHN_chb_open
+		custom_effect_tooltip = tfrkphn.466.open_tt
+		custom_effect_tooltip = tfrkphn.466.b_tt
+		hidden_effect = { TFRKPHN_job_start = yes add_to_variable = { TFRKPHN_job_biz = 5 } TFRKPHN_job_update = yes TFRKPHN_chb_check = yes country_event = { id = tfrkphn.469 days = 3 } }
+	}
+}
+# tfrkphn.468 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8185
+	title = tfrkphn.468.t
+	desc = TFRKPHN_lg_468_b
+	picture = GFX_TFRKPHN_biz_counter
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.468.a
+		add_stability = -0.02
+		custom_effect_tooltip = tfrkphn.468.tt
+		hidden_effect = { add_to_variable = { TFRKPHN_job_biz = -5 } TFRKPHN_job_update = yes country_event = { id = tfrkphn.510 days = 2 } }
+	}
+}
+# tfrkphn.469 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8186
+	title = tfrkphn.469.t
+	desc = TFRKPHN_lg_469_b
+	picture = GFX_TFRKPHN_yoo_lee
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.469.a
+		add_political_power = -15
+		add_stability = 0.01
+	}
+	option = {
+		name = tfrkphn.469.b
+		add_political_power = 15
+		add_stability = -0.01
+	}
+}
+# tfrkphn.471 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8187
+	title = tfrkphn.471.t
+	desc = TFRKPHN_lg_471_b
+	picture = GFX_report_event_fall_pyongyang
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.471.a
+		add_war_support = 0.05
+		add_political_power = 50
+		hidden_effect = { country_event = { id = tfrkphn.472 days = 5 } }
+	}
+}
+# tfrkphn.473 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8188
+	title = tfrkphn.473.t
+	desc = TFRKPHN_lg_473_b
+	picture = GFX_TFRKPHN_one_constitution
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.473.a
+		set_country_flag = TFRKPHN_unified
+		add_stability = 0.10
+		add_war_support = 0.10
+		add_political_power = 150
+		if = { limit = { has_country_flag = TFRKPHN_unitax_full } add_stability = 0.05 custom_effect_tooltip = tfrkphn.473.tax_tt }
+		else_if = { limit = { has_country_flag = TFRKPHN_unitax_half } add_stability = 0.02 custom_effect_tooltip = tfrkphn.473.tax_tt }
+		hidden_effect = {
+			country_event = { id = tfrkphn.492 days = 30 }
+			country_event = { id = tfrkphn.500 days = 5 }	# 홍준표의 짧은 글 (hong_build.py)
+			clr_global_flag = PRK_Civil_War
+			clr_global_flag = north_korean_civil_war
+			clr_global_flag = TFRKPHN_nk_civil_war
+		}
+	}
+}
+# tfrkphn.474 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8189
+	title = tfrkphn.474.t
+	desc = TFRKPHN_lg_474_b
+	picture = GFX_TFRKPHN_ledger_party
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.474.a
+		add_political_power = -40
+		add_stability = 0.03
+		custom_effect_tooltip = tfrkphn.474.a_tt
+		hidden_effect = { add_to_variable = { TFRKPHN_job_lab = 5 } TFRKPHN_job_update = yes country_event = { id = tfrkphn.494 days = 3 } }
+	}
+	option = {
+		name = tfrkphn.474.b
+		add_political_power = 20
+		add_stability = -0.03
+		custom_effect_tooltip = tfrkphn.474.b_tt
+		hidden_effect = { add_to_variable = { TFRKPHN_chb_inv = -1 } add_to_variable = { TFRKPHN_job_lab = -5 } TFRKPHN_job_update = yes TFRKPHN_chb_check = yes }
+	}
+}
+# tfrkphn.475 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8190
+	title = tfrkphn.475.t
+	desc = TFRKPHN_lg_475_b
+	picture = GFX_TFRKPHN_indict
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.475.a
+		add_political_power = 50
+		add_stability = 0.03
+		custom_effect_tooltip = tfrkphn.475.tt
+	}
+}
+# tfrkphn.477 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8088
+	title = tfrkphn.477.t
+	desc = TFRKPHN_lg_477_b
+	picture = GFX_TFRKPHN_unemployment
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.477.a
+	}
+}
+# tfrkphn.481 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8089
+	title = tfrkphn.481.t
+	desc = TFRKPHN_lg_481_b
+	picture = GFX_TFRKPHN_venture
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.481.a
+	}
+}
+# tfrkphn.483 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8173
+	title = tfrkphn.483.t
+	desc = TFRKPHN_lg_483_b
+	picture = GFX_TFRKPHN_china_exit
+	is_triggered_only = yes
+	option = {	# 수도권
+		name = TFRKPHN_ut_opt_cap
+		custom_effect_tooltip = TFRKPHN_ut_civ_tt
+		custom_effect_tooltip = TFRKPHN_ut_cap_tt
+		random_owned_controlled_state = { limit = { is_core_of = ROOT } add_extra_state_shared_building_slots = 1 add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+		
+		add_stability = -0.01
+		hidden_effect = { country_event = { id = tfrkphn.482 days = 40 }  TFRKPHN_job_start = yes add_to_variable = { TFRKPHN_job_n = 3 } add_to_variable = { TFRKPHN_job_biz = 3 } TFRKPHN_job_update = yes add_to_variable = { TFRKPHN_ut_n = 1 } TFRKPHN_ut_next = yes }
+	}
+	option = {	# 지방 공단
+		name = TFRKPHN_ut_opt_reg
+		custom_effect_tooltip = TFRKPHN_ut_civ_tt
+		custom_effect_tooltip = TFRKPHN_ut_reg_tt
+		random_owned_controlled_state = { limit = { is_core_of = ROOT } add_extra_state_shared_building_slots = 1 add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+		
+		add_stability = 0.01
+		hidden_effect = { country_event = { id = tfrkphn.482 days = 40 }  TFRKPHN_job_start = yes add_to_variable = { TFRKPHN_job_n = 2 } add_to_variable = { TFRKPHN_job_biz = 1 } TFRKPHN_job_update = yes add_to_variable = { TFRKPHN_ut_n = 1 } TFRKPHN_ut_next = yes }
+	}
+}
+# tfrkphn.484 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8174
+	title = tfrkphn.484.t
+	desc = TFRKPHN_lg_484_b
+	picture = GFX_TFRKPHN_china_exit
+	is_triggered_only = yes
+	option = {	# 수도권
+		name = TFRKPHN_ut_opt_cap
+		custom_effect_tooltip = TFRKPHN_ut_civ_tt
+		custom_effect_tooltip = TFRKPHN_ut_cap_tt
+		random_owned_controlled_state = { limit = { is_core_of = ROOT } add_extra_state_shared_building_slots = 1 add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+		
+		add_stability = -0.01
+		hidden_effect = {   TFRKPHN_job_start = yes add_to_variable = { TFRKPHN_job_n = 3 } add_to_variable = { TFRKPHN_job_biz = 3 } TFRKPHN_job_update = yes add_to_variable = { TFRKPHN_ut_n = 1 } TFRKPHN_ut_next = yes }
+	}
+	option = {	# 지방 공단
+		name = TFRKPHN_ut_opt_reg
+		custom_effect_tooltip = TFRKPHN_ut_civ_tt
+		custom_effect_tooltip = TFRKPHN_ut_reg_tt
+		random_owned_controlled_state = { limit = { is_core_of = ROOT } add_extra_state_shared_building_slots = 1 add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+		
+		add_stability = 0.01
+		hidden_effect = {   TFRKPHN_job_start = yes add_to_variable = { TFRKPHN_job_n = 2 } add_to_variable = { TFRKPHN_job_biz = 1 } TFRKPHN_job_update = yes add_to_variable = { TFRKPHN_ut_n = 1 } TFRKPHN_ut_next = yes }
+	}
+}
+# tfrkphn.485 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8175
+	title = tfrkphn.485.t
+	desc = TFRKPHN_lg_485_b
+	picture = GFX_TFRKPHN_china_exit
+	is_triggered_only = yes
+	option = {	# 수도권
+		name = TFRKPHN_ut_opt_cap
+		custom_effect_tooltip = TFRKPHN_ut_dock_tt
+		custom_effect_tooltip = TFRKPHN_ut_cap_tt
+		random_owned_controlled_state = { limit = { is_core_of = ROOT is_coastal = yes } add_extra_state_shared_building_slots = 1 add_building_construction = { type = dockyard level = 1 instant_build = yes } }
+		hidden_effect = { if = { limit = { has_country_flag = TFRKPHN_bj_started } TFRKPHN_bj_boost_n = yes } }
+		add_stability = -0.01
+		hidden_effect = {   TFRKPHN_job_start = yes add_to_variable = { TFRKPHN_job_n = 3 } add_to_variable = { TFRKPHN_job_biz = 3 } TFRKPHN_job_update = yes add_to_variable = { TFRKPHN_ut_n = 1 } TFRKPHN_ut_next = yes }
+	}
+	option = {	# 지방 공단
+		name = TFRKPHN_ut_opt_reg
+		custom_effect_tooltip = TFRKPHN_ut_dock_tt
+		custom_effect_tooltip = TFRKPHN_ut_reg_tt
+		random_owned_controlled_state = { limit = { is_core_of = ROOT is_coastal = yes } add_extra_state_shared_building_slots = 1 add_building_construction = { type = dockyard level = 1 instant_build = yes } }
+		hidden_effect = { if = { limit = { has_country_flag = TFRKPHN_bj_started } TFRKPHN_bj_boost_n = yes } }
+		add_stability = 0.01
+		hidden_effect = {   TFRKPHN_job_start = yes add_to_variable = { TFRKPHN_job_n = 2 } add_to_variable = { TFRKPHN_job_biz = 1 } TFRKPHN_job_update = yes add_to_variable = { TFRKPHN_ut_n = 1 } TFRKPHN_ut_next = yes }
+	}
+}
+# tfrkphn.486 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8176
+	title = tfrkphn.486.t
+	desc = TFRKPHN_lg_486_b
+	picture = GFX_TFRKPHN_china_exit
+	is_triggered_only = yes
+	option = {	# 수도권
+		name = TFRKPHN_ut_opt_cap
+		custom_effect_tooltip = TFRKPHN_ut_mil_tt
+		custom_effect_tooltip = TFRKPHN_ut_cap_tt
+		random_owned_controlled_state = { limit = { is_core_of = ROOT } add_extra_state_shared_building_slots = 1 add_building_construction = { type = arms_factory level = 1 instant_build = yes } }
+		hidden_effect = { if = { limit = { has_country_flag = TFRKPHN_bj_started } TFRKPHN_bj_boost_a = yes } }
+		add_stability = -0.01
+		hidden_effect = {   TFRKPHN_job_start = yes add_to_variable = { TFRKPHN_job_n = 3 } add_to_variable = { TFRKPHN_job_biz = 3 } TFRKPHN_job_update = yes add_to_variable = { TFRKPHN_ut_n = 1 } TFRKPHN_ut_next = yes }
+	}
+	option = {	# 지방 공단
+		name = TFRKPHN_ut_opt_reg
+		custom_effect_tooltip = TFRKPHN_ut_mil_tt
+		custom_effect_tooltip = TFRKPHN_ut_reg_tt
+		random_owned_controlled_state = { limit = { is_core_of = ROOT } add_extra_state_shared_building_slots = 1 add_building_construction = { type = arms_factory level = 1 instant_build = yes } }
+		hidden_effect = { if = { limit = { has_country_flag = TFRKPHN_bj_started } TFRKPHN_bj_boost_a = yes } }
+		add_stability = 0.01
+		hidden_effect = {   TFRKPHN_job_start = yes add_to_variable = { TFRKPHN_job_n = 2 } add_to_variable = { TFRKPHN_job_biz = 1 } TFRKPHN_job_update = yes add_to_variable = { TFRKPHN_ut_n = 1 } TFRKPHN_ut_next = yes }
+	}
+}
+# tfrkphn.487 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8177
+	title = tfrkphn.487.t
+	desc = TFRKPHN_lg_487_b
+	picture = GFX_TFRKPHN_china_exit
+	is_triggered_only = yes
+	option = {	# 수도권
+		name = TFRKPHN_ut_opt_cap
+		custom_effect_tooltip = TFRKPHN_ut_mil_tt
+		custom_effect_tooltip = TFRKPHN_ut_cap_tt
+		random_owned_controlled_state = { limit = { is_core_of = ROOT } add_extra_state_shared_building_slots = 1 add_building_construction = { type = arms_factory level = 1 instant_build = yes } }
+		hidden_effect = { if = { limit = { has_country_flag = TFRKPHN_bj_started } TFRKPHN_bj_boost_a = yes } }
+		add_stability = -0.01
+		hidden_effect = {   TFRKPHN_job_start = yes add_to_variable = { TFRKPHN_job_n = 3 } add_to_variable = { TFRKPHN_job_biz = 3 } TFRKPHN_job_update = yes add_to_variable = { TFRKPHN_ut_n = 1 } TFRKPHN_ut_next = yes }
+	}
+	option = {	# 지방 공단
+		name = TFRKPHN_ut_opt_reg
+		custom_effect_tooltip = TFRKPHN_ut_mil_tt
+		custom_effect_tooltip = TFRKPHN_ut_reg_tt
+		random_owned_controlled_state = { limit = { is_core_of = ROOT } add_extra_state_shared_building_slots = 1 add_building_construction = { type = arms_factory level = 1 instant_build = yes } }
+		hidden_effect = { if = { limit = { has_country_flag = TFRKPHN_bj_started } TFRKPHN_bj_boost_a = yes } }
+		add_stability = 0.01
+		hidden_effect = {   TFRKPHN_job_start = yes add_to_variable = { TFRKPHN_job_n = 2 } add_to_variable = { TFRKPHN_job_biz = 1 } TFRKPHN_job_update = yes add_to_variable = { TFRKPHN_ut_n = 1 } TFRKPHN_ut_next = yes }
+	}
+}
+# tfrkphn.488 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8178
+	title = tfrkphn.488.t
+	desc = TFRKPHN_lg_488_b
+	picture = GFX_TFRKPHN_china_exit
+	is_triggered_only = yes
+	option = {	# 수도권
+		name = TFRKPHN_ut_opt_cap
+		custom_effect_tooltip = TFRKPHN_ut_civ_tt
+		custom_effect_tooltip = TFRKPHN_ut_cap_tt
+		random_owned_controlled_state = { limit = { is_core_of = ROOT } add_extra_state_shared_building_slots = 1 add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+		
+		add_stability = -0.01
+		hidden_effect = {   TFRKPHN_job_start = yes add_to_variable = { TFRKPHN_job_n = 3 } add_to_variable = { TFRKPHN_job_biz = 3 } TFRKPHN_job_update = yes add_to_variable = { TFRKPHN_ut_n = 1 } TFRKPHN_ut_next = yes }
+	}
+	option = {	# 지방 공단
+		name = TFRKPHN_ut_opt_reg
+		custom_effect_tooltip = TFRKPHN_ut_civ_tt
+		custom_effect_tooltip = TFRKPHN_ut_reg_tt
+		random_owned_controlled_state = { limit = { is_core_of = ROOT } add_extra_state_shared_building_slots = 1 add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+		
+		add_stability = 0.01
+		hidden_effect = {   TFRKPHN_job_start = yes add_to_variable = { TFRKPHN_job_n = 2 } add_to_variable = { TFRKPHN_job_biz = 1 } TFRKPHN_job_update = yes add_to_variable = { TFRKPHN_ut_n = 1 } TFRKPHN_ut_next = yes }
+	}
+}
+# tfrkphn.489 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8179
+	title = tfrkphn.489.t
+	desc = TFRKPHN_lg_489_b
+	picture = GFX_TFRKPHN_china_exit
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.489.a
+		add_political_power = 50
+		add_stability = 0.02
+	}
+}
+# tfrkphn.493 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8153
+	title = tfrkphn.493.t
+	desc = TFRKPHN_lg_493_b
+	picture = GFX_TFRKPHN_hong_blame
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.493.a
+		custom_effect_tooltip = tfrkphn.493.a_tt
+		hidden_effect = { TFRKPHN_job_start = yes add_to_variable = { TFRKPHN_job_biz = 3 } add_to_variable = { TFRKPHN_job_lab = -3 } TFRKPHN_job_update = yes }
+	}
+	option = {
+		name = tfrkphn.493.b
+		add_political_power = 20
+	}
+}
+# tfrkphn.495 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8154
+	title = tfrkphn.495.t
+	desc = TFRKPHN_lg_495_b
+	picture = GFX_TFRKPHN_hong_praise
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.495.a
+		add_political_power = 50
+		add_stability = 0.03
+	}
+}
+# tfrkphn.497 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8155
+	title = tfrkphn.497.t
+	desc = TFRKPHN_lg_497_b
+	picture = GFX_TFRKPHN_hong_neutral
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.497.a
+		add_war_support = 0.03
+	}
+}
+# tfrkphn.501 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8156
+	title = tfrkphn.501.t
+	desc = TFRKPHN_lg_501_b
+	picture = GFX_TFRKPHN_hong_blame
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.501.a
+		add_political_power = -10
+		add_stability = 0.01
+	}
+	option = {
+		name = tfrkphn.501.b
+		add_political_power = 10
+	}
+}
+# tfrkphn.503 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8157
+	title = tfrkphn.503.t
+	desc = TFRKPHN_lg_503_b
+	picture = GFX_TFRKPHN_hong_neutral
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.503.a
+		add_stability = 0.02
+	}
+}
+# tfrkphn.504 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8158
+	title = tfrkphn.504.t
+	desc = TFRKPHN_lg_504_b
+	picture = GFX_TFRKPHN_hong_blame
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.504.a
+		add_stability = 0.01
+	}
+	option = {
+		name = tfrkphn.504.b
+		add_war_support = 0.02
+	}
+}
+# tfrkphn.505 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8206
+	title = tfrkphn.505.t
+	desc = TFRKPHN_lg_505_b
+	picture = GFX_TFRKPHN_loudspeaker
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.505.a
+	}
+}
+# tfrkphn.507 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8207
+	title = tfrkphn.507.t
+	desc = TFRKPHN_lg_507_b
+	picture = GFX_TFRKPHN_unitax
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.507.a
+		hidden_effect = { country_event = { id = tfrkphn.512 days = 4 } }	# 유승민: 세금 이야기 (yoo_build.py)
+		add_stability = -0.03
+		set_country_flag = TFRKPHN_unitax_full
+		custom_effect_tooltip = tfrkphn.507.a_tt
+	}
+	option = {
+		name = tfrkphn.507.b
+		hidden_effect = { country_event = { id = tfrkphn.512 days = 4 } }	# 유승민: 세금 이야기 (yoo_build.py)
+		add_stability = -0.01
+		add_political_power = -10
+		set_country_flag = TFRKPHN_unitax_half
+		custom_effect_tooltip = tfrkphn.507.b_tt
+	}
+	option = {
+		name = tfrkphn.507.c
+		hidden_effect = { country_event = { id = tfrkphn.512 days = 4 } }	# 유승민: 세금 이야기 (yoo_build.py)
+		add_political_power = -20
+		custom_effect_tooltip = tfrkphn.507.c_tt
+	}
+}
+# tfrkphn.508 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8208
+	title = tfrkphn.508.t
+	desc = TFRKPHN_lg_508_b
+	picture = GFX_TFRKPHN_yoo_lee
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.508.a
+		add_political_power = 20
+		add_stability = 0.01
+	}
+	option = {
+		name = tfrkphn.508.b
+		custom_effect_tooltip = tfrkphn.508.b_tt
+		hidden_effect = { add_to_variable = { TFRKPHN_chb_res = -5 } TFRKPHN_chb_check = yes }
+	}
+}
+# tfrkphn.509 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8209
+	title = tfrkphn.509.t
+	desc = TFRKPHN_lg_509_b
+	picture = GFX_TFRKPHN_yoo_lee
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.509.a
+		add_political_power = -10
+		add_stability = 0.01
+	}
+	option = {
+		name = tfrkphn.509.b
+		add_political_power = 10
+		custom_effect_tooltip = tfrkphn.509.b_tt
+		hidden_effect = { TFRKPHN_job_start = yes add_to_variable = { TFRKPHN_job_biz = 0 } add_to_variable = { TFRKPHN_job_lab = -3 } TFRKPHN_job_update = yes }
+	}
+}
+# tfrkphn.510 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8210
+	title = tfrkphn.510.t
+	desc = TFRKPHN_lg_510_b
+	picture = GFX_TFRKPHN_yoo_lee
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.510.a
+		custom_effect_tooltip = tfrkphn.510.a_tt
+		hidden_effect = { add_to_variable = { TFRKPHN_chb_res = -10 } TFRKPHN_chb_check = yes }
+	}
+}
+# tfrkphn.511 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8211
+	title = tfrkphn.511.t
+	desc = TFRKPHN_lg_511_b
+	picture = GFX_TFRKPHN_yoo_lee
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.511.a
+		add_stability = 0.01
+		add_political_power = -10
+	}
+	option = {
+		name = tfrkphn.511.b
+		custom_effect_tooltip = tfrkphn.511.b_tt
+		hidden_effect = { add_to_variable = { TFRKPHN_chb_res = -5 } TFRKPHN_chb_check = yes }
+	}
+}
+# tfrkphn.514 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8196
+	title = tfrkphn.514.t
+	desc = TFRKPHN_lg_514_b
+	picture = GFX_TFRKPHN_yoo_hong
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.514.a
+		add_political_power = -10
+		add_stability = 0.02
+	}
+	option = {
+		name = tfrkphn.514.b
+		add_political_power = 10
+	}
+}
+# tfrkphn.515 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8197
+	title = tfrkphn.515.t
+	desc = TFRKPHN_lg_515_b
+	picture = GFX_TFRKPHN_yoo_hong
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.515.a
+		add_political_power = -10
+		add_stability = 0.01
+	}
+	option = {
+		name = tfrkphn.515.b
+		add_political_power = 10
+	}
+}
+# tfrkphn.516 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8198
+	title = tfrkphn.516.t
+	desc = TFRKPHN_lg_516_b
+	picture = GFX_TFRKPHN_yoo_hong
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.516.a
+		add_political_power = 10
+	}
+	option = {
+		name = tfrkphn.516.b
+		add_political_power = -10
+		add_stability = 0.01
+	}
+}
+# tfrkphn.518 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8212
+	title = tfrkphn.518.t
+	desc = TFRKPHN_lg_518_b
+	picture = GFX_TFRKPHN_unsigned_order
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.518.a
+		hidden_effect = { country_event = { id = tfrkphn.519 days = 1 } }
+	}
+}
+# tfrkphn.522 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8213
+	title = tfrkphn.522.t
+	desc = TFRKPHN_lg_522_b
+	picture = GFX_TFRKPHN_kim_dj
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.522.a
+		hidden_effect = { country_event = { id = tfrkphn.523 days = 2 } }
+	}
+}
+# tfrkphn.525 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8214
+	title = tfrkphn.525.t
+	desc = TFRKPHN_lg_525_b
+	picture = GFX_TFRKPHN_money_path
+	is_triggered_only = yes
+	option = {	# 계약 공개
+		name = tfrkphn.525.a
+		add_stability = 0.02
+		custom_effect_tooltip = tfrkphn.525.a_tt
+		hidden_effect = { add_to_variable = { TFRKPHN_chb_res = 5 } TFRKPHN_chb_check = yes }
+	}
+	option = {	# 퇴직 공직자 취업 제한
+		name = tfrkphn.525.b
+		add_political_power = -20
+		add_stability = 0.01
+		custom_effect_tooltip = tfrkphn.525.b_tt
+		hidden_effect = { add_to_variable = { TFRKPHN_chb_res = -5 } TFRKPHN_chb_check = yes }
+	}
+	option = {	# 정치자금 실명 공개
+		name = tfrkphn.525.c
+		add_political_power = -30
+		add_stability = 0.03
+	}
+}
+# tfrkphn.527 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8199
+	title = tfrkphn.527.t
+	desc = TFRKPHN_lg_527_b
+	picture = GFX_TFRKPHN_missed_deadline
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.527.a
+		add_stability = -0.03
+		add_political_power = -30
+		hidden_effect = { country_event = { id = tfrkphn.534 days = 1 } }	# 홍준표의 글 (빚을 못 갚았을 때)
+	}
+}
+# tfrkphn.529 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8200
+	title = tfrkphn.529.t
+	desc = TFRKPHN_lg_529_b
+	picture = GFX_TFRKPHN_debt_paid
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.529.a
+		add_stability = 0.03
+		add_political_power = 50
+		add_to_variable = { TFRKPHN_lee_cg = -0.02 }
+		TFRKPHN_lee_gov_init = yes
+		custom_effect_tooltip = TFRKPHN_lee_tt_cg2
+		hidden_effect = { country_event = { id = tfrkphn.533 days = 1 } }	# 홍준표의 글 「채무 제로」
+	}
+}
+# tfrkphn.532 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8201
+	title = tfrkphn.532.t
+	desc = TFRKPHN_lg_532_b
+	picture = GFX_TFRKPHN_burden_share
+	is_triggered_only = yes
+	option = { name = tfrkphn.532.a }
+}
+# tfrkphn.541 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8215
+	title = tfrkphn.541.t
+	desc = TFRKPHN_lg_541_b
+	picture = GFX_TFRKPHN_angry_rally
+	is_triggered_only = yes
+	option = { name = tfrkphn.541.a }
+}
+# tfrkphn.547 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8202
+	title = tfrkphn.547.t
+	desc = TFRKPHN_lg_547_b
+	picture = GFX_TFRKPHN_foreign_pres
+	is_triggered_only = yes
+	option = { name = tfrkphn.547.a }
+}
+# tfrkphn.550 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8203
+	title = tfrkphn.550.t
+	desc = TFRKPHN_lg_550_b
+	picture = GFX_TFRKPHN_mnd
+	is_triggered_only = yes
+	option = { name = tfrkphn.550.a }
+}
+# tfrkphn.551 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8204
+	title = tfrkphn.551.t
+	desc = TFRKPHN_lg_551_b
+	picture = GFX_TFRKPHN_army_after
+	is_triggered_only = yes
+	option = { name = tfrkphn.551.a }
+}
+# tfrkphn.552 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8072
+	title = tfrkphn.552.t
+	desc = TFRKPHN_lg_552_b
+	picture = GFX_TFRKPHN_unification_econ
+	is_triggered_only = yes
+	option = { name = tfrkphn.552.a }
+}
+# tfrkphn.553 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8073
+	title = tfrkphn.553.t
+	desc = TFRKPHN_lg_553_b
+	picture = GFX_TFRKPHN_equity_share
+	is_triggered_only = yes
+	option = { name = tfrkphn.553.a }
+}
+# tfrkphn.554 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8074
+	title = tfrkphn.554.t
+	desc = TFRKPHN_lg_554_b
+	picture = GFX_TFRKPHN_working_mother
+	is_triggered_only = yes
+	option = { name = tfrkphn.554.a }
+}
+# tfrkphn.555 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8075
+	title = tfrkphn.555.t
+	desc = TFRKPHN_lg_555_b
+	picture = GFX_TFRKPHN_one_card
+	is_triggered_only = yes
+	option = { name = tfrkphn.555.a }
+}
+# tfrkphn.567 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8216
+	title = tfrkphn.567.t
+	desc = TFRKPHN_lg_567_b
+	picture = GFX_TFRKPHN_three_am
+	is_triggered_only = yes
+	option = { name = tfrkphn.567.a }
+}
+# tfrkphn.568 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8217
+	title = tfrkphn.568.t
+	desc = TFRKPHN_lg_568_b
+	picture = GFX_TFRKPHN_frontier
+	is_triggered_only = yes
+	option = { name = tfrkphn.568.a }
+}
+# tfrkphn.572 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8060
+	title = tfrkphn.572.t
+	desc = TFRKPHN_lg_572_b
+	picture = GFX_TFRKPHN_oh_bowed
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.572.a
+		add_political_power = 10
+	}
+	option = {
+		name = tfrkphn.572.b
+		add_stability = 0.01
+	}
+}
+# tfrkphn.573 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8061
+	title = tfrkphn.573.t
+	desc = TFRKPHN_lg_573_b
+	picture = GFX_TFRKPHN_oh_seoul
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.573.a
+		add_political_power = 10
+	}
+	option = {
+		name = tfrkphn.573.b
+		add_political_power = -10
+		add_stability = 0.02
+	}
+}
+# tfrkphn.574 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8062
+	title = tfrkphn.574.t
+	desc = TFRKPHN_lg_574_b
+	picture = GFX_TFRKPHN_oh_pen
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.574.a
+		add_stability = 0.01
+	}
+	option = {
+		name = tfrkphn.574.b
+		add_political_power = 10
+	}
+}
+# tfrkphn.575 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8063
+	title = tfrkphn.575.t
+	desc = TFRKPHN_lg_575_b
+	picture = GFX_TFRKPHN_oh_podium
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.575.a
+		add_political_power = 15
+	}
+}
+# tfrkphn.576 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8064
+	title = tfrkphn.576.t
+	desc = TFRKPHN_lg_576_b
+	picture = GFX_TFRKPHN_oh_conv
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.576.a
+		add_political_power = 10
+	}
+	option = {
+		name = tfrkphn.576.b
+		add_stability = 0.01
+	}
+}
+# tfrkphn.577 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8065
+	title = tfrkphn.577.t
+	desc = TFRKPHN_lg_577_b
+	picture = GFX_TFRKPHN_oh_party
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.577.a
+		add_political_power = 10
+	}
+	option = {
+		name = tfrkphn.577.b
+		add_stability = 0.01
+	}
+}
+# tfrkphn.579 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8066
+	title = tfrkphn.579.t
+	desc = TFRKPHN_lg_579_b
+	picture = GFX_TFRKPHN_oh_office
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.579.a
+		add_stability = 0.01
+	}
+	option = {
+		name = tfrkphn.579.b
+		add_political_power = 10
+	}
+}
+# tfrkphn.580 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8218
+	title = tfrkphn.580.t
+	desc = TFRKPHN_lg_580_b
+	picture = GFX_TFRKPHN_opp_ljm
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.580.a
+		add_political_power = 10
+	}
+	option = {
+		name = tfrkphn.580.b
+		add_political_power = -10
+		add_stability = 0.02
+	}
+}
+# tfrkphn.581 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8219
+	title = tfrkphn.581.t
+	desc = TFRKPHN_lg_581_b
+	picture = GFX_TFRKPHN_opp_lny
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.581.a
+		add_stability = 0.01
+	}
+	option = {
+		name = tfrkphn.581.b
+		add_political_power = 10
+	}
+}
+# tfrkphn.583 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8220
+	title = tfrkphn.583.t
+	desc = TFRKPHN_lg_583_b
+	picture = GFX_TFRKPHN_opp_lny
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.583.a
+		add_stability = 0.01
+	}
+	option = {
+		name = tfrkphn.583.b
+		add_political_power = 10
+	}
+}
+# tfrkphn.584 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8221
+	title = tfrkphn.584.t
+	desc = TFRKPHN_lg_584_b
+	picture = GFX_TFRKPHN_opp_ljm
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.584.a
+		add_stability = 0.01
+	}
+	option = {
+		name = tfrkphn.584.b
+		add_political_power = 10
+	}
+}
+# tfrkphn.585 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8222
+	title = tfrkphn.585.t
+	desc = TFRKPHN_lg_585_b
+	picture = GFX_TFRKPHN_opp_ljm
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.585.a
+		add_stability = 0.01
+	}
+	option = {
+		name = tfrkphn.585.b
+		add_political_power = 10
+	}
+}
+# tfrkphn.586 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8223
+	title = tfrkphn.586.t
+	desc = TFRKPHN_lg_586_b
+	picture = GFX_TFRKPHN_opp_ljm
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.586.a
+		hidden_effect = { country_event = { id = tfrkphn.729 } }
+	}
+}
+# tfrkphn.588 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8205
+	title = tfrkphn.588.t
+	desc = TFRKPHN_lg_588_b
+	picture = GFX_TFRKPHN_jcr_smile
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.588.a
+		add_stability = 0.01
+	}
+	option = {
+		name = tfrkphn.588.b
+		add_political_power = 10
+	}
+}
+# tfrkphn.592 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8224
+	title = tfrkphn.592.t
+	desc = TFRKPHN_lg_592_b
+	picture = GFX_TFRKPHN_ljm_amend
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.592.a
+		custom_effect_tooltip = TFRKPHN_amend_ev_m4
+		hidden_effect = { if = { limit = { has_country_flag = TFRKPHN_amend_ongoing } set_temp_variable = { TFRKPHN_amend_delta = -4 } TFRKPHN_amend_add_yes = yes } }
+	}
+	option = {
+		name = tfrkphn.592.b
+		custom_effect_tooltip = TFRKPHN_amend_ev_m2
+		hidden_effect = { if = { limit = { has_country_flag = TFRKPHN_amend_ongoing } set_temp_variable = { TFRKPHN_amend_delta = -2 } TFRKPHN_amend_add_yes = yes } }
+		add_political_power = -40
+	}
+}
+# tfrkphn.610 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8037
+	title = tfrkphn.610.t
+	desc = TFRKPHN_lg_610_b
+	picture = GFX_TFRKPHN_mega_1_1
+	is_triggered_only = yes
+	option = { name = TFRKPHN_mega_ev_ok }
+}
+# tfrkphn.611 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8038
+	title = tfrkphn.611.t
+	desc = TFRKPHN_lg_611_b
+	picture = GFX_TFRKPHN_mega_1_2
+	is_triggered_only = yes
+	option = { name = TFRKPHN_mega_ev_ok }
+}
+# tfrkphn.612 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8039
+	title = tfrkphn.612.t
+	desc = TFRKPHN_lg_612_b
+	picture = GFX_TFRKPHN_mega_1_3
+	is_triggered_only = yes
+	option = { name = TFRKPHN_mega_ev_ok }
+}
+# tfrkphn.613 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8040
+	title = tfrkphn.613.t
+	desc = TFRKPHN_lg_613_b
+	picture = GFX_TFRKPHN_mega_1_4
+	is_triggered_only = yes
+	option = { name = TFRKPHN_mega_ev_ok }
+}
+# tfrkphn.614 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8041
+	title = tfrkphn.614.t
+	desc = TFRKPHN_lg_614_b
+	picture = GFX_TFRKPHN_mega_1_5
+	is_triggered_only = yes
+	option = { name = TFRKPHN_mega_ev_ok custom_effect_tooltip = TFRKPHN_mega_done_1_tt }
+}
+# tfrkphn.615 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8042
+	title = tfrkphn.615.t
+	desc = TFRKPHN_lg_615_b
+	picture = GFX_TFRKPHN_mega_2_1
+	is_triggered_only = yes
+	option = { name = TFRKPHN_mega_ev_ok }
+}
+# tfrkphn.616 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8043
+	title = tfrkphn.616.t
+	desc = TFRKPHN_lg_616_b
+	picture = GFX_TFRKPHN_mega_2_2
+	is_triggered_only = yes
+	option = { name = TFRKPHN_mega_ev_ok }
+}
+# tfrkphn.617 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8044
+	title = tfrkphn.617.t
+	desc = TFRKPHN_lg_617_b
+	picture = GFX_TFRKPHN_mega_2_3
+	is_triggered_only = yes
+	option = { name = TFRKPHN_mega_ev_ok }
+}
+# tfrkphn.618 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8045
+	title = tfrkphn.618.t
+	desc = TFRKPHN_lg_618_b
+	picture = GFX_TFRKPHN_mega_2_4
+	is_triggered_only = yes
+	option = { name = TFRKPHN_mega_ev_ok }
+}
+# tfrkphn.619 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8046
+	title = tfrkphn.619.t
+	desc = TFRKPHN_lg_619_b
+	picture = GFX_TFRKPHN_mega_2_5
+	is_triggered_only = yes
+	option = { name = TFRKPHN_mega_ev_ok custom_effect_tooltip = TFRKPHN_mega_done_2_tt }
+}
+# tfrkphn.621 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8047
+	title = tfrkphn.621.t
+	desc = TFRKPHN_lg_621_b
+	picture = GFX_TFRKPHN_mega_3_2
+	is_triggered_only = yes
+	option = { name = TFRKPHN_mega_ev_ok }
+}
+# tfrkphn.622 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8048
+	title = tfrkphn.622.t
+	desc = TFRKPHN_lg_622_b
+	picture = GFX_TFRKPHN_mega_3_3
+	is_triggered_only = yes
+	option = { name = TFRKPHN_mega_ev_ok }
+}
+# tfrkphn.623 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8049
+	title = tfrkphn.623.t
+	desc = TFRKPHN_lg_623_b
+	picture = GFX_TFRKPHN_mega_3_4
+	is_triggered_only = yes
+	option = { name = TFRKPHN_mega_ev_ok }
+}
+# tfrkphn.624 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8050
+	title = tfrkphn.624.t
+	desc = TFRKPHN_lg_624_b
+	picture = GFX_TFRKPHN_mega_3_5
+	is_triggered_only = yes
+	option = { name = TFRKPHN_mega_ev_ok custom_effect_tooltip = TFRKPHN_mega_done_3_tt }
+}
+# tfrkphn.625 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8051
+	title = tfrkphn.625.t
+	desc = TFRKPHN_lg_625_b
+	picture = GFX_TFRKPHN_mega_4_1
+	is_triggered_only = yes
+	option = { name = TFRKPHN_mega_ev_ok }
+}
+# tfrkphn.626 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8052
+	title = tfrkphn.626.t
+	desc = TFRKPHN_lg_626_b
+	picture = GFX_TFRKPHN_mega_4_2
+	is_triggered_only = yes
+	option = { name = TFRKPHN_mega_ev_ok }
+}
+# tfrkphn.627 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8053
+	title = tfrkphn.627.t
+	desc = TFRKPHN_lg_627_b
+	picture = GFX_TFRKPHN_mega_4_3
+	is_triggered_only = yes
+	option = { name = TFRKPHN_mega_ev_ok }
+}
+# tfrkphn.628 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8054
+	title = tfrkphn.628.t
+	desc = TFRKPHN_lg_628_b
+	picture = GFX_TFRKPHN_mega_4_4
+	is_triggered_only = yes
+	option = { name = TFRKPHN_mega_ev_ok }
+}
+# tfrkphn.629 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8055
+	title = tfrkphn.629.t
+	desc = TFRKPHN_lg_629_b
+	picture = GFX_TFRKPHN_mega_4_5
+	is_triggered_only = yes
+	option = { name = TFRKPHN_mega_ev_ok custom_effect_tooltip = TFRKPHN_mega_done_4_tt }
+}
+# tfrkphn.631 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8056
+	title = tfrkphn.631.t
+	desc = TFRKPHN_lg_631_b
+	picture = GFX_TFRKPHN_mega_5_2
+	is_triggered_only = yes
+	option = { name = TFRKPHN_mega_ev_ok }
+}
+# tfrkphn.632 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8057
+	title = tfrkphn.632.t
+	desc = TFRKPHN_lg_632_b
+	picture = GFX_TFRKPHN_mega_5_3
+	is_triggered_only = yes
+	option = { name = TFRKPHN_mega_ev_ok }
+}
+# tfrkphn.633 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8058
+	title = tfrkphn.633.t
+	desc = TFRKPHN_lg_633_b
+	picture = GFX_TFRKPHN_mega_5_4
+	is_triggered_only = yes
+	option = { name = TFRKPHN_mega_ev_ok }
+}
+# tfrkphn.634 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8059
+	title = tfrkphn.634.t
+	desc = TFRKPHN_lg_634_b
+	picture = GFX_TFRKPHN_mega_5_5
+	is_triggered_only = yes
+	option = { name = TFRKPHN_mega_ev_ok custom_effect_tooltip = TFRKPHN_mega_done_5_tt }
+}
+# tfrkphn.640 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8225
+	title = tfrkphn.640.t
+	desc = TFRKPHN_lg_640_b
+	picture = GFX_TFRKPHN_oh_640
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.640.a
+		custom_effect_tooltip = tfrkphn.640.a_tt
+		add_ideas = TFRKPHN_cho_eun_hee_HM
+		TFRKPHN_oh_first_staff = yes
+	}
+	option = {
+		name = tfrkphn.640.b
+		custom_effect_tooltip = tfrkphn.640.b_tt
+		add_ideas = TFRKPHN_yoon_hee_sook_HM
+		TFRKPHN_oh_first_staff = yes
+	}
+}
+# tfrkphn.641 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8159
+	title = tfrkphn.641.t
+	desc = TFRKPHN_lg_641_b
+	picture = GFX_TFRKPHN_oh_party
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.641.a
+		custom_effect_tooltip = tfrkphn.641.a_tt
+		hidden_effect = { clr_country_flag = TFRKPHN_sd_run_chung clr_country_flag = TFRKPHN_sd_run_cho clr_country_flag = TFRKPHN_sd_run_yoon clr_country_flag = TFRKPHN_sd_run_kim clr_country_flag = TFRKPHN_sd_run_na set_country_flag = TFRKPHN_sd_run_kim set_variable = { TFRKPHN_sd_delta = 3 } TFRKPHN_sd_add_se = yes set_variable = { TFRKPHN_sd_delta = 1 } TFRKPHN_sd_add_north = yes TFRKPHN_sd_refresh = yes }
+	}
+}
+# tfrkphn.643 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8160
+	title = tfrkphn.643.t
+	desc = TFRKPHN_lg_643_b
+	picture = GFX_TFRKPHN_oh_podium
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.643.a
+		add_stability = 0.03
+		add_political_power = 100
+		if = { limit = { has_country_flag = TFRKPHN_sd_new_mayor } TFRKPHN_sd_mayor_reward = yes }
+		custom_effect_tooltip = TFRKPHN_sd_dist_tt
+	}
+}
+# tfrkphn.644 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8161
+	title = tfrkphn.644.t
+	desc = TFRKPHN_lg_644_b
+	picture = GFX_TFRKPHN_oh_bowed
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.644.a
+		add_stability = -0.03
+		add_political_power = -50
+		custom_effect_tooltip = TFRKPHN_sd_dist_tt
+	}
+}
+# tfrkphn.651 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8162
+	title = tfrkphn.651.t
+	desc = TFRKPHN_lg_651_b
+	picture = GFX_TFRKPHN_oh_party
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.651.a
+		custom_effect_tooltip = tfrkphn.651.a_tt
+		hidden_effect = { clr_country_flag = TFRKPHN_sd_run_chung clr_country_flag = TFRKPHN_sd_run_cho clr_country_flag = TFRKPHN_sd_run_yoon clr_country_flag = TFRKPHN_sd_run_kim clr_country_flag = TFRKPHN_sd_run_na set_country_flag = TFRKPHN_sd_run_chung set_variable = { TFRKPHN_sd_delta = 3 } TFRKPHN_sd_add_se = yes set_variable = { TFRKPHN_sd_delta = 3 } TFRKPHN_sd_add_north = yes set_variable = { TFRKPHN_sd_delta = 3 } TFRKPHN_sd_add_sw = yes TFRKPHN_sd_refresh = yes country_event = { id = tfrkphn.652 days = 5 } }
+	}
+	option = {
+		name = tfrkphn.651.b
+		trigger = { NOT = { has_idea = TFRKPHN_cho_eun_hee_HM } }
+		custom_effect_tooltip = tfrkphn.651.b_tt
+		hidden_effect = { clr_country_flag = TFRKPHN_sd_run_chung clr_country_flag = TFRKPHN_sd_run_cho clr_country_flag = TFRKPHN_sd_run_yoon clr_country_flag = TFRKPHN_sd_run_kim clr_country_flag = TFRKPHN_sd_run_na set_country_flag = TFRKPHN_sd_run_cho set_variable = { TFRKPHN_sd_delta = 4 } TFRKPHN_sd_add_se = yes set_variable = { TFRKPHN_sd_delta = 1 } TFRKPHN_sd_add_north = yes TFRKPHN_sd_refresh = yes country_event = { id = tfrkphn.652 days = 5 } }
+	}
+	option = {
+		name = tfrkphn.651.c
+		trigger = { has_idea = TFRKPHN_cho_eun_hee_HM }
+		custom_effect_tooltip = tfrkphn.651.c_tt
+		hidden_effect = { clr_country_flag = TFRKPHN_sd_run_chung clr_country_flag = TFRKPHN_sd_run_cho clr_country_flag = TFRKPHN_sd_run_yoon clr_country_flag = TFRKPHN_sd_run_kim clr_country_flag = TFRKPHN_sd_run_na set_country_flag = TFRKPHN_sd_run_yoon set_variable = { TFRKPHN_sd_delta = 2 } TFRKPHN_sd_add_se = yes set_variable = { TFRKPHN_sd_delta = 2 } TFRKPHN_sd_add_north = yes set_variable = { TFRKPHN_sd_delta = 2 } TFRKPHN_sd_add_sw = yes TFRKPHN_sd_refresh = yes country_event = { id = tfrkphn.652 days = 5 } }
+	}
+	option = {
+		name = tfrkphn.651.e
+		trigger = { check_variable = { TFRKPHN_support_seoul > 49.9 } }
+		custom_effect_tooltip = tfrkphn.651.e_tt
+		hidden_effect = { clr_country_flag = TFRKPHN_sd_run_chung clr_country_flag = TFRKPHN_sd_run_cho clr_country_flag = TFRKPHN_sd_run_yoon clr_country_flag = TFRKPHN_sd_run_kim clr_country_flag = TFRKPHN_sd_run_na set_country_flag = TFRKPHN_sd_run_na set_variable = { TFRKPHN_sd_delta = 3 } TFRKPHN_sd_add_sw = yes set_variable = { TFRKPHN_sd_delta = 2 } TFRKPHN_sd_add_se = yes TFRKPHN_sd_refresh = yes country_event = { id = tfrkphn.652 days = 5 } }
+	}
+}
+# tfrkphn.653 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8163
+	title = tfrkphn.653.t
+	desc = TFRKPHN_lg_653_b
+	picture = GFX_TFRKPHN_oh_podium
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.653.a
+		add_stability = 0.02
+		add_political_power = 80
+		TFRKPHN_sd_mayor_reward = yes
+	}
+}
+# tfrkphn.654 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8164
+	title = tfrkphn.654.t
+	desc = TFRKPHN_lg_654_b
+	picture = GFX_TFRKPHN_oh_bowed
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.654.a
+		add_stability = -0.03
+		add_political_power = -50
+	}
+}
+# tfrkphn.655 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8165
+	title = tfrkphn.655.t
+	desc = TFRKPHN_lg_655_b
+	picture = GFX_TFRKPHN_oh_party
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.655.a
+		custom_effect_tooltip = tfrkphn.655.a_tt
+		hidden_effect = { set_variable = { TFRKPHN_sd_delta = 2 } TFRKPHN_sd_add_se = yes set_variable = { TFRKPHN_sd_delta = 2 } TFRKPHN_sd_add_north = yes set_variable = { TFRKPHN_sd_delta = 2 } TFRKPHN_sd_add_sw = yes TFRKPHN_sd_refresh = yes }
+	}
+}
+# tfrkphn.676 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8140
+	title = tfrkphn.676.t
+	desc = TFRKPHN_lg_676_b
+	picture = GFX_TFRKPHN_rail_open_n
+	is_triggered_only = yes
+	option = { name = TFRKPHN_rail_ev_ok add_political_power = 15 }
+}
+# tfrkphn.677 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8141
+	title = tfrkphn.677.t
+	desc = TFRKPHN_lg_677_b
+	picture = GFX_TFRKPHN_rail_open_n
+	is_triggered_only = yes
+	option = { name = TFRKPHN_rail_ev_ok add_political_power = 15 }
+}
+# tfrkphn.679 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8142
+	title = tfrkphn.679.t
+	desc = TFRKPHN_lg_679_b
+	picture = GFX_TFRKPHN_rail_open_n
+	is_triggered_only = yes
+	option = { name = TFRKPHN_rail_ev_ok add_political_power = 15 }
+}
+# tfrkphn.682 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8132
+	title = tfrkphn.682.t
+	desc = TFRKPHN_lg_682_b
+	picture = GFX_TFRKPHN_exile_c2
+	is_triggered_only = yes
+	option = { name = TFRKPHN_ex_ok custom_effect_tooltip = TFRKPHN_ex_d2_tt }
+}
+# tfrkphn.685 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8133
+	title = tfrkphn.685.t
+	desc = TFRKPHN_lg_685_b
+	picture = GFX_TFRKPHN_exile_c5
+	is_triggered_only = yes
+	option = { name = TFRKPHN_ex_ok custom_effect_tooltip = TFRKPHN_ex_d5_tt }
+}
+# tfrkphn.688 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8134
+	title = tfrkphn.688.t
+	desc = TFRKPHN_lg_688_b
+	picture = GFX_TFRKPHN_exile_e688
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.688.a
+		custom_effect_tooltip = TFRKPHN_ex_688a_tt
+		hidden_effect = { add_to_variable = { TFRKPHN_ex_rs = 0.02 } TFRKPHN_ex_refresh = yes }
+	}
+	option = {
+		name = tfrkphn.688.b
+		custom_effect_tooltip = TFRKPHN_ex_688b_tt
+		hidden_effect = { add_to_variable = { TFRKPHN_ex_bv = 0.02 } TFRKPHN_ex_refresh = yes }
+	}
+}
+# tfrkphn.692 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8135
+	title = tfrkphn.692.t
+	desc = TFRKPHN_lg_692_b
+	picture = GFX_TFRKPHN_exile_c8
+	is_triggered_only = yes
+	option = { name = TFRKPHN_ex_ok custom_effect_tooltip = TFRKPHN_ex_d8_tt }
+}
+# tfrkphn.693 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8136
+	title = tfrkphn.693.t
+	desc = TFRKPHN_lg_693_b
+	picture = GFX_TFRKPHN_exile_c9
+	is_triggered_only = yes
+	option = { name = TFRKPHN_ex_ok custom_effect_tooltip = TFRKPHN_ex_d9_tt }
+}
+# tfrkphn.695 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8137
+	title = tfrkphn.695.t
+	desc = TFRKPHN_lg_695_b
+	picture = GFX_TFRKPHN_exile_p695
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.695.a
+		custom_effect_tooltip = TFRKPHN_ex_p695_tt
+		hidden_effect = { add_to_variable = { TFRKPHN_ex_rs = 0.01 } TFRKPHN_ex_refresh = yes }
+	}
+}
+# tfrkphn.696 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8138
+	title = tfrkphn.696.t
+	desc = TFRKPHN_lg_696_b
+	picture = GFX_TFRKPHN_exile_p696
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.696.a
+		custom_effect_tooltip = TFRKPHN_ex_p696_tt
+		hidden_effect = { add_to_variable = { TFRKPHN_ex_bv = 0.01 } TFRKPHN_ex_refresh = yes }
+	}
+}
+# tfrkphn.698 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8139
+	title = tfrkphn.698.t
+	desc = TFRKPHN_lg_698_b
+	picture = GFX_TFRKPHN_exile_e698
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.698.a
+		set_country_flag = TFRKPHN_ex_wave2
+		custom_effect_tooltip = TFRKPHN_ex_wave2_tt
+		hidden_effect = {
+			add_to_variable = { TFRKPHN_ex_rs = 0.01 }
+			add_to_variable = { TFRKPHN_ex_gripe = 1 }
+			TFRKPHN_ex_refresh = yes
+		}
+	}
+}
+# tfrkphn.6601 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8022
+	title = tfrkphn.6601.t
+	desc = TFRKPHN_lg_6601_b
+	picture = GFX_report_event_ppp_ge_win
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6601.a
+		add_stability = -0.02
+		custom_effect_tooltip = tfrkphn.6601.a_tt
+		hidden_effect = { set_variable = { TFRKPHN_ge28_bonus = 6 } }
+	}
+	option = {
+		name = tfrkphn.6601.b
+		add_stability = 0.02
+		hidden_effect = { set_variable = { TFRKPHN_ge28_bonus = 0 } }
+	}
+}
+# tfrkphn.6603 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8023
+	title = tfrkphn.6603.t
+	desc = TFRKPHN_lg_6603_b
+	picture = GFX_report_event_ppp_ge_win
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6603.a
+		add_political_power = 150 add_stability = 0.05
+	}
+}
+# tfrkphn.6604 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8024
+	title = tfrkphn.6604.t
+	desc = TFRKPHN_lg_6604_b
+	picture = GFX_TFRKPHN_count_6604
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6604.a
+		add_political_power = 75 add_stability = 0.02
+	}
+}
+# tfrkphn.6605 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8025
+	title = tfrkphn.6605.t
+	desc = TFRKPHN_lg_6605_b
+	picture = GFX_report_event_ppp_ge_lose
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6605.a
+		add_political_power = -50 add_stability = -0.05
+	}
+}
+# tfrkphn.6606 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8026
+	title = tfrkphn.6606.t
+	desc = TFRKPHN_lg_6606_b
+	picture = GFX_report_event_ppp_ge_win
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6606.a
+		add_political_power = 200 add_stability = 0.08
+	}
+}
+# tfrkphn.6611 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8027
+	title = tfrkphn.6611.t
+	desc = TFRKPHN_lg_6611_b
+	picture = GFX_TFRKPHN_oh28_6611
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6611.a
+		add_political_power = -50
+		custom_effect_tooltip = tfrkphn.6611.a_tt
+		hidden_effect = { add_to_variable = { TFRKPHN_bk = 2 } set_variable = { TFRKPHN_sd_delta = 1 } TFRKPHN_sd_add_north = yes TFRKPHN_sd_refresh = yes }
+	}
+	option = {
+		name = tfrkphn.6611.b
+		add_stability = -0.02
+		custom_effect_tooltip = tfrkphn.6611.b_tt
+		hidden_effect = { add_to_variable = { TFRKPHN_bk = -3 } set_variable = { TFRKPHN_sd_delta = -2 } TFRKPHN_sd_add_north = yes TFRKPHN_sd_refresh = yes }
+	}
+}
+# tfrkphn.6612 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8028
+	title = tfrkphn.6612.t
+	desc = TFRKPHN_lg_6612_b
+	picture = GFX_TFRKPHN_oh28_6612
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6612.a
+		add_political_power = -40
+		custom_effect_tooltip = tfrkphn.6612.a_tt
+		hidden_effect = { add_to_variable = { TFRKPHN_bk = 3 } }
+	}
+	option = {
+		name = tfrkphn.6612.b
+		add_stability = -0.02
+		custom_effect_tooltip = tfrkphn.6612.b_tt
+		hidden_effect = { add_to_variable = { TFRKPHN_bk = -4 } }
+	}
+}
+# tfrkphn.6613 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8029
+	title = tfrkphn.6613.t
+	desc = TFRKPHN_lg_6613_b
+	picture = GFX_TFRKPHN_oh28_6613
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6613.a
+		add_political_power = -30
+		custom_effect_tooltip = tfrkphn.6613.a_tt
+		hidden_effect = { add_to_variable = { TFRKPHN_bk = 2 } }
+	}
+	option = {
+		name = tfrkphn.6613.b
+		custom_effect_tooltip = tfrkphn.6613.b_tt
+		hidden_effect = { add_to_variable = { TFRKPHN_bk = -3 } }
+	}
+}
+# tfrkphn.6614 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8030
+	title = tfrkphn.6614.t
+	desc = TFRKPHN_lg_6614_b
+	picture = GFX_TFRKPHN_oh28_6614
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6614.a
+		add_political_power = -50
+		custom_effect_tooltip = tfrkphn.6614.a_tt
+		hidden_effect = { add_to_variable = { TFRKPHN_bk = 2 } set_variable = { TFRKPHN_sd_delta = 1 } TFRKPHN_sd_add_sw = yes TFRKPHN_sd_refresh = yes }
+	}
+	option = {
+		name = tfrkphn.6614.b
+		custom_effect_tooltip = tfrkphn.6614.b_tt
+		hidden_effect = { add_to_variable = { TFRKPHN_bk = -2 } add_to_variable = { TFRKPHN_sd_gap = 1 } clamp_variable = { var = TFRKPHN_sd_gap min = 0 max = 10 } TFRKPHN_sd_refresh = yes }
+	}
+}
+# tfrkphn.6615 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8031
+	title = tfrkphn.6615.t
+	desc = TFRKPHN_lg_6615_b
+	picture = GFX_TFRKPHN_oh28_6615
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6615.a
+		add_political_power = -60
+		custom_effect_tooltip = tfrkphn.6615.a_tt
+		hidden_effect = { add_to_variable = { TFRKPHN_bk = 3 } add_to_variable = { TFRKPHN_sd_gap = -1 } clamp_variable = { var = TFRKPHN_sd_gap min = 0 max = 10 } set_variable = { TFRKPHN_sd_delta = 2 } TFRKPHN_sd_add_north = yes TFRKPHN_sd_refresh = yes }
+	}
+	option = {
+		name = tfrkphn.6615.b
+		add_stability = -0.02
+		custom_effect_tooltip = tfrkphn.6615.b_tt
+		hidden_effect = { add_to_variable = { TFRKPHN_bk = -4 } set_variable = { TFRKPHN_sd_delta = -2 } TFRKPHN_sd_add_north = yes TFRKPHN_sd_refresh = yes }
+	}
+}
+# tfrkphn.6622 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8076
+	title = tfrkphn.6622.t
+	desc = TFRKPHN_lg_6622_b
+	picture = GFX_TFRKPHN_ansim_2
+	is_triggered_only = yes
+	option = { name = TFRKPHN_an_ok custom_effect_tooltip = TFRKPHN_an_d2_tt }
+}
+# tfrkphn.6623 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8077
+	title = tfrkphn.6623.t
+	desc = TFRKPHN_lg_6623_b
+	picture = GFX_TFRKPHN_ansim_3
+	is_triggered_only = yes
+	option = { name = TFRKPHN_an_ok custom_effect_tooltip = TFRKPHN_an_d3_tt }
+}
+# tfrkphn.6624 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8078
+	title = tfrkphn.6624.t
+	desc = TFRKPHN_lg_6624_b
+	picture = GFX_TFRKPHN_ansim_4
+	is_triggered_only = yes
+	option = { name = TFRKPHN_an_ok custom_effect_tooltip = TFRKPHN_an_d4_tt }
+}
+# tfrkphn.6631 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8143
+	title = tfrkphn.6631.t
+	desc = TFRKPHN_lg_6631_b
+	picture = GFX_TFRKPHN_pdto_1_1
+	is_triggered_only = yes
+	option = { name = TFRKPHN_pd_ok custom_effect_tooltip = TFRKPHN_pd_d1_1_tt }
+}
+# tfrkphn.6632 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8144
+	title = tfrkphn.6632.t
+	desc = TFRKPHN_lg_6632_b
+	picture = GFX_TFRKPHN_pdto_1_2
+	is_triggered_only = yes
+	option = { name = TFRKPHN_pd_ok custom_effect_tooltip = TFRKPHN_pd_d1_2_tt }
+}
+# tfrkphn.6633 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8145
+	title = tfrkphn.6633.t
+	desc = TFRKPHN_lg_6633_b
+	picture = GFX_TFRKPHN_pdto_2_1
+	is_triggered_only = yes
+	option = { name = TFRKPHN_pd_ok custom_effect_tooltip = TFRKPHN_pd_d2_1_tt }
+}
+# tfrkphn.6634 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8146
+	title = tfrkphn.6634.t
+	desc = TFRKPHN_lg_6634_b
+	picture = GFX_TFRKPHN_pdto_2_2
+	is_triggered_only = yes
+	option = { name = TFRKPHN_pd_ok custom_effect_tooltip = TFRKPHN_pd_d2_2_tt }
+}
+# tfrkphn.6635 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8147
+	title = tfrkphn.6635.t
+	desc = TFRKPHN_lg_6635_b
+	picture = GFX_TFRKPHN_pdto_3_1
+	is_triggered_only = yes
+	option = { name = TFRKPHN_pd_ok custom_effect_tooltip = TFRKPHN_pd_d3_1_tt }
+}
+# tfrkphn.6636 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8148
+	title = tfrkphn.6636.t
+	desc = TFRKPHN_lg_6636_b
+	picture = GFX_TFRKPHN_pdto_4_1
+	is_triggered_only = yes
+	option = { name = TFRKPHN_pd_ok custom_effect_tooltip = TFRKPHN_pd_d4_1_tt }
+}
+# tfrkphn.6637 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8149
+	title = tfrkphn.6637.t
+	desc = TFRKPHN_lg_6637_b
+	picture = GFX_TFRKPHN_pdto_5_1
+	is_triggered_only = yes
+	option = { name = TFRKPHN_pd_ok custom_effect_tooltip = TFRKPHN_pd_d5_1_tt }
+}
+# tfrkphn.6638 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8150
+	title = tfrkphn.6638.t
+	desc = TFRKPHN_lg_6638_b
+	picture = GFX_TFRKPHN_pdto_6_1
+	is_triggered_only = yes
+	option = { name = TFRKPHN_pd_ok custom_effect_tooltip = TFRKPHN_pd_d6_1_tt }
+}
+# tfrkphn.6639 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8151
+	title = tfrkphn.6639.t
+	desc = TFRKPHN_lg_6639_b
+	picture = GFX_TFRKPHN_pdto_7_1
+	is_triggered_only = yes
+	option = { name = TFRKPHN_pd_ok custom_effect_tooltip = TFRKPHN_pd_d7_1_tt }
+}
+# tfrkphn.6640 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8152
+	title = tfrkphn.6640.t
+	desc = TFRKPHN_lg_6640_b
+	picture = GFX_TFRKPHN_pdto_8_1
+	is_triggered_only = yes
+	option = { name = TFRKPHN_pd_ok custom_effect_tooltip = TFRKPHN_pd_d8_1_tt }
+}
+# tfrkphn.6651 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8191
+	title = tfrkphn.6651.t
+	desc = TFRKPHN_lg_6651_b
+	picture = GFX_TFRKPHN_oh_podium
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6651.a
+		custom_effect_tooltip = tfrkphn.6651.a_tt
+		hidden_effect = { add_to_variable = { TFRKPHN_sd_s9 = 2 } clamp_variable = { var = TFRKPHN_sd_s9 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s13 = 2 } clamp_variable = { var = TFRKPHN_sd_s13 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s14 = 2 } clamp_variable = { var = TFRKPHN_sd_s14 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s6 = 2 } clamp_variable = { var = TFRKPHN_sd_s6 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s1 = 2 } clamp_variable = { var = TFRKPHN_sd_s1 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s2 = 2 } clamp_variable = { var = TFRKPHN_sd_s2 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s3 = 2 } clamp_variable = { var = TFRKPHN_sd_s3 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s5 = 2 } clamp_variable = { var = TFRKPHN_sd_s5 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s20 = 2 } clamp_variable = { var = TFRKPHN_sd_s20 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s25 = 2 } clamp_variable = { var = TFRKPHN_sd_s25 min = 0 max = 100 } TFRKPHN_sd_refresh = yes TFRKPHN_by_poll = yes }
+	}
+	option = {
+		name = tfrkphn.6651.b
+		custom_effect_tooltip = tfrkphn.6651.b_tt
+		hidden_effect = { add_to_variable = { TFRKPHN_sd_s4 = 2 } clamp_variable = { var = TFRKPHN_sd_s4 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s7 = 2 } clamp_variable = { var = TFRKPHN_sd_s7 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s11 = 2 } clamp_variable = { var = TFRKPHN_sd_s11 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s10 = 2 } clamp_variable = { var = TFRKPHN_sd_s10 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s17 = 2 } clamp_variable = { var = TFRKPHN_sd_s17 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s19 = 2 } clamp_variable = { var = TFRKPHN_sd_s19 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s15 = 2 } clamp_variable = { var = TFRKPHN_sd_s15 min = 0 max = 100 } TFRKPHN_sd_refresh = yes TFRKPHN_by_poll = yes }
+	}
+	option = {
+		name = tfrkphn.6651.c
+		custom_effect_tooltip = tfrkphn.6651.c_tt
+		hidden_effect = { add_to_variable = { TFRKPHN_sd_s8 = 2 } clamp_variable = { var = TFRKPHN_sd_s8 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s12 = 2 } clamp_variable = { var = TFRKPHN_sd_s12 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s16 = 2 } clamp_variable = { var = TFRKPHN_sd_s16 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s21 = 2 } clamp_variable = { var = TFRKPHN_sd_s21 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s24 = 2 } clamp_variable = { var = TFRKPHN_sd_s24 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s18 = 2 } clamp_variable = { var = TFRKPHN_sd_s18 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s23 = 2 } clamp_variable = { var = TFRKPHN_sd_s23 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s22 = 2 } clamp_variable = { var = TFRKPHN_sd_s22 min = 0 max = 100 } TFRKPHN_sd_refresh = yes TFRKPHN_by_poll = yes }
+	}
+}
+# tfrkphn.6652 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8192
+	title = tfrkphn.6652.t
+	desc = TFRKPHN_lg_6652_b
+	picture = GFX_TFRKPHN_oh_seoul
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6652.a
+		add_political_power = -40
+		custom_effect_tooltip = tfrkphn.6652.a_tt
+		hidden_effect = { if = { limit = { check_variable = { TFRKPHN_by_opp_at = 1 } } add_to_variable = { TFRKPHN_sd_s8 = 1 } clamp_variable = { var = TFRKPHN_sd_s8 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s12 = 1 } clamp_variable = { var = TFRKPHN_sd_s12 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s16 = 1 } clamp_variable = { var = TFRKPHN_sd_s16 min = 0 max = 100 } } if = { limit = { check_variable = { TFRKPHN_by_opp_at = 2 } } add_to_variable = { TFRKPHN_sd_s4 = 1 } clamp_variable = { var = TFRKPHN_sd_s4 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s7 = 1 } clamp_variable = { var = TFRKPHN_sd_s7 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s11 = 1 } clamp_variable = { var = TFRKPHN_sd_s11 min = 0 max = 100 } } if = { limit = { check_variable = { TFRKPHN_by_opp_at = 3 } } add_to_variable = { TFRKPHN_sd_s9 = 1 } clamp_variable = { var = TFRKPHN_sd_s9 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s13 = 1 } clamp_variable = { var = TFRKPHN_sd_s13 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s14 = 1 } clamp_variable = { var = TFRKPHN_sd_s14 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s6 = 1 } clamp_variable = { var = TFRKPHN_sd_s6 min = 0 max = 100 } } if = { limit = { check_variable = { TFRKPHN_by_opp_at = 4 } } add_to_variable = { TFRKPHN_sd_s1 = 1 } clamp_variable = { var = TFRKPHN_sd_s1 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s2 = 1 } clamp_variable = { var = TFRKPHN_sd_s2 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s3 = 1 } clamp_variable = { var = TFRKPHN_sd_s3 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s5 = 1 } clamp_variable = { var = TFRKPHN_sd_s5 min = 0 max = 100 } } if = { limit = { check_variable = { TFRKPHN_by_opp_at = 5 } } add_to_variable = { TFRKPHN_sd_s10 = 1 } clamp_variable = { var = TFRKPHN_sd_s10 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s17 = 1 } clamp_variable = { var = TFRKPHN_sd_s17 min = 0 max = 100 } } if = { limit = { check_variable = { TFRKPHN_by_opp_at = 6 } } add_to_variable = { TFRKPHN_sd_s21 = 1 } clamp_variable = { var = TFRKPHN_sd_s21 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s24 = 1 } clamp_variable = { var = TFRKPHN_sd_s24 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s18 = 1 } clamp_variable = { var = TFRKPHN_sd_s18 min = 0 max = 100 } } if = { limit = { check_variable = { TFRKPHN_by_opp_at = 7 } } add_to_variable = { TFRKPHN_sd_s20 = 1 } clamp_variable = { var = TFRKPHN_sd_s20 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s25 = 1 } clamp_variable = { var = TFRKPHN_sd_s25 min = 0 max = 100 } } if = { limit = { check_variable = { TFRKPHN_by_opp_at = 8 } } add_to_variable = { TFRKPHN_sd_s23 = 1 } clamp_variable = { var = TFRKPHN_sd_s23 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s22 = 1 } clamp_variable = { var = TFRKPHN_sd_s22 min = 0 max = 100 } } if = { limit = { check_variable = { TFRKPHN_by_opp_at = 9 } } add_to_variable = { TFRKPHN_sd_s19 = 1 } clamp_variable = { var = TFRKPHN_sd_s19 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s15 = 1 } clamp_variable = { var = TFRKPHN_sd_s15 min = 0 max = 100 } } TFRKPHN_sd_refresh = yes TFRKPHN_by_poll = yes }
+	}
+	option = {
+		name = tfrkphn.6652.b
+		custom_effect_tooltip = tfrkphn.6652.b_tt
+		hidden_effect = { if = { limit = { check_variable = { TFRKPHN_by_opp_at = 1 } } add_to_variable = { TFRKPHN_sd_s8 = -4 } clamp_variable = { var = TFRKPHN_sd_s8 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s12 = -4 } clamp_variable = { var = TFRKPHN_sd_s12 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s16 = -4 } clamp_variable = { var = TFRKPHN_sd_s16 min = 0 max = 100 } } if = { limit = { check_variable = { TFRKPHN_by_opp_at = 2 } } add_to_variable = { TFRKPHN_sd_s4 = -4 } clamp_variable = { var = TFRKPHN_sd_s4 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s7 = -4 } clamp_variable = { var = TFRKPHN_sd_s7 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s11 = -4 } clamp_variable = { var = TFRKPHN_sd_s11 min = 0 max = 100 } } if = { limit = { check_variable = { TFRKPHN_by_opp_at = 3 } } add_to_variable = { TFRKPHN_sd_s9 = -4 } clamp_variable = { var = TFRKPHN_sd_s9 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s13 = -4 } clamp_variable = { var = TFRKPHN_sd_s13 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s14 = -4 } clamp_variable = { var = TFRKPHN_sd_s14 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s6 = -4 } clamp_variable = { var = TFRKPHN_sd_s6 min = 0 max = 100 } } if = { limit = { check_variable = { TFRKPHN_by_opp_at = 4 } } add_to_variable = { TFRKPHN_sd_s1 = -4 } clamp_variable = { var = TFRKPHN_sd_s1 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s2 = -4 } clamp_variable = { var = TFRKPHN_sd_s2 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s3 = -4 } clamp_variable = { var = TFRKPHN_sd_s3 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s5 = -4 } clamp_variable = { var = TFRKPHN_sd_s5 min = 0 max = 100 } } if = { limit = { check_variable = { TFRKPHN_by_opp_at = 5 } } add_to_variable = { TFRKPHN_sd_s10 = -4 } clamp_variable = { var = TFRKPHN_sd_s10 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s17 = -4 } clamp_variable = { var = TFRKPHN_sd_s17 min = 0 max = 100 } } if = { limit = { check_variable = { TFRKPHN_by_opp_at = 6 } } add_to_variable = { TFRKPHN_sd_s21 = -4 } clamp_variable = { var = TFRKPHN_sd_s21 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s24 = -4 } clamp_variable = { var = TFRKPHN_sd_s24 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s18 = -4 } clamp_variable = { var = TFRKPHN_sd_s18 min = 0 max = 100 } } if = { limit = { check_variable = { TFRKPHN_by_opp_at = 7 } } add_to_variable = { TFRKPHN_sd_s20 = -4 } clamp_variable = { var = TFRKPHN_sd_s20 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s25 = -4 } clamp_variable = { var = TFRKPHN_sd_s25 min = 0 max = 100 } } if = { limit = { check_variable = { TFRKPHN_by_opp_at = 8 } } add_to_variable = { TFRKPHN_sd_s23 = -4 } clamp_variable = { var = TFRKPHN_sd_s23 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s22 = -4 } clamp_variable = { var = TFRKPHN_sd_s22 min = 0 max = 100 } } if = { limit = { check_variable = { TFRKPHN_by_opp_at = 9 } } add_to_variable = { TFRKPHN_sd_s19 = -4 } clamp_variable = { var = TFRKPHN_sd_s19 min = 0 max = 100 } add_to_variable = { TFRKPHN_sd_s15 = -4 } clamp_variable = { var = TFRKPHN_sd_s15 min = 0 max = 100 } } TFRKPHN_sd_refresh = yes TFRKPHN_by_poll = yes }
+	}
+}
+# tfrkphn.6653 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8193
+	title = tfrkphn.6653.t
+	desc = TFRKPHN_lg_6653_b
+	picture = GFX_TFRKPHN_count_6653
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6653.a
+		hidden_effect = { country_event = { id = tfrkphn.6654 } }
+	}
+}
+# tfrkphn.6654 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8194
+	title = tfrkphn.6654.t
+	desc = TFRKPHN_lg_6654_b
+	picture = GFX_TFRKPHN_count_6654
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6654.a
+		hidden_effect = { country_event = { id = tfrkphn.6655 } }
+	}
+}
+# tfrkphn.6655 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8195
+	title = tfrkphn.6655.t
+	desc = TFRKPHN_lg_6655_b
+	picture = GFX_TFRKPHN_count_6655
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6655.a
+		hidden_effect = { set_country_flag = TFRKPHN_by_count_done TFRKPHN_sd_byelection = yes }
+	}
+}
+# tfrkphn.6701 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8005
+	title = tfrkphn.6701.t
+	desc = TFRKPHN_lg_6701_b
+	picture = GFX_TFRKPHN_oh_podium
+	is_triggered_only = yes
+	option = { name = tfrkphn.6701.a }
+}
+# tfrkphn.6702 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8006
+	title = tfrkphn.6702.t
+	desc = TFRKPHN_lg_6702_b
+	picture = GFX_TFRKPHN_oh_pen
+	is_triggered_only = yes
+	option = { name = tfrkphn.6702.a }
+}
+# tfrkphn.6703 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8007
+	title = tfrkphn.6703.t
+	desc = TFRKPHN_lg_6703_b
+	picture = GFX_TFRKPHN_oh_office
+	is_triggered_only = yes
+	option = { name = tfrkphn.6703.a }
+}
+# tfrkphn.6704 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8008
+	title = tfrkphn.6704.t
+	desc = TFRKPHN_lg_6704_b
+	picture = GFX_TFRKPHN_oh_bowed
+	is_triggered_only = yes
+	option = { name = tfrkphn.6704.a }
+}
+# tfrkphn.6705 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8009
+	title = tfrkphn.6705.t
+	desc = TFRKPHN_lg_6705_b
+	picture = GFX_TFRKPHN_mega_1_2
+	is_triggered_only = yes
+	option = { name = tfrkphn.6705.a }
+}
+# tfrkphn.6707 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8010
+	title = tfrkphn.6707.t
+	desc = TFRKPHN_lg_6707_b
+	picture = GFX_TFRKPHN_mega_1_2
+	is_triggered_only = yes
+	option = { name = tfrkphn.6707.a }
+}
+# tfrkphn.6708 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8011
+	title = tfrkphn.6708.t
+	desc = TFRKPHN_lg_6708_b
+	picture = GFX_TFRKPHN_oh_walk
+	is_triggered_only = yes
+	option = { name = tfrkphn.6708.a }
+}
+# tfrkphn.6709 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8012
+	title = tfrkphn.6709.t
+	desc = TFRKPHN_lg_6709_b
+	picture = GFX_TFRKPHN_oh_pen
+	is_triggered_only = yes
+	option = { name = tfrkphn.6709.a }
+}
+# tfrkphn.6710 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8013
+	title = tfrkphn.6710.t
+	desc = TFRKPHN_lg_6710_b
+	picture = GFX_TFRKPHN_oh_walk
+	is_triggered_only = yes
+	option = { name = tfrkphn.6710.a }
+}
+# tfrkphn.6711 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8014
+	title = tfrkphn.6711.t
+	desc = TFRKPHN_lg_6711_b
+	picture = GFX_TFRKPHN_oh_seoul
+	is_triggered_only = yes
+	option = { name = tfrkphn.6711.a }
+}
+# tfrkphn.6712 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8015
+	title = tfrkphn.6712.t
+	desc = TFRKPHN_lg_6712_b
+	picture = GFX_TFRKPHN_mega_1_3
+	is_triggered_only = yes
+	option = { name = tfrkphn.6712.a }
+}
+# tfrkphn.6714 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8016
+	title = tfrkphn.6714.t
+	desc = TFRKPHN_lg_6714_b
+	picture = GFX_TFRKPHN_ansim_3
+	is_triggered_only = yes
+	option = { name = tfrkphn.6714.a }
+}
+# tfrkphn.6715 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8017
+	title = tfrkphn.6715.t
+	desc = TFRKPHN_lg_6715_b
+	picture = GFX_TFRKPHN_oh_office
+	is_triggered_only = yes
+	option = { name = tfrkphn.6715.a }
+}
+# tfrkphn.6716 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8018
+	title = tfrkphn.6716.t
+	desc = TFRKPHN_lg_6716_b
+	picture = GFX_TFRKPHN_oh_walk
+	is_triggered_only = yes
+	option = { name = tfrkphn.6716.a }
+}
+# tfrkphn.6720 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8019
+	title = tfrkphn.6720.t
+	desc = TFRKPHN_lg_6720_b
+	picture = GFX_TFRKPHN_oh_podium
+	is_triggered_only = yes
+	option = { name = tfrkphn.6720.a }
+}
+# tfrkphn.6721 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8020
+	title = tfrkphn.6721.t
+	desc = TFRKPHN_lg_6721_b
+	picture = GFX_TFRKPHN_oh_bowed
+	is_triggered_only = yes
+	option = { name = tfrkphn.6721.a }
+}
+# tfrkphn.6723 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8021
+	title = tfrkphn.6723.t
+	desc = TFRKPHN_lg_6723_b
+	picture = GFX_TFRKPHN_oh_office
+	is_triggered_only = yes
+	option = { name = tfrkphn.6723.a }
+}
+# tfrkphn.6731 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8226
+	title = tfrkphn.6731.t
+	desc = TFRKPHN_lg_6731_b
+	picture = GFX_TFRKPHN_le30_6731
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6731.a
+		custom_effect_tooltip = tfrkphn.6731.a_tt
+		hidden_effect = { TFRKPHN_le_start = yes }
+	}
+}
+# tfrkphn.6735 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8227
+	title = tfrkphn.6735.t
+	desc = TFRKPHN_lg_6735_b
+	picture = GFX_TFRKPHN_le30_6735
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6735.a
+		#localfx
+		custom_effect_tooltip = TFRKPHN_ruling_up_tt
+		hidden_effect = { TFRKPHN_ruling_pop_up = yes }
+		custom_effect_tooltip = TFRKPHN_ally_tt
+		hidden_effect = { TFRKPHN_ally_apply = yes }
+		add_stability = 0.05
+		add_political_power = 100
+		if = { limit = { check_variable = { TFRKPHN_le_prom > 0.5 } } custom_effect_tooltip = TFRKPHN_le_prom_tt hidden_effect = { add_political_power = TFRKPHN_le_cost } }
+		hidden_effect = { set_country_flag = TFRKPHN_le_big_win }
+	}
+}
+# tfrkphn.6736 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8228
+	title = tfrkphn.6736.t
+	desc = TFRKPHN_lg_6736_b
+	picture = GFX_TFRKPHN_le30_6736
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6736.a
+		#localfx
+		custom_effect_tooltip = TFRKPHN_ally_tt
+		hidden_effect = { TFRKPHN_ally_apply = yes }
+		add_political_power = 30
+		if = { limit = { check_variable = { TFRKPHN_le_prom > 0.5 } } custom_effect_tooltip = TFRKPHN_le_prom_tt hidden_effect = { add_political_power = TFRKPHN_le_cost } }
+		hidden_effect = { set_country_flag = TFRKPHN_le_half_win }
+	}
+}
+# tfrkphn.6737 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8229
+	title = tfrkphn.6737.t
+	desc = TFRKPHN_lg_6737_b
+	picture = GFX_TFRKPHN_le30_6737
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6737.a
+		#localfx
+		custom_effect_tooltip = TFRKPHN_ruling_down_tt
+		hidden_effect = { TFRKPHN_ruling_pop_down = yes }
+		custom_effect_tooltip = TFRKPHN_ally_tt
+		hidden_effect = { TFRKPHN_ally_apply = yes }
+		add_stability = -0.05
+		add_political_power = -50
+		if = { limit = { check_variable = { TFRKPHN_le_prom > 0.5 } } custom_effect_tooltip = TFRKPHN_le_prom_tt hidden_effect = { add_political_power = TFRKPHN_le_cost } }
+		hidden_effect = { set_country_flag = TFRKPHN_le_lost }
+	}
+}
+# tfrkphn.6755 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8230
+	title = tfrkphn.6755.t
+	desc = TFRKPHN_lg_6755_b
+	picture = GFX_TFRKPHN_le26_6755
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6755.a
+		#localfx
+		custom_effect_tooltip = TFRKPHN_ruling_up_tt
+		hidden_effect = { TFRKPHN_ruling_pop_up = yes }
+		custom_effect_tooltip = TFRKPHN_ally_tt
+		hidden_effect = { TFRKPHN_ally_apply = yes }
+		add_stability = 0.05
+		add_political_power = 100
+		if = { limit = { check_variable = { TFRKPHN_l6_prom > 0.5 } } custom_effect_tooltip = TFRKPHN_l6_prom_tt hidden_effect = { add_political_power = TFRKPHN_l6_cost } }
+		hidden_effect = { set_country_flag = TFRKPHN_l6_big_win }
+	}
+}
+# tfrkphn.6757 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8231
+	title = tfrkphn.6757.t
+	desc = TFRKPHN_lg_6757_b
+	picture = GFX_TFRKPHN_le26_6757
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6757.a
+		#localfx
+		custom_effect_tooltip = TFRKPHN_ruling_down_tt
+		hidden_effect = { TFRKPHN_ruling_pop_down = yes }
+		custom_effect_tooltip = TFRKPHN_ally_tt
+		hidden_effect = { TFRKPHN_ally_apply = yes }
+		add_stability = -0.05
+		add_political_power = -50
+		if = { limit = { check_variable = { TFRKPHN_l6_prom > 0.5 } } custom_effect_tooltip = TFRKPHN_l6_prom_tt hidden_effect = { add_political_power = TFRKPHN_l6_cost } }
+		hidden_effect = { set_country_flag = TFRKPHN_l6_lost }
+	}
+}
+# tfrkphn.6761 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8096
+	title = tfrkphn.651.t
+	desc = TFRKPHN_lg_6761_b
+	picture = GFX_TFRKPHN_lee_by_6761
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.651.a
+		custom_effect_tooltip = tfrkphn.651.a_tt
+		hidden_effect = { clr_country_flag = TFRKPHN_sd_run_chung clr_country_flag = TFRKPHN_sd_run_cho clr_country_flag = TFRKPHN_sd_run_yoon clr_country_flag = TFRKPHN_sd_run_kim clr_country_flag = TFRKPHN_sd_run_na set_country_flag = TFRKPHN_sd_run_chung set_variable = { TFRKPHN_sd_delta = 3 } TFRKPHN_sd_add_se = yes set_variable = { TFRKPHN_sd_delta = 3 } TFRKPHN_sd_add_north = yes set_variable = { TFRKPHN_sd_delta = 3 } TFRKPHN_sd_add_sw = yes TFRKPHN_sd_refresh = yes country_event = { id = tfrkphn.6762 days = 5 } }
+	}
+	option = {
+		name = tfrkphn.651.b
+		trigger = { NOT = { has_idea = TFRKPHN_cho_eun_hee_HM } }
+		custom_effect_tooltip = tfrkphn.651.b_tt
+		hidden_effect = { clr_country_flag = TFRKPHN_sd_run_chung clr_country_flag = TFRKPHN_sd_run_cho clr_country_flag = TFRKPHN_sd_run_yoon clr_country_flag = TFRKPHN_sd_run_kim clr_country_flag = TFRKPHN_sd_run_na set_country_flag = TFRKPHN_sd_run_cho set_variable = { TFRKPHN_sd_delta = 4 } TFRKPHN_sd_add_se = yes set_variable = { TFRKPHN_sd_delta = 1 } TFRKPHN_sd_add_north = yes TFRKPHN_sd_refresh = yes country_event = { id = tfrkphn.6762 days = 5 } }
+	}
+	option = {
+		name = tfrkphn.651.c
+		trigger = { has_idea = TFRKPHN_cho_eun_hee_HM }
+		custom_effect_tooltip = tfrkphn.651.c_tt
+		hidden_effect = { clr_country_flag = TFRKPHN_sd_run_chung clr_country_flag = TFRKPHN_sd_run_cho clr_country_flag = TFRKPHN_sd_run_yoon clr_country_flag = TFRKPHN_sd_run_kim clr_country_flag = TFRKPHN_sd_run_na set_country_flag = TFRKPHN_sd_run_yoon set_variable = { TFRKPHN_sd_delta = 2 } TFRKPHN_sd_add_se = yes set_variable = { TFRKPHN_sd_delta = 2 } TFRKPHN_sd_add_north = yes set_variable = { TFRKPHN_sd_delta = 2 } TFRKPHN_sd_add_sw = yes TFRKPHN_sd_refresh = yes country_event = { id = tfrkphn.6762 days = 5 } }
+	}
+	option = {
+		name = tfrkphn.651.e
+		trigger = { check_variable = { TFRKPHN_support_seoul > 49.9 } }
+		custom_effect_tooltip = tfrkphn.651.e_tt
+		hidden_effect = { clr_country_flag = TFRKPHN_sd_run_chung clr_country_flag = TFRKPHN_sd_run_cho clr_country_flag = TFRKPHN_sd_run_yoon clr_country_flag = TFRKPHN_sd_run_kim clr_country_flag = TFRKPHN_sd_run_na set_country_flag = TFRKPHN_sd_run_na set_variable = { TFRKPHN_sd_delta = 3 } TFRKPHN_sd_add_sw = yes set_variable = { TFRKPHN_sd_delta = 2 } TFRKPHN_sd_add_se = yes TFRKPHN_sd_refresh = yes country_event = { id = tfrkphn.6762 days = 5 } }
+	}
+}
+# tfrkphn.6763 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8097
+	title = tfrkphn.6763.t
+	desc = TFRKPHN_lg_6763_b
+	picture = GFX_TFRKPHN_lee_by_6763
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.653.a
+		add_stability = 0.02
+		add_political_power = 80
+		TFRKPHN_sd_mayor_reward = yes
+		hidden_effect = { country_event = { id = tfrkphn.6770 days = 45 } }
+	}
+}
+# tfrkphn.6764 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8098
+	title = tfrkphn.6764.t
+	desc = TFRKPHN_lg_6764_b
+	picture = GFX_TFRKPHN_lee_by_6764
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.654.a
+		add_stability = -0.03
+		add_political_power = -50
+		hidden_effect = { country_event = { id = tfrkphn.6774 days = 45 } }
+	}
+}
+# tfrkphn.6767 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8099
+	title = tfrkphn.6767.t
+	desc = TFRKPHN_lg_6767_b
+	picture = GFX_TFRKPHN_lee_by_6767
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.653.a
+		add_stability = 0.02
+		add_political_power = 80
+		TFRKPHN_sd_mayor_reward = yes
+		hidden_effect = { country_event = { id = tfrkphn.6772 days = 45 } }
+	}
+}
+# tfrkphn.6768 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8232
+	title = tfrkphn.6768.t
+	desc = TFRKPHN_lg_6768_b
+	picture = GFX_TFRKPHN_allyfac
+	is_triggered_only = yes
+	option = { name = tfrkphn.6768.a }
+}
+# tfrkphn.6769 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8233
+	title = tfrkphn.6769.t
+	desc = TFRKPHN_lg_6769_b
+	picture = GFX_TFRKPHN_allyfac
+	is_triggered_only = yes
+	option = { name = tfrkphn.6769.a }
+}
+# tfrkphn.6771 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8100
+	title = tfrkphn.6771.t
+	desc = TFRKPHN_lg_6771_b
+	picture = GFX_TFRKPHN_lm_6771
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6771.a
+		add_stability = 0.02
+		custom_effect_tooltip = TFRKPHN_ruling_up_tt
+		hidden_effect = { TFRKPHN_ruling_pop_up = yes }
+	}
+}
+# tfrkphn.6772 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8101
+	title = tfrkphn.6772.t
+	desc = TFRKPHN_lg_6772_b
+	picture = GFX_TFRKPHN_lm_6772
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6772.a
+		add_political_power = -50
+		add_stability = 0.02
+		hidden_effect = { set_country_flag = TFRKPHN_chung_met country_event = { id = tfrkphn.6773 days = 200 } }
+	}
+	option = {
+		name = tfrkphn.6772.b
+		add_political_power = 20
+		add_stability = -0.02
+		hidden_effect = { country_event = { id = tfrkphn.6773 days = 200 } }
+	}
+}
+# tfrkphn.6774 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8102
+	title = tfrkphn.6774.t
+	desc = TFRKPHN_lg_6774_b
+	picture = GFX_TFRKPHN_lm_6774
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6774.a
+		add_political_power = -40
+		add_stability = 0.03
+		hidden_effect = { set_country_flag = TFRKPHN_jwo_fund country_event = { id = tfrkphn.6775 days = 200 } }
+	}
+	option = {
+		name = tfrkphn.6774.b
+		add_political_power = 40
+		add_stability = -0.02
+		hidden_effect = { country_event = { id = tfrkphn.6775 days = 200 } }
+	}
+}
+# tfrkphn.6776 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8234
+	title = tfrkphn.6776.t
+	desc = TFRKPHN_lg_6776_b
+	picture = GFX_TFRKPHN_dev_6776
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6776.a
+		custom_effect_tooltip = TFRKPHN_dev_bk_dn_tt
+		if = { limit = { has_dynamic_modifier = { modifier = TFRKPHN_dev_rush } } remove_dynamic_modifier = { modifier = TFRKPHN_dev_rush } } add_dynamic_modifier = { modifier = TFRKPHN_dev_rush days = 365 }
+		hidden_effect = { add_to_variable = { TFRKPHN_bk = -1 } }
+	}
+	option = {
+		name = tfrkphn.6776.b
+		add_political_power = 50
+		custom_effect_tooltip = TFRKPHN_dev_bk_up_tt
+		hidden_effect = { add_to_variable = { TFRKPHN_bk = 1 } }
+	}
+}
+# tfrkphn.6778 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8235
+	title = tfrkphn.6778.t
+	desc = TFRKPHN_lg_6778_b
+	picture = GFX_TFRKPHN_dev_6778
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6778.a
+		add_political_power = -50
+		add_stability = 0.02
+		custom_effect_tooltip = TFRKPHN_dev_bk_up_tt
+		hidden_effect = { add_to_variable = { TFRKPHN_bk = 2 } }
+	}
+	option = {
+		name = tfrkphn.6778.b
+		add_political_power = 30
+		add_stability = -0.02
+		custom_effect_tooltip = TFRKPHN_dev_bk_dn_tt
+		hidden_effect = { add_to_variable = { TFRKPHN_bk = -2 } }
+	}
+}
+# tfrkphn.6970 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8236
+	title = tfrkphn.6970.t
+	desc = TFRKPHN_lg_6970_b
+	picture = GFX_TFRKPHN_hong_grief
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6970.a
+		add_political_power = -50
+		add_stability = -0.02
+		custom_effect_tooltip = TFRKPHN_ruling_down_tt
+		hidden_effect = { TFRKPHN_ruling_pop_down = yes set_country_flag = TFRKPHN_grief_admit country_event = { id = tfrkphn.6971 days = 30 } }
+	}
+	option = {
+		name = tfrkphn.6970.b
+		add_stability = -0.05
+		custom_effect_tooltip = TFRKPHN_ruling_down_tt
+		hidden_effect = { TFRKPHN_ruling_pop_down = yes country_event = { id = tfrkphn.6971 days = 30 } }
+	}
+}
+# tfrkphn.6975 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8237
+	title = tfrkphn.6975.t
+	desc = TFRKPHN_lg_6975_b
+	picture = GFX_TFRKPHN_dev_6777
+	is_triggered_only = yes
+	option = { name = tfrkphn.6975.a add_stability = 0.03 add_political_power = 75 }
+}
+# tfrkphn.6976 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8079
+	title = tfrkphn.6976.t
+	desc = TFRKPHN_lg_6976_b
+	picture = GFX_TFRKPHN_sf_rain_ok
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6976.a
+		add_stability = 0.01
+		add_political_power = 15
+	}
+}
+# tfrkphn.6977 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8080
+	title = tfrkphn.6977.t
+	desc = TFRKPHN_lg_6977_b
+	picture = GFX_TFRKPHN_sf_typh_ok
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6977.a
+		add_stability = 0.01
+		add_political_power = 15
+	}
+}
+# tfrkphn.6979 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8081
+	title = tfrkphn.6976.t
+	desc = TFRKPHN_lg_6979_b
+	picture = GFX_TFRKPHN_sf_rain_bad
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6976.b
+		add_stability = -0.03
+		add_political_power = -30
+		custom_effect_tooltip = TFRKPHN_sf_learn_tt
+		hidden_effect = { add_to_variable = { TFRKPHN_sf = 5 } clamp_variable = { var = TFRKPHN_sf min = 0 max = 100 } TFRKPHN_sf_apply = yes }
+	}
+}
+# tfrkphn.6980 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8082
+	title = tfrkphn.6977.t
+	desc = TFRKPHN_lg_6980_b
+	picture = GFX_TFRKPHN_sf_typh_bad
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6977.b
+		add_stability = -0.03
+		add_political_power = -30
+		custom_effect_tooltip = TFRKPHN_sf_learn_tt
+		hidden_effect = { add_to_variable = { TFRKPHN_sf = 5 } clamp_variable = { var = TFRKPHN_sf min = 0 max = 100 } TFRKPHN_sf_apply = yes }
+	}
+}
+# tfrkphn.6982 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8083
+	title = tfrkphn.6982.t
+	desc = TFRKPHN_lg_6982_b
+	picture = GFX_TFRKPHN_oh_party
+	is_triggered_only = yes
+	option = { name = tfrkphn.6982.a add_political_power = -25 add_stability = 0.01 hidden_effect = { set_variable = { TFRKPHN_sd_delta = 2 } TFRKPHN_sd_add_north = yes TFRKPHN_sd_refresh = yes } custom_effect_tooltip = TFRKPHN_pt_n2_tt set_country_flag = TFRKPHN_pt_open set_variable = { TFRKPHN_pr_sup = 30 } set_variable = { TFRKPHN_pr_bk = 25 } TFRKPHN_pr_apply = yes custom_effect_tooltip = TFRKPHN_pr_open_tt }
+	option = { name = tfrkphn.6982.b add_political_power = 25 }
+}
+# tfrkphn.6983 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8084
+	title = tfrkphn.6983.t
+	desc = TFRKPHN_lg_6983_b
+	picture = GFX_TFRKPHN_bid_briefing
+	is_triggered_only = yes
+	option = { name = tfrkphn.6983.a add_political_power = -50 add_stability = 0.02 add_to_variable = { TFRKPHN_pr_bk = -10 } TFRKPHN_pr_apply = yes custom_effect_tooltip = TFRKPHN_pr_6983a_tt }
+	option = { name = tfrkphn.6983.b add_stability = -0.02 hidden_effect = { set_variable = { TFRKPHN_sd_delta = 3 } TFRKPHN_sd_add_north = yes TFRKPHN_sd_refresh = yes set_variable = { TFRKPHN_sd_delta = 2 } TFRKPHN_sd_add_sw = yes TFRKPHN_sd_refresh = yes } custom_effect_tooltip = TFRKPHN_pt_n3_tt set_country_flag = TFRKPHN_pt_nominate add_to_variable = { TFRKPHN_pr_sup = 5 } add_to_variable = { TFRKPHN_pr_bk = 10 } TFRKPHN_pr_apply = yes custom_effect_tooltip = TFRKPHN_pr_6983b_tt }
+}
+# tfrkphn.6984 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8085
+	title = tfrkphn.6984.t
+	desc = TFRKPHN_lg_6984_b
+	picture = GFX_TFRKPHN_pr_6984
+	is_triggered_only = yes
+	option = { name = tfrkphn.6984.a add_stability = 0.03 add_war_support = -0.02 add_political_power = 50 hidden_effect = { set_variable = { TFRKPHN_sd_delta = 2 } TFRKPHN_sd_add_north = yes set_variable = { TFRKPHN_sd_delta = 2 } TFRKPHN_sd_add_sw = yes set_variable = { TFRKPHN_sd_delta = 2 } TFRKPHN_sd_add_se = yes TFRKPHN_sd_refresh = yes } custom_effect_tooltip = TFRKPHN_pt_all2_tt }
+}
+# tfrkphn.6986 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8086
+	title = tfrkphn.6986.t
+	desc = TFRKPHN_lg_6986_b
+	picture = GFX_TFRKPHN_hg_6986
+	is_triggered_only = yes
+	option = { name = tfrkphn.6986.a add_stability = 0.02 add_political_power = 50 }
+}
+# tfrkphn.6992 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8087
+	title = tfrkphn.6992.t
+	desc = TFRKPHN_lg_6992_b
+	picture = GFX_TFRKPHN_pr_6992
+	is_triggered_only = yes
+	option = { name = tfrkphn.6992.a add_stability = -0.05 add_political_power = -50 add_to_variable = { TFRKPHN_pr_sup = -20 } add_to_variable = { TFRKPHN_pr_bk = -40 } TFRKPHN_pr_apply = yes hidden_effect = { set_variable = { TFRKPHN_sd_delta = -2 } TFRKPHN_sd_add_north = yes set_variable = { TFRKPHN_sd_delta = -2 } TFRKPHN_sd_add_sw = yes set_variable = { TFRKPHN_sd_delta = -2 } TFRKPHN_sd_add_se = yes TFRKPHN_sd_refresh = yes } custom_effect_tooltip = TFRKPHN_pr_6992_tt custom_effect_tooltip = TFRKPHN_pr_6992_orp_tt TFRKPHN_orp_form = yes }
+}
+# tfrkphn.6997 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8032
+	title = tfrkphn.6997.t
+	desc = TFRKPHN_lg_6997_b
+	picture = GFX_TFRKPHN_hd_banner
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6997.a
+		ai_chance = { base = 40 }
+		add_stability = -0.02
+		add_political_power = 20
+		custom_effect_tooltip = TFRKPHN_hd_a_tt
+		if = { limit = { has_country_flag = TFRKPHN_pt_open } add_to_variable = { TFRKPHN_pr_sup = 5 } add_to_variable = { TFRKPHN_pr_bk = 12 } TFRKPHN_pr_apply = yes }
+	}
+	option = {
+		name = tfrkphn.6997.b
+		ai_chance = { base = 60 }
+		add_political_power = -30
+		custom_effect_tooltip = TFRKPHN_hd_b_tt
+		if = { limit = { has_country_flag = TFRKPHN_pt_open } add_to_variable = { TFRKPHN_pr_sup = -5 } add_to_variable = { TFRKPHN_pr_bk = -8 } TFRKPHN_pr_apply = yes }
+	}
+	option = {
+		name = tfrkphn.6997.c
+		trigger = { has_country_flag = TFRKPHN_pt_open check_variable = { TFRKPHN_pr_sup > 59.5 } }
+		ai_chance = { base = 200 }
+		add_stability = 0.01
+		add_political_power = 15
+		custom_effect_tooltip = TFRKPHN_hd_c_tt
+		if = { limit = { has_country_flag = TFRKPHN_pt_open } add_to_variable = { TFRKPHN_pr_sup = 3 } add_to_variable = { TFRKPHN_pr_bk = 3 } TFRKPHN_pr_apply = yes }
+	}
+}
+# tfrkphn.6998 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8033
+	title = tfrkphn.6998.t
+	desc = TFRKPHN_lg_6998_b
+	picture = GFX_TFRKPHN_hd_meeting
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6998.a
+		ai_chance = { base = 40 }
+		add_stability = -0.02
+		add_political_power = 20
+		custom_effect_tooltip = TFRKPHN_hd_a_tt
+		if = { limit = { has_country_flag = TFRKPHN_pt_open } add_to_variable = { TFRKPHN_pr_sup = 5 } add_to_variable = { TFRKPHN_pr_bk = 12 } TFRKPHN_pr_apply = yes }
+	}
+	option = {
+		name = tfrkphn.6998.b
+		ai_chance = { base = 60 }
+		add_political_power = -30
+		custom_effect_tooltip = TFRKPHN_hd_b_tt
+		if = { limit = { has_country_flag = TFRKPHN_pt_open } add_to_variable = { TFRKPHN_pr_sup = -5 } add_to_variable = { TFRKPHN_pr_bk = -8 } TFRKPHN_pr_apply = yes }
+	}
+	option = {
+		name = tfrkphn.6998.c
+		trigger = { has_country_flag = TFRKPHN_pt_open check_variable = { TFRKPHN_pr_sup > 59.5 } }
+		ai_chance = { base = 200 }
+		add_stability = 0.01
+		add_political_power = 15
+		custom_effect_tooltip = TFRKPHN_hd_c_tt
+		if = { limit = { has_country_flag = TFRKPHN_pt_open } add_to_variable = { TFRKPHN_pr_sup = 3 } add_to_variable = { TFRKPHN_pr_bk = 3 } TFRKPHN_pr_apply = yes }
+	}
+}
+# tfrkphn.6999 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8034
+	title = tfrkphn.6999.t
+	desc = TFRKPHN_lg_6999_b
+	picture = GFX_TFRKPHN_bid_briefing
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6999.a
+		ai_chance = { base = 40 }
+		add_stability = -0.02
+		add_political_power = 20
+		custom_effect_tooltip = TFRKPHN_hd_a_tt
+		if = { limit = { has_country_flag = TFRKPHN_pt_open } add_to_variable = { TFRKPHN_pr_sup = 5 } add_to_variable = { TFRKPHN_pr_bk = 12 } TFRKPHN_pr_apply = yes }
+	}
+	option = {
+		name = tfrkphn.6999.b
+		ai_chance = { base = 60 }
+		add_political_power = -30
+		custom_effect_tooltip = TFRKPHN_hd_b_tt
+		if = { limit = { has_country_flag = TFRKPHN_pt_open } add_to_variable = { TFRKPHN_pr_sup = -5 } add_to_variable = { TFRKPHN_pr_bk = -8 } TFRKPHN_pr_apply = yes }
+	}
+	option = {
+		name = tfrkphn.6999.c
+		trigger = { has_country_flag = TFRKPHN_pt_open check_variable = { TFRKPHN_pr_sup > 59.5 } }
+		ai_chance = { base = 200 }
+		add_stability = 0.01
+		add_political_power = 15
+		custom_effect_tooltip = TFRKPHN_hd_c_tt
+		if = { limit = { has_country_flag = TFRKPHN_pt_open } add_to_variable = { TFRKPHN_pr_sup = 3 } add_to_variable = { TFRKPHN_pr_bk = 3 } TFRKPHN_pr_apply = yes }
+	}
+}
+# tfrkphn.7000 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8035
+	title = tfrkphn.7000.t
+	desc = TFRKPHN_lg_7000_b
+	picture = GFX_TFRKPHN_hd_crowd
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7000.a
+		ai_chance = { base = 40 }
+		add_stability = -0.02
+		add_political_power = 20
+		custom_effect_tooltip = TFRKPHN_hd_a_tt
+		if = { limit = { has_country_flag = TFRKPHN_pt_open } add_to_variable = { TFRKPHN_pr_sup = 5 } add_to_variable = { TFRKPHN_pr_bk = 12 } TFRKPHN_pr_apply = yes }
+	}
+	option = {
+		name = tfrkphn.7000.b
+		ai_chance = { base = 60 }
+		add_political_power = -30
+		custom_effect_tooltip = TFRKPHN_hd_b_tt
+		if = { limit = { has_country_flag = TFRKPHN_pt_open } add_to_variable = { TFRKPHN_pr_sup = -5 } add_to_variable = { TFRKPHN_pr_bk = -8 } TFRKPHN_pr_apply = yes }
+	}
+	option = {
+		name = tfrkphn.7000.c
+		trigger = { has_country_flag = TFRKPHN_pt_open check_variable = { TFRKPHN_pr_sup > 59.5 } }
+		ai_chance = { base = 200 }
+		add_stability = 0.01
+		add_political_power = 15
+		custom_effect_tooltip = TFRKPHN_hd_c_tt
+		if = { limit = { has_country_flag = TFRKPHN_pt_open } add_to_variable = { TFRKPHN_pr_sup = 3 } add_to_variable = { TFRKPHN_pr_bk = 3 } TFRKPHN_pr_apply = yes }
+	}
+}
+# tfrkphn.7001 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8238
+	title = tfrkphn.7001.t
+	desc = TFRKPHN_lg_7001_b
+	picture = GFX_TFRKPHN_orp_7001
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7001.a
+		add_stability = -0.10
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.08 }
+	}
+}
+# tfrkphn.7004 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8068
+	title = tfrkphn.7004.t
+	desc = TFRKPHN_lg_7004_b
+	picture = GFX_TFRKPHN_kju_hague
+	is_triggered_only = yes
+	option = { name = tfrkphn.7004.a add_political_power = 50 add_stability = 0.02 hidden_effect = { country_event = { id = tfrkphn.7015 days = 365 } } }
+}
+# tfrkphn.7005 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8069
+	title = tfrkphn.7005.t
+	desc = TFRKPHN_lg_7005_b
+	picture = GFX_TFRKPHN_kju_seoul
+	is_triggered_only = yes
+	option = { name = tfrkphn.7005.a ai_chance = { base = 50 } add_war_support = 0.03 add_stability = -0.02 add_political_power = 30 hidden_effect = { set_country_flag = TFRKPHN_kju_seek_death country_event = { id = tfrkphn.7016 days = 200 } } }
+	option = { name = tfrkphn.7005.b ai_chance = { base = 50 } add_stability = 0.03 add_political_power = 30 hidden_effect = { set_country_flag = TFRKPHN_kju_seek_life country_event = { id = tfrkphn.7016 days = 200 } } }
+}
+# tfrkphn.7006 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8070
+	title = tfrkphn.7006.t
+	desc = TFRKPHN_lg_7006_b
+	picture = GFX_report_event_kim_death
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7006.a
+		effect_tooltip = { PRK = { PRK_kim_yojong_char = { promote_character = jucheism promote_character = left_nationalism } } }
+		news_event = { id = tfrkphn.7007 days = 1 }
+	}
+}
+# tfrkphn.7008 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8090
+	title = tfrkphn.7008.t
+	desc = TFRKPHN_lg_7008_b
+	picture = GFX_report_event_ppp_ge_win
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7008.a
+		add_stability = -0.02 custom_effect_tooltip = tfrkphn.7008.a_tt hidden_effect = { set_variable = { TFRKPHN_lge28_bonus = 6 } }
+	}
+	option = {
+		name = tfrkphn.7008.b
+		add_stability = 0.02 hidden_effect = { set_variable = { TFRKPHN_lge28_bonus = 0 } }
+	}
+}
+# tfrkphn.7009 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8091
+	title = tfrkphn.7009.t
+	desc = TFRKPHN_lg_7009_b
+	picture = GFX_report_event_ppp_ge_win
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7009.a
+		add_political_power = 150 add_stability = 0.05
+	}
+}
+# tfrkphn.7010 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8092
+	title = tfrkphn.7010.t
+	desc = TFRKPHN_lg_7010_b
+	picture = GFX_TFRKPHN_count_6604
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7010.a
+		add_political_power = 75 add_stability = 0.02
+	}
+}
+# tfrkphn.7011 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8093
+	title = tfrkphn.7011.t
+	desc = TFRKPHN_lg_7011_b
+	picture = GFX_report_event_ppp_ge_lose
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7011.a
+		add_political_power = -50 add_stability = -0.05
+	}
+}
+# tfrkphn.7012 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8094
+	title = tfrkphn.7012.t
+	desc = TFRKPHN_lg_7012_b
+	picture = GFX_TFRKPHN_lee_home
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7012.a
+		add_stability = 0.05 add_political_power = 50
+	}
+}
+# tfrkphn.7013 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8095
+	title = tfrkphn.7013.t
+	desc = TFRKPHN_lg_7013_b
+	picture = GFX_report_event_ppp_ge_win
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7013.a
+		add_political_power = 200 add_stability = 0.08
+	}
+}
+# tfrkphn.7014 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8036
+	title = tfrkphn.7014.t
+	desc = TFRKPHN_lg_7014_b
+	picture = GFX_TFRKPHN_hd_meeting
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7014.a
+		ai_chance = { base = 50 }
+		add_stability = 0.02
+		custom_effect_tooltip = TFRKPHN_hd_7014a_tt
+		if = { limit = { has_country_flag = TFRKPHN_pt_open } add_to_variable = { TFRKPHN_pr_sup = 3 } add_to_variable = { TFRKPHN_pr_bk = 6 } TFRKPHN_pr_apply = yes }
+	}
+	option = {
+		name = tfrkphn.7014.b
+		ai_chance = { base = 50 }
+		add_political_power = 30
+		add_stability = -0.02
+		custom_effect_tooltip = TFRKPHN_hd_7014b_tt
+		if = { limit = { has_country_flag = TFRKPHN_pt_open } add_to_variable = { TFRKPHN_pr_sup = 0 } add_to_variable = { TFRKPHN_pr_bk = -5 } TFRKPHN_pr_apply = yes }
+	}
+	option = {
+		name = tfrkphn.7014.c
+		trigger = { has_country_flag = TFRKPHN_pt_open check_variable = { TFRKPHN_pr_sup > 59.5 } }
+		ai_chance = { base = 200 }
+		add_political_power = 15
+		custom_effect_tooltip = TFRKPHN_hd_c_tt
+		if = { limit = { has_country_flag = TFRKPHN_pt_open } add_to_variable = { TFRKPHN_pr_sup = 3 } add_to_variable = { TFRKPHN_pr_bk = 3 } TFRKPHN_pr_apply = yes }
+	}
+}
+# tfrkphn.7015 둘째 화면 (long_apply.py)
+country_event = {
+	id = tfrkphn.8071
+	title = tfrkphn.7015.t
+	desc = TFRKPHN_lg_7015_b
+	picture = GFX_TFRKPHN_kju_hague
+	is_triggered_only = yes
+	option = { name = tfrkphn.7015.a add_political_power = 50 add_stability = 0.02 hidden_effect = { set_country_flag = TFRKPHN_kju_v_icc } }
 }

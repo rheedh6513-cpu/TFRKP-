@@ -5,57 +5,72 @@ add_namespace = tfrkphn
 country_event = {
 	id = tfrkphn.6701
 	title = tfrkphn.6701.t
-	desc = tfrkphn.6701.d
+	desc = TFRKPHN_lg_6701_a
 	picture = GFX_TFRKPHN_oh_podium
 	is_triggered_only = yes
-	option = { name = tfrkphn.6701.a }
+	option = {
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8005 } }
+	}
 }
 
 # 국민에게 묻는다 (중점 a4)
 country_event = {
 	id = tfrkphn.6702
 	title = tfrkphn.6702.t
-	desc = tfrkphn.6702.d
+	desc = TFRKPHN_lg_6702_a
 	picture = GFX_TFRKPHN_oh_pen
 	is_triggered_only = yes
-	option = { name = tfrkphn.6702.a }
+	option = {
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8006 } }
+	}
 }
 
 # 비상 조치를 걷는다 (중점 a5)
 country_event = {
 	id = tfrkphn.6703
 	title = tfrkphn.6703.t
-	desc = tfrkphn.6703.d
+	desc = TFRKPHN_lg_6703_a
 	picture = GFX_TFRKPHN_oh_office
 	is_triggered_only = yes
-	option = { name = tfrkphn.6703.a }
+	option = {
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8007 } }
+	}
 }
 
 # 돌아오지 못한 이들의 이름 (중점 a6)
 country_event = {
 	id = tfrkphn.6704
 	title = tfrkphn.6704.t
-	desc = tfrkphn.6704.d
+	desc = TFRKPHN_lg_6704_a
 	picture = GFX_TFRKPHN_oh_bowed
 	is_triggered_only = yes
-	option = { name = tfrkphn.6704.a }
+	option = {
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8008 } }
+	}
 }
 
 # 스피드 주택공급 (중점 b1)
 country_event = {
 	id = tfrkphn.6705
 	title = tfrkphn.6705.t
-	desc = tfrkphn.6705.d
+	desc = TFRKPHN_lg_6705_a
 	picture = GFX_TFRKPHN_mega_1_2
 	is_triggered_only = yes
-	option = { name = tfrkphn.6705.a }
+	option = {
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8009 } }
+	}
 }
 
 # 서른다섯 층의 벽 (중점 b3)
 country_event = {
 	id = tfrkphn.6706
 	title = tfrkphn.6706.t
-	desc = tfrkphn.6706.d
+	desc = TFRKPHN_lg_6706_a
 	picture = GFX_TFRKPHN_oh_seoul
 	is_triggered_only = yes
 	option = { name = tfrkphn.6706.a }
@@ -65,67 +80,85 @@ country_event = {
 country_event = {
 	id = tfrkphn.6707
 	title = tfrkphn.6707.t
-	desc = tfrkphn.6707.d
+	desc = TFRKPHN_lg_6707_a
 	picture = GFX_TFRKPHN_mega_1_2
 	is_triggered_only = yes
-	option = { name = tfrkphn.6707.a }
+	option = {
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8010 } }
+	}
 }
 
 # 약자와의 동행 (중점 c1)
 country_event = {
 	id = tfrkphn.6708
 	title = tfrkphn.6708.t
-	desc = tfrkphn.6708.d
+	desc = TFRKPHN_lg_6708_a
 	picture = GFX_TFRKPHN_oh_walk
 	is_triggered_only = yes
-	option = { name = tfrkphn.6708.a }
+	option = {
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8011 } }
+	}
 }
 
 # 서울런을 전국으로 (중점 c3)
 country_event = {
 	id = tfrkphn.6709
 	title = tfrkphn.6709.t
-	desc = tfrkphn.6709.d
+	desc = TFRKPHN_lg_6709_a
 	picture = GFX_TFRKPHN_oh_pen
 	is_triggered_only = yes
-	option = { name = tfrkphn.6709.a }
+	option = {
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8012 } }
+	}
 }
 
 # 청년취업사관학교 (중점 c6)
 country_event = {
 	id = tfrkphn.6710
 	title = tfrkphn.6710.t
-	desc = tfrkphn.6710.d
+	desc = TFRKPHN_lg_6710_a
 	picture = GFX_TFRKPHN_oh_walk
 	is_triggered_only = yes
-	option = { name = tfrkphn.6710.a }
+	option = {
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8013 } }
+	}
 }
 
 # 글로벌 TOP5 (중점 d1)
 country_event = {
 	id = tfrkphn.6711
 	title = tfrkphn.6711.t
-	desc = tfrkphn.6711.d
+	desc = TFRKPHN_lg_6711_a
 	picture = GFX_TFRKPHN_oh_seoul
 	is_triggered_only = yes
-	option = { name = tfrkphn.6711.a }
+	option = {
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8014 } }
+	}
 }
 
 # 여의도 디지털금융특구 (중점 d2)
 country_event = {
 	id = tfrkphn.6712
 	title = tfrkphn.6712.t
-	desc = tfrkphn.6712.d
+	desc = TFRKPHN_lg_6712_a
 	picture = GFX_TFRKPHN_mega_1_3
 	is_triggered_only = yes
-	option = { name = tfrkphn.6712.a }
+	option = {
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8015 } }
+	}
 }
 
 # 자부심을 디자인하다 (중점 d6)
 country_event = {
 	id = tfrkphn.6713
 	title = tfrkphn.6713.t
-	desc = tfrkphn.6713.d
+	desc = TFRKPHN_lg_6713_a
 	picture = GFX_TFRKPHN_oh_pen
 	is_triggered_only = yes
 	option = { name = tfrkphn.6713.a }
@@ -135,57 +168,99 @@ country_event = {
 country_event = {
 	id = tfrkphn.6714
 	title = tfrkphn.6714.t
-	desc = tfrkphn.6714.d
+	desc = TFRKPHN_lg_6714_a
 	picture = GFX_TFRKPHN_ansim_3
 	is_triggered_only = yes
-	option = { name = tfrkphn.6714.a }
+	option = {
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8016 } }
+	}
 }
 
 # 이천오십 탄소중립 (중점 e3)
 country_event = {
 	id = tfrkphn.6715
 	title = tfrkphn.6715.t
-	desc = tfrkphn.6715.d
+	desc = TFRKPHN_lg_6715_a
 	picture = GFX_TFRKPHN_oh_office
 	is_triggered_only = yes
-	option = { name = tfrkphn.6715.a }
+	option = {
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8017 } }
+	}
 }
 
 # 지천 르네상스 (중점 e4)
 country_event = {
 	id = tfrkphn.6716
 	title = tfrkphn.6716.t
-	desc = tfrkphn.6716.d
+	desc = TFRKPHN_lg_6716_a
 	picture = GFX_TFRKPHN_oh_walk
 	is_triggered_only = yes
-	option = { name = tfrkphn.6716.a }
+	option = {
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8018 } }
+	}
 }
 
-# 넛지 (중점 h1)
+# 넛지 (중점 h1, 앞 장)
 country_event = {
 	id = tfrkphn.6717
 	title = tfrkphn.6717.t
 	desc = tfrkphn.6717.d
 	picture = GFX_TFRKPHN_oh_podium
 	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6717.next
+		hidden_effect = { country_event = { id = tfrkphn.6817 } }
+	}
+}
+country_event = {
+	id = tfrkphn.6817
+	title = tfrkphn.6717.t
+	desc = tfrkphn.6817.d
+	picture = GFX_TFRKPHN_oh_podium
+	is_triggered_only = yes
 	option = { name = tfrkphn.6717.a }
 }
 
-# 삼불은 없다 (중점 h3)
+# 삼불은 없다 (중점 h3, 앞 장)
 country_event = {
 	id = tfrkphn.6718
 	title = tfrkphn.6718.t
 	desc = tfrkphn.6718.d
 	picture = GFX_TFRKPHN_oh_office
 	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6718.next
+		hidden_effect = { country_event = { id = tfrkphn.6818 } }
+	}
+}
+country_event = {
+	id = tfrkphn.6818
+	title = tfrkphn.6718.t
+	desc = tfrkphn.6818.d
+	picture = GFX_TFRKPHN_oh_office
+	is_triggered_only = yes
 	option = { name = tfrkphn.6718.a }
 }
 
-# 비상 태세를 푼다 (중점 h5)
+# 비상 태세를 푼다 (중점 h5, 앞 장)
 country_event = {
 	id = tfrkphn.6719
 	title = tfrkphn.6719.t
 	desc = tfrkphn.6719.d
+	picture = GFX_TFRKPHN_oh_walk
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6719.next
+		hidden_effect = { country_event = { id = tfrkphn.6819 } }
+	}
+}
+country_event = {
+	id = tfrkphn.6819
+	title = tfrkphn.6719.t
+	desc = tfrkphn.6819.d
 	picture = GFX_TFRKPHN_oh_walk
 	is_triggered_only = yes
 	option = { name = tfrkphn.6719.a }
@@ -195,20 +270,26 @@ country_event = {
 country_event = {
 	id = tfrkphn.6720
 	title = tfrkphn.6720.t
-	desc = tfrkphn.6720.d
+	desc = TFRKPHN_lg_6720_a
 	picture = GFX_TFRKPHN_oh_podium
 	is_triggered_only = yes
-	option = { name = tfrkphn.6720.a }
+	option = {
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8019 } }
+	}
 }
 
 # 미래 (중점 g2)
 country_event = {
 	id = tfrkphn.6721
 	title = tfrkphn.6721.t
-	desc = tfrkphn.6721.d
+	desc = TFRKPHN_lg_6721_a
 	picture = GFX_TFRKPHN_oh_bowed
 	is_triggered_only = yes
-	option = { name = tfrkphn.6721.a }
+	option = {
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8020 } }
+	}
 }
 
 # 따뜻한 보수 (중점 b01_01, 앞 장)
@@ -236,8 +317,204 @@ country_event = {
 country_event = {
 	id = tfrkphn.6723
 	title = tfrkphn.6723.t
-	desc = tfrkphn.6723.d
+	desc = TFRKPHN_lg_6723_a
 	picture = GFX_TFRKPHN_oh_office
 	is_triggered_only = yes
-	option = { name = tfrkphn.6723.a }
+	option = {
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8021 } }
+	}
+}
+
+# 나토식 핵 배치 (중점 h2, 앞 장)
+country_event = {
+	id = tfrkphn.6724
+	title = tfrkphn.6724.t
+	desc = tfrkphn.6724.d
+	picture = GFX_TFRKPHN_ohf_h2
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6724.next
+		hidden_effect = { country_event = { id = tfrkphn.6824 } }
+	}
+}
+country_event = {
+	id = tfrkphn.6824
+	title = tfrkphn.6724.t
+	desc = tfrkphn.6824.d
+	picture = GFX_TFRKPHN_ohf_h2
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6724.a
+		ai_chance = { base = 50 }
+		add_war_support = 0.04
+		add_stability = -0.03
+		custom_effect_tooltip = TFRKPHN_ohf_h2a_tt
+		hidden_effect = { set_country_flag = TFRKPHN_oh_nuke_osan country_event = { id = tfrkphn.7017 days = 60 } if = { limit = { has_country_flag = TFRKPHN_pt_open } add_to_variable = { TFRKPHN_pr_sup = 0 } add_to_variable = { TFRKPHN_pr_bk = -5 } TFRKPHN_pr_apply = yes } }
+	}
+	option = {
+		name = tfrkphn.6724.b
+		ai_chance = { base = 50 }
+		add_stability = 0.02
+		add_political_power = 40
+		add_war_support = -0.02
+		custom_effect_tooltip = TFRKPHN_ohf_h2b_tt
+		hidden_effect = { set_country_flag = TFRKPHN_oh_nuke_wait if = { limit = { has_country_flag = TFRKPHN_pt_open } add_to_variable = { TFRKPHN_pr_sup = 0 } add_to_variable = { TFRKPHN_pr_bk = 5 } TFRKPHN_pr_apply = yes } }
+	}
+}
+
+# 협의체를 잇는다 (중점 h2b, 앞 장)
+country_event = {
+	id = tfrkphn.6725
+	title = tfrkphn.6725.t
+	desc = tfrkphn.6725.d
+	picture = GFX_TFRKPHN_oh_pen
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6725.next
+		hidden_effect = { country_event = { id = tfrkphn.6825 } }
+	}
+}
+country_event = {
+	id = tfrkphn.6825
+	title = tfrkphn.6725.t
+	desc = tfrkphn.6825.d
+	picture = GFX_TFRKPHN_oh_pen
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6725.a
+		custom_effect_tooltip = TFRKPHN_ohf_h2b_tt
+		hidden_effect = { if = { limit = { has_country_flag = TFRKPHN_pt_open } add_to_variable = { TFRKPHN_pr_sup = 0 } add_to_variable = { TFRKPHN_pr_bk = 5 } TFRKPHN_pr_apply = yes } }
+	}
+}
+
+# 동맹 안의 자리 (중점 h4, 앞 장)
+country_event = {
+	id = tfrkphn.6726
+	title = tfrkphn.6726.t
+	desc = tfrkphn.6726.d
+	picture = GFX_TFRKPHN_ohf_h4
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6726.next
+		hidden_effect = { country_event = { id = tfrkphn.6826 } }
+	}
+}
+country_event = {
+	id = tfrkphn.6826
+	title = tfrkphn.6726.t
+	desc = tfrkphn.6826.d
+	picture = GFX_TFRKPHN_ohf_h4
+	is_triggered_only = yes
+	option = { name = tfrkphn.6726.a }
+}
+
+# 참전용사의 집 (중점 h6, 앞 장)
+country_event = {
+	id = tfrkphn.6727
+	title = tfrkphn.6727.t
+	desc = tfrkphn.6727.d
+	picture = GFX_TFRKPHN_ohf_h6
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6727.next
+		hidden_effect = { country_event = { id = tfrkphn.6827 } }
+	}
+}
+country_event = {
+	id = tfrkphn.6827
+	title = tfrkphn.6727.t
+	desc = tfrkphn.6827.d
+	picture = GFX_TFRKPHN_ohf_h6
+	is_triggered_only = yes
+	option = { name = tfrkphn.6727.a }
+}
+
+# 대한민국투자청 (중점 d3, 앞 장)
+country_event = {
+	id = tfrkphn.6728
+	title = tfrkphn.6728.t
+	desc = tfrkphn.6728.d
+	picture = GFX_TFRKPHN_oh_seoul
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6728.next
+		hidden_effect = { country_event = { id = tfrkphn.6828 } }
+	}
+}
+country_event = {
+	id = tfrkphn.6828
+	title = tfrkphn.6728.t
+	desc = tfrkphn.6828.d
+	picture = GFX_TFRKPHN_oh_seoul
+	is_triggered_only = yes
+	option = { name = tfrkphn.6728.a }
+}
+
+# 하늘과 땅의 교통 (중점 d5)
+country_event = {
+	id = tfrkphn.6729
+	title = tfrkphn.6729.t
+	desc = tfrkphn.6729.d
+	picture = GFX_TFRKPHN_oh_seoul
+	is_triggered_only = yes
+	option = { name = tfrkphn.6729.a }
+}
+
+# 메타버스 행정 (중점 e5, 앞 장)
+country_event = {
+	id = tfrkphn.6730
+	title = tfrkphn.6730.t
+	desc = tfrkphn.6730.d
+	picture = GFX_TFRKPHN_oh_office
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.6730.next
+		hidden_effect = { country_event = { id = tfrkphn.6830 } }
+	}
+}
+country_event = {
+	id = tfrkphn.6830
+	title = tfrkphn.6730.t
+	desc = tfrkphn.6830.d
+	picture = GFX_TFRKPHN_oh_office
+	is_triggered_only = yes
+	option = { name = tfrkphn.6730.a }
+}
+
+# 서해의 그림자 (오산 배치 뒤)
+country_event = {
+	id = tfrkphn.7017
+	title = tfrkphn.7017.t
+	desc = tfrkphn.7017.d
+	picture = GFX_TFRKPHN_ohf_h2
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7017.next
+		hidden_effect = { country_event = { id = tfrkphn.7117 } }
+	}
+}
+country_event = {
+	id = tfrkphn.7117
+	title = tfrkphn.7017.t
+	desc = tfrkphn.7117.d
+	picture = GFX_TFRKPHN_ohf_h2
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7017.a
+		ai_chance = { base = 50 }
+		add_war_support = 0.03
+		add_stability = -0.03
+		add_political_power = -30
+		custom_effect_tooltip = TFRKPHN_ohf_sea_a_tt
+		hidden_effect = { set_country_flag = TFRKPHN_oh_nuke_hold if = { limit = { has_country_flag = TFRKPHN_pt_open } add_to_variable = { TFRKPHN_pr_sup = 0 } add_to_variable = { TFRKPHN_pr_bk = -3 } TFRKPHN_pr_apply = yes } }
+	}
+	option = {
+		name = tfrkphn.7017.b
+		ai_chance = { base = 50 }
+		add_stability = 0.03
+		add_war_support = -0.02
+		custom_effect_tooltip = TFRKPHN_ohf_sea_b_tt
+		hidden_effect = { set_country_flag = TFRKPHN_oh_nuke_talk if = { limit = { has_country_flag = TFRKPHN_pt_open } add_to_variable = { TFRKPHN_pr_sup = 0 } add_to_variable = { TFRKPHN_pr_bk = 5 } TFRKPHN_pr_apply = yes } }
+	}
 }

@@ -23,4 +23,71 @@ focus_tree = {
 			add_stability = 0.03
 		}
 	}
+	# >>> 늘린 중점 (alt27_tree_build.py)
+	focus = {
+		id = TFRKPHN_cho_won_jin_c1
+		icon = GFX_goal_generic_national_unity
+		x = 2
+		y = 1
+		cost = 5
+		prerequisite = { focus = TFRKPHN_cho_won_jin_b01_01 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_popularity = { ideology = authoritarian_democrat popularity = 0.05 } add_war_support = 0.05 add_stability = -0.02
+		}
+	}
+
+	focus = {
+		id = TFRKPHN_cho_won_jin_c2
+		icon = GFX_goal_generic_political_pressure
+		x = 4
+		y = 1
+		cost = 5
+		prerequisite = { focus = TFRKPHN_cho_won_jin_b01_01 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 75 add_stability = -0.03
+		}
+	}
+
+	focus = {
+		id = TFRKPHN_cho_won_jin_c3
+		icon = GFX_goal_generic_army_doctrines
+		x = 2
+		y = 2
+		cost = 5
+		prerequisite = { focus = TFRKPHN_cho_won_jin_c1 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			army_experience = 25 add_war_support = 0.05
+		}
+	}
+
+	focus = {
+		id = TFRKPHN_cho_won_jin_c4
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 4
+		y = 2
+		cost = 5
+		prerequisite = { focus = TFRKPHN_cho_won_jin_c2 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_stability = 0.03 add_political_power = -25
+		}
+	}
+
+	focus = {
+		id = TFRKPHN_cho_won_jin_c5
+		icon = GFX_goal_generic_major_alliance
+		x = 3
+		y = 3
+		cost = 5
+		prerequisite = { focus = TFRKPHN_cho_won_jin_c3 focus = TFRKPHN_cho_won_jin_c4 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_stability = 0.05 add_war_support = 0.03
+		}
+	}
+
+	# <<< 늘린 중점
 }

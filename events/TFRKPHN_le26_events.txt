@@ -17,7 +17,7 @@ country_event = {
 country_event = {
 	id = tfrkphn.6753
 	title = tfrkphn.6753.t
-	desc = tfrkphn.6753.d
+	desc = TFRKPHN_lg_6753_a
 	picture = GFX_TFRKPHN_le26_6753
 	is_triggered_only = yes
 	trigger = { NOT = { has_country_flag = TFRKPHN_l6_done } }
@@ -35,7 +35,7 @@ country_event = {
 country_event = {
 	id = tfrkphn.6754
 	title = tfrkphn.6754.t
-	desc = tfrkphn.6754.d
+	desc = TFRKPHN_lg_6754_a
 	picture = GFX_TFRKPHN_le26_count_anim
 	is_triggered_only = yes
 	option = {
@@ -50,20 +50,12 @@ country_event = {
 country_event = {
 	id = tfrkphn.6755
 	title = tfrkphn.6755.t
-	desc = tfrkphn.6755.d
+	desc = TFRKPHN_lg_6755_a
 	picture = GFX_TFRKPHN_le26_6755
 	is_triggered_only = yes
 	option = {
-		name = tfrkphn.6755.a
-		#localfx
-		custom_effect_tooltip = TFRKPHN_ruling_up_tt
-		hidden_effect = { TFRKPHN_ruling_pop_up = yes }
-		custom_effect_tooltip = TFRKPHN_ally_tt
-		hidden_effect = { TFRKPHN_ally_apply = yes }
-		add_stability = 0.05
-		add_political_power = 100
-		if = { limit = { check_variable = { TFRKPHN_l6_prom > 0.5 } } custom_effect_tooltip = TFRKPHN_l6_prom_tt hidden_effect = { add_political_power = TFRKPHN_l6_cost } }
-		hidden_effect = { set_country_flag = TFRKPHN_l6_big_win }
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8230 } }
 	}
 }
 country_event = {
@@ -85,19 +77,11 @@ country_event = {
 country_event = {
 	id = tfrkphn.6757
 	title = tfrkphn.6757.t
-	desc = tfrkphn.6757.d
+	desc = TFRKPHN_lg_6757_a
 	picture = GFX_TFRKPHN_le26_6757
 	is_triggered_only = yes
 	option = {
-		name = tfrkphn.6757.a
-		#localfx
-		custom_effect_tooltip = TFRKPHN_ruling_down_tt
-		hidden_effect = { TFRKPHN_ruling_pop_down = yes }
-		custom_effect_tooltip = TFRKPHN_ally_tt
-		hidden_effect = { TFRKPHN_ally_apply = yes }
-		add_stability = -0.05
-		add_political_power = -50
-		if = { limit = { check_variable = { TFRKPHN_l6_prom > 0.5 } } custom_effect_tooltip = TFRKPHN_l6_prom_tt hidden_effect = { add_political_power = TFRKPHN_l6_cost } }
-		hidden_effect = { set_country_flag = TFRKPHN_l6_lost }
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8231 } }
 	}
 }

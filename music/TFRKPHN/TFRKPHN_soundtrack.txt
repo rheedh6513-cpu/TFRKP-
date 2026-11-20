@@ -13,3 +13,10 @@ music = {
 		factor = 0
 	}
 }
+
+music = {
+	song = "TFRKP_TFRKPHN_OH_END"
+	chance = {
+		factor = 0
+	}
+}

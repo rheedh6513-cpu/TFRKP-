@@ -3,26 +3,18 @@ add_namespace = tfrkphn
 country_event = {
 	id = tfrkphn.6776
 	title = tfrkphn.6776.t
-	desc = tfrkphn.6776.d
+	desc = TFRKPHN_lg_6776_a
 	picture = GFX_TFRKPHN_dev_6776
 	is_triggered_only = yes
 	option = {
-		name = tfrkphn.6776.a
-		custom_effect_tooltip = TFRKPHN_dev_bk_dn_tt
-		if = { limit = { has_dynamic_modifier = { modifier = TFRKPHN_dev_rush } } remove_dynamic_modifier = { modifier = TFRKPHN_dev_rush } } add_dynamic_modifier = { modifier = TFRKPHN_dev_rush days = 365 }
-		hidden_effect = { add_to_variable = { TFRKPHN_bk = -1 } }
-	}
-	option = {
-		name = tfrkphn.6776.b
-		add_political_power = 50
-		custom_effect_tooltip = TFRKPHN_dev_bk_up_tt
-		hidden_effect = { add_to_variable = { TFRKPHN_bk = 1 } }
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8234 } }
 	}
 }
 country_event = {
 	id = tfrkphn.6777
 	title = tfrkphn.6777.t
-	desc = tfrkphn.6777.d
+	desc = TFRKPHN_lg_6777_a
 	picture = GFX_TFRKPHN_dev_6777
 	is_triggered_only = yes
 	option = {
@@ -41,28 +33,18 @@ country_event = {
 country_event = {
 	id = tfrkphn.6778
 	title = tfrkphn.6778.t
-	desc = tfrkphn.6778.d
+	desc = TFRKPHN_lg_6778_a
 	picture = GFX_TFRKPHN_dev_6778
 	is_triggered_only = yes
 	option = {
-		name = tfrkphn.6778.a
-		add_political_power = -50
-		add_stability = 0.02
-		custom_effect_tooltip = TFRKPHN_dev_bk_up_tt
-		hidden_effect = { add_to_variable = { TFRKPHN_bk = 2 } }
-	}
-	option = {
-		name = tfrkphn.6778.b
-		add_political_power = 30
-		add_stability = -0.02
-		custom_effect_tooltip = TFRKPHN_dev_bk_dn_tt
-		hidden_effect = { add_to_variable = { TFRKPHN_bk = -2 } }
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8235 } }
 	}
 }
 country_event = {
 	id = tfrkphn.6779
 	title = tfrkphn.6779.t
-	desc = tfrkphn.6779.d
+	desc = TFRKPHN_lg_6779_a
 	picture = GFX_TFRKPHN_dev_6779
 	is_triggered_only = yes
 	option = {
@@ -79,7 +61,7 @@ country_event = {
 country_event = {
 	id = tfrkphn.6780
 	title = tfrkphn.6780.t
-	desc = tfrkphn.6780.d
+	desc = TFRKPHN_lg_6780_a
 	picture = GFX_TFRKPHN_dev_6780
 	is_triggered_only = yes
 	option = {

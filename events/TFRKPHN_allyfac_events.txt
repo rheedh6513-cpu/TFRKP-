@@ -3,16 +3,22 @@ add_namespace = tfrkphn
 country_event = {
 	id = tfrkphn.6768
 	title = tfrkphn.6768.t
-	desc = tfrkphn.6768.d
+	desc = TFRKPHN_lg_6768_a
 	picture = GFX_TFRKPHN_allyfac
 	is_triggered_only = yes
-	option = { name = tfrkphn.6768.a }
+	option = {
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8232 } }
+	}
 }
 country_event = {
 	id = tfrkphn.6769
 	title = tfrkphn.6769.t
-	desc = tfrkphn.6769.d
+	desc = TFRKPHN_lg_6769_a
 	picture = GFX_TFRKPHN_allyfac
 	is_triggered_only = yes
-	option = { name = tfrkphn.6769.a }
+	option = {
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8233 } }
+	}
 }

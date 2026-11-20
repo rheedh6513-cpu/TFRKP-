@@ -5,7 +5,7 @@ add_namespace = tfrkphn
 country_event = {
 	id = tfrkphn.6621
 	title = tfrkphn.6621.t
-	desc = tfrkphn.6621.d
+	desc = TFRKPHN_lg_6621_a
 	picture = GFX_TFRKPHN_ansim_1
 	is_triggered_only = yes
 	option = { name = TFRKPHN_an_ok custom_effect_tooltip = TFRKPHN_an_d1_tt }
@@ -15,28 +15,37 @@ country_event = {
 country_event = {
 	id = tfrkphn.6622
 	title = tfrkphn.6622.t
-	desc = tfrkphn.6622.d
+	desc = TFRKPHN_lg_6622_a
 	picture = GFX_TFRKPHN_ansim_2
 	is_triggered_only = yes
-	option = { name = TFRKPHN_an_ok custom_effect_tooltip = TFRKPHN_an_d2_tt }
+	option = {
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8076 } }
+	}
 }
 
 # 안심소득 전면 시행
 country_event = {
 	id = tfrkphn.6623
 	title = tfrkphn.6623.t
-	desc = tfrkphn.6623.d
+	desc = TFRKPHN_lg_6623_a
 	picture = GFX_TFRKPHN_ansim_3
 	is_triggered_only = yes
-	option = { name = TFRKPHN_an_ok custom_effect_tooltip = TFRKPHN_an_d3_tt }
+	option = {
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8077 } }
+	}
 }
 
 # 창구는 하나
 country_event = {
 	id = tfrkphn.6624
 	title = tfrkphn.6624.t
-	desc = tfrkphn.6624.d
+	desc = TFRKPHN_lg_6624_a
 	picture = GFX_TFRKPHN_ansim_4
 	is_triggered_only = yes
-	option = { name = TFRKPHN_an_ok custom_effect_tooltip = TFRKPHN_an_d4_tt }
+	option = {
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8078 } }
+	}
 }

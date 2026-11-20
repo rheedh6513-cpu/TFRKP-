@@ -19,13 +19,13 @@ country_event = {
 country_event = {
 	id = tfrkphn.522
 	title = tfrkphn.522.t
-	desc = tfrkphn.522.d
+	desc = TFRKPHN_lg_522_a
 	picture = GFX_TFRKPHN_kim_dj
 	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
-		name = tfrkphn.522.a
-		hidden_effect = { country_event = { id = tfrkphn.523 days = 2 } }
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8213 } }
 	}
 }
 

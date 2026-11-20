@@ -5,7 +5,7 @@ add_namespace = tfrkphn
 country_event = {
 	id = tfrkphn.526
 	title = tfrkphn.526.t
-	desc = tfrkphn.526.d
+	desc = TFRKPHN_lg_526_a
 	picture = GFX_TFRKPHN_debt_paid
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -24,18 +24,13 @@ country_event = {
 country_event = {
 	id = tfrkphn.529
 	title = tfrkphn.529.t
-	desc = tfrkphn.529.d
+	desc = TFRKPHN_lg_529_a
 	picture = GFX_TFRKPHN_debt_paid
 	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
-		name = tfrkphn.529.a
-		add_stability = 0.03
-		add_political_power = 50
-		add_to_variable = { TFRKPHN_lee_cg = -0.02 }
-		TFRKPHN_lee_gov_init = yes
-		custom_effect_tooltip = TFRKPHN_lee_tt_cg2
-		hidden_effect = { country_event = { id = tfrkphn.533 days = 1 } }	# 홍준표의 글 「채무 제로」
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8200 } }
 	}
 }
 
@@ -61,11 +56,14 @@ country_event = {
 country_event = {
 	id = tfrkphn.532
 	title = tfrkphn.532.t
-	desc = tfrkphn.532.d
+	desc = TFRKPHN_lg_532_a
 	picture = GFX_TFRKPHN_burden_share
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = { name = tfrkphn.532.a }
+	option = {
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8201 } }
+	}
 }
 
 # 빚을 다 갚은 다음 날: 홍준표의 글. 본문은 사용자가 쓴 글이다 (맞춤법만 고쳤다)
@@ -94,14 +92,12 @@ country_event = {
 country_event = {
 	id = tfrkphn.527
 	title = tfrkphn.527.t
-	desc = tfrkphn.527.d
+	desc = TFRKPHN_lg_527_a
 	picture = GFX_TFRKPHN_missed_deadline
 	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
-		name = tfrkphn.527.a
-		add_stability = -0.03
-		add_political_power = -30
-		hidden_effect = { country_event = { id = tfrkphn.534 days = 1 } }	# 홍준표의 글 (빚을 못 갚았을 때)
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8199 } }
 	}
 }

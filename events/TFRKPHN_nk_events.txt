@@ -5,13 +5,13 @@ add_namespace = tfrkphn
 country_event = {
 	id = tfrkphn.297
 	title = tfrkphn.297.t
-	desc = tfrkphn.297.d
+	desc = TFRKPHN_lg_297_a
 	picture = GFX_TFRKPHN_nk_market
 	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
-		name = tfrkphn.297.a
-		add_war_support = 0.03
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8116 } }
 	}
 }
 
@@ -19,13 +19,12 @@ country_event = {
 country_event = {
 	id = tfrkphn.441
 	title = tfrkphn.441.t
-	desc = tfrkphn.441.d
+	desc = TFRKPHN_lg_441_a
 	picture = GFX_TFRKPHN_nk_market
 	is_triggered_only = yes
 	option = {
-		name = tfrkphn.441.a
-		custom_effect_tooltip = tfrkphn.441.a_tt
-		hidden_effect = { TFRKPHN_nk_all_d_2 = yes }
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8118 } }
 	}
 }
 
@@ -33,7 +32,7 @@ country_event = {
 country_event = {
 	id = tfrkphn.442
 	title = tfrkphn.442.t
-	desc = tfrkphn.442.d
+	desc = TFRKPHN_lg_442_a
 	picture = GFX_TFRKPHN_nk_protest
 	is_triggered_only = yes
 	option = {
@@ -47,13 +46,12 @@ country_event = {
 country_event = {
 	id = tfrkphn.447
 	title = tfrkphn.447.t
-	desc = tfrkphn.447.d
+	desc = TFRKPHN_lg_447_a
 	picture = GFX_TFRKPHN_nk_defect
 	is_triggered_only = yes
 	option = {
-		name = tfrkphn.447.a
-		custom_effect_tooltip = tfrkphn.447.a_tt
-		hidden_effect = { TFRKPHN_nk_all_m_3 = yes }
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8123 } }
 	}
 }
 
@@ -61,20 +59,12 @@ country_event = {
 country_event = {
 	id = tfrkphn.443
 	title = tfrkphn.443.t
-	desc = tfrkphn.443.d
+	desc = TFRKPHN_lg_443_a
 	picture = GFX_TFRKPHN_nk_defect
 	is_triggered_only = yes
 	option = {
-		name = tfrkphn.443.a
-		custom_effect_tooltip = tfrkphn.443.a_tt
-		add_war_support = 0.02
-		hidden_effect = { TFRKPHN_nk_all_d_3 = yes }
-	}
-	option = {
-		name = tfrkphn.443.b
-		custom_effect_tooltip = tfrkphn.443.b_tt
-		add_political_power = 30
-		hidden_effect = { TFRKPHN_nk_all_m_4 = yes }
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8119 } }
 	}
 }
 
@@ -82,14 +72,12 @@ country_event = {
 country_event = {
 	id = tfrkphn.448
 	title = tfrkphn.448.t
-	desc = tfrkphn.448.d
+	desc = TFRKPHN_lg_448_a
 	picture = GFX_TFRKPHN_nk_defect
 	is_triggered_only = yes
 	option = {
-		name = tfrkphn.448.a
-		custom_effect_tooltip = tfrkphn.448.a_tt
-		hidden_effect = { TFRKPHN_nk_all_d_2 = yes }
-		hidden_effect = { TFRKPHN_nk_all_m_3 = yes }
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8124 } }
 	}
 }
 
@@ -97,14 +85,12 @@ country_event = {
 country_event = {
 	id = tfrkphn.449
 	title = tfrkphn.449.t
-	desc = tfrkphn.449.d
+	desc = TFRKPHN_lg_449_a
 	picture = GFX_TFRKPHN_nk_defect
 	is_triggered_only = yes
 	option = {
-		name = tfrkphn.449.a
-		custom_effect_tooltip = tfrkphn.449.a_tt
-		add_political_power = 25
-		hidden_effect = { TFRKPHN_nk_all_d_2 = yes }
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8125 } }
 	}
 }
 
@@ -112,14 +98,12 @@ country_event = {
 country_event = {
 	id = tfrkphn.445
 	title = tfrkphn.445.t
-	desc = tfrkphn.445.d
+	desc = TFRKPHN_lg_445_a
 	picture = GFX_TFRKPHN_nk_protest
 	is_triggered_only = yes
 	option = {
-		name = tfrkphn.445.a
-		custom_effect_tooltip = tfrkphn.445.a_tt
-		hidden_effect = { if = { limit = { country_exists = PRK } PRK = { add_stability = -0.03 } } }
-		hidden_effect = { TFRKPHN_nk_all_d_4 = yes }
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8121 } }
 	}
 }
 
@@ -127,14 +111,12 @@ country_event = {
 country_event = {
 	id = tfrkphn.446
 	title = tfrkphn.446.t
-	desc = tfrkphn.446.d
+	desc = TFRKPHN_lg_446_a
 	picture = GFX_TFRKPHN_nk_protest
 	is_triggered_only = yes
 	option = {
-		name = tfrkphn.446.a
-		custom_effect_tooltip = tfrkphn.446.a_tt
-		hidden_effect = { if = { limit = { country_exists = PRK } PRK = { add_war_support = -0.03 } } }
-		hidden_effect = { TFRKPHN_nk_all_m_5 = yes }
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8122 } }
 	}
 }
 
@@ -142,20 +124,12 @@ country_event = {
 country_event = {
 	id = tfrkphn.450
 	title = tfrkphn.450.t
-	desc = tfrkphn.450.d
+	desc = TFRKPHN_lg_450_a
 	picture = GFX_TFRKPHN_nk_riot
 	is_triggered_only = yes
 	option = {
-		name = tfrkphn.450.a
-		custom_effect_tooltip = tfrkphn.450.a_tt
-		hidden_effect = { if = { limit = { country_exists = PRK } PRK = { add_stability = -0.05 } } }
-		hidden_effect = { TFRKPHN_nk_all_d_5 = yes }
-	}
-	option = {
-		name = tfrkphn.450.b
-		custom_effect_tooltip = tfrkphn.450.b_tt
-		hidden_effect = { if = { limit = { country_exists = PRK } PRK = { add_war_support = -0.05 } } }
-		hidden_effect = { TFRKPHN_nk_all_m_4 = yes }
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8126 } }
 	}
 }
 
@@ -163,20 +137,12 @@ country_event = {
 country_event = {
 	id = tfrkphn.451
 	title = tfrkphn.451.t
-	desc = tfrkphn.451.d
+	desc = TFRKPHN_lg_451_a
 	picture = GFX_TFRKPHN_nk_riot
 	is_triggered_only = yes
 	option = {
-		name = tfrkphn.451.a
-		custom_effect_tooltip = tfrkphn.451.a_tt
-		hidden_effect = { if = { limit = { country_exists = PRK } PRK = { add_stability = -0.05 } } }
-		hidden_effect = { TFRKPHN_nk_all_d_4 = yes }
-		hidden_effect = { TFRKPHN_nk_all_m_4 = yes }
-	}
-	option = {
-		name = tfrkphn.451.b
-		custom_effect_tooltip = tfrkphn.451.b_tt
-		hidden_effect = { TFRKPHN_nk_all_d_2 = yes }
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8127 } }
 	}
 }
 
@@ -184,13 +150,12 @@ country_event = {
 country_event = {
 	id = tfrkphn.452
 	title = tfrkphn.452.t
-	desc = tfrkphn.452.d
+	desc = TFRKPHN_lg_452_a
 	picture = GFX_TFRKPHN_nk_defect
 	is_triggered_only = yes
 	option = {
-		name = tfrkphn.452.a
-		custom_effect_tooltip = tfrkphn.452.a_tt
-		hidden_effect = { TFRKPHN_nk_get_tank = yes }
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8128 } }
 	}
 }
 
@@ -198,13 +163,12 @@ country_event = {
 country_event = {
 	id = tfrkphn.444
 	title = tfrkphn.444.t
-	desc = tfrkphn.444.d
+	desc = TFRKPHN_lg_444_a
 	picture = GFX_TFRKPHN_nk_defect
 	is_triggered_only = yes
 	option = {
-		name = tfrkphn.444.a
-		custom_effect_tooltip = tfrkphn.444.a_tt
-		hidden_effect = { TFRKPHN_nk_get_jet = yes }
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8120 } }
 	}
 }
 
@@ -212,7 +176,7 @@ country_event = {
 country_event = {
 	id = tfrkphn.453
 	title = tfrkphn.453.t
-	desc = tfrkphn.453.d
+	desc = TFRKPHN_lg_453_a
 	picture = GFX_TFRKPHN_nk_defect
 	is_triggered_only = yes
 	option = {
@@ -227,7 +191,7 @@ country_event = {
 country_event = {
 	id = tfrkphn.465
 	title = tfrkphn.465.t
-	desc = tfrkphn.465.d
+	desc = TFRKPHN_lg_465_a
 	picture = GFX_TFRKPHN_nk_soldier
 	is_triggered_only = yes
 	option = {
@@ -240,7 +204,7 @@ country_event = {
 country_event = {
 	id = tfrkphn.454
 	title = tfrkphn.454.t
-	desc = tfrkphn.454.d
+	desc = TFRKPHN_lg_454_a
 	picture = GFX_TFRKPHN_nk_soldier
 	is_triggered_only = yes
 	option = {
@@ -253,7 +217,7 @@ country_event = {
 country_event = {
 	id = tfrkphn.455
 	title = tfrkphn.455.t
-	desc = tfrkphn.455.d
+	desc = TFRKPHN_lg_455_a
 	picture = GFX_TFRKPHN_nk_riot
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -267,14 +231,13 @@ country_event = {
 country_event = {
 	id = tfrkphn.457
 	title = tfrkphn.457.t
-	desc = tfrkphn.457.d
+	desc = TFRKPHN_lg_457_a
 	picture = GFX_TFRKPHN_nk_riot
 	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
-		name = tfrkphn.457.a
-		custom_effect_tooltip = tfrkphn.457.tt
-		hidden_effect = { if = { limit = { country_exists = PRK } PRK = { add_stability = -0.1 add_war_support = -0.1 } } }
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8130 } }
 	}
 }
 
@@ -282,7 +245,7 @@ country_event = {
 country_event = {
 	id = tfrkphn.458
 	title = tfrkphn.458.t
-	desc = tfrkphn.458.d
+	desc = TFRKPHN_lg_458_a
 	picture = GFX_TFRKPHN_nk_defect
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -302,19 +265,13 @@ country_event = {
 country_event = {
 	id = tfrkphn.459
 	title = tfrkphn.459.t
-	desc = tfrkphn.459.d
+	desc = TFRKPHN_lg_459_a
 	picture = GFX_TFRKPHN_nk_riot
 	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
-		name = tfrkphn.459.a
-		custom_effect_tooltip = tfrkphn.459.tt
-		hidden_effect = {
-			add_to_variable = { TFRKPHN_nk_d_py = 30 }
-			set_variable = { TFRKPHN_nk_m_cp = 100 }
-			TFRKPHN_nk_update = yes
-			if = { limit = { country_exists = PRK } PRK = { add_stability = -0.1 } }
-		}
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8131 } }
 	}
 }
 
@@ -322,26 +279,13 @@ country_event = {
 country_event = {
 	id = tfrkphn.456
 	title = tfrkphn.456.t
-	desc = tfrkphn.456.d
+	desc = TFRKPHN_lg_456_a
 	picture = GFX_TFRKPHN_nk_kjc
 	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
-		name = tfrkphn.456.a
-		custom_effect_tooltip = tfrkphn.456.a_tt
-		add_war_support = 0.05
-		hidden_effect = {
-			if = { limit = { country_exists = PRK } PRK = { add_stability = -0.1 add_war_support = -0.1 } }
-			TFRKPHN_nk_all_m_5 = yes
-		}
-	}
-	option = {
-		name = tfrkphn.456.b
-		custom_effect_tooltip = tfrkphn.456.b_tt
-		add_political_power = 100
-		hidden_effect = {
-			if = { limit = { country_exists = PRK } PRK = { add_stability = -0.1 } }
-		}
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8129 } }
 	}
 }
 
@@ -349,12 +293,12 @@ country_event = {
 country_event = {
 	id = tfrkphn.298
 	title = tfrkphn.298.t
-	desc = tfrkphn.298.d
+	desc = TFRKPHN_lg_298_a
 	picture = GFX_TFRKPHN_nk_riot
 	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
-		name = tfrkphn.298.a
-		custom_effect_tooltip = tfrkphn.298.tt
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8117 } }
 	}
 }

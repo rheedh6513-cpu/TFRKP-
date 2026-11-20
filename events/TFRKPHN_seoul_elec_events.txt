@@ -5,31 +5,12 @@ add_namespace = tfrkphn
 country_event = {
 	id = tfrkphn.651
 	title = tfrkphn.651.t
-	desc = tfrkphn.651.d
+	desc = TFRKPHN_lg_651_a
 	picture = GFX_TFRKPHN_oh_party
 	is_triggered_only = yes
 	option = {
-		name = tfrkphn.651.a
-		custom_effect_tooltip = tfrkphn.651.a_tt
-		hidden_effect = { clr_country_flag = TFRKPHN_sd_run_chung clr_country_flag = TFRKPHN_sd_run_cho clr_country_flag = TFRKPHN_sd_run_yoon clr_country_flag = TFRKPHN_sd_run_kim clr_country_flag = TFRKPHN_sd_run_na set_country_flag = TFRKPHN_sd_run_chung set_variable = { TFRKPHN_sd_delta = 3 } TFRKPHN_sd_add_se = yes set_variable = { TFRKPHN_sd_delta = 3 } TFRKPHN_sd_add_north = yes set_variable = { TFRKPHN_sd_delta = 3 } TFRKPHN_sd_add_sw = yes TFRKPHN_sd_refresh = yes country_event = { id = tfrkphn.652 days = 5 } }
-	}
-	option = {
-		name = tfrkphn.651.b
-		trigger = { NOT = { has_idea = TFRKPHN_cho_eun_hee_HM } }
-		custom_effect_tooltip = tfrkphn.651.b_tt
-		hidden_effect = { clr_country_flag = TFRKPHN_sd_run_chung clr_country_flag = TFRKPHN_sd_run_cho clr_country_flag = TFRKPHN_sd_run_yoon clr_country_flag = TFRKPHN_sd_run_kim clr_country_flag = TFRKPHN_sd_run_na set_country_flag = TFRKPHN_sd_run_cho set_variable = { TFRKPHN_sd_delta = 4 } TFRKPHN_sd_add_se = yes set_variable = { TFRKPHN_sd_delta = 1 } TFRKPHN_sd_add_north = yes TFRKPHN_sd_refresh = yes country_event = { id = tfrkphn.652 days = 5 } }
-	}
-	option = {
-		name = tfrkphn.651.c
-		trigger = { has_idea = TFRKPHN_cho_eun_hee_HM }
-		custom_effect_tooltip = tfrkphn.651.c_tt
-		hidden_effect = { clr_country_flag = TFRKPHN_sd_run_chung clr_country_flag = TFRKPHN_sd_run_cho clr_country_flag = TFRKPHN_sd_run_yoon clr_country_flag = TFRKPHN_sd_run_kim clr_country_flag = TFRKPHN_sd_run_na set_country_flag = TFRKPHN_sd_run_yoon set_variable = { TFRKPHN_sd_delta = 2 } TFRKPHN_sd_add_se = yes set_variable = { TFRKPHN_sd_delta = 2 } TFRKPHN_sd_add_north = yes set_variable = { TFRKPHN_sd_delta = 2 } TFRKPHN_sd_add_sw = yes TFRKPHN_sd_refresh = yes country_event = { id = tfrkphn.652 days = 5 } }
-	}
-	option = {
-		name = tfrkphn.651.e
-		trigger = { check_variable = { TFRKPHN_support_seoul > 49.9 } }
-		custom_effect_tooltip = tfrkphn.651.e_tt
-		hidden_effect = { clr_country_flag = TFRKPHN_sd_run_chung clr_country_flag = TFRKPHN_sd_run_cho clr_country_flag = TFRKPHN_sd_run_yoon clr_country_flag = TFRKPHN_sd_run_kim clr_country_flag = TFRKPHN_sd_run_na set_country_flag = TFRKPHN_sd_run_na set_variable = { TFRKPHN_sd_delta = 3 } TFRKPHN_sd_add_sw = yes set_variable = { TFRKPHN_sd_delta = 2 } TFRKPHN_sd_add_se = yes TFRKPHN_sd_refresh = yes country_event = { id = tfrkphn.652 days = 5 } }
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8162 } }
 	}
 }
 
@@ -37,7 +18,7 @@ country_event = {
 country_event = {
 	id = tfrkphn.652
 	title = tfrkphn.652.t
-	desc = tfrkphn.652.d
+	desc = TFRKPHN_lg_652_a
 	picture = GFX_TFRKPHN_oh_seoul
 	is_triggered_only = yes
 	option = {
@@ -51,7 +32,7 @@ country_event = {
 country_event = {
 	id = tfrkphn.656
 	title = tfrkphn.656.t
-	desc = tfrkphn.656.d
+	desc = TFRKPHN_lg_656_a
 	picture = GFX_TFRKPHN_oh_seoul
 	is_triggered_only = yes
 	option = {
@@ -65,14 +46,12 @@ country_event = {
 country_event = {
 	id = tfrkphn.653
 	title = tfrkphn.653.t
-	desc = tfrkphn.653.d
+	desc = TFRKPHN_lg_653_a
 	picture = GFX_TFRKPHN_oh_podium
 	is_triggered_only = yes
 	option = {
-		name = tfrkphn.653.a
-		add_stability = 0.02
-		add_political_power = 80
-		TFRKPHN_sd_mayor_reward = yes
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8163 } }
 	}
 }
 
@@ -80,13 +59,12 @@ country_event = {
 country_event = {
 	id = tfrkphn.654
 	title = tfrkphn.654.t
-	desc = tfrkphn.654.d
+	desc = TFRKPHN_lg_654_a
 	picture = GFX_TFRKPHN_oh_bowed
 	is_triggered_only = yes
 	option = {
-		name = tfrkphn.654.a
-		add_stability = -0.03
-		add_political_power = -50
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8164 } }
 	}
 }
 
@@ -94,13 +72,12 @@ country_event = {
 country_event = {
 	id = tfrkphn.655
 	title = tfrkphn.655.t
-	desc = tfrkphn.655.d
+	desc = TFRKPHN_lg_655_a
 	picture = GFX_TFRKPHN_oh_party
 	is_triggered_only = yes
 	option = {
-		name = tfrkphn.655.a
-		custom_effect_tooltip = tfrkphn.655.a_tt
-		hidden_effect = { set_variable = { TFRKPHN_sd_delta = 2 } TFRKPHN_sd_add_se = yes set_variable = { TFRKPHN_sd_delta = 2 } TFRKPHN_sd_add_north = yes set_variable = { TFRKPHN_sd_delta = 2 } TFRKPHN_sd_add_sw = yes TFRKPHN_sd_refresh = yes }
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8165 } }
 	}
 }
 
@@ -108,13 +85,12 @@ country_event = {
 country_event = {
 	id = tfrkphn.641
 	title = tfrkphn.641.t
-	desc = tfrkphn.641.d
+	desc = TFRKPHN_lg_641_a
 	picture = GFX_TFRKPHN_oh_party
 	is_triggered_only = yes
 	option = {
-		name = tfrkphn.641.a
-		custom_effect_tooltip = tfrkphn.641.a_tt
-		hidden_effect = { clr_country_flag = TFRKPHN_sd_run_chung clr_country_flag = TFRKPHN_sd_run_cho clr_country_flag = TFRKPHN_sd_run_yoon clr_country_flag = TFRKPHN_sd_run_kim clr_country_flag = TFRKPHN_sd_run_na set_country_flag = TFRKPHN_sd_run_kim set_variable = { TFRKPHN_sd_delta = 3 } TFRKPHN_sd_add_se = yes set_variable = { TFRKPHN_sd_delta = 1 } TFRKPHN_sd_add_north = yes TFRKPHN_sd_refresh = yes }
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8159 } }
 	}
 }
 
@@ -122,15 +98,12 @@ country_event = {
 country_event = {
 	id = tfrkphn.643
 	title = tfrkphn.643.t
-	desc = tfrkphn.643.d
+	desc = TFRKPHN_lg_643_a
 	picture = GFX_TFRKPHN_oh_podium
 	is_triggered_only = yes
 	option = {
-		name = tfrkphn.643.a
-		add_stability = 0.03
-		add_political_power = 100
-		if = { limit = { has_country_flag = TFRKPHN_sd_new_mayor } TFRKPHN_sd_mayor_reward = yes }
-		custom_effect_tooltip = TFRKPHN_sd_dist_tt
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8160 } }
 	}
 }
 
@@ -138,13 +111,11 @@ country_event = {
 country_event = {
 	id = tfrkphn.644
 	title = tfrkphn.644.t
-	desc = tfrkphn.644.d
+	desc = TFRKPHN_lg_644_a
 	picture = GFX_TFRKPHN_oh_bowed
 	is_triggered_only = yes
 	option = {
-		name = tfrkphn.644.a
-		add_stability = -0.03
-		add_political_power = -50
-		custom_effect_tooltip = TFRKPHN_sd_dist_tt
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8161 } }
 	}
 }

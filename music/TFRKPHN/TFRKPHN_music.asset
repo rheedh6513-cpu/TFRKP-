@@ -8,3 +8,8 @@ music = {
 	file = "TFRKPHN_finish_line.ogg"
 	volume = 0.8
 }
+music = {
+	name = "TFRKP_TFRKPHN_OH_END"
+	file = "TFRKPHN_oh_end.ogg"
+	volume = 0.8
+}

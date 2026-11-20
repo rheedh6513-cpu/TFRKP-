@@ -3,7 +3,7 @@ add_namespace = tfrkphn
 country_event = {
 	id = tfrkphn.6770
 	title = tfrkphn.6770.t
-	desc = tfrkphn.6770.d
+	desc = TFRKPHN_lg_6770_a
 	picture = GFX_TFRKPHN_lm_6770
 	is_triggered_only = yes
 	option = {
@@ -22,33 +22,23 @@ country_event = {
 country_event = {
 	id = tfrkphn.6771
 	title = tfrkphn.6771.t
-	desc = tfrkphn.6771.d
-	picture = GFX_TFRKPHN_lee_by_6763
+	desc = TFRKPHN_lg_6771_a
+	picture = GFX_TFRKPHN_lm_6771
 	is_triggered_only = yes
 	option = {
-		name = tfrkphn.6771.a
-		add_stability = 0.02
-		custom_effect_tooltip = TFRKPHN_ruling_up_tt
-		hidden_effect = { TFRKPHN_ruling_pop_up = yes }
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8100 } }
 	}
 }
 country_event = {
 	id = tfrkphn.6772
 	title = tfrkphn.6772.t
-	desc = tfrkphn.6772.d
+	desc = TFRKPHN_lg_6772_a
 	picture = GFX_TFRKPHN_lm_6772
 	is_triggered_only = yes
 	option = {
-		name = tfrkphn.6772.a
-		add_political_power = -50
-		add_stability = 0.02
-		hidden_effect = { set_country_flag = TFRKPHN_chung_met country_event = { id = tfrkphn.6773 days = 200 } }
-	}
-	option = {
-		name = tfrkphn.6772.b
-		add_political_power = 20
-		add_stability = -0.02
-		hidden_effect = { country_event = { id = tfrkphn.6773 days = 200 } }
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8101 } }
 	}
 }
 country_event = {
@@ -67,20 +57,12 @@ country_event = {
 country_event = {
 	id = tfrkphn.6774
 	title = tfrkphn.6774.t
-	desc = tfrkphn.6774.d
-	picture = GFX_TFRKPHN_lee_by_6764
+	desc = TFRKPHN_lg_6774_a
+	picture = GFX_TFRKPHN_lm_6774
 	is_triggered_only = yes
 	option = {
-		name = tfrkphn.6774.a
-		add_political_power = -40
-		add_stability = 0.03
-		hidden_effect = { set_country_flag = TFRKPHN_jwo_fund country_event = { id = tfrkphn.6775 days = 200 } }
-	}
-	option = {
-		name = tfrkphn.6774.b
-		add_political_power = 40
-		add_stability = -0.02
-		hidden_effect = { country_event = { id = tfrkphn.6775 days = 200 } }
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8102 } }
 	}
 }
 country_event = {
@@ -88,7 +70,7 @@ country_event = {
 	title = tfrkphn.6775.t
 	desc = { trigger = { has_country_flag = TFRKPHN_jwo_fund } text = tfrkphn.6775.d }
 	desc = { trigger = { NOT = { has_country_flag = TFRKPHN_jwo_fund } } text = tfrkphn.6775.d2 }
-	picture = GFX_TFRKPHN_lee_by_6764
+	picture = GFX_TFRKPHN_lm_6774
 	is_triggered_only = yes
 	option = {
 		name = tfrkphn.6775.a

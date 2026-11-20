@@ -3,27 +3,18 @@ add_namespace = tfrkphn
 country_event = {
 	id = tfrkphn.6970
 	title = tfrkphn.6970.t
-	desc = tfrkphn.6970.d
+	desc = TFRKPHN_lg_6970_a
 	picture = GFX_TFRKPHN_hong_grief
 	is_triggered_only = yes
 	option = {
-		name = tfrkphn.6970.a
-		add_political_power = -50
-		add_stability = -0.02
-		custom_effect_tooltip = TFRKPHN_ruling_down_tt
-		hidden_effect = { TFRKPHN_ruling_pop_down = yes set_country_flag = TFRKPHN_grief_admit country_event = { id = tfrkphn.6971 days = 30 } }
-	}
-	option = {
-		name = tfrkphn.6970.b
-		add_stability = -0.05
-		custom_effect_tooltip = TFRKPHN_ruling_down_tt
-		hidden_effect = { TFRKPHN_ruling_pop_down = yes country_event = { id = tfrkphn.6971 days = 30 } }
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8236 } }
 	}
 }
 country_event = {
 	id = tfrkphn.6971
 	title = tfrkphn.6971.t
-	desc = tfrkphn.6971.d
+	desc = TFRKPHN_lg_6971_a
 	picture = GFX_TFRKPHN_hong_grief
 	is_triggered_only = yes
 	option = {

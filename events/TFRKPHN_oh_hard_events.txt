@@ -3,124 +3,55 @@ add_namespace = tfrkphn
 country_event = {
 	id = tfrkphn.6997
 	title = tfrkphn.6997.t
-	desc = tfrkphn.6997.d
+	desc = TFRKPHN_lg_6997_a
 	picture = GFX_TFRKPHN_hd_banner
 	is_triggered_only = yes
 	option = {
-		name = tfrkphn.6997.a
-		ai_chance = { base = 40 }
-		add_stability = -0.02
-		add_political_power = 20
-		custom_effect_tooltip = TFRKPHN_hd_a_tt
-		if = { limit = { has_country_flag = TFRKPHN_pt_open } add_to_variable = { TFRKPHN_pr_sup = 5 } add_to_variable = { TFRKPHN_pr_bk = 12 } TFRKPHN_pr_apply = yes }
-	}
-	option = {
-		name = tfrkphn.6997.b
-		ai_chance = { base = 60 }
-		add_political_power = -30
-		custom_effect_tooltip = TFRKPHN_hd_b_tt
-		if = { limit = { has_country_flag = TFRKPHN_pt_open } add_to_variable = { TFRKPHN_pr_sup = -5 } add_to_variable = { TFRKPHN_pr_bk = -8 } TFRKPHN_pr_apply = yes }
-	}
-	option = {
-		name = tfrkphn.6997.c
-		trigger = { has_country_flag = TFRKPHN_pt_open check_variable = { TFRKPHN_pr_sup > 59.5 } }
-		ai_chance = { base = 200 }
-		add_stability = 0.01
-		add_political_power = 15
-		custom_effect_tooltip = TFRKPHN_hd_c_tt
-		if = { limit = { has_country_flag = TFRKPHN_pt_open } add_to_variable = { TFRKPHN_pr_sup = 3 } add_to_variable = { TFRKPHN_pr_bk = 3 } TFRKPHN_pr_apply = yes }
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8032 } }
 	}
 }
 country_event = {
 	id = tfrkphn.6998
 	title = tfrkphn.6998.t
-	desc = tfrkphn.6998.d
+	desc = TFRKPHN_lg_6998_a
 	picture = GFX_TFRKPHN_hd_meeting
 	is_triggered_only = yes
 	option = {
-		name = tfrkphn.6998.a
-		ai_chance = { base = 40 }
-		add_stability = -0.02
-		add_political_power = 20
-		custom_effect_tooltip = TFRKPHN_hd_a_tt
-		if = { limit = { has_country_flag = TFRKPHN_pt_open } add_to_variable = { TFRKPHN_pr_sup = 5 } add_to_variable = { TFRKPHN_pr_bk = 12 } TFRKPHN_pr_apply = yes }
-	}
-	option = {
-		name = tfrkphn.6998.b
-		ai_chance = { base = 60 }
-		add_political_power = -30
-		custom_effect_tooltip = TFRKPHN_hd_b_tt
-		if = { limit = { has_country_flag = TFRKPHN_pt_open } add_to_variable = { TFRKPHN_pr_sup = -5 } add_to_variable = { TFRKPHN_pr_bk = -8 } TFRKPHN_pr_apply = yes }
-	}
-	option = {
-		name = tfrkphn.6998.c
-		trigger = { has_country_flag = TFRKPHN_pt_open check_variable = { TFRKPHN_pr_sup > 59.5 } }
-		ai_chance = { base = 200 }
-		add_stability = 0.01
-		add_political_power = 15
-		custom_effect_tooltip = TFRKPHN_hd_c_tt
-		if = { limit = { has_country_flag = TFRKPHN_pt_open } add_to_variable = { TFRKPHN_pr_sup = 3 } add_to_variable = { TFRKPHN_pr_bk = 3 } TFRKPHN_pr_apply = yes }
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8033 } }
 	}
 }
 country_event = {
 	id = tfrkphn.6999
 	title = tfrkphn.6999.t
-	desc = tfrkphn.6999.d
+	desc = TFRKPHN_lg_6999_a
 	picture = GFX_TFRKPHN_bid_briefing
 	is_triggered_only = yes
 	option = {
-		name = tfrkphn.6999.a
-		ai_chance = { base = 40 }
-		add_stability = -0.02
-		add_political_power = 20
-		custom_effect_tooltip = TFRKPHN_hd_a_tt
-		if = { limit = { has_country_flag = TFRKPHN_pt_open } add_to_variable = { TFRKPHN_pr_sup = 5 } add_to_variable = { TFRKPHN_pr_bk = 12 } TFRKPHN_pr_apply = yes }
-	}
-	option = {
-		name = tfrkphn.6999.b
-		ai_chance = { base = 60 }
-		add_political_power = -30
-		custom_effect_tooltip = TFRKPHN_hd_b_tt
-		if = { limit = { has_country_flag = TFRKPHN_pt_open } add_to_variable = { TFRKPHN_pr_sup = -5 } add_to_variable = { TFRKPHN_pr_bk = -8 } TFRKPHN_pr_apply = yes }
-	}
-	option = {
-		name = tfrkphn.6999.c
-		trigger = { has_country_flag = TFRKPHN_pt_open check_variable = { TFRKPHN_pr_sup > 59.5 } }
-		ai_chance = { base = 200 }
-		add_stability = 0.01
-		add_political_power = 15
-		custom_effect_tooltip = TFRKPHN_hd_c_tt
-		if = { limit = { has_country_flag = TFRKPHN_pt_open } add_to_variable = { TFRKPHN_pr_sup = 3 } add_to_variable = { TFRKPHN_pr_bk = 3 } TFRKPHN_pr_apply = yes }
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8034 } }
 	}
 }
 country_event = {
 	id = tfrkphn.7000
 	title = tfrkphn.7000.t
-	desc = tfrkphn.7000.d
+	desc = TFRKPHN_lg_7000_a
 	picture = GFX_TFRKPHN_hd_crowd
 	is_triggered_only = yes
 	option = {
-		name = tfrkphn.7000.a
-		ai_chance = { base = 40 }
-		add_stability = -0.02
-		add_political_power = 20
-		custom_effect_tooltip = TFRKPHN_hd_a_tt
-		if = { limit = { has_country_flag = TFRKPHN_pt_open } add_to_variable = { TFRKPHN_pr_sup = 5 } add_to_variable = { TFRKPHN_pr_bk = 12 } TFRKPHN_pr_apply = yes }
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8035 } }
 	}
+}
+country_event = {
+	id = tfrkphn.7014
+	title = tfrkphn.7014.t
+	desc = TFRKPHN_lg_7014_a
+	picture = GFX_TFRKPHN_hd_meeting
+	is_triggered_only = yes
 	option = {
-		name = tfrkphn.7000.b
-		ai_chance = { base = 60 }
-		add_political_power = -30
-		custom_effect_tooltip = TFRKPHN_hd_b_tt
-		if = { limit = { has_country_flag = TFRKPHN_pt_open } add_to_variable = { TFRKPHN_pr_sup = -5 } add_to_variable = { TFRKPHN_pr_bk = -8 } TFRKPHN_pr_apply = yes }
-	}
-	option = {
-		name = tfrkphn.7000.c
-		trigger = { has_country_flag = TFRKPHN_pt_open check_variable = { TFRKPHN_pr_sup > 59.5 } }
-		ai_chance = { base = 200 }
-		add_stability = 0.01
-		add_political_power = 15
-		custom_effect_tooltip = TFRKPHN_hd_c_tt
-		if = { limit = { has_country_flag = TFRKPHN_pt_open } add_to_variable = { TFRKPHN_pr_sup = 3 } add_to_variable = { TFRKPHN_pr_bk = 3 } TFRKPHN_pr_apply = yes }
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8036 } }
 	}
 }

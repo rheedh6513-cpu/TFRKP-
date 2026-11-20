@@ -1,0 +1,68 @@
+# [안내] 이인제 정부: 2028년 총선과 충청 귀향. lee_ge2028_build.py가 만든다.
+add_namespace = tfrkphn
+country_event = {
+	id = tfrkphn.7008
+	title = tfrkphn.7008.t
+	desc = TFRKPHN_lg_7008_a
+	picture = GFX_report_event_ppp_ge_win
+	is_triggered_only = yes
+	option = {
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8090 } }
+	}
+}
+country_event = {
+	id = tfrkphn.7009
+	title = tfrkphn.7009.t
+	desc = TFRKPHN_lg_7009_a
+	picture = GFX_report_event_ppp_ge_win
+	is_triggered_only = yes
+	option = {
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8091 } }
+	}
+}
+country_event = {
+	id = tfrkphn.7013
+	title = tfrkphn.7013.t
+	desc = TFRKPHN_lg_7013_a
+	picture = GFX_report_event_ppp_ge_win
+	is_triggered_only = yes
+	option = {
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8095 } }
+	}
+}
+country_event = {
+	id = tfrkphn.7010
+	title = tfrkphn.7010.t
+	desc = TFRKPHN_lg_7010_a
+	picture = GFX_TFRKPHN_count_6604
+	is_triggered_only = yes
+	option = {
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8092 } }
+	}
+}
+country_event = {
+	id = tfrkphn.7011
+	title = tfrkphn.7011.t
+	desc = TFRKPHN_lg_7011_a
+	picture = GFX_report_event_ppp_ge_lose
+	is_triggered_only = yes
+	option = {
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8093 } }
+	}
+}
+country_event = {
+	id = tfrkphn.7012
+	title = tfrkphn.7012.t
+	desc = TFRKPHN_lg_7012_a
+	picture = GFX_TFRKPHN_lee_home
+	is_triggered_only = yes
+	option = {
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8094 } }
+	}
+}

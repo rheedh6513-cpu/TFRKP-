@@ -5,15 +5,13 @@ add_namespace = tfrkphn
 country_event = {
 	id = tfrkphn.471
 	title = tfrkphn.471.t
-	desc = tfrkphn.471.d
+	desc = TFRKPHN_lg_471_a
 	picture = GFX_report_event_fall_pyongyang
 	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
-		name = tfrkphn.471.a
-		add_war_support = 0.05
-		add_political_power = 50
-		hidden_effect = { country_event = { id = tfrkphn.472 days = 5 } }
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8187 } }
 	}
 }
 
@@ -21,7 +19,7 @@ country_event = {
 country_event = {
 	id = tfrkphn.472
 	title = tfrkphn.472.t
-	desc = tfrkphn.472.d
+	desc = TFRKPHN_lg_472_a
 	picture = GFX_TFRKPHN_ibuk5do
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -44,25 +42,13 @@ country_event = {
 country_event = {
 	id = tfrkphn.473
 	title = tfrkphn.473.t
-	desc = tfrkphn.473.d
+	desc = TFRKPHN_lg_473_a
 	picture = GFX_TFRKPHN_one_constitution
 	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
-		name = tfrkphn.473.a
-		set_country_flag = TFRKPHN_unified
-		add_stability = 0.10
-		add_war_support = 0.10
-		add_political_power = 150
-		if = { limit = { has_country_flag = TFRKPHN_unitax_full } add_stability = 0.05 custom_effect_tooltip = tfrkphn.473.tax_tt }
-		else_if = { limit = { has_country_flag = TFRKPHN_unitax_half } add_stability = 0.02 custom_effect_tooltip = tfrkphn.473.tax_tt }
-		hidden_effect = {
-			country_event = { id = tfrkphn.492 days = 30 }
-			country_event = { id = tfrkphn.500 days = 5 }	# 홍준표의 짧은 글 (hong_build.py)
-			clr_global_flag = PRK_Civil_War
-			clr_global_flag = north_korean_civil_war
-			clr_global_flag = TFRKPHN_nk_civil_war
-		}
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8188 } }
 	}
 }
 

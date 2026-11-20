@@ -51,3 +51,53 @@ defined_text = {
 		localization_key = TFRKPHN_rc_le_b
 	}
 }
+defined_text = {
+	name = GetTFRKPHNRcKju
+	text = {
+		trigger = { has_country_flag = TFRKPHN_kju_v_icc }
+		localization_key = TFRKPHN_rc_kju_icc
+	}
+	text = {
+		trigger = { has_country_flag = TFRKPHN_kju_v_death }
+		localization_key = TFRKPHN_rc_kju_death
+	}
+	text = {
+		trigger = { has_country_flag = TFRKPHN_kju_v_life }
+		localization_key = TFRKPHN_rc_kju_life
+	}
+	text = {
+		trigger = { OR = { has_country_flag = TFRKPHN_kju_icc has_country_flag = TFRKPHN_kju_home } }
+		localization_key = TFRKPHN_rc_kju_wait
+	}
+	text = {
+		trigger = { always = yes }
+		localization_key = TFRKPHN_rc_kju_none
+	}
+}
+defined_text = {
+	name = GetTFRKPHNRcNuke
+	text = {
+		trigger = { has_country_flag = TFRKPHN_oh_nuke_hold }
+		localization_key = TFRKPHN_rc_nuke_hold
+	}
+	text = {
+		trigger = { has_country_flag = TFRKPHN_oh_nuke_talk }
+		localization_key = TFRKPHN_rc_nuke_talk
+	}
+	text = {
+		trigger = { has_country_flag = TFRKPHN_oh_nuke_osan }
+		localization_key = TFRKPHN_rc_nuke_osan
+	}
+	text = {
+		trigger = { has_country_flag = TFRKPHN_oh_nuke_wait }
+		localization_key = TFRKPHN_rc_nuke_wait
+	}
+	text = {
+		trigger = { has_completed_focus = TFRKPHN_oh_se_hoon_h2b }
+		localization_key = TFRKPHN_rc_nuke_keep
+	}
+	text = {
+		trigger = { always = yes }
+		localization_key = TFRKPHN_rc_nuke_none
+	}
+}

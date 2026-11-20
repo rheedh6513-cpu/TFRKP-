@@ -21578,10 +21578,10 @@ shared_focus = {
 		x = 60
 		y = -9
 	}
-	offset = {	# 이인제 트리: 오른쪽 끝 (42, 0)
+	offset = {	# 이인제, 오세훈 트리: 군사 가지(38~51, 0~9) 아래 (44, 11). 사용자 2026-11-20 "아래에 위치하게". 예전 (42, 0)은 군사 가지와 겹쳤다 (2026-11-20 화면)
 		trigger = { OR = { has_focus_tree = TFRKPHN_lee_in_je_tree has_focus_tree = TFRKPHN_oh_se_hoon_tree } }
-		x = 31
-		y = -9
+		x = 33
+		y = 2
 	}
 	allow_branch = {
 		has_country_flag = KOR_great_asia_war

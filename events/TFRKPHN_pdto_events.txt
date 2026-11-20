@@ -5,98 +5,128 @@ add_namespace = tfrkphn
 country_event = {
 	id = tfrkphn.6631
 	title = tfrkphn.6631.t
-	desc = tfrkphn.6631.d
+	desc = TFRKPHN_lg_6631_a
 	picture = GFX_TFRKPHN_pdto_1_1
 	is_triggered_only = yes
-	option = { name = TFRKPHN_pd_ok custom_effect_tooltip = TFRKPHN_pd_d1_1_tt }
+	option = {
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8143 } }
+	}
 }
 
 # 도요타와 부품을 나눠 쓰다
 country_event = {
 	id = tfrkphn.6632
 	title = tfrkphn.6632.t
-	desc = tfrkphn.6632.d
+	desc = TFRKPHN_lg_6632_a
 	picture = GFX_TFRKPHN_pdto_1_2
 	is_triggered_only = yes
-	option = { name = TFRKPHN_pd_ok custom_effect_tooltip = TFRKPHN_pd_d1_2_tt }
+	option = {
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8144 } }
+	}
 }
 
 # TSMC와 맺은 약속
 country_event = {
 	id = tfrkphn.6633
 	title = tfrkphn.6633.t
-	desc = tfrkphn.6633.d
+	desc = TFRKPHN_lg_6633_a
 	picture = GFX_TFRKPHN_pdto_2_1
 	is_triggered_only = yes
-	option = { name = TFRKPHN_pd_ok custom_effect_tooltip = TFRKPHN_pd_d2_1_tt }
+	option = {
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8145 } }
+	}
 }
 
 # 폭스콘의 새 조립 공장
 country_event = {
 	id = tfrkphn.6634
 	title = tfrkphn.6634.t
-	desc = tfrkphn.6634.d
+	desc = TFRKPHN_lg_6634_a
 	picture = GFX_TFRKPHN_pdto_2_2
 	is_triggered_only = yes
-	option = { name = TFRKPHN_pd_ok custom_effect_tooltip = TFRKPHN_pd_d2_2_tt }
+	option = {
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8146 } }
+	}
 }
 
 # 타타 그룹과 손잡다
 country_event = {
 	id = tfrkphn.6635
 	title = tfrkphn.6635.t
-	desc = tfrkphn.6635.d
+	desc = TFRKPHN_lg_6635_a
 	picture = GFX_TFRKPHN_pdto_3_1
 	is_triggered_only = yes
-	option = { name = TFRKPHN_pd_ok custom_effect_tooltip = TFRKPHN_pd_d3_1_tt }
+	option = {
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8147 } }
+	}
 }
 
 # 빈그룹의 유통망에 오르다
 country_event = {
 	id = tfrkphn.6636
 	title = tfrkphn.6636.t
-	desc = tfrkphn.6636.d
+	desc = TFRKPHN_lg_6636_a
 	picture = GFX_TFRKPHN_pdto_4_1
 	is_triggered_only = yes
-	option = { name = TFRKPHN_pd_ok custom_effect_tooltip = TFRKPHN_pd_d4_1_tt }
+	option = {
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8148 } }
+	}
 }
 
 # 산미겔의 공사 현장에서
 country_event = {
 	id = tfrkphn.6637
 	title = tfrkphn.6637.t
-	desc = tfrkphn.6637.d
+	desc = TFRKPHN_lg_6637_a
 	picture = GFX_TFRKPHN_pdto_5_1
 	is_triggered_only = yes
-	option = { name = TFRKPHN_pd_ok custom_effect_tooltip = TFRKPHN_pd_d5_1_tt }
+	option = {
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8149 } }
+	}
 }
 
 # BHP와 여러 해짜리 계약
 country_event = {
 	id = tfrkphn.6638
 	title = tfrkphn.6638.t
-	desc = tfrkphn.6638.d
+	desc = TFRKPHN_lg_6638_a
 	picture = GFX_TFRKPHN_pdto_6_1
 	is_triggered_only = yes
-	option = { name = TFRKPHN_pd_ok custom_effect_tooltip = TFRKPHN_pd_d6_1_tt }
+	option = {
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8150 } }
+	}
 }
 
 # 안탐의 니켈, 호남의 공장
 country_event = {
 	id = tfrkphn.6639
 	title = tfrkphn.6639.t
-	desc = tfrkphn.6639.d
+	desc = TFRKPHN_lg_6639_a
 	picture = GFX_TFRKPHN_pdto_7_1
 	is_triggered_only = yes
-	option = { name = TFRKPHN_pd_ok custom_effect_tooltip = TFRKPHN_pd_d7_1_tt }
+	option = {
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8151 } }
+	}
 }
 
 # CP 그룹과 먹거리 계약
 country_event = {
 	id = tfrkphn.6640
 	title = tfrkphn.6640.t
-	desc = tfrkphn.6640.d
+	desc = TFRKPHN_lg_6640_a
 	picture = GFX_TFRKPHN_pdto_8_1
 	is_triggered_only = yes
-	option = { name = TFRKPHN_pd_ok custom_effect_tooltip = TFRKPHN_pd_d8_1_tt }
+	option = {
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8152 } }
+	}
 }

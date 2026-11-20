@@ -3,7 +3,7 @@ add_namespace = tfrkphn
 country_event = {
 	id = tfrkphn.6985
 	title = tfrkphn.6985.t
-	desc = tfrkphn.6985.d
+	desc = TFRKPHN_lg_6985_a
 	picture = GFX_TFRKPHN_hg_6985
 	is_triggered_only = yes
 	option = { name = tfrkphn.6985.a add_stability = 0.03 add_political_power = 75 }
@@ -11,10 +11,13 @@ country_event = {
 country_event = {
 	id = tfrkphn.6986
 	title = tfrkphn.6986.t
-	desc = tfrkphn.6986.d
+	desc = TFRKPHN_lg_6986_a
 	picture = GFX_TFRKPHN_hg_6986
 	is_triggered_only = yes
-	option = { name = tfrkphn.6986.a add_stability = 0.02 add_political_power = 50 }
+	option = {
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8086 } }
+	}
 }
 # >>> 지도 완공 (숨은 사건)
 country_event = {

@@ -23,4 +23,71 @@ focus_tree = {
 			add_stability = 0.03
 		}
 	}
+	# >>> 늘린 중점 (alt27_tree_build.py)
+	focus = {
+		id = TFRKPHN_ahn_cheol_soo_a1
+		icon = GFX_goal_generic_scientific_exchange
+		x = 2
+		y = 1
+		cost = 5
+		prerequisite = { focus = TFRKPHN_ahn_cheol_soo_b01_01 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 50 add_stability = 0.02
+		}
+	}
+
+	focus = {
+		id = TFRKPHN_ahn_cheol_soo_a2
+		icon = GFX_goal_generic_political_pressure
+		x = 4
+		y = 1
+		cost = 5
+		prerequisite = { focus = TFRKPHN_ahn_cheol_soo_b01_01 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_popularity = { ideology = market_liberal popularity = 0.05 } add_stability = 0.03
+		}
+	}
+
+	focus = {
+		id = TFRKPHN_ahn_cheol_soo_a3
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 2
+		y = 2
+		cost = 5
+		prerequisite = { focus = TFRKPHN_ahn_cheol_soo_a1 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 50 add_stability = 0.02
+		}
+	}
+
+	focus = {
+		id = TFRKPHN_ahn_cheol_soo_a4
+		icon = GFX_goal_generic_diplomatic_treaty
+		x = 4
+		y = 2
+		cost = 5
+		prerequisite = { focus = TFRKPHN_ahn_cheol_soo_a2 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_stability = 0.03 add_war_support = -0.03
+		}
+	}
+
+	focus = {
+		id = TFRKPHN_ahn_cheol_soo_a5
+		icon = GFX_goal_generic_national_unity
+		x = 3
+		y = 3
+		cost = 5
+		prerequisite = { focus = TFRKPHN_ahn_cheol_soo_a3 focus = TFRKPHN_ahn_cheol_soo_a4 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 75 add_stability = 0.03
+		}
+	}
+
+	# <<< 늘린 중점
 }

@@ -5,7 +5,7 @@ add_namespace = tfrkphn
 country_event = {
 	id = tfrkphn.681
 	title = tfrkphn.681.t
-	desc = tfrkphn.681.d
+	desc = TFRKPHN_lg_681_a
 	picture = GFX_TFRKPHN_exile_c1
 	is_triggered_only = yes
 	option = { name = TFRKPHN_ex_ok custom_effect_tooltip = TFRKPHN_ex_d1_tt hidden_effect = { country_event = { id = tfrkphn.695 days = 20 } } }
@@ -15,17 +15,20 @@ country_event = {
 country_event = {
 	id = tfrkphn.682
 	title = tfrkphn.682.t
-	desc = tfrkphn.682.d
+	desc = TFRKPHN_lg_682_a
 	picture = GFX_TFRKPHN_exile_c2
 	is_triggered_only = yes
-	option = { name = TFRKPHN_ex_ok custom_effect_tooltip = TFRKPHN_ex_d2_tt }
+	option = {
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8132 } }
+	}
 }
 
 # 테슬라
 country_event = {
 	id = tfrkphn.683
 	title = tfrkphn.683.t
-	desc = tfrkphn.683.d
+	desc = TFRKPHN_lg_683_a
 	picture = GFX_TFRKPHN_exile_c3
 	is_triggered_only = yes
 	option = { name = TFRKPHN_ex_ok custom_effect_tooltip = TFRKPHN_ex_d3_tt }
@@ -35,7 +38,7 @@ country_event = {
 country_event = {
 	id = tfrkphn.684
 	title = tfrkphn.684.t
-	desc = tfrkphn.684.d
+	desc = TFRKPHN_lg_684_a
 	picture = GFX_TFRKPHN_exile_c4
 	is_triggered_only = yes
 	option = { name = TFRKPHN_ex_ok custom_effect_tooltip = TFRKPHN_ex_d4_tt hidden_effect = { country_event = { id = tfrkphn.696 days = 20 } } }
@@ -45,17 +48,20 @@ country_event = {
 country_event = {
 	id = tfrkphn.685
 	title = tfrkphn.685.t
-	desc = tfrkphn.685.d
+	desc = TFRKPHN_lg_685_a
 	picture = GFX_TFRKPHN_exile_c5
 	is_triggered_only = yes
-	option = { name = TFRKPHN_ex_ok custom_effect_tooltip = TFRKPHN_ex_d5_tt }
+	option = {
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8133 } }
+	}
 }
 
 # 골드만삭스
 country_event = {
 	id = tfrkphn.686
 	title = tfrkphn.686.t
-	desc = tfrkphn.686.d
+	desc = TFRKPHN_lg_686_a
 	picture = GFX_TFRKPHN_exile_c6
 	is_triggered_only = yes
 	option = { name = TFRKPHN_ex_ok custom_effect_tooltip = TFRKPHN_ex_d6_tt }
@@ -65,7 +71,7 @@ country_event = {
 country_event = {
 	id = tfrkphn.691
 	title = tfrkphn.691.t
-	desc = tfrkphn.691.d
+	desc = TFRKPHN_lg_691_a
 	picture = GFX_TFRKPHN_exile_c7
 	is_triggered_only = yes
 	option = { name = TFRKPHN_ex_ok custom_effect_tooltip = TFRKPHN_ex_d7_tt }
@@ -75,27 +81,33 @@ country_event = {
 country_event = {
 	id = tfrkphn.692
 	title = tfrkphn.692.t
-	desc = tfrkphn.692.d
+	desc = TFRKPHN_lg_692_a
 	picture = GFX_TFRKPHN_exile_c8
 	is_triggered_only = yes
-	option = { name = TFRKPHN_ex_ok custom_effect_tooltip = TFRKPHN_ex_d8_tt }
+	option = {
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8135 } }
+	}
 }
 
 # 록히드마틴
 country_event = {
 	id = tfrkphn.693
 	title = tfrkphn.693.t
-	desc = tfrkphn.693.d
+	desc = TFRKPHN_lg_693_a
 	picture = GFX_TFRKPHN_exile_c9
 	is_triggered_only = yes
-	option = { name = TFRKPHN_ex_ok custom_effect_tooltip = TFRKPHN_ex_d9_tt }
+	option = {
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8136 } }
+	}
 }
 
 # 아마존
 country_event = {
 	id = tfrkphn.694
 	title = tfrkphn.694.t
-	desc = tfrkphn.694.d
+	desc = TFRKPHN_lg_694_a
 	picture = GFX_TFRKPHN_exile_c10
 	is_triggered_only = yes
 	option = { name = TFRKPHN_ex_ok custom_effect_tooltip = TFRKPHN_ex_d10_tt }
@@ -105,7 +117,7 @@ country_event = {
 country_event = {
 	id = tfrkphn.6811
 	title = tfrkphn.6811.t
-	desc = tfrkphn.6811.d
+	desc = TFRKPHN_lg_6811_a
 	picture = GFX_TFRKPHN_exile_c11
 	is_triggered_only = yes
 	option = { name = TFRKPHN_ex_ok custom_effect_tooltip = TFRKPHN_ex_d11_tt }
@@ -115,7 +127,7 @@ country_event = {
 country_event = {
 	id = tfrkphn.6812
 	title = tfrkphn.6812.t
-	desc = tfrkphn.6812.d
+	desc = TFRKPHN_lg_6812_a
 	picture = GFX_TFRKPHN_exile_c12
 	is_triggered_only = yes
 	option = { name = TFRKPHN_ex_ok custom_effect_tooltip = TFRKPHN_ex_d12_tt }
@@ -125,13 +137,12 @@ country_event = {
 country_event = {
 	id = tfrkphn.695
 	title = tfrkphn.695.t
-	desc = tfrkphn.695.d
+	desc = TFRKPHN_lg_695_a
 	picture = GFX_TFRKPHN_exile_p695
 	is_triggered_only = yes
 	option = {
-		name = tfrkphn.695.a
-		custom_effect_tooltip = TFRKPHN_ex_p695_tt
-		hidden_effect = { add_to_variable = { TFRKPHN_ex_rs = 0.01 } TFRKPHN_ex_refresh = yes }
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8137 } }
 	}
 }
 
@@ -139,13 +150,12 @@ country_event = {
 country_event = {
 	id = tfrkphn.696
 	title = tfrkphn.696.t
-	desc = tfrkphn.696.d
+	desc = TFRKPHN_lg_696_a
 	picture = GFX_TFRKPHN_exile_p696
 	is_triggered_only = yes
 	option = {
-		name = tfrkphn.696.a
-		custom_effect_tooltip = TFRKPHN_ex_p696_tt
-		hidden_effect = { add_to_variable = { TFRKPHN_ex_bv = 0.01 } TFRKPHN_ex_refresh = yes }
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8138 } }
 	}
 }
 
@@ -153,7 +163,7 @@ country_event = {
 country_event = {
 	id = tfrkphn.687
 	title = tfrkphn.687.t
-	desc = tfrkphn.687.d
+	desc = TFRKPHN_lg_687_a
 	picture = GFX_TFRKPHN_exile_e687
 	is_triggered_only = yes
 	option = {
@@ -181,18 +191,12 @@ country_event = {
 country_event = {
 	id = tfrkphn.698
 	title = tfrkphn.698.t
-	desc = tfrkphn.698.d
+	desc = TFRKPHN_lg_698_a
 	picture = GFX_TFRKPHN_exile_e698
 	is_triggered_only = yes
 	option = {
-		name = tfrkphn.698.a
-		set_country_flag = TFRKPHN_ex_wave2
-		custom_effect_tooltip = TFRKPHN_ex_wave2_tt
-		hidden_effect = {
-			add_to_variable = { TFRKPHN_ex_rs = 0.01 }
-			add_to_variable = { TFRKPHN_ex_gripe = 1 }
-			TFRKPHN_ex_refresh = yes
-		}
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8139 } }
 	}
 }
 
@@ -200,17 +204,11 @@ country_event = {
 country_event = {
 	id = tfrkphn.688
 	title = tfrkphn.688.t
-	desc = tfrkphn.688.d
+	desc = TFRKPHN_lg_688_a
 	picture = GFX_TFRKPHN_exile_e688
 	is_triggered_only = yes
 	option = {
-		name = tfrkphn.688.a
-		custom_effect_tooltip = TFRKPHN_ex_688a_tt
-		hidden_effect = { add_to_variable = { TFRKPHN_ex_rs = 0.02 } TFRKPHN_ex_refresh = yes }
-	}
-	option = {
-		name = tfrkphn.688.b
-		custom_effect_tooltip = TFRKPHN_ex_688b_tt
-		hidden_effect = { add_to_variable = { TFRKPHN_ex_bv = 0.02 } TFRKPHN_ex_refresh = yes }
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8134 } }
 	}
 }

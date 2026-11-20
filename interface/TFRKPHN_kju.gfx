@@ -1,4 +1,8 @@
 spriteTypes = {
+	spriteType = { name = "GFX_TFRKPHN_kju_hague" texturefile = "gfx/event_pictures/TFRKPHN_kju_hague.png" }
+	spriteType = { name = "GFX_TFRKPHN_kju_seoul" texturefile = "gfx/event_pictures/TFRKPHN_kju_seoul.png" }
 	spriteType = { name = "GFX_TFRKPHN_kju_6993" texturefile = "gfx/event_pictures/TFRKPHN_kju_6993.png" }
+	spriteType = { name = "GFX_TFRKPHN_kju_raid" texturefile = "gfx/event_pictures/TFRKPHN_kju_raid.png" }
+	spriteType = { name = "GFX_TFRKPHN_kju_raid2" texturefile = "gfx/event_pictures/TFRKPHN_kju_raid2.png" }
 	spriteType = { name = "GFX_TFRKPHN_kju_news" texturefile = "gfx/event_pictures/TFRKPHN_kju_news.png" }
 }

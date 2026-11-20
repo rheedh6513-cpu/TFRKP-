@@ -5,107 +5,137 @@ add_namespace = tfrkphn
 country_event = {
 	id = tfrkphn.610
 	title = tfrkphn.610.t
-	desc = tfrkphn.610.d
+	desc = TFRKPHN_lg_610_a
 	picture = GFX_TFRKPHN_mega_1_1
 	is_triggered_only = yes
-	option = { name = TFRKPHN_mega_ev_ok }
+	option = {
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8037 } }
+	}
 }
 
 # 수도권 2단계: 3기 신도시
 country_event = {
 	id = tfrkphn.611
 	title = tfrkphn.611.t
-	desc = tfrkphn.611.d
+	desc = TFRKPHN_lg_611_a
 	picture = GFX_TFRKPHN_mega_1_2
 	is_triggered_only = yes
-	option = { name = TFRKPHN_mega_ev_ok }
+	option = {
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8038 } }
+	}
 }
 
 # 수도권 3단계: 여의도 디지털금융특구
 country_event = {
 	id = tfrkphn.612
 	title = tfrkphn.612.t
-	desc = tfrkphn.612.d
+	desc = TFRKPHN_lg_612_a
 	picture = GFX_TFRKPHN_mega_1_3
 	is_triggered_only = yes
-	option = { name = TFRKPHN_mega_ev_ok }
+	option = {
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8039 } }
+	}
 }
 
 # 수도권 4단계: 한강 르네상스
 country_event = {
 	id = tfrkphn.613
 	title = tfrkphn.613.t
-	desc = tfrkphn.613.d
+	desc = TFRKPHN_lg_613_a
 	picture = GFX_TFRKPHN_mega_1_4
 	is_triggered_only = yes
-	option = { name = TFRKPHN_mega_ev_ok }
+	option = {
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8040 } }
+	}
 }
 
 # 수도권 5단계: 용산국제업무지구
 country_event = {
 	id = tfrkphn.614
 	title = tfrkphn.614.t
-	desc = tfrkphn.614.d
+	desc = TFRKPHN_lg_614_a
 	picture = GFX_TFRKPHN_mega_1_5
 	is_triggered_only = yes
-	option = { name = TFRKPHN_mega_ev_ok custom_effect_tooltip = TFRKPHN_mega_done_1_tt }
+	option = {
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8041 } }
+	}
 }
 
 # 충청권 1단계: 충청권 광역철도
 country_event = {
 	id = tfrkphn.615
 	title = tfrkphn.615.t
-	desc = tfrkphn.615.d
+	desc = TFRKPHN_lg_615_a
 	picture = GFX_TFRKPHN_mega_2_1
 	is_triggered_only = yes
-	option = { name = TFRKPHN_mega_ev_ok }
+	option = {
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8042 } }
+	}
 }
 
 # 충청권 2단계: 대덕특구 재창조
 country_event = {
 	id = tfrkphn.616
 	title = tfrkphn.616.t
-	desc = tfrkphn.616.d
+	desc = TFRKPHN_lg_616_a
 	picture = GFX_TFRKPHN_mega_2_2
 	is_triggered_only = yes
-	option = { name = TFRKPHN_mega_ev_ok }
+	option = {
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8043 } }
+	}
 }
 
 # 충청권 3단계: 오송 바이오 단지
 country_event = {
 	id = tfrkphn.617
 	title = tfrkphn.617.t
-	desc = tfrkphn.617.d
+	desc = TFRKPHN_lg_617_a
 	picture = GFX_TFRKPHN_mega_2_3
 	is_triggered_only = yes
-	option = { name = TFRKPHN_mega_ev_ok }
+	option = {
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8044 } }
+	}
 }
 
 # 충청권 4단계: 청주공항 거점화
 country_event = {
 	id = tfrkphn.618
 	title = tfrkphn.618.t
-	desc = tfrkphn.618.d
+	desc = TFRKPHN_lg_618_a
 	picture = GFX_TFRKPHN_mega_2_4
 	is_triggered_only = yes
-	option = { name = TFRKPHN_mega_ev_ok }
+	option = {
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8045 } }
+	}
 }
 
 # 충청권 5단계: 국회 세종의사당
 country_event = {
 	id = tfrkphn.619
 	title = tfrkphn.619.t
-	desc = tfrkphn.619.d
+	desc = TFRKPHN_lg_619_a
 	picture = GFX_TFRKPHN_mega_2_5
 	is_triggered_only = yes
-	option = { name = TFRKPHN_mega_ev_ok custom_effect_tooltip = TFRKPHN_mega_done_2_tt }
+	option = {
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8046 } }
+	}
 }
 
 # 호남권 1단계: 광주와 나주 광역철도
 country_event = {
 	id = tfrkphn.620
 	title = tfrkphn.620.t
-	desc = tfrkphn.620.d
+	desc = TFRKPHN_lg_620_a
 	picture = GFX_TFRKPHN_mega_3_1
 	is_triggered_only = yes
 	option = { name = TFRKPHN_mega_ev_ok }
@@ -115,97 +145,124 @@ country_event = {
 country_event = {
 	id = tfrkphn.621
 	title = tfrkphn.621.t
-	desc = tfrkphn.621.d
+	desc = TFRKPHN_lg_621_a
 	picture = GFX_TFRKPHN_mega_3_2
 	is_triggered_only = yes
-	option = { name = TFRKPHN_mega_ev_ok }
+	option = {
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8047 } }
+	}
 }
 
 # 호남권 3단계: 에너지 밸리
 country_event = {
 	id = tfrkphn.622
 	title = tfrkphn.622.t
-	desc = tfrkphn.622.d
+	desc = TFRKPHN_lg_622_a
 	picture = GFX_TFRKPHN_mega_3_3
 	is_triggered_only = yes
-	option = { name = TFRKPHN_mega_ev_ok }
+	option = {
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8048 } }
+	}
 }
 
 # 호남권 4단계: 여수와 광양 산업 벨트
 country_event = {
 	id = tfrkphn.623
 	title = tfrkphn.623.t
-	desc = tfrkphn.623.d
+	desc = TFRKPHN_lg_623_a
 	picture = GFX_TFRKPHN_mega_3_4
 	is_triggered_only = yes
-	option = { name = TFRKPHN_mega_ev_ok }
+	option = {
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8049 } }
+	}
 }
 
 # 호남권 5단계: 새만금
 country_event = {
 	id = tfrkphn.624
 	title = tfrkphn.624.t
-	desc = tfrkphn.624.d
+	desc = TFRKPHN_lg_624_a
 	picture = GFX_TFRKPHN_mega_3_5
 	is_triggered_only = yes
-	option = { name = TFRKPHN_mega_ev_ok custom_effect_tooltip = TFRKPHN_mega_done_3_tt }
+	option = {
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8050 } }
+	}
 }
 
 # 대구경북 1단계: 대구권 광역철도
 country_event = {
 	id = tfrkphn.625
 	title = tfrkphn.625.t
-	desc = tfrkphn.625.d
+	desc = TFRKPHN_lg_625_a
 	picture = GFX_TFRKPHN_mega_4_1
 	is_triggered_only = yes
-	option = { name = TFRKPHN_mega_ev_ok }
+	option = {
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8051 } }
+	}
 }
 
 # 대구경북 2단계: 구미 산업단지 재편
 country_event = {
 	id = tfrkphn.626
 	title = tfrkphn.626.t
-	desc = tfrkphn.626.d
+	desc = TFRKPHN_lg_626_a
 	picture = GFX_TFRKPHN_mega_4_2
 	is_triggered_only = yes
-	option = { name = TFRKPHN_mega_ev_ok }
+	option = {
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8052 } }
+	}
 }
 
 # 대구경북 3단계: 포항 이차전지 단지
 country_event = {
 	id = tfrkphn.627
 	title = tfrkphn.627.t
-	desc = tfrkphn.627.d
+	desc = TFRKPHN_lg_627_a
 	picture = GFX_TFRKPHN_mega_4_3
 	is_triggered_only = yes
-	option = { name = TFRKPHN_mega_ev_ok }
+	option = {
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8053 } }
+	}
 }
 
 # 대구경북 4단계: 대구 로봇과 물 산업
 country_event = {
 	id = tfrkphn.628
 	title = tfrkphn.628.t
-	desc = tfrkphn.628.d
+	desc = TFRKPHN_lg_628_a
 	picture = GFX_TFRKPHN_mega_4_4
 	is_triggered_only = yes
-	option = { name = TFRKPHN_mega_ev_ok }
+	option = {
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8054 } }
+	}
 }
 
 # 대구경북 5단계: 통합신공항
 country_event = {
 	id = tfrkphn.629
 	title = tfrkphn.629.t
-	desc = tfrkphn.629.d
+	desc = TFRKPHN_lg_629_a
 	picture = GFX_TFRKPHN_mega_4_5
 	is_triggered_only = yes
-	option = { name = TFRKPHN_mega_ev_ok custom_effect_tooltip = TFRKPHN_mega_done_4_tt }
+	option = {
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8055 } }
+	}
 }
 
 # 부울경 1단계: 부울경 광역철도
 country_event = {
 	id = tfrkphn.630
 	title = tfrkphn.630.t
-	desc = tfrkphn.630.d
+	desc = TFRKPHN_lg_630_a
 	picture = GFX_TFRKPHN_mega_5_1
 	is_triggered_only = yes
 	option = { name = TFRKPHN_mega_ev_ok }
@@ -215,38 +272,50 @@ country_event = {
 country_event = {
 	id = tfrkphn.631
 	title = tfrkphn.631.t
-	desc = tfrkphn.631.d
+	desc = TFRKPHN_lg_631_a
 	picture = GFX_TFRKPHN_mega_5_2
 	is_triggered_only = yes
-	option = { name = TFRKPHN_mega_ev_ok }
+	option = {
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8056 } }
+	}
 }
 
 # 부울경 3단계: 울산 수소와 해상풍력
 country_event = {
 	id = tfrkphn.632
 	title = tfrkphn.632.t
-	desc = tfrkphn.632.d
+	desc = TFRKPHN_lg_632_a
 	picture = GFX_TFRKPHN_mega_5_3
 	is_triggered_only = yes
-	option = { name = TFRKPHN_mega_ev_ok }
+	option = {
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8057 } }
+	}
 }
 
 # 부울경 4단계: 창원 기계 방산 단지
 country_event = {
 	id = tfrkphn.633
 	title = tfrkphn.633.t
-	desc = tfrkphn.633.d
+	desc = TFRKPHN_lg_633_a
 	picture = GFX_TFRKPHN_mega_5_4
 	is_triggered_only = yes
-	option = { name = TFRKPHN_mega_ev_ok }
+	option = {
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8058 } }
+	}
 }
 
 # 부울경 5단계: 가덕도신공항
 country_event = {
 	id = tfrkphn.634
 	title = tfrkphn.634.t
-	desc = tfrkphn.634.d
+	desc = TFRKPHN_lg_634_a
 	picture = GFX_TFRKPHN_mega_5_5
 	is_triggered_only = yes
-	option = { name = TFRKPHN_mega_ev_ok custom_effect_tooltip = TFRKPHN_mega_done_5_tt }
+	option = {
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8059 } }
+	}
 }

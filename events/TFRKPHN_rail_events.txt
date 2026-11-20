@@ -5,7 +5,7 @@ add_namespace = tfrkphn
 country_event = {
 	id = tfrkphn.671
 	title = tfrkphn.671.t
-	desc = tfrkphn.671.d
+	desc = TFRKPHN_lg_671_a
 	picture = GFX_TFRKPHN_rail_open
 	is_triggered_only = yes
 	option = { name = TFRKPHN_rail_ev_ok add_political_power = 15 }
@@ -15,7 +15,7 @@ country_event = {
 country_event = {
 	id = tfrkphn.672
 	title = tfrkphn.672.t
-	desc = tfrkphn.672.d
+	desc = TFRKPHN_lg_672_a
 	picture = GFX_TFRKPHN_rail_open
 	is_triggered_only = yes
 	option = { name = TFRKPHN_rail_ev_ok add_political_power = 15 }
@@ -25,7 +25,7 @@ country_event = {
 country_event = {
 	id = tfrkphn.673
 	title = tfrkphn.673.t
-	desc = tfrkphn.673.d
+	desc = TFRKPHN_lg_673_a
 	picture = GFX_TFRKPHN_rail_open
 	is_triggered_only = yes
 	option = { name = TFRKPHN_rail_ev_ok add_political_power = 15 }
@@ -35,7 +35,7 @@ country_event = {
 country_event = {
 	id = tfrkphn.674
 	title = tfrkphn.674.t
-	desc = tfrkphn.674.d
+	desc = TFRKPHN_lg_674_a
 	picture = GFX_TFRKPHN_rail_open
 	is_triggered_only = yes
 	option = { name = TFRKPHN_rail_ev_ok add_political_power = 15 }
@@ -45,7 +45,7 @@ country_event = {
 country_event = {
 	id = tfrkphn.675
 	title = tfrkphn.675.t
-	desc = tfrkphn.675.d
+	desc = TFRKPHN_lg_675_a
 	picture = GFX_TFRKPHN_rail_open
 	is_triggered_only = yes
 	option = { name = TFRKPHN_rail_ev_ok add_political_power = 15 }
@@ -55,27 +55,33 @@ country_event = {
 country_event = {
 	id = tfrkphn.676
 	title = tfrkphn.676.t
-	desc = tfrkphn.676.d
+	desc = TFRKPHN_lg_676_a
 	picture = GFX_TFRKPHN_rail_open_n
 	is_triggered_only = yes
-	option = { name = TFRKPHN_rail_ev_ok add_political_power = 15 }
+	option = {
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8140 } }
+	}
 }
 
 # 경원선, 원산까지
 country_event = {
 	id = tfrkphn.677
 	title = tfrkphn.677.t
-	desc = tfrkphn.677.d
+	desc = TFRKPHN_lg_677_a
 	picture = GFX_TFRKPHN_rail_open_n
 	is_triggered_only = yes
-	option = { name = TFRKPHN_rail_ev_ok add_political_power = 15 }
+	option = {
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8141 } }
+	}
 }
 
 # 동해북부선 개통
 country_event = {
 	id = tfrkphn.678
 	title = tfrkphn.678.t
-	desc = tfrkphn.678.d
+	desc = TFRKPHN_lg_678_a
 	picture = GFX_TFRKPHN_rail_open_n
 	is_triggered_only = yes
 	option = { name = TFRKPHN_rail_ev_ok add_political_power = 15 }
@@ -85,8 +91,11 @@ country_event = {
 country_event = {
 	id = tfrkphn.679
 	title = tfrkphn.679.t
-	desc = tfrkphn.679.d
+	desc = TFRKPHN_lg_679_a
 	picture = GFX_TFRKPHN_rail_open_n
 	is_triggered_only = yes
-	option = { name = TFRKPHN_rail_ev_ok add_political_power = 15 }
+	option = {
+		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.8142 } }
+	}
 }
