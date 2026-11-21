@@ -1,0 +1,6 @@
+# [안내] 우원식 루트 결말 조건. woo_build.py가 만든다.
+TFRKPHN_woo_good = {
+	check_variable = { TFRKPHN_woo_open > 49.5 }
+	has_stability > 0.45
+	has_completed_focus = TFRKPHN_woo_18
+}

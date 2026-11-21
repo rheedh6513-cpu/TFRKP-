@@ -1,0 +1,286 @@
+# [안내] 우원식 중점 트리. woo_build.py가 만든다.
+focus_tree = {
+	id = TFRKPHN_woo_tree
+	country = { factor = 0 }
+	default = no
+	continuous_focus_position = { x = 50 y = 1170 }
+	focus = {
+		id = TFRKPHN_woo_01
+		icon = GFX_goal_generic_political_pressure
+		x = 6
+		y = 0
+		cost = 5
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 50
+			set_variable = { TFRKPHN_woo_open = 20 }
+			set_country_flag = TFRKPHN_woo_route
+		}
+	}
+	focus = {
+		id = TFRKPHN_woo_02
+		icon = GFX_goal_generic_propaganda
+		x = 1
+		y = 1
+		cost = 8
+		prerequisite = { focus = TFRKPHN_woo_01 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			custom_effect_tooltip = TFRKPHN_woo_openp10_tt
+			hidden_effect = { add_to_variable = { TFRKPHN_woo_open = 10 } clamp_variable = { var = TFRKPHN_woo_open min = 0 max = 100 } TFRKPHN_woo_check = yes }
+			add_political_power = -25
+		}
+	}
+	focus = {
+		id = TFRKPHN_woo_03
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 1
+		y = 2
+		cost = 9
+		prerequisite = { focus = TFRKPHN_woo_02 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			custom_effect_tooltip = TFRKPHN_woo_openp10_tt
+			hidden_effect = { add_to_variable = { TFRKPHN_woo_open = 10 } clamp_variable = { var = TFRKPHN_woo_open min = 0 max = 100 } TFRKPHN_woo_check = yes }
+			add_stability = -0.04
+		}
+	}
+	focus = {
+		id = TFRKPHN_woo_04
+		icon = GFX_goal_generic_radar
+		x = 1
+		y = 3
+		cost = 8
+		prerequisite = { focus = TFRKPHN_woo_03 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			custom_effect_tooltip = TFRKPHN_woo_openp5_tt
+			hidden_effect = { add_to_variable = { TFRKPHN_woo_open = 5 } clamp_variable = { var = TFRKPHN_woo_open min = 0 max = 100 } TFRKPHN_woo_check = yes }
+			add_stability = 0.02
+		}
+	}
+	focus = {
+		id = TFRKPHN_woo_05
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 0
+		y = 4
+		cost = 9
+		prerequisite = { focus = TFRKPHN_woo_04 }
+		mutually_exclusive = { focus = TFRKPHN_woo_06 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			custom_effect_tooltip = TFRKPHN_woo_openp15_tt
+			hidden_effect = { add_to_variable = { TFRKPHN_woo_open = 15 } clamp_variable = { var = TFRKPHN_woo_open min = 0 max = 100 } TFRKPHN_woo_check = yes }
+			add_stability = -0.08
+			country_event = tfrkphn.7047
+		}
+	}
+	focus = {
+		id = TFRKPHN_woo_06
+		icon = GFX_goal_generic_handshake
+		x = 2
+		y = 4
+		cost = 9
+		prerequisite = { focus = TFRKPHN_woo_04 }
+		mutually_exclusive = { focus = TFRKPHN_woo_05 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			custom_effect_tooltip = TFRKPHN_woo_openm5_tt
+			hidden_effect = { add_to_variable = { TFRKPHN_woo_open = -5 } clamp_variable = { var = TFRKPHN_woo_open min = 0 max = 100 } TFRKPHN_woo_check = yes }
+			add_stability = 0.08
+			country_event = tfrkphn.7048
+		}
+	}
+	focus = {
+		id = TFRKPHN_woo_07
+		icon = GFX_goal_generic_political_pressure
+		x = 4
+		y = 1
+		cost = 8
+		prerequisite = { focus = TFRKPHN_woo_01 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			custom_effect_tooltip = TFRKPHN_woo_openp5_tt
+			hidden_effect = { add_to_variable = { TFRKPHN_woo_open = 5 } clamp_variable = { var = TFRKPHN_woo_open min = 0 max = 100 } TFRKPHN_woo_check = yes }
+			add_political_power = 25
+		}
+	}
+	focus = {
+		id = TFRKPHN_woo_08
+		icon = GFX_goal_generic_scales
+		x = 4
+		y = 2
+		cost = 8
+		prerequisite = { focus = TFRKPHN_woo_07 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_stability = 0.04
+			add_political_power = -25
+		}
+	}
+	focus = {
+		id = TFRKPHN_woo_09
+		icon = GFX_goal_generic_political_pressure
+		x = 4
+		y = 3
+		cost = 9
+		prerequisite = { focus = TFRKPHN_woo_08 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			custom_effect_tooltip = TFRKPHN_woo_openp5_tt
+			hidden_effect = { add_to_variable = { TFRKPHN_woo_open = 5 } clamp_variable = { var = TFRKPHN_woo_open min = 0 max = 100 } TFRKPHN_woo_check = yes }
+			add_political_power = 25
+		}
+	}
+	focus = {
+		id = TFRKPHN_woo_10
+		icon = GFX_goal_generic_scales
+		x = 8
+		y = 1
+		cost = 9
+		prerequisite = { focus = TFRKPHN_woo_01 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_stability = 0.03
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = TFRKPHN_woo_11
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 8
+		y = 2
+		cost = 8
+		prerequisite = { focus = TFRKPHN_woo_10 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			custom_effect_tooltip = TFRKPHN_woo_openp5_tt
+			hidden_effect = { add_to_variable = { TFRKPHN_woo_open = 5 } clamp_variable = { var = TFRKPHN_woo_open min = 0 max = 100 } TFRKPHN_woo_check = yes }
+			add_stability = -0.02
+		}
+	}
+	focus = {
+		id = TFRKPHN_woo_12
+		icon = GFX_goal_generic_army_doctrines
+		x = 8
+		y = 3
+		cost = 9
+		prerequisite = { focus = TFRKPHN_woo_11 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_stability = 0.05
+			add_war_support = -0.03
+			set_country_flag = TFRKPHN_woo_army_law
+		}
+	}
+	focus = {
+		id = TFRKPHN_woo_13
+		icon = GFX_goal_generic_scales
+		x = 8
+		y = 4
+		cost = 8
+		prerequisite = { focus = TFRKPHN_woo_12 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			custom_effect_tooltip = TFRKPHN_woo_openp5_tt
+			hidden_effect = { add_to_variable = { TFRKPHN_woo_open = 5 } clamp_variable = { var = TFRKPHN_woo_open min = 0 max = 100 } TFRKPHN_woo_check = yes }
+			add_stability = 0.02
+		}
+	}
+	focus = {
+		id = TFRKPHN_woo_14
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 11
+		y = 1
+		cost = 8
+		prerequisite = { focus = TFRKPHN_woo_01 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 25
+			random_owned_controlled_state = { add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+		}
+	}
+	focus = {
+		id = TFRKPHN_woo_15
+		icon = GFX_goal_generic_trade
+		x = 11
+		y = 2
+		cost = 9
+		prerequisite = { focus = TFRKPHN_woo_14 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_stability = -0.02
+			random_owned_controlled_state = { add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+		}
+	}
+	focus = {
+		id = TFRKPHN_woo_16
+		icon = GFX_goal_generic_consumer_goods
+		x = 11
+		y = 3
+		cost = 8
+		prerequisite = { focus = TFRKPHN_woo_15 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = TFRKPHN_woo_17
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 11
+		y = 4
+		cost = 8
+		prerequisite = { focus = TFRKPHN_woo_16 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_stability = 0.03
+			random_owned_controlled_state = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
+		}
+	}
+	focus = {
+		id = TFRKPHN_woo_18
+		icon = GFX_goal_generic_handshake
+		x = 6
+		y = 5
+		cost = 10
+		prerequisite = { focus = TFRKPHN_woo_09 }
+		prerequisite = { focus = TFRKPHN_woo_13 }
+		prerequisite = { focus = TFRKPHN_woo_15 }
+		prerequisite = { focus = TFRKPHN_woo_05 focus = TFRKPHN_woo_06 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_stability = 0.08
+			add_political_power = 75
+			country_event = tfrkphn.7049
+		}
+	}
+	focus = {
+		id = TFRKPHN_woo_19
+		icon = GFX_goal_generic_political_pressure
+		x = 6
+		y = 6
+		cost = 10
+		prerequisite = { focus = TFRKPHN_woo_18 }
+		prerequisite = { focus = TFRKPHN_woo_17 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			country_event = tfrkphn.7050
+		}
+	}
+	focus = {
+		id = TFRKPHN_woo_20
+		icon = GFX_goal_generic_political_pressure
+		x = 6
+		y = 7
+		cost = 3
+		prerequisite = { focus = TFRKPHN_woo_19 }
+		available = { date > 2028.4.1 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			custom_effect_tooltip = TFRKPHN_woo_end_tt
+			hidden_effect = { if = { limit = { TFRKPHN_woo_good = yes } country_event = tfrkphn.7051 } else = { country_event = tfrkphn.7052 } }
+		}
+	}
+}

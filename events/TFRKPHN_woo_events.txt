@@ -1,0 +1,132 @@
+# [안내] 우원식 루트 이벤트. woo_build.py가 만든다.
+add_namespace = tfrkphn
+country_event = {
+	id = tfrkphn.7047
+	title = tfrkphn.7047.t
+	desc = tfrkphn.7047.d
+	picture = GFX_TFRKPHN_imp_doc
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7047.a
+		add_political_power = 25
+	}
+}
+country_event = {
+	id = tfrkphn.7048
+	title = tfrkphn.7048.t
+	desc = tfrkphn.7048.d
+	picture = GFX_TFRKPHN_imp_gavel
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7048.a
+		add_political_power = 50
+	}
+}
+country_event = {
+	id = tfrkphn.7049
+	title = tfrkphn.7049.t
+	desc = tfrkphn.7049.d
+	picture = GFX_TFRKPHN_imp_gavel
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7049.a
+		add_political_power = 50
+	}
+}
+country_event = {
+	id = tfrkphn.7050
+	title = tfrkphn.7050.t
+	desc = tfrkphn.7050.d
+	picture = GFX_TFRKPHN_imp_doc
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7050.a
+		add_stability = 0.05
+	}
+}
+country_event = {
+	id = tfrkphn.7051
+	title = tfrkphn.7051.t
+	desc = tfrkphn.7051.d
+	picture = GFX_TFRKPHN_e21_aug
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7051.a
+		add_stability = 0.15
+		add_political_power = 100
+		set_country_flag = TFRKPHN_woo_ended
+		set_country_flag = TFRKPHN_woo_good_end
+	}
+}
+country_event = {
+	id = tfrkphn.7052
+	title = tfrkphn.7052.t
+	desc = tfrkphn.7052.d
+	picture = GFX_TFRKPHN_e21_taegeuk
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7052.a
+		add_stability = -0.10
+		set_country_flag = TFRKPHN_woo_ended
+		set_country_flag = TFRKPHN_woo_bitter_end
+	}
+}
+country_event = {
+	id = tfrkphn.7053
+	title = tfrkphn.7053.t
+	desc = tfrkphn.7053.d
+	picture = GFX_TFRKPHN_e21_taegeuk
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7053.a
+		add_stability = -0.05
+		add_political_power = -50
+	}
+}
+country_event = {
+	id = tfrkphn.7055
+	title = tfrkphn.7055.t
+	desc = tfrkphn.7055.d
+	picture = GFX_TFRKPHN_imp_gavel
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7055.a
+		add_political_power = 75
+		add_stability = 0.03
+	}
+}
+country_event = {
+	id = tfrkphn.7056
+	title = tfrkphn.7056.t
+	desc = tfrkphn.7056.d
+	picture = GFX_TFRKPHN_e21_aug
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7056.a
+		add_stability = 0.05
+	}
+}
+country_event = {
+	id = tfrkphn.7057
+	title = tfrkphn.7057.t
+	desc = tfrkphn.7057.d
+	picture = GFX_TFRKPHN_imp_doc
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7057.a
+		add_political_power = 50
+		add_stability = 0.02
+	}
+}
+country_event = {
+	id = tfrkphn.7058
+	title = tfrkphn.7058.t
+	desc = tfrkphn.7058.d
+	picture = GFX_TFRKPHN_e21_taegeuk
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7058.a
+		add_stability = 0.05
+		add_political_power = -25
+	}
+}
