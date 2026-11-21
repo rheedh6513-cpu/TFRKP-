@@ -7,7 +7,8 @@ TFRKPHN_oh_ansim_category = {
 		fire_only_once = yes
 		visible = { check_variable = { TFRKPHN_an_stage = 0 } }
 		available = { always = yes }
-		complete_effect = { set_country_flag = TFRKPHN_dn_TFRKPHN_an_d1 custom_effect_tooltip = TFRKPHN_an_wait1_tt }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes set_country_flag = TFRKPHN_dn_TFRKPHN_an_d1 custom_effect_tooltip = TFRKPHN_an_wait1_tt }
 		remove_effect = {
 			custom_effect_tooltip = TFRKPHN_an_d1_tt
 			hidden_effect = {
@@ -27,7 +28,8 @@ TFRKPHN_oh_ansim_category = {
 		fire_only_once = yes
 		visible = { check_variable = { TFRKPHN_an_stage = 1 } }
 		available = { always = yes }
-		complete_effect = { set_country_flag = TFRKPHN_dn_TFRKPHN_an_d2 custom_effect_tooltip = TFRKPHN_an_wait2_tt }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes set_country_flag = TFRKPHN_dn_TFRKPHN_an_d2 custom_effect_tooltip = TFRKPHN_an_wait2_tt }
 		remove_effect = {
 			custom_effect_tooltip = TFRKPHN_an_d2_tt
 			hidden_effect = {
@@ -47,7 +49,8 @@ TFRKPHN_oh_ansim_category = {
 		fire_only_once = yes
 		visible = { check_variable = { TFRKPHN_an_stage = 2 } }
 		available = { custom_trigger_tooltip = { tooltip = TFRKPHN_an_c5_tt has_completed_focus = TFRKPHN_oh_se_hoon_c5 } }
-		complete_effect = { set_country_flag = TFRKPHN_dn_TFRKPHN_an_d3 custom_effect_tooltip = TFRKPHN_an_wait3_tt }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes set_country_flag = TFRKPHN_dn_TFRKPHN_an_d3 custom_effect_tooltip = TFRKPHN_an_wait3_tt }
 		remove_effect = {
 			custom_effect_tooltip = TFRKPHN_an_d3_tt
 			hidden_effect = {
@@ -67,7 +70,8 @@ TFRKPHN_oh_ansim_category = {
 		fire_only_once = yes
 		visible = { check_variable = { TFRKPHN_an_stage = 3 } }
 		available = { always = yes }
-		complete_effect = { set_country_flag = TFRKPHN_dn_TFRKPHN_an_d4 custom_effect_tooltip = TFRKPHN_an_wait4_tt }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes set_country_flag = TFRKPHN_dn_TFRKPHN_an_d4 custom_effect_tooltip = TFRKPHN_an_wait4_tt }
 		remove_effect = {
 			custom_effect_tooltip = TFRKPHN_an_d4_tt
 			hidden_effect = {

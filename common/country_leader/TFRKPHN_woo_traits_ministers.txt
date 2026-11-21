@@ -1,0 +1,33 @@
+# [안내] 우원식 정부 장관 특성. woo_cab_build.py가 만든다. (박진의 외교통일위원장 출신 특성은 조원진 내각 것을 같이 쓴다)
+leader_traits = {
+	# 정세균
+	TFRKPHN_trait_former_speaker = {
+		random = no
+		political_power_factor = 0.05
+		stability_factor = 0.03
+	}
+	# 김동연
+	TFRKPHN_trait_finance_deputy_pm = {
+		random = no
+		consumer_goods_factor = -0.02
+		production_speed_industrial_complex_factor = 0.05
+	}
+	# 김부겸
+	TFRKPHN_trait_interior_minister = {
+		random = no
+		stability_factor = 0.03
+		production_speed_infrastructure_factor = 0.05
+	}
+	# 서훈
+	TFRKPHN_trait_nis_career = {
+		random = no
+		encryption_factor = 0.10
+		decryption_factor = 0.05
+	}
+	# 김용우
+	TFRKPHN_trait_army_chief = {
+		random = no
+		army_org_factor = 0.05
+		training_time_army_factor = -0.05
+	}
+}

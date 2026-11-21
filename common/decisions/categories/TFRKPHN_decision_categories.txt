@@ -7,6 +7,7 @@ TFRKPHN_hong_minsim_category = {
 	visible_when_empty = yes
 	visible = {
 		has_country_flag = TFRKP_HN_hong_president
+		NOT = { has_country_flag = TFRKPHN_imp_done }	# 탄핵 뒤에는 홍준표 정부의 탭을 감춘다 (2026-11-21)
 		has_completed_focus = TFRKPHN_hong_b01_02
 	}
 	scripted_gui = TFRKPHN_hong_minsim_gui
@@ -18,6 +19,7 @@ TFRKPHN_hong_invest_category = {
 	allowed = { original_tag = KOR }
 	visible = {
 		has_country_flag = TFRKP_HN_hong_president
+		NOT = { has_country_flag = TFRKPHN_imp_done }	# 탄핵 뒤에는 홍준표 정부의 탭을 감춘다 (2026-11-21)
 		has_completed_focus = TFRKPHN_hong_b01_02
 	}
 }
@@ -28,6 +30,7 @@ TFRKPHN_hong_rear_category = {
 	allowed = { original_tag = KOR }
 	visible = {
 		has_country_flag = TFRKP_HN_hong_president
+		NOT = { has_country_flag = TFRKPHN_imp_done }	# 탄핵 뒤에는 홍준표 정부의 탭을 감춘다 (2026-11-21)
 		has_completed_focus = TFRKPHN_hong_b02_08
 	}
 }
@@ -39,6 +42,7 @@ TFRKPHN_hong_hourglass_category = {
 	visible_when_empty = yes
 	visible = {
 		has_country_flag = TFRKP_HN_hong_president
+		NOT = { has_country_flag = TFRKPHN_imp_done }	# 탄핵 뒤에는 홍준표 정부의 탭을 감춘다 (2026-11-21)
 		has_completed_focus = TFRKPHN_hong_b03_04
 		# 다 끝내고 이벤트 528을 닫으면 30일 동안만 더 보인다
 		OR = { NOT = { has_country_flag = TFRKPHN_hourglass_done } has_country_flag = TFRKPHN_hourglass_closing }
@@ -54,6 +58,7 @@ TFRKPHN_hong_amend_category = {
 	visible = {
 		# 개헌은 홍준표 대통령 전용: 양안전쟁 개입(b02_02) + 중국 패전(승전)일 때만
 		has_country_flag = TFRKP_HN_hong_president
+		NOT = { has_country_flag = TFRKPHN_imp_done }	# 탄핵 뒤에는 홍준표 정부의 탭을 감춘다 (2026-11-21)
 		has_completed_focus = TFRKPHN_hong_b02_02
 		has_global_flag = PRC_taiwan_war_lost
 		OR = {
@@ -82,6 +87,7 @@ TFRKPHN_crime_category = {
 	visible_when_empty = yes
 	visible = {
 		has_country_flag = TFRKP_HN_hong_president
+		NOT = { has_country_flag = TFRKPHN_imp_done }	# 탄핵 뒤에는 홍준표 정부의 탭을 감춘다 (2026-11-21)
 		has_completed_focus = TFRKPHN_hong_b03_06
 		NOT = { has_country_flag = TFRKPHN_crime_closed }
 	}

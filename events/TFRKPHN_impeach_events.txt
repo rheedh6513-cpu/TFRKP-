@@ -43,6 +43,7 @@ country_event = {
 	immediate = {
 		hidden_effect = {
 			set_country_flag = TFRKPHN_imp_done
+			remove_mission = TFRKPHN_support_decay_mission	# 홍준표 민심 미션을 멈춘다 (2026-11-21)
 			clr_country_flag = TFRKPHN_imp_on
 			clr_country_flag = TFRKPHN_imp_ready
 			if = { limit = { NOT = { has_character = KOR_lee_in_je_char } } recruit_character = KOR_lee_in_je_char }
@@ -207,12 +208,19 @@ country_event = {
 			add_popularity = { ideology = authoritarian_democrat popularity = 0.25 }
 			set_politics = { ruling_party = authoritarian_democrat elections_allowed = yes }
 			if = { limit = { NOT = { has_character = KOR_cho_won_jin_char } } recruit_character = KOR_cho_won_jin_char }
-			KOR_cho_won_jin_char = { promote_character = yes }
+			KOR_cho_won_jin_char = { remove_country_leader_role = { ideology = ultra_conservatism } add_country_leader_role = { country_leader = { desc = TFRKPHN_cho_desc ideology = ultra_conservatism expire = "2065.1.1" } promote_leader = yes } }
+			if = { limit = { NOT = { has_idea = KOR_conservation_idea } } add_ideas = KOR_conservation_idea }	# 보수 정신 (사용자 2026-11-21 16시 53분)
+			TFRKPHN_cho_cabinet_appoint = yes	# 조원진 내각 (cho_cab_build.py)
+			load_focus_tree = { tree = TFRKPHN_cho_tree keep_completed = no }	# 조원진 초기 중점 (cho_build.py, 2026-11-21)
+			mark_focus_tree_layout_dirty = yes
 		}
 	}
 	option = {
 		name = tfrkphn.7031.a
 		custom_effect_tooltip = TFRKPHN_e21_cho_tt
+		custom_effect_tooltip = TFRKPHN_cho_cabinet_tt
+		show_ideas_tooltip = KOR_conservation_idea
+		custom_effect_tooltip = TFRKPHN_cho_tree_tt
 		add_stability = -0.05
 		add_war_support = 0.10
 		hidden_effect = { country_event = { id = tfrkphn.7039 days = 1 } }
@@ -272,7 +280,7 @@ country_event = {
 	option = {
 		name = tfrkphn.7039.a
 		add_stability = -0.05
-		hidden_effect = { country_event = { id = tfrkphn.7040 days = 180 } }
+		hidden_effect = { country_event = { id = tfrkphn.7059 days = 180 } }
 	}
 }
 country_event = {
@@ -342,21 +350,25 @@ country_event = {
 	is_triggered_only = yes
 	immediate = {
 		hidden_effect = {
+			TFRKPHN_cho_cabinet_clear = yes
+			TFRKPHN_woo_cabinet_appoint = yes	# 우원식 내각 (woo_cab_build.py)
+			if = { limit = { has_idea = KOR_conservation_idea } remove_ideas = KOR_conservation_idea }
 			set_country_flag = TFRKPHN_woo_pres
 			clr_country_flag = TFRKPHN_pres_cycle
-			set_party_name = { ideology = social_liberal long_name = TFRKPHN_woo_party_long name = TFRKPHN_woo_party }
-			add_popularity = { ideology = social_liberal popularity = 0.25 }
+			TFRKPHN_hjr_coalition_set = yes	# 헌정회복연대: 보수주의~사회민주주의 연정 (woo_cab_build.py)
 			set_politics = { ruling_party = social_liberal elections_allowed = yes }
 			if = { limit = { NOT = { has_character = TFRKPHN_woo_won_shik_char } } recruit_character = TFRKPHN_woo_won_shik_char }
 			TFRKPHN_woo_won_shik_char = { promote_character = yes }
-			load_focus_tree = { tree = TFRKPHN_woo_tree keep_completed = no }	# 우원식 루트 (woo_build.py, 2026-11-21)
+			load_focus_tree = { tree = TFRKPHN_woo_init_tree keep_completed = no }	# 우원식 초기 중점 (woo_init_build.py). 본 트리는 7045에서
 			mark_focus_tree_layout_dirty = yes
 		}
 	}
 	option = {
 		name = tfrkphn.7044.a
 		custom_effect_tooltip = TFRKPHN_woo_pres_tt
-		custom_effect_tooltip = TFRKPHN_woo_tree_tt
+		custom_effect_tooltip = TFRKPHN_woo_cabinet_tt
+		show_ideas_tooltip = TFRKPHN_hjr_coalition_idea
+		custom_effect_tooltip = TFRKPHN_woo_init_tree_tt
 		add_stability = 0.10
 		hidden_effect = { country_event = { id = tfrkphn.7055 days = 10 } country_event = { id = tfrkphn.7056 days = 30 } country_event = { id = tfrkphn.7057 days = 60 } country_event = { id = tfrkphn.7058 days = 90 } country_event = { id = tfrkphn.7045 days = 120 } }
 	}
@@ -370,8 +382,10 @@ country_event = {
 	option = {
 		name = tfrkphn.7045.a
 		custom_effect_tooltip = TFRKPHN_woo_23f_tt
+		custom_effect_tooltip = TFRKPHN_woo_tree_tt
 		add_stability = 0.10
 		set_country_flag = TFRKPHN_woo_army_out
+		hidden_effect = { load_focus_tree = { tree = TFRKPHN_woo_tree keep_completed = no } mark_focus_tree_layout_dirty = yes }
 	}
 }
 country_event = {
@@ -395,7 +409,9 @@ country_event = {
 		name = tfrkphn.7054.a
 		custom_effect_tooltip = TFRKPHN_cho_block_tt
 		add_political_power = -50
-		hidden_effect = { country_event = { id = tfrkphn.7041 days = 12 } }
+		set_country_flag = TFRKPHN_cho_block
+		custom_effect_tooltip = TFRKPHN_cho_block_open_tt
+		hidden_effect = { country_event = { id = tfrkphn.7060 days = 30 } }
 	}
 	option = {
 		name = tfrkphn.7054.b

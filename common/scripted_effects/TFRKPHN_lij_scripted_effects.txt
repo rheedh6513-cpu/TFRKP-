@@ -1,0 +1,18 @@
+# [안내] 이인제 과로 게이트. lij_build.py가 만든다.
+TFRKPHN_lij_tire_dec = {
+	if = { limit = { TFRKPHN_lij_active = yes } add_to_variable = { TFRKPHN_lij_fatigue = 4 } set_country_flag = { flag = TFRKPHN_lij_busy value = 1 days = 14 } TFRKPHN_lij_check = yes }
+}
+TFRKPHN_lij_tire_focus = {
+	if = { limit = { TFRKPHN_lij_active = yes } add_to_variable = { TFRKPHN_lij_fatigue = 6 } set_country_flag = { flag = TFRKPHN_lij_busy value = 1 days = 14 } TFRKPHN_lij_check = yes }
+}
+TFRKPHN_lij_check = {
+	hidden_effect = {
+		if = {
+			limit = { check_variable = { TFRKPHN_lij_fatigue > 99 } }
+			add_to_variable = { TFRKPHN_lij_collapse = 1 }
+			if = { limit = { check_variable = { TFRKPHN_lij_collapse < 2 } } set_variable = { TFRKPHN_lij_fatigue = 40 } country_event = { id = tfrkphn.7077 days = 1 } }
+			else_if = { limit = { check_variable = { TFRKPHN_lij_collapse < 3 } } set_variable = { TFRKPHN_lij_fatigue = 30 } country_event = { id = tfrkphn.7078 days = 1 } }
+			else = { set_variable = { TFRKPHN_lij_fatigue = 0 } set_country_flag = TFRKPHN_lij_dying country_event = { id = tfrkphn.7079 days = 1 } }
+		}
+	}
+}

@@ -10,7 +10,8 @@ TFRKPHN_oh_mega_category = {
 		}
 		available = { num_of_civilian_factories_available_for_projects > 1 }
 		modifier = { civilian_factory_use = 2 }
-		complete_effect = { custom_effect_tooltip = TFRKPHN_redev_wait_tt }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes custom_effect_tooltip = TFRKPHN_redev_wait_tt }
 		remove_effect = {
 			custom_effect_tooltip = TFRKPHN_redev_tt
 			hidden_effect = {

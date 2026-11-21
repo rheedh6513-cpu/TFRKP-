@@ -6,6 +6,7 @@ TFRKPHN_oh_byelec_category = {
 		days_re_enable = 3
 		visible = { always = yes }
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			
 			custom_effect_tooltip = TFRKPHN_by_debate_tt
 			hidden_effect = { set_variable = { TFRKPHN_sd_delta = 1 } TFRKPHN_sd_add_north = yes set_variable = { TFRKPHN_sd_delta = 1 } TFRKPHN_sd_add_se = yes set_variable = { TFRKPHN_sd_delta = 1 } TFRKPHN_sd_add_sw = yes TFRKPHN_sd_refresh = yes TFRKPHN_by_poll = yes }
@@ -18,6 +19,7 @@ TFRKPHN_oh_byelec_category = {
 		days_re_enable = 3
 		visible = { always = yes }
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			add_stability = -0.01
 			custom_effect_tooltip = TFRKPHN_by_visit_tt
 			hidden_effect = { set_variable = { TFRKPHN_sd_delta = 2 } TFRKPHN_sd_add_north = yes set_variable = { TFRKPHN_sd_delta = 2 } TFRKPHN_sd_add_se = yes set_variable = { TFRKPHN_sd_delta = 2 } TFRKPHN_sd_add_sw = yes TFRKPHN_sd_refresh = yes TFRKPHN_by_poll = yes }

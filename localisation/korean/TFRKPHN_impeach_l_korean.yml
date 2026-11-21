@@ -1,7 +1,7 @@
 ﻿l_korean:
  # [안내] 탄핵 정국 (개입 패전 갈래). impeach_build.py가 만든다.
  TFRKPHN_impeach_category:0 "탄핵 정국"
- TFRKPHN_impeach_category_desc:0 "패전의 책임을 대통령에게 묻는 목소리가 국회에서 탄핵소추로 모이고 있습니다. 소추안이 가결되려면 재적 의원 3분의 2인 §Y200명§!의 찬성이 필요합니다.\n\n탄핵 찬성 예상: §R[?TFRKPHN_imp_yes|0]§!명 / 200명\n  처음부터 찬성하는 야당(민주당계, 진보정당): [?TFRKPHN_imp_opp|0]명\n  탄핵파(여당 이탈, 강경 보수, 무소속): §R[?TFRKPHN_imp_def|0]§!명\n\n탄핵파는 §Y14일§!마다 §R6명§!씩 늘어납니다. §Y책임회피§!나 §Y역공시도§! 중점을 마친 뒤 찬성이 §Y200명§!을 넘으면 소추안이 가결되고 §Y이인제 국무총리§!가 대통령 권한대행이 됩니다.\n\n---- §Y국회 원내 구성§! ----\n§3민주당계§!: [?KOR_NatAsm_DP_seats|0]석\n§A보수정당§!: [?KOR_NatAsm_PPP_seats|0]석\n§d진보정당§!: [?KOR_NatAsm_JP_seats|0]석\n§O제3지대§!: [?KOR_NatAsm_PP_seats|0]석\n§g무소속§!: [?KOR_NatAsm_Ind_seats|0]석\n§W우익 정당§!: [?KOR_NatAsm_ORP_seats|0]석"
+ TFRKPHN_impeach_category_desc:0 "\n\n\n\n\n\n\n\n\n\n\n\n패전의 책임을 대통령에게 묻는 목소리가 국회에서 탄핵소추로 모이고 있습니다. 소추안이 가결되려면 재적 의원 3분의 2인 §Y200명§!의 찬성이 필요합니다.\n\n탄핵 찬성 예상: §R[?TFRKPHN_imp_yes|0]§!명 / 200명\n  처음부터 찬성하는 야당(민주당계, 진보정당): [?TFRKPHN_imp_opp|0]명\n  탄핵파(여당 이탈, 강경 보수, 무소속): §R[?TFRKPHN_imp_def|0]§!명\n\n탄핵파는 §Y14일§!마다 §R6명§!씩 늘어납니다. §Y책임회피§!나 §Y역공시도§! 중점을 마친 뒤 찬성이 §Y200명§!을 넘으면 소추안이 가결되고 §Y이인제 국무총리§!가 대통령 권한대행이 됩니다.\n\n---- §Y국회 원내 구성§! ----\n§3민주당계§!: [?KOR_NatAsm_DP_seats|0]석\n§A보수정당§!: [?KOR_NatAsm_PPP_seats|0]석\n§d진보정당§!: [?KOR_NatAsm_JP_seats|0]석\n§O제3지대§!: [?KOR_NatAsm_PP_seats|0]석\n§g무소속§!: [?KOR_NatAsm_Ind_seats|0]석\n§W우익 정당§!: [?KOR_NatAsm_ORP_seats|0]석"
  TFRKPHN_imp_opposition_moves:0 "여당 안의 동요"
  TFRKPHN_imp_opposition_moves_desc:0 "패전 뒤로 여당 의원들이 하나둘 대통령과 거리를 두고 있습니다. 지역구의 민심을 먼저 걱정하는 의원들은 탄핵소추에 이름을 올릴지 저울질하고 있습니다."
  TFRKPHN_imp_moves_tt:0 "탄핵파가 §R6명§! 늘어납니다."
@@ -113,8 +113,8 @@
  TFRKPHN_cho_newconst_tt:0 "§R대통령 권한이 강한 새 헌법§!이 들어섭니다. 국회는 대통령을 탄핵하기 어려워집니다."
  TFRKPHN_cho_removed_tt:0 "조원진 대통령이 파면됩니다. §Y이인제 국무총리§!가 다시 권한대행을 맡고, §Y60일§! 뒤 대통령 선거가 치러집니다."
  TFRKPHN_woo_pres_tt:0 "§Y우원식§!이 무소속 대통령이 됩니다."
- TFRKPHN_woo_party:0 "무소속"
- TFRKPHN_woo_party_long:0 "무소속"
+ TFRKPHN_woo_party:0 "헌정회복연대"
+ TFRKPHN_woo_party_long:0 "헌정 회복을 위한 국민연대"
  TFRKPHN_woo_won_shik_char:0 "우원식"
  TFRKPHN_woo_23f_tt:0 "쿠데타가 실패합니다. §Y군의 정치 개입 금지법§!이 통과됩니다."
  TFRKPHN_e21_nohope_tt:0 "§g아무 희망도 없지만§!"

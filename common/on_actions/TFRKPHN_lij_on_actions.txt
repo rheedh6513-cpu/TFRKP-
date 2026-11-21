@@ -1,0 +1,15 @@
+# [안내] 이인제 과로 게이트: 일주일마다 과로 -1. lij_build.py가 만든다.
+on_actions = {
+	on_daily_KOR = {
+		effect = {
+			if = {
+				limit = { TFRKPHN_lij_active = yes NOT = { has_country_flag = TFRKPHN_lij_tick } }
+				set_country_flag = { flag = TFRKPHN_lij_tick value = 1 days = 7 }
+				# 2주 동안 디시전도 중점도 끝내지 않았으면 더 많이 쉰다 (사용자 2026-11-21 18시 15분)
+				if = { limit = { has_country_flag = TFRKPHN_lij_busy } subtract_from_variable = { TFRKPHN_lij_fatigue = 1 } }
+				else = { subtract_from_variable = { TFRKPHN_lij_fatigue = 4 } }
+				if = { limit = { check_variable = { TFRKPHN_lij_fatigue < 0 } } set_variable = { TFRKPHN_lij_fatigue = 0 } }
+			}
+		}
+	}
+}

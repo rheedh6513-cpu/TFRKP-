@@ -1,0 +1,13 @@
+# [안내] 이인제 과로 게이트 탭 그림. lij_build.py가 만든다.
+scripted_gui = {
+	TFRKPHN_lij_gui = {
+		context_type = decision_category
+		window_name = "TFRKPHN_lij_window"
+		visible = { always = yes }
+		triggers = {
+			TFRKPHN_lij_x_1_visible = { check_variable = { TFRKPHN_lij_collapse > 0 } }
+			TFRKPHN_lij_x_2_visible = { check_variable = { TFRKPHN_lij_collapse > 1 } }
+			TFRKPHN_lij_x_3_visible = { check_variable = { TFRKPHN_lij_collapse > 2 } }
+		}
+	}
+}

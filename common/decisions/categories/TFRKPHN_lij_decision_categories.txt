@@ -1,0 +1,8 @@
+# [안내] 이인제 과로 게이트. lij_build.py가 만든다.
+TFRKPHN_lij_category = {
+	icon = generic_political_actions
+	priority = 210
+	scripted_gui = TFRKPHN_lij_gui	# 忍 세 개 + 쓰러질 때마다 엑스자 (사용자 2026-11-21 18시 14분)
+	allowed = { original_tag = KOR }
+	visible = { TFRKPHN_lij_active = yes }
+}

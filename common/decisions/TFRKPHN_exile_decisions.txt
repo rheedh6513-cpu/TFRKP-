@@ -11,7 +11,8 @@ TFRKPHN_oh_exile_category = {
 			num_of_civilian_factories_available_for_projects > 0
 		}
 		modifier = { civilian_factory_use = 1 }
-		complete_effect = { set_country_flag = TFRKPHN_dn_TFRKPHN_ex_d1 custom_effect_tooltip = TFRKPHN_ex_wait_tt }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes set_country_flag = TFRKPHN_dn_TFRKPHN_ex_d1 custom_effect_tooltip = TFRKPHN_ex_wait_tt }
 		remove_effect = {
 			custom_effect_tooltip = TFRKPHN_ex_d1_tt
 			custom_effect_tooltip = TFRKPHN_ex_gripe_tt
@@ -36,7 +37,8 @@ TFRKPHN_oh_exile_category = {
 			num_of_civilian_factories_available_for_projects > 0
 		}
 		modifier = { civilian_factory_use = 1 }
-		complete_effect = { set_country_flag = TFRKPHN_dn_TFRKPHN_ex_d2 custom_effect_tooltip = TFRKPHN_ex_wait_tt }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes set_country_flag = TFRKPHN_dn_TFRKPHN_ex_d2 custom_effect_tooltip = TFRKPHN_ex_wait_tt }
 		remove_effect = {
 			custom_effect_tooltip = TFRKPHN_ex_d2_tt
 			custom_effect_tooltip = TFRKPHN_ex_gripe_tt
@@ -61,7 +63,8 @@ TFRKPHN_oh_exile_category = {
 			num_of_civilian_factories_available_for_projects > 0
 		}
 		modifier = { civilian_factory_use = 1 }
-		complete_effect = { set_country_flag = TFRKPHN_dn_TFRKPHN_ex_d3 custom_effect_tooltip = TFRKPHN_ex_wait_tt }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes set_country_flag = TFRKPHN_dn_TFRKPHN_ex_d3 custom_effect_tooltip = TFRKPHN_ex_wait_tt }
 		remove_effect = {
 			custom_effect_tooltip = TFRKPHN_ex_d3_tt
 			custom_effect_tooltip = TFRKPHN_ex_gripe_tt
@@ -86,7 +89,8 @@ TFRKPHN_oh_exile_category = {
 			num_of_civilian_factories_available_for_projects > 0
 		}
 		modifier = { civilian_factory_use = 1 }
-		complete_effect = { set_country_flag = TFRKPHN_dn_TFRKPHN_ex_d4 custom_effect_tooltip = TFRKPHN_ex_wait_tt }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes set_country_flag = TFRKPHN_dn_TFRKPHN_ex_d4 custom_effect_tooltip = TFRKPHN_ex_wait_tt }
 		remove_effect = {
 			custom_effect_tooltip = TFRKPHN_ex_d4_tt
 			custom_effect_tooltip = TFRKPHN_ex_gripe_tt
@@ -111,7 +115,8 @@ TFRKPHN_oh_exile_category = {
 			num_of_civilian_factories_available_for_projects > 0
 		}
 		modifier = { civilian_factory_use = 1 }
-		complete_effect = { set_country_flag = TFRKPHN_dn_TFRKPHN_ex_d5 custom_effect_tooltip = TFRKPHN_ex_wait_tt }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes set_country_flag = TFRKPHN_dn_TFRKPHN_ex_d5 custom_effect_tooltip = TFRKPHN_ex_wait_tt }
 		remove_effect = {
 			custom_effect_tooltip = TFRKPHN_ex_d5_tt
 			custom_effect_tooltip = TFRKPHN_ex_gripe_tt
@@ -136,7 +141,8 @@ TFRKPHN_oh_exile_category = {
 			num_of_civilian_factories_available_for_projects > 0
 		}
 		modifier = { civilian_factory_use = 1 }
-		complete_effect = { set_country_flag = TFRKPHN_dn_TFRKPHN_ex_d6 custom_effect_tooltip = TFRKPHN_ex_wait_tt }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes set_country_flag = TFRKPHN_dn_TFRKPHN_ex_d6 custom_effect_tooltip = TFRKPHN_ex_wait_tt }
 		remove_effect = {
 			custom_effect_tooltip = TFRKPHN_ex_d6_tt
 			custom_effect_tooltip = TFRKPHN_ex_gripe_tt
@@ -161,7 +167,8 @@ TFRKPHN_oh_exile_category = {
 			num_of_civilian_factories_available_for_projects > 0
 		}
 		modifier = { civilian_factory_use = 1 }
-		complete_effect = { set_country_flag = TFRKPHN_dn_TFRKPHN_ex_d7 custom_effect_tooltip = TFRKPHN_ex_wait_tt }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes set_country_flag = TFRKPHN_dn_TFRKPHN_ex_d7 custom_effect_tooltip = TFRKPHN_ex_wait_tt }
 		remove_effect = {
 			custom_effect_tooltip = TFRKPHN_ex_d7_tt
 			custom_effect_tooltip = TFRKPHN_ex_gripe_tt
@@ -186,7 +193,8 @@ TFRKPHN_oh_exile_category = {
 			num_of_civilian_factories_available_for_projects > 0
 		}
 		modifier = { civilian_factory_use = 1 }
-		complete_effect = { set_country_flag = TFRKPHN_dn_TFRKPHN_ex_d8 custom_effect_tooltip = TFRKPHN_ex_wait_tt }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes set_country_flag = TFRKPHN_dn_TFRKPHN_ex_d8 custom_effect_tooltip = TFRKPHN_ex_wait_tt }
 		remove_effect = {
 			custom_effect_tooltip = TFRKPHN_ex_d8_tt
 			custom_effect_tooltip = TFRKPHN_ex_gripe_tt
@@ -211,7 +219,8 @@ TFRKPHN_oh_exile_category = {
 			num_of_civilian_factories_available_for_projects > 0
 		}
 		modifier = { civilian_factory_use = 1 }
-		complete_effect = { set_country_flag = TFRKPHN_dn_TFRKPHN_ex_d9 custom_effect_tooltip = TFRKPHN_ex_wait_tt }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes set_country_flag = TFRKPHN_dn_TFRKPHN_ex_d9 custom_effect_tooltip = TFRKPHN_ex_wait_tt }
 		remove_effect = {
 			custom_effect_tooltip = TFRKPHN_ex_d9_tt
 			custom_effect_tooltip = TFRKPHN_ex_gripe_tt
@@ -236,7 +245,8 @@ TFRKPHN_oh_exile_category = {
 			num_of_civilian_factories_available_for_projects > 0
 		}
 		modifier = { civilian_factory_use = 1 }
-		complete_effect = { set_country_flag = TFRKPHN_dn_TFRKPHN_ex_d10 custom_effect_tooltip = TFRKPHN_ex_wait_tt }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes set_country_flag = TFRKPHN_dn_TFRKPHN_ex_d10 custom_effect_tooltip = TFRKPHN_ex_wait_tt }
 		remove_effect = {
 			custom_effect_tooltip = TFRKPHN_ex_d10_tt
 			custom_effect_tooltip = TFRKPHN_ex_gripe_tt
@@ -261,7 +271,8 @@ TFRKPHN_oh_exile_category = {
 			num_of_civilian_factories_available_for_projects > 0
 		}
 		modifier = { civilian_factory_use = 1 }
-		complete_effect = { set_country_flag = TFRKPHN_dn_TFRKPHN_ex_d11 custom_effect_tooltip = TFRKPHN_ex_wait_tt }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes set_country_flag = TFRKPHN_dn_TFRKPHN_ex_d11 custom_effect_tooltip = TFRKPHN_ex_wait_tt }
 		remove_effect = {
 			custom_effect_tooltip = TFRKPHN_ex_d11_tt
 			custom_effect_tooltip = TFRKPHN_ex_gripe_tt
@@ -286,7 +297,8 @@ TFRKPHN_oh_exile_category = {
 			num_of_civilian_factories_available_for_projects > 0
 		}
 		modifier = { civilian_factory_use = 1 }
-		complete_effect = { set_country_flag = TFRKPHN_dn_TFRKPHN_ex_d12 custom_effect_tooltip = TFRKPHN_ex_wait_tt }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes set_country_flag = TFRKPHN_dn_TFRKPHN_ex_d12 custom_effect_tooltip = TFRKPHN_ex_wait_tt }
 		remove_effect = {
 			custom_effect_tooltip = TFRKPHN_ex_d12_tt
 			custom_effect_tooltip = TFRKPHN_ex_gripe_tt

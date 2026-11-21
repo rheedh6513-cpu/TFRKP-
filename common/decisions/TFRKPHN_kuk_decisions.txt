@@ -7,7 +7,8 @@ TFRKPHN_hong_kuk_category = {
 		days_remove = 60
 		fire_only_once = yes
 		visible = { OR = { check_variable = { TFRKPHN_kuk_sel = 0 } check_variable = { TFRKPHN_kuk_sel = 1 } } }
-		complete_effect = { hidden_effect = { add_to_variable = { TFRKPHN_kuk_lv_gyeonggi = 1 } set_variable = { TFRKPHN_kuk_fr_gyeonggi = TFRKPHN_kuk_lv_gyeonggi } add_to_variable = { TFRKPHN_kuk_fr_gyeonggi = 1 } } custom_effect_tooltip = TFRKPHN_kuk_after_60_tt }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes hidden_effect = { add_to_variable = { TFRKPHN_kuk_lv_gyeonggi = 1 } set_variable = { TFRKPHN_kuk_fr_gyeonggi = TFRKPHN_kuk_lv_gyeonggi } add_to_variable = { TFRKPHN_kuk_fr_gyeonggi = 1 } } custom_effect_tooltip = TFRKPHN_kuk_after_60_tt }
 		remove_effect = {
 			set_country_flag = TFRKPHN_kuk_done_seohee
 			
@@ -23,7 +24,8 @@ TFRKPHN_hong_kuk_category = {
 		days_remove = 30
 		fire_only_once = yes
 		visible = { OR = { check_variable = { TFRKPHN_kuk_sel = 0 } check_variable = { TFRKPHN_kuk_sel = 2 } } }
-		complete_effect = { hidden_effect = { add_to_variable = { TFRKPHN_kuk_lv_gyeonggi = 1 } set_variable = { TFRKPHN_kuk_fr_gyeonggi = TFRKPHN_kuk_lv_gyeonggi } add_to_variable = { TFRKPHN_kuk_fr_gyeonggi = 1 } } custom_effect_tooltip = TFRKPHN_kuk_after_30_tt }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes hidden_effect = { add_to_variable = { TFRKPHN_kuk_lv_gyeonggi = 1 } set_variable = { TFRKPHN_kuk_fr_gyeonggi = TFRKPHN_kuk_lv_gyeonggi } add_to_variable = { TFRKPHN_kuk_fr_gyeonggi = 1 } } custom_effect_tooltip = TFRKPHN_kuk_after_30_tt }
 		remove_effect = {
 			set_country_flag = TFRKPHN_kuk_done_ottogi
 			
@@ -39,7 +41,8 @@ TFRKPHN_hong_kuk_category = {
 		days_remove = 60
 		fire_only_once = yes
 		visible = { OR = { check_variable = { TFRKPHN_kuk_sel = 0 } check_variable = { TFRKPHN_kuk_sel = 3 } } }
-		complete_effect = { hidden_effect = { add_to_variable = { TFRKPHN_kuk_lv_chungcheong = 1 } set_variable = { TFRKPHN_kuk_fr_chungcheong = TFRKPHN_kuk_lv_chungcheong } add_to_variable = { TFRKPHN_kuk_fr_chungcheong = 1 } } custom_effect_tooltip = TFRKPHN_kuk_after_60_tt }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes hidden_effect = { add_to_variable = { TFRKPHN_kuk_lv_chungcheong = 1 } set_variable = { TFRKPHN_kuk_fr_chungcheong = TFRKPHN_kuk_lv_chungcheong } add_to_variable = { TFRKPHN_kuk_fr_chungcheong = 1 } } custom_effect_tooltip = TFRKPHN_kuk_after_60_tt }
 		remove_effect = {
 			set_country_flag = TFRKPHN_kuk_done_kyeryong
 			
@@ -55,7 +58,8 @@ TFRKPHN_hong_kuk_category = {
 		days_remove = 30
 		fire_only_once = yes
 		visible = { OR = { check_variable = { TFRKPHN_kuk_sel = 0 } check_variable = { TFRKPHN_kuk_sel = 4 } } }
-		complete_effect = { hidden_effect = { add_to_variable = { TFRKPHN_kuk_lv_chungcheong = 1 } set_variable = { TFRKPHN_kuk_fr_chungcheong = TFRKPHN_kuk_lv_chungcheong } add_to_variable = { TFRKPHN_kuk_fr_chungcheong = 1 } } custom_effect_tooltip = TFRKPHN_kuk_after_30_tt }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes hidden_effect = { add_to_variable = { TFRKPHN_kuk_lv_chungcheong = 1 } set_variable = { TFRKPHN_kuk_fr_chungcheong = TFRKPHN_kuk_lv_chungcheong } add_to_variable = { TFRKPHN_kuk_fr_chungcheong = 1 } } custom_effect_tooltip = TFRKPHN_kuk_after_30_tt }
 		remove_effect = {
 			set_country_flag = TFRKPHN_kuk_done_mackis
 			
@@ -71,7 +75,8 @@ TFRKPHN_hong_kuk_category = {
 		days_remove = 60
 		fire_only_once = yes
 		visible = { OR = { check_variable = { TFRKPHN_kuk_sel = 0 } check_variable = { TFRKPHN_kuk_sel = 5 } } }
-		complete_effect = { hidden_effect = { add_to_variable = { TFRKPHN_kuk_lv_jeolla = 1 } set_variable = { TFRKPHN_kuk_fr_jeolla = TFRKPHN_kuk_lv_jeolla } add_to_variable = { TFRKPHN_kuk_fr_jeolla = 1 } } custom_effect_tooltip = TFRKPHN_kuk_after_60_tt }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes hidden_effect = { add_to_variable = { TFRKPHN_kuk_lv_jeolla = 1 } set_variable = { TFRKPHN_kuk_fr_jeolla = TFRKPHN_kuk_lv_jeolla } add_to_variable = { TFRKPHN_kuk_fr_jeolla = 1 } } custom_effect_tooltip = TFRKPHN_kuk_after_60_tt }
 		remove_effect = {
 			set_country_flag = TFRKPHN_kuk_done_woomi
 			
@@ -87,7 +92,8 @@ TFRKPHN_hong_kuk_category = {
 		days_remove = 30
 		fire_only_once = yes
 		visible = { OR = { check_variable = { TFRKPHN_kuk_sel = 0 } check_variable = { TFRKPHN_kuk_sel = 6 } } }
-		complete_effect = { hidden_effect = { add_to_variable = { TFRKPHN_kuk_lv_jeolla = 1 } set_variable = { TFRKPHN_kuk_fr_jeolla = TFRKPHN_kuk_lv_jeolla } add_to_variable = { TFRKPHN_kuk_fr_jeolla = 1 } } custom_effect_tooltip = TFRKPHN_kuk_after_30_tt }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes hidden_effect = { add_to_variable = { TFRKPHN_kuk_lv_jeolla = 1 } set_variable = { TFRKPHN_kuk_fr_jeolla = TFRKPHN_kuk_lv_jeolla } add_to_variable = { TFRKPHN_kuk_fr_jeolla = 1 } } custom_effect_tooltip = TFRKPHN_kuk_after_30_tt }
 		remove_effect = {
 			set_country_flag = TFRKPHN_kuk_done_bohae
 			
@@ -103,7 +109,8 @@ TFRKPHN_hong_kuk_category = {
 		days_remove = 60
 		fire_only_once = yes
 		visible = { OR = { check_variable = { TFRKPHN_kuk_sel = 0 } check_variable = { TFRKPHN_kuk_sel = 7 } } }
-		complete_effect = { hidden_effect = { add_to_variable = { TFRKPHN_kuk_lv_gangwon = 1 } set_variable = { TFRKPHN_kuk_fr_gangwon = TFRKPHN_kuk_lv_gangwon } add_to_variable = { TFRKPHN_kuk_fr_gangwon = 1 } } custom_effect_tooltip = TFRKPHN_kuk_after_60_tt }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes hidden_effect = { add_to_variable = { TFRKPHN_kuk_lv_gangwon = 1 } set_variable = { TFRKPHN_kuk_fr_gangwon = TFRKPHN_kuk_lv_gangwon } add_to_variable = { TFRKPHN_kuk_fr_gangwon = 1 } } custom_effect_tooltip = TFRKPHN_kuk_after_60_tt }
 		remove_effect = {
 			set_country_flag = TFRKPHN_kuk_done_daemyung
 			
@@ -119,7 +126,8 @@ TFRKPHN_hong_kuk_category = {
 		days_remove = 30
 		fire_only_once = yes
 		visible = { OR = { check_variable = { TFRKPHN_kuk_sel = 0 } check_variable = { TFRKPHN_kuk_sel = 8 } } }
-		complete_effect = { hidden_effect = { add_to_variable = { TFRKPHN_kuk_lv_gangwon = 1 } set_variable = { TFRKPHN_kuk_fr_gangwon = TFRKPHN_kuk_lv_gangwon } add_to_variable = { TFRKPHN_kuk_fr_gangwon = 1 } } custom_effect_tooltip = TFRKPHN_kuk_after_30_tt }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes hidden_effect = { add_to_variable = { TFRKPHN_kuk_lv_gangwon = 1 } set_variable = { TFRKPHN_kuk_fr_gangwon = TFRKPHN_kuk_lv_gangwon } add_to_variable = { TFRKPHN_kuk_fr_gangwon = 1 } } custom_effect_tooltip = TFRKPHN_kuk_after_30_tt }
 		remove_effect = {
 			set_country_flag = TFRKPHN_kuk_done_douzone
 			
@@ -135,7 +143,8 @@ TFRKPHN_hong_kuk_category = {
 		days_remove = 60
 		fire_only_once = yes
 		visible = { OR = { check_variable = { TFRKPHN_kuk_sel = 0 } check_variable = { TFRKPHN_kuk_sel = 9 } } }
-		complete_effect = { hidden_effect = { add_to_variable = { TFRKPHN_kuk_lv_gyeongsang = 1 } set_variable = { TFRKPHN_kuk_fr_gyeongsang = TFRKPHN_kuk_lv_gyeongsang } add_to_variable = { TFRKPHN_kuk_fr_gyeongsang = 1 } } custom_effect_tooltip = TFRKPHN_kuk_after_60_tt }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes hidden_effect = { add_to_variable = { TFRKPHN_kuk_lv_gyeongsang = 1 } set_variable = { TFRKPHN_kuk_fr_gyeongsang = TFRKPHN_kuk_lv_gyeongsang } add_to_variable = { TFRKPHN_kuk_fr_gyeongsang = 1 } } custom_effect_tooltip = TFRKPHN_kuk_after_60_tt }
 		remove_effect = {
 			set_country_flag = TFRKPHN_kuk_done_hshwasung
 			
@@ -151,7 +160,8 @@ TFRKPHN_hong_kuk_category = {
 		days_remove = 30
 		fire_only_once = yes
 		visible = { OR = { check_variable = { TFRKPHN_kuk_sel = 0 } check_variable = { TFRKPHN_kuk_sel = 10 } } }
-		complete_effect = { hidden_effect = { add_to_variable = { TFRKPHN_kuk_lv_gyeongsang = 1 } set_variable = { TFRKPHN_kuk_fr_gyeongsang = TFRKPHN_kuk_lv_gyeongsang } add_to_variable = { TFRKPHN_kuk_fr_gyeongsang = 1 } } custom_effect_tooltip = TFRKPHN_kuk_after_30_tt }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes hidden_effect = { add_to_variable = { TFRKPHN_kuk_lv_gyeongsang = 1 } set_variable = { TFRKPHN_kuk_fr_gyeongsang = TFRKPHN_kuk_lv_gyeongsang } add_to_variable = { TFRKPHN_kuk_fr_gyeongsang = 1 } } custom_effect_tooltip = TFRKPHN_kuk_after_30_tt }
 		remove_effect = {
 			set_country_flag = TFRKPHN_kuk_done_muhak
 			
@@ -167,7 +177,8 @@ TFRKPHN_hong_kuk_category = {
 		days_remove = 60
 		fire_only_once = yes
 		visible = { OR = { check_variable = { TFRKPHN_kuk_sel = 0 } check_variable = { TFRKPHN_kuk_sel = 11 } } }
-		complete_effect = { hidden_effect = { add_to_variable = { TFRKPHN_kuk_lv_jeju = 1 } set_variable = { TFRKPHN_kuk_fr_jeju = TFRKPHN_kuk_lv_jeju } add_to_variable = { TFRKPHN_kuk_fr_jeju = 1 } } custom_effect_tooltip = TFRKPHN_kuk_after_60_tt }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes hidden_effect = { add_to_variable = { TFRKPHN_kuk_lv_jeju = 1 } set_variable = { TFRKPHN_kuk_fr_jeju = TFRKPHN_kuk_lv_jeju } add_to_variable = { TFRKPHN_kuk_fr_jeju = 1 } } custom_effect_tooltip = TFRKPHN_kuk_after_60_tt }
 		remove_effect = {
 			set_country_flag = TFRKPHN_kuk_done_raon
 			
@@ -183,7 +194,8 @@ TFRKPHN_hong_kuk_category = {
 		days_remove = 30
 		fire_only_once = yes
 		visible = { OR = { check_variable = { TFRKPHN_kuk_sel = 0 } check_variable = { TFRKPHN_kuk_sel = 12 } } }
-		complete_effect = { hidden_effect = { add_to_variable = { TFRKPHN_kuk_lv_jeju = 1 } set_variable = { TFRKPHN_kuk_fr_jeju = TFRKPHN_kuk_lv_jeju } add_to_variable = { TFRKPHN_kuk_fr_jeju = 1 } } custom_effect_tooltip = TFRKPHN_kuk_after_30_tt }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes hidden_effect = { add_to_variable = { TFRKPHN_kuk_lv_jeju = 1 } set_variable = { TFRKPHN_kuk_fr_jeju = TFRKPHN_kuk_lv_jeju } add_to_variable = { TFRKPHN_kuk_fr_jeju = 1 } } custom_effect_tooltip = TFRKPHN_kuk_after_30_tt }
 		remove_effect = {
 			set_country_flag = TFRKPHN_kuk_done_jpdc
 			

@@ -1,0 +1,16 @@
+﻿l_korean:
+ # [안내] 조원진 정부 내각. cho_cab_build.py가 만든다.
+ TFRKPHN_faction_ORP:0 "§Y우리공화당§!"
+ TFRKPHN_hong_moon_jong_HM:0 "홍문종"
+ TFRKPHN_trait_orp_coleader:0 "공동대표 출신"
+ TFRKPHN_yoon_sang_hyeon_FM:0 "윤상현"
+ TFRKPHN_trait_foreign_committee_chair:0 "외교통일위원장 출신"
+ TFRKPHN_oh_kyung_hoon_EM:0 "오경훈"
+ TFRKPHN_trait_party_secretary:0 "사무총장 출신"
+ TFRKPHN_kim_jin_tae_IM:0 "김진태"
+ TFRKPHN_trait_prosecutor_governor:0 "검사 출신 도지사"
+ TFRKPHN_hwangbo_seung_hee_IntelM:0 "황보승희"
+ TFRKPHN_trait_city_council:0 "시의원 출신"
+ TFRKPHN_shin_won_sik_TM:0 "신원식"
+ TFRKPHN_trait_jcs_vice_chair:0 "합참 차장 출신"
+ TFRKPHN_cho_cabinet_tt:0 "§Y조원진 정부 내각§!이 들어섭니다. 홍준표 정부의 장관들은 물러납니다."

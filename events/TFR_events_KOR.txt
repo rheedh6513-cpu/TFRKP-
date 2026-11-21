@@ -240,6 +240,7 @@ country_event = {
 			if = {
 				limit = {
 					KOR_is_yoon_path = yes
+					NOT = { has_country_flag = TFRKP_HN_hong_president }	# 홍준표 루트는 패전해도 윤석열로 바뀌지 않고 홍준표 트리의 개입 패전 갈래로 간다 (2026-11-21)
 				}
 				set_politics = {
 					ruling_party = authoritarian_democrat
@@ -378,6 +379,7 @@ country_event = {
 			if = {
 				limit = {
 					KOR_is_yoon_path = yes
+					NOT = { has_country_flag = TFRKP_HN_hong_president }	# 홍준표 루트는 패전해도 윤석열로 바뀌지 않고 홍준표 트리의 개입 패전 갈래로 간다 (2026-11-21)
 				}
 				set_politics = {
 					ruling_party = authoritarian_democrat
@@ -420,6 +422,7 @@ country_event = {
 		if = {
 			limit = {
 				KOR_is_yoon_path = yes
+				NOT = { has_country_flag = TFRKP_HN_hong_president }	# 홍준표 루트는 패전해도 윤석열로 바뀌지 않고 홍준표 트리의 개입 패전 갈래로 간다 (2026-11-21)
 			}
 			complete_national_focus = KOR_defeat_free_democracy
 			country_event = { id = korea.46 hours = 6 }

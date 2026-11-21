@@ -1,0 +1,13 @@
+guiTypes = {
+	# 이인제 과로 게이트: 忍 세 개를 삼각형으로, 쓰러질 때마다 하나씩 엑스자
+	containerWindowType = {
+		name = "TFRKPHN_lij_window"
+		position = { x = 0 y = 0 }
+		size = { width = 489 height = 167 }
+		clipping = no
+		iconType = { name = "TFRKPHN_lij_back" spriteType = "GFX_TFRKPHN_lij_cat_picture" position = { x = 0 y = 0 } }
+		iconType = { name = "TFRKPHN_lij_x_1" spriteType = "GFX_TFRKPHN_lij_x" position = { x = 210 y = 1 } }
+		iconType = { name = "TFRKPHN_lij_x_2" spriteType = "GFX_TFRKPHN_lij_x" position = { x = 162 y = 80 } }
+		iconType = { name = "TFRKPHN_lij_x_3" spriteType = "GFX_TFRKPHN_lij_x" position = { x = 257 y = 80 } }
+	}
+}

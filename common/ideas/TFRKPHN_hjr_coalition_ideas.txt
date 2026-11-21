@@ -1,0 +1,14 @@
+# [안내] 헌정회복연대 연정. woo_cab_build.py가 만든다.
+ideas = {
+	country = {
+		TFRKPHN_hjr_coalition_idea = {
+			picture = TFRKPHN_hjr_coalition
+			allowed = { original_tag = KOR }
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = -0.05
+				drift_defence_factor = 0.20
+			}
+		}
+	}
+}

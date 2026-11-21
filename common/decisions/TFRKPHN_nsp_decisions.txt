@@ -9,7 +9,8 @@ TFRKPHN_nsp_category = {
 		target_trigger = { FROM = { exists = yes is_in_faction = no has_war = no } }
 		visible = { FROM = { is_in_faction = no has_war = no } }
 		available = { custom_trigger_tooltip = { tooltip = TFRKPHN_nsp_need_tt JAP = { exists = yes is_in_faction_with = KOR has_country_flag = JAP_cold_war_flag } } }
-		complete_effect = { custom_effect_tooltip = TFRKPHN_nsp_wait_tt }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes custom_effect_tooltip = TFRKPHN_nsp_wait_tt }
 		remove_effect = {
 			custom_effect_tooltip = TFRKPHN_nsp_fx_tt
 			FROM = { add_opinion_modifier = { target = KOR modifier = TFRKPHN_pd_partner } }

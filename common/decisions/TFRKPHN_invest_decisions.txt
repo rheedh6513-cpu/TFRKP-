@@ -18,6 +18,7 @@ TFRKPHN_hong_invest_category = {
 		}
 		available = { country_exists = PRC }
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_after_14_tt
 			hidden_effect = { set_country_flag = TFRKPHN_hong_choice_pending }
 			custom_effect_tooltip = TFRKPHN_hong_choose_prc_tt
@@ -46,6 +47,7 @@ TFRKPHN_hong_invest_category = {
 		}
 		available = { country_exists = CHI }
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_after_14_tt
 			hidden_effect = { set_country_flag = TFRKPHN_hong_choice_pending }
 			custom_effect_tooltip = TFRKPHN_hong_choose_chi_tt
@@ -77,6 +79,7 @@ TFRKPHN_hong_invest_category = {
 		}
 		custom_cost_text = dx_more_than_5B
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_after_14_tt
 			set_temp_variable = { var = income_var_temp value = -5 }
 			add_income = yes
@@ -128,6 +131,7 @@ TFRKPHN_hong_invest_category = {
 		}
 		custom_cost_text = dx_more_than_5B
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_after_14_tt
 			set_temp_variable = { var = income_var_temp value = -5 }
 			add_income = yes
@@ -179,6 +183,7 @@ TFRKPHN_hong_invest_category = {
 		}
 		custom_cost_text = dx_more_than_5B
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_after_14_tt
 			set_temp_variable = { var = income_var_temp value = -5 }
 			add_income = yes
@@ -230,6 +235,7 @@ TFRKPHN_hong_invest_category = {
 		}
 		custom_cost_text = dx_more_than_5B
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_after_14_tt
 			set_temp_variable = { var = income_var_temp value = -5 }
 			add_income = yes
@@ -281,6 +287,7 @@ TFRKPHN_hong_invest_category = {
 		}
 		custom_cost_text = dx_more_than_5B
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_after_14_tt
 			set_temp_variable = { var = income_var_temp value = -5 }
 			add_income = yes
@@ -332,6 +339,7 @@ TFRKPHN_hong_invest_category = {
 		}
 		custom_cost_text = dx_more_than_5B
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_after_14_tt
 			set_temp_variable = { var = income_var_temp value = -5 }
 			add_income = yes
@@ -383,6 +391,7 @@ TFRKPHN_hong_invest_category = {
 		}
 		custom_cost_text = dx_more_than_5B
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_after_14_tt
 			set_temp_variable = { var = income_var_temp value = -5 }
 			add_income = yes
@@ -434,6 +443,7 @@ TFRKPHN_hong_invest_category = {
 		}
 		custom_cost_text = dx_more_than_5B
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_after_14_tt
 			set_temp_variable = { var = income_var_temp value = -5 }
 			add_income = yes
@@ -485,6 +495,7 @@ TFRKPHN_hong_invest_category = {
 		}
 		custom_cost_text = dx_more_than_5B
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_after_14_tt
 			set_temp_variable = { var = income_var_temp value = -5 }
 			add_income = yes
@@ -536,6 +547,7 @@ TFRKPHN_hong_invest_category = {
 		}
 		custom_cost_text = dx_more_than_5B
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_after_14_tt
 			set_temp_variable = { var = income_var_temp value = -5 }
 			add_income = yes
@@ -587,6 +599,7 @@ TFRKPHN_hong_invest_category = {
 		}
 		custom_cost_text = dx_more_than_5B
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_after_14_tt
 			set_temp_variable = { var = income_var_temp value = -5 }
 			add_income = yes
@@ -638,6 +651,7 @@ TFRKPHN_hong_invest_category = {
 		}
 		custom_cost_text = dx_more_than_5B
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_after_14_tt
 			set_temp_variable = { var = income_var_temp value = -5 }
 			add_income = yes
@@ -697,6 +711,7 @@ TFRKPHN_hong_invest_category = {
 		}
 		custom_cost_text = dx_more_than_5B
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_after_14_tt
 			set_temp_variable = { var = income_var_temp value = -5 }
 			add_income = yes
@@ -762,6 +777,7 @@ TFRKPHN_hong_invest_category = {
 		}
 		custom_cost_text = dx_more_than_5B
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_after_14_tt
 			set_temp_variable = { var = income_var_temp value = -5 }
 			add_income = yes

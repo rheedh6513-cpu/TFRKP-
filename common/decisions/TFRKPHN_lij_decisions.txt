@@ -1,0 +1,28 @@
+# [안내] 이인제 과로 게이트. lij_build.py가 만든다.
+TFRKPHN_lij_category = {
+	TFRKPHN_lij_rest = {
+		icon = generic_political_discourse
+		cost = 30
+		days_re_enable = 45
+		visible = { TFRKPHN_lij_active = yes }
+		available = { check_variable = { TFRKPHN_lij_fatigue > 0 } }
+		complete_effect = {
+			custom_effect_tooltip = TFRKPHN_lij_rest_tt
+			hidden_effect = { subtract_from_variable = { TFRKPHN_lij_fatigue = 35 } if = { limit = { check_variable = { TFRKPHN_lij_fatigue < 0 } } set_variable = { TFRKPHN_lij_fatigue = 0 } } }
+		}
+		ai_will_do = { base = 1 modifier = { factor = 20 check_variable = { TFRKPHN_lij_fatigue > 60 } } }
+	}
+	TFRKPHN_lij_doctor = {
+		icon = generic_civil_support
+		cost = 50
+		days_re_enable = 120
+		visible = { TFRKPHN_lij_active = yes check_variable = { TFRKPHN_lij_collapse > 0 } }
+		available = { check_variable = { TFRKPHN_lij_fatigue > 0 } }
+		complete_effect = {
+			custom_effect_tooltip = TFRKPHN_lij_doctor_tt
+			add_stability = -0.01
+			hidden_effect = { subtract_from_variable = { TFRKPHN_lij_fatigue = 60 } if = { limit = { check_variable = { TFRKPHN_lij_fatigue < 0 } } set_variable = { TFRKPHN_lij_fatigue = 0 } } }
+		}
+		ai_will_do = { base = 1 modifier = { factor = 20 check_variable = { TFRKPHN_lij_fatigue > 70 } } }
+	}
+}

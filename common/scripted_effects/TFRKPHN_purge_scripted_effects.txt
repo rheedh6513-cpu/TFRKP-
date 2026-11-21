@@ -1,0 +1,28 @@
+# [안내] 장군 숙청(조원진)과 복직(우원식). purge_build.py가 만든다.
+TFRKPHN_cho_purge_generals = {
+	custom_effect_tooltip = TFRKPHN_cho_purge_tt
+	hidden_effect = {
+		if = { limit = { has_character = KOR_kim_myeong_soo_char KOR_kim_myeong_soo_char = { is_unit_leader = yes } } KOR_kim_myeong_soo_char = { remove_unit_leader_role = yes } set_country_flag = TFRKPHN_purged_KOR_kim_myeong_soo_char }
+		if = { limit = { has_character = KOR_TFRKPHN_kim_myung_soo KOR_TFRKPHN_kim_myung_soo = { is_unit_leader = yes } } KOR_TFRKPHN_kim_myung_soo = { remove_unit_leader_role = yes } set_country_flag = TFRKPHN_purged_KOR_TFRKPHN_kim_myung_soo }
+		if = { limit = { has_character = KOR_kang_shin_cheol_char KOR_kang_shin_cheol_char = { is_unit_leader = yes } } KOR_kang_shin_cheol_char = { remove_unit_leader_role = yes } set_country_flag = TFRKPHN_purged_KOR_kang_shin_cheol_char }
+		if = { limit = { has_character = KOR_TFRKPHN_kang_sin_chul KOR_TFRKPHN_kang_sin_chul = { is_unit_leader = yes } } KOR_TFRKPHN_kang_sin_chul = { remove_unit_leader_role = yes } set_country_flag = TFRKPHN_purged_KOR_TFRKPHN_kang_sin_chul }
+		if = { limit = { has_character = KOR_son_sik_char KOR_son_sik_char = { is_unit_leader = yes } } KOR_son_sik_char = { remove_unit_leader_role = yes } set_country_flag = TFRKPHN_purged_KOR_son_sik_char }
+		if = { limit = { has_character = KOR_TFRKPHN_son_sik KOR_TFRKPHN_son_sik = { is_unit_leader = yes } } KOR_TFRKPHN_son_sik = { remove_unit_leader_role = yes } set_country_flag = TFRKPHN_purged_KOR_TFRKPHN_son_sik }
+		if = { limit = { has_character = KOR_go_chang_jun_char KOR_go_chang_jun_char = { is_unit_leader = yes } } KOR_go_chang_jun_char = { remove_unit_leader_role = yes } set_country_flag = TFRKPHN_purged_KOR_go_chang_jun_char }
+		if = { limit = { has_character = KOR_TFRKPHN_ko_chang_jun KOR_TFRKPHN_ko_chang_jun = { is_unit_leader = yes } } KOR_TFRKPHN_ko_chang_jun = { remove_unit_leader_role = yes } set_country_flag = TFRKPHN_purged_KOR_TFRKPHN_ko_chang_jun }
+		if = { limit = { has_character = KOR_kim_yong_woo_char } retire_character = KOR_kim_yong_woo_char }
+	}
+}
+TFRKPHN_woo_restore_generals = {
+	custom_effect_tooltip = TFRKPHN_woo_restore_tt
+	hidden_effect = {
+		if = { limit = { has_country_flag = TFRKPHN_purged_KOR_kim_myeong_soo_char has_character = KOR_kim_myeong_soo_char } KOR_kim_myeong_soo_char = { add_naval_commander_role = { traits = { silent_hunter lone_wolf safety_first } skill = 2 attack_skill = 3 defense_skill = 2 maneuvering_skill = 1 coordination_skill = 2 } } clr_country_flag = TFRKPHN_purged_KOR_kim_myeong_soo_char }
+		if = { limit = { has_country_flag = TFRKPHN_purged_KOR_TFRKPHN_kim_myung_soo has_character = KOR_TFRKPHN_kim_myung_soo } KOR_TFRKPHN_kim_myung_soo = { add_naval_commander_role = { skill = 4 attack_skill = 3 defense_skill = 4 maneuvering_skill = 3 coordination_skill = 4 } } clr_country_flag = TFRKPHN_purged_KOR_TFRKPHN_kim_myung_soo }
+		if = { limit = { has_country_flag = TFRKPHN_purged_KOR_kang_shin_cheol_char has_character = KOR_kang_shin_cheol_char } KOR_kang_shin_cheol_char = { add_corps_commander_role = { traits = { career_officer trait_cautious inflexible_strategist organizer } skill = 2 attack_skill = 1 defense_skill = 2 planning_skill = 2 logistics_skill = 2 } } clr_country_flag = TFRKPHN_purged_KOR_kang_shin_cheol_char }
+		if = { limit = { has_country_flag = TFRKPHN_purged_KOR_TFRKPHN_kang_sin_chul has_character = KOR_TFRKPHN_kang_sin_chul } KOR_TFRKPHN_kang_sin_chul = { add_corps_commander_role = { skill = 4 attack_skill = 3 defense_skill = 4 planning_skill = 4 logistics_skill = 3 } } clr_country_flag = TFRKPHN_purged_KOR_TFRKPHN_kang_sin_chul }
+		if = { limit = { has_country_flag = TFRKPHN_purged_KOR_son_sik_char has_character = KOR_son_sik_char } KOR_son_sik_char = { add_corps_commander_role = { traits = { defensive_doctrine career_officer unyielding_defender infantry_leader } skill = 4 attack_skill = 2 defense_skill = 4 planning_skill = 2 logistics_skill = 3 } } clr_country_flag = TFRKPHN_purged_KOR_son_sik_char }
+		if = { limit = { has_country_flag = TFRKPHN_purged_KOR_TFRKPHN_son_sik has_character = KOR_TFRKPHN_son_sik } KOR_TFRKPHN_son_sik = { add_corps_commander_role = { skill = 4 attack_skill = 3 defense_skill = 4 planning_skill = 4 logistics_skill = 3 } } clr_country_flag = TFRKPHN_purged_KOR_TFRKPHN_son_sik }
+		if = { limit = { has_country_flag = TFRKPHN_purged_KOR_go_chang_jun_char has_character = KOR_go_chang_jun_char } KOR_go_chang_jun_char = { add_corps_commander_role = { traits = { career_officer infantry_officer infantry_leader trickster } skill = 3 attack_skill = 1 defense_skill = 2 planning_skill = 2 logistics_skill = 3 } } clr_country_flag = TFRKPHN_purged_KOR_go_chang_jun_char }
+		if = { limit = { has_country_flag = TFRKPHN_purged_KOR_TFRKPHN_ko_chang_jun has_character = KOR_TFRKPHN_ko_chang_jun } KOR_TFRKPHN_ko_chang_jun = { add_corps_commander_role = { skill = 4 attack_skill = 3 defense_skill = 4 planning_skill = 4 logistics_skill = 3 } } clr_country_flag = TFRKPHN_purged_KOR_TFRKPHN_ko_chang_jun }
+	}
+}

@@ -10,6 +10,7 @@ TFRKPHN_hong_rear_category = {
 		visible = { tag = KOR }
 		available = { country_exists = PRC }
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_after_14_tt
 			custom_effect_tooltip = TFRKPHN_hong_rear_defectors_tt
 		}
@@ -35,6 +36,7 @@ TFRKPHN_hong_rear_category = {
 			highlight_state_targets = { state = 1431 state = 595 state = 1218 }
 		}
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_after_14_tt
 			custom_effect_tooltip = TFRKPHN_hong_rear_fujian_sabotage_tt
 		}
@@ -76,6 +78,7 @@ TFRKPHN_hong_rear_category = {
 		fire_only_once = yes
 		visible = { tag = KOR }
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_after_14_tt
 			custom_effect_tooltip = TFRKPHN_hong_rear_ieodo_365_tt
 		}
@@ -96,6 +99,7 @@ TFRKPHN_hong_rear_category = {
 		visible = { tag = KOR }
 		available = { country_exists = PRC }
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_after_14_tt
 			custom_effect_tooltip = TFRKPHN_hong_rear_west_sea_tt
 		}

@@ -7,7 +7,8 @@ TFRKPHN_oh_pdto_category = {
 		fire_only_once = yes
 		visible = { check_variable = { TFRKPHN_pd_sel = 1 } }
 		available = { custom_trigger_tooltip = { tooltip = TFRKPHN_pd_need_tt JAP = { exists = yes is_in_faction_with = KOR } } }
-		complete_effect = { set_country_flag = TFRKPHN_dn_TFRKPHN_pd_d1_1 custom_effect_tooltip = TFRKPHN_pd_wait_tt }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes set_country_flag = TFRKPHN_dn_TFRKPHN_pd_d1_1 custom_effect_tooltip = TFRKPHN_pd_wait_tt }
 		remove_effect = {
 			custom_effect_tooltip = TFRKPHN_pd_d1_1_tt
 			set_country_flag = TFRKPHN_pd_done_1_1
@@ -28,7 +29,8 @@ TFRKPHN_oh_pdto_category = {
 		fire_only_once = yes
 		visible = { check_variable = { TFRKPHN_pd_sel = 1 } }
 		available = { custom_trigger_tooltip = { tooltip = TFRKPHN_pd_need_tt JAP = { exists = yes is_in_faction_with = KOR } } }
-		complete_effect = { set_country_flag = TFRKPHN_dn_TFRKPHN_pd_d1_2 custom_effect_tooltip = TFRKPHN_pd_wait_tt }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes set_country_flag = TFRKPHN_dn_TFRKPHN_pd_d1_2 custom_effect_tooltip = TFRKPHN_pd_wait_tt }
 		remove_effect = {
 			custom_effect_tooltip = TFRKPHN_pd_d1_2_tt
 			set_country_flag = TFRKPHN_pd_done_1_2
@@ -49,7 +51,8 @@ TFRKPHN_oh_pdto_category = {
 		fire_only_once = yes
 		visible = { check_variable = { TFRKPHN_pd_sel = 2 } }
 		available = { custom_trigger_tooltip = { tooltip = TFRKPHN_pd_need_tt CHI = { exists = yes is_in_faction_with = KOR } } }
-		complete_effect = { set_country_flag = TFRKPHN_dn_TFRKPHN_pd_d2_1 custom_effect_tooltip = TFRKPHN_pd_wait_tt }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes set_country_flag = TFRKPHN_dn_TFRKPHN_pd_d2_1 custom_effect_tooltip = TFRKPHN_pd_wait_tt }
 		remove_effect = {
 			custom_effect_tooltip = TFRKPHN_pd_d2_1_tt
 			set_country_flag = TFRKPHN_pd_done_2_1
@@ -70,7 +73,8 @@ TFRKPHN_oh_pdto_category = {
 		fire_only_once = yes
 		visible = { check_variable = { TFRKPHN_pd_sel = 2 } }
 		available = { custom_trigger_tooltip = { tooltip = TFRKPHN_pd_need_tt CHI = { exists = yes is_in_faction_with = KOR } } }
-		complete_effect = { set_country_flag = TFRKPHN_dn_TFRKPHN_pd_d2_2 custom_effect_tooltip = TFRKPHN_pd_wait_tt }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes set_country_flag = TFRKPHN_dn_TFRKPHN_pd_d2_2 custom_effect_tooltip = TFRKPHN_pd_wait_tt }
 		remove_effect = {
 			custom_effect_tooltip = TFRKPHN_pd_d2_2_tt
 			set_country_flag = TFRKPHN_pd_done_2_2
@@ -91,7 +95,8 @@ TFRKPHN_oh_pdto_category = {
 		fire_only_once = yes
 		visible = { check_variable = { TFRKPHN_pd_sel = 3 } }
 		available = { custom_trigger_tooltip = { tooltip = TFRKPHN_pd_need_tt RAJ = { exists = yes is_in_faction_with = KOR } } }
-		complete_effect = { set_country_flag = TFRKPHN_dn_TFRKPHN_pd_d3_1 custom_effect_tooltip = TFRKPHN_pd_wait_tt }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes set_country_flag = TFRKPHN_dn_TFRKPHN_pd_d3_1 custom_effect_tooltip = TFRKPHN_pd_wait_tt }
 		remove_effect = {
 			custom_effect_tooltip = TFRKPHN_pd_d3_1_tt
 			set_country_flag = TFRKPHN_pd_done_3_1
@@ -112,7 +117,8 @@ TFRKPHN_oh_pdto_category = {
 		fire_only_once = yes
 		visible = { check_variable = { TFRKPHN_pd_sel = 4 } }
 		available = { custom_trigger_tooltip = { tooltip = TFRKPHN_pd_need_tt VIN = { exists = yes is_in_faction_with = KOR } } }
-		complete_effect = { set_country_flag = TFRKPHN_dn_TFRKPHN_pd_d4_1 custom_effect_tooltip = TFRKPHN_pd_wait_tt }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes set_country_flag = TFRKPHN_dn_TFRKPHN_pd_d4_1 custom_effect_tooltip = TFRKPHN_pd_wait_tt }
 		remove_effect = {
 			custom_effect_tooltip = TFRKPHN_pd_d4_1_tt
 			set_country_flag = TFRKPHN_pd_done_4_1
@@ -133,7 +139,8 @@ TFRKPHN_oh_pdto_category = {
 		fire_only_once = yes
 		visible = { check_variable = { TFRKPHN_pd_sel = 5 } }
 		available = { custom_trigger_tooltip = { tooltip = TFRKPHN_pd_need_tt PHI = { exists = yes is_in_faction_with = KOR } } }
-		complete_effect = { set_country_flag = TFRKPHN_dn_TFRKPHN_pd_d5_1 custom_effect_tooltip = TFRKPHN_pd_wait_tt }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes set_country_flag = TFRKPHN_dn_TFRKPHN_pd_d5_1 custom_effect_tooltip = TFRKPHN_pd_wait_tt }
 		remove_effect = {
 			custom_effect_tooltip = TFRKPHN_pd_d5_1_tt
 			set_country_flag = TFRKPHN_pd_done_5_1
@@ -154,7 +161,8 @@ TFRKPHN_oh_pdto_category = {
 		fire_only_once = yes
 		visible = { check_variable = { TFRKPHN_pd_sel = 6 } }
 		available = { custom_trigger_tooltip = { tooltip = TFRKPHN_pd_need_tt AST = { exists = yes is_in_faction_with = KOR } } }
-		complete_effect = { set_country_flag = TFRKPHN_dn_TFRKPHN_pd_d6_1 custom_effect_tooltip = TFRKPHN_pd_wait_tt }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes set_country_flag = TFRKPHN_dn_TFRKPHN_pd_d6_1 custom_effect_tooltip = TFRKPHN_pd_wait_tt }
 		remove_effect = {
 			custom_effect_tooltip = TFRKPHN_pd_d6_1_tt
 			set_country_flag = TFRKPHN_pd_done_6_1
@@ -175,7 +183,8 @@ TFRKPHN_oh_pdto_category = {
 		fire_only_once = yes
 		visible = { check_variable = { TFRKPHN_pd_sel = 7 } }
 		available = { custom_trigger_tooltip = { tooltip = TFRKPHN_pd_need_tt INS = { exists = yes is_in_faction_with = KOR } } }
-		complete_effect = { set_country_flag = TFRKPHN_dn_TFRKPHN_pd_d7_1 custom_effect_tooltip = TFRKPHN_pd_wait_tt }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes set_country_flag = TFRKPHN_dn_TFRKPHN_pd_d7_1 custom_effect_tooltip = TFRKPHN_pd_wait_tt }
 		remove_effect = {
 			custom_effect_tooltip = TFRKPHN_pd_d7_1_tt
 			set_country_flag = TFRKPHN_pd_done_7_1
@@ -196,7 +205,8 @@ TFRKPHN_oh_pdto_category = {
 		fire_only_once = yes
 		visible = { check_variable = { TFRKPHN_pd_sel = 8 } }
 		available = { custom_trigger_tooltip = { tooltip = TFRKPHN_pd_need_tt SIA = { exists = yes is_in_faction_with = KOR } } }
-		complete_effect = { set_country_flag = TFRKPHN_dn_TFRKPHN_pd_d8_1 custom_effect_tooltip = TFRKPHN_pd_wait_tt }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes set_country_flag = TFRKPHN_dn_TFRKPHN_pd_d8_1 custom_effect_tooltip = TFRKPHN_pd_wait_tt }
 		remove_effect = {
 			custom_effect_tooltip = TFRKPHN_pd_d8_1_tt
 			set_country_flag = TFRKPHN_pd_done_8_1

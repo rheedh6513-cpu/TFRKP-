@@ -8,7 +8,8 @@ TFRKPHN_oh_seoul_category = {
 		visible = { has_country_flag = TFRKPHN_successor_oh_se_hoon }
 		available = { num_of_civilian_factories_available_for_projects > 0 }
 		modifier = { civilian_factory_use = 1 }
-		complete_effect = { custom_effect_tooltip = TFRKPHN_sd_dev_se_wait_tt }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes custom_effect_tooltip = TFRKPHN_sd_dev_se_wait_tt }
 		remove_effect = {
 			custom_effect_tooltip = TFRKPHN_sd_dev_se_tt
 			hidden_effect = { 1041 = { if = { limit = { is_owned_by = KOR } add_extra_state_shared_building_slots = 1 add_building_construction = { type = office_park level = 1 instant_build = yes } } } add_to_variable = { TFRKPHN_sd_gap = 1 } set_variable = { TFRKPHN_sd_delta = 3 } TFRKPHN_sd_add_se = yes set_variable = { TFRKPHN_sd_delta = -1 } TFRKPHN_sd_add_north = yes TFRKPHN_sd_refresh = yes }
@@ -23,7 +24,8 @@ TFRKPHN_oh_seoul_category = {
 		visible = { has_country_flag = TFRKPHN_successor_oh_se_hoon }
 		available = { num_of_civilian_factories_available_for_projects > 1 }
 		modifier = { civilian_factory_use = 2 }
-		complete_effect = { custom_effect_tooltip = TFRKPHN_sd_dev_north_wait_tt }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes custom_effect_tooltip = TFRKPHN_sd_dev_north_wait_tt }
 		remove_effect = {
 			custom_effect_tooltip = TFRKPHN_sd_dev_north_tt
 			hidden_effect = { 1041 = { if = { limit = { is_owned_by = KOR } add_building_construction = { type = infrastructure level = 1 instant_build = yes } } } add_to_variable = { TFRKPHN_sd_gap = -1 } set_variable = { TFRKPHN_sd_delta = 2 } TFRKPHN_sd_add_north = yes TFRKPHN_sd_refresh = yes }
@@ -38,7 +40,8 @@ TFRKPHN_oh_seoul_category = {
 		visible = { has_country_flag = TFRKPHN_successor_oh_se_hoon }
 		available = { num_of_civilian_factories_available_for_projects > 0 }
 		modifier = { civilian_factory_use = 1 }
-		complete_effect = { custom_effect_tooltip = TFRKPHN_sd_dev_sw_wait_tt }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes custom_effect_tooltip = TFRKPHN_sd_dev_sw_wait_tt }
 		remove_effect = {
 			custom_effect_tooltip = TFRKPHN_sd_dev_sw_tt
 			hidden_effect = { 1041 = { if = { limit = { is_owned_by = KOR } add_extra_state_shared_building_slots = 1 add_building_construction = { type = industrial_complex level = 1 instant_build = yes } } } set_variable = { TFRKPHN_sd_delta = 3 } TFRKPHN_sd_add_sw = yes TFRKPHN_sd_refresh = yes }

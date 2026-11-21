@@ -7,7 +7,8 @@ TFRKPHN_uni_category = {
 		available = { check_variable = { TFRKPHN_uni < 50 } num_of_civilian_factories_available_for_projects > 0 }
 		days_remove = 60
 		modifier = { civilian_factory_use = 1 }
-		complete_effect = {  custom_effect_tooltip = TFRKPHN_uni_invest_tt }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes  custom_effect_tooltip = TFRKPHN_uni_invest_tt }
 		remove_effect = { hidden_effect = { add_to_variable = { TFRKPHN_uni = 3 } clamp_variable = { var = TFRKPHN_uni min = 0 max = 50 } TFRKPHN_uni_apply = yes } }
 		ai_will_do = { factor = 1 }
 	}
@@ -19,7 +20,8 @@ TFRKPHN_uni_category = {
 		available = { check_variable = { TFRKPHN_uni < 50 } num_of_civilian_factories_available_for_projects > 0 }
 		days_remove = 180
 		modifier = { civilian_factory_use = 1 }
-		complete_effect = {  custom_effect_tooltip = TFRKPHN_uni_hub_tt }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes  custom_effect_tooltip = TFRKPHN_uni_hub_tt }
 		remove_effect = { hidden_effect = { add_to_variable = { TFRKPHN_uni = 8 } clamp_variable = { var = TFRKPHN_uni min = 0 max = 50 } TFRKPHN_uni_apply = yes } }
 		ai_will_do = { factor = 1 }
 	}
@@ -29,7 +31,8 @@ TFRKPHN_uni_category = {
 		visible = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_completed_focus = TFRKPHN_oh_se_hoon_d1 }
 		available = { check_variable = { TFRKPHN_uni < 50 } }
 		days_remove = 90
-		complete_effect = { add_stability = -0.01 custom_effect_tooltip = TFRKPHN_uni_fdi_tt }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes add_stability = -0.01 custom_effect_tooltip = TFRKPHN_uni_fdi_tt }
 		remove_effect = { hidden_effect = { add_to_variable = { TFRKPHN_uni = 4 } clamp_variable = { var = TFRKPHN_uni min = 0 max = 50 } TFRKPHN_uni_apply = yes } }
 		ai_will_do = { factor = 1 }
 	}
@@ -40,7 +43,8 @@ TFRKPHN_uni_category = {
 		available = { check_variable = { TFRKPHN_uni < 50 } num_of_civilian_factories_available_for_projects > 0 OR = { check_variable = { TFRKPHN_mega_s1 > 2.5 } check_variable = { TFRKPHN_mega_s2 > 2.5 } check_variable = { TFRKPHN_mega_s3 > 2.5 } check_variable = { TFRKPHN_mega_s4 > 2.5 } check_variable = { TFRKPHN_mega_s5 > 2.5 } } }
 		days_remove = 120
 		modifier = { civilian_factory_use = 1 }
-		complete_effect = {  custom_effect_tooltip = TFRKPHN_uni_mega_tt }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes  custom_effect_tooltip = TFRKPHN_uni_mega_tt }
 		remove_effect = { hidden_effect = { set_temp_variable = { uni_m = 2 } if = { limit = { check_variable = { TFRKPHN_mega_s1 > 2.5 } } add_to_temp_variable = { uni_m = 1 } } if = { limit = { check_variable = { TFRKPHN_mega_s2 > 2.5 } } add_to_temp_variable = { uni_m = 1 } } if = { limit = { check_variable = { TFRKPHN_mega_s3 > 2.5 } } add_to_temp_variable = { uni_m = 1 } } if = { limit = { check_variable = { TFRKPHN_mega_s4 > 2.5 } } add_to_temp_variable = { uni_m = 1 } } if = { limit = { check_variable = { TFRKPHN_mega_s5 > 2.5 } } add_to_temp_variable = { uni_m = 1 } } add_to_variable = { TFRKPHN_uni = uni_m } clamp_variable = { var = TFRKPHN_uni min = 0 max = 50 } TFRKPHN_uni_apply = yes } }
 		ai_will_do = { factor = 1 }
 	}
@@ -50,7 +54,8 @@ TFRKPHN_uni_category = {
 		visible = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_completed_focus = TFRKPHN_oh_se_hoon_d1 }
 		available = { check_variable = { TFRKPHN_uni < 50 } check_variable = { TFRKPHN_uni > 9.5 } }
 		days_remove = 90
-		complete_effect = {  custom_effect_tooltip = TFRKPHN_uni_guar_tt }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes  custom_effect_tooltip = TFRKPHN_uni_guar_tt }
 		remove_effect = { hidden_effect = { add_to_variable = { TFRKPHN_uni = 4 } clamp_variable = { var = TFRKPHN_uni min = 0 max = 50 } TFRKPHN_uni_apply = yes } }
 		ai_will_do = { factor = 1 }
 	}

@@ -1,0 +1,66 @@
+# [안내] 이인제 과로 게이트 사건. lij_build.py가 만든다.
+add_namespace = tfrkphn
+country_event = {
+	id = tfrkphn.7077
+	title = tfrkphn.7077.t
+	desc = tfrkphn.7077.d
+	picture = GFX_report_event_yongsan_night
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7077.a
+		add_timed_idea = { idea = TFRKPHN_lij_dizzy days = 30 }
+		custom_effect_tooltip = TFRKPHN_lij_c1_tt
+	}
+}
+country_event = {
+	id = tfrkphn.7078
+	title = tfrkphn.7078.t
+	desc = tfrkphn.7078.d
+	picture = GFX_report_event_yongsan_night
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7078.a
+		add_timed_idea = { idea = TFRKPHN_lij_hospital days = 45 }
+		custom_effect_tooltip = TFRKPHN_lij_c2_tt
+	}
+}
+country_event = {
+	id = tfrkphn.7079
+	title = tfrkphn.7079.t
+	desc = tfrkphn.7079.d
+	picture = GFX_report_event_yongsan_night
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			set_country_flag = TFRKPHN_lij_dead
+			clr_country_flag = TFRKPHN_lij_dying
+			if = { limit = { has_idea = TFRKPHN_lij_dizzy } remove_ideas = TFRKPHN_lij_dizzy }
+			if = { limit = { has_idea = TFRKPHN_lij_hospital } remove_ideas = TFRKPHN_lij_hospital }
+			if = { limit = { has_idea = TFRKPHN_chung_jin_suk_HM } remove_ideas = TFRKPHN_chung_jin_suk_HM }
+			if = { limit = { NOT = { has_character = KOR_chung_jin_suk_char } } recruit_character = KOR_chung_jin_suk_char }
+			KOR_chung_jin_suk_char = { add_country_leader_role = { country_leader = { desc = TFRKPHN_chung_acting_desc ideology = korean_neoconservatism expire = "2065.1.1" } promote_leader = yes } }
+			KOR_lee_in_je_char = { retire = yes }
+			load_focus_tree = { tree = TFRKPHN_chung_acting_tree keep_completed = no }
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+	option = {
+		name = tfrkphn.7079.a
+		custom_effect_tooltip = TFRKPHN_lij_dead_tt
+		add_stability = -0.05
+		hidden_effect = { country_event = { id = tfrkphn.7080 days = 5 } }
+	}
+}
+news_event = {
+	id = tfrkphn.7080
+	title = tfrkphn.7080.t
+	desc = tfrkphn.7080.d
+	picture = GFX_news_event_generic_funeral
+	is_triggered_only = yes
+	major = no
+	option = {
+		name = tfrkphn.7080.a
+		add_stability = 0.05
+		add_political_power = 50
+	}
+}

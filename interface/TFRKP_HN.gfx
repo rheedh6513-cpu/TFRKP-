@@ -1475,6 +1475,10 @@ spriteTypes = {
 		texturefile = "gfx/leaders/KOR/TFRKPHN_hwang_jeong_yeop.png"
 	}
 	spriteType = {
+		name = "GFX_portrait_KOR_hong_joon_pyo_war"
+		texturefile = "gfx/leaders/KOR/TFRKPHN_hong_joon_pyo_war.png"
+	}
+	spriteType = {
 		name = "GFX_portrait_KOR_hong_joon_pyo_victory"
 		texturefile = "gfx/leaders/KOR/TFRKPHN_hong_joon_pyo_victory.png"
 	}

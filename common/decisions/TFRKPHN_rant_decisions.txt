@@ -11,6 +11,7 @@ TFRKPHN_hong_minsim_category = {
 		}
 		available = { always = yes }
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			add_political_power = 30
 			custom_effect_tooltip = TFRKPHN_hong_rant_tt
 			hidden_effect = { TFRKPHN_support_decay_random = yes TFRKPHN_hong_update_support_display = yes }

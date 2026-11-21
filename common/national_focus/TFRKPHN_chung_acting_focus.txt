@@ -1,0 +1,19 @@
+# [안내] 정진석 권한대행 (이인제 과로사 뒤). lij_build.py가 만든다.
+focus_tree = {
+	id = TFRKPHN_chung_acting_tree
+	country = { factor = 0 }
+	default = no
+	continuous_focus_position = { x = 50 y = 1170 }
+	focus = {
+		id = TFRKPHN_chung_acting_01
+		icon = GFX_goal_generic_national_unity
+		x = 5
+		y = 0
+		cost = 2
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 50
+		}
+	}
+}

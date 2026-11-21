@@ -47,6 +47,7 @@ TFRKPHN_e21_category = {
 		fire_only_once = yes
 		visible = { has_country_flag = TFRKPHN_e21_talks }
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			add_to_variable = { TFRKPHN_e21_uni = 10 }
 			clamp_variable = { var = TFRKPHN_e21_uni min = 0 max = 100 }
 			custom_effect_tooltip = TFRKPHN_e21_up10_tt
@@ -59,6 +60,7 @@ TFRKPHN_e21_category = {
 		fire_only_once = yes
 		visible = { has_country_flag = TFRKPHN_e21_talks }
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			add_to_variable = { TFRKPHN_e21_uni = 10 }
 			clamp_variable = { var = TFRKPHN_e21_uni min = 0 max = 100 }
 			custom_effect_tooltip = TFRKPHN_e21_up10_tt
@@ -71,6 +73,7 @@ TFRKPHN_e21_category = {
 		fire_only_once = yes
 		visible = { has_country_flag = TFRKPHN_e21_talks }
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			add_to_variable = { TFRKPHN_e21_uni = 15 }
 			clamp_variable = { var = TFRKPHN_e21_uni min = 0 max = 100 }
 			custom_effect_tooltip = TFRKPHN_e21_up15_tt
@@ -83,6 +86,7 @@ TFRKPHN_e21_category = {
 		fire_only_once = yes
 		visible = { has_country_flag = TFRKPHN_e21_talks }
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			add_to_variable = { TFRKPHN_e21_uni = 10 }
 			clamp_variable = { var = TFRKPHN_e21_uni min = 0 max = 100 }
 			custom_effect_tooltip = TFRKPHN_e21_up10_tt

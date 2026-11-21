@@ -5,7 +5,8 @@ TFRKPHN_oh_le30_category = {
 		cost = 0
 		visible = { NOT = { has_country_flag = TFRKPHN_le_on } }
 		available = { always = yes }
-		complete_effect = { custom_effect_tooltip = TFRKPHN_le_open_tt hidden_effect = { set_country_flag = TFRKPHN_le_on TFRKPHN_le_draw = yes } }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes custom_effect_tooltip = TFRKPHN_le_open_tt hidden_effect = { set_country_flag = TFRKPHN_le_on TFRKPHN_le_draw = yes } }
 		ai_will_do = { factor = 0 }
 	}
 	TFRKPHN_le_shut = {
@@ -13,7 +14,8 @@ TFRKPHN_oh_le30_category = {
 		cost = 0
 		visible = { has_country_flag = TFRKPHN_le_on }
 		available = { always = yes }
-		complete_effect = { custom_effect_tooltip = TFRKPHN_le_shut_tt hidden_effect = { clr_country_flag = TFRKPHN_le_on } }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes custom_effect_tooltip = TFRKPHN_le_shut_tt hidden_effect = { clr_country_flag = TFRKPHN_le_on } }
 		ai_will_do = { factor = 0 }
 	}
 }

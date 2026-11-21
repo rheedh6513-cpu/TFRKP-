@@ -9,6 +9,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 25
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_retire65_tt
 			hidden_effect = { TFRKPHN_job_do_retire65 = yes }
 		}
@@ -22,6 +23,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 15
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_retire65_tt
 			hidden_effect = { TFRKPHN_job_do_retire65 = yes }
 		}
@@ -35,6 +37,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 20
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_retire65_tt
 			hidden_effect = { TFRKPHN_job_do_retire65 = yes }
 		}
@@ -48,6 +51,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 25
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_hours52_tt
 			hidden_effect = { TFRKPHN_job_do_hours52 = yes }
 		}
@@ -61,6 +65,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 15
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_hours52_tt
 			hidden_effect = { TFRKPHN_job_do_hours52 = yes }
 		}
@@ -74,6 +79,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 20
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_hours52_tt
 			hidden_effect = { TFRKPHN_job_do_hours52 = yes }
 		}
@@ -87,6 +93,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 25
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_minwage_tt
 			hidden_effect = { TFRKPHN_job_do_minwage = yes }
 		}
@@ -100,6 +107,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 15
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_minwage_tt
 			hidden_effect = { TFRKPHN_job_do_minwage = yes }
 		}
@@ -113,6 +121,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 20
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_minwage_tt
 			hidden_effect = { TFRKPHN_job_do_minwage = yes }
 		}
@@ -126,6 +135,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 25
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_yellow_tt
 			hidden_effect = { TFRKPHN_job_do_yellow = yes }
 		}
@@ -139,6 +149,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 15
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_yellow_tt
 			hidden_effect = { TFRKPHN_job_do_yellow = yes }
 		}
@@ -152,6 +163,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 20
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_yellow_tt
 			hidden_effect = { TFRKPHN_job_do_yellow = yes }
 		}
@@ -165,6 +177,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 25
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_regular_tt
 			hidden_effect = { TFRKPHN_job_do_regular = yes }
 		}
@@ -178,6 +191,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 15
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_regular_tt
 			hidden_effect = { TFRKPHN_job_do_regular = yes }
 		}
@@ -191,6 +205,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 20
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_regular_tt
 			hidden_effect = { TFRKPHN_job_do_regular = yes }
 		}
@@ -204,6 +219,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 25
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_under5_tt
 			hidden_effect = { TFRKPHN_job_do_under5 = yes }
 		}
@@ -217,6 +233,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 15
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_under5_tt
 			hidden_effect = { TFRKPHN_job_do_under5 = yes }
 		}
@@ -230,6 +247,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 20
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_under5_tt
 			hidden_effect = { TFRKPHN_job_do_under5 = yes }
 		}
@@ -243,6 +261,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 25
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_safety_tt
 			hidden_effect = { TFRKPHN_job_do_safety = yes }
 		}
@@ -256,6 +275,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 15
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_safety_tt
 			hidden_effect = { TFRKPHN_job_do_safety = yes }
 		}
@@ -269,6 +289,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 20
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_safety_tt
 			hidden_effect = { TFRKPHN_job_do_safety = yes }
 		}
@@ -282,6 +303,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 25
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_boardseat_tt
 			hidden_effect = { TFRKPHN_job_do_boardseat = yes }
 		}
@@ -295,6 +317,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 15
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_boardseat_tt
 			hidden_effect = { TFRKPHN_job_do_boardseat = yes }
 		}
@@ -308,6 +331,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 20
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_boardseat_tt
 			hidden_effect = { TFRKPHN_job_do_boardseat = yes }
 		}
@@ -321,6 +345,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 25
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_insure_tt
 			hidden_effect = { TFRKPHN_job_do_insure = yes }
 		}
@@ -334,6 +359,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 15
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_insure_tt
 			hidden_effect = { TFRKPHN_job_do_insure = yes }
 		}
@@ -347,6 +373,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 20
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_insure_tt
 			hidden_effect = { TFRKPHN_job_do_insure = yes }
 		}
@@ -360,6 +387,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 25
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_platform_tt
 			hidden_effect = { TFRKPHN_job_do_platform = yes }
 		}
@@ -373,6 +401,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 15
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_platform_tt
 			hidden_effect = { TFRKPHN_job_do_platform = yes }
 		}
@@ -386,6 +415,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 20
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_platform_tt
 			hidden_effect = { TFRKPHN_job_do_platform = yes }
 		}
@@ -399,6 +429,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 25
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_lumpwage_tt
 			hidden_effect = { TFRKPHN_job_do_lumpwage = yes }
 		}
@@ -412,6 +443,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 15
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_lumpwage_tt
 			hidden_effect = { TFRKPHN_job_do_lumpwage = yes }
 		}
@@ -425,6 +457,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 20
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_lumpwage_tt
 			hidden_effect = { TFRKPHN_job_do_lumpwage = yes }
 		}
@@ -438,6 +471,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 25
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_public_tt
 			hidden_effect = { TFRKPHN_job_do_public = yes }
 		}
@@ -451,6 +485,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 15
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_public_tt
 			hidden_effect = { TFRKPHN_job_do_public = yes }
 		}
@@ -464,6 +499,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 20
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_public_tt
 			hidden_effect = { TFRKPHN_job_do_public = yes }
 		}
@@ -477,6 +513,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 25
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_jobpay_tt
 			hidden_effect = { TFRKPHN_job_do_jobpay = yes }
 		}
@@ -490,6 +527,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 15
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_jobpay_tt
 			hidden_effect = { TFRKPHN_job_do_jobpay = yes }
 		}
@@ -503,6 +541,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 20
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_jobpay_tt
 			hidden_effect = { TFRKPHN_job_do_jobpay = yes }
 		}
@@ -516,6 +555,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 25
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_flex_tt
 			hidden_effect = { TFRKPHN_job_do_flex = yes }
 		}
@@ -529,6 +569,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 15
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_flex_tt
 			hidden_effect = { TFRKPHN_job_do_flex = yes }
 		}
@@ -542,6 +583,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 20
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_flex_tt
 			hidden_effect = { TFRKPHN_job_do_flex = yes }
 		}
@@ -555,6 +597,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 25
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_dispatch_tt
 			hidden_effect = { TFRKPHN_job_do_dispatch = yes }
 		}
@@ -568,6 +611,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 15
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_dispatch_tt
 			hidden_effect = { TFRKPHN_job_do_dispatch = yes }
 		}
@@ -581,6 +625,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 20
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_dispatch_tt
 			hidden_effect = { TFRKPHN_job_do_dispatch = yes }
 		}
@@ -594,6 +639,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 25
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_dismiss_tt
 			hidden_effect = { TFRKPHN_job_do_dismiss = yes }
 		}
@@ -607,6 +653,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 15
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_dismiss_tt
 			hidden_effect = { TFRKPHN_job_do_dismiss = yes }
 		}
@@ -620,6 +667,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 20
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_dismiss_tt
 			hidden_effect = { TFRKPHN_job_do_dismiss = yes }
 		}
@@ -633,6 +681,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 25
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_wagebysector_tt
 			hidden_effect = { TFRKPHN_job_do_wagebysector = yes }
 		}
@@ -646,6 +695,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 15
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_wagebysector_tt
 			hidden_effect = { TFRKPHN_job_do_wagebysector = yes }
 		}
@@ -659,6 +709,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 20
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_wagebysector_tt
 			hidden_effect = { TFRKPHN_job_do_wagebysector = yes }
 		}
@@ -672,6 +723,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 25
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_safetydelay_tt
 			hidden_effect = { TFRKPHN_job_do_safetydelay = yes }
 		}
@@ -685,6 +737,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 15
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_safetydelay_tt
 			hidden_effect = { TFRKPHN_job_do_safetydelay = yes }
 		}
@@ -698,6 +751,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 20
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_safetydelay_tt
 			hidden_effect = { TFRKPHN_job_do_safetydelay = yes }
 		}
@@ -711,6 +765,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 25
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_replace_tt
 			hidden_effect = { TFRKPHN_job_do_replace = yes }
 		}
@@ -724,6 +779,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 15
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_replace_tt
 			hidden_effect = { TFRKPHN_job_do_replace = yes }
 		}
@@ -737,6 +793,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 20
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_replace_tt
 			hidden_effect = { TFRKPHN_job_do_replace = yes }
 		}
@@ -750,6 +807,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 25
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_unionbook_tt
 			hidden_effect = { TFRKPHN_job_do_unionbook = yes }
 		}
@@ -763,6 +821,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 15
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_unionbook_tt
 			hidden_effect = { TFRKPHN_job_do_unionbook = yes }
 		}
@@ -776,6 +835,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 20
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_unionbook_tt
 			hidden_effect = { TFRKPHN_job_do_unionbook = yes }
 		}
@@ -789,6 +849,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 25
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_hirecredit_tt
 			hidden_effect = { TFRKPHN_job_do_hirecredit = yes }
 		}
@@ -802,6 +863,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 15
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_hirecredit_tt
 			hidden_effect = { TFRKPHN_job_do_hirecredit = yes }
 		}
@@ -815,6 +877,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 20
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_hirecredit_tt
 			hidden_effect = { TFRKPHN_job_do_hirecredit = yes }
 		}
@@ -828,6 +891,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 25
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_reshore_tt
 			hidden_effect = { TFRKPHN_job_do_reshore = yes }
 		}
@@ -841,6 +905,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 15
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_reshore_tt
 			hidden_effect = { TFRKPHN_job_do_reshore = yes }
 		}
@@ -854,6 +919,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 20
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_reshore_tt
 			hidden_effect = { TFRKPHN_job_do_reshore = yes }
 		}
@@ -867,6 +933,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 25
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_foreign_tt
 			hidden_effect = { TFRKPHN_job_do_foreign = yes }
 		}
@@ -880,6 +947,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 15
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_foreign_tt
 			hidden_effect = { TFRKPHN_job_do_foreign = yes }
 		}
@@ -893,6 +961,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 20
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_foreign_tt
 			hidden_effect = { TFRKPHN_job_do_foreign = yes }
 		}
@@ -906,6 +975,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 25
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_benefitcut_tt
 			hidden_effect = { TFRKPHN_job_do_benefitcut = yes }
 		}
@@ -919,6 +989,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 15
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_benefitcut_tt
 			hidden_effect = { TFRKPHN_job_do_benefitcut = yes }
 		}
@@ -932,6 +1003,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 20
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_benefitcut_tt
 			hidden_effect = { TFRKPHN_job_do_benefitcut = yes }
 		}
@@ -945,6 +1017,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 25
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_sandbox_tt
 			hidden_effect = { TFRKPHN_job_do_sandbox = yes }
 		}
@@ -958,6 +1031,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 15
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_sandbox_tt
 			hidden_effect = { TFRKPHN_job_do_sandbox = yes }
 		}
@@ -971,6 +1045,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 20
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_sandbox_tt
 			hidden_effect = { TFRKPHN_job_do_sandbox = yes }
 		}
@@ -984,6 +1059,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 25
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_gwangju_tt
 			hidden_effect = { TFRKPHN_job_do_gwangju = yes }
 		}
@@ -997,6 +1073,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 15
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_gwangju_tt
 			hidden_effect = { TFRKPHN_job_do_gwangju = yes }
 		}
@@ -1010,6 +1087,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 20
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_gwangju_tt
 			hidden_effect = { TFRKPHN_job_do_gwangju = yes }
 		}
@@ -1023,6 +1101,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 25
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_jobseeker_tt
 			hidden_effect = { TFRKPHN_job_do_jobseeker = yes }
 		}
@@ -1036,6 +1115,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 15
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_jobseeker_tt
 			hidden_effect = { TFRKPHN_job_do_jobseeker = yes }
 		}
@@ -1049,6 +1129,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 20
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_jobseeker_tt
 			hidden_effect = { TFRKPHN_job_do_jobseeker = yes }
 		}
@@ -1062,6 +1143,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 25
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_youthfund_tt
 			hidden_effect = { TFRKPHN_job_do_youthfund = yes }
 		}
@@ -1075,6 +1157,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 15
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_youthfund_tt
 			hidden_effect = { TFRKPHN_job_do_youthfund = yes }
 		}
@@ -1088,6 +1171,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 20
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_youthfund_tt
 			hidden_effect = { TFRKPHN_job_do_youthfund = yes }
 		}
@@ -1101,6 +1185,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 25
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_training_tt
 			hidden_effect = { TFRKPHN_job_do_training = yes }
 		}
@@ -1114,6 +1199,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 15
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_training_tt
 			hidden_effect = { TFRKPHN_job_do_training = yes }
 		}
@@ -1127,6 +1213,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 20
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_training_tt
 			hidden_effect = { TFRKPHN_job_do_training = yes }
 		}
@@ -1140,6 +1227,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 25
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_shipyard_tt
 			hidden_effect = { TFRKPHN_job_do_shipyard = yes }
 		}
@@ -1153,6 +1241,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 15
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_shipyard_tt
 			hidden_effect = { TFRKPHN_job_do_shipyard = yes }
 		}
@@ -1166,6 +1255,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 20
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_shipyard_tt
 			hidden_effect = { TFRKPHN_job_do_shipyard = yes }
 		}
@@ -1179,6 +1269,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 25
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_veteran_tt
 			hidden_effect = { TFRKPHN_job_do_veteran = yes }
 		}
@@ -1192,6 +1283,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 15
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_veteran_tt
 			hidden_effect = { TFRKPHN_job_do_veteran = yes }
 		}
@@ -1205,6 +1297,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 20
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_veteran_tt
 			hidden_effect = { TFRKPHN_job_do_veteran = yes }
 		}
@@ -1218,6 +1311,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 25
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_keepjob_tt
 			hidden_effect = { TFRKPHN_job_do_keepjob = yes }
 		}
@@ -1231,6 +1325,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 15
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_keepjob_tt
 			hidden_effect = { TFRKPHN_job_do_keepjob = yes }
 		}
@@ -1244,6 +1339,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 20
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_keepjob_tt
 			hidden_effect = { TFRKPHN_job_do_keepjob = yes }
 		}
@@ -1257,6 +1353,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 25
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_workstudy_tt
 			hidden_effect = { TFRKPHN_job_do_workstudy = yes }
 		}
@@ -1270,6 +1367,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 15
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_workstudy_tt
 			hidden_effect = { TFRKPHN_job_do_workstudy = yes }
 		}
@@ -1283,6 +1381,7 @@ TFRKPHN_lee_jobs_category = {
 		fire_only_once = yes
 		cost = 20
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_workstudy_tt
 			hidden_effect = { TFRKPHN_job_do_workstudy = yes }
 		}
@@ -1296,6 +1395,7 @@ TFRKPHN_lee_jobs_category = {
 		days_re_enable = 180
 		cost = 50
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_summit_tt
 			hidden_effect = { add_to_variable = { TFRKPHN_job_lab = 5 } add_to_variable = { TFRKPHN_job_biz = 5 } TFRKPHN_job_update = yes }
 		}
@@ -1310,6 +1410,7 @@ TFRKPHN_lee_jobs_category = {
 		available = { custom_trigger_tooltip = { tooltip = TFRKPHN_job_pact_need check_variable = { TFRKPHN_job_lab > 49 } check_variable = { TFRKPHN_job_biz > 49 } } }
 		cost = 25
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_pact_tt
 			add_stability = 0.05
 			set_country_flag = TFRKPHN_job_pact
@@ -1325,6 +1426,7 @@ TFRKPHN_lee_jobs_category = {
 		days_re_enable = 180
 		cost = 30
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_summit_tt
 			hidden_effect = { add_to_variable = { TFRKPHN_job_lab = 5 } add_to_variable = { TFRKPHN_job_biz = 5 } TFRKPHN_job_update = yes }
 		}
@@ -1339,6 +1441,7 @@ TFRKPHN_lee_jobs_category = {
 		available = { custom_trigger_tooltip = { tooltip = TFRKPHN_job_pact_need check_variable = { TFRKPHN_job_lab > 49 } check_variable = { TFRKPHN_job_biz > 49 } } }
 		cost = 15
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_pact_tt
 			add_stability = 0.05
 			set_country_flag = TFRKPHN_job_pact
@@ -1354,6 +1457,7 @@ TFRKPHN_lee_jobs_category = {
 		days_re_enable = 180
 		cost = 40
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_summit_tt
 			hidden_effect = { add_to_variable = { TFRKPHN_job_lab = 5 } add_to_variable = { TFRKPHN_job_biz = 5 } TFRKPHN_job_update = yes }
 		}
@@ -1368,6 +1472,7 @@ TFRKPHN_lee_jobs_category = {
 		available = { custom_trigger_tooltip = { tooltip = TFRKPHN_job_pact_need check_variable = { TFRKPHN_job_lab > 49 } check_variable = { TFRKPHN_job_biz > 49 } } }
 		cost = 20
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_job_pact_tt
 			add_stability = 0.05
 			set_country_flag = TFRKPHN_job_pact

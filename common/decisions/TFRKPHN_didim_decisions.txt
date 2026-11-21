@@ -6,7 +6,8 @@ TFRKPHN_dd_category = {
 		visible = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_completed_focus = TFRKPHN_oh_se_hoon_c2 }
 		available = { check_variable = { TFRKPHN_dd < 60 } }
 		days_remove = 60
-		complete_effect = { custom_effect_tooltip = TFRKPHN_dd_region_tt }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes custom_effect_tooltip = TFRKPHN_dd_region_tt }
 		remove_effect = { hidden_effect = { add_to_variable = { TFRKPHN_dd = 5 } clamp_variable = { var = TFRKPHN_dd min = 0 max = 60 } TFRKPHN_dd_apply = yes } }
 		ai_will_do = { factor = 1 }
 	}
@@ -17,7 +18,8 @@ TFRKPHN_dd_category = {
 		visible = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_completed_focus = TFRKPHN_oh_se_hoon_c2 }
 		available = { check_variable = { TFRKPHN_dd < 60 } }
 		days_remove = 90
-		complete_effect = { custom_effect_tooltip = TFRKPHN_dd_work_tt }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes custom_effect_tooltip = TFRKPHN_dd_work_tt }
 		remove_effect = { hidden_effect = { set_country_flag = TFRKPHN_dd_work add_to_variable = { TFRKPHN_dd = 3 } clamp_variable = { var = TFRKPHN_dd min = 0 max = 60 } TFRKPHN_dd_apply = yes } }
 		ai_will_do = { factor = 1 }
 	}
@@ -28,7 +30,8 @@ TFRKPHN_dd_category = {
 		visible = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_completed_focus = TFRKPHN_oh_se_hoon_c2 }
 		available = { check_variable = { TFRKPHN_dd < 60 } check_variable = { TFRKPHN_dd > 9.5 } }
 		days_remove = 30
-		complete_effect = { custom_effect_tooltip = TFRKPHN_dd_data_tt }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes custom_effect_tooltip = TFRKPHN_dd_data_tt }
 		remove_effect = { hidden_effect = { add_stability = 0.02 add_political_power = 50 add_to_variable = { TFRKPHN_dd = 4 } clamp_variable = { var = TFRKPHN_dd min = 0 max = 60 } TFRKPHN_dd_apply = yes } }
 		ai_will_do = { factor = 1 }
 	}
@@ -40,7 +43,8 @@ TFRKPHN_dd_category = {
 		available = { check_variable = { TFRKPHN_dd < 60 } num_of_civilian_factories_available_for_projects > 0 check_variable = { TFRKPHN_dd > 14.5 } }
 		days_remove = 120
 		modifier = { civilian_factory_use = 1 }
-		complete_effect = { custom_effect_tooltip = TFRKPHN_dd_merge_tt }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes custom_effect_tooltip = TFRKPHN_dd_merge_tt }
 		remove_effect = { hidden_effect = { add_to_variable = { TFRKPHN_dd = 12 } clamp_variable = { var = TFRKPHN_dd min = 0 max = 60 } TFRKPHN_dd_apply = yes } }
 		ai_will_do = { factor = 1 }
 	}
@@ -52,7 +56,8 @@ TFRKPHN_dd_category = {
 		available = { check_variable = { TFRKPHN_dd < 60 } num_of_civilian_factories_available_for_projects > 0 has_completed_focus = TFRKPHN_oh_se_hoon_c5 }
 		days_remove = 150
 		modifier = { civilian_factory_use = 1 }
-		complete_effect = { custom_effect_tooltip = TFRKPHN_dd_nation_tt }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes custom_effect_tooltip = TFRKPHN_dd_nation_tt }
 		remove_effect = { hidden_effect = { add_to_variable = { TFRKPHN_dd = 20 } clamp_variable = { var = TFRKPHN_dd min = 0 max = 60 } TFRKPHN_dd_apply = yes } }
 		ai_will_do = { factor = 1 }
 	}

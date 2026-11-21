@@ -6,7 +6,8 @@ TFRKPHN_nr_category = {
 		fire_only_once = yes
 		visible = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_completed_focus = TFRKPHN_oh_se_hoon_a1 }
 		available = { has_completed_focus = TFRKPHN_oh_se_hoon_a3 }
-		complete_effect = {  custom_effect_tooltip = TFRKPHN_nr_table_tt hidden_effect = { add_to_variable = { TFRKPHN_nr1 = 15 } TFRKPHN_nr_apply = yes } }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes  custom_effect_tooltip = TFRKPHN_nr_table_tt hidden_effect = { add_to_variable = { TFRKPHN_nr1 = 15 } TFRKPHN_nr_apply = yes } }
 		ai_will_do = { factor = 1 }
 	}
 	TFRKPHN_nr_press = {
@@ -14,7 +15,8 @@ TFRKPHN_nr_category = {
 		cost = 25
 		visible = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_completed_focus = TFRKPHN_oh_se_hoon_a1 }
 		days_re_enable = 60
-		complete_effect = {  custom_effect_tooltip = TFRKPHN_nr_press_tt hidden_effect = { add_to_variable = { TFRKPHN_nr1 = 5 } TFRKPHN_nr_apply = yes } }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes  custom_effect_tooltip = TFRKPHN_nr_press_tt hidden_effect = { add_to_variable = { TFRKPHN_nr1 = 5 } TFRKPHN_nr_apply = yes } }
 		ai_will_do = { factor = 1 }
 	}
 	TFRKPHN_nr_brief = {
@@ -22,7 +24,8 @@ TFRKPHN_nr_category = {
 		cost = 40
 		fire_only_once = yes
 		visible = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_completed_focus = TFRKPHN_oh_se_hoon_a1 }
-		complete_effect = {  custom_effect_tooltip = TFRKPHN_nr_brief_tt hidden_effect = { add_to_variable = { TFRKPHN_nr2 = 20 } add_to_variable = { TFRKPHN_nr3 = -5 } TFRKPHN_nr_apply = yes } }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes  custom_effect_tooltip = TFRKPHN_nr_brief_tt hidden_effect = { add_to_variable = { TFRKPHN_nr2 = 20 } add_to_variable = { TFRKPHN_nr3 = -5 } TFRKPHN_nr_apply = yes } }
 		ai_will_do = { factor = 1 }
 	}
 	TFRKPHN_nr_names = {
@@ -31,7 +34,8 @@ TFRKPHN_nr_category = {
 		fire_only_once = yes
 		visible = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_completed_focus = TFRKPHN_oh_se_hoon_a1 }
 		available = { has_completed_focus = TFRKPHN_oh_se_hoon_a6 }
-		complete_effect = { add_stability = 0.03 custom_effect_tooltip = TFRKPHN_nr_names_tt hidden_effect = { add_to_variable = { TFRKPHN_nr2 = 30 } add_to_variable = { TFRKPHN_nr3 = -10 } TFRKPHN_nr_apply = yes } }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes add_stability = 0.03 custom_effect_tooltip = TFRKPHN_nr_names_tt hidden_effect = { add_to_variable = { TFRKPHN_nr2 = 30 } add_to_variable = { TFRKPHN_nr3 = -10 } TFRKPHN_nr_apply = yes } }
 		ai_will_do = { factor = 1 }
 	}
 	TFRKPHN_nr_envoy = {
@@ -39,7 +43,8 @@ TFRKPHN_nr_category = {
 		cost = 50
 		visible = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_completed_focus = TFRKPHN_oh_se_hoon_a1 }
 		days_re_enable = 120
-		complete_effect = {  custom_effect_tooltip = TFRKPHN_nr_envoy_tt hidden_effect = { add_to_variable = { TFRKPHN_nr3 = 15 } TFRKPHN_nr_apply = yes } }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes  custom_effect_tooltip = TFRKPHN_nr_envoy_tt hidden_effect = { add_to_variable = { TFRKPHN_nr3 = 15 } TFRKPHN_nr_apply = yes } }
 		ai_will_do = { factor = 1 }
 	}
 	TFRKPHN_nr_supply = {
@@ -50,7 +55,8 @@ TFRKPHN_nr_category = {
 		available = { num_of_civilian_factories_available_for_projects > 0 }
 		days_remove = 90
 		modifier = { civilian_factory_use = 1 }
-		complete_effect = { custom_effect_tooltip = TFRKPHN_nr_supply_tt }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes custom_effect_tooltip = TFRKPHN_nr_supply_tt }
 		remove_effect = { if = { limit = { has_country_flag = TFRKPHN_kdef_law_done } add_to_variable = { TFRKPHN_nr3 = 5 } TFRKPHN_nr_apply = yes } hidden_effect = { add_to_variable = { TFRKPHN_nr3 = 10 } TFRKPHN_nr_apply = yes } }
 		ai_will_do = { factor = 1 }
 	}
@@ -59,7 +65,8 @@ TFRKPHN_nr_category = {
 		cost = 75
 		fire_only_once = yes
 		visible = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_completed_focus = TFRKPHN_oh_se_hoon_a1 has_country_flag = TFRKPHN_dbl_comp_amend }
-		complete_effect = { add_stability = 0.03 custom_effect_tooltip = TFRKPHN_nr_amend_tt hidden_effect = { add_to_variable = { TFRKPHN_nr2 = 10 } add_to_variable = { TFRKPHN_nr1 = 10 } TFRKPHN_nr_apply = yes } }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes add_stability = 0.03 custom_effect_tooltip = TFRKPHN_nr_amend_tt hidden_effect = { add_to_variable = { TFRKPHN_nr2 = 10 } add_to_variable = { TFRKPHN_nr1 = 10 } TFRKPHN_nr_apply = yes } }
 		ai_will_do = { factor = 1 }
 	}
 	TFRKPHN_nr_comp = {
@@ -67,7 +74,8 @@ TFRKPHN_nr_category = {
 		cost = 40
 		fire_only_once = yes
 		visible = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_completed_focus = TFRKPHN_oh_se_hoon_a1 has_country_flag = TFRKPHN_dbl_comp_law }
-		complete_effect = {  custom_effect_tooltip = TFRKPHN_nr_comp_tt hidden_effect = { add_to_variable = { TFRKPHN_nr2 = 10 } TFRKPHN_nr_apply = yes } }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes  custom_effect_tooltip = TFRKPHN_nr_comp_tt hidden_effect = { add_to_variable = { TFRKPHN_nr2 = 10 } TFRKPHN_nr_apply = yes } }
 		ai_will_do = { factor = 1 }
 	}
 	TFRKPHN_nr_again = {
@@ -75,7 +83,8 @@ TFRKPHN_nr_category = {
 		cost = 50
 		fire_only_once = yes
 		visible = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_completed_focus = TFRKPHN_oh_se_hoon_a1 has_country_flag = TFRKPHN_grief_set NOT = { has_country_flag = TFRKPHN_dbl_comp_amend } NOT = { has_country_flag = TFRKPHN_dbl_comp_law } }
-		complete_effect = {  custom_effect_tooltip = TFRKPHN_nr_again_tt hidden_effect = { add_to_variable = { TFRKPHN_nr2 = 15 } add_to_variable = { TFRKPHN_nr1 = 5 } TFRKPHN_nr_apply = yes } }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes  custom_effect_tooltip = TFRKPHN_nr_again_tt hidden_effect = { add_to_variable = { TFRKPHN_nr2 = 15 } add_to_variable = { TFRKPHN_nr1 = 5 } TFRKPHN_nr_apply = yes } }
 		ai_will_do = { factor = 1 }
 	}
 }

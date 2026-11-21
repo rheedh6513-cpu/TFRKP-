@@ -12,6 +12,7 @@ TFRKPHN_allyfac_category = {
 		modifier = { civilian_factory_use = 1 }
 		days_re_enable = 365
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			set_country_flag = TFRKPHN_allyfac_busy
 			custom_effect_tooltip = TFRKPHN_allyfac_wait_tt
 		}
@@ -38,6 +39,7 @@ TFRKPHN_allyfac_category = {
 		modifier = { civilian_factory_use = 1 }
 		days_re_enable = 365
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			set_country_flag = TFRKPHN_allyfac_busy
 			custom_effect_tooltip = TFRKPHN_allyfac_wait_tt
 		}

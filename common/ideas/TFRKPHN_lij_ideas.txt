@@ -1,0 +1,15 @@
+# [안내] 이인제 과로 게이트. lij_build.py가 만든다.
+ideas = {
+	country = {
+		TFRKPHN_lij_dizzy = {
+			picture = TFRKP_placehold_idea
+			allowed = { original_tag = KOR }
+			modifier = { stability_factor = -0.02 political_power_factor = -0.05 }
+		}
+		TFRKPHN_lij_hospital = {
+			picture = TFRKP_placehold_idea
+			allowed = { original_tag = KOR }
+			modifier = { stability_factor = -0.03 political_power_factor = -0.15 }
+		}
+	}
+}

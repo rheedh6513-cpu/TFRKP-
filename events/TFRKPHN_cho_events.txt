@@ -1,0 +1,125 @@
+# [안내] 조원진 쪽 숨은 이벤트. cho_build.py가 만든다.
+add_namespace = tfrkphn
+country_event = {
+	id = tfrkphn.7059
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		if = {
+			limit = { NOT = { has_country_flag = TFRKPHN_cho_dissolve_fired } }
+			set_country_flag = TFRKPHN_cho_dissolve_fired
+			country_event = tfrkphn.7040
+		}
+	}
+}
+country_event = {
+	id = tfrkphn.7060
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		if = {
+			limit = { NOT = { has_country_flag = TFRKPHN_cho_shell_fired } }
+			set_country_flag = TFRKPHN_cho_shell_fired
+			country_event = tfrkphn.7041
+		}
+	}
+}
+country_event = {
+	id = tfrkphn.7069
+	title = tfrkphn.7069.t
+	desc = tfrkphn.7069.d
+	picture = GFX_report_event_kor_marching
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7069.a
+		add_war_support = 0.02
+	}
+}
+news_event = {
+	id = tfrkphn.7070
+	title = tfrkphn.7070.t
+	desc = tfrkphn.7070.d
+	picture = GFX_news_event_kor_news_14
+	is_triggered_only = yes
+	major = no
+	option = {
+		name = tfrkphn.7070.a
+		add_war_support = 0.03
+		add_stability = -0.02
+	}
+	option = {
+		name = tfrkphn.7070.b
+		add_stability = 0.01
+		add_political_power = -25
+	}
+}
+country_event = {
+	id = tfrkphn.7071
+	title = tfrkphn.7071.t
+	desc = tfrkphn.7071.d
+	picture = GFX_report_event_kor_seoul_city
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7071.a
+		add_political_power = 25
+	}
+}
+country_event = {
+	id = tfrkphn.7072
+	title = tfrkphn.7072.t
+	desc = tfrkphn.7072.d
+	picture = GFX_report_event_kor_seoul_riot
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7072.a
+		add_war_support = 0.02
+		add_stability = -0.01
+	}
+}
+country_event = {
+	id = tfrkphn.7073
+	title = tfrkphn.7073.t
+	desc = tfrkphn.7073.d
+	picture = GFX_report_event_kor_light_gate_riot
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7073.a
+		add_war_support = 0.02
+		add_stability = -0.02
+	}
+}
+country_event = {
+	id = tfrkphn.7074
+	title = tfrkphn.7074.t
+	desc = tfrkphn.7074.d
+	picture = GFX_report_event_kor_minju_disagree
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7074.a
+		add_stability = -0.02
+		set_country_flag = TFRKPHN_cho_woo_speech
+	}
+}
+country_event = {
+	id = tfrkphn.7075
+	title = tfrkphn.7075.t
+	desc = tfrkphn.7075.d
+	picture = GFX_report_event_kor_se_jong
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7075.a
+		add_stability = -0.02
+		add_political_power = 25
+	}
+}
+country_event = {
+	id = tfrkphn.7076
+	title = tfrkphn.7076.t
+	desc = tfrkphn.7076.d
+	picture = GFX_report_event_kor_rokarmed_1
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7076.a
+		add_war_support = 0.02
+	}
+}

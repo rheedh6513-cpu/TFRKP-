@@ -40,6 +40,7 @@ TFRKPHN_hong_minsim_category = {
 			check_variable = { TFRKPHN_support_seoul < 100 }
 		}
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_after_14_tt
 			custom_effect_tooltip = TFRKPHN_hong_tour_seoul_tt
 		}
@@ -68,6 +69,7 @@ TFRKPHN_hong_minsim_category = {
 			check_variable = { TFRKPHN_support_gyeonggi < 100 }
 		}
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_after_14_tt
 			custom_effect_tooltip = TFRKPHN_hong_tour_gyeonggi_tt
 		}
@@ -96,6 +98,7 @@ TFRKPHN_hong_minsim_category = {
 			check_variable = { TFRKPHN_support_gangwon < 100 }
 		}
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_after_14_tt
 			custom_effect_tooltip = TFRKPHN_hong_tour_gangwon_tt
 		}
@@ -124,6 +127,7 @@ TFRKPHN_hong_minsim_category = {
 			check_variable = { TFRKPHN_support_chungcheong < 100 }
 		}
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_after_14_tt
 			custom_effect_tooltip = TFRKPHN_hong_tour_chungcheong_tt
 		}
@@ -152,6 +156,7 @@ TFRKPHN_hong_minsim_category = {
 			check_variable = { TFRKPHN_support_jeonbuk < 100 }
 		}
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_after_14_tt
 			custom_effect_tooltip = TFRKPHN_hong_tour_jeonbuk_tt
 		}
@@ -180,6 +185,7 @@ TFRKPHN_hong_minsim_category = {
 			check_variable = { TFRKPHN_support_jeonnam < 100 }
 		}
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_after_14_tt
 			custom_effect_tooltip = TFRKPHN_hong_tour_jeonnam_tt
 		}
@@ -208,6 +214,7 @@ TFRKPHN_hong_minsim_category = {
 			check_variable = { TFRKPHN_support_gyeongbuk < 100 }
 		}
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_after_14_tt
 			custom_effect_tooltip = TFRKPHN_hong_tour_gyeongbuk_tt
 		}
@@ -236,6 +243,7 @@ TFRKPHN_hong_minsim_category = {
 			check_variable = { TFRKPHN_support_gyeongnam < 100 }
 		}
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_after_14_tt
 			custom_effect_tooltip = TFRKPHN_hong_tour_gyeongnam_tt
 		}
@@ -264,6 +272,7 @@ TFRKPHN_hong_minsim_category = {
 			check_variable = { TFRKPHN_support_jeju < 100 }
 		}
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			custom_effect_tooltip = TFRKPHN_after_14_tt
 			custom_effect_tooltip = TFRKPHN_hong_tour_jeju_tt
 		}
@@ -300,6 +309,7 @@ TFRKPHN_hong_minsim_category = {
 			highlight_state_targets = { state = 1041 }
 		}
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			set_country_flag = TFRKPHN_arms_chosen
 			custom_effect_tooltip = TFRKPHN_after_14_tt
 			custom_effect_tooltip = TFRKPHN_hong_arms_factory_tt
@@ -348,6 +358,7 @@ TFRKPHN_hong_minsim_category = {
 			highlight_state_targets = { state = 1041 }
 		}
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			set_country_flag = TFRKPHN_arms_chosen
 			custom_effect_tooltip = TFRKPHN_after_14_tt
 			custom_effect_tooltip = TFRKPHN_hong_arms_factory_tt
@@ -396,6 +407,7 @@ TFRKPHN_hong_minsim_category = {
 			highlight_state_targets = { state = 871 }
 		}
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			set_country_flag = TFRKPHN_arms_chosen
 			custom_effect_tooltip = TFRKPHN_after_14_tt
 			custom_effect_tooltip = TFRKPHN_hong_arms_factory_tt
@@ -444,6 +456,7 @@ TFRKPHN_hong_minsim_category = {
 			highlight_state_targets = { state = 525 }
 		}
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			set_country_flag = TFRKPHN_arms_chosen
 			custom_effect_tooltip = TFRKPHN_after_14_tt
 			custom_effect_tooltip = TFRKPHN_hong_arms_factory_tt
@@ -492,6 +505,7 @@ TFRKPHN_hong_minsim_category = {
 			highlight_state_targets = { state = 869 }
 		}
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			set_country_flag = TFRKPHN_arms_chosen
 			custom_effect_tooltip = TFRKPHN_after_14_tt
 			custom_effect_tooltip = TFRKPHN_hong_arms_factory_tt
@@ -540,6 +554,7 @@ TFRKPHN_hong_minsim_category = {
 			highlight_state_targets = { state = 869 }
 		}
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			set_country_flag = TFRKPHN_arms_chosen
 			custom_effect_tooltip = TFRKPHN_after_14_tt
 			custom_effect_tooltip = TFRKPHN_hong_arms_factory_tt
@@ -588,6 +603,7 @@ TFRKPHN_hong_minsim_category = {
 			highlight_state_targets = { state = 870 }
 		}
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			set_country_flag = TFRKPHN_arms_chosen
 			custom_effect_tooltip = TFRKPHN_after_14_tt
 			custom_effect_tooltip = TFRKPHN_hong_arms_factory_tt
@@ -636,6 +652,7 @@ TFRKPHN_hong_minsim_category = {
 			highlight_state_targets = { state = 1412 }
 		}
 		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
 			set_country_flag = TFRKPHN_arms_chosen
 			custom_effect_tooltip = TFRKPHN_after_14_tt
 			custom_effect_tooltip = TFRKPHN_hong_arms_factory_tt

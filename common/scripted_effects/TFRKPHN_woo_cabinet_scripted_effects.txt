@@ -1,0 +1,21 @@
+# [안내] 우원식 정부 내각. woo_cab_build.py가 만든다.
+TFRKPHN_woo_cabinet_appoint = {
+	hidden_effect = {
+		set_country_flag = TFRKPHN_woo_cabinet_set
+		if = { limit = { NOT = { has_idea = TFRKPHN_woo_chung_sye_kyun_HM } } add_ideas = TFRKPHN_woo_chung_sye_kyun_HM }
+		if = { limit = { NOT = { has_idea = TFRKPHN_woo_park_jin_FM } } add_ideas = TFRKPHN_woo_park_jin_FM }
+		if = { limit = { NOT = { has_idea = TFRKPHN_woo_kim_dong_yeon_EM } } add_ideas = TFRKPHN_woo_kim_dong_yeon_EM }
+		if = { limit = { NOT = { has_idea = TFRKPHN_woo_kim_bu_gyeom_IM } } add_ideas = TFRKPHN_woo_kim_bu_gyeom_IM }
+		if = { limit = { NOT = { has_idea = TFRKPHN_woo_suh_hoon_IntelM } } add_ideas = TFRKPHN_woo_suh_hoon_IntelM }
+		if = { limit = { NOT = { has_idea = TFRKPHN_woo_kim_yong_woo_TM } } add_ideas = TFRKPHN_woo_kim_yong_woo_TM }
+	}
+}
+TFRKPHN_woo_cabinet_leave_kdy = {
+	hidden_effect = { if = { limit = { has_idea = TFRKPHN_woo_kim_dong_yeon_EM } remove_ideas = TFRKPHN_woo_kim_dong_yeon_EM } }
+}
+TFRKPHN_woo_cabinet_leave_kbg = {
+	hidden_effect = { if = { limit = { has_idea = TFRKPHN_woo_kim_bu_gyeom_IM } remove_ideas = TFRKPHN_woo_kim_bu_gyeom_IM } }
+}
+TFRKPHN_woo_cabinet_leave_kms = {
+	hidden_effect = { }
+}
