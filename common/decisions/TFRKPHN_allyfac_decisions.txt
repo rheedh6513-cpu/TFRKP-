@@ -5,7 +5,7 @@ TFRKPHN_allyfac_category = {
 		state_target = yes
 		on_map_mode = map_and_decisions_view
 		target_trigger = { FROM = { is_owned_by = ROOT is_controlled_by = ROOT has_dynamic_modifier = { modifier = TFRKPHN_local_ally } } }
-		visible = { any_owned_state = { has_dynamic_modifier = { modifier = TFRKPHN_local_ally } } }
+		visible = { NOT = { has_government = authoritarian_democrat } any_owned_state = { has_dynamic_modifier = { modifier = TFRKPHN_local_ally } } }
 		available = { NOT = { has_country_flag = TFRKPHN_allyfac_busy } num_of_civilian_factories_available_for_projects > 0 }
 		cost = 50
 		days_remove = 60
@@ -32,7 +32,7 @@ TFRKPHN_allyfac_category = {
 		state_target = yes
 		on_map_mode = map_and_decisions_view
 		target_trigger = { FROM = { is_owned_by = ROOT is_controlled_by = ROOT has_dynamic_modifier = { modifier = TFRKPHN_local_ally } } }
-		visible = { any_owned_state = { has_dynamic_modifier = { modifier = TFRKPHN_local_ally } } }
+		visible = { NOT = { has_government = authoritarian_democrat } any_owned_state = { has_dynamic_modifier = { modifier = TFRKPHN_local_ally } } }
 		available = { NOT = { has_country_flag = TFRKPHN_allyfac_busy } num_of_civilian_factories_available_for_projects > 0 }
 		cost = 50
 		days_remove = 60

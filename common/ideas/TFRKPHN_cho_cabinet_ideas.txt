@@ -62,14 +62,14 @@ ideas = {
 		}
 	}
 	theorist_minister = {
-		TFRKPHN_shin_won_sik_TM = {
-			picture = KOR_shin_won_sik
+		TFRKPHN_kim_yong_hyeon_TM = {
+			picture = KOR_kim_yong_hyeon
 			allowed = { original_tag = KOR }
 			available = { }
 			visible = { has_country_flag = TFRKPHN_cho_cabinet_set }
 			traits = {
 				TFRKPHN_faction_ORP
-				TFRKPHN_trait_jcs_vice_chair
+				TFRKPHN_trait_jcs_operations
 			}
 		}
 	}

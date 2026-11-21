@@ -33,10 +33,11 @@ leader_traits = {
 		decryption_factor = 0.05
 		encryption_factor = 0.05
 	}
-	# 신원식
-	TFRKPHN_trait_jcs_vice_chair = {
+	# 김용현
+	TFRKPHN_trait_jcs_operations = {
 		random = no
-		army_org_factor = 0.05
-		army_morale_factor = 0.05
+		army_attack_factor = 0.05
+		war_support_factor = 0.03
+		stability_factor = -0.02
 	}
 }

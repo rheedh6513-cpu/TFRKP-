@@ -9,7 +9,7 @@ focus_tree = {
 		icon = GFX_goal_generic_handshake
 		x = 5
 		y = 0
-		cost = 2
+		cost = 1
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_stability = 0.03
@@ -21,7 +21,7 @@ focus_tree = {
 		icon = GFX_goal_generic_political_pressure
 		x = 2
 		y = 1
-		cost = 3
+		cost = 2
 		prerequisite = { focus = TFRKPHN_woo_init_01 }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
@@ -33,7 +33,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_civ_factory
 		x = 2
 		y = 2
-		cost = 3
+		cost = 2
 		prerequisite = { focus = TFRKPHN_woo_init_02 }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
@@ -46,7 +46,7 @@ focus_tree = {
 		icon = GFX_goal_generic_police_action
 		x = 8
 		y = 1
-		cost = 3
+		cost = 2
 		prerequisite = { focus = TFRKPHN_woo_init_01 }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
@@ -59,7 +59,7 @@ focus_tree = {
 		icon = GFX_goal_generic_scales
 		x = 8
 		y = 2
-		cost = 3
+		cost = 2
 		prerequisite = { focus = TFRKPHN_woo_init_04 }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
@@ -72,7 +72,7 @@ focus_tree = {
 		icon = GFX_goal_generic_army_motorized
 		x = 5
 		y = 1
-		cost = 3
+		cost = 2
 		prerequisite = { focus = TFRKPHN_woo_init_01 }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
@@ -85,7 +85,7 @@ focus_tree = {
 		icon = GFX_goal_generic_army_doctrines
 		x = 5
 		y = 2
-		cost = 3
+		cost = 2
 		prerequisite = { focus = TFRKPHN_woo_init_06 }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
@@ -99,7 +99,7 @@ focus_tree = {
 		icon = GFX_goal_generic_political_pressure
 		x = 5
 		y = 3
-		cost = 2
+		cost = 1
 		prerequisite = { focus = TFRKPHN_woo_init_03 }
 		prerequisite = { focus = TFRKPHN_woo_init_05 }
 		prerequisite = { focus = TFRKPHN_woo_init_07 }
@@ -108,6 +108,7 @@ focus_tree = {
 			custom_effect_tooltip = TFRKPHN_woo_init_08_tt
 			set_country_flag = TFRKPHN_woo_army_bill
 			add_political_power = 25
+			hidden_effect = { country_event = { id = tfrkphn.7081 days = 1 } }
 		}
 	}
 }

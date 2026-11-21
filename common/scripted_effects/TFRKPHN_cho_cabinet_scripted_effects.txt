@@ -19,7 +19,7 @@ TFRKPHN_cho_cabinet_appoint = {
 		if = { limit = { NOT = { has_idea = TFRKPHN_oh_kyung_hoon_EM } } add_ideas = TFRKPHN_oh_kyung_hoon_EM }
 		if = { limit = { NOT = { has_idea = TFRKPHN_kim_jin_tae_IM } } add_ideas = TFRKPHN_kim_jin_tae_IM }
 		if = { limit = { NOT = { has_idea = TFRKPHN_hwangbo_seung_hee_IntelM } } add_ideas = TFRKPHN_hwangbo_seung_hee_IntelM }
-		if = { limit = { NOT = { has_idea = TFRKPHN_shin_won_sik_TM } } add_ideas = TFRKPHN_shin_won_sik_TM }
+		if = { limit = { NOT = { has_idea = TFRKPHN_kim_yong_hyeon_TM } } add_ideas = TFRKPHN_kim_yong_hyeon_TM }
 	}
 }
 TFRKPHN_cho_cabinet_clear = {
@@ -29,7 +29,7 @@ TFRKPHN_cho_cabinet_clear = {
 		if = { limit = { has_idea = TFRKPHN_oh_kyung_hoon_EM } remove_ideas = TFRKPHN_oh_kyung_hoon_EM }
 		if = { limit = { has_idea = TFRKPHN_kim_jin_tae_IM } remove_ideas = TFRKPHN_kim_jin_tae_IM }
 		if = { limit = { has_idea = TFRKPHN_hwangbo_seung_hee_IntelM } remove_ideas = TFRKPHN_hwangbo_seung_hee_IntelM }
-		if = { limit = { has_idea = TFRKPHN_shin_won_sik_TM } remove_ideas = TFRKPHN_shin_won_sik_TM }
+		if = { limit = { has_idea = TFRKPHN_kim_yong_hyeon_TM } remove_ideas = TFRKPHN_kim_yong_hyeon_TM }
 		clr_country_flag = TFRKPHN_cho_cabinet_set
 	}
 }

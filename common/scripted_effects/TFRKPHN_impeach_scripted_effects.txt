@@ -14,7 +14,7 @@ TFRKPHN_imp_refresh = {
 	add_to_variable = { TFRKPHN_imp_yes = TFRKPHN_imp_def }
 	clamp_variable = { var = TFRKPHN_imp_yes min = 0 max = 300 }
 	if = {
-		limit = { check_variable = { TFRKPHN_imp_yes > 199.5 } check_variable = { TFRKPHN_imp_tick > 5.5 } OR = { has_completed_focus = TFRKPHN_hong_b05_07 has_completed_focus = TFRKPHN_hong_b05_08 } NOT = { has_country_flag = TFRKPHN_imp_done } }	# 최악의 결과 다음 하나(책임회피/역공시도)까지 찍을 시간을 준다 (사용자 2026-11-20 23시 35분, 36분)
+		limit = { check_variable = { TFRKPHN_imp_yes > 199.5 } NOT = { has_country_flag = TFRKPHN_imp_done } NOT = { has_country_flag = TFRKPHN_imp_ready } }	# 2026-11-21 20시 05분: 200 넘으면 무조건 탄핵 (중점 조건 없앰). 진행 중이던 패전 중점은 bypass로 건너뛴다	# 최악의 결과 다음 하나(책임회피/역공시도)까지 찍을 시간을 준다 (사용자 2026-11-20 23시 35분, 36분)
 		set_country_flag = TFRKPHN_imp_ready
 		clr_country_flag = TFRKPHN_imp_on
 		country_event = { id = tfrkphn.7023 days = 1 }

@@ -3,5 +3,5 @@ TFRKPHN_allyfac_category = {
 	icon = generic_construction
 	priority = 203
 	allowed = { original_tag = KOR }
-	visible = { any_owned_state = { has_dynamic_modifier = { modifier = TFRKPHN_local_ally } } }
+	visible = { NOT = { has_government = authoritarian_democrat } any_owned_state = { has_dynamic_modifier = { modifier = TFRKPHN_local_ally } } }
 }

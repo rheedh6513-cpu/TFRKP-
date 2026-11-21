@@ -22,4 +22,5 @@ spriteTypes = {
 		noOfFrames = 9
 	}
 	spriteType = { name = "GFX_TFRKPHN_orp_7001" texturefile = "gfx/event_pictures/TFRKPHN_orp_7001.png" }
+	spriteType = { name = "GFX_TFRKPHN_orp_banner_texticon" texturefile = "gfx/texticons/banners/TFRKPHN_orp_banner.png" legacy_lazy_load = no }
 }

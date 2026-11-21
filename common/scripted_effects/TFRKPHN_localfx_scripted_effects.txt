@@ -11,6 +11,7 @@ TFRKPHN_ally_apply = {
 	1412 = { set_variable = { TFRKPHN_ally_n = 0 } }
 	set_temp_variable = { ally_rp = 0 }
 	if = { limit = { OR = { has_government = conservative has_government = authoritarian_democrat has_government = nationalist } } set_temp_variable = { ally_rp = 1 } }
+	if = { limit = { has_government = authoritarian_democrat } set_temp_variable = { ally_rp = 2 } }	# 우리공화당 정부: 여당 단체장이 없다 (사용자 2026-11-21 20시 08분)
 	if = { limit = { OR = { AND = { check_variable = { ally_rp = 1 } OR = { has_country_flag = TFRKPHN_gv3_g AND = { NOT = { has_country_flag = TFRKPHN_gv3_o } NOT = { has_country_flag = TFRKPHN_gv3_g } date > 2026.6.30 has_country_flag = TFRKPHN_g6_3_p } AND = { date > 2022.6.30 NOT = { has_country_flag = TFRKPHN_gv3_g } NOT = { has_country_flag = TFRKPHN_gv3_o } NOT = { AND = { date > 2026.6.30 OR = { has_country_flag = TFRKPHN_g6_3_p has_country_flag = TFRKPHN_g6_3_d } } } } } } AND = { check_variable = { ally_rp = 0 } OR = { has_country_flag = TFRKPHN_gv3_o AND = { NOT = { has_country_flag = TFRKPHN_gv3_g } NOT = { has_country_flag = TFRKPHN_gv3_o } date > 2026.6.30 has_country_flag = TFRKPHN_g6_3_d } } } } } 1411 = { add_to_variable = { TFRKPHN_ally_n = 1 } } }	# 대구광역시장
 	if = { limit = { OR = { AND = { check_variable = { ally_rp = 1 } OR = { has_country_flag = TFRKPHN_gv4_g AND = { NOT = { has_country_flag = TFRKPHN_gv4_o } NOT = { has_country_flag = TFRKPHN_gv4_g } date > 2026.6.30 has_country_flag = TFRKPHN_g6_4_p } AND = { date > 2022.6.30 NOT = { has_country_flag = TFRKPHN_gv4_g } NOT = { has_country_flag = TFRKPHN_gv4_o } NOT = { AND = { date > 2026.6.30 OR = { has_country_flag = TFRKPHN_g6_4_p has_country_flag = TFRKPHN_g6_4_d } } } } } } AND = { check_variable = { ally_rp = 0 } OR = { has_country_flag = TFRKPHN_gv4_o AND = { NOT = { has_country_flag = TFRKPHN_gv4_g } NOT = { has_country_flag = TFRKPHN_gv4_o } date > 2026.6.30 has_country_flag = TFRKPHN_g6_4_d } } } } } 1041 = { add_to_variable = { TFRKPHN_ally_n = 1 } } }	# 인천광역시장
 	if = { limit = { NOT = { has_country_flag = TFRKPHN_gov_merged } OR = { AND = { check_variable = { ally_rp = 1 } OR = { has_country_flag = TFRKPHN_gv14_g AND = { NOT = { has_country_flag = TFRKPHN_gv14_o } NOT = { has_country_flag = TFRKPHN_gv14_g } date > 2026.6.30 has_country_flag = TFRKPHN_g6_14_p } } } AND = { check_variable = { ally_rp = 0 } OR = { has_country_flag = TFRKPHN_gv14_o AND = { NOT = { has_country_flag = TFRKPHN_gv14_g } NOT = { has_country_flag = TFRKPHN_gv14_o } date > 2026.6.30 has_country_flag = TFRKPHN_g6_14_d } AND = { date > 2022.6.30 NOT = { has_country_flag = TFRKPHN_gv14_g } NOT = { has_country_flag = TFRKPHN_gv14_o } NOT = { AND = { date > 2026.6.30 OR = { has_country_flag = TFRKPHN_g6_14_p has_country_flag = TFRKPHN_g6_14_d } } } } } } } } 869 = { add_to_variable = { TFRKPHN_ally_n = 1 } } }	# 광주광역시장
@@ -93,7 +94,7 @@ TFRKPHN_ally_apply = {
 			if = { limit = { check_variable = { TFRKPHN_ally_n < 1 } has_dynamic_modifier = { modifier = TFRKPHN_local_ally } } remove_dynamic_modifier = { modifier = TFRKPHN_local_ally } }
 		}
 	}
-	else = {
+	else_if = { limit = { check_variable = { ally_rp = 0 } }
 		525 = {
 			set_variable = { TFRKPHN_ally_bonus = TFRKPHN_ally_n }
 			multiply_variable = { TFRKPHN_ally_bonus = 0.03 }
@@ -157,6 +158,17 @@ TFRKPHN_ally_apply = {
 			if = { limit = { check_variable = { TFRKPHN_ally_n > 0 } is_owned_by = KOR NOT = { has_dynamic_modifier = { modifier = TFRKPHN_local_ally_dp } } } add_dynamic_modifier = { modifier = TFRKPHN_local_ally_dp } }
 			if = { limit = { check_variable = { TFRKPHN_ally_n < 1 } has_dynamic_modifier = { modifier = TFRKPHN_local_ally_dp } } remove_dynamic_modifier = { modifier = TFRKPHN_local_ally_dp } }
 		}
+	}
+	else = {
+		525 = { if = { limit = { has_dynamic_modifier = { modifier = TFRKPHN_local_ally } } remove_dynamic_modifier = { modifier = TFRKPHN_local_ally } } if = { limit = { has_dynamic_modifier = { modifier = TFRKPHN_local_ally_dp } } remove_dynamic_modifier = { modifier = TFRKPHN_local_ally_dp } } }
+		869 = { if = { limit = { has_dynamic_modifier = { modifier = TFRKPHN_local_ally } } remove_dynamic_modifier = { modifier = TFRKPHN_local_ally } } if = { limit = { has_dynamic_modifier = { modifier = TFRKPHN_local_ally_dp } } remove_dynamic_modifier = { modifier = TFRKPHN_local_ally_dp } } }
+		870 = { if = { limit = { has_dynamic_modifier = { modifier = TFRKPHN_local_ally } } remove_dynamic_modifier = { modifier = TFRKPHN_local_ally } } if = { limit = { has_dynamic_modifier = { modifier = TFRKPHN_local_ally_dp } } remove_dynamic_modifier = { modifier = TFRKPHN_local_ally_dp } } }
+		871 = { if = { limit = { has_dynamic_modifier = { modifier = TFRKPHN_local_ally } } remove_dynamic_modifier = { modifier = TFRKPHN_local_ally } } if = { limit = { has_dynamic_modifier = { modifier = TFRKPHN_local_ally_dp } } remove_dynamic_modifier = { modifier = TFRKPHN_local_ally_dp } } }
+		1041 = { if = { limit = { has_dynamic_modifier = { modifier = TFRKPHN_local_ally } } remove_dynamic_modifier = { modifier = TFRKPHN_local_ally } } if = { limit = { has_dynamic_modifier = { modifier = TFRKPHN_local_ally_dp } } remove_dynamic_modifier = { modifier = TFRKPHN_local_ally_dp } } }
+		1409 = { if = { limit = { has_dynamic_modifier = { modifier = TFRKPHN_local_ally } } remove_dynamic_modifier = { modifier = TFRKPHN_local_ally } } if = { limit = { has_dynamic_modifier = { modifier = TFRKPHN_local_ally_dp } } remove_dynamic_modifier = { modifier = TFRKPHN_local_ally_dp } } }
+		1410 = { if = { limit = { has_dynamic_modifier = { modifier = TFRKPHN_local_ally } } remove_dynamic_modifier = { modifier = TFRKPHN_local_ally } } if = { limit = { has_dynamic_modifier = { modifier = TFRKPHN_local_ally_dp } } remove_dynamic_modifier = { modifier = TFRKPHN_local_ally_dp } } }
+		1411 = { if = { limit = { has_dynamic_modifier = { modifier = TFRKPHN_local_ally } } remove_dynamic_modifier = { modifier = TFRKPHN_local_ally } } if = { limit = { has_dynamic_modifier = { modifier = TFRKPHN_local_ally_dp } } remove_dynamic_modifier = { modifier = TFRKPHN_local_ally_dp } } }
+		1412 = { if = { limit = { has_dynamic_modifier = { modifier = TFRKPHN_local_ally } } remove_dynamic_modifier = { modifier = TFRKPHN_local_ally } } if = { limit = { has_dynamic_modifier = { modifier = TFRKPHN_local_ally_dp } } remove_dynamic_modifier = { modifier = TFRKPHN_local_ally_dp } } }
 	}
 }
 TFRKPHN_ruling_pop_up = {

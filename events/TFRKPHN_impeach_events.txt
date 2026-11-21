@@ -47,6 +47,8 @@ country_event = {
 			clr_country_flag = TFRKPHN_imp_on
 			clr_country_flag = TFRKPHN_imp_ready
 			if = { limit = { NOT = { has_character = KOR_lee_in_je_char } } recruit_character = KOR_lee_in_je_char }
+			if = { limit = { has_idea = TFRKPHN_lee_in_je_HM } remove_ideas = TFRKPHN_lee_in_je_HM }	# 국무총리 칸에서 빼고 대통령 권한대행으로 (2026-11-21 20시 06분)
+			set_politics = { ruling_party = conservative elections_allowed = yes }
 			KOR_lee_in_je_char = { promote_character = korean_neoconservatism }
 			mark_focus_tree_layout_dirty = yes
 			country_event = { id = tfrkphn.7026 days = 70 }
@@ -357,6 +359,7 @@ country_event = {
 			clr_country_flag = TFRKPHN_pres_cycle
 			TFRKPHN_hjr_coalition_set = yes	# 헌정회복연대: 보수주의~사회민주주의 연정 (woo_cab_build.py)
 			set_politics = { ruling_party = social_liberal elections_allowed = yes }
+			TFRKPHN_hjr_coalition_partners = yes	# 보수주의 시장자유주의 사회민주주의를 연정 상대로
 			if = { limit = { NOT = { has_character = TFRKPHN_woo_won_shik_char } } recruit_character = TFRKPHN_woo_won_shik_char }
 			TFRKPHN_woo_won_shik_char = { promote_character = yes }
 			load_focus_tree = { tree = TFRKPHN_woo_init_tree keep_completed = no }	# 우원식 초기 중점 (woo_init_build.py). 본 트리는 7045에서
@@ -370,7 +373,7 @@ country_event = {
 		show_ideas_tooltip = TFRKPHN_hjr_coalition_idea
 		custom_effect_tooltip = TFRKPHN_woo_init_tree_tt
 		add_stability = 0.10
-		hidden_effect = { country_event = { id = tfrkphn.7055 days = 10 } country_event = { id = tfrkphn.7056 days = 30 } country_event = { id = tfrkphn.7057 days = 60 } country_event = { id = tfrkphn.7058 days = 90 } country_event = { id = tfrkphn.7045 days = 120 } }
+		hidden_effect = { country_event = { id = tfrkphn.7055 days = 10 } country_event = { id = tfrkphn.7056 days = 30 } country_event = { id = tfrkphn.7057 days = 60 } country_event = { id = tfrkphn.7058 days = 90 } country_event = { id = tfrkphn.7081 days = 120 } }
 	}
 }
 country_event = {

@@ -1,0 +1,14 @@
+# [안내] 우원식 초기: 7045(모두 엎드려)를 한 번만 띄운다. 중점 08을 끝낸 다음 날, 또는 취임 120일 뒤 (먼저 오는 쪽). woo_init_build.py가 만든다.
+add_namespace = tfrkphn
+country_event = {
+	id = tfrkphn.7081
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		if = {
+			limit = { NOT = { has_country_flag = TFRKPHN_woo_23f_fired } }
+			set_country_flag = TFRKPHN_woo_23f_fired
+			country_event = tfrkphn.7045
+		}
+	}
+}

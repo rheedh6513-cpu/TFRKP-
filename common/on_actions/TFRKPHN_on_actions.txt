@@ -205,7 +205,7 @@ if = { limit = { has_country_flag = TFRKPHN_l6_started has_variable = TFRKPHN_l6
 if = { limit = { has_country_flag = TFRKP_HN_hong_president has_completed_focus = TFRKPHN_hong_b02_02 NOT = { has_country_flag = TFRKPHN_grief_set } } set_country_flag = TFRKPHN_grief_set country_event = { id = tfrkphn.6970 days = 150 } }
 # <<< 홍준표 유족
 # >>> 대통령 자리 지키기 (KP 사건이 이준석 등을 보수 지도자로 올려도 대통령을 다시 앉힌다, 2026-11-19)
-if = { limit = { original_tag = KOR has_country_flag = TFRKP_HN_hong_president has_government = conservative has_character = KOR_hong_joon_pyo_char NOT = { has_country_leader = { character = KOR_hong_joon_pyo_char ruling_only = yes } } } KOR_hong_joon_pyo_char = { promote_character = korean_neoconservatism } }
+if = { limit = { original_tag = KOR has_country_flag = TFRKP_HN_hong_president NOT = { has_country_flag = TFRKPHN_imp_done } has_government = conservative has_character = KOR_hong_joon_pyo_char NOT = { has_country_leader = { character = KOR_hong_joon_pyo_char ruling_only = yes } } } KOR_hong_joon_pyo_char = { promote_character = korean_neoconservatism } }
 if = { limit = { original_tag = KOR has_country_flag = TFRKPHN_successor_lee_in_je NOT = { has_country_flag = TFRKPHN_lij_dead } has_government = conservative has_character = KOR_lee_in_je_char NOT = { has_country_leader = { character = KOR_lee_in_je_char ruling_only = yes } } } KOR_lee_in_je_char = { promote_character = korean_neoconservatism } }
 if = { limit = { original_tag = KOR has_country_flag = TFRKPHN_successor_oh_se_hoon has_government = conservative has_character = KOR_oh_se_hoon_char NOT = { has_country_leader = { character = KOR_oh_se_hoon_char ruling_only = yes } } } KOR_oh_se_hoon_char = { promote_character = korean_warm_conservatism } }
 # <<< 대통령 자리 지키기

@@ -61,6 +61,7 @@ country_event = {
 		hidden_effect = {
 			TFRKPHN_hjr_coalition_set = yes	# 김씨들도 헌정회복연대 연정 그대로 (2026-11-21 19시 01분)
 			set_politics = { ruling_party = social_liberal elections_allowed = yes }
+			TFRKPHN_hjr_coalition_partners = yes
 			if = { limit = { NOT = { has_character = TFRKPHN_kbg_char } } recruit_character = TFRKPHN_kbg_char }
 			TFRKPHN_kbg_char = { promote_character = yes }
 			set_country_flag = TFRKPHN_samkim_kbg_pm
@@ -83,6 +84,7 @@ country_event = {
 		hidden_effect = {
 			TFRKPHN_hjr_coalition_set = yes	# 김씨들도 헌정회복연대 연정 그대로 (2026-11-21 19시 01분)
 			set_politics = { ruling_party = social_liberal elections_allowed = yes }
+			TFRKPHN_hjr_coalition_partners = yes
 			if = { limit = { NOT = { has_character = TFRKPHN_kdy_char } } recruit_character = TFRKPHN_kdy_char }
 			TFRKPHN_kdy_char = { promote_character = yes }
 			set_country_flag = TFRKPHN_samkim_kdy_pm
@@ -106,6 +108,7 @@ country_event = {
 		hidden_effect = {
 			TFRKPHN_hjr_coalition_set = yes	# 김씨들도 헌정회복연대 연정 그대로 (2026-11-21 19시 01분)
 			set_politics = { ruling_party = social_liberal elections_allowed = yes }
+			TFRKPHN_hjr_coalition_partners = yes
 			if = { limit = { NOT = { has_character = TFRKPHN_kbg_char } } recruit_character = TFRKPHN_kbg_char }
 			TFRKPHN_kbg_char = { promote_character = yes }
 			set_country_flag = TFRKPHN_samkim_kbg_pm
@@ -130,6 +133,7 @@ country_event = {
 		hidden_effect = {
 			TFRKPHN_hjr_coalition_set = yes	# 김씨들도 헌정회복연대 연정 그대로 (2026-11-21 19시 01분)
 			set_politics = { ruling_party = conservative elections_allowed = yes }
+			TFRKPHN_hjr_coalition_partners = yes
 			if = { limit = { NOT = { has_character = TFRKPHN_kms_char } } recruit_character = TFRKPHN_kms_char }
 			TFRKPHN_kms_char = { promote_character = yes }
 			set_country_flag = TFRKPHN_samkim_kms_pm
@@ -152,6 +156,7 @@ country_event = {
 		hidden_effect = {
 			TFRKPHN_hjr_coalition_set = yes	# 김씨들도 헌정회복연대 연정 그대로 (2026-11-21 19시 01분)
 			set_politics = { ruling_party = social_liberal elections_allowed = yes }
+			TFRKPHN_hjr_coalition_partners = yes
 			if = { limit = { NOT = { has_character = TFRKPHN_kdy_char } } recruit_character = TFRKPHN_kdy_char }
 			TFRKPHN_kdy_char = { promote_character = yes }
 			set_country_flag = TFRKPHN_samkim_kdy_pm
