@@ -10108,12 +10108,12 @@
 10107;131;186;29;land;false;mountain;5
 10108;131;186;134;land;false;desert;6
 10109;131;186;179;land;true;plains;1
-10110;131;189;94;land;true;plains;6
+10110;131;189;94;land;true;mokpo;6
 10111;131;189;144;land;false;hills;1
 10112;131;189;199;land;false;mountain;6
 10113;131;192;59;land;true;plains;5
 10114;131;192;164;land;false;forest;6
-10115;131;195;24;land;false;hills;6
+10115;131;195;24;land;false;mungyeong;6
 10116;131;195;79;land;true;plains;6
 10117;131;195;129;land;true;desert;5
 10118;131;198;44;land;true;urban;6
@@ -12009,7 +12009,7 @@
 12008;173;108;192;land;false;hills;6
 12009;173;111;52;land;false;hills;5
 12010;173;111;157;land;true;forest;6
-12011;173;111;202;land;true;hills;6
+12011;173;111;202;land;true;gangneung;6
 12012;173;114;17;land;false;plains;6
 12013;173;114;167;land;false;mountain;7
 12014;173;114;222;land;false;mountain;6
@@ -12058,7 +12058,7 @@
 12057;173;162;67;land;false;mountain;6
 12058;173;162;217;land;true;plains;1
 12059;173;165;32;land;false;mountain;6
-12060;173;165;182;land;true;urban;6
+12060;173;165;182;land;true;jinju;6
 12061;173;168;97;land;false;forest;6
 12062;173;168;147;land;false;forest;6
 12063;173;168;202;land;true;plains;6
@@ -12083,7 +12083,7 @@
 12082;173;189;157;land;false;desert;5
 12083;173;192;17;land;false;hills;1
 12084;173;192;72;land;false;mountain;6
-12085;173;192;222;land;true;plains;6
+12085;173;192;222;land;true;suncheon;6
 12086;173;195;37;land;false;plains;6
 12087;173;195;187;land;true;hills;5
 12088;173;198;2;land;true;desert;5
@@ -14225,7 +14225,7 @@
 14224;178;24;234;land;false;hills;6
 14225;73;226;170;land;false;hills;6
 14226;35;17;29;land;true;hills;6
-14227;223;16;178;land;true;plains;6
+14227;223;16;178;land;true;changwon;6
 14228;71;84;218;land;false;gwangju;6
 14229;172;38;244;land;false;plains;6
 14230;25;237;126;land;false;urban;6
@@ -14235,9 +14235,9 @@
 14234;212;26;219;land;false;daegu;6
 14235;209;121;219;land;true;ulsan;6
 14236;199;208;69;land;true;plains;6
-14237;223;16;78;land;true;hills;6
+14237;223;16;78;land;true;pohang;6
 14238;37;171;229;land;false;sejong;6
-14239;181;76;162;land;true;plains;6
+14239;181;76;162;land;true;dangjin;6
 14240;26;171;233;land;false;hills;6
 14241;171;45;83;land;false;plains;6
 14242;136;89;123;land;false;hills;6
@@ -14246,7 +14246,7 @@
 14245;186;60;197;land;false;urban;6
 14246;60;197;179;land;false;plains;6
 14247;93;183;205;land;false;hills;6
-14248;205;93;189;land;false;hills;6
+14248;205;93;189;land;false;chuncheon;6
 14249;45;134;228;land;false;plains;1
 14250;17;233;53;land;false;forest;1
 14251;112;36;234;land;false;forest;1

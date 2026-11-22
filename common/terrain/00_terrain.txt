@@ -2766,6 +2766,168 @@ categories =  {
 		enemy_army_bonus_air_superiority_factor = -0.50
 	}
 
+	chuncheon = {
+		color = { 165 165 165 }
+		movement_cost = 3.2
+		ai_terrain_importance_factor = 4.0
+		combat_width = 96
+		combat_support_width = 32
+		match_value = 4
+		sound_type = plains
+
+		units = {
+			attack = -0.7
+			movement = -0.05
+			defence = 0.06
+		}
+
+		enemy_army_bonus_air_superiority_factor = -0.50
+	}
+
+	gangneung = {
+		color = { 165 165 165 }
+		movement_cost = 3.2
+		ai_terrain_importance_factor = 4.0
+		combat_width = 96
+		combat_support_width = 32
+		match_value = 4
+		sound_type = plains
+
+		units = {
+			attack = -0.7
+			movement = -0.05
+			defence = 0.06
+		}
+
+		enemy_army_bonus_air_superiority_factor = -0.50
+	}
+
+	pohang = {
+		color = { 165 165 165 }
+		movement_cost = 3.2
+		ai_terrain_importance_factor = 4.0
+		combat_width = 96
+		combat_support_width = 32
+		match_value = 4
+		sound_type = plains
+
+		units = {
+			attack = -0.7
+			movement = -0.05
+			defence = 0.06
+		}
+
+		enemy_army_bonus_air_superiority_factor = -0.50
+	}
+
+	mungyeong = {
+		color = { 165 165 165 }
+		movement_cost = 3.2
+		ai_terrain_importance_factor = 4.0
+		combat_width = 96
+		combat_support_width = 32
+		match_value = 4
+		sound_type = plains
+
+		units = {
+			attack = -0.7
+			movement = -0.05
+			defence = 0.06
+		}
+
+		enemy_army_bonus_air_superiority_factor = -0.50
+	}
+
+	changwon = {
+		color = { 165 165 165 }
+		movement_cost = 3.2
+		ai_terrain_importance_factor = 4.0
+		combat_width = 96
+		combat_support_width = 32
+		match_value = 4
+		sound_type = plains
+
+		units = {
+			attack = -0.7
+			movement = -0.05
+			defence = 0.06
+		}
+
+		enemy_army_bonus_air_superiority_factor = -0.50
+	}
+
+	jinju = {
+		color = { 165 165 165 }
+		movement_cost = 3.2
+		ai_terrain_importance_factor = 4.0
+		combat_width = 96
+		combat_support_width = 32
+		match_value = 4
+		sound_type = plains
+
+		units = {
+			attack = -0.7
+			movement = -0.05
+			defence = 0.06
+		}
+
+		enemy_army_bonus_air_superiority_factor = -0.50
+	}
+
+	dangjin = {
+		color = { 165 165 165 }
+		movement_cost = 3.2
+		ai_terrain_importance_factor = 4.0
+		combat_width = 96
+		combat_support_width = 32
+		match_value = 4
+		sound_type = plains
+
+		units = {
+			attack = -0.7
+			movement = -0.05
+			defence = 0.06
+		}
+
+		enemy_army_bonus_air_superiority_factor = -0.50
+	}
+
+	mokpo = {
+		color = { 165 165 165 }
+		movement_cost = 3.2
+		ai_terrain_importance_factor = 4.0
+		combat_width = 96
+		combat_support_width = 32
+		match_value = 4
+		sound_type = plains
+
+		units = {
+			attack = -0.7
+			movement = -0.05
+			defence = 0.06
+		}
+
+		enemy_army_bonus_air_superiority_factor = -0.50
+	}
+
+	suncheon = {
+		color = { 165 165 165 }
+		movement_cost = 3.2
+		ai_terrain_importance_factor = 4.0
+		combat_width = 96
+		combat_support_width = 32
+		match_value = 4
+		sound_type = plains
+
+		units = {
+			attack = -0.7
+			movement = -0.05
+			defence = 0.06
+		}
+
+		enemy_army_bonus_air_superiority_factor = -0.50
+	}
+
 	delhi = {
 		color = { 165 165 165 }
 		movement_cost = 3.2
