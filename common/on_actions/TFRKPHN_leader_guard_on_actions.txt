@@ -3,225 +3,30 @@ on_actions = {
 	on_daily_KOR = {
 		effect = {
 			if = { limit = { has_country_flag = TFRKPHN_imp_done has_dynamic_modifier = { modifier = TFRKPHN_dev_monthly } } remove_dynamic_modifier = { modifier = TFRKPHN_dev_monthly } }
-			if = { limit = { OR = { has_country_flag = TFRKPHN_woo_pres has_country_flag = TFRKPHN_dpk_dissolved } NOT = { has_country_flag = TFRKPHN_ljm_retired } } set_country_flag = TFRKPHN_ljm_retired if = { limit = { has_character = KOR_lee_jae_myung_char } retire_character = KOR_lee_jae_myung_char } }
-			if = { limit = { has_country_flag = TFRKPHN_imp_done NOT = { has_country_flag = TFRKPHN_orp_formed } } country_event = { id = tfrkphn.7024 } }	# 탈당파가 아직 우리공화당으로 안 갔으면
-			if = { limit = { has_country_flag = TFRKPHN_woo_pres NOT = { has_country_flag = TFRKPHN_woo_ended } NOT = { has_country_leader = { character = TFRKPHN_woo_won_shik_char ruling_only = yes } } }
-				if = { limit = { NOT = { has_character = TFRKPHN_woo_won_shik_char } } recruit_character = TFRKPHN_woo_won_shik_char }
-				promote_character = TFRKPHN_woo_won_shik_char
-			}
-			if = { limit = { has_country_flag = TFRKPHN_samkim_kbg_pm NOT = { has_country_flag = TFRKPHN_samkim_end } NOT = { has_country_leader = { character = TFRKPHN_kbg_char ruling_only = yes } } }
-				if = { limit = { NOT = { has_character = TFRKPHN_kbg_char } } recruit_character = TFRKPHN_kbg_char }
-				promote_character = TFRKPHN_kbg_char
-			}
-			if = { limit = { has_country_flag = TFRKPHN_samkim_kdy_pm NOT = { has_country_flag = TFRKPHN_samkim_end } NOT = { has_country_leader = { character = TFRKPHN_kdy_char ruling_only = yes } } }
-				if = { limit = { NOT = { has_character = TFRKPHN_kdy_char } } recruit_character = TFRKPHN_kdy_char }
-				promote_character = TFRKPHN_kdy_char
-			}
-			if = { limit = { has_country_flag = TFRKPHN_samkim_kms_pm NOT = { has_country_flag = TFRKPHN_samkim_end } NOT = { has_country_leader = { character = TFRKPHN_kms_char ruling_only = yes } } }
-				if = { limit = { NOT = { has_character = TFRKPHN_kms_char } } recruit_character = TFRKPHN_kms_char }
-				promote_character = TFRKPHN_kms_char
-			}
-			if = { limit = { has_country_flag = TFRKPHN_e21_ahn NOT = { has_country_flag = TFRKPHN_woo_pres } NOT = { OR = { has_country_flag = TFRKPHN_samkim_kbg_pm has_country_flag = TFRKPHN_samkim_kdy_pm has_country_flag = TFRKPHN_samkim_kms_pm has_country_flag = TFRKPHN_samkim_end } } has_character = KOR_ahn_cheol_soo_char NOT = { has_country_leader = { character = KOR_ahn_cheol_soo_char ruling_only = yes } } }
-				promote_character = KOR_ahn_cheol_soo_char
-			}
-			if = { limit = { has_country_flag = TFRKPHN_e21_sim_pres NOT = { has_country_flag = TFRKPHN_woo_pres } NOT = { OR = { has_country_flag = TFRKPHN_samkim_kbg_pm has_country_flag = TFRKPHN_samkim_kdy_pm has_country_flag = TFRKPHN_samkim_kms_pm has_country_flag = TFRKPHN_samkim_end } } has_character = KOR_sim_sang_jung_char NOT = { has_country_leader = { character = KOR_sim_sang_jung_char ruling_only = yes } } }
-				promote_character = KOR_sim_sang_jung_char
-			}
-			if = { limit = { has_country_flag = TFRKPHN_e21_cho NOT = { has_country_flag = TFRKPHN_cho_removed } NOT = { has_country_flag = TFRKPHN_woo_pres } NOT = { OR = { has_country_flag = TFRKPHN_samkim_kbg_pm has_country_flag = TFRKPHN_samkim_kdy_pm has_country_flag = TFRKPHN_samkim_kms_pm has_country_flag = TFRKPHN_samkim_end } } has_character = KOR_cho_won_jin_char NOT = { has_country_leader = { character = KOR_cho_won_jin_char ruling_only = yes } } }
-				promote_character = KOR_cho_won_jin_char
-			}
-			if = { limit = { has_country_flag = TFRKPHN_imp_done NOT = { has_country_flag = TFRKPHN_e21_ahn } NOT = { has_country_flag = TFRKPHN_e21_sim_pres } NOT = { AND = { has_country_flag = TFRKPHN_e21_cho NOT = { has_country_flag = TFRKPHN_cho_removed } } } NOT = { has_country_flag = TFRKPHN_dpk_dissolved } NOT = { has_country_flag = TFRKPHN_woo_pres } NOT = { OR = { has_country_flag = TFRKPHN_samkim_kbg_pm has_country_flag = TFRKPHN_samkim_kdy_pm has_country_flag = TFRKPHN_samkim_kms_pm has_country_flag = TFRKPHN_samkim_end } } has_character = KOR_lee_in_je_char NOT = { has_country_leader = { character = KOR_lee_in_je_char ruling_only = yes } } }
-				promote_character = KOR_lee_in_je_char
+			if = { limit = { has_country_flag = TFRKPHN_imp_done NOT = { has_country_flag = TFRKPHN_orp_formed } NOT = { has_country_flag = TFRKPHN_orp_7024_sched } } set_country_flag = TFRKPHN_orp_7024_sched country_event = { id = tfrkphn.7024 } }	# 탈당파가 아직 우리공화당으로 안 갔으면 (한 번만)
+			if = { limit = { has_country_flag = TFRKPHN_orp_formed NOT = { has_country_flag = TFRKPHN_orp_fix24 } }
+				set_country_flag = TFRKPHN_orp_fix24
+				if = { limit = { check_variable = { KOR_NatAsm_ORP_seats > 24.5 } }
+					set_temp_variable = { TFRKPHN_orp_x = KOR_NatAsm_ORP_seats }
+					subtract_from_temp_variable = { TFRKPHN_orp_x = 24 }
+					set_variable = { KOR_NatAsm_ORP_seats = 24 }
+					add_to_variable = { KOR_NatAsm_PPP_seats = TFRKPHN_orp_x }
+					KOR_rerender_NatAsm = yes
+				}
 			}
 			if = { limit = { has_country_flag = TFRKPHN_imp_done }
-				if = { limit = { has_country_leader = { character = KOR_lee_in_je_char ruling_only = yes } NOT = { has_country_flag = TFRKPHN_ldr_KOR_lee_in_je_char } }
-					clr_country_flag = TFRKPHN_ldr_KOR_cho_won_jin_char
-					clr_country_flag = TFRKPHN_ldr_KOR_ahn_cheol_soo_char
-					clr_country_flag = TFRKPHN_ldr_KOR_sim_sang_jung_char
-					clr_country_flag = TFRKPHN_ldr_TFRKPHN_woo_won_shik_char
-					clr_country_flag = TFRKPHN_ldr_TFRKPHN_kbg_char
-					clr_country_flag = TFRKPHN_ldr_TFRKPHN_kdy_char
-					clr_country_flag = TFRKPHN_ldr_TFRKPHN_kms_char
-					clr_country_flag = TFRKPHN_ldr_TFRKPHN_kys_char
-					clr_country_flag = TFRKPHN_ldr_TFRKPHN_hng_char
-					clr_country_flag = TFRKPHN_ldr_KOR_joo_ho_young_char
-					clr_country_flag = TFRKPHN_ldr_KOR_im_jong_seok_char
-					set_country_flag = TFRKPHN_ldr_KOR_lee_in_je_char
-				}
-				if = { limit = { has_country_leader = { character = KOR_cho_won_jin_char ruling_only = yes } NOT = { has_country_flag = TFRKPHN_ldr_KOR_cho_won_jin_char } }
-					clr_country_flag = TFRKPHN_ldr_KOR_lee_in_je_char
-					clr_country_flag = TFRKPHN_ldr_KOR_ahn_cheol_soo_char
-					clr_country_flag = TFRKPHN_ldr_KOR_sim_sang_jung_char
-					clr_country_flag = TFRKPHN_ldr_TFRKPHN_woo_won_shik_char
-					clr_country_flag = TFRKPHN_ldr_TFRKPHN_kbg_char
-					clr_country_flag = TFRKPHN_ldr_TFRKPHN_kdy_char
-					clr_country_flag = TFRKPHN_ldr_TFRKPHN_kms_char
-					clr_country_flag = TFRKPHN_ldr_TFRKPHN_kys_char
-					clr_country_flag = TFRKPHN_ldr_TFRKPHN_hng_char
-					clr_country_flag = TFRKPHN_ldr_KOR_joo_ho_young_char
-					clr_country_flag = TFRKPHN_ldr_KOR_im_jong_seok_char
-					set_country_flag = TFRKPHN_ldr_KOR_cho_won_jin_char
-				}
-				if = { limit = { has_country_leader = { character = KOR_ahn_cheol_soo_char ruling_only = yes } NOT = { has_country_flag = TFRKPHN_ldr_KOR_ahn_cheol_soo_char } }
-					clr_country_flag = TFRKPHN_ldr_KOR_lee_in_je_char
-					clr_country_flag = TFRKPHN_ldr_KOR_cho_won_jin_char
-					clr_country_flag = TFRKPHN_ldr_KOR_sim_sang_jung_char
-					clr_country_flag = TFRKPHN_ldr_TFRKPHN_woo_won_shik_char
-					clr_country_flag = TFRKPHN_ldr_TFRKPHN_kbg_char
-					clr_country_flag = TFRKPHN_ldr_TFRKPHN_kdy_char
-					clr_country_flag = TFRKPHN_ldr_TFRKPHN_kms_char
-					clr_country_flag = TFRKPHN_ldr_TFRKPHN_kys_char
-					clr_country_flag = TFRKPHN_ldr_TFRKPHN_hng_char
-					clr_country_flag = TFRKPHN_ldr_KOR_joo_ho_young_char
-					clr_country_flag = TFRKPHN_ldr_KOR_im_jong_seok_char
-					set_country_flag = TFRKPHN_ldr_KOR_ahn_cheol_soo_char
-				}
-				if = { limit = { has_country_leader = { character = KOR_sim_sang_jung_char ruling_only = yes } NOT = { has_country_flag = TFRKPHN_ldr_KOR_sim_sang_jung_char } }
-					clr_country_flag = TFRKPHN_ldr_KOR_lee_in_je_char
-					clr_country_flag = TFRKPHN_ldr_KOR_cho_won_jin_char
-					clr_country_flag = TFRKPHN_ldr_KOR_ahn_cheol_soo_char
-					clr_country_flag = TFRKPHN_ldr_TFRKPHN_woo_won_shik_char
-					clr_country_flag = TFRKPHN_ldr_TFRKPHN_kbg_char
-					clr_country_flag = TFRKPHN_ldr_TFRKPHN_kdy_char
-					clr_country_flag = TFRKPHN_ldr_TFRKPHN_kms_char
-					clr_country_flag = TFRKPHN_ldr_TFRKPHN_kys_char
-					clr_country_flag = TFRKPHN_ldr_TFRKPHN_hng_char
-					clr_country_flag = TFRKPHN_ldr_KOR_joo_ho_young_char
-					clr_country_flag = TFRKPHN_ldr_KOR_im_jong_seok_char
-					set_country_flag = TFRKPHN_ldr_KOR_sim_sang_jung_char
-				}
-				if = { limit = { has_country_leader = { character = TFRKPHN_woo_won_shik_char ruling_only = yes } NOT = { has_country_flag = TFRKPHN_ldr_TFRKPHN_woo_won_shik_char } }
-					clr_country_flag = TFRKPHN_ldr_KOR_lee_in_je_char
-					clr_country_flag = TFRKPHN_ldr_KOR_cho_won_jin_char
-					clr_country_flag = TFRKPHN_ldr_KOR_ahn_cheol_soo_char
-					clr_country_flag = TFRKPHN_ldr_KOR_sim_sang_jung_char
-					clr_country_flag = TFRKPHN_ldr_TFRKPHN_kbg_char
-					clr_country_flag = TFRKPHN_ldr_TFRKPHN_kdy_char
-					clr_country_flag = TFRKPHN_ldr_TFRKPHN_kms_char
-					clr_country_flag = TFRKPHN_ldr_TFRKPHN_kys_char
-					clr_country_flag = TFRKPHN_ldr_TFRKPHN_hng_char
-					clr_country_flag = TFRKPHN_ldr_KOR_joo_ho_young_char
-					clr_country_flag = TFRKPHN_ldr_KOR_im_jong_seok_char
-					set_country_flag = TFRKPHN_ldr_TFRKPHN_woo_won_shik_char
-				}
-				if = { limit = { has_country_leader = { character = TFRKPHN_kbg_char ruling_only = yes } NOT = { has_country_flag = TFRKPHN_ldr_TFRKPHN_kbg_char } }
-					clr_country_flag = TFRKPHN_ldr_KOR_lee_in_je_char
-					clr_country_flag = TFRKPHN_ldr_KOR_cho_won_jin_char
-					clr_country_flag = TFRKPHN_ldr_KOR_ahn_cheol_soo_char
-					clr_country_flag = TFRKPHN_ldr_KOR_sim_sang_jung_char
-					clr_country_flag = TFRKPHN_ldr_TFRKPHN_woo_won_shik_char
-					clr_country_flag = TFRKPHN_ldr_TFRKPHN_kdy_char
-					clr_country_flag = TFRKPHN_ldr_TFRKPHN_kms_char
-					clr_country_flag = TFRKPHN_ldr_TFRKPHN_kys_char
-					clr_country_flag = TFRKPHN_ldr_TFRKPHN_hng_char
-					clr_country_flag = TFRKPHN_ldr_KOR_joo_ho_young_char
-					clr_country_flag = TFRKPHN_ldr_KOR_im_jong_seok_char
-					set_country_flag = TFRKPHN_ldr_TFRKPHN_kbg_char
-				}
-				if = { limit = { has_country_leader = { character = TFRKPHN_kdy_char ruling_only = yes } NOT = { has_country_flag = TFRKPHN_ldr_TFRKPHN_kdy_char } }
-					clr_country_flag = TFRKPHN_ldr_KOR_lee_in_je_char
-					clr_country_flag = TFRKPHN_ldr_KOR_cho_won_jin_char
-					clr_country_flag = TFRKPHN_ldr_KOR_ahn_cheol_soo_char
-					clr_country_flag = TFRKPHN_ldr_KOR_sim_sang_jung_char
-					clr_country_flag = TFRKPHN_ldr_TFRKPHN_woo_won_shik_char
-					clr_country_flag = TFRKPHN_ldr_TFRKPHN_kbg_char
-					clr_country_flag = TFRKPHN_ldr_TFRKPHN_kms_char
-					clr_country_flag = TFRKPHN_ldr_TFRKPHN_kys_char
-					clr_country_flag = TFRKPHN_ldr_TFRKPHN_hng_char
-					clr_country_flag = TFRKPHN_ldr_KOR_joo_ho_young_char
-					clr_country_flag = TFRKPHN_ldr_KOR_im_jong_seok_char
-					set_country_flag = TFRKPHN_ldr_TFRKPHN_kdy_char
-				}
-				if = { limit = { has_country_leader = { character = TFRKPHN_kms_char ruling_only = yes } NOT = { has_country_flag = TFRKPHN_ldr_TFRKPHN_kms_char } }
-					clr_country_flag = TFRKPHN_ldr_KOR_lee_in_je_char
-					clr_country_flag = TFRKPHN_ldr_KOR_cho_won_jin_char
-					clr_country_flag = TFRKPHN_ldr_KOR_ahn_cheol_soo_char
-					clr_country_flag = TFRKPHN_ldr_KOR_sim_sang_jung_char
-					clr_country_flag = TFRKPHN_ldr_TFRKPHN_woo_won_shik_char
-					clr_country_flag = TFRKPHN_ldr_TFRKPHN_kbg_char
-					clr_country_flag = TFRKPHN_ldr_TFRKPHN_kdy_char
-					clr_country_flag = TFRKPHN_ldr_TFRKPHN_kys_char
-					clr_country_flag = TFRKPHN_ldr_TFRKPHN_hng_char
-					clr_country_flag = TFRKPHN_ldr_KOR_joo_ho_young_char
-					clr_country_flag = TFRKPHN_ldr_KOR_im_jong_seok_char
-					set_country_flag = TFRKPHN_ldr_TFRKPHN_kms_char
-				}
-				if = { limit = { has_country_leader = { character = TFRKPHN_kys_char ruling_only = yes } NOT = { has_country_flag = TFRKPHN_ldr_TFRKPHN_kys_char } }
-					clr_country_flag = TFRKPHN_ldr_KOR_lee_in_je_char
-					clr_country_flag = TFRKPHN_ldr_KOR_cho_won_jin_char
-					clr_country_flag = TFRKPHN_ldr_KOR_ahn_cheol_soo_char
-					clr_country_flag = TFRKPHN_ldr_KOR_sim_sang_jung_char
-					clr_country_flag = TFRKPHN_ldr_TFRKPHN_woo_won_shik_char
-					clr_country_flag = TFRKPHN_ldr_TFRKPHN_kbg_char
-					clr_country_flag = TFRKPHN_ldr_TFRKPHN_kdy_char
-					clr_country_flag = TFRKPHN_ldr_TFRKPHN_kms_char
-					clr_country_flag = TFRKPHN_ldr_TFRKPHN_hng_char
-					clr_country_flag = TFRKPHN_ldr_KOR_joo_ho_young_char
-					clr_country_flag = TFRKPHN_ldr_KOR_im_jong_seok_char
-					set_country_flag = TFRKPHN_ldr_TFRKPHN_kys_char
-				}
-				if = { limit = { has_country_leader = { character = TFRKPHN_hng_char ruling_only = yes } NOT = { has_country_flag = TFRKPHN_ldr_TFRKPHN_hng_char } }
-					clr_country_flag = TFRKPHN_ldr_KOR_lee_in_je_char
-					clr_country_flag = TFRKPHN_ldr_KOR_cho_won_jin_char
-					clr_country_flag = TFRKPHN_ldr_KOR_ahn_cheol_soo_char
-					clr_country_flag = TFRKPHN_ldr_KOR_sim_sang_jung_char
-					clr_country_flag = TFRKPHN_ldr_TFRKPHN_woo_won_shik_char
-					clr_country_flag = TFRKPHN_ldr_TFRKPHN_kbg_char
-					clr_country_flag = TFRKPHN_ldr_TFRKPHN_kdy_char
-					clr_country_flag = TFRKPHN_ldr_TFRKPHN_kms_char
-					clr_country_flag = TFRKPHN_ldr_TFRKPHN_kys_char
-					clr_country_flag = TFRKPHN_ldr_KOR_joo_ho_young_char
-					clr_country_flag = TFRKPHN_ldr_KOR_im_jong_seok_char
-					set_country_flag = TFRKPHN_ldr_TFRKPHN_hng_char
-				}
-				if = { limit = { has_country_leader = { character = KOR_joo_ho_young_char ruling_only = yes } NOT = { has_country_flag = TFRKPHN_ldr_KOR_joo_ho_young_char } }
-					clr_country_flag = TFRKPHN_ldr_KOR_lee_in_je_char
-					clr_country_flag = TFRKPHN_ldr_KOR_cho_won_jin_char
-					clr_country_flag = TFRKPHN_ldr_KOR_ahn_cheol_soo_char
-					clr_country_flag = TFRKPHN_ldr_KOR_sim_sang_jung_char
-					clr_country_flag = TFRKPHN_ldr_TFRKPHN_woo_won_shik_char
-					clr_country_flag = TFRKPHN_ldr_TFRKPHN_kbg_char
-					clr_country_flag = TFRKPHN_ldr_TFRKPHN_kdy_char
-					clr_country_flag = TFRKPHN_ldr_TFRKPHN_kms_char
-					clr_country_flag = TFRKPHN_ldr_TFRKPHN_kys_char
-					clr_country_flag = TFRKPHN_ldr_TFRKPHN_hng_char
-					clr_country_flag = TFRKPHN_ldr_KOR_im_jong_seok_char
-					set_country_flag = TFRKPHN_ldr_KOR_joo_ho_young_char
-				}
-				if = { limit = { has_country_leader = { character = KOR_im_jong_seok_char ruling_only = yes } NOT = { has_country_flag = TFRKPHN_ldr_KOR_im_jong_seok_char } }
-					clr_country_flag = TFRKPHN_ldr_KOR_lee_in_je_char
-					clr_country_flag = TFRKPHN_ldr_KOR_cho_won_jin_char
-					clr_country_flag = TFRKPHN_ldr_KOR_ahn_cheol_soo_char
-					clr_country_flag = TFRKPHN_ldr_KOR_sim_sang_jung_char
-					clr_country_flag = TFRKPHN_ldr_TFRKPHN_woo_won_shik_char
-					clr_country_flag = TFRKPHN_ldr_TFRKPHN_kbg_char
-					clr_country_flag = TFRKPHN_ldr_TFRKPHN_kdy_char
-					clr_country_flag = TFRKPHN_ldr_TFRKPHN_kms_char
-					clr_country_flag = TFRKPHN_ldr_TFRKPHN_kys_char
-					clr_country_flag = TFRKPHN_ldr_TFRKPHN_hng_char
-					clr_country_flag = TFRKPHN_ldr_KOR_joo_ho_young_char
-					set_country_flag = TFRKPHN_ldr_KOR_im_jong_seok_char
-				}
-				if = { limit = { NOT = { OR = { has_country_leader = { character = KOR_lee_in_je_char ruling_only = yes } has_country_leader = { character = KOR_cho_won_jin_char ruling_only = yes } has_country_leader = { character = KOR_ahn_cheol_soo_char ruling_only = yes } has_country_leader = { character = KOR_sim_sang_jung_char ruling_only = yes } has_country_leader = { character = TFRKPHN_woo_won_shik_char ruling_only = yes } has_country_leader = { character = TFRKPHN_kbg_char ruling_only = yes } has_country_leader = { character = TFRKPHN_kdy_char ruling_only = yes } has_country_leader = { character = TFRKPHN_kms_char ruling_only = yes } has_country_leader = { character = TFRKPHN_kys_char ruling_only = yes } has_country_leader = { character = TFRKPHN_hng_char ruling_only = yes } has_country_leader = { character = KOR_joo_ho_young_char ruling_only = yes } has_country_leader = { character = KOR_im_jong_seok_char ruling_only = yes } } } }
-					if = { limit = { has_country_flag = TFRKPHN_ldr_KOR_lee_in_je_char has_character = KOR_lee_in_je_char } promote_character = KOR_lee_in_je_char }
-					else_if = { limit = { has_country_flag = TFRKPHN_ldr_KOR_cho_won_jin_char has_character = KOR_cho_won_jin_char } promote_character = KOR_cho_won_jin_char }
-					else_if = { limit = { has_country_flag = TFRKPHN_ldr_KOR_ahn_cheol_soo_char has_character = KOR_ahn_cheol_soo_char } promote_character = KOR_ahn_cheol_soo_char }
-					else_if = { limit = { has_country_flag = TFRKPHN_ldr_KOR_sim_sang_jung_char has_character = KOR_sim_sang_jung_char } promote_character = KOR_sim_sang_jung_char }
-					else_if = { limit = { has_country_flag = TFRKPHN_ldr_TFRKPHN_woo_won_shik_char has_character = TFRKPHN_woo_won_shik_char } promote_character = TFRKPHN_woo_won_shik_char }
-					else_if = { limit = { has_country_flag = TFRKPHN_ldr_TFRKPHN_kbg_char has_character = TFRKPHN_kbg_char } promote_character = TFRKPHN_kbg_char }
-					else_if = { limit = { has_country_flag = TFRKPHN_ldr_TFRKPHN_kdy_char has_character = TFRKPHN_kdy_char } promote_character = TFRKPHN_kdy_char }
-					else_if = { limit = { has_country_flag = TFRKPHN_ldr_TFRKPHN_kms_char has_character = TFRKPHN_kms_char } promote_character = TFRKPHN_kms_char }
-					else_if = { limit = { has_country_flag = TFRKPHN_ldr_TFRKPHN_kys_char has_character = TFRKPHN_kys_char } promote_character = TFRKPHN_kys_char }
-					else_if = { limit = { has_country_flag = TFRKPHN_ldr_TFRKPHN_hng_char has_character = TFRKPHN_hng_char } promote_character = TFRKPHN_hng_char }
-					else_if = { limit = { has_country_flag = TFRKPHN_ldr_KOR_joo_ho_young_char has_character = KOR_joo_ho_young_char } promote_character = KOR_joo_ho_young_char }
-					else_if = { limit = { has_country_flag = TFRKPHN_ldr_KOR_im_jong_seok_char has_character = KOR_im_jong_seok_char } promote_character = KOR_im_jong_seok_char }
-					else_if = { limit = { has_country_flag = TFRKPHN_samkim_kms_pm has_character = TFRKPHN_kms_char } promote_character = TFRKPHN_kms_char }
-					else_if = { limit = { has_country_flag = TFRKPHN_samkim_kdy_pm has_character = TFRKPHN_kdy_char } promote_character = TFRKPHN_kdy_char }
-					else_if = { limit = { has_country_flag = TFRKPHN_samkim_kbg_pm has_character = TFRKPHN_kbg_char } promote_character = TFRKPHN_kbg_char }
-					else_if = { limit = { has_country_flag = TFRKPHN_woo_pres } if = { limit = { NOT = { has_character = TFRKPHN_woo_won_shik_char } } recruit_character = TFRKPHN_woo_won_shik_char } promote_character = TFRKPHN_woo_won_shik_char }
-					else_if = { limit = { has_country_flag = TFRKPHN_e21_cho has_character = KOR_cho_won_jin_char NOT = { has_country_flag = TFRKPHN_cho_removed } } promote_character = KOR_cho_won_jin_char }
-					else_if = { limit = { has_character = KOR_lee_in_je_char } promote_character = KOR_lee_in_je_char }
-				}
+				if = { limit = { has_character = KOR_lee_jae_myung_char } retire_character = KOR_lee_jae_myung_char }
+				if = { limit = { has_character = KOR_moon_jae_in_char } retire_character = KOR_moon_jae_in_char }
+			}
+			if = { limit = { has_country_flag = TFRKPHN_imp_done NOT = { has_country_flag = TFRKPHN_samkim_end } }
+				if = { limit = { has_country_flag = TFRKPHN_samkim_kms_pm } if = { limit = { NOT = { has_character = TFRKPHN_kms_char } } recruit_character = TFRKPHN_kms_char } promote_character = TFRKPHN_kms_char }
+				else_if = { limit = { has_country_flag = TFRKPHN_samkim_kdy_pm } if = { limit = { NOT = { has_character = TFRKPHN_kdy_char } } recruit_character = TFRKPHN_kdy_char } promote_character = TFRKPHN_kdy_char }
+				else_if = { limit = { has_country_flag = TFRKPHN_samkim_kbg_pm } if = { limit = { NOT = { has_character = TFRKPHN_kbg_char } } recruit_character = TFRKPHN_kbg_char } promote_character = TFRKPHN_kbg_char }
+				else_if = { limit = { has_country_flag = TFRKPHN_woo_pres } if = { limit = { NOT = { has_character = TFRKPHN_woo_won_shik_char } } recruit_character = TFRKPHN_woo_won_shik_char } promote_character = TFRKPHN_woo_won_shik_char }
+				else_if = { limit = { has_country_flag = TFRKPHN_e21_ahn has_character = KOR_ahn_cheol_soo_char } promote_character = KOR_ahn_cheol_soo_char }
+				else_if = { limit = { has_country_flag = TFRKPHN_e21_sim_pres has_character = KOR_sim_sang_jung_char } promote_character = KOR_sim_sang_jung_char }
+				else_if = { limit = { has_country_flag = TFRKPHN_e21_cho NOT = { has_country_flag = TFRKPHN_cho_removed } has_character = KOR_cho_won_jin_char } promote_character = { character = KOR_cho_won_jin_char ideology = ultra_conservatism } }
+				else_if = { limit = { always = yes has_character = KOR_lee_in_je_char } promote_character = { character = KOR_lee_in_je_char ideology = korean_neoconservatism } }
 			}
 		}
 	}

@@ -43,7 +43,7 @@ country_event = {
 	immediate = {
 		hidden_effect = {
 			set_country_flag = TFRKPHN_imp_done
-			if = { limit = { NOT = { has_country_flag = TFRKPHN_orp_formed } } country_event = { id = tfrkphn.7024 days = 1 } }	# 탄핵이 일찍 끝나도 탈당파가 우리공화당으로 간다 (사용자 2026-11-22 버그 신고)
+			if = { limit = { NOT = { has_country_flag = TFRKPHN_orp_formed } NOT = { has_country_flag = TFRKPHN_orp_7024_sched } } set_country_flag = TFRKPHN_orp_7024_sched country_event = { id = tfrkphn.7024 days = 1 } }	# 탄핵이 일찍 끝나도 탈당파가 우리공화당으로 간다 (사용자 2026-11-22 버그 신고)
 			remove_mission = TFRKPHN_support_decay_mission	# 홍준표 민심 미션을 멈춘다 (2026-11-21)
 			clr_country_flag = TFRKPHN_imp_on
 			clr_country_flag = TFRKPHN_imp_ready
@@ -85,10 +85,13 @@ country_event = {
 		hidden_effect = {
 			set_country_flag = TFRKPHN_orp_formed
 			set_variable = { NA_show_ORP = 1 }
-			set_temp_variable = { TFRKPHN_orp_n = 24 }
-			if = { limit = { check_variable = { KOR_NatAsm_PPP_seats < 24 } } set_temp_variable = { TFRKPHN_orp_n = KOR_NatAsm_PPP_seats } }
-			subtract_from_variable = { KOR_NatAsm_PPP_seats = TFRKPHN_orp_n }
+			set_country_flag = TFRKPHN_orp_7024_sched
 			if = { limit = { NOT = { has_variable = KOR_NatAsm_ORP_seats } } set_variable = { KOR_NatAsm_ORP_seats = 0 } }
+			set_temp_variable = { TFRKPHN_orp_n = 24 }	# 우리공화당이 모두 스물네 석이 되는 만큼만 옮긴다 (두 번 떠도, 앞서 원내에 들어와 있어도 넘지 않게)
+			subtract_from_temp_variable = { TFRKPHN_orp_n = KOR_NatAsm_ORP_seats }
+			if = { limit = { check_variable = { TFRKPHN_orp_n < 0 } } set_temp_variable = { TFRKPHN_orp_n = 0 } }
+			if = { limit = { check_variable = { KOR_NatAsm_PPP_seats < TFRKPHN_orp_n } } set_temp_variable = { TFRKPHN_orp_n = KOR_NatAsm_PPP_seats } }
+			subtract_from_variable = { KOR_NatAsm_PPP_seats = TFRKPHN_orp_n }
 			add_to_variable = { KOR_NatAsm_ORP_seats = TFRKPHN_orp_n }
 			KOR_rerender_NatAsm = yes
 		}

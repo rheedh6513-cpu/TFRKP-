@@ -16,7 +16,7 @@ TFRKPHN_impeach_category = {
 					add_to_variable = { TFRKPHN_imp_tick = 1 }
 					if = { limit = { check_variable = { TFRKPHN_imp_tick = 1 } } country_event = { id = tfrkphn.7020 days = 1 } }
 					if = { limit = { check_variable = { TFRKPHN_imp_tick = 3 } } country_event = { id = tfrkphn.7021 days = 1 } }
-					if = { limit = { check_variable = { TFRKPHN_imp_tick = 4 } } country_event = { id = tfrkphn.7024 days = 1 } }
+					if = { limit = { check_variable = { TFRKPHN_imp_tick = 4 } NOT = { has_country_flag = TFRKPHN_orp_7024_sched } } set_country_flag = TFRKPHN_orp_7024_sched country_event = { id = tfrkphn.7024 days = 1 } }	# 한 번만 (2026-11-22 18시 12분 "우공 의석이 30석 넘는 버그")
 					if = { limit = { check_variable = { TFRKPHN_imp_tick = 5 } } country_event = { id = tfrkphn.7022 days = 1 } }
 					TFRKPHN_imp_refresh = yes
 				}
