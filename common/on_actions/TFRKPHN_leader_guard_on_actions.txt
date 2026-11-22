@@ -21,6 +21,18 @@ on_actions = {
 				if = { limit = { NOT = { has_character = TFRKPHN_kms_char } } recruit_character = TFRKPHN_kms_char }
 				promote_character = TFRKPHN_kms_char
 			}
+			if = { limit = { has_country_flag = TFRKPHN_e21_ahn NOT = { has_country_flag = TFRKPHN_woo_pres } NOT = { OR = { has_country_flag = TFRKPHN_samkim_kbg_pm has_country_flag = TFRKPHN_samkim_kdy_pm has_country_flag = TFRKPHN_samkim_kms_pm has_country_flag = TFRKPHN_samkim_end } } has_character = KOR_ahn_cheol_soo_char NOT = { has_country_leader = { character = KOR_ahn_cheol_soo_char ruling_only = yes } } }
+				promote_character = KOR_ahn_cheol_soo_char
+			}
+			if = { limit = { has_country_flag = TFRKPHN_e21_sim_pres NOT = { has_country_flag = TFRKPHN_woo_pres } NOT = { OR = { has_country_flag = TFRKPHN_samkim_kbg_pm has_country_flag = TFRKPHN_samkim_kdy_pm has_country_flag = TFRKPHN_samkim_kms_pm has_country_flag = TFRKPHN_samkim_end } } has_character = KOR_sim_sang_jung_char NOT = { has_country_leader = { character = KOR_sim_sang_jung_char ruling_only = yes } } }
+				promote_character = KOR_sim_sang_jung_char
+			}
+			if = { limit = { has_country_flag = TFRKPHN_e21_cho NOT = { has_country_flag = TFRKPHN_cho_removed } NOT = { has_country_flag = TFRKPHN_woo_pres } NOT = { OR = { has_country_flag = TFRKPHN_samkim_kbg_pm has_country_flag = TFRKPHN_samkim_kdy_pm has_country_flag = TFRKPHN_samkim_kms_pm has_country_flag = TFRKPHN_samkim_end } } has_character = KOR_cho_won_jin_char NOT = { has_country_leader = { character = KOR_cho_won_jin_char ruling_only = yes } } }
+				promote_character = KOR_cho_won_jin_char
+			}
+			if = { limit = { has_country_flag = TFRKPHN_imp_done NOT = { has_country_flag = TFRKPHN_e21_ahn } NOT = { has_country_flag = TFRKPHN_e21_sim_pres } NOT = { AND = { has_country_flag = TFRKPHN_e21_cho NOT = { has_country_flag = TFRKPHN_cho_removed } } } NOT = { has_country_flag = TFRKPHN_dpk_dissolved } NOT = { has_country_flag = TFRKPHN_woo_pres } NOT = { OR = { has_country_flag = TFRKPHN_samkim_kbg_pm has_country_flag = TFRKPHN_samkim_kdy_pm has_country_flag = TFRKPHN_samkim_kms_pm has_country_flag = TFRKPHN_samkim_end } } has_character = KOR_lee_in_je_char NOT = { has_country_leader = { character = KOR_lee_in_je_char ruling_only = yes } } }
+				promote_character = KOR_lee_in_je_char
+			}
 		}
 	}
 }
