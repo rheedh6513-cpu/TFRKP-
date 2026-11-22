@@ -1,0 +1,247 @@
+# [안내] 김동연 대통령 중점 트리. samkim_build.py(samkim_tree.py)가 만든다.
+focus_tree = {
+	id = TFRKPHN_kdy_tree
+	country = { factor = 0 }
+	default = no
+	continuous_focus_position = { x = 50 y = 1170 }
+	focus = {
+		id = TFRKPHN_kdy_t_01
+		icon = GFX_goal_generic_production
+		x = 7
+		y = 0
+		cost = 5
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 75
+		}
+	}
+	focus = {
+		id = TFRKPHN_kdy_t_02
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 1
+		y = 1
+		cost = 10
+		prerequisite = { focus = TFRKPHN_kdy_t_01 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = TFRKPHN_kdy_t_03
+		icon = GFX_goal_generic_production
+		x = 1
+		y = 2
+		cost = 10
+		prerequisite = { focus = TFRKPHN_kdy_t_02 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_stability = 0.05
+			add_war_support = 0.02
+			hidden_effect = { country_event = { id = tfrkphn.7088 days = 1 } }
+		}
+	}
+	focus = {
+		id = TFRKPHN_kdy_t_14
+		icon = GFX_goal_generic_production
+		x = 1
+		y = 3
+		cost = 10
+		prerequisite = { focus = TFRKPHN_kdy_t_03 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.02
+		}
+	}
+	focus = {
+		id = TFRKPHN_kdy_t_04
+		icon = GFX_goal_generic_production
+		x = 1
+		y = 4
+		cost = 14
+		prerequisite = { focus = TFRKPHN_kdy_t_14 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_stability = 0.08
+			add_political_power = 100
+			hidden_effect = { country_event = { id = tfrkphn.7092 days = 1 } }
+		}
+	}
+	focus = {
+		id = TFRKPHN_kdy_t_05
+		icon = GFX_goal_generic_handshake
+		x = 5
+		y = 1
+		cost = 10
+		prerequisite = { focus = TFRKPHN_kdy_t_01 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_stability = 0.04
+			hidden_effect = { country_event = { id = tfrkphn.7089 days = 1 } }
+		}
+	}
+	focus = {
+		id = TFRKPHN_kdy_t_06
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 5
+		y = 2
+		cost = 10
+		prerequisite = { focus = TFRKPHN_kdy_t_05 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_stability = -0.03
+			add_political_power = 50
+			hidden_effect = { country_event = { id = tfrkphn.7108 days = 1 } }
+		}
+	}
+	focus = {
+		id = TFRKPHN_kdy_t_07
+		icon = GFX_goal_generic_scales
+		x = 5
+		y = 3
+		cost = 10
+		prerequisite = { focus = TFRKPHN_kdy_t_06 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_stability = 0.05
+			hidden_effect = { country_event = { id = tfrkphn.7090 days = 1 } }
+		}
+	}
+	focus = {
+		id = TFRKPHN_kdy_t_15
+		icon = GFX_goal_generic_scales
+		x = 5
+		y = 4
+		cost = 10
+		prerequisite = { focus = TFRKPHN_kdy_t_07 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_stability = 0.04
+			hidden_effect = { country_event = { id = tfrkphn.7091 days = 1 } }
+		}
+	}
+	focus = {
+		id = TFRKPHN_kdy_t_16
+		icon = GFX_goal_generic_scales
+		x = 5
+		y = 5
+		cost = 10
+		prerequisite = { focus = TFRKPHN_kdy_t_15 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_stability = 0.03
+		}
+	}
+	focus = {
+		id = TFRKPHN_kdy_t_08
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 9
+		y = 1
+		cost = 10
+		prerequisite = { focus = TFRKPHN_kdy_t_01 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+	focus = {
+		id = TFRKPHN_kdy_t_09
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 9
+		y = 2
+		cost = 10
+		prerequisite = { focus = TFRKPHN_kdy_t_08 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 25
+			add_stability = 0.02
+		}
+	}
+	focus = {
+		id = TFRKPHN_kdy_t_13
+		icon = GFX_goal_generic_production
+		x = 9
+		y = 3
+		cost = 10
+		prerequisite = { focus = TFRKPHN_kdy_t_09 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 25
+			add_stability = 0.02
+			hidden_effect = { country_event = { id = tfrkphn.7102 days = 1 } }
+		}
+	}
+	focus = {
+		id = TFRKPHN_kdy_t_17
+		icon = GFX_goal_generic_production
+		x = 9
+		y = 4
+		cost = 10
+		prerequisite = { focus = TFRKPHN_kdy_t_13 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 25
+			add_stability = 0.02
+		}
+	}
+	focus = {
+		id = TFRKPHN_kdy_t_10
+		icon = GFX_goal_generic_handshake
+		x = 13
+		y = 1
+		cost = 10
+		prerequisite = { focus = TFRKPHN_kdy_t_01 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_stability = 0.03
+			add_war_support = -0.03
+		}
+	}
+	focus = {
+		id = TFRKPHN_kdy_t_18
+		icon = GFX_goal_generic_handshake
+		x = 13
+		y = 2
+		cost = 10
+		prerequisite = { focus = TFRKPHN_kdy_t_10 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_stability = 0.05
+			add_war_support = -0.03
+			hidden_effect = { country_event = { id = tfrkphn.7103 days = 1 } }
+		}
+	}
+	focus = {
+		id = TFRKPHN_kdy_t_11
+		icon = GFX_goal_generic_trade
+		x = 7
+		y = 6
+		cost = 12
+		prerequisite = { focus = TFRKPHN_kdy_t_04 }
+		prerequisite = { focus = TFRKPHN_kdy_t_16 }
+		prerequisite = { focus = TFRKPHN_kdy_t_17 }
+		prerequisite = { focus = TFRKPHN_kdy_t_18 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_stability = 0.04
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = TFRKPHN_kdy_t_12
+		icon = GFX_goal_generic_national_unity
+		x = 7
+		y = 7
+		cost = 14
+		prerequisite = { focus = TFRKPHN_kdy_t_11 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_stability = 0.10
+			add_political_power = 100
+			set_country_flag = TFRKPHN_sk_tree_done
+			hidden_effect = { country_event = { id = tfrkphn.7104 days = 1 } }
+		}
+	}
+}

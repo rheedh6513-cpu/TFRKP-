@@ -1,0 +1,70 @@
+# [안내] 김부겸 김동연 단일화 협상. samkim_build.py가 만든다.
+TFRKPHN_sk_category = {
+	TFRKPHN_sk_deadline = {
+		icon = GFX_decision_generic_political_discourse
+		activation = { always = no }
+		available = { always = no }
+		is_good = no
+		days_mission_timeout = 35
+		timeout_effect = {
+			custom_effect_tooltip = TFRKPHN_sk_deadline_tt
+			hidden_effect = {
+				clr_country_flag = TFRKPHN_sk_talks
+				if = { limit = { check_variable = { TFRKPHN_sk_uni > 49.5 } } country_event = tfrkphn.7064 }
+				else = { country_event = tfrkphn.7067 }
+			}
+		}
+	}
+	TFRKPHN_sk_policy = {
+		icon = GFX_decision_generic_political_discourse
+		cost = 75
+		fire_only_once = yes
+		visible = { has_country_flag = TFRKPHN_sk_talks }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
+			add_to_variable = { TFRKPHN_sk_uni = 15 }
+			clamp_variable = { var = TFRKPHN_sk_uni min = 0 max = 100 }
+			custom_effect_tooltip = TFRKPHN_sk_up15_tt
+		}
+		ai_will_do = { factor = 1 }
+	}
+	TFRKPHN_sk_poll = {
+		icon = GFX_decision_generic_political_discourse
+		cost = 50
+		fire_only_once = yes
+		visible = { has_country_flag = TFRKPHN_sk_talks }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
+			add_to_variable = { TFRKPHN_sk_uni = 15 }
+			clamp_variable = { var = TFRKPHN_sk_uni min = 0 max = 100 }
+			custom_effect_tooltip = TFRKPHN_sk_up15_tt
+		}
+		ai_will_do = { factor = 1 }
+	}
+	TFRKPHN_sk_gov = {
+		icon = GFX_decision_generic_political_discourse
+		cost = 50
+		fire_only_once = yes
+		visible = { has_country_flag = TFRKPHN_sk_talks }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
+			add_to_variable = { TFRKPHN_sk_uni = 10 }
+			clamp_variable = { var = TFRKPHN_sk_uni min = 0 max = 100 }
+			custom_effect_tooltip = TFRKPHN_sk_up10_tt
+		}
+		ai_will_do = { factor = 1 }
+	}
+	TFRKPHN_sk_meet = {
+		icon = GFX_decision_generic_political_discourse
+		cost = 25
+		fire_only_once = yes
+		visible = { has_country_flag = TFRKPHN_sk_talks }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
+			add_to_variable = { TFRKPHN_sk_uni = 10 }
+			clamp_variable = { var = TFRKPHN_sk_uni min = 0 max = 100 }
+			custom_effect_tooltip = TFRKPHN_sk_up10_tt
+		}
+		ai_will_do = { factor = 1 }
+	}
+}

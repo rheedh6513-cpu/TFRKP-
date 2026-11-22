@@ -1,0 +1,8 @@
+# [안내] 김부겸 김동연 단일화 협상. samkim_build.py가 만든다.
+TFRKPHN_sk_category = {
+	icon = generic_political_actions
+	priority = 212
+	visible_when_empty = yes
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sk_talks }
+}

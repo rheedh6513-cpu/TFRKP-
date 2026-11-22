@@ -10,6 +10,11 @@ defined_text = {
 	text = { localization_key = TFRKPHN_NA_kp_desc }
 }
 defined_text = {
+	name = TFRKPHN_NA_orp_member	# 의석이 있을 때만 우리공화당을 원내 목록에 (2026-11-22 0시 48분)
+	text = { trigger = { check_variable = { KOR_NatAsm_ORP_seats > 0 } } localization_key = TFRKPHN_NA_orp_member_on }
+	text = { localization_key = TFRKPHN_NA_orp_member_none }
+}
+defined_text = {
 	name = TFRKPHN_NA_orp_line
 	text = { localization_key = TFRKPHN_NA_orp_line_on }
 	text = { localization_key = TFRKPHN_NA_empty }

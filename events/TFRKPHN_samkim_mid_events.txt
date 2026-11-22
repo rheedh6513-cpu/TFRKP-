@@ -1,0 +1,438 @@
+# [안내] 삼김 트리 중간 이벤트. samkim_build.py(samkim_flow.py)가 만든다.
+add_namespace = tfrkphn
+country_event = {
+	id = tfrkphn.7083
+	title = tfrkphn.7083.t
+	desc = tfrkphn.7083.d
+	picture = GFX_report_event_kor_rokarmed_1
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7083.a
+		add_stability = 0.02
+	}
+}
+country_event = {
+	id = tfrkphn.7084
+	title = tfrkphn.7084.t
+	desc = tfrkphn.7084.d
+	picture = GFX_report_event_kor_seoul_city
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7084.a
+		add_political_power = 25
+	}
+}
+country_event = {
+	id = tfrkphn.7085
+	title = tfrkphn.7085.t
+	desc = tfrkphn.7085.d
+	picture = GFX_report_event_yongsan_night
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7085.a
+		add_stability = 0.03
+	}
+}
+country_event = {
+	id = tfrkphn.7086
+	title = tfrkphn.7086.t
+	desc = tfrkphn.7086.d
+	picture = GFX_report_event_kor_seoul_city
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7086.a
+		add_stability = 0.03
+	}
+}
+country_event = {
+	id = tfrkphn.7087
+	title = tfrkphn.7087.t
+	desc = tfrkphn.7087.d
+	picture = GFX_report_event_kor_minju_disagree
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7087.a
+		add_stability = 0.05
+		add_political_power = -50
+		hidden_effect = { country_event = { id = tfrkphn.7109 days = 45 } }
+	}
+	option = {
+		name = tfrkphn.7087.b
+		add_stability = -0.05
+		add_political_power = 100
+		hidden_effect = { country_event = { id = tfrkphn.7110 days = 45 } }
+	}
+}
+country_event = {
+	id = tfrkphn.7099
+	title = tfrkphn.7099.t
+	desc = tfrkphn.7099.d
+	picture = GFX_TFRKPHN_imp_gavel
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7099.a
+		add_stability = 0.02
+		add_political_power = 25
+	}
+}
+country_event = {
+	id = tfrkphn.7100
+	title = tfrkphn.7100.t
+	desc = tfrkphn.7100.d
+	picture = GFX_report_event_kor_seoul_city
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7100.a
+		add_stability = 0.03
+		add_political_power = 25
+		hidden_effect = { country_event = { id = tfrkphn.7111 days = 60 } }
+	}
+	option = {
+		name = tfrkphn.7100.b
+		add_political_power = -25
+		add_stability = 0.01
+		set_country_flag = TFRKPHN_kbg_heard_kdy
+		hidden_effect = { country_event = { id = tfrkphn.7112 days = 60 } }
+	}
+}
+country_event = {
+	id = tfrkphn.7101
+	title = tfrkphn.7101.t
+	desc = tfrkphn.7101.d
+	picture = GFX_TFRKPHN_imp_doc
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7101.a
+		add_stability = 0.05
+		hidden_effect = { country_event = { id = tfrkphn.7115 days = 30 } }
+	}
+}
+country_event = {
+	id = tfrkphn.7114
+	title = tfrkphn.7114.t
+	desc = tfrkphn.7114.d
+	picture = GFX_report_event_kor_seoul_city
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7114.a
+		add_stability = 0.02
+	}
+}
+country_event = {
+	id = tfrkphn.7088
+	title = tfrkphn.7088.t
+	desc = tfrkphn.7088.d
+	picture = GFX_report_event_kor_seoul_city
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7088.a
+		add_stability = 0.03
+		add_war_support = 0.02
+	}
+}
+country_event = {
+	id = tfrkphn.7089
+	title = tfrkphn.7089.t
+	desc = tfrkphn.7089.d
+	picture = GFX_report_event_kor_minju_disagree
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7089.a
+		add_stability = 0.04
+	}
+}
+country_event = {
+	id = tfrkphn.7090
+	title = tfrkphn.7090.t
+	desc = tfrkphn.7090.d
+	picture = GFX_report_event_yongsan_night
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7090.a
+		add_stability = 0.03
+	}
+}
+country_event = {
+	id = tfrkphn.7091
+	title = tfrkphn.7091.t
+	desc = tfrkphn.7091.d
+	picture = GFX_report_event_kor_seoul_city
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7091.a
+		add_stability = 0.03
+		add_political_power = 25
+	}
+}
+country_event = {
+	id = tfrkphn.7092
+	title = tfrkphn.7092.t
+	desc = tfrkphn.7092.d
+	picture = GFX_TFRKPHN_imp_doc
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7092.a
+		add_stability = 0.05
+		add_political_power = 50
+	}
+}
+country_event = {
+	id = tfrkphn.7102
+	title = tfrkphn.7102.t
+	desc = tfrkphn.7102.d
+	picture = GFX_report_event_kor_seoul_city
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7102.a
+		add_political_power = 25
+		add_stability = 0.02
+	}
+}
+country_event = {
+	id = tfrkphn.7103
+	title = tfrkphn.7103.t
+	desc = tfrkphn.7103.d
+	picture = GFX_report_event_kor_minju_disagree
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7103.a
+		add_stability = 0.04
+		add_war_support = -0.02
+	}
+}
+country_event = {
+	id = tfrkphn.7104
+	title = tfrkphn.7104.t
+	desc = tfrkphn.7104.d
+	picture = GFX_TFRKPHN_imp_doc
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7104.a
+		add_stability = 0.05
+		hidden_effect = { country_event = { id = tfrkphn.7116 days = 30 } }
+	}
+}
+country_event = {
+	id = tfrkphn.7108
+	title = tfrkphn.7108.t
+	desc = tfrkphn.7108.d
+	picture = GFX_report_event_kor_minju_disagree
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7108.a
+		add_political_power = 50
+		add_stability = -0.04
+	}
+	option = {
+		name = tfrkphn.7108.b
+		add_stability = 0.02
+		add_political_power = -50
+	}
+}
+country_event = {
+	id = tfrkphn.7093
+	title = tfrkphn.7093.t
+	desc = tfrkphn.7093.d
+	picture = GFX_report_event_kor_party1
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7093.a
+		add_stability = 0.05
+		add_political_power = -25
+	}
+	option = {
+		name = tfrkphn.7093.b
+		add_stability = -0.03
+		add_political_power = 50
+	}
+}
+country_event = {
+	id = tfrkphn.7094
+	title = tfrkphn.7094.t
+	desc = tfrkphn.7094.d
+	picture = GFX_report_event_yongsan_night
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7094.a
+		add_stability = 0.03
+	}
+}
+country_event = {
+	id = tfrkphn.7095
+	title = tfrkphn.7095.t
+	desc = tfrkphn.7095.d
+	picture = GFX_TFRKPHN_imp_doc
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7095.a
+		add_political_power = 50
+	}
+}
+country_event = {
+	id = tfrkphn.7096
+	title = tfrkphn.7096.t
+	desc = tfrkphn.7096.d
+	picture = GFX_TFRKPHN_imp_gavel
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7096.a
+		add_stability = 0.05
+		set_country_flag = TFRKPHN_kms_parliamentary
+	}
+}
+country_event = {
+	id = tfrkphn.7098
+	title = tfrkphn.7098.t
+	desc = tfrkphn.7098.d
+	picture = GFX_TFRKPHN_imp_gavel
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7098.a
+		add_stability = -0.05
+		add_political_power = -50
+		set_country_flag = TFRKPHN_kms_referendum_failed
+	}
+}
+country_event = {
+	id = tfrkphn.7097
+	title = tfrkphn.7097.t
+	desc = tfrkphn.7097.d
+	picture = GFX_report_event_kor_seoul_city
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7097.a
+		add_stability = 0.05
+		hidden_effect = { country_event = { id = tfrkphn.7118 days = 30 } }
+	}
+}
+country_event = {
+	id = tfrkphn.7105
+	title = tfrkphn.7105.t
+	desc = tfrkphn.7105.d
+	picture = GFX_report_event_kor_party1
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7105.a
+		add_political_power = 50
+		add_stability = 0.02
+	}
+}
+country_event = {
+	id = tfrkphn.7106
+	title = tfrkphn.7106.t
+	desc = tfrkphn.7106.d
+	picture = GFX_report_event_kor_se_jong
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7106.a
+		add_political_power = 50
+		add_stability = 0.01
+	}
+}
+country_event = {
+	id = tfrkphn.7107
+	title = tfrkphn.7107.t
+	desc = tfrkphn.7107.d
+	picture = GFX_report_event_kor_seoul_riot
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7107.a
+		add_political_power = 25
+	}
+}
+country_event = {
+	id = tfrkphn.7109
+	title = tfrkphn.7109.t
+	desc = tfrkphn.7109.d
+	picture = GFX_report_event_kor_minju_disagree
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7109.a
+		add_stability = 0.02
+		add_political_power = -25
+	}
+}
+country_event = {
+	id = tfrkphn.7110
+	title = tfrkphn.7110.t
+	desc = tfrkphn.7110.d
+	picture = GFX_report_event_kor_minju_disagree
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7110.a
+		add_political_power = 50
+		add_stability = -0.03
+	}
+}
+country_event = {
+	id = tfrkphn.7111
+	title = tfrkphn.7111.t
+	desc = tfrkphn.7111.d
+	picture = GFX_report_event_kor_seoul_city
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7111.a
+		add_stability = -0.06
+		add_political_power = -50
+	}
+}
+country_event = {
+	id = tfrkphn.7112
+	title = tfrkphn.7112.t
+	desc = tfrkphn.7112.d
+	picture = GFX_report_event_kor_seoul_city
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7112.a
+		add_stability = 0.04
+		add_political_power = 25
+	}
+}
+country_event = {
+	id = tfrkphn.7113
+	title = tfrkphn.7113.t
+	desc = tfrkphn.7113.d
+	picture = GFX_report_event_kor_seoul_city
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7113.a
+		custom_effect_tooltip = TFRKPHN_kms_ref_tt
+		hidden_effect = { if = { limit = { check_variable = { TFRKPHN_brd_kms_res = 3 } } country_event = { id = tfrkphn.7098 days = 1 } } else_if = { limit = { check_variable = { TFRKPHN_brd_kms_res = 1 } stability > 0.4 } country_event = { id = tfrkphn.7096 days = 1 } } else_if = { limit = { stability > 0.5 } country_event = { id = tfrkphn.7096 days = 1 } } else = { country_event = { id = tfrkphn.7098 days = 1 } } }
+	}
+}
+country_event = {
+	id = tfrkphn.7115
+	title = tfrkphn.7115.t
+	desc = tfrkphn.7115.d
+	picture = GFX_TFRKPHN_samkim_end
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7115.a
+		add_stability = 0.03
+		set_country_flag = TFRKPHN_samkim_end
+	}
+}
+country_event = {
+	id = tfrkphn.7116
+	title = tfrkphn.7116.t
+	desc = tfrkphn.7116.d
+	picture = GFX_TFRKPHN_samkim_end
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7116.a
+		add_stability = 0.03
+		set_country_flag = TFRKPHN_samkim_end
+	}
+}
+country_event = {
+	id = tfrkphn.7118
+	title = tfrkphn.7118.t
+	desc = tfrkphn.7118.d
+	picture = GFX_TFRKPHN_samkim_end
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7118.a
+		add_stability = 0.03
+		set_country_flag = TFRKPHN_samkim_end
+	}
+}

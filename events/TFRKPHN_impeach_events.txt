@@ -132,7 +132,7 @@ country_event = {
 		custom_effect_tooltip = TFRKPHN_e21_uni_tt
 		hidden_effect = {
 			set_country_flag = TFRKPHN_e21_talks
-			set_variable = { TFRKPHN_e21_uni = 30 }
+			set_variable = { TFRKPHN_e21_uni = 20 }
 			if = { limit = { has_completed_focus = TFRKPHN_hong_b05_05 } add_to_variable = { TFRKPHN_e21_uni = 20 } }
 			if = { limit = { has_completed_focus = TFRKPHN_hong_b05_03 } add_to_variable = { TFRKPHN_e21_uni = -20 } }
 			activate_mission = TFRKPHN_e21_deadline
@@ -188,6 +188,7 @@ country_event = {
 			set_politics = { ruling_party = market_liberal elections_allowed = yes }
 			if = { limit = { NOT = { has_character = KOR_ahn_cheol_soo_char } } recruit_character = KOR_ahn_cheol_soo_char }
 			KOR_ahn_cheol_soo_char = { promote_character = yes }
+			TFRKPHN_clear_all_ministers = yes	# # 이전 장관 모두 비우기 (cab_clear_build.py, 2026-11-22)
 		}
 	}
 	option = {
@@ -212,6 +213,7 @@ country_event = {
 			if = { limit = { NOT = { has_character = KOR_cho_won_jin_char } } recruit_character = KOR_cho_won_jin_char }
 			KOR_cho_won_jin_char = { remove_country_leader_role = { ideology = ultra_conservatism } add_country_leader_role = { country_leader = { desc = TFRKPHN_cho_desc ideology = ultra_conservatism expire = "2065.1.1" } promote_leader = yes } }
 			if = { limit = { NOT = { has_idea = KOR_conservation_idea } } add_ideas = KOR_conservation_idea }	# 보수 정신 (사용자 2026-11-21 16시 53분)
+			TFRKPHN_clear_all_ministers = yes	# # 이전 장관 모두 비우기 (cab_clear_build.py, 2026-11-22)
 			TFRKPHN_cho_cabinet_appoint = yes	# 조원진 내각 (cho_cab_build.py)
 			load_focus_tree = { tree = TFRKPHN_cho_tree keep_completed = no }	# 조원진 초기 중점 (cho_build.py, 2026-11-21)
 			mark_focus_tree_layout_dirty = yes
@@ -254,6 +256,10 @@ country_event = {
 			set_politics = { ruling_party = social_democrat elections_allowed = yes }
 			if = { limit = { NOT = { has_character = KOR_sim_sang_jung_char } } recruit_character = KOR_sim_sang_jung_char }
 			KOR_sim_sang_jung_char = { promote_character = yes }
+			TFRKPHN_clear_all_ministers = yes	# # 이전 장관 모두 비우기 (cab_clear_build.py, 2026-11-22)
+			TFRKPHN_sim_cabinet_appoint = yes
+			load_focus_tree = { tree = TFRKPHN_sim_tree keep_completed = no }	# 심상정 중점 (sim_build.py)
+			mark_focus_tree_layout_dirty = yes
 		}
 	}
 	option = {
@@ -353,7 +359,9 @@ country_event = {
 	immediate = {
 		hidden_effect = {
 			TFRKPHN_cho_cabinet_clear = yes
+			TFRKPHN_clear_all_ministers = yes	# # 이전 장관 모두 비우기 (cab_clear_build.py, 2026-11-22)
 			TFRKPHN_woo_cabinet_appoint = yes	# 우원식 내각 (woo_cab_build.py)
+			if = { limit = { NOT = { has_idea = TFRKPHN_yeouido_idea } } add_ideas = TFRKPHN_yeouido_idea }	# 여의도 민주주의 (2026-11-21 20시 20분)
 			if = { limit = { has_idea = KOR_conservation_idea } remove_ideas = KOR_conservation_idea }
 			set_country_flag = TFRKPHN_woo_pres
 			clr_country_flag = TFRKPHN_pres_cycle
@@ -371,6 +379,7 @@ country_event = {
 		custom_effect_tooltip = TFRKPHN_woo_pres_tt
 		custom_effect_tooltip = TFRKPHN_woo_cabinet_tt
 		show_ideas_tooltip = TFRKPHN_hjr_coalition_idea
+		show_ideas_tooltip = TFRKPHN_yeouido_idea
 		custom_effect_tooltip = TFRKPHN_woo_init_tree_tt
 		add_stability = 0.10
 		hidden_effect = { country_event = { id = tfrkphn.7055 days = 10 } country_event = { id = tfrkphn.7056 days = 30 } country_event = { id = tfrkphn.7057 days = 60 } country_event = { id = tfrkphn.7058 days = 90 } country_event = { id = tfrkphn.7081 days = 120 } }

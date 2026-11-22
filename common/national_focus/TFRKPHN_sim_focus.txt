@@ -1,0 +1,19 @@
+# [안내] 심상정 정부 중점 트리. sim_build.py가 만든다.
+focus_tree = {
+	id = TFRKPHN_sim_tree
+	country = { factor = 0 }
+	default = no
+	continuous_focus_position = { x = 50 y = 1170 }
+	focus = {
+		id = TFRKPHN_sim_01
+		icon = GFX_goal_generic_political_pressure
+		x = 10
+		y = 0
+		cost = 1
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 80
+			country_event = { id = tfrkphn.7119 days = 1 }
+		}
+	}
+}

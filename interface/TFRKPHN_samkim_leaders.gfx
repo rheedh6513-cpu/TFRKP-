@@ -2,4 +2,6 @@ spriteTypes = {
 	spriteType = { name = "GFX_portrait_TFRKPHN_kdy" texturefile = "gfx/leaders/KOR/TFRKPHN_kdy.png" }
 	spriteType = { name = "GFX_portrait_TFRKPHN_kms" texturefile = "gfx/leaders/KOR/TFRKPHN_kms.png" }
 	spriteType = { name = "GFX_portrait_TFRKPHN_kbg" texturefile = "gfx/leaders/KOR/TFRKPHN_kbg.png" }
+	spriteType = { name = "GFX_TFRKPHN_samkim_end" texturefile = "gfx/event_pictures/TFRKPHN_samkim_end.png" }	# 삼김 결말 7115 7116 7118 (사용자가 준 사진, 2026-11-22)
+	spriteType = { name = "GFX_TFRKPHN_snd_flag" texturefile = "gfx/event_pictures/TFRKPHN_snd_flag.png" }	# 7082 신민당 창당 (사용자가 준 신민당 깃발, 2026-11-21)
 }

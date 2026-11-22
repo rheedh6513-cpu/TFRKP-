@@ -1,0 +1,25 @@
+# [안내] 삼김 판 탭. 디시전은 없고 판 화면의 단추로 둔다. board_build.py가 만든다.
+TFRKPHN_brd_kbg_category = {
+	icon = generic_political_actions
+	priority = 205
+	scripted_gui = TFRKPHN_brd_kbg_gui
+	visible_when_empty = yes
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_samkim_kbg_pm NOT = { has_country_flag = TFRKPHN_samkim_end } }
+}
+TFRKPHN_brd_kdy_category = {
+	icon = generic_political_actions
+	priority = 205
+	scripted_gui = TFRKPHN_brd_kdy_gui
+	visible_when_empty = yes
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_samkim_kdy_pm NOT = { has_country_flag = TFRKPHN_samkim_end } }
+}
+TFRKPHN_brd_kms_category = {
+	icon = generic_political_actions
+	priority = 205
+	scripted_gui = TFRKPHN_brd_kms_gui
+	visible_when_empty = yes
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_samkim_kms_pm NOT = { has_country_flag = TFRKPHN_samkim_end } }
+}

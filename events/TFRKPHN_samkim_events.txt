@@ -9,6 +9,18 @@ country_event = {
 	option = {
 		name = tfrkphn.7061.a
 		add_political_power = 25
+		hidden_effect = { country_event = { id = tfrkphn.7082 days = 14 } }
+	}
+}
+country_event = {
+	id = tfrkphn.7082
+	title = tfrkphn.7082.t
+	desc = tfrkphn.7082.d
+	picture = GFX_TFRKPHN_snd_flag
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7082.a
+		add_political_power = 25
 		hidden_effect = { country_event = { id = tfrkphn.7062 days = 14 } }
 	}
 }
@@ -32,95 +44,80 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = tfrkphn.7063.a
-		custom_effect_tooltip = TFRKPHN_samkim_a_tt
-		hidden_effect = { country_event = { id = tfrkphn.7064 days = 3 } }
-	}
-	option = {
-		name = tfrkphn.7063.b
-		custom_effect_tooltip = TFRKPHN_samkim_b_tt
-		hidden_effect = { country_event = { id = tfrkphn.7065 days = 3 } }
-	}
-	option = {
-		name = tfrkphn.7063.c
-		custom_effect_tooltip = TFRKPHN_samkim_c_tt
-		hidden_effect = { country_event = { id = tfrkphn.7066 days = 3 } }
-	}
-	option = {
-		name = tfrkphn.7063.d
-		custom_effect_tooltip = TFRKPHN_samkim_d_tt
-		hidden_effect = { country_event = { id = tfrkphn.7067 days = 3 } }
+		custom_effect_tooltip = TFRKPHN_sk_uni_tt
+		hidden_effect = { set_country_flag = TFRKPHN_sk_talks set_variable = { TFRKPHN_sk_uni = 30 } activate_mission = TFRKPHN_sk_deadline }
 	}
 }
 country_event = {
 	id = tfrkphn.7064
 	title = tfrkphn.7064.t
 	desc = tfrkphn.7064.d
-	picture = GFX_TFRKPHN_imp_gavel
+	picture = GFX_TFRKPHN_imp_doc
 	is_triggered_only = yes
-	immediate = {
-		hidden_effect = {
-			TFRKPHN_hjr_coalition_set = yes	# 김씨들도 헌정회복연대 연정 그대로 (2026-11-21 19시 01분)
-			set_politics = { ruling_party = social_liberal elections_allowed = yes }
-			TFRKPHN_hjr_coalition_partners = yes
-			if = { limit = { NOT = { has_character = TFRKPHN_kbg_char } } recruit_character = TFRKPHN_kbg_char }
-			TFRKPHN_kbg_char = { promote_character = yes }
-			set_country_flag = TFRKPHN_samkim_kbg_pm
-			TFRKPHN_woo_cabinet_leave_kbg = yes
-		}
-	}
 	option = {
 		name = tfrkphn.7064.a
-		custom_effect_tooltip = TFRKPHN_samkim_bu_tt
-		add_stability = 0.05
+		custom_effect_tooltip = TFRKPHN_samkim_a_tt
+		hidden_effect = { country_event = { id = tfrkphn.7065 days = 7 } }
+	}
+	option = {
+		name = tfrkphn.7064.b
+		custom_effect_tooltip = TFRKPHN_samkim_b_tt
+		hidden_effect = { country_event = { id = tfrkphn.7066 days = 7 } }
 	}
 }
 country_event = {
 	id = tfrkphn.7065
 	title = tfrkphn.7065.t
 	desc = tfrkphn.7065.d
-	picture = GFX_TFRKPHN_imp_doc
-	is_triggered_only = yes
-	immediate = {
-		hidden_effect = {
-			TFRKPHN_hjr_coalition_set = yes	# 김씨들도 헌정회복연대 연정 그대로 (2026-11-21 19시 01분)
-			set_politics = { ruling_party = social_liberal elections_allowed = yes }
-			TFRKPHN_hjr_coalition_partners = yes
-			if = { limit = { NOT = { has_character = TFRKPHN_kdy_char } } recruit_character = TFRKPHN_kdy_char }
-			TFRKPHN_kdy_char = { promote_character = yes }
-			set_country_flag = TFRKPHN_samkim_kdy_pm
-			TFRKPHN_woo_cabinet_leave_kdy = yes
-		}
-	}
-	option = {
-		name = tfrkphn.7065.a
-		custom_effect_tooltip = TFRKPHN_samkim_dong_tt
-		add_stability = 0.05
-		add_political_power = 50
-	}
-}
-country_event = {
-	id = tfrkphn.7066
-	title = tfrkphn.7066.t
-	desc = tfrkphn.7066.d
 	picture = GFX_TFRKPHN_imp_gavel
 	is_triggered_only = yes
 	immediate = {
 		hidden_effect = {
-			TFRKPHN_hjr_coalition_set = yes	# 김씨들도 헌정회복연대 연정 그대로 (2026-11-21 19시 01분)
+			TFRKPHN_hjr_coalition_set = yes
+			set_party_name = { ideology = social_liberal long_name = TFRKPHN_snd_party_long name = TFRKPHN_snd_party }
 			set_politics = { ruling_party = social_liberal elections_allowed = yes }
 			TFRKPHN_hjr_coalition_partners = yes
 			if = { limit = { NOT = { has_character = TFRKPHN_kbg_char } } recruit_character = TFRKPHN_kbg_char }
 			TFRKPHN_kbg_char = { promote_character = yes }
 			set_country_flag = TFRKPHN_samkim_kbg_pm
 			TFRKPHN_woo_cabinet_leave_kbg = yes
+			load_focus_tree = { tree = TFRKPHN_kbg_tree keep_completed = no }
+			mark_focus_tree_layout_dirty = yes
+			set_country_flag = TFRKPHN_woo_ended
+		}
+	}
+	option = {
+		name = tfrkphn.7065.a
+		custom_effect_tooltip = TFRKPHN_samkim_bu_tt
+		add_stability = 0.05
+	}
+}
+country_event = {
+	id = tfrkphn.7066
+	title = tfrkphn.7066.t
+	desc = tfrkphn.7066.d
+	picture = GFX_TFRKPHN_imp_doc
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			TFRKPHN_hjr_coalition_set = yes
+			set_party_name = { ideology = social_liberal long_name = TFRKPHN_snd_party_long name = TFRKPHN_snd_party }
+			set_politics = { ruling_party = social_liberal elections_allowed = yes }
+			TFRKPHN_hjr_coalition_partners = yes
+			if = { limit = { NOT = { has_character = TFRKPHN_kdy_char } } recruit_character = TFRKPHN_kdy_char }
+			TFRKPHN_kdy_char = { promote_character = yes }
+			set_country_flag = TFRKPHN_samkim_kdy_pm
+			TFRKPHN_woo_cabinet_leave_kdy = yes
+			load_focus_tree = { tree = TFRKPHN_kdy_tree keep_completed = no }
+			mark_focus_tree_layout_dirty = yes
+			set_country_flag = TFRKPHN_woo_ended
 		}
 	}
 	option = {
 		name = tfrkphn.7066.a
-		custom_effect_tooltip = TFRKPHN_samkim_bu_tt
-		add_stability = 0.08
+		custom_effect_tooltip = TFRKPHN_samkim_dong_tt
+		add_stability = 0.05
 		add_political_power = 50
-		hidden_effect = { country_event = { id = tfrkphn.7068 days = 730 } }
 	}
 }
 country_event = {
@@ -131,42 +128,22 @@ country_event = {
 	is_triggered_only = yes
 	immediate = {
 		hidden_effect = {
-			TFRKPHN_hjr_coalition_set = yes	# 김씨들도 헌정회복연대 연정 그대로 (2026-11-21 19시 01분)
+			TFRKPHN_hjr_coalition_set = yes
+			set_party_name = { ideology = social_liberal long_name = TFRKPHN_snd_party_long name = TFRKPHN_snd_party }
 			set_politics = { ruling_party = conservative elections_allowed = yes }
-			TFRKPHN_hjr_coalition_partners = yes
+			end_coalition = yes set_temp_variable = { coalition_partner_var_temp = token:market_liberal } add_to_coalition = yes set_temp_variable = { coalition_partner_var_temp = token:social_democrat } add_to_coalition = yes	# 신민당은 야당
 			if = { limit = { NOT = { has_character = TFRKPHN_kms_char } } recruit_character = TFRKPHN_kms_char }
 			TFRKPHN_kms_char = { promote_character = yes }
 			set_country_flag = TFRKPHN_samkim_kms_pm
 			TFRKPHN_woo_cabinet_leave_kms = yes
+			load_focus_tree = { tree = TFRKPHN_kms_tree keep_completed = no }
+			mark_focus_tree_layout_dirty = yes
+			set_country_flag = TFRKPHN_woo_ended
 		}
 	}
 	option = {
 		name = tfrkphn.7067.a
 		custom_effect_tooltip = TFRKPHN_samkim_mu_tt
 		add_stability = -0.05
-	}
-}
-country_event = {
-	id = tfrkphn.7068
-	title = tfrkphn.7068.t
-	desc = tfrkphn.7068.d
-	picture = GFX_TFRKPHN_imp_doc
-	is_triggered_only = yes
-	immediate = {
-		hidden_effect = {
-			TFRKPHN_hjr_coalition_set = yes	# 김씨들도 헌정회복연대 연정 그대로 (2026-11-21 19시 01분)
-			set_politics = { ruling_party = social_liberal elections_allowed = yes }
-			TFRKPHN_hjr_coalition_partners = yes
-			if = { limit = { NOT = { has_character = TFRKPHN_kdy_char } } recruit_character = TFRKPHN_kdy_char }
-			TFRKPHN_kdy_char = { promote_character = yes }
-			set_country_flag = TFRKPHN_samkim_kdy_pm
-			TFRKPHN_woo_cabinet_leave_kdy = yes
-		}
-	}
-	option = {
-		name = tfrkphn.7068.a
-		custom_effect_tooltip = TFRKPHN_samkim_dong_tt
-		add_stability = 0.05
-		add_political_power = 50
 	}
 }

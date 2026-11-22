@@ -1,0 +1,521 @@
+# [안내] 삼김 세 대통령의 판 화면 (장기, 체스, 바둑). board_build.py가 만든다.
+guiTypes = {
+	containerWindowType = {
+		name = "TFRKPHN_brd_kbg_container"
+		size = { width = 100%% height = 264 }
+		containerWindowType = {
+			name = "TFRKPHN_brd_kbg_panel"
+			position = { x = 0 y = 0 }
+			size = { width = 489 height = 262 }
+			clipping = yes
+			iconType = { name = "TFRKPHN_brd_kbg_bgi" position = { x = 0 y = 0 } spriteType = "GFX_TFRKPHN_brd_kbg_bg" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kbg_fi1" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kbg_f1" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kbg_fi2" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kbg_f2" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kbg_fi3" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kbg_f3" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kbg_fi4" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kbg_f4" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kbg_fi5" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kbg_f5" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kbg_fi6" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kbg_f6" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kbg_fi7" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kbg_f7" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kbg_fi8" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kbg_f8" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kbg_fi9" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kbg_f9" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kbg_fi10" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kbg_f10" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kbg_fi11" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kbg_f11" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kbg_fi12" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kbg_f12" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kbg_fi13" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kbg_f13" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kbg_fi14" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kbg_f14" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kbg_fi15" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kbg_f15" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kbg_fi16" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kbg_f16" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kbg_fi17" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kbg_f17" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kbg_fi18" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kbg_f18" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kbg_fi19" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kbg_f19" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kbg_fi20" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kbg_f20" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kbg_fi21" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kbg_f21" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kbg_fi22" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kbg_f22" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kbg_fi23" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kbg_f23" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kbg_fi24" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kbg_f24" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kbg_fi25" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kbg_f25" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kbg_fi26" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kbg_f26" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kbg_fi27" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kbg_f27" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kbg_fi28" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kbg_f28" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kbg_fi29" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kbg_f29" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kbg_fi30" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kbg_f30" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kbg_fi31" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kbg_f31" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kbg_fi32" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kbg_f32" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kbg_fi33" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kbg_f33" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kbg_fi34" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kbg_f34" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kbg_fi35" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kbg_f35" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kbg_fi36" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kbg_f36" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kbg_fi37" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kbg_f37" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kbg_fi38" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kbg_f38" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kbg_fi39" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kbg_f39" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kbg_fi40" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kbg_f40" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kbg_fi41" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kbg_f41" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kbg_fi42" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kbg_f42" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kbg_fi43" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kbg_f43" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kbg_fi44" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kbg_f44" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kbg_fi45" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kbg_f45" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kbg_fi46" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kbg_f46" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kbg_fi47" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kbg_f47" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kbg_fi48" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kbg_f48" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kbg_fi49" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kbg_f49" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kbg_fi50" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kbg_f50" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kbg_fi51" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kbg_f51" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kbg_fi52" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kbg_f52" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kbg_fi53" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kbg_f53" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kbg_fi54" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kbg_f54" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kbg_fi55" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kbg_f55" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kbg_fi56" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kbg_f56" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kbg_fi57" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kbg_f57" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kbg_fi58" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kbg_f58" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kbg_fi59" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kbg_f59" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kbg_fi60" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kbg_f60" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kbg_fi61" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kbg_f61" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kbg_fi62" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kbg_f62" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kbg_fi63" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kbg_f63" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kbg_fi64" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kbg_f64" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kbg_fi65" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kbg_f65" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kbg_fi66" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kbg_f66" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_brd_kbg_p1_1" position = { x = 204 y = 155 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kbg_p1_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kbg_p2_1" position = { x = 32 y = 180 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kbg_p2_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kbg_p3_1" position = { x = 56 y = 229 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kbg_p3_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kbg_p4_1" position = { x = 81 y = 229 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kbg_p4_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kbg_p4_2" position = { x = 7 y = 229 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kbg_p4_2_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kbg_p5_1" position = { x = 130 y = 229 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kbg_p5_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kbg_p5_2" position = { x = 106 y = 204 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kbg_p5_2_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kbg_p5_3" position = { x = 7 y = 229 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kbg_p5_3_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kbg_p6_1" position = { x = 180 y = 229 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kbg_p6_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kbg_p7_1" position = { x = 204 y = 229 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kbg_p7_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kbg_p7_2" position = { x = 204 y = 229 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kbg_p7_2_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kbg_p8_1" position = { x = 7 y = 229 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kbg_p8_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kbg_p9_1" position = { x = 155 y = 130 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kbg_p9_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kbg_p10_1" position = { x = 204 y = 229 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kbg_p10_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kbg_p11_1" position = { x = 204 y = 81 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kbg_p11_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kbg_p12_1" position = { x = 204 y = 81 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kbg_p12_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kbg_p13_1" position = { x = 155 y = 7 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kbg_p13_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kbg_p14_1" position = { x = 155 y = 32 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kbg_p14_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kbg_p15_1" position = { x = 204 y = 106 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kbg_p15_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kbg_p17_1" position = { x = 180 y = 180 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kbg_p17_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kbg_p18_1" position = { x = 180 y = 155 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kbg_p18_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kbg_p19_1" position = { x = 130 y = 155 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kbg_p19_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kbg_p20_1" position = { x = 56 y = 180 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kbg_p20_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kbg_p21_1" position = { x = 130 y = 229 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kbg_p21_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kbg_p22_1" position = { x = 155 y = 130 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kbg_p22_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kbg_p23_1" position = { x = 81 y = 204 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kbg_p23_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kbg_p25_1" position = { x = 155 y = 130 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kbg_p25_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kbg_p26_1" position = { x = 32 y = 106 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kbg_p26_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kbg_p27_1" position = { x = 106 y = 106 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kbg_p27_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kbg_p28_1" position = { x = 204 y = 229 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kbg_p28_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kbg_p29_1" position = { x = 130 y = 81 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kbg_p29_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kbg_p30_1" position = { x = 56 y = 180 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kbg_p30_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kbg_p31_1" position = { x = 81 y = 204 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kbg_p31_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kbg_p33_1" position = { x = 204 y = 229 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kbg_p33_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kbg_p34_1" position = { x = 155 y = 155 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kbg_p34_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kbg_p35_1" position = { x = 81 y = 204 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kbg_p35_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kbg_p36_1" position = { x = 7 y = 155 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kbg_p36_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kbg_p37_1" position = { x = 155 y = 229 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kbg_p37_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kbg_p38_1" position = { x = 155 y = 155 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kbg_p38_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kbg_p39_1" position = { x = 32 y = 155 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kbg_p39_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kbg_p41_1" position = { x = 204 y = 229 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kbg_p41_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kbg_p42_1" position = { x = 56 y = 81 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kbg_p42_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kbg_p43_1" position = { x = 106 y = 180 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kbg_p43_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kbg_p44_1" position = { x = 56 y = 130 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kbg_p44_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kbg_p45_1" position = { x = 56 y = 204 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kbg_p45_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kbg_p46_1" position = { x = 32 y = 130 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kbg_p46_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kbg_p47_1" position = { x = 81 y = 229 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kbg_p47_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kbg_p48_1" position = { x = 56 y = 106 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kbg_p48_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kbg_p50_1" position = { x = 56 y = 155 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kbg_p50_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kbg_p51_1" position = { x = 56 y = 180 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kbg_p51_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kbg_p52_1" position = { x = 106 y = 204 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kbg_p52_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kbg_p53_1" position = { x = 155 y = 106 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kbg_p53_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kbg_p54_1" position = { x = 81 y = 180 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kbg_p54_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kbg_p55_1" position = { x = 56 y = 130 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kbg_p55_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kbg_p56_1" position = { x = 130 y = 204 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kbg_p56_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kbg_p58_1" position = { x = 7 y = 229 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kbg_p58_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kbg_p59_1" position = { x = 106 y = 204 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kbg_p59_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kbg_p60_1" position = { x = 204 y = 229 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kbg_p60_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kbg_p61_1" position = { x = 180 y = 180 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kbg_p61_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kbg_p62_1" position = { x = 56 y = 180 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kbg_p62_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kbg_p63_1" position = { x = 56 y = 155 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kbg_p63_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kbg_p64_1" position = { x = 81 y = 130 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kbg_p64_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kbg_p65_1" position = { x = 155 y = 130 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kbg_p65_1_tt" clicksound = click_default }
+			instantTextBoxType = { name = "TFRKPHN_brd_kbg_t_name" position = { x = 268 y = 10 } text = "TFRKPHN_brd_kbg_t_name" font = "hoi_16mbs" format = left maxWidth = 214 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_brd_kbg_t_sub" position = { x = 268 y = 30 } text = "TFRKPHN_brd_kbg_t_sub" font = "hoi_16mbs" format = left maxWidth = 214 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_brd_kbg_t_n" position = { x = 268 y = 50 } text = "TFRKPHN_brd_kbg_t_n" font = "hoi_16mbs" format = left maxWidth = 214 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_brd_kbg_t_pick" position = { x = 268 y = 80 } text = "TFRKPHN_brd_kbg_t_pick" font = "hoi_16mbs" format = left maxWidth = 214 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_brd_kbg_t_wait" position = { x = 268 y = 80 } text = "TFRKPHN_brd_kbg_t_wait" font = "hoi_16mbs" format = left maxWidth = 214 maxHeight = 40 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_brd_kbg_t_cho" position = { x = 268 y = 104 } text = "TFRKPHN_brd_kbg_t_cho" font = "hoi_16mbs" format = left maxWidth = 214 maxHeight = 40 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_brd_kbg_t_end16" position = { x = 268 y = 80 } text = "TFRKPHN_brd_kbg_t_end16" font = "hoi_16mbs" format = left maxWidth = 214 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_brd_kbg_t_src16" position = { x = 268 y = 102 } text = "TFRKPHN_brd_kbg_t_src16" font = "hoi_16mbs" format = left maxWidth = 214 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_brd_kbg_t_end24" position = { x = 268 y = 80 } text = "TFRKPHN_brd_kbg_t_end24" font = "hoi_16mbs" format = left maxWidth = 214 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_brd_kbg_t_src24" position = { x = 268 y = 102 } text = "TFRKPHN_brd_kbg_t_src24" font = "hoi_16mbs" format = left maxWidth = 214 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_brd_kbg_t_end32" position = { x = 268 y = 80 } text = "TFRKPHN_brd_kbg_t_end32" font = "hoi_16mbs" format = left maxWidth = 214 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_brd_kbg_t_src32" position = { x = 268 y = 102 } text = "TFRKPHN_brd_kbg_t_src32" font = "hoi_16mbs" format = left maxWidth = 214 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_brd_kbg_t_end40" position = { x = 268 y = 80 } text = "TFRKPHN_brd_kbg_t_end40" font = "hoi_16mbs" format = left maxWidth = 214 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_brd_kbg_t_src40" position = { x = 268 y = 102 } text = "TFRKPHN_brd_kbg_t_src40" font = "hoi_16mbs" format = left maxWidth = 214 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_brd_kbg_t_end49" position = { x = 268 y = 80 } text = "TFRKPHN_brd_kbg_t_end49" font = "hoi_16mbs" format = left maxWidth = 214 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_brd_kbg_t_src49" position = { x = 268 y = 102 } text = "TFRKPHN_brd_kbg_t_src49" font = "hoi_16mbs" format = left maxWidth = 214 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_brd_kbg_t_end57" position = { x = 268 y = 80 } text = "TFRKPHN_brd_kbg_t_end57" font = "hoi_16mbs" format = left maxWidth = 214 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_brd_kbg_t_src57" position = { x = 268 y = 102 } text = "TFRKPHN_brd_kbg_t_src57" font = "hoi_16mbs" format = left maxWidth = 214 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_brd_kbg_t_end66" position = { x = 268 y = 80 } text = "TFRKPHN_brd_kbg_t_end66" font = "hoi_16mbs" format = left maxWidth = 214 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_brd_kbg_t_src66" position = { x = 268 y = 102 } text = "TFRKPHN_brd_kbg_t_src66" font = "hoi_16mbs" format = left maxWidth = 214 maxHeight = 20 alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_brd_kbg_bA" position = { x = 268 y = 140 } spriteType = "GFX_TFRKPHN_brd_kbg_bA" pdx_tooltip = "TFRKPHN_brd_kbg_bA_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kbg_bB" position = { x = 268 y = 176 } spriteType = "GFX_TFRKPHN_brd_kbg_bB" pdx_tooltip = "TFRKPHN_brd_kbg_bB_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kbg_c1" position = { x = 268 y = 140 } spriteType = "GFX_TFRKPHN_brd_kbg_c1" pdx_tooltip = "TFRKPHN_brd_kbg_c1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kbg_c2" position = { x = 268 y = 176 } spriteType = "GFX_TFRKPHN_brd_kbg_c2" pdx_tooltip = "TFRKPHN_brd_kbg_c2_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kbg_c3" position = { x = 268 y = 212 } spriteType = "GFX_TFRKPHN_brd_kbg_c3" pdx_tooltip = "TFRKPHN_brd_kbg_c3_tt" clicksound = click_default }
+		}
+	}
+	containerWindowType = {
+		name = "TFRKPHN_brd_kdy_container"
+		size = { width = 100%% height = 264 }
+		containerWindowType = {
+			name = "TFRKPHN_brd_kdy_panel"
+			position = { x = 0 y = 0 }
+			size = { width = 489 height = 262 }
+			clipping = yes
+			iconType = { name = "TFRKPHN_brd_kdy_bgi" position = { x = 0 y = 0 } spriteType = "GFX_TFRKPHN_brd_kdy_bg" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kdy_fi1" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kdy_f1" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kdy_fi2" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kdy_f2" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kdy_fi3" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kdy_f3" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kdy_fi4" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kdy_f4" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kdy_fi5" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kdy_f5" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kdy_fi6" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kdy_f6" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kdy_fi7" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kdy_f7" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kdy_fi8" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kdy_f8" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kdy_fi9" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kdy_f9" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kdy_fi10" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kdy_f10" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kdy_fi11" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kdy_f11" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kdy_fi12" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kdy_f12" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kdy_fi13" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kdy_f13" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kdy_fi14" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kdy_f14" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kdy_fi15" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kdy_f15" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kdy_fi16" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kdy_f16" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kdy_fi17" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kdy_f17" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kdy_fi18" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kdy_f18" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kdy_fi19" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kdy_f19" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kdy_fi20" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kdy_f20" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kdy_fi21" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kdy_f21" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kdy_fi22" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kdy_f22" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kdy_fi23" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kdy_f23" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kdy_fi24" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kdy_f24" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kdy_fi25" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kdy_f25" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kdy_fi26" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kdy_f26" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kdy_fi27" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kdy_f27" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kdy_fi28" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kdy_f28" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kdy_fi29" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kdy_f29" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kdy_fi30" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kdy_f30" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kdy_fi31" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kdy_f31" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kdy_fi32" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kdy_f32" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kdy_fi33" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kdy_f33" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kdy_fi34" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kdy_f34" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kdy_fi35" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kdy_f35" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kdy_fi36" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kdy_f36" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kdy_fi37" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kdy_f37" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kdy_fi38" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kdy_f38" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kdy_fi39" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kdy_f39" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kdy_fi40" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kdy_f40" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kdy_fi41" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kdy_f41" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kdy_fi42" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kdy_f42" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kdy_fi43" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kdy_f43" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kdy_fi44" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kdy_f44" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kdy_fi45" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kdy_f45" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kdy_fi46" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kdy_f46" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kdy_fi47" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kdy_f47" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kdy_fi48" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kdy_f48" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kdy_fi49" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kdy_f49" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kdy_fi50" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kdy_f50" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kdy_fi51" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kdy_f51" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kdy_fi52" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kdy_f52" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kdy_fi53" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kdy_f53" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kdy_fi54" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kdy_f54" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kdy_fi55" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kdy_f55" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kdy_fi56" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kdy_f56" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kdy_fi57" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kdy_f57" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kdy_fi58" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kdy_f58" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kdy_fi59" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kdy_f59" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kdy_fi60" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kdy_f60" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kdy_fi61" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kdy_f61" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kdy_fi62" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kdy_f62" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kdy_fi63" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kdy_f63" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kdy_fi64" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kdy_f64" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kdy_fi65" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kdy_f65" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kdy_fi66" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kdy_f66" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kdy_fi67" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kdy_f67" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_brd_kdy_p1_1" position = { x = 103 y = 195 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kdy_p1_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kdy_p2_1" position = { x = 41 y = 226 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kdy_p2_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kdy_p3_1" position = { x = 10 y = 195 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kdy_p3_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kdy_p3_2" position = { x = 195 y = 226 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kdy_p3_2_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kdy_p4_1" position = { x = 41 y = 195 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kdy_p4_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kdy_p5_1" position = { x = 72 y = 133 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kdy_p5_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kdy_p5_2" position = { x = 164 y = 226 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kdy_p5_2_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kdy_p6_1" position = { x = 195 y = 226 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kdy_p6_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kdy_p7_1" position = { x = 133 y = 226 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kdy_p7_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kdy_p7_2" position = { x = 10 y = 164 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kdy_p7_2_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kdy_p8_1" position = { x = 103 y = 164 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kdy_p8_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kdy_p9_1" position = { x = 72 y = 226 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kdy_p9_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kdy_p9_2" position = { x = 103 y = 226 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kdy_p9_2_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kdy_p10_1" position = { x = 10 y = 226 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kdy_p10_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kdy_p11_1" position = { x = 133 y = 133 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kdy_p11_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kdy_p12_1" position = { x = 133 y = 103 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kdy_p12_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kdy_p13_1" position = { x = 164 y = 103 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kdy_p13_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kdy_p14_1" position = { x = 195 y = 164 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kdy_p14_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kdy_p15_1" position = { x = 133 y = 72 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kdy_p15_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kdy_p16_1" position = { x = 226 y = 133 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kdy_p16_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kdy_p18_1" position = { x = 103 y = 164 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kdy_p18_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kdy_p19_1" position = { x = 195 y = 226 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kdy_p19_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kdy_p20_1" position = { x = 72 y = 226 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kdy_p20_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kdy_p21_1" position = { x = 133 y = 226 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kdy_p21_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kdy_p22_1" position = { x = 133 y = 195 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kdy_p22_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kdy_p23_1" position = { x = 164 y = 195 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kdy_p23_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kdy_p24_1" position = { x = 41 y = 164 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kdy_p24_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kdy_p26_1" position = { x = 72 y = 226 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kdy_p26_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kdy_p26_2" position = { x = 164 y = 195 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kdy_p26_2_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kdy_p27_1" position = { x = 10 y = 226 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kdy_p27_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kdy_p28_1" position = { x = 133 y = 133 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kdy_p28_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kdy_p29_1" position = { x = 195 y = 195 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kdy_p29_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kdy_p30_1" position = { x = 195 y = 133 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kdy_p30_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kdy_p31_1" position = { x = 133 y = 226 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kdy_p31_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kdy_p32_1" position = { x = 72 y = 10 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kdy_p32_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kdy_p33_1" position = { x = 164 y = 164 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kdy_p33_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kdy_p35_1" position = { x = 10 y = 133 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kdy_p35_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kdy_p36_1" position = { x = 133 y = 195 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kdy_p36_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kdy_p37_1" position = { x = 41 y = 226 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kdy_p37_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kdy_p38_1" position = { x = 133 y = 133 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kdy_p38_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kdy_p39_1" position = { x = 72 y = 41 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kdy_p39_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kdy_p40_1" position = { x = 164 y = 103 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kdy_p40_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kdy_p41_1" position = { x = 226 y = 103 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kdy_p41_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kdy_p43_1" position = { x = 10 y = 226 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kdy_p43_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kdy_p44_1" position = { x = 164 y = 164 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kdy_p44_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kdy_p45_1" position = { x = 164 y = 103 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kdy_p45_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kdy_p46_1" position = { x = 72 y = 226 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kdy_p46_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kdy_p47_1" position = { x = 195 y = 226 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kdy_p47_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kdy_p48_1" position = { x = 103 y = 10 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kdy_p48_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kdy_p49_1" position = { x = 10 y = 103 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kdy_p49_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kdy_p51_1" position = { x = 72 y = 133 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kdy_p51_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kdy_p52_1" position = { x = 164 y = 226 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kdy_p52_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kdy_p53_1" position = { x = 164 y = 164 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kdy_p53_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kdy_p54_1" position = { x = 72 y = 195 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kdy_p54_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kdy_p55_1" position = { x = 10 y = 226 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kdy_p55_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kdy_p56_1" position = { x = 72 y = 164 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kdy_p56_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kdy_p57_1" position = { x = 226 y = 133 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kdy_p57_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kdy_p59_1" position = { x = 195 y = 226 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kdy_p59_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kdy_p60_1" position = { x = 103 y = 164 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kdy_p60_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kdy_p61_1" position = { x = 72 y = 133 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kdy_p61_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kdy_p62_1" position = { x = 41 y = 164 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kdy_p62_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kdy_p63_1" position = { x = 133 y = 226 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kdy_p63_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kdy_p64_1" position = { x = 103 y = 164 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kdy_p64_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kdy_p65_1" position = { x = 72 y = 164 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kdy_p65_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kdy_p66_1" position = { x = 195 y = 133 } spriteType = "GFX_TFRKPHN_brd_click" pdx_tooltip = "TFRKPHN_brd_kdy_p66_1_tt" clicksound = click_default }
+			instantTextBoxType = { name = "TFRKPHN_brd_kdy_t_name" position = { x = 268 y = 10 } text = "TFRKPHN_brd_kdy_t_name" font = "hoi_16mbs" format = left maxWidth = 214 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_brd_kdy_t_sub" position = { x = 268 y = 30 } text = "TFRKPHN_brd_kdy_t_sub" font = "hoi_16mbs" format = left maxWidth = 214 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_brd_kdy_t_n" position = { x = 268 y = 50 } text = "TFRKPHN_brd_kdy_t_n" font = "hoi_16mbs" format = left maxWidth = 214 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_brd_kdy_t_pick" position = { x = 268 y = 80 } text = "TFRKPHN_brd_kdy_t_pick" font = "hoi_16mbs" format = left maxWidth = 214 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_brd_kdy_t_wait" position = { x = 268 y = 80 } text = "TFRKPHN_brd_kdy_t_wait" font = "hoi_16mbs" format = left maxWidth = 214 maxHeight = 40 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_brd_kdy_t_cho" position = { x = 268 y = 104 } text = "TFRKPHN_brd_kdy_t_cho" font = "hoi_16mbs" format = left maxWidth = 214 maxHeight = 40 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_brd_kdy_t_end17" position = { x = 268 y = 80 } text = "TFRKPHN_brd_kdy_t_end17" font = "hoi_16mbs" format = left maxWidth = 214 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_brd_kdy_t_src17" position = { x = 268 y = 102 } text = "TFRKPHN_brd_kdy_t_src17" font = "hoi_16mbs" format = left maxWidth = 214 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_brd_kdy_t_end25" position = { x = 268 y = 80 } text = "TFRKPHN_brd_kdy_t_end25" font = "hoi_16mbs" format = left maxWidth = 214 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_brd_kdy_t_src25" position = { x = 268 y = 102 } text = "TFRKPHN_brd_kdy_t_src25" font = "hoi_16mbs" format = left maxWidth = 214 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_brd_kdy_t_end34" position = { x = 268 y = 80 } text = "TFRKPHN_brd_kdy_t_end34" font = "hoi_16mbs" format = left maxWidth = 214 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_brd_kdy_t_src34" position = { x = 268 y = 102 } text = "TFRKPHN_brd_kdy_t_src34" font = "hoi_16mbs" format = left maxWidth = 214 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_brd_kdy_t_end42" position = { x = 268 y = 80 } text = "TFRKPHN_brd_kdy_t_end42" font = "hoi_16mbs" format = left maxWidth = 214 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_brd_kdy_t_src42" position = { x = 268 y = 102 } text = "TFRKPHN_brd_kdy_t_src42" font = "hoi_16mbs" format = left maxWidth = 214 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_brd_kdy_t_end50" position = { x = 268 y = 80 } text = "TFRKPHN_brd_kdy_t_end50" font = "hoi_16mbs" format = left maxWidth = 214 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_brd_kdy_t_src50" position = { x = 268 y = 102 } text = "TFRKPHN_brd_kdy_t_src50" font = "hoi_16mbs" format = left maxWidth = 214 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_brd_kdy_t_end58" position = { x = 268 y = 80 } text = "TFRKPHN_brd_kdy_t_end58" font = "hoi_16mbs" format = left maxWidth = 214 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_brd_kdy_t_src58" position = { x = 268 y = 102 } text = "TFRKPHN_brd_kdy_t_src58" font = "hoi_16mbs" format = left maxWidth = 214 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_brd_kdy_t_end67" position = { x = 268 y = 80 } text = "TFRKPHN_brd_kdy_t_end67" font = "hoi_16mbs" format = left maxWidth = 214 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_brd_kdy_t_src67" position = { x = 268 y = 102 } text = "TFRKPHN_brd_kdy_t_src67" font = "hoi_16mbs" format = left maxWidth = 214 maxHeight = 20 alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_brd_kdy_bA" position = { x = 268 y = 140 } spriteType = "GFX_TFRKPHN_brd_kdy_bA" pdx_tooltip = "TFRKPHN_brd_kdy_bA_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kdy_bB" position = { x = 268 y = 176 } spriteType = "GFX_TFRKPHN_brd_kdy_bB" pdx_tooltip = "TFRKPHN_brd_kdy_bB_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kdy_bB2" position = { x = 268 y = 176 } spriteType = "GFX_TFRKPHN_brd_kdy_bB2" pdx_tooltip = "TFRKPHN_brd_kdy_bB2_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kdy_c1" position = { x = 268 y = 140 } spriteType = "GFX_TFRKPHN_brd_kdy_c1" pdx_tooltip = "TFRKPHN_brd_kdy_c1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kdy_c2" position = { x = 268 y = 176 } spriteType = "GFX_TFRKPHN_brd_kdy_c2" pdx_tooltip = "TFRKPHN_brd_kdy_c2_tt" clicksound = click_default }
+		}
+	}
+	containerWindowType = {
+		name = "TFRKPHN_brd_kms_container"
+		size = { width = 100%% height = 264 }
+		containerWindowType = {
+			name = "TFRKPHN_brd_kms_panel"
+			position = { x = 0 y = 0 }
+			size = { width = 489 height = 262 }
+			clipping = yes
+			iconType = { name = "TFRKPHN_brd_kms_bgi" position = { x = 0 y = 0 } spriteType = "GFX_TFRKPHN_brd_kms_bg" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kms_fi1" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kms_f1" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kms_fi2" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kms_f2" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kms_fi3" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kms_f3" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kms_fi4" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kms_f4" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kms_fi5" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kms_f5" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kms_fi6" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kms_f6" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kms_fi7" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kms_f7" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kms_fi8" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kms_f8" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kms_fi9" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kms_f9" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kms_fi10" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kms_f10" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kms_fi11" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kms_f11" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kms_fi12" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kms_f12" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kms_fi13" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kms_f13" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kms_fi14" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kms_f14" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kms_fi15" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kms_f15" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kms_fi16" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kms_f16" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kms_fi17" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kms_f17" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kms_fi18" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kms_f18" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kms_fi19" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kms_f19" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kms_fi20" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kms_f20" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kms_fi21" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kms_f21" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kms_fi22" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kms_f22" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kms_fi23" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kms_f23" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kms_fi24" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kms_f24" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kms_fi25" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kms_f25" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kms_fi26" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kms_f26" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kms_fi27" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kms_f27" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kms_fi28" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kms_f28" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kms_fi29" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kms_f29" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kms_fi30" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kms_f30" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kms_fi31" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kms_f31" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kms_fi32" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kms_f32" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kms_fi33" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kms_f33" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kms_fi34" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kms_f34" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kms_fi35" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kms_f35" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kms_fi36" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kms_f36" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kms_fi37" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kms_f37" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kms_fi38" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kms_f38" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kms_fi39" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kms_f39" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kms_fi40" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kms_f40" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kms_fi41" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kms_f41" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kms_fi42" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kms_f42" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kms_fi43" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kms_f43" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kms_fi44" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kms_f44" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kms_fi45" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kms_f45" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kms_fi46" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kms_f46" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kms_fi47" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kms_f47" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kms_fi48" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kms_f48" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kms_fi49" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kms_f49" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kms_fi50" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kms_f50" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kms_fi51" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kms_f51" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kms_fi52" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kms_f52" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kms_fi53" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kms_f53" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kms_fi54" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kms_f54" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kms_fi55" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kms_f55" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kms_fi56" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kms_f56" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kms_fi57" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kms_f57" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kms_fi58" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kms_f58" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kms_fi59" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kms_f59" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kms_fi60" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kms_f60" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kms_fi61" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kms_f61" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kms_fi62" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kms_f62" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kms_fi63" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kms_f63" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kms_fi64" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kms_f64" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kms_fi65" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kms_f65" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kms_fi66" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kms_f66" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kms_fi67" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kms_f67" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kms_fi68" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kms_f68" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kms_fi69" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kms_f69" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kms_fi70" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kms_f70" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kms_fi71" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kms_f71" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kms_fi72" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kms_f72" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kms_fi73" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kms_f73" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kms_fi74" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kms_f74" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kms_fi75" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kms_f75" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kms_fi76" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kms_f76" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_brd_kms_fi77" position = { x = 3 y = 3 } spriteType = "GFX_TFRKPHN_brd_kms_f77" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_brd_kms_p1_1" position = { x = 200 y = 50 } spriteType = "GFX_TFRKPHN_brd_click_s" pdx_tooltip = "TFRKPHN_brd_kms_p1_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kms_p2_1" position = { x = 213 y = 188 } spriteType = "GFX_TFRKPHN_brd_click_s" pdx_tooltip = "TFRKPHN_brd_kms_p2_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kms_p3_1" position = { x = 37 y = 175 } spriteType = "GFX_TFRKPHN_brd_click_s" pdx_tooltip = "TFRKPHN_brd_kms_p3_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kms_p4_1" position = { x = 25 y = 175 } spriteType = "GFX_TFRKPHN_brd_click_s" pdx_tooltip = "TFRKPHN_brd_kms_p4_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kms_p5_1" position = { x = 112 y = 37 } spriteType = "GFX_TFRKPHN_brd_click_s" pdx_tooltip = "TFRKPHN_brd_kms_p5_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kms_p5_2" position = { x = 112 y = 50 } spriteType = "GFX_TFRKPHN_brd_click_s" pdx_tooltip = "TFRKPHN_brd_kms_p5_2_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kms_p6_1" position = { x = 150 y = 213 } spriteType = "GFX_TFRKPHN_brd_click_s" pdx_tooltip = "TFRKPHN_brd_kms_p6_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kms_p7_1" position = { x = 163 y = 213 } spriteType = "GFX_TFRKPHN_brd_click_s" pdx_tooltip = "TFRKPHN_brd_kms_p7_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kms_p8_1" position = { x = 100 y = 213 } spriteType = "GFX_TFRKPHN_brd_click_s" pdx_tooltip = "TFRKPHN_brd_kms_p8_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kms_p9_1" position = { x = 125 y = 87 } spriteType = "GFX_TFRKPHN_brd_click_s" pdx_tooltip = "TFRKPHN_brd_kms_p9_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kms_p10_1" position = { x = 50 y = 87 } spriteType = "GFX_TFRKPHN_brd_click_s" pdx_tooltip = "TFRKPHN_brd_kms_p10_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kms_p11_1" position = { x = 225 y = 213 } spriteType = "GFX_TFRKPHN_brd_click_s" pdx_tooltip = "TFRKPHN_brd_kms_p11_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kms_p12_1" position = { x = 37 y = 100 } spriteType = "GFX_TFRKPHN_brd_click_s" pdx_tooltip = "TFRKPHN_brd_kms_p12_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kms_p13_1" position = { x = 112 y = 138 } spriteType = "GFX_TFRKPHN_brd_click_s" pdx_tooltip = "TFRKPHN_brd_kms_p13_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kms_p14_1" position = { x = 175 y = 37 } spriteType = "GFX_TFRKPHN_brd_click_s" pdx_tooltip = "TFRKPHN_brd_kms_p14_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kms_p16_1" position = { x = 225 y = 138 } spriteType = "GFX_TFRKPHN_brd_click_s" pdx_tooltip = "TFRKPHN_brd_kms_p16_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kms_p17_1" position = { x = 50 y = 225 } spriteType = "GFX_TFRKPHN_brd_click_s" pdx_tooltip = "TFRKPHN_brd_kms_p17_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kms_p18_1" position = { x = 37 y = 87 } spriteType = "GFX_TFRKPHN_brd_click_s" pdx_tooltip = "TFRKPHN_brd_kms_p18_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kms_p19_1" position = { x = 138 y = 87 } spriteType = "GFX_TFRKPHN_brd_click_s" pdx_tooltip = "TFRKPHN_brd_kms_p19_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kms_p20_1" position = { x = 150 y = 163 } spriteType = "GFX_TFRKPHN_brd_click_s" pdx_tooltip = "TFRKPHN_brd_kms_p20_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kms_p21_1" position = { x = 62 y = 100 } spriteType = "GFX_TFRKPHN_brd_click_s" pdx_tooltip = "TFRKPHN_brd_kms_p21_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kms_p23_1" position = { x = 200 y = 125 } spriteType = "GFX_TFRKPHN_brd_click_s" pdx_tooltip = "TFRKPHN_brd_kms_p23_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kms_p24_1" position = { x = 50 y = 225 } spriteType = "GFX_TFRKPHN_brd_click_s" pdx_tooltip = "TFRKPHN_brd_kms_p24_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kms_p25_1" position = { x = 175 y = 150 } spriteType = "GFX_TFRKPHN_brd_click_s" pdx_tooltip = "TFRKPHN_brd_kms_p25_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kms_p26_1" position = { x = 213 y = 200 } spriteType = "GFX_TFRKPHN_brd_click_s" pdx_tooltip = "TFRKPHN_brd_kms_p26_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kms_p27_1" position = { x = 37 y = 125 } spriteType = "GFX_TFRKPHN_brd_click_s" pdx_tooltip = "TFRKPHN_brd_kms_p27_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kms_p28_1" position = { x = 87 y = 125 } spriteType = "GFX_TFRKPHN_brd_click_s" pdx_tooltip = "TFRKPHN_brd_kms_p28_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kms_p29_1" position = { x = 138 y = 100 } spriteType = "GFX_TFRKPHN_brd_click_s" pdx_tooltip = "TFRKPHN_brd_kms_p29_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kms_p31_1" position = { x = 188 y = 225 } spriteType = "GFX_TFRKPHN_brd_click_s" pdx_tooltip = "TFRKPHN_brd_kms_p31_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kms_p32_1" position = { x = 138 y = 25 } spriteType = "GFX_TFRKPHN_brd_click_s" pdx_tooltip = "TFRKPHN_brd_kms_p32_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kms_p33_1" position = { x = 213 y = 50 } spriteType = "GFX_TFRKPHN_brd_click_s" pdx_tooltip = "TFRKPHN_brd_kms_p33_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kms_p34_1" position = { x = 125 y = 138 } spriteType = "GFX_TFRKPHN_brd_click_s" pdx_tooltip = "TFRKPHN_brd_kms_p34_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kms_p35_1" position = { x = 150 y = 138 } spriteType = "GFX_TFRKPHN_brd_click_s" pdx_tooltip = "TFRKPHN_brd_kms_p35_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kms_p36_1" position = { x = 75 y = 225 } spriteType = "GFX_TFRKPHN_brd_click_s" pdx_tooltip = "TFRKPHN_brd_kms_p36_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kms_p37_1" position = { x = 163 y = 188 } spriteType = "GFX_TFRKPHN_brd_click_s" pdx_tooltip = "TFRKPHN_brd_kms_p37_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kms_p39_1" position = { x = 50 y = 62 } spriteType = "GFX_TFRKPHN_brd_click_s" pdx_tooltip = "TFRKPHN_brd_kms_p39_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kms_p40_1" position = { x = 188 y = 188 } spriteType = "GFX_TFRKPHN_brd_click_s" pdx_tooltip = "TFRKPHN_brd_kms_p40_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kms_p41_1" position = { x = 213 y = 163 } spriteType = "GFX_TFRKPHN_brd_click_s" pdx_tooltip = "TFRKPHN_brd_kms_p41_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kms_p42_1" position = { x = 213 y = 150 } spriteType = "GFX_TFRKPHN_brd_click_s" pdx_tooltip = "TFRKPHN_brd_kms_p42_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kms_p42_2" position = { x = 200 y = 175 } spriteType = "GFX_TFRKPHN_brd_click_s" pdx_tooltip = "TFRKPHN_brd_kms_p42_2_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kms_p43_1" position = { x = 213 y = 125 } spriteType = "GFX_TFRKPHN_brd_click_s" pdx_tooltip = "TFRKPHN_brd_kms_p43_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kms_p44_1" position = { x = 37 y = 100 } spriteType = "GFX_TFRKPHN_brd_click_s" pdx_tooltip = "TFRKPHN_brd_kms_p44_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kms_p45_1" position = { x = 75 y = 213 } spriteType = "GFX_TFRKPHN_brd_click_s" pdx_tooltip = "TFRKPHN_brd_kms_p45_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kms_p46_1" position = { x = 200 y = 125 } spriteType = "GFX_TFRKPHN_brd_click_s" pdx_tooltip = "TFRKPHN_brd_kms_p46_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kms_p47_1" position = { x = 62 y = 50 } spriteType = "GFX_TFRKPHN_brd_click_s" pdx_tooltip = "TFRKPHN_brd_kms_p47_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kms_p48_1" position = { x = 112 y = 62 } spriteType = "GFX_TFRKPHN_brd_click_s" pdx_tooltip = "TFRKPHN_brd_kms_p48_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kms_p49_1" position = { x = 75 y = 25 } spriteType = "GFX_TFRKPHN_brd_click_s" pdx_tooltip = "TFRKPHN_brd_kms_p49_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kms_p50_1" position = { x = 87 y = 125 } spriteType = "GFX_TFRKPHN_brd_click_s" pdx_tooltip = "TFRKPHN_brd_kms_p50_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kms_p51_1" position = { x = 200 y = 150 } spriteType = "GFX_TFRKPHN_brd_click_s" pdx_tooltip = "TFRKPHN_brd_kms_p51_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kms_p53_1" position = { x = 175 y = 37 } spriteType = "GFX_TFRKPHN_brd_click_s" pdx_tooltip = "TFRKPHN_brd_kms_p53_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kms_p54_1" position = { x = 112 y = 225 } spriteType = "GFX_TFRKPHN_brd_click_s" pdx_tooltip = "TFRKPHN_brd_kms_p54_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kms_p55_1" position = { x = 213 y = 87 } spriteType = "GFX_TFRKPHN_brd_click_s" pdx_tooltip = "TFRKPHN_brd_kms_p55_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kms_p56_1" position = { x = 138 y = 37 } spriteType = "GFX_TFRKPHN_brd_click_s" pdx_tooltip = "TFRKPHN_brd_kms_p56_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kms_p57_1" position = { x = 12 y = 188 } spriteType = "GFX_TFRKPHN_brd_click_s" pdx_tooltip = "TFRKPHN_brd_kms_p57_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kms_p58_1" position = { x = 163 y = 138 } spriteType = "GFX_TFRKPHN_brd_click_s" pdx_tooltip = "TFRKPHN_brd_kms_p58_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kms_p59_1" position = { x = 75 y = 87 } spriteType = "GFX_TFRKPHN_brd_click_s" pdx_tooltip = "TFRKPHN_brd_kms_p59_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kms_p61_1" position = { x = 213 y = 138 } spriteType = "GFX_TFRKPHN_brd_click_s" pdx_tooltip = "TFRKPHN_brd_kms_p61_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kms_p62_1" position = { x = 37 y = 37 } spriteType = "GFX_TFRKPHN_brd_click_s" pdx_tooltip = "TFRKPHN_brd_kms_p62_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kms_p63_1" position = { x = 150 y = 62 } spriteType = "GFX_TFRKPHN_brd_click_s" pdx_tooltip = "TFRKPHN_brd_kms_p63_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kms_p64_1" position = { x = 150 y = 112 } spriteType = "GFX_TFRKPHN_brd_click_s" pdx_tooltip = "TFRKPHN_brd_kms_p64_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kms_p65_1" position = { x = 238 y = 163 } spriteType = "GFX_TFRKPHN_brd_click_s" pdx_tooltip = "TFRKPHN_brd_kms_p65_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kms_p66_1" position = { x = 12 y = 125 } spriteType = "GFX_TFRKPHN_brd_click_s" pdx_tooltip = "TFRKPHN_brd_kms_p66_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kms_p67_1" position = { x = 62 y = 100 } spriteType = "GFX_TFRKPHN_brd_click_s" pdx_tooltip = "TFRKPHN_brd_kms_p67_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kms_p68_1" position = { x = 75 y = 25 } spriteType = "GFX_TFRKPHN_brd_click_s" pdx_tooltip = "TFRKPHN_brd_kms_p68_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kms_p70_1" position = { x = 37 y = 75 } spriteType = "GFX_TFRKPHN_brd_click_s" pdx_tooltip = "TFRKPHN_brd_kms_p70_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kms_p71_1" position = { x = 87 y = 163 } spriteType = "GFX_TFRKPHN_brd_click_s" pdx_tooltip = "TFRKPHN_brd_kms_p71_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kms_p72_1" position = { x = 100 y = 62 } spriteType = "GFX_TFRKPHN_brd_click_s" pdx_tooltip = "TFRKPHN_brd_kms_p72_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kms_p73_1" position = { x = 100 y = 50 } spriteType = "GFX_TFRKPHN_brd_click_s" pdx_tooltip = "TFRKPHN_brd_kms_p73_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kms_p74_1" position = { x = 213 y = 50 } spriteType = "GFX_TFRKPHN_brd_click_s" pdx_tooltip = "TFRKPHN_brd_kms_p74_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kms_p75_1" position = { x = 188 y = 138 } spriteType = "GFX_TFRKPHN_brd_click_s" pdx_tooltip = "TFRKPHN_brd_kms_p75_1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kms_p76_1" position = { x = 200 y = 12 } spriteType = "GFX_TFRKPHN_brd_click_s" pdx_tooltip = "TFRKPHN_brd_kms_p76_1_tt" clicksound = click_default }
+			instantTextBoxType = { name = "TFRKPHN_brd_kms_t_name" position = { x = 268 y = 10 } text = "TFRKPHN_brd_kms_t_name" font = "hoi_16mbs" format = left maxWidth = 214 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_brd_kms_t_sub" position = { x = 268 y = 30 } text = "TFRKPHN_brd_kms_t_sub" font = "hoi_16mbs" format = left maxWidth = 214 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_brd_kms_t_n" position = { x = 268 y = 50 } text = "TFRKPHN_brd_kms_t_n" font = "hoi_16mbs" format = left maxWidth = 214 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_brd_kms_t_pick" position = { x = 268 y = 80 } text = "TFRKPHN_brd_kms_t_pick" font = "hoi_16mbs" format = left maxWidth = 214 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_brd_kms_t_wait" position = { x = 268 y = 80 } text = "TFRKPHN_brd_kms_t_wait" font = "hoi_16mbs" format = left maxWidth = 214 maxHeight = 40 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_brd_kms_t_cho" position = { x = 268 y = 104 } text = "TFRKPHN_brd_kms_t_cho" font = "hoi_16mbs" format = left maxWidth = 214 maxHeight = 40 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_brd_kms_t_end15" position = { x = 268 y = 80 } text = "TFRKPHN_brd_kms_t_end15" font = "hoi_16mbs" format = left maxWidth = 214 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_brd_kms_t_src15" position = { x = 268 y = 102 } text = "TFRKPHN_brd_kms_t_src15" font = "hoi_16mbs" format = left maxWidth = 214 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_brd_kms_t_end22" position = { x = 268 y = 80 } text = "TFRKPHN_brd_kms_t_end22" font = "hoi_16mbs" format = left maxWidth = 214 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_brd_kms_t_src22" position = { x = 268 y = 102 } text = "TFRKPHN_brd_kms_t_src22" font = "hoi_16mbs" format = left maxWidth = 214 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_brd_kms_t_end30" position = { x = 268 y = 80 } text = "TFRKPHN_brd_kms_t_end30" font = "hoi_16mbs" format = left maxWidth = 214 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_brd_kms_t_src30" position = { x = 268 y = 102 } text = "TFRKPHN_brd_kms_t_src30" font = "hoi_16mbs" format = left maxWidth = 214 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_brd_kms_t_end38" position = { x = 268 y = 80 } text = "TFRKPHN_brd_kms_t_end38" font = "hoi_16mbs" format = left maxWidth = 214 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_brd_kms_t_src38" position = { x = 268 y = 102 } text = "TFRKPHN_brd_kms_t_src38" font = "hoi_16mbs" format = left maxWidth = 214 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_brd_kms_t_end52" position = { x = 268 y = 80 } text = "TFRKPHN_brd_kms_t_end52" font = "hoi_16mbs" format = left maxWidth = 214 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_brd_kms_t_src52" position = { x = 268 y = 102 } text = "TFRKPHN_brd_kms_t_src52" font = "hoi_16mbs" format = left maxWidth = 214 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_brd_kms_t_end60" position = { x = 268 y = 80 } text = "TFRKPHN_brd_kms_t_end60" font = "hoi_16mbs" format = left maxWidth = 214 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_brd_kms_t_src60" position = { x = 268 y = 102 } text = "TFRKPHN_brd_kms_t_src60" font = "hoi_16mbs" format = left maxWidth = 214 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_brd_kms_t_end69" position = { x = 268 y = 80 } text = "TFRKPHN_brd_kms_t_end69" font = "hoi_16mbs" format = left maxWidth = 214 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_brd_kms_t_src69" position = { x = 268 y = 102 } text = "TFRKPHN_brd_kms_t_src69" font = "hoi_16mbs" format = left maxWidth = 214 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_brd_kms_t_end77" position = { x = 268 y = 80 } text = "TFRKPHN_brd_kms_t_end77" font = "hoi_16mbs" format = left maxWidth = 214 maxHeight = 20 alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_brd_kms_t_src77" position = { x = 268 y = 102 } text = "TFRKPHN_brd_kms_t_src77" font = "hoi_16mbs" format = left maxWidth = 214 maxHeight = 20 alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_brd_kms_bA" position = { x = 268 y = 140 } spriteType = "GFX_TFRKPHN_brd_kms_bA" pdx_tooltip = "TFRKPHN_brd_kms_bA_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kms_bB" position = { x = 268 y = 176 } spriteType = "GFX_TFRKPHN_brd_kms_bB" pdx_tooltip = "TFRKPHN_brd_kms_bB_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kms_c1" position = { x = 268 y = 140 } spriteType = "GFX_TFRKPHN_brd_kms_c1" pdx_tooltip = "TFRKPHN_brd_kms_c1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_brd_kms_c2" position = { x = 268 y = 176 } spriteType = "GFX_TFRKPHN_brd_kms_c2" pdx_tooltip = "TFRKPHN_brd_kms_c2_tt" clicksound = click_default }
+		}
+	}
+}

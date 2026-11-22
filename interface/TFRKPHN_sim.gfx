@@ -1,0 +1,6 @@
+spriteTypes = {
+	spriteType = { name = "GFX_TFRKPHN_sim_inaug" texturefile = "gfx/event_pictures/TFRKPHN_sim_inaug.png" }
+	spriteType = { name = "GFX_idea_TFRKPHN_sim_jang_hye_young_HM" texturefile = "gfx/interface/ideas/TFRKPHN_sim_jang_hye_young_HM.png" }
+	spriteType = { name = "GFX_idea_TFRKPHN_sim_kang_eun_mi_EM" texturefile = "gfx/interface/ideas/TFRKPHN_sim_kang_eun_mi_EM.png" }
+	spriteType = { name = "GFX_idea_TFRKPHN_sim_kwon_young_gook_IM" texturefile = "gfx/interface/ideas/TFRKPHN_sim_kwon_young_gook_IM.png" }
+}

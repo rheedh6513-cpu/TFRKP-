@@ -4,6 +4,12 @@ TFRKPHN_oh_first_staff = {
 	custom_effect_tooltip = TFRKPHN_oh_keep3_tt
 	add_political_power = 120
 	hidden_effect = {
+		# 총리 말고 다섯 자리를 먼저 비운다 (이전 장관이 남지 않게, 2026-11-22). 유임하는 사람은 아래에서 다시 넣는다.
+		TFRKPHN_clear_foreign_minister = yes
+		TFRKPHN_clear_economic_minister = yes
+		TFRKPHN_clear_interior_minister = yes
+		TFRKPHN_clear_intelligence_minister = yes
+		TFRKPHN_clear_theorist_minister = yes
 		# 장관 효과 설명은 길어서 숨긴다 (설명 상자가 한 화면에 들어오게, 사용자 2026-11-17). 효과는 내각 화면에서 볼 수 있다.
 		add_ideas = TFRKPHN_koh_dong_jin_EM
 		add_ideas = TFRKPHN_lim_jong_deuk_TM	# 국방부 장관 유임

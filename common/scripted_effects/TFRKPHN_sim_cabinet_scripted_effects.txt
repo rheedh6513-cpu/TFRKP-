@@ -1,0 +1,12 @@
+# [안내] 심상정 정부 내각. sim_build.py가 만든다.
+TFRKPHN_sim_cabinet_appoint = {
+	hidden_effect = {
+		set_country_flag = TFRKPHN_sim_cabinet_set
+		if = { limit = { NOT = { has_idea = TFRKPHN_sim_jang_hye_young_HM } } add_ideas = TFRKPHN_sim_jang_hye_young_HM }
+		if = { limit = { NOT = { has_idea = TFRKPHN_sim_lee_jeong_mi_FM } } add_ideas = TFRKPHN_sim_lee_jeong_mi_FM }
+		if = { limit = { NOT = { has_idea = TFRKPHN_sim_kang_eun_mi_EM } } add_ideas = TFRKPHN_sim_kang_eun_mi_EM }
+		if = { limit = { NOT = { has_idea = TFRKPHN_sim_kwon_young_gook_IM } } add_ideas = TFRKPHN_sim_kwon_young_gook_IM }
+		if = { limit = { NOT = { has_idea = TFRKPHN_sim_lee_dong_soo_IntelM } } add_ideas = TFRKPHN_sim_lee_dong_soo_IntelM }
+		if = { limit = { NOT = { has_idea = TFRKPHN_sim_kim_jong_dae_TM } } add_ideas = TFRKPHN_sim_kim_jong_dae_TM }
+	}
+}

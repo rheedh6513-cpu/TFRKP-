@@ -1,0 +1,728 @@
+# [안내] 삼김 판의 단추 동작. board_build.py가 만든다.
+scripted_gui = {
+	TFRKPHN_brd_kbg_gui = {
+		context_type = decision_category
+		window_name = TFRKPHN_brd_kbg_container
+		effects = {
+			TFRKPHN_brd_kbg_p1_1_click = { set_variable = { TFRKPHN_brd_kbg_sel = 1 } }
+			TFRKPHN_brd_kbg_p2_1_click = { set_variable = { TFRKPHN_brd_kbg_sel = 1 } }
+			TFRKPHN_brd_kbg_p3_1_click = { set_variable = { TFRKPHN_brd_kbg_sel = 1 } }
+			TFRKPHN_brd_kbg_p4_1_click = { set_variable = { TFRKPHN_brd_kbg_sel = 1 } }
+			TFRKPHN_brd_kbg_p4_2_click = { set_variable = { TFRKPHN_brd_kbg_sel = 2 } }
+			TFRKPHN_brd_kbg_p5_1_click = { set_variable = { TFRKPHN_brd_kbg_sel = 1 } }
+			TFRKPHN_brd_kbg_p5_2_click = { set_variable = { TFRKPHN_brd_kbg_sel = 2 } }
+			TFRKPHN_brd_kbg_p5_3_click = { set_variable = { TFRKPHN_brd_kbg_sel = 3 } }
+			TFRKPHN_brd_kbg_p6_1_click = { set_variable = { TFRKPHN_brd_kbg_sel = 1 } }
+			TFRKPHN_brd_kbg_p7_1_click = { set_variable = { TFRKPHN_brd_kbg_sel = 1 } }
+			TFRKPHN_brd_kbg_p7_2_click = { set_variable = { TFRKPHN_brd_kbg_sel = 2 } }
+			TFRKPHN_brd_kbg_p8_1_click = { set_variable = { TFRKPHN_brd_kbg_sel = 1 } }
+			TFRKPHN_brd_kbg_p9_1_click = { set_variable = { TFRKPHN_brd_kbg_sel = 1 } }
+			TFRKPHN_brd_kbg_p10_1_click = { set_variable = { TFRKPHN_brd_kbg_sel = 1 } }
+			TFRKPHN_brd_kbg_p11_1_click = { set_variable = { TFRKPHN_brd_kbg_sel = 1 } }
+			TFRKPHN_brd_kbg_p12_1_click = { set_variable = { TFRKPHN_brd_kbg_sel = 1 } }
+			TFRKPHN_brd_kbg_p13_1_click = { set_variable = { TFRKPHN_brd_kbg_sel = 1 } }
+			TFRKPHN_brd_kbg_p14_1_click = { set_variable = { TFRKPHN_brd_kbg_sel = 1 } }
+			TFRKPHN_brd_kbg_p15_1_click = { set_variable = { TFRKPHN_brd_kbg_sel = 1 } }
+			TFRKPHN_brd_kbg_p17_1_click = { set_variable = { TFRKPHN_brd_kbg_sel = 1 } }
+			TFRKPHN_brd_kbg_p18_1_click = { set_variable = { TFRKPHN_brd_kbg_sel = 1 } }
+			TFRKPHN_brd_kbg_p19_1_click = { set_variable = { TFRKPHN_brd_kbg_sel = 1 } }
+			TFRKPHN_brd_kbg_p20_1_click = { set_variable = { TFRKPHN_brd_kbg_sel = 1 } }
+			TFRKPHN_brd_kbg_p21_1_click = { set_variable = { TFRKPHN_brd_kbg_sel = 1 } }
+			TFRKPHN_brd_kbg_p22_1_click = { set_variable = { TFRKPHN_brd_kbg_sel = 1 } }
+			TFRKPHN_brd_kbg_p23_1_click = { set_variable = { TFRKPHN_brd_kbg_sel = 1 } }
+			TFRKPHN_brd_kbg_p25_1_click = { set_variable = { TFRKPHN_brd_kbg_sel = 1 } }
+			TFRKPHN_brd_kbg_p26_1_click = { set_variable = { TFRKPHN_brd_kbg_sel = 1 } }
+			TFRKPHN_brd_kbg_p27_1_click = { set_variable = { TFRKPHN_brd_kbg_sel = 1 } }
+			TFRKPHN_brd_kbg_p28_1_click = { set_variable = { TFRKPHN_brd_kbg_sel = 1 } }
+			TFRKPHN_brd_kbg_p29_1_click = { set_variable = { TFRKPHN_brd_kbg_sel = 1 } }
+			TFRKPHN_brd_kbg_p30_1_click = { set_variable = { TFRKPHN_brd_kbg_sel = 1 } }
+			TFRKPHN_brd_kbg_p31_1_click = { set_variable = { TFRKPHN_brd_kbg_sel = 1 } }
+			TFRKPHN_brd_kbg_p33_1_click = { set_variable = { TFRKPHN_brd_kbg_sel = 1 } }
+			TFRKPHN_brd_kbg_p34_1_click = { set_variable = { TFRKPHN_brd_kbg_sel = 1 } }
+			TFRKPHN_brd_kbg_p35_1_click = { set_variable = { TFRKPHN_brd_kbg_sel = 1 } }
+			TFRKPHN_brd_kbg_p36_1_click = { set_variable = { TFRKPHN_brd_kbg_sel = 1 } }
+			TFRKPHN_brd_kbg_p37_1_click = { set_variable = { TFRKPHN_brd_kbg_sel = 1 } }
+			TFRKPHN_brd_kbg_p38_1_click = { set_variable = { TFRKPHN_brd_kbg_sel = 1 } }
+			TFRKPHN_brd_kbg_p39_1_click = { set_variable = { TFRKPHN_brd_kbg_sel = 1 } }
+			TFRKPHN_brd_kbg_p41_1_click = { set_variable = { TFRKPHN_brd_kbg_sel = 1 } }
+			TFRKPHN_brd_kbg_p42_1_click = { set_variable = { TFRKPHN_brd_kbg_sel = 1 } }
+			TFRKPHN_brd_kbg_p43_1_click = { set_variable = { TFRKPHN_brd_kbg_sel = 1 } }
+			TFRKPHN_brd_kbg_p44_1_click = { set_variable = { TFRKPHN_brd_kbg_sel = 1 } }
+			TFRKPHN_brd_kbg_p45_1_click = { set_variable = { TFRKPHN_brd_kbg_sel = 1 } }
+			TFRKPHN_brd_kbg_p46_1_click = { set_variable = { TFRKPHN_brd_kbg_sel = 1 } }
+			TFRKPHN_brd_kbg_p47_1_click = { set_variable = { TFRKPHN_brd_kbg_sel = 1 } }
+			TFRKPHN_brd_kbg_p48_1_click = { set_variable = { TFRKPHN_brd_kbg_sel = 1 } }
+			TFRKPHN_brd_kbg_p50_1_click = { set_variable = { TFRKPHN_brd_kbg_sel = 1 } }
+			TFRKPHN_brd_kbg_p51_1_click = { set_variable = { TFRKPHN_brd_kbg_sel = 1 } }
+			TFRKPHN_brd_kbg_p52_1_click = { set_variable = { TFRKPHN_brd_kbg_sel = 1 } }
+			TFRKPHN_brd_kbg_p53_1_click = { set_variable = { TFRKPHN_brd_kbg_sel = 1 } }
+			TFRKPHN_brd_kbg_p54_1_click = { set_variable = { TFRKPHN_brd_kbg_sel = 1 } }
+			TFRKPHN_brd_kbg_p55_1_click = { set_variable = { TFRKPHN_brd_kbg_sel = 1 } }
+			TFRKPHN_brd_kbg_p56_1_click = { set_variable = { TFRKPHN_brd_kbg_sel = 1 } }
+			TFRKPHN_brd_kbg_p58_1_click = { set_variable = { TFRKPHN_brd_kbg_sel = 1 } }
+			TFRKPHN_brd_kbg_p59_1_click = { set_variable = { TFRKPHN_brd_kbg_sel = 1 } }
+			TFRKPHN_brd_kbg_p60_1_click = { set_variable = { TFRKPHN_brd_kbg_sel = 1 } }
+			TFRKPHN_brd_kbg_p61_1_click = { set_variable = { TFRKPHN_brd_kbg_sel = 1 } }
+			TFRKPHN_brd_kbg_p62_1_click = { set_variable = { TFRKPHN_brd_kbg_sel = 1 } }
+			TFRKPHN_brd_kbg_p63_1_click = { set_variable = { TFRKPHN_brd_kbg_sel = 1 } }
+			TFRKPHN_brd_kbg_p64_1_click = { set_variable = { TFRKPHN_brd_kbg_sel = 1 } }
+			TFRKPHN_brd_kbg_p65_1_click = { set_variable = { TFRKPHN_brd_kbg_sel = 1 } }
+			TFRKPHN_brd_kbg_bA_click = { add_political_power = 40 add_stability = -0.02 TFRKPHN_brd_kbg_go1 = yes }
+			TFRKPHN_brd_kbg_bB_click = { add_political_power = -30 add_stability = 0.02 TFRKPHN_brd_kbg_go1 = yes }
+			TFRKPHN_brd_kbg_c1_click = { add_political_power = -25 TFRKPHN_brd_kbg_go1 = yes }
+			TFRKPHN_brd_kbg_c2_click = { add_political_power = -25 TFRKPHN_brd_kbg_go2 = yes }
+			TFRKPHN_brd_kbg_c3_click = { add_political_power = -25 TFRKPHN_brd_kbg_go3 = yes }
+		}
+		triggers = {
+			TFRKPHN_brd_kbg_fi1_visible = { check_variable = { TFRKPHN_brd_kbg_f < 1.5 } }
+			TFRKPHN_brd_kbg_fi2_visible = { check_variable = { TFRKPHN_brd_kbg_f = 2 } }
+			TFRKPHN_brd_kbg_fi3_visible = { check_variable = { TFRKPHN_brd_kbg_f = 3 } }
+			TFRKPHN_brd_kbg_fi4_visible = { check_variable = { TFRKPHN_brd_kbg_f = 4 } }
+			TFRKPHN_brd_kbg_fi5_visible = { check_variable = { TFRKPHN_brd_kbg_f = 5 } }
+			TFRKPHN_brd_kbg_fi6_visible = { check_variable = { TFRKPHN_brd_kbg_f = 6 } }
+			TFRKPHN_brd_kbg_fi7_visible = { check_variable = { TFRKPHN_brd_kbg_f = 7 } }
+			TFRKPHN_brd_kbg_fi8_visible = { check_variable = { TFRKPHN_brd_kbg_f = 8 } }
+			TFRKPHN_brd_kbg_fi9_visible = { check_variable = { TFRKPHN_brd_kbg_f = 9 } }
+			TFRKPHN_brd_kbg_fi10_visible = { check_variable = { TFRKPHN_brd_kbg_f = 10 } }
+			TFRKPHN_brd_kbg_fi11_visible = { check_variable = { TFRKPHN_brd_kbg_f = 11 } }
+			TFRKPHN_brd_kbg_fi12_visible = { check_variable = { TFRKPHN_brd_kbg_f = 12 } }
+			TFRKPHN_brd_kbg_fi13_visible = { check_variable = { TFRKPHN_brd_kbg_f = 13 } }
+			TFRKPHN_brd_kbg_fi14_visible = { check_variable = { TFRKPHN_brd_kbg_f = 14 } }
+			TFRKPHN_brd_kbg_fi15_visible = { check_variable = { TFRKPHN_brd_kbg_f = 15 } }
+			TFRKPHN_brd_kbg_fi16_visible = { check_variable = { TFRKPHN_brd_kbg_f = 16 } }
+			TFRKPHN_brd_kbg_fi17_visible = { check_variable = { TFRKPHN_brd_kbg_f = 17 } }
+			TFRKPHN_brd_kbg_fi18_visible = { check_variable = { TFRKPHN_brd_kbg_f = 18 } }
+			TFRKPHN_brd_kbg_fi19_visible = { check_variable = { TFRKPHN_brd_kbg_f = 19 } }
+			TFRKPHN_brd_kbg_fi20_visible = { check_variable = { TFRKPHN_brd_kbg_f = 20 } }
+			TFRKPHN_brd_kbg_fi21_visible = { check_variable = { TFRKPHN_brd_kbg_f = 21 } }
+			TFRKPHN_brd_kbg_fi22_visible = { check_variable = { TFRKPHN_brd_kbg_f = 22 } }
+			TFRKPHN_brd_kbg_fi23_visible = { check_variable = { TFRKPHN_brd_kbg_f = 23 } }
+			TFRKPHN_brd_kbg_fi24_visible = { check_variable = { TFRKPHN_brd_kbg_f = 24 } }
+			TFRKPHN_brd_kbg_fi25_visible = { check_variable = { TFRKPHN_brd_kbg_f = 25 } }
+			TFRKPHN_brd_kbg_fi26_visible = { check_variable = { TFRKPHN_brd_kbg_f = 26 } }
+			TFRKPHN_brd_kbg_fi27_visible = { check_variable = { TFRKPHN_brd_kbg_f = 27 } }
+			TFRKPHN_brd_kbg_fi28_visible = { check_variable = { TFRKPHN_brd_kbg_f = 28 } }
+			TFRKPHN_brd_kbg_fi29_visible = { check_variable = { TFRKPHN_brd_kbg_f = 29 } }
+			TFRKPHN_brd_kbg_fi30_visible = { check_variable = { TFRKPHN_brd_kbg_f = 30 } }
+			TFRKPHN_brd_kbg_fi31_visible = { check_variable = { TFRKPHN_brd_kbg_f = 31 } }
+			TFRKPHN_brd_kbg_fi32_visible = { check_variable = { TFRKPHN_brd_kbg_f = 32 } }
+			TFRKPHN_brd_kbg_fi33_visible = { check_variable = { TFRKPHN_brd_kbg_f = 33 } }
+			TFRKPHN_brd_kbg_fi34_visible = { check_variable = { TFRKPHN_brd_kbg_f = 34 } }
+			TFRKPHN_brd_kbg_fi35_visible = { check_variable = { TFRKPHN_brd_kbg_f = 35 } }
+			TFRKPHN_brd_kbg_fi36_visible = { check_variable = { TFRKPHN_brd_kbg_f = 36 } }
+			TFRKPHN_brd_kbg_fi37_visible = { check_variable = { TFRKPHN_brd_kbg_f = 37 } }
+			TFRKPHN_brd_kbg_fi38_visible = { check_variable = { TFRKPHN_brd_kbg_f = 38 } }
+			TFRKPHN_brd_kbg_fi39_visible = { check_variable = { TFRKPHN_brd_kbg_f = 39 } }
+			TFRKPHN_brd_kbg_fi40_visible = { check_variable = { TFRKPHN_brd_kbg_f = 40 } }
+			TFRKPHN_brd_kbg_fi41_visible = { check_variable = { TFRKPHN_brd_kbg_f = 41 } }
+			TFRKPHN_brd_kbg_fi42_visible = { check_variable = { TFRKPHN_brd_kbg_f = 42 } }
+			TFRKPHN_brd_kbg_fi43_visible = { check_variable = { TFRKPHN_brd_kbg_f = 43 } }
+			TFRKPHN_brd_kbg_fi44_visible = { check_variable = { TFRKPHN_brd_kbg_f = 44 } }
+			TFRKPHN_brd_kbg_fi45_visible = { check_variable = { TFRKPHN_brd_kbg_f = 45 } }
+			TFRKPHN_brd_kbg_fi46_visible = { check_variable = { TFRKPHN_brd_kbg_f = 46 } }
+			TFRKPHN_brd_kbg_fi47_visible = { check_variable = { TFRKPHN_brd_kbg_f = 47 } }
+			TFRKPHN_brd_kbg_fi48_visible = { check_variable = { TFRKPHN_brd_kbg_f = 48 } }
+			TFRKPHN_brd_kbg_fi49_visible = { check_variable = { TFRKPHN_brd_kbg_f = 49 } }
+			TFRKPHN_brd_kbg_fi50_visible = { check_variable = { TFRKPHN_brd_kbg_f = 50 } }
+			TFRKPHN_brd_kbg_fi51_visible = { check_variable = { TFRKPHN_brd_kbg_f = 51 } }
+			TFRKPHN_brd_kbg_fi52_visible = { check_variable = { TFRKPHN_brd_kbg_f = 52 } }
+			TFRKPHN_brd_kbg_fi53_visible = { check_variable = { TFRKPHN_brd_kbg_f = 53 } }
+			TFRKPHN_brd_kbg_fi54_visible = { check_variable = { TFRKPHN_brd_kbg_f = 54 } }
+			TFRKPHN_brd_kbg_fi55_visible = { check_variable = { TFRKPHN_brd_kbg_f = 55 } }
+			TFRKPHN_brd_kbg_fi56_visible = { check_variable = { TFRKPHN_brd_kbg_f = 56 } }
+			TFRKPHN_brd_kbg_fi57_visible = { check_variable = { TFRKPHN_brd_kbg_f = 57 } }
+			TFRKPHN_brd_kbg_fi58_visible = { check_variable = { TFRKPHN_brd_kbg_f = 58 } }
+			TFRKPHN_brd_kbg_fi59_visible = { check_variable = { TFRKPHN_brd_kbg_f = 59 } }
+			TFRKPHN_brd_kbg_fi60_visible = { check_variable = { TFRKPHN_brd_kbg_f = 60 } }
+			TFRKPHN_brd_kbg_fi61_visible = { check_variable = { TFRKPHN_brd_kbg_f = 61 } }
+			TFRKPHN_brd_kbg_fi62_visible = { check_variable = { TFRKPHN_brd_kbg_f = 62 } }
+			TFRKPHN_brd_kbg_fi63_visible = { check_variable = { TFRKPHN_brd_kbg_f = 63 } }
+			TFRKPHN_brd_kbg_fi64_visible = { check_variable = { TFRKPHN_brd_kbg_f = 64 } }
+			TFRKPHN_brd_kbg_fi65_visible = { check_variable = { TFRKPHN_brd_kbg_f = 65 } }
+			TFRKPHN_brd_kbg_fi66_visible = { check_variable = { TFRKPHN_brd_kbg_f = 66 } }
+			TFRKPHN_brd_kbg_p1_1_visible = { check_variable = { TFRKPHN_brd_kbg_f < 1.5 } NOT = { has_country_flag = TFRKPHN_brd_kbg_done } NOT = { has_country_flag = TFRKPHN_brd_kbg_cd } }
+			TFRKPHN_brd_kbg_p2_1_visible = { check_variable = { TFRKPHN_brd_kbg_f = 2 } NOT = { has_country_flag = TFRKPHN_brd_kbg_done } NOT = { has_country_flag = TFRKPHN_brd_kbg_cd } }
+			TFRKPHN_brd_kbg_p3_1_visible = { check_variable = { TFRKPHN_brd_kbg_f = 3 } NOT = { has_country_flag = TFRKPHN_brd_kbg_done } NOT = { has_country_flag = TFRKPHN_brd_kbg_cd } }
+			TFRKPHN_brd_kbg_p4_1_visible = { check_variable = { TFRKPHN_brd_kbg_f = 4 } NOT = { has_country_flag = TFRKPHN_brd_kbg_done } NOT = { has_country_flag = TFRKPHN_brd_kbg_cd } }
+			TFRKPHN_brd_kbg_p4_2_visible = { check_variable = { TFRKPHN_brd_kbg_f = 4 } NOT = { has_country_flag = TFRKPHN_brd_kbg_done } NOT = { has_country_flag = TFRKPHN_brd_kbg_cd } }
+			TFRKPHN_brd_kbg_p5_1_visible = { check_variable = { TFRKPHN_brd_kbg_f = 5 } NOT = { has_country_flag = TFRKPHN_brd_kbg_done } NOT = { has_country_flag = TFRKPHN_brd_kbg_cd } }
+			TFRKPHN_brd_kbg_p5_2_visible = { check_variable = { TFRKPHN_brd_kbg_f = 5 } NOT = { has_country_flag = TFRKPHN_brd_kbg_done } NOT = { has_country_flag = TFRKPHN_brd_kbg_cd } }
+			TFRKPHN_brd_kbg_p5_3_visible = { check_variable = { TFRKPHN_brd_kbg_f = 5 } NOT = { has_country_flag = TFRKPHN_brd_kbg_done } NOT = { has_country_flag = TFRKPHN_brd_kbg_cd } }
+			TFRKPHN_brd_kbg_p6_1_visible = { check_variable = { TFRKPHN_brd_kbg_f = 6 } NOT = { has_country_flag = TFRKPHN_brd_kbg_done } NOT = { has_country_flag = TFRKPHN_brd_kbg_cd } }
+			TFRKPHN_brd_kbg_p7_1_visible = { check_variable = { TFRKPHN_brd_kbg_f = 7 } NOT = { has_country_flag = TFRKPHN_brd_kbg_done } NOT = { has_country_flag = TFRKPHN_brd_kbg_cd } }
+			TFRKPHN_brd_kbg_p7_2_visible = { check_variable = { TFRKPHN_brd_kbg_f = 7 } NOT = { has_country_flag = TFRKPHN_brd_kbg_done } NOT = { has_country_flag = TFRKPHN_brd_kbg_cd } }
+			TFRKPHN_brd_kbg_p8_1_visible = { check_variable = { TFRKPHN_brd_kbg_f = 8 } NOT = { has_country_flag = TFRKPHN_brd_kbg_done } NOT = { has_country_flag = TFRKPHN_brd_kbg_cd } }
+			TFRKPHN_brd_kbg_p9_1_visible = { check_variable = { TFRKPHN_brd_kbg_f = 9 } NOT = { has_country_flag = TFRKPHN_brd_kbg_done } NOT = { has_country_flag = TFRKPHN_brd_kbg_cd } }
+			TFRKPHN_brd_kbg_p10_1_visible = { check_variable = { TFRKPHN_brd_kbg_f = 10 } NOT = { has_country_flag = TFRKPHN_brd_kbg_done } NOT = { has_country_flag = TFRKPHN_brd_kbg_cd } }
+			TFRKPHN_brd_kbg_p11_1_visible = { check_variable = { TFRKPHN_brd_kbg_f = 11 } NOT = { has_country_flag = TFRKPHN_brd_kbg_done } NOT = { has_country_flag = TFRKPHN_brd_kbg_cd } }
+			TFRKPHN_brd_kbg_p12_1_visible = { check_variable = { TFRKPHN_brd_kbg_f = 12 } NOT = { has_country_flag = TFRKPHN_brd_kbg_done } NOT = { has_country_flag = TFRKPHN_brd_kbg_cd } }
+			TFRKPHN_brd_kbg_p13_1_visible = { check_variable = { TFRKPHN_brd_kbg_f = 13 } NOT = { has_country_flag = TFRKPHN_brd_kbg_done } NOT = { has_country_flag = TFRKPHN_brd_kbg_cd } }
+			TFRKPHN_brd_kbg_p14_1_visible = { check_variable = { TFRKPHN_brd_kbg_f = 14 } NOT = { has_country_flag = TFRKPHN_brd_kbg_done } NOT = { has_country_flag = TFRKPHN_brd_kbg_cd } }
+			TFRKPHN_brd_kbg_p15_1_visible = { check_variable = { TFRKPHN_brd_kbg_f = 15 } NOT = { has_country_flag = TFRKPHN_brd_kbg_done } NOT = { has_country_flag = TFRKPHN_brd_kbg_cd } }
+			TFRKPHN_brd_kbg_p17_1_visible = { check_variable = { TFRKPHN_brd_kbg_f = 17 } NOT = { has_country_flag = TFRKPHN_brd_kbg_done } NOT = { has_country_flag = TFRKPHN_brd_kbg_cd } }
+			TFRKPHN_brd_kbg_p18_1_visible = { check_variable = { TFRKPHN_brd_kbg_f = 18 } NOT = { has_country_flag = TFRKPHN_brd_kbg_done } NOT = { has_country_flag = TFRKPHN_brd_kbg_cd } }
+			TFRKPHN_brd_kbg_p19_1_visible = { check_variable = { TFRKPHN_brd_kbg_f = 19 } NOT = { has_country_flag = TFRKPHN_brd_kbg_done } NOT = { has_country_flag = TFRKPHN_brd_kbg_cd } }
+			TFRKPHN_brd_kbg_p20_1_visible = { check_variable = { TFRKPHN_brd_kbg_f = 20 } NOT = { has_country_flag = TFRKPHN_brd_kbg_done } NOT = { has_country_flag = TFRKPHN_brd_kbg_cd } }
+			TFRKPHN_brd_kbg_p21_1_visible = { check_variable = { TFRKPHN_brd_kbg_f = 21 } NOT = { has_country_flag = TFRKPHN_brd_kbg_done } NOT = { has_country_flag = TFRKPHN_brd_kbg_cd } }
+			TFRKPHN_brd_kbg_p22_1_visible = { check_variable = { TFRKPHN_brd_kbg_f = 22 } NOT = { has_country_flag = TFRKPHN_brd_kbg_done } NOT = { has_country_flag = TFRKPHN_brd_kbg_cd } }
+			TFRKPHN_brd_kbg_p23_1_visible = { check_variable = { TFRKPHN_brd_kbg_f = 23 } NOT = { has_country_flag = TFRKPHN_brd_kbg_done } NOT = { has_country_flag = TFRKPHN_brd_kbg_cd } }
+			TFRKPHN_brd_kbg_p25_1_visible = { check_variable = { TFRKPHN_brd_kbg_f = 25 } NOT = { has_country_flag = TFRKPHN_brd_kbg_done } NOT = { has_country_flag = TFRKPHN_brd_kbg_cd } }
+			TFRKPHN_brd_kbg_p26_1_visible = { check_variable = { TFRKPHN_brd_kbg_f = 26 } NOT = { has_country_flag = TFRKPHN_brd_kbg_done } NOT = { has_country_flag = TFRKPHN_brd_kbg_cd } }
+			TFRKPHN_brd_kbg_p27_1_visible = { check_variable = { TFRKPHN_brd_kbg_f = 27 } NOT = { has_country_flag = TFRKPHN_brd_kbg_done } NOT = { has_country_flag = TFRKPHN_brd_kbg_cd } }
+			TFRKPHN_brd_kbg_p28_1_visible = { check_variable = { TFRKPHN_brd_kbg_f = 28 } NOT = { has_country_flag = TFRKPHN_brd_kbg_done } NOT = { has_country_flag = TFRKPHN_brd_kbg_cd } }
+			TFRKPHN_brd_kbg_p29_1_visible = { check_variable = { TFRKPHN_brd_kbg_f = 29 } NOT = { has_country_flag = TFRKPHN_brd_kbg_done } NOT = { has_country_flag = TFRKPHN_brd_kbg_cd } }
+			TFRKPHN_brd_kbg_p30_1_visible = { check_variable = { TFRKPHN_brd_kbg_f = 30 } NOT = { has_country_flag = TFRKPHN_brd_kbg_done } NOT = { has_country_flag = TFRKPHN_brd_kbg_cd } }
+			TFRKPHN_brd_kbg_p31_1_visible = { check_variable = { TFRKPHN_brd_kbg_f = 31 } NOT = { has_country_flag = TFRKPHN_brd_kbg_done } NOT = { has_country_flag = TFRKPHN_brd_kbg_cd } }
+			TFRKPHN_brd_kbg_p33_1_visible = { check_variable = { TFRKPHN_brd_kbg_f = 33 } NOT = { has_country_flag = TFRKPHN_brd_kbg_done } NOT = { has_country_flag = TFRKPHN_brd_kbg_cd } }
+			TFRKPHN_brd_kbg_p34_1_visible = { check_variable = { TFRKPHN_brd_kbg_f = 34 } NOT = { has_country_flag = TFRKPHN_brd_kbg_done } NOT = { has_country_flag = TFRKPHN_brd_kbg_cd } }
+			TFRKPHN_brd_kbg_p35_1_visible = { check_variable = { TFRKPHN_brd_kbg_f = 35 } NOT = { has_country_flag = TFRKPHN_brd_kbg_done } NOT = { has_country_flag = TFRKPHN_brd_kbg_cd } }
+			TFRKPHN_brd_kbg_p36_1_visible = { check_variable = { TFRKPHN_brd_kbg_f = 36 } NOT = { has_country_flag = TFRKPHN_brd_kbg_done } NOT = { has_country_flag = TFRKPHN_brd_kbg_cd } }
+			TFRKPHN_brd_kbg_p37_1_visible = { check_variable = { TFRKPHN_brd_kbg_f = 37 } NOT = { has_country_flag = TFRKPHN_brd_kbg_done } NOT = { has_country_flag = TFRKPHN_brd_kbg_cd } }
+			TFRKPHN_brd_kbg_p38_1_visible = { check_variable = { TFRKPHN_brd_kbg_f = 38 } NOT = { has_country_flag = TFRKPHN_brd_kbg_done } NOT = { has_country_flag = TFRKPHN_brd_kbg_cd } }
+			TFRKPHN_brd_kbg_p39_1_visible = { check_variable = { TFRKPHN_brd_kbg_f = 39 } NOT = { has_country_flag = TFRKPHN_brd_kbg_done } NOT = { has_country_flag = TFRKPHN_brd_kbg_cd } }
+			TFRKPHN_brd_kbg_p41_1_visible = { check_variable = { TFRKPHN_brd_kbg_f = 41 } NOT = { has_country_flag = TFRKPHN_brd_kbg_done } NOT = { has_country_flag = TFRKPHN_brd_kbg_cd } }
+			TFRKPHN_brd_kbg_p42_1_visible = { check_variable = { TFRKPHN_brd_kbg_f = 42 } NOT = { has_country_flag = TFRKPHN_brd_kbg_done } NOT = { has_country_flag = TFRKPHN_brd_kbg_cd } }
+			TFRKPHN_brd_kbg_p43_1_visible = { check_variable = { TFRKPHN_brd_kbg_f = 43 } NOT = { has_country_flag = TFRKPHN_brd_kbg_done } NOT = { has_country_flag = TFRKPHN_brd_kbg_cd } }
+			TFRKPHN_brd_kbg_p44_1_visible = { check_variable = { TFRKPHN_brd_kbg_f = 44 } NOT = { has_country_flag = TFRKPHN_brd_kbg_done } NOT = { has_country_flag = TFRKPHN_brd_kbg_cd } }
+			TFRKPHN_brd_kbg_p45_1_visible = { check_variable = { TFRKPHN_brd_kbg_f = 45 } NOT = { has_country_flag = TFRKPHN_brd_kbg_done } NOT = { has_country_flag = TFRKPHN_brd_kbg_cd } }
+			TFRKPHN_brd_kbg_p46_1_visible = { check_variable = { TFRKPHN_brd_kbg_f = 46 } NOT = { has_country_flag = TFRKPHN_brd_kbg_done } NOT = { has_country_flag = TFRKPHN_brd_kbg_cd } }
+			TFRKPHN_brd_kbg_p47_1_visible = { check_variable = { TFRKPHN_brd_kbg_f = 47 } NOT = { has_country_flag = TFRKPHN_brd_kbg_done } NOT = { has_country_flag = TFRKPHN_brd_kbg_cd } }
+			TFRKPHN_brd_kbg_p48_1_visible = { check_variable = { TFRKPHN_brd_kbg_f = 48 } NOT = { has_country_flag = TFRKPHN_brd_kbg_done } NOT = { has_country_flag = TFRKPHN_brd_kbg_cd } }
+			TFRKPHN_brd_kbg_p50_1_visible = { check_variable = { TFRKPHN_brd_kbg_f = 50 } NOT = { has_country_flag = TFRKPHN_brd_kbg_done } NOT = { has_country_flag = TFRKPHN_brd_kbg_cd } }
+			TFRKPHN_brd_kbg_p51_1_visible = { check_variable = { TFRKPHN_brd_kbg_f = 51 } NOT = { has_country_flag = TFRKPHN_brd_kbg_done } NOT = { has_country_flag = TFRKPHN_brd_kbg_cd } }
+			TFRKPHN_brd_kbg_p52_1_visible = { check_variable = { TFRKPHN_brd_kbg_f = 52 } NOT = { has_country_flag = TFRKPHN_brd_kbg_done } NOT = { has_country_flag = TFRKPHN_brd_kbg_cd } }
+			TFRKPHN_brd_kbg_p53_1_visible = { check_variable = { TFRKPHN_brd_kbg_f = 53 } NOT = { has_country_flag = TFRKPHN_brd_kbg_done } NOT = { has_country_flag = TFRKPHN_brd_kbg_cd } }
+			TFRKPHN_brd_kbg_p54_1_visible = { check_variable = { TFRKPHN_brd_kbg_f = 54 } NOT = { has_country_flag = TFRKPHN_brd_kbg_done } NOT = { has_country_flag = TFRKPHN_brd_kbg_cd } }
+			TFRKPHN_brd_kbg_p55_1_visible = { check_variable = { TFRKPHN_brd_kbg_f = 55 } NOT = { has_country_flag = TFRKPHN_brd_kbg_done } NOT = { has_country_flag = TFRKPHN_brd_kbg_cd } }
+			TFRKPHN_brd_kbg_p56_1_visible = { check_variable = { TFRKPHN_brd_kbg_f = 56 } NOT = { has_country_flag = TFRKPHN_brd_kbg_done } NOT = { has_country_flag = TFRKPHN_brd_kbg_cd } }
+			TFRKPHN_brd_kbg_p58_1_visible = { check_variable = { TFRKPHN_brd_kbg_f = 58 } NOT = { has_country_flag = TFRKPHN_brd_kbg_done } NOT = { has_country_flag = TFRKPHN_brd_kbg_cd } }
+			TFRKPHN_brd_kbg_p59_1_visible = { check_variable = { TFRKPHN_brd_kbg_f = 59 } NOT = { has_country_flag = TFRKPHN_brd_kbg_done } NOT = { has_country_flag = TFRKPHN_brd_kbg_cd } }
+			TFRKPHN_brd_kbg_p60_1_visible = { check_variable = { TFRKPHN_brd_kbg_f = 60 } NOT = { has_country_flag = TFRKPHN_brd_kbg_done } NOT = { has_country_flag = TFRKPHN_brd_kbg_cd } }
+			TFRKPHN_brd_kbg_p61_1_visible = { check_variable = { TFRKPHN_brd_kbg_f = 61 } NOT = { has_country_flag = TFRKPHN_brd_kbg_done } NOT = { has_country_flag = TFRKPHN_brd_kbg_cd } }
+			TFRKPHN_brd_kbg_p62_1_visible = { check_variable = { TFRKPHN_brd_kbg_f = 62 } NOT = { has_country_flag = TFRKPHN_brd_kbg_done } NOT = { has_country_flag = TFRKPHN_brd_kbg_cd } }
+			TFRKPHN_brd_kbg_p63_1_visible = { check_variable = { TFRKPHN_brd_kbg_f = 63 } NOT = { has_country_flag = TFRKPHN_brd_kbg_done } NOT = { has_country_flag = TFRKPHN_brd_kbg_cd } }
+			TFRKPHN_brd_kbg_p64_1_visible = { check_variable = { TFRKPHN_brd_kbg_f = 64 } NOT = { has_country_flag = TFRKPHN_brd_kbg_done } NOT = { has_country_flag = TFRKPHN_brd_kbg_cd } }
+			TFRKPHN_brd_kbg_p65_1_visible = { check_variable = { TFRKPHN_brd_kbg_f = 65 } NOT = { has_country_flag = TFRKPHN_brd_kbg_done } NOT = { has_country_flag = TFRKPHN_brd_kbg_cd } }
+			TFRKPHN_brd_kbg_t_pick_visible = { NOT = { has_country_flag = TFRKPHN_brd_kbg_done } NOT = { has_country_flag = TFRKPHN_brd_kbg_cd } check_variable = { TFRKPHN_brd_kbg_sel < 0.5 } }
+			TFRKPHN_brd_kbg_t_wait_visible = { NOT = { has_country_flag = TFRKPHN_brd_kbg_done } has_country_flag = TFRKPHN_brd_kbg_cd }
+			TFRKPHN_brd_kbg_t_cho_visible = { NOT = { has_country_flag = TFRKPHN_brd_kbg_done } NOT = { has_country_flag = TFRKPHN_brd_kbg_cd } OR = { check_variable = { TFRKPHN_brd_kbg_f = 4 } check_variable = { TFRKPHN_brd_kbg_f = 5 } check_variable = { TFRKPHN_brd_kbg_f = 7 } } }
+			TFRKPHN_brd_kbg_t_end16_visible = { check_variable = { TFRKPHN_brd_kbg_f = 16 } }
+			TFRKPHN_brd_kbg_t_src16_visible = { check_variable = { TFRKPHN_brd_kbg_f = 16 } }
+			TFRKPHN_brd_kbg_t_end24_visible = { check_variable = { TFRKPHN_brd_kbg_f = 24 } }
+			TFRKPHN_brd_kbg_t_src24_visible = { check_variable = { TFRKPHN_brd_kbg_f = 24 } }
+			TFRKPHN_brd_kbg_t_end32_visible = { check_variable = { TFRKPHN_brd_kbg_f = 32 } }
+			TFRKPHN_brd_kbg_t_src32_visible = { check_variable = { TFRKPHN_brd_kbg_f = 32 } }
+			TFRKPHN_brd_kbg_t_end40_visible = { check_variable = { TFRKPHN_brd_kbg_f = 40 } }
+			TFRKPHN_brd_kbg_t_src40_visible = { check_variable = { TFRKPHN_brd_kbg_f = 40 } }
+			TFRKPHN_brd_kbg_t_end49_visible = { check_variable = { TFRKPHN_brd_kbg_f = 49 } }
+			TFRKPHN_brd_kbg_t_src49_visible = { check_variable = { TFRKPHN_brd_kbg_f = 49 } }
+			TFRKPHN_brd_kbg_t_end57_visible = { check_variable = { TFRKPHN_brd_kbg_f = 57 } }
+			TFRKPHN_brd_kbg_t_src57_visible = { check_variable = { TFRKPHN_brd_kbg_f = 57 } }
+			TFRKPHN_brd_kbg_t_end66_visible = { check_variable = { TFRKPHN_brd_kbg_f = 66 } }
+			TFRKPHN_brd_kbg_t_src66_visible = { check_variable = { TFRKPHN_brd_kbg_f = 66 } }
+			TFRKPHN_brd_kbg_bA_visible = { check_variable = { TFRKPHN_brd_kbg_sel = 1 } OR = { check_variable = { TFRKPHN_brd_kbg_f < 1.5 } check_variable = { TFRKPHN_brd_kbg_f = 2 } check_variable = { TFRKPHN_brd_kbg_f = 3 } check_variable = { TFRKPHN_brd_kbg_f = 6 } check_variable = { TFRKPHN_brd_kbg_f = 8 } check_variable = { TFRKPHN_brd_kbg_f = 9 } check_variable = { TFRKPHN_brd_kbg_f = 10 } check_variable = { TFRKPHN_brd_kbg_f = 11 } check_variable = { TFRKPHN_brd_kbg_f = 12 } check_variable = { TFRKPHN_brd_kbg_f = 13 } check_variable = { TFRKPHN_brd_kbg_f = 14 } check_variable = { TFRKPHN_brd_kbg_f = 15 } check_variable = { TFRKPHN_brd_kbg_f = 17 } check_variable = { TFRKPHN_brd_kbg_f = 18 } check_variable = { TFRKPHN_brd_kbg_f = 19 } check_variable = { TFRKPHN_brd_kbg_f = 20 } check_variable = { TFRKPHN_brd_kbg_f = 21 } check_variable = { TFRKPHN_brd_kbg_f = 22 } check_variable = { TFRKPHN_brd_kbg_f = 23 } check_variable = { TFRKPHN_brd_kbg_f = 25 } check_variable = { TFRKPHN_brd_kbg_f = 26 } check_variable = { TFRKPHN_brd_kbg_f = 27 } check_variable = { TFRKPHN_brd_kbg_f = 28 } check_variable = { TFRKPHN_brd_kbg_f = 29 } check_variable = { TFRKPHN_brd_kbg_f = 30 } check_variable = { TFRKPHN_brd_kbg_f = 31 } check_variable = { TFRKPHN_brd_kbg_f = 33 } check_variable = { TFRKPHN_brd_kbg_f = 34 } check_variable = { TFRKPHN_brd_kbg_f = 35 } check_variable = { TFRKPHN_brd_kbg_f = 36 } check_variable = { TFRKPHN_brd_kbg_f = 37 } check_variable = { TFRKPHN_brd_kbg_f = 38 } check_variable = { TFRKPHN_brd_kbg_f = 39 } check_variable = { TFRKPHN_brd_kbg_f = 41 } check_variable = { TFRKPHN_brd_kbg_f = 42 } check_variable = { TFRKPHN_brd_kbg_f = 43 } check_variable = { TFRKPHN_brd_kbg_f = 44 } check_variable = { TFRKPHN_brd_kbg_f = 45 } check_variable = { TFRKPHN_brd_kbg_f = 46 } check_variable = { TFRKPHN_brd_kbg_f = 47 } check_variable = { TFRKPHN_brd_kbg_f = 48 } check_variable = { TFRKPHN_brd_kbg_f = 50 } check_variable = { TFRKPHN_brd_kbg_f = 51 } check_variable = { TFRKPHN_brd_kbg_f = 52 } check_variable = { TFRKPHN_brd_kbg_f = 53 } check_variable = { TFRKPHN_brd_kbg_f = 54 } check_variable = { TFRKPHN_brd_kbg_f = 55 } check_variable = { TFRKPHN_brd_kbg_f = 56 } check_variable = { TFRKPHN_brd_kbg_f = 58 } check_variable = { TFRKPHN_brd_kbg_f = 59 } check_variable = { TFRKPHN_brd_kbg_f = 60 } check_variable = { TFRKPHN_brd_kbg_f = 61 } check_variable = { TFRKPHN_brd_kbg_f = 62 } check_variable = { TFRKPHN_brd_kbg_f = 63 } check_variable = { TFRKPHN_brd_kbg_f = 64 } check_variable = { TFRKPHN_brd_kbg_f = 65 } } NOT = { has_country_flag = TFRKPHN_brd_kbg_done } NOT = { has_country_flag = TFRKPHN_brd_kbg_cd } }
+			TFRKPHN_brd_kbg_bB_visible = { check_variable = { TFRKPHN_brd_kbg_sel = 1 } OR = { check_variable = { TFRKPHN_brd_kbg_f < 1.5 } check_variable = { TFRKPHN_brd_kbg_f = 2 } check_variable = { TFRKPHN_brd_kbg_f = 3 } check_variable = { TFRKPHN_brd_kbg_f = 6 } check_variable = { TFRKPHN_brd_kbg_f = 8 } check_variable = { TFRKPHN_brd_kbg_f = 9 } check_variable = { TFRKPHN_brd_kbg_f = 10 } check_variable = { TFRKPHN_brd_kbg_f = 11 } check_variable = { TFRKPHN_brd_kbg_f = 12 } check_variable = { TFRKPHN_brd_kbg_f = 13 } check_variable = { TFRKPHN_brd_kbg_f = 14 } check_variable = { TFRKPHN_brd_kbg_f = 15 } check_variable = { TFRKPHN_brd_kbg_f = 17 } check_variable = { TFRKPHN_brd_kbg_f = 18 } check_variable = { TFRKPHN_brd_kbg_f = 19 } check_variable = { TFRKPHN_brd_kbg_f = 20 } check_variable = { TFRKPHN_brd_kbg_f = 21 } check_variable = { TFRKPHN_brd_kbg_f = 22 } check_variable = { TFRKPHN_brd_kbg_f = 23 } check_variable = { TFRKPHN_brd_kbg_f = 25 } check_variable = { TFRKPHN_brd_kbg_f = 26 } check_variable = { TFRKPHN_brd_kbg_f = 27 } check_variable = { TFRKPHN_brd_kbg_f = 28 } check_variable = { TFRKPHN_brd_kbg_f = 29 } check_variable = { TFRKPHN_brd_kbg_f = 30 } check_variable = { TFRKPHN_brd_kbg_f = 31 } check_variable = { TFRKPHN_brd_kbg_f = 33 } check_variable = { TFRKPHN_brd_kbg_f = 34 } check_variable = { TFRKPHN_brd_kbg_f = 35 } check_variable = { TFRKPHN_brd_kbg_f = 36 } check_variable = { TFRKPHN_brd_kbg_f = 37 } check_variable = { TFRKPHN_brd_kbg_f = 38 } check_variable = { TFRKPHN_brd_kbg_f = 39 } check_variable = { TFRKPHN_brd_kbg_f = 41 } check_variable = { TFRKPHN_brd_kbg_f = 42 } check_variable = { TFRKPHN_brd_kbg_f = 43 } check_variable = { TFRKPHN_brd_kbg_f = 44 } check_variable = { TFRKPHN_brd_kbg_f = 45 } check_variable = { TFRKPHN_brd_kbg_f = 46 } check_variable = { TFRKPHN_brd_kbg_f = 47 } check_variable = { TFRKPHN_brd_kbg_f = 48 } check_variable = { TFRKPHN_brd_kbg_f = 50 } check_variable = { TFRKPHN_brd_kbg_f = 51 } check_variable = { TFRKPHN_brd_kbg_f = 52 } check_variable = { TFRKPHN_brd_kbg_f = 53 } check_variable = { TFRKPHN_brd_kbg_f = 54 } check_variable = { TFRKPHN_brd_kbg_f = 55 } check_variable = { TFRKPHN_brd_kbg_f = 56 } check_variable = { TFRKPHN_brd_kbg_f = 58 } check_variable = { TFRKPHN_brd_kbg_f = 59 } check_variable = { TFRKPHN_brd_kbg_f = 60 } check_variable = { TFRKPHN_brd_kbg_f = 61 } check_variable = { TFRKPHN_brd_kbg_f = 62 } check_variable = { TFRKPHN_brd_kbg_f = 63 } check_variable = { TFRKPHN_brd_kbg_f = 64 } check_variable = { TFRKPHN_brd_kbg_f = 65 } } NOT = { has_country_flag = TFRKPHN_brd_kbg_done } NOT = { has_country_flag = TFRKPHN_brd_kbg_cd } }
+			TFRKPHN_brd_kbg_bB_click_enabled = { has_political_power > 29 }
+			TFRKPHN_brd_kbg_c1_visible = { check_variable = { TFRKPHN_brd_kbg_sel = 1 } OR = { check_variable = { TFRKPHN_brd_kbg_f = 4 } check_variable = { TFRKPHN_brd_kbg_f = 5 } check_variable = { TFRKPHN_brd_kbg_f = 7 } } NOT = { has_country_flag = TFRKPHN_brd_kbg_done } NOT = { has_country_flag = TFRKPHN_brd_kbg_cd } }
+			TFRKPHN_brd_kbg_c1_click_enabled = { has_political_power > 24 }
+			TFRKPHN_brd_kbg_c2_visible = { check_variable = { TFRKPHN_brd_kbg_sel = 2 } OR = { check_variable = { TFRKPHN_brd_kbg_f = 4 } check_variable = { TFRKPHN_brd_kbg_f = 5 } check_variable = { TFRKPHN_brd_kbg_f = 7 } } NOT = { has_country_flag = TFRKPHN_brd_kbg_done } NOT = { has_country_flag = TFRKPHN_brd_kbg_cd } }
+			TFRKPHN_brd_kbg_c2_click_enabled = { has_political_power > 24 }
+			TFRKPHN_brd_kbg_c3_visible = { check_variable = { TFRKPHN_brd_kbg_sel = 3 } OR = { check_variable = { TFRKPHN_brd_kbg_f = 5 } } NOT = { has_country_flag = TFRKPHN_brd_kbg_done } NOT = { has_country_flag = TFRKPHN_brd_kbg_cd } }
+			TFRKPHN_brd_kbg_c3_click_enabled = { has_political_power > 24 }
+		}
+	}
+	TFRKPHN_brd_kdy_gui = {
+		context_type = decision_category
+		window_name = TFRKPHN_brd_kdy_container
+		effects = {
+			TFRKPHN_brd_kdy_p1_1_click = { set_variable = { TFRKPHN_brd_kdy_sel = 1 } }
+			TFRKPHN_brd_kdy_p2_1_click = { set_variable = { TFRKPHN_brd_kdy_sel = 1 } }
+			TFRKPHN_brd_kdy_p3_1_click = { set_variable = { TFRKPHN_brd_kdy_sel = 1 } }
+			TFRKPHN_brd_kdy_p3_2_click = { set_variable = { TFRKPHN_brd_kdy_sel = 2 } }
+			TFRKPHN_brd_kdy_p4_1_click = { set_variable = { TFRKPHN_brd_kdy_sel = 1 } }
+			TFRKPHN_brd_kdy_p5_1_click = { set_variable = { TFRKPHN_brd_kdy_sel = 1 } }
+			TFRKPHN_brd_kdy_p5_2_click = { set_variable = { TFRKPHN_brd_kdy_sel = 2 } }
+			TFRKPHN_brd_kdy_p6_1_click = { set_variable = { TFRKPHN_brd_kdy_sel = 1 } }
+			TFRKPHN_brd_kdy_p7_1_click = { set_variable = { TFRKPHN_brd_kdy_sel = 1 } }
+			TFRKPHN_brd_kdy_p7_2_click = { set_variable = { TFRKPHN_brd_kdy_sel = 2 } }
+			TFRKPHN_brd_kdy_p8_1_click = { set_variable = { TFRKPHN_brd_kdy_sel = 1 } }
+			TFRKPHN_brd_kdy_p9_1_click = { set_variable = { TFRKPHN_brd_kdy_sel = 1 } }
+			TFRKPHN_brd_kdy_p9_2_click = { set_variable = { TFRKPHN_brd_kdy_sel = 2 } }
+			TFRKPHN_brd_kdy_p10_1_click = { set_variable = { TFRKPHN_brd_kdy_sel = 1 } }
+			TFRKPHN_brd_kdy_p11_1_click = { set_variable = { TFRKPHN_brd_kdy_sel = 1 } }
+			TFRKPHN_brd_kdy_p12_1_click = { set_variable = { TFRKPHN_brd_kdy_sel = 1 } }
+			TFRKPHN_brd_kdy_p13_1_click = { set_variable = { TFRKPHN_brd_kdy_sel = 1 } }
+			TFRKPHN_brd_kdy_p14_1_click = { set_variable = { TFRKPHN_brd_kdy_sel = 1 } }
+			TFRKPHN_brd_kdy_p15_1_click = { set_variable = { TFRKPHN_brd_kdy_sel = 1 } }
+			TFRKPHN_brd_kdy_p16_1_click = { set_variable = { TFRKPHN_brd_kdy_sel = 1 } }
+			TFRKPHN_brd_kdy_p18_1_click = { set_variable = { TFRKPHN_brd_kdy_sel = 1 } }
+			TFRKPHN_brd_kdy_p19_1_click = { set_variable = { TFRKPHN_brd_kdy_sel = 1 } }
+			TFRKPHN_brd_kdy_p20_1_click = { set_variable = { TFRKPHN_brd_kdy_sel = 1 } }
+			TFRKPHN_brd_kdy_p21_1_click = { set_variable = { TFRKPHN_brd_kdy_sel = 1 } }
+			TFRKPHN_brd_kdy_p22_1_click = { set_variable = { TFRKPHN_brd_kdy_sel = 1 } }
+			TFRKPHN_brd_kdy_p23_1_click = { set_variable = { TFRKPHN_brd_kdy_sel = 1 } }
+			TFRKPHN_brd_kdy_p24_1_click = { set_variable = { TFRKPHN_brd_kdy_sel = 1 } }
+			TFRKPHN_brd_kdy_p26_1_click = { set_variable = { TFRKPHN_brd_kdy_sel = 1 } }
+			TFRKPHN_brd_kdy_p26_2_click = { set_variable = { TFRKPHN_brd_kdy_sel = 2 } }
+			TFRKPHN_brd_kdy_p27_1_click = { set_variable = { TFRKPHN_brd_kdy_sel = 1 } }
+			TFRKPHN_brd_kdy_p28_1_click = { set_variable = { TFRKPHN_brd_kdy_sel = 1 } }
+			TFRKPHN_brd_kdy_p29_1_click = { set_variable = { TFRKPHN_brd_kdy_sel = 1 } }
+			TFRKPHN_brd_kdy_p30_1_click = { set_variable = { TFRKPHN_brd_kdy_sel = 1 } }
+			TFRKPHN_brd_kdy_p31_1_click = { set_variable = { TFRKPHN_brd_kdy_sel = 1 } }
+			TFRKPHN_brd_kdy_p32_1_click = { set_variable = { TFRKPHN_brd_kdy_sel = 1 } }
+			TFRKPHN_brd_kdy_p33_1_click = { set_variable = { TFRKPHN_brd_kdy_sel = 1 } }
+			TFRKPHN_brd_kdy_p35_1_click = { set_variable = { TFRKPHN_brd_kdy_sel = 1 } }
+			TFRKPHN_brd_kdy_p36_1_click = { set_variable = { TFRKPHN_brd_kdy_sel = 1 } }
+			TFRKPHN_brd_kdy_p37_1_click = { set_variable = { TFRKPHN_brd_kdy_sel = 1 } }
+			TFRKPHN_brd_kdy_p38_1_click = { set_variable = { TFRKPHN_brd_kdy_sel = 1 } }
+			TFRKPHN_brd_kdy_p39_1_click = { set_variable = { TFRKPHN_brd_kdy_sel = 1 } }
+			TFRKPHN_brd_kdy_p40_1_click = { set_variable = { TFRKPHN_brd_kdy_sel = 1 } }
+			TFRKPHN_brd_kdy_p41_1_click = { set_variable = { TFRKPHN_brd_kdy_sel = 1 } }
+			TFRKPHN_brd_kdy_p43_1_click = { set_variable = { TFRKPHN_brd_kdy_sel = 1 } }
+			TFRKPHN_brd_kdy_p44_1_click = { set_variable = { TFRKPHN_brd_kdy_sel = 1 } }
+			TFRKPHN_brd_kdy_p45_1_click = { set_variable = { TFRKPHN_brd_kdy_sel = 1 } }
+			TFRKPHN_brd_kdy_p46_1_click = { set_variable = { TFRKPHN_brd_kdy_sel = 1 } }
+			TFRKPHN_brd_kdy_p47_1_click = { set_variable = { TFRKPHN_brd_kdy_sel = 1 } }
+			TFRKPHN_brd_kdy_p48_1_click = { set_variable = { TFRKPHN_brd_kdy_sel = 1 } }
+			TFRKPHN_brd_kdy_p49_1_click = { set_variable = { TFRKPHN_brd_kdy_sel = 1 } }
+			TFRKPHN_brd_kdy_p51_1_click = { set_variable = { TFRKPHN_brd_kdy_sel = 1 } }
+			TFRKPHN_brd_kdy_p52_1_click = { set_variable = { TFRKPHN_brd_kdy_sel = 1 } }
+			TFRKPHN_brd_kdy_p53_1_click = { set_variable = { TFRKPHN_brd_kdy_sel = 1 } }
+			TFRKPHN_brd_kdy_p54_1_click = { set_variable = { TFRKPHN_brd_kdy_sel = 1 } }
+			TFRKPHN_brd_kdy_p55_1_click = { set_variable = { TFRKPHN_brd_kdy_sel = 1 } }
+			TFRKPHN_brd_kdy_p56_1_click = { set_variable = { TFRKPHN_brd_kdy_sel = 1 } }
+			TFRKPHN_brd_kdy_p57_1_click = { set_variable = { TFRKPHN_brd_kdy_sel = 1 } }
+			TFRKPHN_brd_kdy_p59_1_click = { set_variable = { TFRKPHN_brd_kdy_sel = 1 } }
+			TFRKPHN_brd_kdy_p60_1_click = { set_variable = { TFRKPHN_brd_kdy_sel = 1 } }
+			TFRKPHN_brd_kdy_p61_1_click = { set_variable = { TFRKPHN_brd_kdy_sel = 1 } }
+			TFRKPHN_brd_kdy_p62_1_click = { set_variable = { TFRKPHN_brd_kdy_sel = 1 } }
+			TFRKPHN_brd_kdy_p63_1_click = { set_variable = { TFRKPHN_brd_kdy_sel = 1 } }
+			TFRKPHN_brd_kdy_p64_1_click = { set_variable = { TFRKPHN_brd_kdy_sel = 1 } }
+			TFRKPHN_brd_kdy_p65_1_click = { set_variable = { TFRKPHN_brd_kdy_sel = 1 } }
+			TFRKPHN_brd_kdy_p66_1_click = { set_variable = { TFRKPHN_brd_kdy_sel = 1 } }
+			TFRKPHN_brd_kdy_bA_click = { add_political_power = -40 add_stability = 0.02 TFRKPHN_brd_kdy_go1 = yes }
+			TFRKPHN_brd_kdy_bB_click = { add_stability = 0.04 add_war_support = 0.02 set_country_flag = TFRKPHN_brd_kdy_gold_used TFRKPHN_brd_kdy_go1 = yes }
+			TFRKPHN_brd_kdy_bB2_click = { add_political_power = -20 add_stability = 0.01 TFRKPHN_brd_kdy_go1 = yes }
+			TFRKPHN_brd_kdy_c1_click = { add_political_power = -25 TFRKPHN_brd_kdy_go1 = yes }
+			TFRKPHN_brd_kdy_c2_click = { add_political_power = -25 TFRKPHN_brd_kdy_go2 = yes }
+		}
+		triggers = {
+			TFRKPHN_brd_kdy_fi1_visible = { check_variable = { TFRKPHN_brd_kdy_f < 1.5 } }
+			TFRKPHN_brd_kdy_fi2_visible = { check_variable = { TFRKPHN_brd_kdy_f = 2 } }
+			TFRKPHN_brd_kdy_fi3_visible = { check_variable = { TFRKPHN_brd_kdy_f = 3 } }
+			TFRKPHN_brd_kdy_fi4_visible = { check_variable = { TFRKPHN_brd_kdy_f = 4 } }
+			TFRKPHN_brd_kdy_fi5_visible = { check_variable = { TFRKPHN_brd_kdy_f = 5 } }
+			TFRKPHN_brd_kdy_fi6_visible = { check_variable = { TFRKPHN_brd_kdy_f = 6 } }
+			TFRKPHN_brd_kdy_fi7_visible = { check_variable = { TFRKPHN_brd_kdy_f = 7 } }
+			TFRKPHN_brd_kdy_fi8_visible = { check_variable = { TFRKPHN_brd_kdy_f = 8 } }
+			TFRKPHN_brd_kdy_fi9_visible = { check_variable = { TFRKPHN_brd_kdy_f = 9 } }
+			TFRKPHN_brd_kdy_fi10_visible = { check_variable = { TFRKPHN_brd_kdy_f = 10 } }
+			TFRKPHN_brd_kdy_fi11_visible = { check_variable = { TFRKPHN_brd_kdy_f = 11 } }
+			TFRKPHN_brd_kdy_fi12_visible = { check_variable = { TFRKPHN_brd_kdy_f = 12 } }
+			TFRKPHN_brd_kdy_fi13_visible = { check_variable = { TFRKPHN_brd_kdy_f = 13 } }
+			TFRKPHN_brd_kdy_fi14_visible = { check_variable = { TFRKPHN_brd_kdy_f = 14 } }
+			TFRKPHN_brd_kdy_fi15_visible = { check_variable = { TFRKPHN_brd_kdy_f = 15 } }
+			TFRKPHN_brd_kdy_fi16_visible = { check_variable = { TFRKPHN_brd_kdy_f = 16 } }
+			TFRKPHN_brd_kdy_fi17_visible = { check_variable = { TFRKPHN_brd_kdy_f = 17 } }
+			TFRKPHN_brd_kdy_fi18_visible = { check_variable = { TFRKPHN_brd_kdy_f = 18 } }
+			TFRKPHN_brd_kdy_fi19_visible = { check_variable = { TFRKPHN_brd_kdy_f = 19 } }
+			TFRKPHN_brd_kdy_fi20_visible = { check_variable = { TFRKPHN_brd_kdy_f = 20 } }
+			TFRKPHN_brd_kdy_fi21_visible = { check_variable = { TFRKPHN_brd_kdy_f = 21 } }
+			TFRKPHN_brd_kdy_fi22_visible = { check_variable = { TFRKPHN_brd_kdy_f = 22 } }
+			TFRKPHN_brd_kdy_fi23_visible = { check_variable = { TFRKPHN_brd_kdy_f = 23 } }
+			TFRKPHN_brd_kdy_fi24_visible = { check_variable = { TFRKPHN_brd_kdy_f = 24 } }
+			TFRKPHN_brd_kdy_fi25_visible = { check_variable = { TFRKPHN_brd_kdy_f = 25 } }
+			TFRKPHN_brd_kdy_fi26_visible = { check_variable = { TFRKPHN_brd_kdy_f = 26 } }
+			TFRKPHN_brd_kdy_fi27_visible = { check_variable = { TFRKPHN_brd_kdy_f = 27 } }
+			TFRKPHN_brd_kdy_fi28_visible = { check_variable = { TFRKPHN_brd_kdy_f = 28 } }
+			TFRKPHN_brd_kdy_fi29_visible = { check_variable = { TFRKPHN_brd_kdy_f = 29 } }
+			TFRKPHN_brd_kdy_fi30_visible = { check_variable = { TFRKPHN_brd_kdy_f = 30 } }
+			TFRKPHN_brd_kdy_fi31_visible = { check_variable = { TFRKPHN_brd_kdy_f = 31 } }
+			TFRKPHN_brd_kdy_fi32_visible = { check_variable = { TFRKPHN_brd_kdy_f = 32 } }
+			TFRKPHN_brd_kdy_fi33_visible = { check_variable = { TFRKPHN_brd_kdy_f = 33 } }
+			TFRKPHN_brd_kdy_fi34_visible = { check_variable = { TFRKPHN_brd_kdy_f = 34 } }
+			TFRKPHN_brd_kdy_fi35_visible = { check_variable = { TFRKPHN_brd_kdy_f = 35 } }
+			TFRKPHN_brd_kdy_fi36_visible = { check_variable = { TFRKPHN_brd_kdy_f = 36 } }
+			TFRKPHN_brd_kdy_fi37_visible = { check_variable = { TFRKPHN_brd_kdy_f = 37 } }
+			TFRKPHN_brd_kdy_fi38_visible = { check_variable = { TFRKPHN_brd_kdy_f = 38 } }
+			TFRKPHN_brd_kdy_fi39_visible = { check_variable = { TFRKPHN_brd_kdy_f = 39 } }
+			TFRKPHN_brd_kdy_fi40_visible = { check_variable = { TFRKPHN_brd_kdy_f = 40 } }
+			TFRKPHN_brd_kdy_fi41_visible = { check_variable = { TFRKPHN_brd_kdy_f = 41 } }
+			TFRKPHN_brd_kdy_fi42_visible = { check_variable = { TFRKPHN_brd_kdy_f = 42 } }
+			TFRKPHN_brd_kdy_fi43_visible = { check_variable = { TFRKPHN_brd_kdy_f = 43 } }
+			TFRKPHN_brd_kdy_fi44_visible = { check_variable = { TFRKPHN_brd_kdy_f = 44 } }
+			TFRKPHN_brd_kdy_fi45_visible = { check_variable = { TFRKPHN_brd_kdy_f = 45 } }
+			TFRKPHN_brd_kdy_fi46_visible = { check_variable = { TFRKPHN_brd_kdy_f = 46 } }
+			TFRKPHN_brd_kdy_fi47_visible = { check_variable = { TFRKPHN_brd_kdy_f = 47 } }
+			TFRKPHN_brd_kdy_fi48_visible = { check_variable = { TFRKPHN_brd_kdy_f = 48 } }
+			TFRKPHN_brd_kdy_fi49_visible = { check_variable = { TFRKPHN_brd_kdy_f = 49 } }
+			TFRKPHN_brd_kdy_fi50_visible = { check_variable = { TFRKPHN_brd_kdy_f = 50 } }
+			TFRKPHN_brd_kdy_fi51_visible = { check_variable = { TFRKPHN_brd_kdy_f = 51 } }
+			TFRKPHN_brd_kdy_fi52_visible = { check_variable = { TFRKPHN_brd_kdy_f = 52 } }
+			TFRKPHN_brd_kdy_fi53_visible = { check_variable = { TFRKPHN_brd_kdy_f = 53 } }
+			TFRKPHN_brd_kdy_fi54_visible = { check_variable = { TFRKPHN_brd_kdy_f = 54 } }
+			TFRKPHN_brd_kdy_fi55_visible = { check_variable = { TFRKPHN_brd_kdy_f = 55 } }
+			TFRKPHN_brd_kdy_fi56_visible = { check_variable = { TFRKPHN_brd_kdy_f = 56 } }
+			TFRKPHN_brd_kdy_fi57_visible = { check_variable = { TFRKPHN_brd_kdy_f = 57 } }
+			TFRKPHN_brd_kdy_fi58_visible = { check_variable = { TFRKPHN_brd_kdy_f = 58 } }
+			TFRKPHN_brd_kdy_fi59_visible = { check_variable = { TFRKPHN_brd_kdy_f = 59 } }
+			TFRKPHN_brd_kdy_fi60_visible = { check_variable = { TFRKPHN_brd_kdy_f = 60 } }
+			TFRKPHN_brd_kdy_fi61_visible = { check_variable = { TFRKPHN_brd_kdy_f = 61 } }
+			TFRKPHN_brd_kdy_fi62_visible = { check_variable = { TFRKPHN_brd_kdy_f = 62 } }
+			TFRKPHN_brd_kdy_fi63_visible = { check_variable = { TFRKPHN_brd_kdy_f = 63 } }
+			TFRKPHN_brd_kdy_fi64_visible = { check_variable = { TFRKPHN_brd_kdy_f = 64 } }
+			TFRKPHN_brd_kdy_fi65_visible = { check_variable = { TFRKPHN_brd_kdy_f = 65 } }
+			TFRKPHN_brd_kdy_fi66_visible = { check_variable = { TFRKPHN_brd_kdy_f = 66 } }
+			TFRKPHN_brd_kdy_fi67_visible = { check_variable = { TFRKPHN_brd_kdy_f = 67 } }
+			TFRKPHN_brd_kdy_p1_1_visible = { check_variable = { TFRKPHN_brd_kdy_f < 1.5 } NOT = { has_country_flag = TFRKPHN_brd_kdy_done } NOT = { has_country_flag = TFRKPHN_brd_kdy_cd } }
+			TFRKPHN_brd_kdy_p2_1_visible = { check_variable = { TFRKPHN_brd_kdy_f = 2 } NOT = { has_country_flag = TFRKPHN_brd_kdy_done } NOT = { has_country_flag = TFRKPHN_brd_kdy_cd } }
+			TFRKPHN_brd_kdy_p3_1_visible = { check_variable = { TFRKPHN_brd_kdy_f = 3 } NOT = { has_country_flag = TFRKPHN_brd_kdy_done } NOT = { has_country_flag = TFRKPHN_brd_kdy_cd } }
+			TFRKPHN_brd_kdy_p3_2_visible = { check_variable = { TFRKPHN_brd_kdy_f = 3 } NOT = { has_country_flag = TFRKPHN_brd_kdy_done } NOT = { has_country_flag = TFRKPHN_brd_kdy_cd } }
+			TFRKPHN_brd_kdy_p4_1_visible = { check_variable = { TFRKPHN_brd_kdy_f = 4 } NOT = { has_country_flag = TFRKPHN_brd_kdy_done } NOT = { has_country_flag = TFRKPHN_brd_kdy_cd } }
+			TFRKPHN_brd_kdy_p5_1_visible = { check_variable = { TFRKPHN_brd_kdy_f = 5 } NOT = { has_country_flag = TFRKPHN_brd_kdy_done } NOT = { has_country_flag = TFRKPHN_brd_kdy_cd } }
+			TFRKPHN_brd_kdy_p5_2_visible = { check_variable = { TFRKPHN_brd_kdy_f = 5 } NOT = { has_country_flag = TFRKPHN_brd_kdy_done } NOT = { has_country_flag = TFRKPHN_brd_kdy_cd } }
+			TFRKPHN_brd_kdy_p6_1_visible = { check_variable = { TFRKPHN_brd_kdy_f = 6 } NOT = { has_country_flag = TFRKPHN_brd_kdy_done } NOT = { has_country_flag = TFRKPHN_brd_kdy_cd } }
+			TFRKPHN_brd_kdy_p7_1_visible = { check_variable = { TFRKPHN_brd_kdy_f = 7 } NOT = { has_country_flag = TFRKPHN_brd_kdy_done } NOT = { has_country_flag = TFRKPHN_brd_kdy_cd } }
+			TFRKPHN_brd_kdy_p7_2_visible = { check_variable = { TFRKPHN_brd_kdy_f = 7 } NOT = { has_country_flag = TFRKPHN_brd_kdy_done } NOT = { has_country_flag = TFRKPHN_brd_kdy_cd } }
+			TFRKPHN_brd_kdy_p8_1_visible = { check_variable = { TFRKPHN_brd_kdy_f = 8 } NOT = { has_country_flag = TFRKPHN_brd_kdy_done } NOT = { has_country_flag = TFRKPHN_brd_kdy_cd } }
+			TFRKPHN_brd_kdy_p9_1_visible = { check_variable = { TFRKPHN_brd_kdy_f = 9 } NOT = { has_country_flag = TFRKPHN_brd_kdy_done } NOT = { has_country_flag = TFRKPHN_brd_kdy_cd } }
+			TFRKPHN_brd_kdy_p9_2_visible = { check_variable = { TFRKPHN_brd_kdy_f = 9 } NOT = { has_country_flag = TFRKPHN_brd_kdy_done } NOT = { has_country_flag = TFRKPHN_brd_kdy_cd } }
+			TFRKPHN_brd_kdy_p10_1_visible = { check_variable = { TFRKPHN_brd_kdy_f = 10 } NOT = { has_country_flag = TFRKPHN_brd_kdy_done } NOT = { has_country_flag = TFRKPHN_brd_kdy_cd } }
+			TFRKPHN_brd_kdy_p11_1_visible = { check_variable = { TFRKPHN_brd_kdy_f = 11 } NOT = { has_country_flag = TFRKPHN_brd_kdy_done } NOT = { has_country_flag = TFRKPHN_brd_kdy_cd } }
+			TFRKPHN_brd_kdy_p12_1_visible = { check_variable = { TFRKPHN_brd_kdy_f = 12 } NOT = { has_country_flag = TFRKPHN_brd_kdy_done } NOT = { has_country_flag = TFRKPHN_brd_kdy_cd } }
+			TFRKPHN_brd_kdy_p13_1_visible = { check_variable = { TFRKPHN_brd_kdy_f = 13 } NOT = { has_country_flag = TFRKPHN_brd_kdy_done } NOT = { has_country_flag = TFRKPHN_brd_kdy_cd } }
+			TFRKPHN_brd_kdy_p14_1_visible = { check_variable = { TFRKPHN_brd_kdy_f = 14 } NOT = { has_country_flag = TFRKPHN_brd_kdy_done } NOT = { has_country_flag = TFRKPHN_brd_kdy_cd } }
+			TFRKPHN_brd_kdy_p15_1_visible = { check_variable = { TFRKPHN_brd_kdy_f = 15 } NOT = { has_country_flag = TFRKPHN_brd_kdy_done } NOT = { has_country_flag = TFRKPHN_brd_kdy_cd } }
+			TFRKPHN_brd_kdy_p16_1_visible = { check_variable = { TFRKPHN_brd_kdy_f = 16 } NOT = { has_country_flag = TFRKPHN_brd_kdy_done } NOT = { has_country_flag = TFRKPHN_brd_kdy_cd } }
+			TFRKPHN_brd_kdy_p18_1_visible = { check_variable = { TFRKPHN_brd_kdy_f = 18 } NOT = { has_country_flag = TFRKPHN_brd_kdy_done } NOT = { has_country_flag = TFRKPHN_brd_kdy_cd } }
+			TFRKPHN_brd_kdy_p19_1_visible = { check_variable = { TFRKPHN_brd_kdy_f = 19 } NOT = { has_country_flag = TFRKPHN_brd_kdy_done } NOT = { has_country_flag = TFRKPHN_brd_kdy_cd } }
+			TFRKPHN_brd_kdy_p20_1_visible = { check_variable = { TFRKPHN_brd_kdy_f = 20 } NOT = { has_country_flag = TFRKPHN_brd_kdy_done } NOT = { has_country_flag = TFRKPHN_brd_kdy_cd } }
+			TFRKPHN_brd_kdy_p21_1_visible = { check_variable = { TFRKPHN_brd_kdy_f = 21 } NOT = { has_country_flag = TFRKPHN_brd_kdy_done } NOT = { has_country_flag = TFRKPHN_brd_kdy_cd } }
+			TFRKPHN_brd_kdy_p22_1_visible = { check_variable = { TFRKPHN_brd_kdy_f = 22 } NOT = { has_country_flag = TFRKPHN_brd_kdy_done } NOT = { has_country_flag = TFRKPHN_brd_kdy_cd } }
+			TFRKPHN_brd_kdy_p23_1_visible = { check_variable = { TFRKPHN_brd_kdy_f = 23 } NOT = { has_country_flag = TFRKPHN_brd_kdy_done } NOT = { has_country_flag = TFRKPHN_brd_kdy_cd } }
+			TFRKPHN_brd_kdy_p24_1_visible = { check_variable = { TFRKPHN_brd_kdy_f = 24 } NOT = { has_country_flag = TFRKPHN_brd_kdy_done } NOT = { has_country_flag = TFRKPHN_brd_kdy_cd } }
+			TFRKPHN_brd_kdy_p26_1_visible = { check_variable = { TFRKPHN_brd_kdy_f = 26 } NOT = { has_country_flag = TFRKPHN_brd_kdy_done } NOT = { has_country_flag = TFRKPHN_brd_kdy_cd } }
+			TFRKPHN_brd_kdy_p26_2_visible = { check_variable = { TFRKPHN_brd_kdy_f = 26 } NOT = { has_country_flag = TFRKPHN_brd_kdy_done } NOT = { has_country_flag = TFRKPHN_brd_kdy_cd } }
+			TFRKPHN_brd_kdy_p27_1_visible = { check_variable = { TFRKPHN_brd_kdy_f = 27 } NOT = { has_country_flag = TFRKPHN_brd_kdy_done } NOT = { has_country_flag = TFRKPHN_brd_kdy_cd } }
+			TFRKPHN_brd_kdy_p28_1_visible = { check_variable = { TFRKPHN_brd_kdy_f = 28 } NOT = { has_country_flag = TFRKPHN_brd_kdy_done } NOT = { has_country_flag = TFRKPHN_brd_kdy_cd } }
+			TFRKPHN_brd_kdy_p29_1_visible = { check_variable = { TFRKPHN_brd_kdy_f = 29 } NOT = { has_country_flag = TFRKPHN_brd_kdy_done } NOT = { has_country_flag = TFRKPHN_brd_kdy_cd } }
+			TFRKPHN_brd_kdy_p30_1_visible = { check_variable = { TFRKPHN_brd_kdy_f = 30 } NOT = { has_country_flag = TFRKPHN_brd_kdy_done } NOT = { has_country_flag = TFRKPHN_brd_kdy_cd } }
+			TFRKPHN_brd_kdy_p31_1_visible = { check_variable = { TFRKPHN_brd_kdy_f = 31 } NOT = { has_country_flag = TFRKPHN_brd_kdy_done } NOT = { has_country_flag = TFRKPHN_brd_kdy_cd } }
+			TFRKPHN_brd_kdy_p32_1_visible = { check_variable = { TFRKPHN_brd_kdy_f = 32 } NOT = { has_country_flag = TFRKPHN_brd_kdy_done } NOT = { has_country_flag = TFRKPHN_brd_kdy_cd } }
+			TFRKPHN_brd_kdy_p33_1_visible = { check_variable = { TFRKPHN_brd_kdy_f = 33 } NOT = { has_country_flag = TFRKPHN_brd_kdy_done } NOT = { has_country_flag = TFRKPHN_brd_kdy_cd } }
+			TFRKPHN_brd_kdy_p35_1_visible = { check_variable = { TFRKPHN_brd_kdy_f = 35 } NOT = { has_country_flag = TFRKPHN_brd_kdy_done } NOT = { has_country_flag = TFRKPHN_brd_kdy_cd } }
+			TFRKPHN_brd_kdy_p36_1_visible = { check_variable = { TFRKPHN_brd_kdy_f = 36 } NOT = { has_country_flag = TFRKPHN_brd_kdy_done } NOT = { has_country_flag = TFRKPHN_brd_kdy_cd } }
+			TFRKPHN_brd_kdy_p37_1_visible = { check_variable = { TFRKPHN_brd_kdy_f = 37 } NOT = { has_country_flag = TFRKPHN_brd_kdy_done } NOT = { has_country_flag = TFRKPHN_brd_kdy_cd } }
+			TFRKPHN_brd_kdy_p38_1_visible = { check_variable = { TFRKPHN_brd_kdy_f = 38 } NOT = { has_country_flag = TFRKPHN_brd_kdy_done } NOT = { has_country_flag = TFRKPHN_brd_kdy_cd } }
+			TFRKPHN_brd_kdy_p39_1_visible = { check_variable = { TFRKPHN_brd_kdy_f = 39 } NOT = { has_country_flag = TFRKPHN_brd_kdy_done } NOT = { has_country_flag = TFRKPHN_brd_kdy_cd } }
+			TFRKPHN_brd_kdy_p40_1_visible = { check_variable = { TFRKPHN_brd_kdy_f = 40 } NOT = { has_country_flag = TFRKPHN_brd_kdy_done } NOT = { has_country_flag = TFRKPHN_brd_kdy_cd } }
+			TFRKPHN_brd_kdy_p41_1_visible = { check_variable = { TFRKPHN_brd_kdy_f = 41 } NOT = { has_country_flag = TFRKPHN_brd_kdy_done } NOT = { has_country_flag = TFRKPHN_brd_kdy_cd } }
+			TFRKPHN_brd_kdy_p43_1_visible = { check_variable = { TFRKPHN_brd_kdy_f = 43 } NOT = { has_country_flag = TFRKPHN_brd_kdy_done } NOT = { has_country_flag = TFRKPHN_brd_kdy_cd } }
+			TFRKPHN_brd_kdy_p44_1_visible = { check_variable = { TFRKPHN_brd_kdy_f = 44 } NOT = { has_country_flag = TFRKPHN_brd_kdy_done } NOT = { has_country_flag = TFRKPHN_brd_kdy_cd } }
+			TFRKPHN_brd_kdy_p45_1_visible = { check_variable = { TFRKPHN_brd_kdy_f = 45 } NOT = { has_country_flag = TFRKPHN_brd_kdy_done } NOT = { has_country_flag = TFRKPHN_brd_kdy_cd } }
+			TFRKPHN_brd_kdy_p46_1_visible = { check_variable = { TFRKPHN_brd_kdy_f = 46 } NOT = { has_country_flag = TFRKPHN_brd_kdy_done } NOT = { has_country_flag = TFRKPHN_brd_kdy_cd } }
+			TFRKPHN_brd_kdy_p47_1_visible = { check_variable = { TFRKPHN_brd_kdy_f = 47 } NOT = { has_country_flag = TFRKPHN_brd_kdy_done } NOT = { has_country_flag = TFRKPHN_brd_kdy_cd } }
+			TFRKPHN_brd_kdy_p48_1_visible = { check_variable = { TFRKPHN_brd_kdy_f = 48 } NOT = { has_country_flag = TFRKPHN_brd_kdy_done } NOT = { has_country_flag = TFRKPHN_brd_kdy_cd } }
+			TFRKPHN_brd_kdy_p49_1_visible = { check_variable = { TFRKPHN_brd_kdy_f = 49 } NOT = { has_country_flag = TFRKPHN_brd_kdy_done } NOT = { has_country_flag = TFRKPHN_brd_kdy_cd } }
+			TFRKPHN_brd_kdy_p51_1_visible = { check_variable = { TFRKPHN_brd_kdy_f = 51 } NOT = { has_country_flag = TFRKPHN_brd_kdy_done } NOT = { has_country_flag = TFRKPHN_brd_kdy_cd } }
+			TFRKPHN_brd_kdy_p52_1_visible = { check_variable = { TFRKPHN_brd_kdy_f = 52 } NOT = { has_country_flag = TFRKPHN_brd_kdy_done } NOT = { has_country_flag = TFRKPHN_brd_kdy_cd } }
+			TFRKPHN_brd_kdy_p53_1_visible = { check_variable = { TFRKPHN_brd_kdy_f = 53 } NOT = { has_country_flag = TFRKPHN_brd_kdy_done } NOT = { has_country_flag = TFRKPHN_brd_kdy_cd } }
+			TFRKPHN_brd_kdy_p54_1_visible = { check_variable = { TFRKPHN_brd_kdy_f = 54 } NOT = { has_country_flag = TFRKPHN_brd_kdy_done } NOT = { has_country_flag = TFRKPHN_brd_kdy_cd } }
+			TFRKPHN_brd_kdy_p55_1_visible = { check_variable = { TFRKPHN_brd_kdy_f = 55 } NOT = { has_country_flag = TFRKPHN_brd_kdy_done } NOT = { has_country_flag = TFRKPHN_brd_kdy_cd } }
+			TFRKPHN_brd_kdy_p56_1_visible = { check_variable = { TFRKPHN_brd_kdy_f = 56 } NOT = { has_country_flag = TFRKPHN_brd_kdy_done } NOT = { has_country_flag = TFRKPHN_brd_kdy_cd } }
+			TFRKPHN_brd_kdy_p57_1_visible = { check_variable = { TFRKPHN_brd_kdy_f = 57 } NOT = { has_country_flag = TFRKPHN_brd_kdy_done } NOT = { has_country_flag = TFRKPHN_brd_kdy_cd } }
+			TFRKPHN_brd_kdy_p59_1_visible = { check_variable = { TFRKPHN_brd_kdy_f = 59 } NOT = { has_country_flag = TFRKPHN_brd_kdy_done } NOT = { has_country_flag = TFRKPHN_brd_kdy_cd } }
+			TFRKPHN_brd_kdy_p60_1_visible = { check_variable = { TFRKPHN_brd_kdy_f = 60 } NOT = { has_country_flag = TFRKPHN_brd_kdy_done } NOT = { has_country_flag = TFRKPHN_brd_kdy_cd } }
+			TFRKPHN_brd_kdy_p61_1_visible = { check_variable = { TFRKPHN_brd_kdy_f = 61 } NOT = { has_country_flag = TFRKPHN_brd_kdy_done } NOT = { has_country_flag = TFRKPHN_brd_kdy_cd } }
+			TFRKPHN_brd_kdy_p62_1_visible = { check_variable = { TFRKPHN_brd_kdy_f = 62 } NOT = { has_country_flag = TFRKPHN_brd_kdy_done } NOT = { has_country_flag = TFRKPHN_brd_kdy_cd } }
+			TFRKPHN_brd_kdy_p63_1_visible = { check_variable = { TFRKPHN_brd_kdy_f = 63 } NOT = { has_country_flag = TFRKPHN_brd_kdy_done } NOT = { has_country_flag = TFRKPHN_brd_kdy_cd } }
+			TFRKPHN_brd_kdy_p64_1_visible = { check_variable = { TFRKPHN_brd_kdy_f = 64 } NOT = { has_country_flag = TFRKPHN_brd_kdy_done } NOT = { has_country_flag = TFRKPHN_brd_kdy_cd } }
+			TFRKPHN_brd_kdy_p65_1_visible = { check_variable = { TFRKPHN_brd_kdy_f = 65 } NOT = { has_country_flag = TFRKPHN_brd_kdy_done } NOT = { has_country_flag = TFRKPHN_brd_kdy_cd } }
+			TFRKPHN_brd_kdy_p66_1_visible = { check_variable = { TFRKPHN_brd_kdy_f = 66 } NOT = { has_country_flag = TFRKPHN_brd_kdy_done } NOT = { has_country_flag = TFRKPHN_brd_kdy_cd } }
+			TFRKPHN_brd_kdy_t_pick_visible = { NOT = { has_country_flag = TFRKPHN_brd_kdy_done } NOT = { has_country_flag = TFRKPHN_brd_kdy_cd } check_variable = { TFRKPHN_brd_kdy_sel < 0.5 } }
+			TFRKPHN_brd_kdy_t_wait_visible = { NOT = { has_country_flag = TFRKPHN_brd_kdy_done } has_country_flag = TFRKPHN_brd_kdy_cd }
+			TFRKPHN_brd_kdy_t_cho_visible = { NOT = { has_country_flag = TFRKPHN_brd_kdy_done } NOT = { has_country_flag = TFRKPHN_brd_kdy_cd } OR = { check_variable = { TFRKPHN_brd_kdy_f = 3 } check_variable = { TFRKPHN_brd_kdy_f = 5 } check_variable = { TFRKPHN_brd_kdy_f = 7 } check_variable = { TFRKPHN_brd_kdy_f = 9 } check_variable = { TFRKPHN_brd_kdy_f = 26 } } }
+			TFRKPHN_brd_kdy_t_end17_visible = { check_variable = { TFRKPHN_brd_kdy_f = 17 } }
+			TFRKPHN_brd_kdy_t_src17_visible = { check_variable = { TFRKPHN_brd_kdy_f = 17 } }
+			TFRKPHN_brd_kdy_t_end25_visible = { check_variable = { TFRKPHN_brd_kdy_f = 25 } }
+			TFRKPHN_brd_kdy_t_src25_visible = { check_variable = { TFRKPHN_brd_kdy_f = 25 } }
+			TFRKPHN_brd_kdy_t_end34_visible = { check_variable = { TFRKPHN_brd_kdy_f = 34 } }
+			TFRKPHN_brd_kdy_t_src34_visible = { check_variable = { TFRKPHN_brd_kdy_f = 34 } }
+			TFRKPHN_brd_kdy_t_end42_visible = { check_variable = { TFRKPHN_brd_kdy_f = 42 } }
+			TFRKPHN_brd_kdy_t_src42_visible = { check_variable = { TFRKPHN_brd_kdy_f = 42 } }
+			TFRKPHN_brd_kdy_t_end50_visible = { check_variable = { TFRKPHN_brd_kdy_f = 50 } }
+			TFRKPHN_brd_kdy_t_src50_visible = { check_variable = { TFRKPHN_brd_kdy_f = 50 } }
+			TFRKPHN_brd_kdy_t_end58_visible = { check_variable = { TFRKPHN_brd_kdy_f = 58 } }
+			TFRKPHN_brd_kdy_t_src58_visible = { check_variable = { TFRKPHN_brd_kdy_f = 58 } }
+			TFRKPHN_brd_kdy_t_end67_visible = { check_variable = { TFRKPHN_brd_kdy_f = 67 } }
+			TFRKPHN_brd_kdy_t_src67_visible = { check_variable = { TFRKPHN_brd_kdy_f = 67 } }
+			TFRKPHN_brd_kdy_bA_visible = { check_variable = { TFRKPHN_brd_kdy_sel = 1 } OR = { check_variable = { TFRKPHN_brd_kdy_f < 1.5 } check_variable = { TFRKPHN_brd_kdy_f = 2 } check_variable = { TFRKPHN_brd_kdy_f = 4 } check_variable = { TFRKPHN_brd_kdy_f = 6 } check_variable = { TFRKPHN_brd_kdy_f = 8 } check_variable = { TFRKPHN_brd_kdy_f = 10 } check_variable = { TFRKPHN_brd_kdy_f = 11 } check_variable = { TFRKPHN_brd_kdy_f = 12 } check_variable = { TFRKPHN_brd_kdy_f = 13 } check_variable = { TFRKPHN_brd_kdy_f = 14 } check_variable = { TFRKPHN_brd_kdy_f = 15 } check_variable = { TFRKPHN_brd_kdy_f = 16 } check_variable = { TFRKPHN_brd_kdy_f = 18 } check_variable = { TFRKPHN_brd_kdy_f = 19 } check_variable = { TFRKPHN_brd_kdy_f = 20 } check_variable = { TFRKPHN_brd_kdy_f = 21 } check_variable = { TFRKPHN_brd_kdy_f = 22 } check_variable = { TFRKPHN_brd_kdy_f = 23 } check_variable = { TFRKPHN_brd_kdy_f = 24 } check_variable = { TFRKPHN_brd_kdy_f = 27 } check_variable = { TFRKPHN_brd_kdy_f = 28 } check_variable = { TFRKPHN_brd_kdy_f = 29 } check_variable = { TFRKPHN_brd_kdy_f = 30 } check_variable = { TFRKPHN_brd_kdy_f = 31 } check_variable = { TFRKPHN_brd_kdy_f = 32 } check_variable = { TFRKPHN_brd_kdy_f = 33 } check_variable = { TFRKPHN_brd_kdy_f = 35 } check_variable = { TFRKPHN_brd_kdy_f = 36 } check_variable = { TFRKPHN_brd_kdy_f = 37 } check_variable = { TFRKPHN_brd_kdy_f = 38 } check_variable = { TFRKPHN_brd_kdy_f = 39 } check_variable = { TFRKPHN_brd_kdy_f = 40 } check_variable = { TFRKPHN_brd_kdy_f = 41 } check_variable = { TFRKPHN_brd_kdy_f = 43 } check_variable = { TFRKPHN_brd_kdy_f = 44 } check_variable = { TFRKPHN_brd_kdy_f = 45 } check_variable = { TFRKPHN_brd_kdy_f = 46 } check_variable = { TFRKPHN_brd_kdy_f = 47 } check_variable = { TFRKPHN_brd_kdy_f = 48 } check_variable = { TFRKPHN_brd_kdy_f = 49 } check_variable = { TFRKPHN_brd_kdy_f = 51 } check_variable = { TFRKPHN_brd_kdy_f = 52 } check_variable = { TFRKPHN_brd_kdy_f = 53 } check_variable = { TFRKPHN_brd_kdy_f = 54 } check_variable = { TFRKPHN_brd_kdy_f = 55 } check_variable = { TFRKPHN_brd_kdy_f = 56 } check_variable = { TFRKPHN_brd_kdy_f = 57 } check_variable = { TFRKPHN_brd_kdy_f = 59 } check_variable = { TFRKPHN_brd_kdy_f = 60 } check_variable = { TFRKPHN_brd_kdy_f = 61 } check_variable = { TFRKPHN_brd_kdy_f = 62 } check_variable = { TFRKPHN_brd_kdy_f = 63 } check_variable = { TFRKPHN_brd_kdy_f = 64 } check_variable = { TFRKPHN_brd_kdy_f = 65 } check_variable = { TFRKPHN_brd_kdy_f = 66 } } NOT = { has_country_flag = TFRKPHN_brd_kdy_done } NOT = { has_country_flag = TFRKPHN_brd_kdy_cd } }
+			TFRKPHN_brd_kdy_bA_click_enabled = { has_political_power > 39 }
+			TFRKPHN_brd_kdy_bB_visible = { check_variable = { TFRKPHN_brd_kdy_sel = 1 } OR = { check_variable = { TFRKPHN_brd_kdy_f < 1.5 } check_variable = { TFRKPHN_brd_kdy_f = 2 } check_variable = { TFRKPHN_brd_kdy_f = 4 } check_variable = { TFRKPHN_brd_kdy_f = 6 } check_variable = { TFRKPHN_brd_kdy_f = 8 } check_variable = { TFRKPHN_brd_kdy_f = 10 } check_variable = { TFRKPHN_brd_kdy_f = 11 } check_variable = { TFRKPHN_brd_kdy_f = 12 } check_variable = { TFRKPHN_brd_kdy_f = 13 } check_variable = { TFRKPHN_brd_kdy_f = 14 } check_variable = { TFRKPHN_brd_kdy_f = 15 } check_variable = { TFRKPHN_brd_kdy_f = 16 } check_variable = { TFRKPHN_brd_kdy_f = 18 } check_variable = { TFRKPHN_brd_kdy_f = 19 } check_variable = { TFRKPHN_brd_kdy_f = 20 } check_variable = { TFRKPHN_brd_kdy_f = 21 } check_variable = { TFRKPHN_brd_kdy_f = 22 } check_variable = { TFRKPHN_brd_kdy_f = 23 } check_variable = { TFRKPHN_brd_kdy_f = 24 } check_variable = { TFRKPHN_brd_kdy_f = 27 } check_variable = { TFRKPHN_brd_kdy_f = 28 } check_variable = { TFRKPHN_brd_kdy_f = 29 } check_variable = { TFRKPHN_brd_kdy_f = 30 } check_variable = { TFRKPHN_brd_kdy_f = 31 } check_variable = { TFRKPHN_brd_kdy_f = 32 } check_variable = { TFRKPHN_brd_kdy_f = 33 } check_variable = { TFRKPHN_brd_kdy_f = 35 } check_variable = { TFRKPHN_brd_kdy_f = 36 } check_variable = { TFRKPHN_brd_kdy_f = 37 } check_variable = { TFRKPHN_brd_kdy_f = 38 } check_variable = { TFRKPHN_brd_kdy_f = 39 } check_variable = { TFRKPHN_brd_kdy_f = 40 } check_variable = { TFRKPHN_brd_kdy_f = 41 } check_variable = { TFRKPHN_brd_kdy_f = 43 } check_variable = { TFRKPHN_brd_kdy_f = 44 } check_variable = { TFRKPHN_brd_kdy_f = 45 } check_variable = { TFRKPHN_brd_kdy_f = 46 } check_variable = { TFRKPHN_brd_kdy_f = 47 } check_variable = { TFRKPHN_brd_kdy_f = 48 } check_variable = { TFRKPHN_brd_kdy_f = 49 } check_variable = { TFRKPHN_brd_kdy_f = 51 } check_variable = { TFRKPHN_brd_kdy_f = 52 } check_variable = { TFRKPHN_brd_kdy_f = 53 } check_variable = { TFRKPHN_brd_kdy_f = 54 } check_variable = { TFRKPHN_brd_kdy_f = 55 } check_variable = { TFRKPHN_brd_kdy_f = 56 } check_variable = { TFRKPHN_brd_kdy_f = 57 } check_variable = { TFRKPHN_brd_kdy_f = 59 } check_variable = { TFRKPHN_brd_kdy_f = 60 } check_variable = { TFRKPHN_brd_kdy_f = 61 } check_variable = { TFRKPHN_brd_kdy_f = 62 } check_variable = { TFRKPHN_brd_kdy_f = 63 } check_variable = { TFRKPHN_brd_kdy_f = 64 } check_variable = { TFRKPHN_brd_kdy_f = 65 } check_variable = { TFRKPHN_brd_kdy_f = 66 } } NOT = { has_country_flag = TFRKPHN_brd_kdy_done } NOT = { has_country_flag = TFRKPHN_brd_kdy_cd } NOT = { has_country_flag = TFRKPHN_brd_kdy_gold_used } }
+			TFRKPHN_brd_kdy_bB2_visible = { check_variable = { TFRKPHN_brd_kdy_sel = 1 } OR = { check_variable = { TFRKPHN_brd_kdy_f < 1.5 } check_variable = { TFRKPHN_brd_kdy_f = 2 } check_variable = { TFRKPHN_brd_kdy_f = 4 } check_variable = { TFRKPHN_brd_kdy_f = 6 } check_variable = { TFRKPHN_brd_kdy_f = 8 } check_variable = { TFRKPHN_brd_kdy_f = 10 } check_variable = { TFRKPHN_brd_kdy_f = 11 } check_variable = { TFRKPHN_brd_kdy_f = 12 } check_variable = { TFRKPHN_brd_kdy_f = 13 } check_variable = { TFRKPHN_brd_kdy_f = 14 } check_variable = { TFRKPHN_brd_kdy_f = 15 } check_variable = { TFRKPHN_brd_kdy_f = 16 } check_variable = { TFRKPHN_brd_kdy_f = 18 } check_variable = { TFRKPHN_brd_kdy_f = 19 } check_variable = { TFRKPHN_brd_kdy_f = 20 } check_variable = { TFRKPHN_brd_kdy_f = 21 } check_variable = { TFRKPHN_brd_kdy_f = 22 } check_variable = { TFRKPHN_brd_kdy_f = 23 } check_variable = { TFRKPHN_brd_kdy_f = 24 } check_variable = { TFRKPHN_brd_kdy_f = 27 } check_variable = { TFRKPHN_brd_kdy_f = 28 } check_variable = { TFRKPHN_brd_kdy_f = 29 } check_variable = { TFRKPHN_brd_kdy_f = 30 } check_variable = { TFRKPHN_brd_kdy_f = 31 } check_variable = { TFRKPHN_brd_kdy_f = 32 } check_variable = { TFRKPHN_brd_kdy_f = 33 } check_variable = { TFRKPHN_brd_kdy_f = 35 } check_variable = { TFRKPHN_brd_kdy_f = 36 } check_variable = { TFRKPHN_brd_kdy_f = 37 } check_variable = { TFRKPHN_brd_kdy_f = 38 } check_variable = { TFRKPHN_brd_kdy_f = 39 } check_variable = { TFRKPHN_brd_kdy_f = 40 } check_variable = { TFRKPHN_brd_kdy_f = 41 } check_variable = { TFRKPHN_brd_kdy_f = 43 } check_variable = { TFRKPHN_brd_kdy_f = 44 } check_variable = { TFRKPHN_brd_kdy_f = 45 } check_variable = { TFRKPHN_brd_kdy_f = 46 } check_variable = { TFRKPHN_brd_kdy_f = 47 } check_variable = { TFRKPHN_brd_kdy_f = 48 } check_variable = { TFRKPHN_brd_kdy_f = 49 } check_variable = { TFRKPHN_brd_kdy_f = 51 } check_variable = { TFRKPHN_brd_kdy_f = 52 } check_variable = { TFRKPHN_brd_kdy_f = 53 } check_variable = { TFRKPHN_brd_kdy_f = 54 } check_variable = { TFRKPHN_brd_kdy_f = 55 } check_variable = { TFRKPHN_brd_kdy_f = 56 } check_variable = { TFRKPHN_brd_kdy_f = 57 } check_variable = { TFRKPHN_brd_kdy_f = 59 } check_variable = { TFRKPHN_brd_kdy_f = 60 } check_variable = { TFRKPHN_brd_kdy_f = 61 } check_variable = { TFRKPHN_brd_kdy_f = 62 } check_variable = { TFRKPHN_brd_kdy_f = 63 } check_variable = { TFRKPHN_brd_kdy_f = 64 } check_variable = { TFRKPHN_brd_kdy_f = 65 } check_variable = { TFRKPHN_brd_kdy_f = 66 } } NOT = { has_country_flag = TFRKPHN_brd_kdy_done } NOT = { has_country_flag = TFRKPHN_brd_kdy_cd } has_country_flag = TFRKPHN_brd_kdy_gold_used }
+			TFRKPHN_brd_kdy_bB2_click_enabled = { has_political_power > 19 }
+			TFRKPHN_brd_kdy_c1_visible = { check_variable = { TFRKPHN_brd_kdy_sel = 1 } OR = { check_variable = { TFRKPHN_brd_kdy_f = 3 } check_variable = { TFRKPHN_brd_kdy_f = 5 } check_variable = { TFRKPHN_brd_kdy_f = 7 } check_variable = { TFRKPHN_brd_kdy_f = 9 } check_variable = { TFRKPHN_brd_kdy_f = 26 } } NOT = { has_country_flag = TFRKPHN_brd_kdy_done } NOT = { has_country_flag = TFRKPHN_brd_kdy_cd } }
+			TFRKPHN_brd_kdy_c1_click_enabled = { has_political_power > 24 }
+			TFRKPHN_brd_kdy_c2_visible = { check_variable = { TFRKPHN_brd_kdy_sel = 2 } OR = { check_variable = { TFRKPHN_brd_kdy_f = 3 } check_variable = { TFRKPHN_brd_kdy_f = 5 } check_variable = { TFRKPHN_brd_kdy_f = 7 } check_variable = { TFRKPHN_brd_kdy_f = 9 } check_variable = { TFRKPHN_brd_kdy_f = 26 } } NOT = { has_country_flag = TFRKPHN_brd_kdy_done } NOT = { has_country_flag = TFRKPHN_brd_kdy_cd } }
+			TFRKPHN_brd_kdy_c2_click_enabled = { has_political_power > 24 }
+		}
+	}
+	TFRKPHN_brd_kms_gui = {
+		context_type = decision_category
+		window_name = TFRKPHN_brd_kms_container
+		effects = {
+			TFRKPHN_brd_kms_p1_1_click = { set_variable = { TFRKPHN_brd_kms_sel = 1 } }
+			TFRKPHN_brd_kms_p2_1_click = { set_variable = { TFRKPHN_brd_kms_sel = 1 } }
+			TFRKPHN_brd_kms_p3_1_click = { set_variable = { TFRKPHN_brd_kms_sel = 1 } }
+			TFRKPHN_brd_kms_p4_1_click = { set_variable = { TFRKPHN_brd_kms_sel = 1 } }
+			TFRKPHN_brd_kms_p5_1_click = { set_variable = { TFRKPHN_brd_kms_sel = 1 } }
+			TFRKPHN_brd_kms_p5_2_click = { set_variable = { TFRKPHN_brd_kms_sel = 2 } }
+			TFRKPHN_brd_kms_p6_1_click = { set_variable = { TFRKPHN_brd_kms_sel = 1 } }
+			TFRKPHN_brd_kms_p7_1_click = { set_variable = { TFRKPHN_brd_kms_sel = 1 } }
+			TFRKPHN_brd_kms_p8_1_click = { set_variable = { TFRKPHN_brd_kms_sel = 1 } }
+			TFRKPHN_brd_kms_p9_1_click = { set_variable = { TFRKPHN_brd_kms_sel = 1 } }
+			TFRKPHN_brd_kms_p10_1_click = { set_variable = { TFRKPHN_brd_kms_sel = 1 } }
+			TFRKPHN_brd_kms_p11_1_click = { set_variable = { TFRKPHN_brd_kms_sel = 1 } }
+			TFRKPHN_brd_kms_p12_1_click = { set_variable = { TFRKPHN_brd_kms_sel = 1 } }
+			TFRKPHN_brd_kms_p13_1_click = { set_variable = { TFRKPHN_brd_kms_sel = 1 } }
+			TFRKPHN_brd_kms_p14_1_click = { set_variable = { TFRKPHN_brd_kms_sel = 1 } }
+			TFRKPHN_brd_kms_p16_1_click = { set_variable = { TFRKPHN_brd_kms_sel = 1 } }
+			TFRKPHN_brd_kms_p17_1_click = { set_variable = { TFRKPHN_brd_kms_sel = 1 } }
+			TFRKPHN_brd_kms_p18_1_click = { set_variable = { TFRKPHN_brd_kms_sel = 1 } }
+			TFRKPHN_brd_kms_p19_1_click = { set_variable = { TFRKPHN_brd_kms_sel = 1 } }
+			TFRKPHN_brd_kms_p20_1_click = { set_variable = { TFRKPHN_brd_kms_sel = 1 } }
+			TFRKPHN_brd_kms_p21_1_click = { set_variable = { TFRKPHN_brd_kms_sel = 1 } }
+			TFRKPHN_brd_kms_p23_1_click = { set_variable = { TFRKPHN_brd_kms_sel = 1 } }
+			TFRKPHN_brd_kms_p24_1_click = { set_variable = { TFRKPHN_brd_kms_sel = 1 } }
+			TFRKPHN_brd_kms_p25_1_click = { set_variable = { TFRKPHN_brd_kms_sel = 1 } }
+			TFRKPHN_brd_kms_p26_1_click = { set_variable = { TFRKPHN_brd_kms_sel = 1 } }
+			TFRKPHN_brd_kms_p27_1_click = { set_variable = { TFRKPHN_brd_kms_sel = 1 } }
+			TFRKPHN_brd_kms_p28_1_click = { set_variable = { TFRKPHN_brd_kms_sel = 1 } }
+			TFRKPHN_brd_kms_p29_1_click = { set_variable = { TFRKPHN_brd_kms_sel = 1 } }
+			TFRKPHN_brd_kms_p31_1_click = { set_variable = { TFRKPHN_brd_kms_sel = 1 } }
+			TFRKPHN_brd_kms_p32_1_click = { set_variable = { TFRKPHN_brd_kms_sel = 1 } }
+			TFRKPHN_brd_kms_p33_1_click = { set_variable = { TFRKPHN_brd_kms_sel = 1 } }
+			TFRKPHN_brd_kms_p34_1_click = { set_variable = { TFRKPHN_brd_kms_sel = 1 } }
+			TFRKPHN_brd_kms_p35_1_click = { set_variable = { TFRKPHN_brd_kms_sel = 1 } }
+			TFRKPHN_brd_kms_p36_1_click = { set_variable = { TFRKPHN_brd_kms_sel = 1 } }
+			TFRKPHN_brd_kms_p37_1_click = { set_variable = { TFRKPHN_brd_kms_sel = 1 } }
+			TFRKPHN_brd_kms_p39_1_click = { set_variable = { TFRKPHN_brd_kms_sel = 1 } }
+			TFRKPHN_brd_kms_p40_1_click = { set_variable = { TFRKPHN_brd_kms_sel = 1 } }
+			TFRKPHN_brd_kms_p41_1_click = { set_variable = { TFRKPHN_brd_kms_sel = 1 } }
+			TFRKPHN_brd_kms_p42_1_click = { set_variable = { TFRKPHN_brd_kms_sel = 1 } }
+			TFRKPHN_brd_kms_p42_2_click = { set_variable = { TFRKPHN_brd_kms_sel = 2 } }
+			TFRKPHN_brd_kms_p43_1_click = { set_variable = { TFRKPHN_brd_kms_sel = 1 } }
+			TFRKPHN_brd_kms_p44_1_click = { set_variable = { TFRKPHN_brd_kms_sel = 1 } }
+			TFRKPHN_brd_kms_p45_1_click = { set_variable = { TFRKPHN_brd_kms_sel = 1 } }
+			TFRKPHN_brd_kms_p46_1_click = { set_variable = { TFRKPHN_brd_kms_sel = 1 } }
+			TFRKPHN_brd_kms_p47_1_click = { set_variable = { TFRKPHN_brd_kms_sel = 1 } }
+			TFRKPHN_brd_kms_p48_1_click = { set_variable = { TFRKPHN_brd_kms_sel = 1 } }
+			TFRKPHN_brd_kms_p49_1_click = { set_variable = { TFRKPHN_brd_kms_sel = 1 } }
+			TFRKPHN_brd_kms_p50_1_click = { set_variable = { TFRKPHN_brd_kms_sel = 1 } }
+			TFRKPHN_brd_kms_p51_1_click = { set_variable = { TFRKPHN_brd_kms_sel = 1 } }
+			TFRKPHN_brd_kms_p53_1_click = { set_variable = { TFRKPHN_brd_kms_sel = 1 } }
+			TFRKPHN_brd_kms_p54_1_click = { set_variable = { TFRKPHN_brd_kms_sel = 1 } }
+			TFRKPHN_brd_kms_p55_1_click = { set_variable = { TFRKPHN_brd_kms_sel = 1 } }
+			TFRKPHN_brd_kms_p56_1_click = { set_variable = { TFRKPHN_brd_kms_sel = 1 } }
+			TFRKPHN_brd_kms_p57_1_click = { set_variable = { TFRKPHN_brd_kms_sel = 1 } }
+			TFRKPHN_brd_kms_p58_1_click = { set_variable = { TFRKPHN_brd_kms_sel = 1 } }
+			TFRKPHN_brd_kms_p59_1_click = { set_variable = { TFRKPHN_brd_kms_sel = 1 } }
+			TFRKPHN_brd_kms_p61_1_click = { set_variable = { TFRKPHN_brd_kms_sel = 1 } }
+			TFRKPHN_brd_kms_p62_1_click = { set_variable = { TFRKPHN_brd_kms_sel = 1 } }
+			TFRKPHN_brd_kms_p63_1_click = { set_variable = { TFRKPHN_brd_kms_sel = 1 } }
+			TFRKPHN_brd_kms_p64_1_click = { set_variable = { TFRKPHN_brd_kms_sel = 1 } }
+			TFRKPHN_brd_kms_p65_1_click = { set_variable = { TFRKPHN_brd_kms_sel = 1 } }
+			TFRKPHN_brd_kms_p66_1_click = { set_variable = { TFRKPHN_brd_kms_sel = 1 } }
+			TFRKPHN_brd_kms_p67_1_click = { set_variable = { TFRKPHN_brd_kms_sel = 1 } }
+			TFRKPHN_brd_kms_p68_1_click = { set_variable = { TFRKPHN_brd_kms_sel = 1 } }
+			TFRKPHN_brd_kms_p70_1_click = { set_variable = { TFRKPHN_brd_kms_sel = 1 } }
+			TFRKPHN_brd_kms_p71_1_click = { set_variable = { TFRKPHN_brd_kms_sel = 1 } }
+			TFRKPHN_brd_kms_p72_1_click = { set_variable = { TFRKPHN_brd_kms_sel = 1 } }
+			TFRKPHN_brd_kms_p73_1_click = { set_variable = { TFRKPHN_brd_kms_sel = 1 } }
+			TFRKPHN_brd_kms_p74_1_click = { set_variable = { TFRKPHN_brd_kms_sel = 1 } }
+			TFRKPHN_brd_kms_p75_1_click = { set_variable = { TFRKPHN_brd_kms_sel = 1 } }
+			TFRKPHN_brd_kms_p76_1_click = { set_variable = { TFRKPHN_brd_kms_sel = 1 } }
+			TFRKPHN_brd_kms_bA_click = { add_political_power = -50 add_stability = 0.02 TFRKPHN_brd_kms_go1 = yes }
+			TFRKPHN_brd_kms_bB_click = { add_political_power = -20 add_stability = 0.01 TFRKPHN_brd_kms_go1 = yes }
+			TFRKPHN_brd_kms_c1_click = { add_political_power = -25 TFRKPHN_brd_kms_go1 = yes }
+			TFRKPHN_brd_kms_c2_click = { add_political_power = -25 TFRKPHN_brd_kms_go2 = yes }
+		}
+		triggers = {
+			TFRKPHN_brd_kms_fi1_visible = { check_variable = { TFRKPHN_brd_kms_f < 1.5 } }
+			TFRKPHN_brd_kms_fi2_visible = { check_variable = { TFRKPHN_brd_kms_f = 2 } }
+			TFRKPHN_brd_kms_fi3_visible = { check_variable = { TFRKPHN_brd_kms_f = 3 } }
+			TFRKPHN_brd_kms_fi4_visible = { check_variable = { TFRKPHN_brd_kms_f = 4 } }
+			TFRKPHN_brd_kms_fi5_visible = { check_variable = { TFRKPHN_brd_kms_f = 5 } }
+			TFRKPHN_brd_kms_fi6_visible = { check_variable = { TFRKPHN_brd_kms_f = 6 } }
+			TFRKPHN_brd_kms_fi7_visible = { check_variable = { TFRKPHN_brd_kms_f = 7 } }
+			TFRKPHN_brd_kms_fi8_visible = { check_variable = { TFRKPHN_brd_kms_f = 8 } }
+			TFRKPHN_brd_kms_fi9_visible = { check_variable = { TFRKPHN_brd_kms_f = 9 } }
+			TFRKPHN_brd_kms_fi10_visible = { check_variable = { TFRKPHN_brd_kms_f = 10 } }
+			TFRKPHN_brd_kms_fi11_visible = { check_variable = { TFRKPHN_brd_kms_f = 11 } }
+			TFRKPHN_brd_kms_fi12_visible = { check_variable = { TFRKPHN_brd_kms_f = 12 } }
+			TFRKPHN_brd_kms_fi13_visible = { check_variable = { TFRKPHN_brd_kms_f = 13 } }
+			TFRKPHN_brd_kms_fi14_visible = { check_variable = { TFRKPHN_brd_kms_f = 14 } }
+			TFRKPHN_brd_kms_fi15_visible = { check_variable = { TFRKPHN_brd_kms_f = 15 } }
+			TFRKPHN_brd_kms_fi16_visible = { check_variable = { TFRKPHN_brd_kms_f = 16 } }
+			TFRKPHN_brd_kms_fi17_visible = { check_variable = { TFRKPHN_brd_kms_f = 17 } }
+			TFRKPHN_brd_kms_fi18_visible = { check_variable = { TFRKPHN_brd_kms_f = 18 } }
+			TFRKPHN_brd_kms_fi19_visible = { check_variable = { TFRKPHN_brd_kms_f = 19 } }
+			TFRKPHN_brd_kms_fi20_visible = { check_variable = { TFRKPHN_brd_kms_f = 20 } }
+			TFRKPHN_brd_kms_fi21_visible = { check_variable = { TFRKPHN_brd_kms_f = 21 } }
+			TFRKPHN_brd_kms_fi22_visible = { check_variable = { TFRKPHN_brd_kms_f = 22 } }
+			TFRKPHN_brd_kms_fi23_visible = { check_variable = { TFRKPHN_brd_kms_f = 23 } }
+			TFRKPHN_brd_kms_fi24_visible = { check_variable = { TFRKPHN_brd_kms_f = 24 } }
+			TFRKPHN_brd_kms_fi25_visible = { check_variable = { TFRKPHN_brd_kms_f = 25 } }
+			TFRKPHN_brd_kms_fi26_visible = { check_variable = { TFRKPHN_brd_kms_f = 26 } }
+			TFRKPHN_brd_kms_fi27_visible = { check_variable = { TFRKPHN_brd_kms_f = 27 } }
+			TFRKPHN_brd_kms_fi28_visible = { check_variable = { TFRKPHN_brd_kms_f = 28 } }
+			TFRKPHN_brd_kms_fi29_visible = { check_variable = { TFRKPHN_brd_kms_f = 29 } }
+			TFRKPHN_brd_kms_fi30_visible = { check_variable = { TFRKPHN_brd_kms_f = 30 } }
+			TFRKPHN_brd_kms_fi31_visible = { check_variable = { TFRKPHN_brd_kms_f = 31 } }
+			TFRKPHN_brd_kms_fi32_visible = { check_variable = { TFRKPHN_brd_kms_f = 32 } }
+			TFRKPHN_brd_kms_fi33_visible = { check_variable = { TFRKPHN_brd_kms_f = 33 } }
+			TFRKPHN_brd_kms_fi34_visible = { check_variable = { TFRKPHN_brd_kms_f = 34 } }
+			TFRKPHN_brd_kms_fi35_visible = { check_variable = { TFRKPHN_brd_kms_f = 35 } }
+			TFRKPHN_brd_kms_fi36_visible = { check_variable = { TFRKPHN_brd_kms_f = 36 } }
+			TFRKPHN_brd_kms_fi37_visible = { check_variable = { TFRKPHN_brd_kms_f = 37 } }
+			TFRKPHN_brd_kms_fi38_visible = { check_variable = { TFRKPHN_brd_kms_f = 38 } }
+			TFRKPHN_brd_kms_fi39_visible = { check_variable = { TFRKPHN_brd_kms_f = 39 } }
+			TFRKPHN_brd_kms_fi40_visible = { check_variable = { TFRKPHN_brd_kms_f = 40 } }
+			TFRKPHN_brd_kms_fi41_visible = { check_variable = { TFRKPHN_brd_kms_f = 41 } }
+			TFRKPHN_brd_kms_fi42_visible = { check_variable = { TFRKPHN_brd_kms_f = 42 } }
+			TFRKPHN_brd_kms_fi43_visible = { check_variable = { TFRKPHN_brd_kms_f = 43 } }
+			TFRKPHN_brd_kms_fi44_visible = { check_variable = { TFRKPHN_brd_kms_f = 44 } }
+			TFRKPHN_brd_kms_fi45_visible = { check_variable = { TFRKPHN_brd_kms_f = 45 } }
+			TFRKPHN_brd_kms_fi46_visible = { check_variable = { TFRKPHN_brd_kms_f = 46 } }
+			TFRKPHN_brd_kms_fi47_visible = { check_variable = { TFRKPHN_brd_kms_f = 47 } }
+			TFRKPHN_brd_kms_fi48_visible = { check_variable = { TFRKPHN_brd_kms_f = 48 } }
+			TFRKPHN_brd_kms_fi49_visible = { check_variable = { TFRKPHN_brd_kms_f = 49 } }
+			TFRKPHN_brd_kms_fi50_visible = { check_variable = { TFRKPHN_brd_kms_f = 50 } }
+			TFRKPHN_brd_kms_fi51_visible = { check_variable = { TFRKPHN_brd_kms_f = 51 } }
+			TFRKPHN_brd_kms_fi52_visible = { check_variable = { TFRKPHN_brd_kms_f = 52 } }
+			TFRKPHN_brd_kms_fi53_visible = { check_variable = { TFRKPHN_brd_kms_f = 53 } }
+			TFRKPHN_brd_kms_fi54_visible = { check_variable = { TFRKPHN_brd_kms_f = 54 } }
+			TFRKPHN_brd_kms_fi55_visible = { check_variable = { TFRKPHN_brd_kms_f = 55 } }
+			TFRKPHN_brd_kms_fi56_visible = { check_variable = { TFRKPHN_brd_kms_f = 56 } }
+			TFRKPHN_brd_kms_fi57_visible = { check_variable = { TFRKPHN_brd_kms_f = 57 } }
+			TFRKPHN_brd_kms_fi58_visible = { check_variable = { TFRKPHN_brd_kms_f = 58 } }
+			TFRKPHN_brd_kms_fi59_visible = { check_variable = { TFRKPHN_brd_kms_f = 59 } }
+			TFRKPHN_brd_kms_fi60_visible = { check_variable = { TFRKPHN_brd_kms_f = 60 } }
+			TFRKPHN_brd_kms_fi61_visible = { check_variable = { TFRKPHN_brd_kms_f = 61 } }
+			TFRKPHN_brd_kms_fi62_visible = { check_variable = { TFRKPHN_brd_kms_f = 62 } }
+			TFRKPHN_brd_kms_fi63_visible = { check_variable = { TFRKPHN_brd_kms_f = 63 } }
+			TFRKPHN_brd_kms_fi64_visible = { check_variable = { TFRKPHN_brd_kms_f = 64 } }
+			TFRKPHN_brd_kms_fi65_visible = { check_variable = { TFRKPHN_brd_kms_f = 65 } }
+			TFRKPHN_brd_kms_fi66_visible = { check_variable = { TFRKPHN_brd_kms_f = 66 } }
+			TFRKPHN_brd_kms_fi67_visible = { check_variable = { TFRKPHN_brd_kms_f = 67 } }
+			TFRKPHN_brd_kms_fi68_visible = { check_variable = { TFRKPHN_brd_kms_f = 68 } }
+			TFRKPHN_brd_kms_fi69_visible = { check_variable = { TFRKPHN_brd_kms_f = 69 } }
+			TFRKPHN_brd_kms_fi70_visible = { check_variable = { TFRKPHN_brd_kms_f = 70 } }
+			TFRKPHN_brd_kms_fi71_visible = { check_variable = { TFRKPHN_brd_kms_f = 71 } }
+			TFRKPHN_brd_kms_fi72_visible = { check_variable = { TFRKPHN_brd_kms_f = 72 } }
+			TFRKPHN_brd_kms_fi73_visible = { check_variable = { TFRKPHN_brd_kms_f = 73 } }
+			TFRKPHN_brd_kms_fi74_visible = { check_variable = { TFRKPHN_brd_kms_f = 74 } }
+			TFRKPHN_brd_kms_fi75_visible = { check_variable = { TFRKPHN_brd_kms_f = 75 } }
+			TFRKPHN_brd_kms_fi76_visible = { check_variable = { TFRKPHN_brd_kms_f = 76 } }
+			TFRKPHN_brd_kms_fi77_visible = { check_variable = { TFRKPHN_brd_kms_f = 77 } }
+			TFRKPHN_brd_kms_p1_1_visible = { check_variable = { TFRKPHN_brd_kms_f < 1.5 } NOT = { has_country_flag = TFRKPHN_brd_kms_done } NOT = { has_country_flag = TFRKPHN_brd_kms_cd } }
+			TFRKPHN_brd_kms_p2_1_visible = { check_variable = { TFRKPHN_brd_kms_f = 2 } NOT = { has_country_flag = TFRKPHN_brd_kms_done } NOT = { has_country_flag = TFRKPHN_brd_kms_cd } }
+			TFRKPHN_brd_kms_p3_1_visible = { check_variable = { TFRKPHN_brd_kms_f = 3 } NOT = { has_country_flag = TFRKPHN_brd_kms_done } NOT = { has_country_flag = TFRKPHN_brd_kms_cd } }
+			TFRKPHN_brd_kms_p4_1_visible = { check_variable = { TFRKPHN_brd_kms_f = 4 } NOT = { has_country_flag = TFRKPHN_brd_kms_done } NOT = { has_country_flag = TFRKPHN_brd_kms_cd } }
+			TFRKPHN_brd_kms_p5_1_visible = { check_variable = { TFRKPHN_brd_kms_f = 5 } NOT = { has_country_flag = TFRKPHN_brd_kms_done } NOT = { has_country_flag = TFRKPHN_brd_kms_cd } }
+			TFRKPHN_brd_kms_p5_2_visible = { check_variable = { TFRKPHN_brd_kms_f = 5 } NOT = { has_country_flag = TFRKPHN_brd_kms_done } NOT = { has_country_flag = TFRKPHN_brd_kms_cd } }
+			TFRKPHN_brd_kms_p6_1_visible = { check_variable = { TFRKPHN_brd_kms_f = 6 } NOT = { has_country_flag = TFRKPHN_brd_kms_done } NOT = { has_country_flag = TFRKPHN_brd_kms_cd } }
+			TFRKPHN_brd_kms_p7_1_visible = { check_variable = { TFRKPHN_brd_kms_f = 7 } NOT = { has_country_flag = TFRKPHN_brd_kms_done } NOT = { has_country_flag = TFRKPHN_brd_kms_cd } }
+			TFRKPHN_brd_kms_p8_1_visible = { check_variable = { TFRKPHN_brd_kms_f = 8 } NOT = { has_country_flag = TFRKPHN_brd_kms_done } NOT = { has_country_flag = TFRKPHN_brd_kms_cd } }
+			TFRKPHN_brd_kms_p9_1_visible = { check_variable = { TFRKPHN_brd_kms_f = 9 } NOT = { has_country_flag = TFRKPHN_brd_kms_done } NOT = { has_country_flag = TFRKPHN_brd_kms_cd } }
+			TFRKPHN_brd_kms_p10_1_visible = { check_variable = { TFRKPHN_brd_kms_f = 10 } NOT = { has_country_flag = TFRKPHN_brd_kms_done } NOT = { has_country_flag = TFRKPHN_brd_kms_cd } }
+			TFRKPHN_brd_kms_p11_1_visible = { check_variable = { TFRKPHN_brd_kms_f = 11 } NOT = { has_country_flag = TFRKPHN_brd_kms_done } NOT = { has_country_flag = TFRKPHN_brd_kms_cd } }
+			TFRKPHN_brd_kms_p12_1_visible = { check_variable = { TFRKPHN_brd_kms_f = 12 } NOT = { has_country_flag = TFRKPHN_brd_kms_done } NOT = { has_country_flag = TFRKPHN_brd_kms_cd } }
+			TFRKPHN_brd_kms_p13_1_visible = { check_variable = { TFRKPHN_brd_kms_f = 13 } NOT = { has_country_flag = TFRKPHN_brd_kms_done } NOT = { has_country_flag = TFRKPHN_brd_kms_cd } }
+			TFRKPHN_brd_kms_p14_1_visible = { check_variable = { TFRKPHN_brd_kms_f = 14 } NOT = { has_country_flag = TFRKPHN_brd_kms_done } NOT = { has_country_flag = TFRKPHN_brd_kms_cd } }
+			TFRKPHN_brd_kms_p16_1_visible = { check_variable = { TFRKPHN_brd_kms_f = 16 } NOT = { has_country_flag = TFRKPHN_brd_kms_done } NOT = { has_country_flag = TFRKPHN_brd_kms_cd } }
+			TFRKPHN_brd_kms_p17_1_visible = { check_variable = { TFRKPHN_brd_kms_f = 17 } NOT = { has_country_flag = TFRKPHN_brd_kms_done } NOT = { has_country_flag = TFRKPHN_brd_kms_cd } }
+			TFRKPHN_brd_kms_p18_1_visible = { check_variable = { TFRKPHN_brd_kms_f = 18 } NOT = { has_country_flag = TFRKPHN_brd_kms_done } NOT = { has_country_flag = TFRKPHN_brd_kms_cd } }
+			TFRKPHN_brd_kms_p19_1_visible = { check_variable = { TFRKPHN_brd_kms_f = 19 } NOT = { has_country_flag = TFRKPHN_brd_kms_done } NOT = { has_country_flag = TFRKPHN_brd_kms_cd } }
+			TFRKPHN_brd_kms_p20_1_visible = { check_variable = { TFRKPHN_brd_kms_f = 20 } NOT = { has_country_flag = TFRKPHN_brd_kms_done } NOT = { has_country_flag = TFRKPHN_brd_kms_cd } }
+			TFRKPHN_brd_kms_p21_1_visible = { check_variable = { TFRKPHN_brd_kms_f = 21 } NOT = { has_country_flag = TFRKPHN_brd_kms_done } NOT = { has_country_flag = TFRKPHN_brd_kms_cd } }
+			TFRKPHN_brd_kms_p23_1_visible = { check_variable = { TFRKPHN_brd_kms_f = 23 } NOT = { has_country_flag = TFRKPHN_brd_kms_done } NOT = { has_country_flag = TFRKPHN_brd_kms_cd } }
+			TFRKPHN_brd_kms_p24_1_visible = { check_variable = { TFRKPHN_brd_kms_f = 24 } NOT = { has_country_flag = TFRKPHN_brd_kms_done } NOT = { has_country_flag = TFRKPHN_brd_kms_cd } }
+			TFRKPHN_brd_kms_p25_1_visible = { check_variable = { TFRKPHN_brd_kms_f = 25 } NOT = { has_country_flag = TFRKPHN_brd_kms_done } NOT = { has_country_flag = TFRKPHN_brd_kms_cd } }
+			TFRKPHN_brd_kms_p26_1_visible = { check_variable = { TFRKPHN_brd_kms_f = 26 } NOT = { has_country_flag = TFRKPHN_brd_kms_done } NOT = { has_country_flag = TFRKPHN_brd_kms_cd } }
+			TFRKPHN_brd_kms_p27_1_visible = { check_variable = { TFRKPHN_brd_kms_f = 27 } NOT = { has_country_flag = TFRKPHN_brd_kms_done } NOT = { has_country_flag = TFRKPHN_brd_kms_cd } }
+			TFRKPHN_brd_kms_p28_1_visible = { check_variable = { TFRKPHN_brd_kms_f = 28 } NOT = { has_country_flag = TFRKPHN_brd_kms_done } NOT = { has_country_flag = TFRKPHN_brd_kms_cd } }
+			TFRKPHN_brd_kms_p29_1_visible = { check_variable = { TFRKPHN_brd_kms_f = 29 } NOT = { has_country_flag = TFRKPHN_brd_kms_done } NOT = { has_country_flag = TFRKPHN_brd_kms_cd } }
+			TFRKPHN_brd_kms_p31_1_visible = { check_variable = { TFRKPHN_brd_kms_f = 31 } NOT = { has_country_flag = TFRKPHN_brd_kms_done } NOT = { has_country_flag = TFRKPHN_brd_kms_cd } }
+			TFRKPHN_brd_kms_p32_1_visible = { check_variable = { TFRKPHN_brd_kms_f = 32 } NOT = { has_country_flag = TFRKPHN_brd_kms_done } NOT = { has_country_flag = TFRKPHN_brd_kms_cd } }
+			TFRKPHN_brd_kms_p33_1_visible = { check_variable = { TFRKPHN_brd_kms_f = 33 } NOT = { has_country_flag = TFRKPHN_brd_kms_done } NOT = { has_country_flag = TFRKPHN_brd_kms_cd } }
+			TFRKPHN_brd_kms_p34_1_visible = { check_variable = { TFRKPHN_brd_kms_f = 34 } NOT = { has_country_flag = TFRKPHN_brd_kms_done } NOT = { has_country_flag = TFRKPHN_brd_kms_cd } }
+			TFRKPHN_brd_kms_p35_1_visible = { check_variable = { TFRKPHN_brd_kms_f = 35 } NOT = { has_country_flag = TFRKPHN_brd_kms_done } NOT = { has_country_flag = TFRKPHN_brd_kms_cd } }
+			TFRKPHN_brd_kms_p36_1_visible = { check_variable = { TFRKPHN_brd_kms_f = 36 } NOT = { has_country_flag = TFRKPHN_brd_kms_done } NOT = { has_country_flag = TFRKPHN_brd_kms_cd } }
+			TFRKPHN_brd_kms_p37_1_visible = { check_variable = { TFRKPHN_brd_kms_f = 37 } NOT = { has_country_flag = TFRKPHN_brd_kms_done } NOT = { has_country_flag = TFRKPHN_brd_kms_cd } }
+			TFRKPHN_brd_kms_p39_1_visible = { check_variable = { TFRKPHN_brd_kms_f = 39 } NOT = { has_country_flag = TFRKPHN_brd_kms_done } NOT = { has_country_flag = TFRKPHN_brd_kms_cd } }
+			TFRKPHN_brd_kms_p40_1_visible = { check_variable = { TFRKPHN_brd_kms_f = 40 } NOT = { has_country_flag = TFRKPHN_brd_kms_done } NOT = { has_country_flag = TFRKPHN_brd_kms_cd } }
+			TFRKPHN_brd_kms_p41_1_visible = { check_variable = { TFRKPHN_brd_kms_f = 41 } NOT = { has_country_flag = TFRKPHN_brd_kms_done } NOT = { has_country_flag = TFRKPHN_brd_kms_cd } }
+			TFRKPHN_brd_kms_p42_1_visible = { check_variable = { TFRKPHN_brd_kms_f = 42 } NOT = { has_country_flag = TFRKPHN_brd_kms_done } NOT = { has_country_flag = TFRKPHN_brd_kms_cd } }
+			TFRKPHN_brd_kms_p42_2_visible = { check_variable = { TFRKPHN_brd_kms_f = 42 } NOT = { has_country_flag = TFRKPHN_brd_kms_done } NOT = { has_country_flag = TFRKPHN_brd_kms_cd } }
+			TFRKPHN_brd_kms_p43_1_visible = { check_variable = { TFRKPHN_brd_kms_f = 43 } NOT = { has_country_flag = TFRKPHN_brd_kms_done } NOT = { has_country_flag = TFRKPHN_brd_kms_cd } }
+			TFRKPHN_brd_kms_p44_1_visible = { check_variable = { TFRKPHN_brd_kms_f = 44 } NOT = { has_country_flag = TFRKPHN_brd_kms_done } NOT = { has_country_flag = TFRKPHN_brd_kms_cd } }
+			TFRKPHN_brd_kms_p45_1_visible = { check_variable = { TFRKPHN_brd_kms_f = 45 } NOT = { has_country_flag = TFRKPHN_brd_kms_done } NOT = { has_country_flag = TFRKPHN_brd_kms_cd } }
+			TFRKPHN_brd_kms_p46_1_visible = { check_variable = { TFRKPHN_brd_kms_f = 46 } NOT = { has_country_flag = TFRKPHN_brd_kms_done } NOT = { has_country_flag = TFRKPHN_brd_kms_cd } }
+			TFRKPHN_brd_kms_p47_1_visible = { check_variable = { TFRKPHN_brd_kms_f = 47 } NOT = { has_country_flag = TFRKPHN_brd_kms_done } NOT = { has_country_flag = TFRKPHN_brd_kms_cd } }
+			TFRKPHN_brd_kms_p48_1_visible = { check_variable = { TFRKPHN_brd_kms_f = 48 } NOT = { has_country_flag = TFRKPHN_brd_kms_done } NOT = { has_country_flag = TFRKPHN_brd_kms_cd } }
+			TFRKPHN_brd_kms_p49_1_visible = { check_variable = { TFRKPHN_brd_kms_f = 49 } NOT = { has_country_flag = TFRKPHN_brd_kms_done } NOT = { has_country_flag = TFRKPHN_brd_kms_cd } }
+			TFRKPHN_brd_kms_p50_1_visible = { check_variable = { TFRKPHN_brd_kms_f = 50 } NOT = { has_country_flag = TFRKPHN_brd_kms_done } NOT = { has_country_flag = TFRKPHN_brd_kms_cd } }
+			TFRKPHN_brd_kms_p51_1_visible = { check_variable = { TFRKPHN_brd_kms_f = 51 } NOT = { has_country_flag = TFRKPHN_brd_kms_done } NOT = { has_country_flag = TFRKPHN_brd_kms_cd } }
+			TFRKPHN_brd_kms_p53_1_visible = { check_variable = { TFRKPHN_brd_kms_f = 53 } NOT = { has_country_flag = TFRKPHN_brd_kms_done } NOT = { has_country_flag = TFRKPHN_brd_kms_cd } }
+			TFRKPHN_brd_kms_p54_1_visible = { check_variable = { TFRKPHN_brd_kms_f = 54 } NOT = { has_country_flag = TFRKPHN_brd_kms_done } NOT = { has_country_flag = TFRKPHN_brd_kms_cd } }
+			TFRKPHN_brd_kms_p55_1_visible = { check_variable = { TFRKPHN_brd_kms_f = 55 } NOT = { has_country_flag = TFRKPHN_brd_kms_done } NOT = { has_country_flag = TFRKPHN_brd_kms_cd } }
+			TFRKPHN_brd_kms_p56_1_visible = { check_variable = { TFRKPHN_brd_kms_f = 56 } NOT = { has_country_flag = TFRKPHN_brd_kms_done } NOT = { has_country_flag = TFRKPHN_brd_kms_cd } }
+			TFRKPHN_brd_kms_p57_1_visible = { check_variable = { TFRKPHN_brd_kms_f = 57 } NOT = { has_country_flag = TFRKPHN_brd_kms_done } NOT = { has_country_flag = TFRKPHN_brd_kms_cd } }
+			TFRKPHN_brd_kms_p58_1_visible = { check_variable = { TFRKPHN_brd_kms_f = 58 } NOT = { has_country_flag = TFRKPHN_brd_kms_done } NOT = { has_country_flag = TFRKPHN_brd_kms_cd } }
+			TFRKPHN_brd_kms_p59_1_visible = { check_variable = { TFRKPHN_brd_kms_f = 59 } NOT = { has_country_flag = TFRKPHN_brd_kms_done } NOT = { has_country_flag = TFRKPHN_brd_kms_cd } }
+			TFRKPHN_brd_kms_p61_1_visible = { check_variable = { TFRKPHN_brd_kms_f = 61 } NOT = { has_country_flag = TFRKPHN_brd_kms_done } NOT = { has_country_flag = TFRKPHN_brd_kms_cd } }
+			TFRKPHN_brd_kms_p62_1_visible = { check_variable = { TFRKPHN_brd_kms_f = 62 } NOT = { has_country_flag = TFRKPHN_brd_kms_done } NOT = { has_country_flag = TFRKPHN_brd_kms_cd } }
+			TFRKPHN_brd_kms_p63_1_visible = { check_variable = { TFRKPHN_brd_kms_f = 63 } NOT = { has_country_flag = TFRKPHN_brd_kms_done } NOT = { has_country_flag = TFRKPHN_brd_kms_cd } }
+			TFRKPHN_brd_kms_p64_1_visible = { check_variable = { TFRKPHN_brd_kms_f = 64 } NOT = { has_country_flag = TFRKPHN_brd_kms_done } NOT = { has_country_flag = TFRKPHN_brd_kms_cd } }
+			TFRKPHN_brd_kms_p65_1_visible = { check_variable = { TFRKPHN_brd_kms_f = 65 } NOT = { has_country_flag = TFRKPHN_brd_kms_done } NOT = { has_country_flag = TFRKPHN_brd_kms_cd } }
+			TFRKPHN_brd_kms_p66_1_visible = { check_variable = { TFRKPHN_brd_kms_f = 66 } NOT = { has_country_flag = TFRKPHN_brd_kms_done } NOT = { has_country_flag = TFRKPHN_brd_kms_cd } }
+			TFRKPHN_brd_kms_p67_1_visible = { check_variable = { TFRKPHN_brd_kms_f = 67 } NOT = { has_country_flag = TFRKPHN_brd_kms_done } NOT = { has_country_flag = TFRKPHN_brd_kms_cd } }
+			TFRKPHN_brd_kms_p68_1_visible = { check_variable = { TFRKPHN_brd_kms_f = 68 } NOT = { has_country_flag = TFRKPHN_brd_kms_done } NOT = { has_country_flag = TFRKPHN_brd_kms_cd } }
+			TFRKPHN_brd_kms_p70_1_visible = { check_variable = { TFRKPHN_brd_kms_f = 70 } NOT = { has_country_flag = TFRKPHN_brd_kms_done } NOT = { has_country_flag = TFRKPHN_brd_kms_cd } }
+			TFRKPHN_brd_kms_p71_1_visible = { check_variable = { TFRKPHN_brd_kms_f = 71 } NOT = { has_country_flag = TFRKPHN_brd_kms_done } NOT = { has_country_flag = TFRKPHN_brd_kms_cd } }
+			TFRKPHN_brd_kms_p72_1_visible = { check_variable = { TFRKPHN_brd_kms_f = 72 } NOT = { has_country_flag = TFRKPHN_brd_kms_done } NOT = { has_country_flag = TFRKPHN_brd_kms_cd } }
+			TFRKPHN_brd_kms_p73_1_visible = { check_variable = { TFRKPHN_brd_kms_f = 73 } NOT = { has_country_flag = TFRKPHN_brd_kms_done } NOT = { has_country_flag = TFRKPHN_brd_kms_cd } }
+			TFRKPHN_brd_kms_p74_1_visible = { check_variable = { TFRKPHN_brd_kms_f = 74 } NOT = { has_country_flag = TFRKPHN_brd_kms_done } NOT = { has_country_flag = TFRKPHN_brd_kms_cd } }
+			TFRKPHN_brd_kms_p75_1_visible = { check_variable = { TFRKPHN_brd_kms_f = 75 } NOT = { has_country_flag = TFRKPHN_brd_kms_done } NOT = { has_country_flag = TFRKPHN_brd_kms_cd } }
+			TFRKPHN_brd_kms_p76_1_visible = { check_variable = { TFRKPHN_brd_kms_f = 76 } NOT = { has_country_flag = TFRKPHN_brd_kms_done } NOT = { has_country_flag = TFRKPHN_brd_kms_cd } }
+			TFRKPHN_brd_kms_t_pick_visible = { NOT = { has_country_flag = TFRKPHN_brd_kms_done } NOT = { has_country_flag = TFRKPHN_brd_kms_cd } check_variable = { TFRKPHN_brd_kms_sel < 0.5 } }
+			TFRKPHN_brd_kms_t_wait_visible = { NOT = { has_country_flag = TFRKPHN_brd_kms_done } has_country_flag = TFRKPHN_brd_kms_cd }
+			TFRKPHN_brd_kms_t_cho_visible = { NOT = { has_country_flag = TFRKPHN_brd_kms_done } NOT = { has_country_flag = TFRKPHN_brd_kms_cd } OR = { check_variable = { TFRKPHN_brd_kms_f = 5 } check_variable = { TFRKPHN_brd_kms_f = 42 } } }
+			TFRKPHN_brd_kms_t_end15_visible = { check_variable = { TFRKPHN_brd_kms_f = 15 } }
+			TFRKPHN_brd_kms_t_src15_visible = { check_variable = { TFRKPHN_brd_kms_f = 15 } }
+			TFRKPHN_brd_kms_t_end22_visible = { check_variable = { TFRKPHN_brd_kms_f = 22 } }
+			TFRKPHN_brd_kms_t_src22_visible = { check_variable = { TFRKPHN_brd_kms_f = 22 } }
+			TFRKPHN_brd_kms_t_end30_visible = { check_variable = { TFRKPHN_brd_kms_f = 30 } }
+			TFRKPHN_brd_kms_t_src30_visible = { check_variable = { TFRKPHN_brd_kms_f = 30 } }
+			TFRKPHN_brd_kms_t_end38_visible = { check_variable = { TFRKPHN_brd_kms_f = 38 } }
+			TFRKPHN_brd_kms_t_src38_visible = { check_variable = { TFRKPHN_brd_kms_f = 38 } }
+			TFRKPHN_brd_kms_t_end52_visible = { check_variable = { TFRKPHN_brd_kms_f = 52 } }
+			TFRKPHN_brd_kms_t_src52_visible = { check_variable = { TFRKPHN_brd_kms_f = 52 } }
+			TFRKPHN_brd_kms_t_end60_visible = { check_variable = { TFRKPHN_brd_kms_f = 60 } }
+			TFRKPHN_brd_kms_t_src60_visible = { check_variable = { TFRKPHN_brd_kms_f = 60 } }
+			TFRKPHN_brd_kms_t_end69_visible = { check_variable = { TFRKPHN_brd_kms_f = 69 } }
+			TFRKPHN_brd_kms_t_src69_visible = { check_variable = { TFRKPHN_brd_kms_f = 69 } }
+			TFRKPHN_brd_kms_t_end77_visible = { check_variable = { TFRKPHN_brd_kms_f = 77 } }
+			TFRKPHN_brd_kms_t_src77_visible = { check_variable = { TFRKPHN_brd_kms_f = 77 } }
+			TFRKPHN_brd_kms_bA_visible = { check_variable = { TFRKPHN_brd_kms_sel = 1 } OR = { check_variable = { TFRKPHN_brd_kms_f < 1.5 } check_variable = { TFRKPHN_brd_kms_f = 2 } check_variable = { TFRKPHN_brd_kms_f = 3 } check_variable = { TFRKPHN_brd_kms_f = 4 } check_variable = { TFRKPHN_brd_kms_f = 6 } check_variable = { TFRKPHN_brd_kms_f = 7 } check_variable = { TFRKPHN_brd_kms_f = 8 } check_variable = { TFRKPHN_brd_kms_f = 9 } check_variable = { TFRKPHN_brd_kms_f = 10 } check_variable = { TFRKPHN_brd_kms_f = 11 } check_variable = { TFRKPHN_brd_kms_f = 12 } check_variable = { TFRKPHN_brd_kms_f = 13 } check_variable = { TFRKPHN_brd_kms_f = 14 } check_variable = { TFRKPHN_brd_kms_f = 16 } check_variable = { TFRKPHN_brd_kms_f = 17 } check_variable = { TFRKPHN_brd_kms_f = 18 } check_variable = { TFRKPHN_brd_kms_f = 19 } check_variable = { TFRKPHN_brd_kms_f = 20 } check_variable = { TFRKPHN_brd_kms_f = 21 } check_variable = { TFRKPHN_brd_kms_f = 23 } check_variable = { TFRKPHN_brd_kms_f = 24 } check_variable = { TFRKPHN_brd_kms_f = 25 } check_variable = { TFRKPHN_brd_kms_f = 26 } check_variable = { TFRKPHN_brd_kms_f = 27 } check_variable = { TFRKPHN_brd_kms_f = 28 } check_variable = { TFRKPHN_brd_kms_f = 29 } check_variable = { TFRKPHN_brd_kms_f = 31 } check_variable = { TFRKPHN_brd_kms_f = 32 } check_variable = { TFRKPHN_brd_kms_f = 33 } check_variable = { TFRKPHN_brd_kms_f = 34 } check_variable = { TFRKPHN_brd_kms_f = 35 } check_variable = { TFRKPHN_brd_kms_f = 36 } check_variable = { TFRKPHN_brd_kms_f = 37 } check_variable = { TFRKPHN_brd_kms_f = 39 } check_variable = { TFRKPHN_brd_kms_f = 40 } check_variable = { TFRKPHN_brd_kms_f = 41 } check_variable = { TFRKPHN_brd_kms_f = 43 } check_variable = { TFRKPHN_brd_kms_f = 44 } check_variable = { TFRKPHN_brd_kms_f = 45 } check_variable = { TFRKPHN_brd_kms_f = 46 } check_variable = { TFRKPHN_brd_kms_f = 47 } check_variable = { TFRKPHN_brd_kms_f = 48 } check_variable = { TFRKPHN_brd_kms_f = 49 } check_variable = { TFRKPHN_brd_kms_f = 50 } check_variable = { TFRKPHN_brd_kms_f = 51 } check_variable = { TFRKPHN_brd_kms_f = 53 } check_variable = { TFRKPHN_brd_kms_f = 54 } check_variable = { TFRKPHN_brd_kms_f = 55 } check_variable = { TFRKPHN_brd_kms_f = 56 } check_variable = { TFRKPHN_brd_kms_f = 57 } check_variable = { TFRKPHN_brd_kms_f = 58 } check_variable = { TFRKPHN_brd_kms_f = 59 } check_variable = { TFRKPHN_brd_kms_f = 61 } check_variable = { TFRKPHN_brd_kms_f = 62 } check_variable = { TFRKPHN_brd_kms_f = 63 } check_variable = { TFRKPHN_brd_kms_f = 64 } check_variable = { TFRKPHN_brd_kms_f = 65 } check_variable = { TFRKPHN_brd_kms_f = 66 } check_variable = { TFRKPHN_brd_kms_f = 67 } check_variable = { TFRKPHN_brd_kms_f = 68 } check_variable = { TFRKPHN_brd_kms_f = 70 } check_variable = { TFRKPHN_brd_kms_f = 71 } check_variable = { TFRKPHN_brd_kms_f = 72 } check_variable = { TFRKPHN_brd_kms_f = 73 } check_variable = { TFRKPHN_brd_kms_f = 74 } check_variable = { TFRKPHN_brd_kms_f = 75 } check_variable = { TFRKPHN_brd_kms_f = 76 } } NOT = { has_country_flag = TFRKPHN_brd_kms_done } NOT = { has_country_flag = TFRKPHN_brd_kms_cd } }
+			TFRKPHN_brd_kms_bA_click_enabled = { has_political_power > 49 }
+			TFRKPHN_brd_kms_bB_visible = { check_variable = { TFRKPHN_brd_kms_sel = 1 } OR = { check_variable = { TFRKPHN_brd_kms_f < 1.5 } check_variable = { TFRKPHN_brd_kms_f = 2 } check_variable = { TFRKPHN_brd_kms_f = 3 } check_variable = { TFRKPHN_brd_kms_f = 4 } check_variable = { TFRKPHN_brd_kms_f = 6 } check_variable = { TFRKPHN_brd_kms_f = 7 } check_variable = { TFRKPHN_brd_kms_f = 8 } check_variable = { TFRKPHN_brd_kms_f = 9 } check_variable = { TFRKPHN_brd_kms_f = 10 } check_variable = { TFRKPHN_brd_kms_f = 11 } check_variable = { TFRKPHN_brd_kms_f = 12 } check_variable = { TFRKPHN_brd_kms_f = 13 } check_variable = { TFRKPHN_brd_kms_f = 14 } check_variable = { TFRKPHN_brd_kms_f = 16 } check_variable = { TFRKPHN_brd_kms_f = 17 } check_variable = { TFRKPHN_brd_kms_f = 18 } check_variable = { TFRKPHN_brd_kms_f = 19 } check_variable = { TFRKPHN_brd_kms_f = 20 } check_variable = { TFRKPHN_brd_kms_f = 21 } check_variable = { TFRKPHN_brd_kms_f = 23 } check_variable = { TFRKPHN_brd_kms_f = 24 } check_variable = { TFRKPHN_brd_kms_f = 25 } check_variable = { TFRKPHN_brd_kms_f = 26 } check_variable = { TFRKPHN_brd_kms_f = 27 } check_variable = { TFRKPHN_brd_kms_f = 28 } check_variable = { TFRKPHN_brd_kms_f = 29 } check_variable = { TFRKPHN_brd_kms_f = 31 } check_variable = { TFRKPHN_brd_kms_f = 32 } check_variable = { TFRKPHN_brd_kms_f = 33 } check_variable = { TFRKPHN_brd_kms_f = 34 } check_variable = { TFRKPHN_brd_kms_f = 35 } check_variable = { TFRKPHN_brd_kms_f = 36 } check_variable = { TFRKPHN_brd_kms_f = 37 } check_variable = { TFRKPHN_brd_kms_f = 39 } check_variable = { TFRKPHN_brd_kms_f = 40 } check_variable = { TFRKPHN_brd_kms_f = 41 } check_variable = { TFRKPHN_brd_kms_f = 43 } check_variable = { TFRKPHN_brd_kms_f = 44 } check_variable = { TFRKPHN_brd_kms_f = 45 } check_variable = { TFRKPHN_brd_kms_f = 46 } check_variable = { TFRKPHN_brd_kms_f = 47 } check_variable = { TFRKPHN_brd_kms_f = 48 } check_variable = { TFRKPHN_brd_kms_f = 49 } check_variable = { TFRKPHN_brd_kms_f = 50 } check_variable = { TFRKPHN_brd_kms_f = 51 } check_variable = { TFRKPHN_brd_kms_f = 53 } check_variable = { TFRKPHN_brd_kms_f = 54 } check_variable = { TFRKPHN_brd_kms_f = 55 } check_variable = { TFRKPHN_brd_kms_f = 56 } check_variable = { TFRKPHN_brd_kms_f = 57 } check_variable = { TFRKPHN_brd_kms_f = 58 } check_variable = { TFRKPHN_brd_kms_f = 59 } check_variable = { TFRKPHN_brd_kms_f = 61 } check_variable = { TFRKPHN_brd_kms_f = 62 } check_variable = { TFRKPHN_brd_kms_f = 63 } check_variable = { TFRKPHN_brd_kms_f = 64 } check_variable = { TFRKPHN_brd_kms_f = 65 } check_variable = { TFRKPHN_brd_kms_f = 66 } check_variable = { TFRKPHN_brd_kms_f = 67 } check_variable = { TFRKPHN_brd_kms_f = 68 } check_variable = { TFRKPHN_brd_kms_f = 70 } check_variable = { TFRKPHN_brd_kms_f = 71 } check_variable = { TFRKPHN_brd_kms_f = 72 } check_variable = { TFRKPHN_brd_kms_f = 73 } check_variable = { TFRKPHN_brd_kms_f = 74 } check_variable = { TFRKPHN_brd_kms_f = 75 } check_variable = { TFRKPHN_brd_kms_f = 76 } } NOT = { has_country_flag = TFRKPHN_brd_kms_done } NOT = { has_country_flag = TFRKPHN_brd_kms_cd } }
+			TFRKPHN_brd_kms_bB_click_enabled = { has_political_power > 19 }
+			TFRKPHN_brd_kms_c1_visible = { check_variable = { TFRKPHN_brd_kms_sel = 1 } OR = { check_variable = { TFRKPHN_brd_kms_f = 5 } check_variable = { TFRKPHN_brd_kms_f = 42 } } NOT = { has_country_flag = TFRKPHN_brd_kms_done } NOT = { has_country_flag = TFRKPHN_brd_kms_cd } }
+			TFRKPHN_brd_kms_c1_click_enabled = { has_political_power > 24 }
+			TFRKPHN_brd_kms_c2_visible = { check_variable = { TFRKPHN_brd_kms_sel = 2 } OR = { check_variable = { TFRKPHN_brd_kms_f = 5 } check_variable = { TFRKPHN_brd_kms_f = 42 } } NOT = { has_country_flag = TFRKPHN_brd_kms_done } NOT = { has_country_flag = TFRKPHN_brd_kms_cd } }
+			TFRKPHN_brd_kms_c2_click_enabled = { has_political_power > 24 }
+		}
+	}
+}

@@ -1,0 +1,230 @@
+# [안내] 장관 자리 비우기. KP와 이 모드의 모든 장관을 자리별로 지운다. cab_clear_build.py가 만든다 (2026-11-22).
+TFRKPHN_clear_head_minister = {
+	hidden_effect = {
+		if = { limit = { has_idea = KOR_NCfU_hog_HM } remove_ideas = KOR_NCfU_hog_HM }
+		if = { limit = { has_idea = KOR_ahn_cheol_soo_HM } remove_ideas = KOR_ahn_cheol_soo_HM }
+		if = { limit = { has_idea = KOR_baek_jong_heon_HM } remove_ideas = KOR_baek_jong_heon_HM }
+		if = { limit = { has_idea = KOR_cheon_ha_ram_HM } remove_ideas = KOR_cheon_ha_ram_HM }
+		if = { limit = { has_idea = KOR_cho_eung_cheon_HM } remove_ideas = KOR_cho_eung_cheon_HM }
+		if = { limit = { has_idea = KOR_cho_kuk_HM } remove_ideas = KOR_cho_kuk_HM }
+		if = { limit = { has_idea = KOR_choi_kang_wook_HM } remove_ideas = KOR_choi_kang_wook_HM }
+		if = { limit = { has_idea = KOR_chu_mi_ae_HM } remove_ideas = KOR_chu_mi_ae_HM }
+		if = { limit = { has_idea = KOR_chung_sye_kyun_HM } remove_ideas = KOR_chung_sye_kyun_HM }
+		if = { limit = { has_idea = KOR_ha_tae_kyung_HM } remove_ideas = KOR_ha_tae_kyung_HM }
+		if = { limit = { has_idea = KOR_han_dong_hoon_HM } remove_ideas = KOR_han_dong_hoon_HM }
+		if = { limit = { has_idea = KOR_han_duck_soo_HM } remove_ideas = KOR_han_duck_soo_HM }
+		if = { limit = { has_idea = KOR_han_min_soo_HM } remove_ideas = KOR_han_min_soo_HM }
+		if = { limit = { has_idea = KOR_hong_jun_pyo_HM } remove_ideas = KOR_hong_jun_pyo_HM }
+		if = { limit = { has_idea = KOR_hwang_un_ha_HM } remove_ideas = KOR_hwang_un_ha_HM }
+		if = { limit = { has_idea = KOR_im_jong_seok_HM } remove_ideas = KOR_im_jong_seok_HM }
+		if = { limit = { has_idea = KOR_jeong_seong_ho_HM } remove_ideas = KOR_jeong_seong_ho_HM }
+		if = { limit = { has_idea = KOR_kang_deuk_gu_HM } remove_ideas = KOR_kang_deuk_gu_HM }
+		if = { limit = { has_idea = KOR_kim_bu_gyeom_HM } remove_ideas = KOR_kim_bu_gyeom_HM }
+		if = { limit = { has_idea = KOR_kim_gi_hyeon_HM } remove_ideas = KOR_kim_gi_hyeon_HM }
+		if = { limit = { has_idea = KOR_kim_min_seok_HM } remove_ideas = KOR_kim_min_seok_HM }
+		if = { limit = { has_idea = KOR_kim_moon_soo_HM } remove_ideas = KOR_kim_moon_soo_HM }
+		if = { limit = { has_idea = KOR_kwon_young_se_HM } remove_ideas = KOR_kwon_young_se_HM }
+		if = { limit = { has_idea = KOR_lee_jang_woo_HM } remove_ideas = KOR_lee_jang_woo_HM }
+		if = { limit = { has_idea = KOR_lee_jeong_mi_HM } remove_ideas = KOR_lee_jeong_mi_HM }
+		if = { limit = { has_idea = KOR_lee_jun_seok_HM } remove_ideas = KOR_lee_jun_seok_HM }
+		if = { limit = { has_idea = KOR_lee_ki_in_HM } remove_ideas = KOR_lee_ki_in_HM }
+		if = { limit = { has_idea = KOR_lee_nak_yon_HM } remove_ideas = KOR_lee_nak_yon_HM }
+		if = { limit = { has_idea = KOR_nam_yeong_shin_HM } remove_ideas = KOR_nam_yeong_shin_HM }
+		if = { limit = { has_idea = KOR_park_chan_dae_HM } remove_ideas = KOR_park_chan_dae_HM }
+		if = { limit = { has_idea = KOR_song_myung_sook_HM } remove_ideas = KOR_song_myung_sook_HM }
+		if = { limit = { has_idea = KOR_yeo_young_guk_HM } remove_ideas = KOR_yeo_young_guk_HM }
+		if = { limit = { has_idea = KOR_yoon_eui_cheol_HM } remove_ideas = KOR_yoon_eui_cheol_HM }
+		if = { limit = { has_idea = KOR_yoon_ho_jung_HM } remove_ideas = KOR_yoon_ho_jung_HM }
+		if = { limit = { has_idea = TFRKPHN_cho_eun_hee_HM } remove_ideas = TFRKPHN_cho_eun_hee_HM }
+		if = { limit = { has_idea = TFRKPHN_chung_jin_suk_HM } remove_ideas = TFRKPHN_chung_jin_suk_HM }
+		if = { limit = { has_idea = TFRKPHN_hong_moon_jong_HM } remove_ideas = TFRKPHN_hong_moon_jong_HM }
+		if = { limit = { has_idea = TFRKPHN_lee_in_je_HM } remove_ideas = TFRKPHN_lee_in_je_HM }
+		if = { limit = { has_idea = TFRKPHN_sim_jang_hye_young_HM } remove_ideas = TFRKPHN_sim_jang_hye_young_HM }
+		if = { limit = { has_idea = TFRKPHN_woo_chung_sye_kyun_HM } remove_ideas = TFRKPHN_woo_chung_sye_kyun_HM }
+		if = { limit = { has_idea = TFRKPHN_yoon_hee_sook_HM } remove_ideas = TFRKPHN_yoon_hee_sook_HM }
+	}
+}
+TFRKPHN_clear_foreign_minister = {
+	hidden_effect = {
+		if = { limit = { has_idea = KOR_cho_hyun_FM } remove_ideas = KOR_cho_hyun_FM }
+		if = { limit = { has_idea = KOR_cho_sei_young_FM } remove_ideas = KOR_cho_sei_young_FM }
+		if = { limit = { has_idea = KOR_cho_tae_yeol_FM } remove_ideas = KOR_cho_tae_yeol_FM }
+		if = { limit = { has_idea = KOR_choi_jong_kun_FM } remove_ideas = KOR_choi_jong_kun_FM }
+		if = { limit = { has_idea = KOR_chung_eui_yong_FM } remove_ideas = KOR_chung_eui_yong_FM }
+		if = { limit = { has_idea = KOR_hong_kee_won_FM } remove_ideas = KOR_hong_kee_won_FM }
+		if = { limit = { has_idea = KOR_jeong_byeong_guk_FM } remove_ideas = KOR_jeong_byeong_guk_FM }
+		if = { limit = { has_idea = KOR_jeong_ho_jin_FM } remove_ideas = KOR_jeong_ho_jin_FM }
+		if = { limit = { has_idea = KOR_kang_kyung_hwa_FM } remove_ideas = KOR_kang_kyung_hwa_FM }
+		if = { limit = { has_idea = KOR_kim_geon_FM } remove_ideas = KOR_kim_geon_FM }
+		if = { limit = { has_idea = KOR_kim_kyou_hyun_FM } remove_ideas = KOR_kim_kyou_hyun_FM }
+		if = { limit = { has_idea = KOR_kim_sung_han_FM } remove_ideas = KOR_kim_sung_han_FM }
+		if = { limit = { has_idea = KOR_lee_hae_young_FM } remove_ideas = KOR_lee_hae_young_FM }
+		if = { limit = { has_idea = KOR_moon_jeong_in_FM } remove_ideas = KOR_moon_jeong_in_FM }
+		if = { limit = { has_idea = KOR_noh_young_min_FM } remove_ideas = KOR_noh_young_min_FM }
+		if = { limit = { has_idea = KOR_park_jin_FM } remove_ideas = KOR_park_jin_FM }
+		if = { limit = { has_idea = KOR_park_min_sik_FM } remove_ideas = KOR_park_min_sik_FM }
+		if = { limit = { has_idea = KOR_park_no_ja_FM } remove_ideas = KOR_park_no_ja_FM }
+		if = { limit = { has_idea = KOR_ryu_si_min_FM } remove_ideas = KOR_ryu_si_min_FM }
+		if = { limit = { has_idea = KOR_wi_sung_lac_FM } remove_ideas = KOR_wi_sung_lac_FM }
+		if = { limit = { has_idea = KOR_yoon_sang_hyeon_FM } remove_ideas = KOR_yoon_sang_hyeon_FM }
+		if = { limit = { has_idea = TFRKPHN_cho_hyun_dong_FM } remove_ideas = TFRKPHN_cho_hyun_dong_FM }
+		if = { limit = { has_idea = TFRKPHN_kim_dae_sik_FM } remove_ideas = TFRKPHN_kim_dae_sik_FM }
+		if = { limit = { has_idea = TFRKPHN_sim_lee_jeong_mi_FM } remove_ideas = TFRKPHN_sim_lee_jeong_mi_FM }
+		if = { limit = { has_idea = TFRKPHN_woo_park_jin_FM } remove_ideas = TFRKPHN_woo_park_jin_FM }
+		if = { limit = { has_idea = TFRKPHN_yoon_sang_hyeon_FM } remove_ideas = TFRKPHN_yoon_sang_hyeon_FM }
+	}
+}
+TFRKPHN_clear_economic_minister = {
+	hidden_effect = {
+		if = { limit = { has_idea = KOR_cho_seung_rae_EM } remove_ideas = KOR_cho_seung_rae_EM }
+		if = { limit = { has_idea = KOR_cho_sung_chan_EM } remove_ideas = KOR_cho_sung_chan_EM }
+		if = { limit = { has_idea = KOR_choi_sang_mok_EM } remove_ideas = KOR_choi_sang_mok_EM }
+		if = { limit = { has_idea = KOR_choo_kyung_hoo_EM } remove_ideas = KOR_choo_kyung_hoo_EM }
+		if = { limit = { has_idea = KOR_ha_joon_kyung_EM } remove_ideas = KOR_ha_joon_kyung_EM }
+		if = { limit = { has_idea = KOR_hong_nam_gi_EM } remove_ideas = KOR_hong_nam_gi_EM }
+		if = { limit = { has_idea = KOR_jin_sung_joon_EM } remove_ideas = KOR_jin_sung_joon_EM }
+		if = { limit = { has_idea = KOR_kim_chul_geun_EM } remove_ideas = KOR_kim_chul_geun_EM }
+		if = { limit = { has_idea = KOR_kim_dong_yeon_EM } remove_ideas = KOR_kim_dong_yeon_EM }
+		if = { limit = { has_idea = KOR_kim_tae_nyeon_EM } remove_ideas = KOR_kim_tae_nyeon_EM }
+		if = { limit = { has_idea = KOR_kim_yong_beom_EM } remove_ideas = KOR_kim_yong_beom_EM }
+		if = { limit = { has_idea = KOR_ko_dong_jin_EM } remove_ideas = KOR_ko_dong_jin_EM }
+		if = { limit = { has_idea = KOR_koo_yun_cheol_EM } remove_ideas = KOR_koo_yun_cheol_EM }
+		if = { limit = { has_idea = KOR_lee_bok_hyeon_EM } remove_ideas = KOR_lee_bok_hyeon_EM }
+		if = { limit = { has_idea = KOR_lee_han_ju_EM } remove_ideas = KOR_lee_han_ju_EM }
+		if = { limit = { has_idea = KOR_lee_hyung_il_EM } remove_ideas = KOR_lee_hyung_il_EM }
+		if = { limit = { has_idea = KOR_lee_joon_koo_EM } remove_ideas = KOR_lee_joon_koo_EM }
+		if = { limit = { has_idea = KOR_na_won_joon_EM } remove_ideas = KOR_na_won_joon_EM }
+		if = { limit = { has_idea = KOR_park_yong_jin_EM } remove_ideas = KOR_park_yong_jin_EM }
+		if = { limit = { has_idea = KOR_rhee_chang_yong_EM } remove_ideas = KOR_rhee_chang_yong_EM }
+		if = { limit = { has_idea = KOR_seo_wang_jin_EM } remove_ideas = KOR_seo_wang_jin_EM }
+		if = { limit = { has_idea = KOR_song_eon_seok_EM } remove_ideas = KOR_song_eon_seok_EM }
+		if = { limit = { has_idea = KOR_woo_seok_hoon_EM } remove_ideas = KOR_woo_seok_hoon_EM }
+		if = { limit = { has_idea = KOR_yoon_hee_suk_EM } remove_ideas = KOR_yoon_hee_suk_EM }
+		if = { limit = { has_idea = TFRKPHN_bang_ki_sun_EM } remove_ideas = TFRKPHN_bang_ki_sun_EM }
+		if = { limit = { has_idea = TFRKPHN_koh_dong_jin_EM } remove_ideas = TFRKPHN_koh_dong_jin_EM }
+		if = { limit = { has_idea = TFRKPHN_oh_kyung_hoon_EM } remove_ideas = TFRKPHN_oh_kyung_hoon_EM }
+		if = { limit = { has_idea = TFRKPHN_seo_byung_soo_EM } remove_ideas = TFRKPHN_seo_byung_soo_EM }
+		if = { limit = { has_idea = TFRKPHN_sim_kang_eun_mi_EM } remove_ideas = TFRKPHN_sim_kang_eun_mi_EM }
+		if = { limit = { has_idea = TFRKPHN_woo_kim_dong_yeon_EM } remove_ideas = TFRKPHN_woo_kim_dong_yeon_EM }
+	}
+}
+TFRKPHN_clear_interior_minister = {
+	hidden_effect = {
+		if = { limit = { has_idea = KOR_bae_jin_gyo_IM } remove_ideas = KOR_bae_jin_gyo_IM }
+		if = { limit = { has_idea = KOR_choi_min_hee_IM } remove_ideas = KOR_choi_min_hee_IM }
+		if = { limit = { has_idea = KOR_hwang_myeong_seon_IM } remove_ideas = KOR_hwang_myeong_seon_IM }
+		if = { limit = { has_idea = KOR_im_jong_seok_IM } remove_ideas = KOR_im_jong_seok_IM }
+		if = { limit = { has_idea = KOR_jeon_hae_cheol_IM } remove_ideas = KOR_jeon_hae_cheol_IM }
+		if = { limit = { has_idea = KOR_jeong_kyeong_doo_IM } remove_ideas = KOR_jeong_kyeong_doo_IM }
+		if = { limit = { has_idea = KOR_jin_young_IM } remove_ideas = KOR_jin_young_IM }
+		if = { limit = { has_idea = KOR_joo_jin_woo_IM } remove_ideas = KOR_joo_jin_woo_IM }
+		if = { limit = { has_idea = KOR_kang_ki_jung_IM } remove_ideas = KOR_kang_ki_jung_IM }
+		if = { limit = { has_idea = KOR_kang_sung_hee_IM } remove_ideas = KOR_kang_sung_hee_IM }
+		if = { limit = { has_idea = KOR_kim_doo_kyeom_IM } remove_ideas = KOR_kim_doo_kyeom_IM }
+		if = { limit = { has_idea = KOR_kim_gyeong_soo_IM } remove_ideas = KOR_kim_gyeong_soo_IM }
+		if = { limit = { has_idea = KOR_kim_yong_tae_IM } remove_ideas = KOR_kim_yong_tae_IM }
+		if = { limit = { has_idea = KOR_lee_chul_gyu_IM } remove_ideas = KOR_lee_chul_gyu_IM }
+		if = { limit = { has_idea = KOR_lee_hae_sik_IM } remove_ideas = KOR_lee_hae_sik_IM }
+		if = { limit = { has_idea = KOR_lee_hyang_hee_IM } remove_ideas = KOR_lee_hyang_hee_IM }
+		if = { limit = { has_idea = KOR_lee_sang_kyu_IM } remove_ideas = KOR_lee_sang_kyu_IM }
+		if = { limit = { has_idea = KOR_lee_sang_min_IM } remove_ideas = KOR_lee_sang_min_IM }
+		if = { limit = { has_idea = KOR_lee_won_ook_IM } remove_ideas = KOR_lee_won_ook_IM }
+		if = { limit = { has_idea = KOR_park_eun_jung_IM } remove_ideas = KOR_park_eun_jung_IM }
+		if = { limit = { has_idea = KOR_park_wan_su_IM } remove_ideas = KOR_park_wan_su_IM }
+		if = { limit = { has_idea = KOR_won_hee_ryong_IM } remove_ideas = KOR_won_hee_ryong_IM }
+		if = { limit = { has_idea = KOR_wu_won_sik_IM } remove_ideas = KOR_wu_won_sik_IM }
+		if = { limit = { has_idea = KOR_yeom_tae_young_IM } remove_ideas = KOR_yeom_tae_young_IM }
+		if = { limit = { has_idea = KOR_yoon_ho_jung_IM } remove_ideas = KOR_yoon_ho_jung_IM }
+		if = { limit = { has_idea = KOR_yu_eui_dong_IM } remove_ideas = KOR_yu_eui_dong_IM }
+		if = { limit = { has_idea = TFRKPHN_hong_il_pyo_IM } remove_ideas = TFRKPHN_hong_il_pyo_IM }
+		if = { limit = { has_idea = TFRKPHN_kim_jin_tae_IM } remove_ideas = TFRKPHN_kim_jin_tae_IM }
+		if = { limit = { has_idea = TFRKPHN_lee_myoung_su_IM } remove_ideas = TFRKPHN_lee_myoung_su_IM }
+		if = { limit = { has_idea = TFRKPHN_sim_kwon_young_gook_IM } remove_ideas = TFRKPHN_sim_kwon_young_gook_IM }
+		if = { limit = { has_idea = TFRKPHN_woo_kim_bu_gyeom_IM } remove_ideas = TFRKPHN_woo_kim_bu_gyeom_IM }
+	}
+}
+TFRKPHN_clear_intelligence_minister = {
+	hidden_effect = {
+		if = { limit = { has_idea = KOR_cho_ji_hoon_IntelM } remove_ideas = KOR_cho_ji_hoon_IntelM }
+		if = { limit = { has_idea = KOR_cho_sang_jun_IntelM } remove_ideas = KOR_cho_sang_jun_IntelM }
+		if = { limit = { has_idea = KOR_chung_eui_yong_IntelM } remove_ideas = KOR_chung_eui_yong_IntelM }
+		if = { limit = { has_idea = KOR_ha_seung_soo_IntelM } remove_ideas = KOR_ha_seung_soo_IntelM }
+		if = { limit = { has_idea = KOR_ha_tae_keung_IntelM } remove_ideas = KOR_ha_tae_keung_IntelM }
+		if = { limit = { has_idea = KOR_hwang_hyun_seon_IntelM } remove_ideas = KOR_hwang_hyun_seon_IntelM }
+		if = { limit = { has_idea = KOR_im_jong_deuk_IntelM } remove_ideas = KOR_im_jong_deuk_IntelM }
+		if = { limit = { has_idea = KOR_jang_yeo_kyung_IntelM } remove_ideas = KOR_jang_yeo_kyung_IntelM }
+		if = { limit = { has_idea = KOR_jeon_jae_sung_IntelM } remove_ideas = KOR_jeon_jae_sung_IntelM }
+		if = { limit = { has_idea = KOR_kim_seung_han_IntelM } remove_ideas = KOR_kim_seung_han_IntelM }
+		if = { limit = { has_idea = KOR_kim_tae_hyo_IntelM } remove_ideas = KOR_kim_tae_hyo_IntelM }
+		if = { limit = { has_idea = KOR_lee_dong_soo_IntelM } remove_ideas = KOR_lee_dong_soo_IntelM }
+		if = { limit = { has_idea = KOR_lee_jong_seok_IntelM } remove_ideas = KOR_lee_jong_seok_IntelM }
+		if = { limit = { has_idea = KOR_lee_sung_yoon_IntelM } remove_ideas = KOR_lee_sung_yoon_IntelM }
+		if = { limit = { has_idea = KOR_moon_sang_ho_IntelM } remove_ideas = KOR_moon_sang_ho_IntelM }
+		if = { limit = { has_idea = KOR_nam_gwan_pyo_IntelM } remove_ideas = KOR_nam_gwan_pyo_IntelM }
+		if = { limit = { has_idea = KOR_nam_joo_hong_IntelM } remove_ideas = KOR_nam_joo_hong_IntelM }
+		if = { limit = { has_idea = KOR_park_joo_min_IntelM } remove_ideas = KOR_park_joo_min_IntelM }
+		if = { limit = { has_idea = KOR_park_sun_won_IntelM } remove_ideas = KOR_park_sun_won_IntelM }
+		if = { limit = { has_idea = KOR_roh_sang_won_IntelM } remove_ideas = KOR_roh_sang_won_IntelM }
+		if = { limit = { has_idea = KOR_suh_hoon_IntelM } remove_ideas = KOR_suh_hoon_IntelM }
+		if = { limit = { has_idea = KOR_yoon_sang_hyun_IntelM } remove_ideas = KOR_yoon_sang_hyun_IntelM }
+		if = { limit = { has_idea = KOR_youn_kun_young_IntelM } remove_ideas = KOR_youn_kun_young_IntelM }
+		if = { limit = { has_idea = TFRKPHN_hwangbo_seung_hee_IntelM } remove_ideas = TFRKPHN_hwangbo_seung_hee_IntelM }
+		if = { limit = { has_idea = TFRKPHN_kim_hong_kyun_IntelM } remove_ideas = TFRKPHN_kim_hong_kyun_IntelM }
+		if = { limit = { has_idea = TFRKPHN_sim_lee_dong_soo_IntelM } remove_ideas = TFRKPHN_sim_lee_dong_soo_IntelM }
+		if = { limit = { has_idea = TFRKPHN_woo_suh_hoon_IntelM } remove_ideas = TFRKPHN_woo_suh_hoon_IntelM }
+		if = { limit = { has_idea = TFRKPHN_yoon_jae_ok_IntelM } remove_ideas = TFRKPHN_yoon_jae_ok_IntelM }
+	}
+}
+TFRKPHN_clear_theorist_minister = {
+	hidden_effect = {
+		if = { limit = { has_idea = KOR_an_gyu_baek_TM } remove_ideas = KOR_an_gyu_baek_TM }
+		if = { limit = { has_idea = KOR_bang_hye_rin_TM } remove_ideas = KOR_bang_hye_rin_TM }
+		if = { limit = { has_idea = KOR_boo_seung_chan_TM } remove_ideas = KOR_boo_seung_chan_TM }
+		if = { limit = { has_idea = KOR_han_ki_ho_TM } remove_ideas = KOR_han_ki_ho_TM }
+		if = { limit = { has_idea = KOR_jeong_kyeong_doo_TM } remove_ideas = KOR_jeong_kyeong_doo_TM }
+		if = { limit = { has_idea = KOR_kang_shin_cheol_TM } remove_ideas = KOR_kang_shin_cheol_TM }
+		if = { limit = { has_idea = KOR_kim_byung_joo_TM } remove_ideas = KOR_kim_byung_joo_TM }
+		if = { limit = { has_idea = KOR_kim_jong_dae_TM } remove_ideas = KOR_kim_jong_dae_TM }
+		if = { limit = { has_idea = KOR_kim_jong_min_TM } remove_ideas = KOR_kim_jong_min_TM }
+		if = { limit = { has_idea = KOR_kim_yong_hyeon_TM } remove_ideas = KOR_kim_yong_hyeon_TM }
+		if = { limit = { has_idea = KOR_kim_yong_woo_TM } remove_ideas = KOR_kim_yong_woo_TM }
+		if = { limit = { has_idea = KOR_kim_young_woo_TM } remove_ideas = KOR_kim_young_woo_TM }
+		if = { limit = { has_idea = KOR_ko_chang_jun_TM } remove_ideas = KOR_ko_chang_jun_TM }
+		if = { limit = { has_idea = KOR_lee_jung_sub_TM } remove_ideas = KOR_lee_jung_sub_TM }
+		if = { limit = { has_idea = KOR_lim_ho_young_TM } remove_ideas = KOR_lim_ho_young_TM }
+		if = { limit = { has_idea = KOR_lim_jong_deuk_TM } remove_ideas = KOR_lim_jong_deuk_TM }
+		if = { limit = { has_idea = KOR_na_kyung_chae_TM } remove_ideas = KOR_na_kyung_chae_TM }
+		if = { limit = { has_idea = KOR_nmhtetrokm_TM } remove_ideas = KOR_nmhtetrokm_TM }
+		if = { limit = { has_idea = KOR_no_sang_won_TM } remove_ideas = KOR_no_sang_won_TM }
+		if = { limit = { has_idea = KOR_ryu_si_min_TM } remove_ideas = KOR_ryu_si_min_TM }
+		if = { limit = { has_idea = KOR_shin_won_sik_TM } remove_ideas = KOR_shin_won_sik_TM }
+		if = { limit = { has_idea = KOR_song_gap_seok_TM } remove_ideas = KOR_song_gap_seok_TM }
+		if = { limit = { has_idea = KOR_song_young_moo_TM } remove_ideas = KOR_song_young_moo_TM }
+		if = { limit = { has_idea = KOR_suh_wook_TM } remove_ideas = KOR_suh_wook_TM }
+		if = { limit = { has_idea = KOR_yoon_jae_gwan_TM } remove_ideas = KOR_yoon_jae_gwan_TM }
+		if = { limit = { has_idea = KOR_yu_in_heung_TM } remove_ideas = KOR_yu_in_heung_TM }
+		if = { limit = { has_idea = TFRKPHN_kim_yong_hyeon_TM } remove_ideas = TFRKPHN_kim_yong_hyeon_TM }
+		if = { limit = { has_idea = TFRKPHN_lim_jong_deuk_TM } remove_ideas = TFRKPHN_lim_jong_deuk_TM }
+		if = { limit = { has_idea = TFRKPHN_shin_beom_chul_TM } remove_ideas = TFRKPHN_shin_beom_chul_TM }
+		if = { limit = { has_idea = TFRKPHN_sim_kim_jong_dae_TM } remove_ideas = TFRKPHN_sim_kim_jong_dae_TM }
+		if = { limit = { has_idea = TFRKPHN_woo_kim_yong_woo_TM } remove_ideas = TFRKPHN_woo_kim_yong_woo_TM }
+	}
+}
+TFRKPHN_clear_all_ministers = {
+	TFRKPHN_clear_head_minister = yes
+	TFRKPHN_clear_foreign_minister = yes
+	TFRKPHN_clear_economic_minister = yes
+	TFRKPHN_clear_interior_minister = yes
+	TFRKPHN_clear_intelligence_minister = yes
+	TFRKPHN_clear_theorist_minister = yes
+}
+TFRKPHN_clear_yoon_cabinet = {
+	hidden_effect = {
+		if = { limit = { has_idea = KOR_han_duck_soo_HM } remove_ideas = KOR_han_duck_soo_HM }
+		if = { limit = { has_idea = KOR_park_jin_FM } remove_ideas = KOR_park_jin_FM }
+		if = { limit = { has_idea = KOR_choo_kyung_hoo_EM } remove_ideas = KOR_choo_kyung_hoo_EM }
+		if = { limit = { has_idea = KOR_lee_sang_min_IM } remove_ideas = KOR_lee_sang_min_IM }
+		if = { limit = { has_idea = KOR_kim_seung_han_IntelM } remove_ideas = KOR_kim_seung_han_IntelM }
+		if = { limit = { has_idea = KOR_lee_jung_sub_TM } remove_ideas = KOR_lee_jung_sub_TM }
+	}
+}

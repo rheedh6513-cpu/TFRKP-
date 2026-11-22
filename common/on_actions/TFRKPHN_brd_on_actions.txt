@@ -1,0 +1,8 @@
+# [안내] 한국이 AI일 때 삼김 판을 대신 둔다 (사용자 2026-11-22). board_build.py가 만든다.
+on_actions = {
+	on_weekly_KOR = {
+		effect = {
+			if = { limit = { is_ai = yes } TFRKPHN_brd_ai = yes }
+		}
+	}
+}

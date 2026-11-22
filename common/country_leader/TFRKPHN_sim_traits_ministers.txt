@@ -1,0 +1,27 @@
+# [안내] 심상정 정부 장관 특성. sim_build.py가 만든다.
+leader_traits = {
+	# 장혜영
+	TFRKPHN_trait_documentary_director = {
+		random = no
+		stability_factor = 0.03
+		political_power_factor = 0.03
+	}
+	# 이정미
+	TFRKPHN_trait_jp_leader = {
+		random = no
+		improve_relations_maintain_cost_factor = -0.10
+		opinion_gain_monthly_factor = 0.10
+	}
+	# 강은미
+	TFRKPHN_trait_jp_floor_leader = {
+		random = no
+		consumer_goods_factor = -0.02
+		stability_factor = 0.02
+	}
+	# 권영국
+	TFRKPHN_trait_labor_lawyer = {
+		random = no
+		stability_factor = 0.03
+		production_speed_buildings_factor = 0.03
+	}
+}

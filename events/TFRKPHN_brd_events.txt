@@ -1,0 +1,86 @@
+# [안내] 삼김 판의 결말 이벤트. board_build.py(board_ev.py)가 만든다.
+add_namespace = tfrkphn
+country_event = {
+	id = tfrkphn.7124
+	title = tfrkphn.7124.t
+	desc = tfrkphn.7124.d
+	picture = GFX_TFRKPHN_imp_doc
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7124.a
+		add_stability = 0.05
+		add_political_power = 100
+	}
+}
+country_event = {
+	id = tfrkphn.7125
+	title = tfrkphn.7125.t
+	desc = tfrkphn.7125.d
+	picture = GFX_report_event_kor_minju_disagree
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7125.a
+		add_stability = -0.05
+		add_political_power = -50
+	}
+}
+country_event = {
+	id = tfrkphn.7126
+	title = tfrkphn.7126.t
+	desc = tfrkphn.7126.d
+	picture = GFX_TFRKPHN_imp_doc
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7126.a
+		add_stability = 0.05
+		add_political_power = 100
+	}
+}
+country_event = {
+	id = tfrkphn.7127
+	title = tfrkphn.7127.t
+	desc = tfrkphn.7127.d
+	picture = GFX_TFRKPHN_imp_doc
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7127.a
+		add_stability = 0.02
+		add_political_power = 50
+	}
+}
+country_event = {
+	id = tfrkphn.7128
+	title = tfrkphn.7128.t
+	desc = tfrkphn.7128.d
+	picture = GFX_report_event_kor_seoul_city
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7128.a
+		add_stability = -0.05
+		add_political_power = -50
+	}
+}
+country_event = {
+	id = tfrkphn.7129
+	title = tfrkphn.7129.t
+	desc = tfrkphn.7129.d
+	picture = GFX_report_event_kor_party1
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7129.a
+		add_stability = 0.05
+		add_political_power = 100
+	}
+}
+country_event = {
+	id = tfrkphn.7130
+	title = tfrkphn.7130.t
+	desc = tfrkphn.7130.d
+	picture = GFX_report_event_kor_seoul_riot
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7130.a
+		add_stability = -0.05
+		add_political_power = -50
+	}
+}

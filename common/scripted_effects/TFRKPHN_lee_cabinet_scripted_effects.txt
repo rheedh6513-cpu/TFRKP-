@@ -16,6 +16,7 @@ TFRKPHN_lee_cabinet_appoint = {
 		if = {
 			limit = { NOT = { has_country_flag = TFRKPHN_lee_cabinet_set } }
 			set_country_flag = TFRKPHN_lee_cabinet_set
+			TFRKPHN_clear_all_ministers = yes	# # 이전 장관 모두 비우기 (cab_clear_build.py, 2026-11-22)
 			if = { limit = { has_idea = TFRKPHN_lee_in_je_HM } remove_ideas = TFRKPHN_lee_in_je_HM }
 			if = { limit = { NOT = { has_idea = TFRKPHN_chung_jin_suk_HM } } add_ideas = TFRKPHN_chung_jin_suk_HM }
 			if = { limit = { has_idea = TFRKPHN_kim_dae_sik_FM } remove_ideas = TFRKPHN_kim_dae_sik_FM }
