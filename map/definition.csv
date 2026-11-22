@@ -12058,7 +12058,7 @@
 12057;173;162;67;land;false;mountain;6
 12058;173;162;217;land;true;plains;1
 12059;173;165;32;land;false;mountain;6
-12060;173;165;182;land;true;jinju;6
+12060;173;165;182;land;true;changwon;6
 12061;173;168;97;land;false;forest;6
 12062;173;168;147;land;false;forest;6
 12063;173;168;202;land;true;plains;6
@@ -14225,7 +14225,7 @@
 14224;178;24;234;land;false;hills;6
 14225;73;226;170;land;false;hills;6
 14226;35;17;29;land;true;hills;6
-14227;223;16;178;land;true;changwon;6
+14227;223;16;178;land;true;jinju;6
 14228;71;84;218;land;false;gwangju;6
 14229;172;38;244;land;false;plains;6
 14230;25;237;126;land;false;urban;6
