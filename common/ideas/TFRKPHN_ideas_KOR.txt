@@ -18,7 +18,7 @@ ideas = {
 			allowed = { original_tag = KOR }
 			allowed_to_remove = { head_minister_trigger = yes }
 			available = { }
-			visible = { OR = { has_country_flag = TFRKP_HN_hong_president AND = { has_idea = TFRKPHN_lee_in_je_HM has_country_flag = TFRKPHN_successor_lee_in_je } } }
+			visible = { OR = { AND = { has_country_flag = TFRKP_HN_hong_president NOT = { has_country_flag = TFRKPHN_imp_done } } AND = { has_idea = TFRKPHN_lee_in_je_HM has_country_flag = TFRKPHN_successor_lee_in_je } } }
 			traits = {
 				KOR_faction_PPP
 				TFRKPHN_trait_first_elected_governor
@@ -40,7 +40,7 @@ ideas = {
 			picture = TFRKPHN_kim_dae_sik
 			allowed = { original_tag = KOR }
 			available = { }
-			visible = { OR = { has_country_flag = TFRKP_HN_hong_president AND = { has_idea = TFRKPHN_kim_dae_sik_FM OR = { has_country_flag = TFRKPHN_successor_lee_in_je has_country_flag = TFRKPHN_successor_oh_se_hoon } } } }
+			visible = { OR = { AND = { has_country_flag = TFRKP_HN_hong_president NOT = { has_country_flag = TFRKPHN_imp_done } } AND = { has_idea = TFRKPHN_kim_dae_sik_FM OR = { has_country_flag = TFRKPHN_successor_lee_in_je has_country_flag = TFRKPHN_successor_oh_se_hoon } } } }
 			traits = {
 				KOR_faction_PPP
 				TFRKPHN_trait_night_school_president
@@ -62,7 +62,7 @@ ideas = {
 			picture = TFRKPHN_seo_byung_soo
 			allowed = { original_tag = KOR }
 			available = { }
-			visible = { OR = { has_country_flag = TFRKP_HN_hong_president AND = { has_idea = TFRKPHN_seo_byung_soo_EM has_country_flag = TFRKPHN_successor_lee_in_je } } }
+			visible = { OR = { AND = { has_country_flag = TFRKP_HN_hong_president NOT = { has_country_flag = TFRKPHN_imp_done } } AND = { has_idea = TFRKPHN_seo_byung_soo_EM has_country_flag = TFRKPHN_successor_lee_in_je } } }
 			traits = {
 				KOR_faction_PPP
 				TFRKPHN_trait_busan_mayor
@@ -84,7 +84,7 @@ ideas = {
 			picture = TFRKPHN_hong_il_pyo
 			allowed = { original_tag = KOR }
 			available = { }
-			visible = { OR = { has_country_flag = TFRKP_HN_hong_president AND = { has_idea = TFRKPHN_hong_il_pyo_IM OR = { has_country_flag = TFRKPHN_successor_lee_in_je has_country_flag = TFRKPHN_successor_oh_se_hoon } } } }
+			visible = { OR = { AND = { has_country_flag = TFRKP_HN_hong_president NOT = { has_country_flag = TFRKPHN_imp_done } } AND = { has_idea = TFRKPHN_hong_il_pyo_IM OR = { has_country_flag = TFRKPHN_successor_lee_in_je has_country_flag = TFRKPHN_successor_oh_se_hoon } } } }
 			traits = {
 				KOR_faction_PPP
 				TFRKPHN_trait_former_judge
@@ -106,7 +106,7 @@ ideas = {
 			picture = TFRKPHN_yoon_jae_ok
 			allowed = { original_tag = KOR }
 			available = { }
-			visible = { OR = { has_country_flag = TFRKP_HN_hong_president AND = { has_idea = TFRKPHN_yoon_jae_ok_IntelM OR = { has_country_flag = TFRKPHN_successor_lee_in_je has_country_flag = TFRKPHN_successor_oh_se_hoon } } } }
+			visible = { OR = { AND = { has_country_flag = TFRKP_HN_hong_president NOT = { has_country_flag = TFRKPHN_imp_done } } AND = { has_idea = TFRKPHN_yoon_jae_ok_IntelM OR = { has_country_flag = TFRKPHN_successor_lee_in_je has_country_flag = TFRKPHN_successor_oh_se_hoon } } } }
 			traits = {
 				KOR_faction_PPP
 				TFRKPHN_trait_police_intelligence
@@ -128,7 +128,7 @@ ideas = {
 			picture = TFRKPHN_lim_jong_deuk
 			allowed = { original_tag = KOR }
 			available = { }
-			visible = { OR = { has_country_flag = TFRKP_HN_hong_president AND = { has_idea = TFRKPHN_lim_jong_deuk_TM OR = { has_country_flag = TFRKPHN_successor_lee_in_je has_country_flag = TFRKPHN_successor_oh_se_hoon } } } }
+			visible = { OR = { AND = { has_country_flag = TFRKP_HN_hong_president NOT = { has_country_flag = TFRKPHN_imp_done } } AND = { has_idea = TFRKPHN_lim_jong_deuk_TM OR = { has_country_flag = TFRKPHN_successor_lee_in_je has_country_flag = TFRKPHN_successor_oh_se_hoon } } } }
 			traits = {
 				KOR_faction_PPP
 				TFRKPHN_trait_field_and_staff

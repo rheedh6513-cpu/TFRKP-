@@ -43,6 +43,7 @@ country_event = {
 	immediate = {
 		hidden_effect = {
 			set_country_flag = TFRKPHN_imp_done
+			if = { limit = { NOT = { has_country_flag = TFRKPHN_orp_formed } } country_event = { id = tfrkphn.7024 days = 1 } }	# 탄핵이 일찍 끝나도 탈당파가 우리공화당으로 간다 (사용자 2026-11-22 버그 신고)
 			remove_mission = TFRKPHN_support_decay_mission	# 홍준표 민심 미션을 멈춘다 (2026-11-21)
 			clr_country_flag = TFRKPHN_imp_on
 			clr_country_flag = TFRKPHN_imp_ready
