@@ -56,4 +56,78 @@ spriteTypes = {
 		name = "GFX_terrain_sejong_winter"
 		textureFile = "gfx/interface/terrains/sejong_winter.png"
 	}
+	# 남한 도시 아홉 곳 (terrain_city_build.py)
+	spriteType = {
+		name = "GFX_terrain_chuncheon"
+		textureFile = "gfx/interface/terrains/chuncheon.png"
+	}
+	spriteType = {
+		name = "GFX_terrain_chuncheon_winter"
+		textureFile = "gfx/interface/terrains/chuncheon_winter.png"
+	}
+	spriteType = {
+		name = "GFX_terrain_gangneung"
+		textureFile = "gfx/interface/terrains/gangneung.png"
+	}
+	spriteType = {
+		name = "GFX_terrain_gangneung_winter"
+		textureFile = "gfx/interface/terrains/gangneung_winter.png"
+	}
+	spriteType = {
+		name = "GFX_terrain_pohang"
+		textureFile = "gfx/interface/terrains/pohang.png"
+	}
+	spriteType = {
+		name = "GFX_terrain_pohang_winter"
+		textureFile = "gfx/interface/terrains/pohang_winter.png"
+	}
+	spriteType = {
+		name = "GFX_terrain_mungyeong"
+		textureFile = "gfx/interface/terrains/mungyeong.png"
+	}
+	spriteType = {
+		name = "GFX_terrain_mungyeong_winter"
+		textureFile = "gfx/interface/terrains/mungyeong_winter.png"
+	}
+	spriteType = {
+		name = "GFX_terrain_changwon"
+		textureFile = "gfx/interface/terrains/changwon.png"
+	}
+	spriteType = {
+		name = "GFX_terrain_changwon_winter"
+		textureFile = "gfx/interface/terrains/changwon_winter.png"
+	}
+	spriteType = {
+		name = "GFX_terrain_jinju"
+		textureFile = "gfx/interface/terrains/jinju.png"
+	}
+	spriteType = {
+		name = "GFX_terrain_jinju_winter"
+		textureFile = "gfx/interface/terrains/jinju_winter.png"
+	}
+	spriteType = {
+		name = "GFX_terrain_dangjin"
+		textureFile = "gfx/interface/terrains/dangjin.png"
+	}
+	spriteType = {
+		name = "GFX_terrain_dangjin_winter"
+		textureFile = "gfx/interface/terrains/dangjin_winter.png"
+	}
+	spriteType = {
+		name = "GFX_terrain_mokpo"
+		textureFile = "gfx/interface/terrains/mokpo.png"
+	}
+	spriteType = {
+		name = "GFX_terrain_mokpo_winter"
+		textureFile = "gfx/interface/terrains/mokpo_winter.png"
+	}
+	spriteType = {
+		name = "GFX_terrain_suncheon"
+		textureFile = "gfx/interface/terrains/suncheon.png"
+	}
+	spriteType = {
+		name = "GFX_terrain_suncheon_winter"
+		textureFile = "gfx/interface/terrains/suncheon_winter.png"
+	}
+	# 아홉 곳 끝
 }

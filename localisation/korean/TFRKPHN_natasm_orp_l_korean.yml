@@ -4,7 +4,7 @@
  TFRKPHN_NA_orp_name:0 "우익 정당 ([?KOR_NatAsm_ORP_seats]석)"
  TFRKPHN_NA_kp_name:0 "[GetNatAsmPartyName] ([GetKORNatAsmSeatsDynamic])"
  TFRKPHN_NA_kp_desc:0 "[GetNatAsmPartyDesc]"
- TFRKPHN_NA_orp_member_on:0 "§G£GFX_TFRKPHN_orp_texticon 우리공화당§!"
+ TFRKPHN_NA_orp_member_on:0 "§G£GFX_TFRKPHN_orp_party_texticon 우리공화당§!"
  TFRKPHN_NA_orp_member_none:0 "§g원내 의석 없음§!"
  TFRKPHN_NA_orp_desc:0 "£GFX_TFRKPHN_orp_texticon §W우익 정당§!\n\n\n\n\n£GFX_TFRKPHN_orp_banner_texticon\n\n\n\n\n\n£GFX_TFRKPHN_orp_texticon §W우익 정당§!§L들은 박근혜 전 대통령 탄핵에 반대한 태극기 집회를 기반으로 등장한 정당들입니다. 이들은 보수 정당보다 더 강한 반공과 안보를 내세우며, 원내에서 보수 정당과 따로 움직입니다.§!\n§W------------§!\n§W원내 우익 정당 목록§!\n[TFRKPHN_NA_orp_member]"
  TFRKPHN_NA_orp_line_on:0 "\n§W우익 정당§!: [?KOR_NatAsm_ORP_seats]석"

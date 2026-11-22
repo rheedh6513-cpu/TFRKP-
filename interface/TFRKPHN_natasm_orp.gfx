@@ -17,6 +17,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/GUI/TFRKPHN_natasm/orp_texticon.png"
 	}
 	spriteType = {
+		name = "GFX_TFRKPHN_orp_party_texticon"
+		texturefile = "gfx/interface/GUI/TFRKPHN_natasm/orp_party_texticon.png"
+	}
+	spriteType = {
 		name = "GFX_TFRKPHN_NatAsm_party_icon"
 		texturefile = "gfx/interface/GUI/TFRKPHN_natasm/parties_icon_orp.png"
 		noOfFrames = 9
