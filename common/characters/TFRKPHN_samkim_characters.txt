@@ -1,7 +1,7 @@
 # [안내] 삼김 루트 인물. samkim_build.py가 만든다.
 characters = {
-	TFRKPHN_kdy_char = {
-		name = TFRKPHN_kdy_char
+	KOR_TFRKPHN_kdy_char = {
+		name = KOR_TFRKPHN_kdy_char
 		portraits = { civilian = { large = GFX_portrait_TFRKPHN_kdy } }
 		country_leader = {
 			desc = TFRKPHN_kdy_desc
@@ -10,8 +10,8 @@ characters = {
 			id = -1
 		}
 	}
-	TFRKPHN_kms_char = {
-		name = TFRKPHN_kms_char
+	KOR_TFRKPHN_kms_char = {
+		name = KOR_TFRKPHN_kms_char
 		portraits = { civilian = { large = GFX_portrait_TFRKPHN_kms } }
 		country_leader = {
 			desc = TFRKPHN_kms_desc
@@ -20,8 +20,8 @@ characters = {
 			id = -1
 		}
 	}
-	TFRKPHN_kbg_char = {
-		name = TFRKPHN_kbg_char
+	KOR_TFRKPHN_kbg_char = {
+		name = KOR_TFRKPHN_kbg_char
 		portraits = { civilian = { large = GFX_portrait_TFRKPHN_kbg } }
 		country_leader = {
 			desc = TFRKPHN_kbg_desc

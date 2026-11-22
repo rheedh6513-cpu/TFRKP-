@@ -373,8 +373,8 @@ country_event = {
 			TFRKPHN_hjr_coalition_set = yes	# 헌정회복연대: 보수주의~사회민주주의 연정 (woo_cab_build.py)
 			set_politics = { ruling_party = social_liberal elections_allowed = yes }
 			TFRKPHN_hjr_coalition_partners = yes	# 보수주의 시장자유주의 사회민주주의를 연정 상대로
-			if = { limit = { NOT = { has_character = TFRKPHN_woo_won_shik_char } } recruit_character = TFRKPHN_woo_won_shik_char }
-			TFRKPHN_woo_won_shik_char = { promote_character = cooperative_democracy_liberal }
+			if = { limit = { NOT = { has_character = KOR_TFRKPHN_woo_won_shik_char } } recruit_character = KOR_TFRKPHN_woo_won_shik_char }
+			KOR_TFRKPHN_woo_won_shik_char = { promote_character = cooperative_democracy_liberal }
 			load_focus_tree = { tree = TFRKPHN_woo_init_tree keep_completed = no }	# 우원식 초기 중점 (woo_init_build.py). 본 트리는 7045에서
 			mark_focus_tree_layout_dirty = yes
 		}

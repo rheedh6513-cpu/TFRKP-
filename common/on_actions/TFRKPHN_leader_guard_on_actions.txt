@@ -19,10 +19,10 @@ on_actions = {
 				if = { limit = { has_character = KOR_moon_jae_in_char } retire_character = KOR_moon_jae_in_char }
 			}
 			if = { limit = { has_country_flag = TFRKPHN_imp_done NOT = { has_country_flag = TFRKPHN_samkim_end } }
-				if = { limit = { has_country_flag = TFRKPHN_samkim_kms_pm } if = { limit = { NOT = { has_character = TFRKPHN_kms_char } } recruit_character = TFRKPHN_kms_char } TFRKPHN_kms_char = { promote_character = korean_neoconservatism } }
-				else_if = { limit = { has_country_flag = TFRKPHN_samkim_kdy_pm } if = { limit = { NOT = { has_character = TFRKPHN_kdy_char } } recruit_character = TFRKPHN_kdy_char } TFRKPHN_kdy_char = { promote_character = centrist } }
-				else_if = { limit = { has_country_flag = TFRKPHN_samkim_kbg_pm } if = { limit = { NOT = { has_character = TFRKPHN_kbg_char } } recruit_character = TFRKPHN_kbg_char } TFRKPHN_kbg_char = { promote_character = centrist } }
-				else_if = { limit = { has_country_flag = TFRKPHN_woo_pres } if = { limit = { NOT = { has_character = TFRKPHN_woo_won_shik_char } } recruit_character = TFRKPHN_woo_won_shik_char } TFRKPHN_woo_won_shik_char = { promote_character = cooperative_democracy_liberal } }
+				if = { limit = { has_country_flag = TFRKPHN_samkim_kms_pm } if = { limit = { NOT = { has_character = KOR_TFRKPHN_kms_char } } recruit_character = KOR_TFRKPHN_kms_char } KOR_TFRKPHN_kms_char = { promote_character = korean_neoconservatism } }
+				else_if = { limit = { has_country_flag = TFRKPHN_samkim_kdy_pm } if = { limit = { NOT = { has_character = KOR_TFRKPHN_kdy_char } } recruit_character = KOR_TFRKPHN_kdy_char } KOR_TFRKPHN_kdy_char = { promote_character = centrist } }
+				else_if = { limit = { has_country_flag = TFRKPHN_samkim_kbg_pm } if = { limit = { NOT = { has_character = KOR_TFRKPHN_kbg_char } } recruit_character = KOR_TFRKPHN_kbg_char } KOR_TFRKPHN_kbg_char = { promote_character = centrist } }
+				else_if = { limit = { has_country_flag = TFRKPHN_woo_pres } if = { limit = { NOT = { has_character = KOR_TFRKPHN_woo_won_shik_char } } recruit_character = KOR_TFRKPHN_woo_won_shik_char } KOR_TFRKPHN_woo_won_shik_char = { promote_character = cooperative_democracy_liberal } }
 				else_if = { limit = { has_country_flag = TFRKPHN_e21_ahn has_character = KOR_ahn_cheol_soo_char } KOR_ahn_cheol_soo_char = { promote_character = classical_liberalism } }
 				else_if = { limit = { has_country_flag = TFRKPHN_e21_sim_pres has_character = KOR_sim_sang_jung_char } KOR_sim_sang_jung_char = { promote_character = dreaming_realism } }
 				else_if = { limit = { has_country_flag = TFRKPHN_e21_cho NOT = { has_country_flag = TFRKPHN_cho_removed } has_character = KOR_cho_won_jin_char } KOR_cho_won_jin_char = { promote_character = ultra_conservatism } }

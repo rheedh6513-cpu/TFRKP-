@@ -77,8 +77,8 @@ country_event = {
 			set_party_name = { ideology = social_liberal long_name = TFRKPHN_snd_party_long name = TFRKPHN_snd_party }
 			set_politics = { ruling_party = social_liberal elections_allowed = yes }
 			TFRKPHN_hjr_coalition_partners = yes
-			if = { limit = { NOT = { has_character = TFRKPHN_kbg_char } } recruit_character = TFRKPHN_kbg_char }
-			TFRKPHN_kbg_char = { promote_character = yes }
+			if = { limit = { NOT = { has_character = KOR_TFRKPHN_kbg_char } } recruit_character = KOR_TFRKPHN_kbg_char }
+			KOR_TFRKPHN_kbg_char = { promote_character = yes }
 			set_country_flag = TFRKPHN_samkim_kbg_pm
 			TFRKPHN_samkim_cab_kbg = yes	# 세 정부 새 내각 (samkim_cab_build.py, 2026-11-22)
 			TFRKPHN_army_keep_effect = yes
@@ -105,8 +105,8 @@ country_event = {
 			set_party_name = { ideology = social_liberal long_name = TFRKPHN_snd_party_long name = TFRKPHN_snd_party }
 			set_politics = { ruling_party = social_liberal elections_allowed = yes }
 			TFRKPHN_hjr_coalition_partners = yes
-			if = { limit = { NOT = { has_character = TFRKPHN_kdy_char } } recruit_character = TFRKPHN_kdy_char }
-			TFRKPHN_kdy_char = { promote_character = yes }
+			if = { limit = { NOT = { has_character = KOR_TFRKPHN_kdy_char } } recruit_character = KOR_TFRKPHN_kdy_char }
+			KOR_TFRKPHN_kdy_char = { promote_character = yes }
 			set_country_flag = TFRKPHN_samkim_kdy_pm
 			TFRKPHN_samkim_cab_kdy = yes	# 세 정부 새 내각 (samkim_cab_build.py, 2026-11-22)
 			TFRKPHN_army_keep_effect = yes
@@ -134,8 +134,8 @@ country_event = {
 			set_party_name = { ideology = social_liberal long_name = TFRKPHN_snd_party_long name = TFRKPHN_snd_party }
 			set_politics = { ruling_party = conservative elections_allowed = yes }
 			end_coalition = yes set_temp_variable = { coalition_partner_var_temp = token:market_liberal } add_to_coalition = yes set_temp_variable = { coalition_partner_var_temp = token:social_democrat } add_to_coalition = yes	# 신민당은 야당
-			if = { limit = { NOT = { has_character = TFRKPHN_kms_char } } recruit_character = TFRKPHN_kms_char }
-			TFRKPHN_kms_char = { promote_character = yes }
+			if = { limit = { NOT = { has_character = KOR_TFRKPHN_kms_char } } recruit_character = KOR_TFRKPHN_kms_char }
+			KOR_TFRKPHN_kms_char = { promote_character = yes }
 			set_country_flag = TFRKPHN_samkim_kms_pm
 			TFRKPHN_samkim_cab_kms = yes	# 세 정부 새 내각 (samkim_cab_build.py, 2026-11-22)
 			TFRKPHN_army_keep_effect = yes

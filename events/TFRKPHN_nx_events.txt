@@ -74,8 +74,8 @@ country_event = {
 			set_politics = { ruling_party = social_liberal elections_allowed = yes }
 			if = {
 				limit = { has_country_flag = TFRKPHN_samkim_kbg_pm has_country_flag = TFRKPHN_nx_pick_a }
-				if = { limit = { NOT = { has_character = TFRKPHN_kdy_char } } recruit_character = TFRKPHN_kdy_char }
-				TFRKPHN_kdy_char = { promote_character = yes }
+				if = { limit = { NOT = { has_character = KOR_TFRKPHN_kdy_char } } recruit_character = KOR_TFRKPHN_kdy_char }
+				KOR_TFRKPHN_kdy_char = { promote_character = yes }
 				if = { limit = { has_idea = TFRKPHN_sk_kbg_kim_dong_yeon_EM } remove_ideas = TFRKPHN_sk_kbg_kim_dong_yeon_EM }
 			}
 			if = {
@@ -86,14 +86,14 @@ country_event = {
 			}
 			if = {
 				limit = { has_country_flag = TFRKPHN_samkim_kdy_pm has_country_flag = TFRKPHN_nx_pick_a }
-				if = { limit = { NOT = { has_character = TFRKPHN_kbg_char } } recruit_character = TFRKPHN_kbg_char }
-				TFRKPHN_kbg_char = { promote_character = yes }
+				if = { limit = { NOT = { has_character = KOR_TFRKPHN_kbg_char } } recruit_character = KOR_TFRKPHN_kbg_char }
+				KOR_TFRKPHN_kbg_char = { promote_character = yes }
 				if = { limit = { has_idea = TFRKPHN_sk_kdy_kim_bu_gyeom_HM } remove_ideas = TFRKPHN_sk_kdy_kim_bu_gyeom_HM }
 			}
 			if = {
 				limit = { has_country_flag = TFRKPHN_samkim_kdy_pm has_country_flag = TFRKPHN_nx_pick_b }
-				if = { limit = { NOT = { has_character = TFRKPHN_hng_char } } recruit_character = TFRKPHN_hng_char }
-				TFRKPHN_hng_char = { promote_character = yes }
+				if = { limit = { NOT = { has_character = KOR_TFRKPHN_hng_char } } recruit_character = KOR_TFRKPHN_hng_char }
+				KOR_TFRKPHN_hng_char = { promote_character = yes }
 				if = { limit = { has_idea = TFRKPHN_sk_kdy_hong_nam_gi_EM } remove_ideas = TFRKPHN_sk_kdy_hong_nam_gi_EM }
 			}
 		}
@@ -126,8 +126,8 @@ country_event = {
 		hidden_effect = {
 			set_politics = { ruling_party = conservative elections_allowed = yes }
 			end_coalition = yes
-			if = { limit = { NOT = { has_character = TFRKPHN_kys_char } } recruit_character = TFRKPHN_kys_char }
-			TFRKPHN_kys_char = { promote_character = yes }
+			if = { limit = { NOT = { has_character = KOR_TFRKPHN_kys_char } } recruit_character = KOR_TFRKPHN_kys_char }
+			KOR_TFRKPHN_kys_char = { promote_character = yes }
 			TFRKPHN_samkim_cab_kms = yes
 			if = { limit = { has_idea = TFRKPHN_sk_kms_kwon_young_se_HM } remove_ideas = TFRKPHN_sk_kms_kwon_young_se_HM }
 		}
