@@ -215,6 +215,7 @@ country_event = {
 			if = { limit = { NOT = { has_idea = KOR_conservation_idea } } add_ideas = KOR_conservation_idea }	# 보수 정신 (사용자 2026-11-21 16시 53분)
 			TFRKPHN_clear_all_ministers = yes	# # 이전 장관 모두 비우기 (cab_clear_build.py, 2026-11-22)
 			TFRKPHN_cho_cabinet_appoint = yes	# 조원진 내각 (cho_cab_build.py)
+			TFRKPHN_army_keep_effect = yes	# 본편 군사 가지에서 끝낸 중점 기록 (woo_army_build.py, 2026-11-22)
 			load_focus_tree = { tree = TFRKPHN_cho_tree keep_completed = no }	# 조원진 초기 중점 (cho_build.py, 2026-11-21)
 			mark_focus_tree_layout_dirty = yes
 		}

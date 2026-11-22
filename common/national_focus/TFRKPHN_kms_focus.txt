@@ -223,7 +223,7 @@ focus_tree = {
 		completion_reward = {
 			add_stability = -0.02
 			custom_effect_tooltip = TFRKPHN_kms_ref_tt
-			hidden_effect = { country_event = { id = tfrkphn.7113 days = 1 } }
+			hidden_effect = { country_event = { id = tfrkphn.7150 days = 1 } }
 		}
 	}
 	focus = {
@@ -231,7 +231,7 @@ focus_tree = {
 		icon = GFX_goal_generic_national_unity
 		x = 5
 		y = 10
-		cost = 14
+		cost = 2
 		prerequisite = { focus = TFRKPHN_kms_t_09 }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
@@ -241,4 +241,7 @@ focus_tree = {
 			hidden_effect = { country_event = { id = tfrkphn.7097 days = 1 } }
 		}
 	}
+	# Korea Plus 원본의 국방개혁 가지와 대아대전 가지 (woo_army_build.py)
+	shared_focus = KOR_yoon_army_upper
+	shared_focus = KOR_gwr_reserve_forces
 }

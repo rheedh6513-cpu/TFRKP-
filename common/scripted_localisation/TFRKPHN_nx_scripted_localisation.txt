@@ -1,0 +1,30 @@
+# [안내] 삼김 다음 대선 이름 고르기. nx_build.py가 만든다.
+defined_text = {
+	name = TFRKPHN_nx_A
+	text = { trigger = { has_country_flag = TFRKPHN_samkim_kbg_pm } localization_key = TFRKPHN_nm_kdy }
+	text = { localization_key = TFRKPHN_nm_kbg }
+}
+defined_text = {
+	name = TFRKPHN_nx_B
+	text = { trigger = { has_country_flag = TFRKPHN_samkim_kbg_pm } localization_key = TFRKPHN_nm_ijs }
+	text = { localization_key = TFRKPHN_nm_hng }
+}
+defined_text = {
+	name = TFRKPHN_nx_prev
+	text = { trigger = { has_country_flag = TFRKPHN_samkim_kbg_pm } localization_key = TFRKPHN_nm_kbg }
+	text = { localization_key = TFRKPHN_nm_kdy }
+}
+defined_text = {
+	name = TFRKPHN_nx_W
+	text = { trigger = { has_country_flag = TFRKPHN_samkim_kbg_pm has_country_flag = TFRKPHN_nx_pick_a } localization_key = TFRKPHN_nm_kdy }
+	text = { trigger = { has_country_flag = TFRKPHN_samkim_kbg_pm } localization_key = TFRKPHN_nm_ijs }
+	text = { trigger = { has_country_flag = TFRKPHN_nx_pick_a } localization_key = TFRKPHN_nm_kbg }
+	text = { localization_key = TFRKPHN_nm_hng }
+}
+defined_text = {
+	name = TFRKPHN_nx_O
+	text = { trigger = { has_country_flag = TFRKPHN_samkim_kbg_pm has_country_flag = TFRKPHN_nx_pick_a } localization_key = TFRKPHN_nm_ijs }
+	text = { trigger = { has_country_flag = TFRKPHN_samkim_kbg_pm } localization_key = TFRKPHN_nm_kdy }
+	text = { trigger = { has_country_flag = TFRKPHN_nx_pick_a } localization_key = TFRKPHN_nm_hng }
+	text = { localization_key = TFRKPHN_nm_kbg }
+}

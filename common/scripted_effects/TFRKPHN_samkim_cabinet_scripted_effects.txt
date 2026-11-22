@@ -1,0 +1,40 @@
+# [안내] 삼김 세 정부 내각. samkim_cab_build.py가 만든다.
+TFRKPHN_samkim_cab_kbg = {
+	TFRKPHN_clear_all_ministers = yes
+	custom_effect_tooltip = TFRKPHN_samkim_cab_kbg_tt
+	hidden_effect = {
+		set_country_flag = TFRKPHN_sk_kbg_cabinet_set
+		add_ideas = TFRKPHN_sk_kbg_im_jong_seok_HM
+		add_ideas = TFRKPHN_sk_kbg_kang_kyung_hwa_FM
+		add_ideas = TFRKPHN_sk_kbg_kim_dong_yeon_EM
+		add_ideas = TFRKPHN_sk_kbg_kim_gyeong_soo_IM
+		add_ideas = TFRKPHN_sk_kbg_park_sun_won_IntelM
+		add_ideas = TFRKPHN_sk_kbg_kim_byung_joo_TM
+	}
+}
+TFRKPHN_samkim_cab_kdy = {
+	TFRKPHN_clear_all_ministers = yes
+	custom_effect_tooltip = TFRKPHN_samkim_cab_kdy_tt
+	hidden_effect = {
+		set_country_flag = TFRKPHN_sk_kdy_cabinet_set
+		add_ideas = TFRKPHN_sk_kdy_kim_bu_gyeom_HM
+		add_ideas = TFRKPHN_sk_kdy_wi_sung_lac_FM
+		add_ideas = TFRKPHN_sk_kdy_hong_nam_gi_EM
+		add_ideas = TFRKPHN_sk_kdy_lee_won_ook_IM
+		add_ideas = TFRKPHN_sk_kdy_lee_jong_seok_IntelM
+		add_ideas = TFRKPHN_sk_kdy_suh_wook_TM
+	}
+}
+TFRKPHN_samkim_cab_kms = {
+	TFRKPHN_clear_all_ministers = yes
+	custom_effect_tooltip = TFRKPHN_samkim_cab_kms_tt
+	hidden_effect = {
+		set_country_flag = TFRKPHN_sk_kms_cabinet_set
+		add_ideas = TFRKPHN_sk_kms_kwon_young_se_HM
+		add_ideas = TFRKPHN_sk_kms_cho_tae_yeol_FM
+		add_ideas = TFRKPHN_sk_kms_choi_sang_mok_EM
+		add_ideas = TFRKPHN_sk_kms_won_hee_ryong_IM
+		add_ideas = TFRKPHN_sk_kms_ha_tae_keung_IntelM
+		add_ideas = TFRKPHN_sk_kms_han_ki_ho_TM
+	}
+}

@@ -1,0 +1,49 @@
+# [안내] 의원내각제 국회 글 고르기. parl_build.py가 만든다.
+defined_text = {
+	name = TFRKPHN_parl_gov_name
+	text = { trigger = { check_variable = { TFRKPHN_parl_gov = 1 } } localization_key = TFRKPHN_parl_gov1 }
+	text = { trigger = { check_variable = { TFRKPHN_parl_gov = 2 } } localization_key = TFRKPHN_parl_gov2 }
+	text = { trigger = { check_variable = { TFRKPHN_parl_gov = 3 } } localization_key = TFRKPHN_parl_gov3 }
+	text = { trigger = { check_variable = { TFRKPHN_parl_gov = 4 } } localization_key = TFRKPHN_parl_gov4 }
+	text = { trigger = { check_variable = { TFRKPHN_parl_gov = 5 } } localization_key = TFRKPHN_parl_gov5 }
+	text = { trigger = { check_variable = { TFRKPHN_parl_gov = 6 } } localization_key = TFRKPHN_parl_gov6 }
+	text = { trigger = { check_variable = { TFRKPHN_parl_gov = 7 } } localization_key = TFRKPHN_parl_gov7 }
+	text = { trigger = { check_variable = { TFRKPHN_parl_gov = 8 } } localization_key = TFRKPHN_parl_gov8 }
+	text = { localization_key = TFRKPHN_parl_gov0 }
+}
+defined_text = {
+	name = TFRKPHN_parl_tier_1
+	text = { trigger = { has_country_flag = TFRKPHN_parl_lead_1 } localization_key = TFRKPHN_parl_tier_lead }
+	text = { trigger = { check_variable = { TFRKPHN_parl_sup1 > 0.799 } } localization_key = TFRKPHN_parl_tier0 }
+	text = { trigger = { check_variable = { TFRKPHN_parl_sup1 > 0.599 } } localization_key = TFRKPHN_parl_tier1 }
+	text = { trigger = { check_variable = { TFRKPHN_parl_sup1 > 0.399 } } localization_key = TFRKPHN_parl_tier2 }
+	text = { trigger = { check_variable = { TFRKPHN_parl_sup1 > 0.199 } } localization_key = TFRKPHN_parl_tier3 }
+	text = { localization_key = TFRKPHN_parl_tier4 }
+}
+defined_text = {
+	name = TFRKPHN_parl_tier_2
+	text = { trigger = { has_country_flag = TFRKPHN_parl_lead_2 } localization_key = TFRKPHN_parl_tier_lead }
+	text = { trigger = { check_variable = { TFRKPHN_parl_sup2 > 0.799 } } localization_key = TFRKPHN_parl_tier0 }
+	text = { trigger = { check_variable = { TFRKPHN_parl_sup2 > 0.599 } } localization_key = TFRKPHN_parl_tier1 }
+	text = { trigger = { check_variable = { TFRKPHN_parl_sup2 > 0.399 } } localization_key = TFRKPHN_parl_tier2 }
+	text = { trigger = { check_variable = { TFRKPHN_parl_sup2 > 0.199 } } localization_key = TFRKPHN_parl_tier3 }
+	text = { localization_key = TFRKPHN_parl_tier4 }
+}
+defined_text = {
+	name = TFRKPHN_parl_tier_3
+	text = { trigger = { has_country_flag = TFRKPHN_parl_lead_3 } localization_key = TFRKPHN_parl_tier_lead }
+	text = { trigger = { check_variable = { TFRKPHN_parl_sup3 > 0.799 } } localization_key = TFRKPHN_parl_tier0 }
+	text = { trigger = { check_variable = { TFRKPHN_parl_sup3 > 0.599 } } localization_key = TFRKPHN_parl_tier1 }
+	text = { trigger = { check_variable = { TFRKPHN_parl_sup3 > 0.399 } } localization_key = TFRKPHN_parl_tier2 }
+	text = { trigger = { check_variable = { TFRKPHN_parl_sup3 > 0.199 } } localization_key = TFRKPHN_parl_tier3 }
+	text = { localization_key = TFRKPHN_parl_tier4 }
+}
+defined_text = {
+	name = TFRKPHN_parl_tier_4
+	text = { trigger = { has_country_flag = TFRKPHN_parl_lead_4 } localization_key = TFRKPHN_parl_tier_lead }
+	text = { trigger = { check_variable = { TFRKPHN_parl_sup4 > 0.799 } } localization_key = TFRKPHN_parl_tier0 }
+	text = { trigger = { check_variable = { TFRKPHN_parl_sup4 > 0.599 } } localization_key = TFRKPHN_parl_tier1 }
+	text = { trigger = { check_variable = { TFRKPHN_parl_sup4 > 0.399 } } localization_key = TFRKPHN_parl_tier2 }
+	text = { trigger = { check_variable = { TFRKPHN_parl_sup4 > 0.199 } } localization_key = TFRKPHN_parl_tier3 }
+	text = { localization_key = TFRKPHN_parl_tier4 }
+}

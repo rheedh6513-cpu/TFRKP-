@@ -1,0 +1,136 @@
+# [안내] 삼김 고유 장치 디시전. 판 탭 아래에 붙는다. skx_build.py가 만든다.
+TFRKPHN_brd_kbg_category = {
+	TFRKPHN_mx_kbg_appeal = {
+		icon = generic_political_discourse
+		cost = 30
+		fire_only_once = no
+		days_re_enable = 45
+		allowed = { original_tag = KOR }
+		visible = { NOT = { has_country_flag = TFRKPHN_samkim_end } }
+		available = { check_variable = { TFRKPHN_kbg_resist > 0.5 } }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes add_to_variable = { TFRKPHN_kbg_resist = -10 } custom_effect_tooltip = TFRKPHN_mx_kbg_m10 }
+		ai_will_do = { base = 5 }
+	}
+	TFRKPHN_mx_kbg_compromise = {
+		icon = generic_political_discourse
+		cost = 10
+		fire_only_once = no
+		days_re_enable = 90
+		allowed = { original_tag = KOR }
+		visible = { NOT = { has_country_flag = TFRKPHN_samkim_end } }
+		available = { check_variable = { TFRKPHN_kbg_resist > 0.5 } }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes add_to_variable = { TFRKPHN_kbg_resist = -20 } add_stability = -0.02 custom_effect_tooltip = TFRKPHN_mx_kbg_m20 }
+		ai_will_do = { base = 5 }
+	}
+	TFRKPHN_mx_kbg_amend = {
+		icon = generic_political_discourse
+		cost = 75
+		fire_only_once = yes
+		allowed = { original_tag = KOR }
+		visible = { has_country_flag = TFRKPHN_kbg_amend_promise NOT = { has_country_flag = TFRKPHN_amend_kept } NOT = { has_country_flag = TFRKPHN_samkim_end } }
+		available = { always = yes }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes set_country_flag = TFRKPHN_amend_kept add_stability = 0.02 add_popularity = { ideology = conservative popularity = 0.01 } custom_effect_tooltip = TFRKPHN_mx_amend_tt }
+		ai_will_do = { base = 5 }
+	}
+}
+TFRKPHN_debt_category = {
+	TFRKPHN_mx_kdy_repay = {
+		icon = generic_political_discourse
+		cost = 40
+		fire_only_once = no
+		days_re_enable = 60
+		allowed = { original_tag = KOR }
+		visible = { NOT = { has_country_flag = TFRKPHN_samkim_end } NOT = { has_country_flag = TFRKPHN_kdy_debtfree } }
+		available = { always = yes }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes add_to_variable = { TFRKPHN_kdy_debt = -8 } custom_effect_tooltip = TFRKPHN_mx_kdy_m8 }
+		ai_will_do = { base = 5 }
+	}
+	TFRKPHN_mx_kdy_sell = {
+		icon = generic_political_discourse
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 120
+		allowed = { original_tag = KOR }
+		visible = { NOT = { has_country_flag = TFRKPHN_samkim_end } NOT = { has_country_flag = TFRKPHN_kdy_debtfree } }
+		available = { stability > 0.3 }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes add_to_variable = { TFRKPHN_kdy_debt = -12 } add_stability = -0.02 custom_effect_tooltip = TFRKPHN_mx_kdy_m12 }
+		ai_will_do = { base = 5 }
+	}
+	TFRKPHN_mx_kdy_gold = {
+		icon = generic_political_discourse
+		cost = 0
+		fire_only_once = yes
+		allowed = { original_tag = KOR }
+		visible = { NOT = { has_country_flag = TFRKPHN_samkim_end } NOT = { has_country_flag = TFRKPHN_kdy_debtfree } }
+		available = { always = yes }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes add_to_variable = { TFRKPHN_kdy_debt = -15 } add_stability = 0.03 custom_effect_tooltip = TFRKPHN_mx_kdy_m15 }
+		ai_will_do = { base = 5 }
+	}
+}
+TFRKPHN_brd_kdy_category = {
+	TFRKPHN_mx_kdy_amend = {
+		icon = generic_political_discourse
+		cost = 75
+		fire_only_once = yes
+		allowed = { original_tag = KOR }
+		visible = { has_country_flag = TFRKPHN_kdy_amend_promise NOT = { has_country_flag = TFRKPHN_amend_kept } NOT = { has_country_flag = TFRKPHN_samkim_end } }
+		available = { always = yes }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes set_country_flag = TFRKPHN_amend_kept add_stability = 0.02 add_popularity = { ideology = conservative popularity = 0.01 } custom_effect_tooltip = TFRKPHN_mx_amend_tt }
+		ai_will_do = { base = 5 }
+	}
+}
+TFRKPHN_brd_kms_category = {
+	TFRKPHN_mx_kms_snd = {
+		icon = generic_political_discourse
+		cost = 50
+		fire_only_once = no
+		days_re_enable = 60
+		allowed = { original_tag = KOR }
+		visible = { NOT = { has_country_flag = TFRKPHN_samkim_end } NOT = { has_country_flag = TFRKPHN_kms_vote_done } }
+		available = { always = yes }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes add_to_variable = { TFRKPHN_kms_votes = 12 } custom_effect_tooltip = TFRKPHN_mx_kms_p12 }
+		ai_will_do = { base = 5 }
+	}
+	TFRKPHN_mx_kms_ind = {
+		icon = generic_political_discourse
+		cost = 30
+		fire_only_once = no
+		days_re_enable = 45
+		allowed = { original_tag = KOR }
+		visible = { NOT = { has_country_flag = TFRKPHN_samkim_end } NOT = { has_country_flag = TFRKPHN_kms_vote_done } }
+		available = { always = yes }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes add_to_variable = { TFRKPHN_kms_votes = 6 } custom_effect_tooltip = TFRKPHN_mx_kms_p6 }
+		ai_will_do = { base = 5 }
+	}
+	TFRKPHN_mx_kms_district = {
+		icon = generic_political_discourse
+		cost = 0
+		fire_only_once = yes
+		allowed = { original_tag = KOR }
+		visible = { NOT = { has_country_flag = TFRKPHN_samkim_end } NOT = { has_country_flag = TFRKPHN_kms_vote_done } }
+		available = { always = yes }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes add_to_variable = { TFRKPHN_kms_votes = 15 } add_stability = -0.02 custom_effect_tooltip = TFRKPHN_mx_kms_p15 }
+		ai_will_do = { base = 5 }
+	}
+	TFRKPHN_mx_kms_elders = {
+		icon = generic_political_discourse
+		cost = 0
+		fire_only_once = yes
+		allowed = { original_tag = KOR }
+		visible = { NOT = { has_country_flag = TFRKPHN_samkim_end } NOT = { has_country_flag = TFRKPHN_kms_vote_done } }
+		available = { has_completed_focus = TFRKPHN_kms_t_12 }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes add_to_variable = { TFRKPHN_kms_votes = 10 } custom_effect_tooltip = TFRKPHN_mx_kms_p10 }
+		ai_will_do = { base = 5 }
+	}
+}

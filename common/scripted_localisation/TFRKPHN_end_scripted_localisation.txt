@@ -1,0 +1,46 @@
+# [안내] 결말 갈래 문단 고르기. skx_build.py가 만든다.
+defined_text = {
+	name = TFRKPHN_end_7115_mech
+	text = { trigger = { has_country_flag = TFRKPHN_kbg_retreat } localization_key = TFRKPHN_end_7115_mech_0 }
+	text = { trigger = { check_variable = { TFRKPHN_kbg_resist > 59.5 } } localization_key = TFRKPHN_end_7115_mech_1 }
+	text = { localization_key = TFRKPHN_end_7115_mech_2 }
+}
+defined_text = {
+	name = TFRKPHN_end_7115_prom
+	text = { trigger = { has_country_flag = TFRKPHN_promise_broken } localization_key = TFRKPHN_end_7115_prom_0 }
+	text = { trigger = { has_country_flag = TFRKPHN_amend_kept } localization_key = TFRKPHN_end_7115_prom_1 }
+	text = { localization_key = TFRKPHN_end_7115_prom_2 }
+}
+defined_text = {
+	name = TFRKPHN_end_7115_hong
+	text = { trigger = { has_country_flag = TFRKPHN_hong_respect } localization_key = TFRKPHN_end_7115_hong_0 }
+	text = { trigger = { has_country_flag = TFRKPHN_hong_cut } localization_key = TFRKPHN_end_7115_hong_1 }
+	text = { localization_key = TFRKPHN_end_7115_hong_2 }
+}
+defined_text = {
+	name = TFRKPHN_end_7116_mech
+	text = { trigger = { has_country_flag = TFRKPHN_kdy_debtfree } localization_key = TFRKPHN_end_7116_mech_0 }
+	text = { localization_key = TFRKPHN_end_7116_mech_1 }
+}
+defined_text = {
+	name = TFRKPHN_end_7116_prom
+	text = { trigger = { has_country_flag = TFRKPHN_promise_broken } localization_key = TFRKPHN_end_7116_prom_0 }
+	text = { trigger = { has_country_flag = TFRKPHN_amend_kept } localization_key = TFRKPHN_end_7116_prom_1 }
+	text = { localization_key = TFRKPHN_end_7116_prom_2 }
+}
+defined_text = {
+	name = TFRKPHN_end_7116_hong
+	text = { trigger = { has_country_flag = TFRKPHN_hong_corrected } localization_key = TFRKPHN_end_7116_hong_0 }
+	text = { trigger = { has_country_flag = TFRKPHN_hong_silent } localization_key = TFRKPHN_end_7116_hong_1 }
+	text = { localization_key = TFRKPHN_end_7116_hong_2 }
+}
+defined_text = {
+	name = TFRKPHN_end_7118_mech
+	text = { trigger = { has_country_flag = TFRKPHN_kms_parliamentary } localization_key = TFRKPHN_end_7118_mech_0 }
+	text = { localization_key = TFRKPHN_end_7118_mech_1 }
+}
+defined_text = {
+	name = TFRKPHN_end_7118_hong
+	text = { trigger = { has_country_flag = TFRKPHN_kms_hong_debt } localization_key = TFRKPHN_end_7118_hong_0 }
+	text = { localization_key = TFRKPHN_end_7118_hong_1 }
+}

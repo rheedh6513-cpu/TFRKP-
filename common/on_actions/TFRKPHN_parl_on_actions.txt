@@ -1,0 +1,23 @@
+# [안내] 의원내각제 국회: 첫 총선 띄우기, 4년마다 총선, 다달이 지지도. parl_build.py가 만든다.
+on_actions = {
+	on_weekly_KOR = {
+		effect = {
+			if = {
+				limit = { has_country_flag = TFRKPHN_samkim_end has_country_flag = TFRKPHN_kms_parliamentary NOT = { has_country_flag = TFRKPHN_parl_started } }
+				set_country_flag = TFRKPHN_parl_started
+				country_event = { id = tfrkphn.7137 days = 7 }
+				country_event = { id = tfrkphn.7152 days = 23 }
+				country_event = { id = tfrkphn.7133 days = 37 }
+			}
+			if = {
+				limit = { has_country_flag = TFRKPHN_parl_on }
+				add_to_variable = { TFRKPHN_parl_weeks = 1 }
+				if = { limit = { check_variable = { TFRKPHN_parl_weeks > 205.5 } NOT = { has_country_flag = TFRKPHN_parl_pledged } } set_country_flag = { flag = TFRKPHN_parl_pledged days = 60 } country_event = tfrkphn.7152 }
+				if = { limit = { check_variable = { TFRKPHN_parl_weeks > 207.5 } } set_variable = { TFRKPHN_parl_weeks = 0 } country_event = tfrkphn.7134 }
+				set_temp_variable = { TFRKPHN_parl_m = TFRKPHN_parl_weeks }
+				modulo_temp_variable = { TFRKPHN_parl_m = 4 }
+				if = { limit = { check_variable = { TFRKPHN_parl_m < 0.5 } check_variable = { TFRKPHN_parl_gov > 0.5 } } TFRKPHN_parl_monthly = yes }
+			}
+		}
+	}
+}

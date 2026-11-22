@@ -1,0 +1,198 @@
+# [안내] 삼김 세 정부 내각. samkim_cab_build.py가 만든다.
+ideas = {
+	head_minister = {
+		TFRKPHN_sk_kbg_im_jong_seok_HM = {
+			picture = KOR_im_jong_seok
+			allowed = { original_tag = KOR }
+			allowed_to_remove = { head_minister_trigger = yes }
+			available = { }
+			visible = { has_country_flag = TFRKPHN_sk_kbg_cabinet_set }
+			traits = {
+				KOR_faction_DPK
+				hog_patriotic_ideolouge
+			}
+		}
+		TFRKPHN_sk_kdy_kim_bu_gyeom_HM = {
+			picture = KOR_kim_bu_gyeom
+			allowed = { original_tag = KOR }
+			allowed_to_remove = { head_minister_trigger = yes }
+			available = { }
+			visible = { has_country_flag = TFRKPHN_sk_kdy_cabinet_set }
+			traits = {
+				KOR_faction_none
+				hog_pragmatic_statesman
+			}
+		}
+		TFRKPHN_sk_kms_kwon_young_se_HM = {
+			picture = KOR_kwon_young_se
+			allowed = { original_tag = KOR }
+			allowed_to_remove = { head_minister_trigger = yes }
+			available = { }
+			visible = { has_country_flag = TFRKPHN_sk_kms_cabinet_set }
+			traits = {
+				KOR_faction_PPP
+				hog_patriotic_ideolouge
+			}
+		}
+	}
+	foreign_minister = {
+		TFRKPHN_sk_kbg_kang_kyung_hwa_FM = {
+			picture = KOR_kang_kyung_hwa
+			allowed = { original_tag = KOR }
+			available = { }
+			visible = { has_country_flag = TFRKPHN_sk_kbg_cabinet_set }
+			traits = {
+				KOR_faction_none
+				for_loyal_nationalist
+			}
+		}
+		TFRKPHN_sk_kdy_wi_sung_lac_FM = {
+			picture = KOR_wi_sung_lac
+			allowed = { original_tag = KOR }
+			available = { }
+			visible = { has_country_flag = TFRKPHN_sk_kdy_cabinet_set }
+			traits = {
+				KOR_faction_DPK
+				for_apologetic_clerk
+			}
+		}
+		TFRKPHN_sk_kms_cho_tae_yeol_FM = {
+			picture = KOR_cho_tae_yeol
+			allowed = { original_tag = KOR }
+			available = { }
+			visible = { has_country_flag = TFRKPHN_sk_kms_cabinet_set }
+			traits = {
+				KOR_faction_none
+				for_biased_intellectual
+			}
+		}
+	}
+	economic_minister = {
+		TFRKPHN_sk_kbg_kim_dong_yeon_EM = {
+			picture = KOR_kim_dong_yeon
+			allowed = { original_tag = KOR }
+			available = { }
+			visible = { has_country_flag = TFRKPHN_sk_kbg_cabinet_set }
+			traits = {
+				KOR_faction_none
+				eco_reformer
+			}
+		}
+		TFRKPHN_sk_kdy_hong_nam_gi_EM = {
+			picture = KOR_hong_nam_gi
+			allowed = { original_tag = KOR }
+			available = { }
+			visible = { has_country_flag = TFRKPHN_sk_kdy_cabinet_set }
+			traits = {
+				KOR_faction_none
+				eco_balanced_budget_economy
+			}
+		}
+		TFRKPHN_sk_kms_choi_sang_mok_EM = {
+			picture = KOR_choi_sang_mok
+			allowed = { original_tag = KOR }
+			available = { }
+			visible = { has_country_flag = TFRKPHN_sk_kms_cabinet_set }
+			traits = {
+				KOR_faction_none
+				eco_economic_organizer
+			}
+		}
+	}
+	interior_minister = {
+		TFRKPHN_sk_kbg_kim_gyeong_soo_IM = {
+			picture = KOR_kim_gyeong_soo
+			allowed = { original_tag = KOR }
+			available = { }
+			visible = { has_country_flag = TFRKPHN_sk_kbg_cabinet_set }
+			traits = {
+				KOR_faction_DPK
+				sec_prince_of_terror
+			}
+		}
+		TFRKPHN_sk_kdy_lee_won_ook_IM = {
+			picture = KOR_lee_won_ook
+			allowed = { original_tag = KOR }
+			available = { }
+			visible = { has_country_flag = TFRKPHN_sk_kdy_cabinet_set }
+			traits = {
+				KOR_faction_PPP
+				sec_crime_fighter
+			}
+		}
+		TFRKPHN_sk_kms_won_hee_ryong_IM = {
+			picture = KOR_won_hee_ryong
+			allowed = { original_tag = KOR }
+			available = { }
+			visible = { has_country_flag = TFRKPHN_sk_kms_cabinet_set }
+			traits = {
+				KOR_faction_PPP
+				int_psychological_mastermind
+			}
+		}
+	}
+	intelligence_minister = {
+		TFRKPHN_sk_kbg_park_sun_won_IntelM = {
+			picture = KOR_park_sun_won
+			allowed = { original_tag = KOR }
+			available = { }
+			visible = { has_country_flag = TFRKPHN_sk_kbg_cabinet_set }
+			traits = {
+				KOR_faction_DPK
+				int_balanced_cryptographer
+			}
+		}
+		TFRKPHN_sk_kdy_lee_jong_seok_IntelM = {
+			picture = KOR_lee_jong_seok
+			allowed = { original_tag = KOR }
+			available = { }
+			visible = { has_country_flag = TFRKPHN_sk_kdy_cabinet_set }
+			traits = {
+				KOR_faction_none
+				int_decryptor
+			}
+		}
+		TFRKPHN_sk_kms_ha_tae_keung_IntelM = {
+			picture = KOR_ha_tae_keung
+			allowed = { original_tag = KOR }
+			available = { }
+			visible = { has_country_flag = TFRKPHN_sk_kms_cabinet_set }
+			traits = {
+				KOR_faction_PPP
+				int_encryptor
+			}
+		}
+	}
+	theorist_minister = {
+		TFRKPHN_sk_kbg_kim_byung_joo_TM = {
+			picture = KOR_kim_byung_joo
+			allowed = { original_tag = KOR }
+			available = { }
+			visible = { has_country_flag = TFRKPHN_sk_kbg_cabinet_set }
+			traits = {
+				KOR_faction_DPK
+				army_chief_organizational_2
+			}
+		}
+		TFRKPHN_sk_kdy_suh_wook_TM = {
+			picture = KOR_suh_wook
+			allowed = { original_tag = KOR }
+			available = { }
+			visible = { has_country_flag = TFRKPHN_sk_kdy_cabinet_set }
+			traits = {
+				KOR_faction_none
+				hog_reformist_soldier
+			}
+		}
+		TFRKPHN_sk_kms_han_ki_ho_TM = {
+			picture = KOR_han_ki_ho
+			allowed = { original_tag = KOR }
+			available = { }
+			visible = { has_country_flag = TFRKPHN_sk_kms_cabinet_set }
+			traits = {
+				KOR_faction_PPP
+				hog_political_protege
+			}
+		}
+	}
+}

@@ -1,0 +1,144 @@
+# [안내] 의원내각제 국회 이벤트. parl_build.py가 만든다.
+add_namespace = tfrkphn
+country_event = {
+	id = tfrkphn.7133
+	title = tfrkphn.7133.t
+	desc = tfrkphn.7133.d
+	picture = GFX_TFRKPHN_cho_assembly_night
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			set_country_flag = TFRKPHN_parl_on
+			set_variable = { TFRKPHN_parl_term = 24 }
+			set_politics = { ruling_party = conservative elections_allowed = no }
+			if = { limit = { NOT = { has_idea = TFRKPHN_parl_idea } } add_ideas = TFRKPHN_parl_idea }
+			TFRKPHN_parl_election = yes
+		}
+	}
+	option = {
+		name = tfrkphn.7133.a
+		custom_effect_tooltip = TFRKPHN_parl_seats_tt
+		hidden_effect = { country_event = { id = tfrkphn.7135 days = 3 } }
+	}
+}
+country_event = {
+	id = tfrkphn.7134
+	title = tfrkphn.7134.t
+	desc = tfrkphn.7134.d
+	picture = GFX_TFRKPHN_cho_assembly_night
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			add_to_variable = { TFRKPHN_parl_term = 1 }
+			TFRKPHN_parl_election = yes
+		}
+	}
+	option = {
+		name = tfrkphn.7134.a
+		custom_effect_tooltip = TFRKPHN_parl_seats_tt
+		hidden_effect = { country_event = { id = tfrkphn.7135 days = 3 } }
+	}
+}
+country_event = {
+	id = tfrkphn.7135
+	title = tfrkphn.7135.t
+	desc = tfrkphn.7135.d
+	picture = GFX_TFRKPHN_imp_doc
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7135.a
+		trigger = { check_variable = { TFRKPHN_parl_s3 > 150.5 } }
+		custom_effect_tooltip = TFRKPHN_parl_gov_1_tt
+		hidden_effect = { TFRKPHN_parl_gov_1 = yes }
+		ai_chance = { base = 10 }
+	}
+	option = {
+		name = tfrkphn.7135.b
+		trigger = { check_variable = { TFRKPHN_parl_s3 < 150.5 } check_variable = { TFRKPHN_parl_s2 > 0.5 } check_variable = { TFRKPHN_parl_s32 > 150.5 } check_variable = { TFRKPHN_parl_s3 > TFRKPHN_parl_s2 } }
+		custom_effect_tooltip = TFRKPHN_parl_gov_2_tt
+		hidden_effect = { TFRKPHN_parl_gov_2 = yes }
+		ai_chance = { base = 10 }
+	}
+	option = {
+		name = tfrkphn.7135.c
+		trigger = { check_variable = { TFRKPHN_parl_s2 < 150.5 } check_variable = { TFRKPHN_parl_s3 > 0.5 } check_variable = { TFRKPHN_parl_s32 > 150.5 } check_variable = { TFRKPHN_parl_s2 > TFRKPHN_parl_s3 } }
+		custom_effect_tooltip = TFRKPHN_parl_gov_3_tt
+		hidden_effect = { TFRKPHN_parl_gov_3 = yes }
+		ai_chance = { base = 10 }
+	}
+	option = {
+		name = tfrkphn.7135.d
+		trigger = { check_variable = { TFRKPHN_parl_s3 < 150.5 } check_variable = { TFRKPHN_parl_s4 > 0.5 } check_variable = { TFRKPHN_parl_s34 > 150.5 } check_variable = { TFRKPHN_parl_s3 > TFRKPHN_parl_s4 } }
+		custom_effect_tooltip = TFRKPHN_parl_gov_4_tt
+		hidden_effect = { TFRKPHN_parl_gov_4 = yes }
+		ai_chance = { base = 10 }
+	}
+	option = {
+		name = tfrkphn.7135.e
+		trigger = { check_variable = { TFRKPHN_parl_s2 > 150.5 } }
+		custom_effect_tooltip = TFRKPHN_parl_gov_5_tt
+		hidden_effect = { TFRKPHN_parl_gov_5 = yes }
+		ai_chance = { base = 10 }
+	}
+	option = {
+		name = tfrkphn.7135.f
+		trigger = { check_variable = { TFRKPHN_parl_s2 < 150.5 } check_variable = { TFRKPHN_parl_s1 > 0.5 } check_variable = { TFRKPHN_parl_s21 > 150.5 } check_variable = { TFRKPHN_parl_s2 > TFRKPHN_parl_s1 } }
+		custom_effect_tooltip = TFRKPHN_parl_gov_6_tt
+		hidden_effect = { TFRKPHN_parl_gov_6 = yes }
+		ai_chance = { base = 10 }
+	}
+	option = {
+		name = tfrkphn.7135.g
+		trigger = { check_variable = { TFRKPHN_parl_s3 < 150.5 } check_variable = { TFRKPHN_parl_s3 > TFRKPHN_parl_s2 } }
+		custom_effect_tooltip = TFRKPHN_parl_gov_7_tt
+		hidden_effect = { TFRKPHN_parl_gov_7 = yes }
+		ai_chance = { base = 1 }
+	}
+	option = {
+		name = tfrkphn.7135.h
+		trigger = { check_variable = { TFRKPHN_parl_s2 < 150.5 } NOT = { check_variable = { TFRKPHN_parl_s3 > TFRKPHN_parl_s2 } } }
+		custom_effect_tooltip = TFRKPHN_parl_gov_8_tt
+		hidden_effect = { TFRKPHN_parl_gov_8 = yes }
+		ai_chance = { base = 1 }
+	}
+}
+country_event = {
+	id = tfrkphn.7136
+	title = tfrkphn.7136.t
+	desc = tfrkphn.7136.d
+	picture = GFX_TFRKPHN_imp_gavel
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7136.a
+		custom_effect_tooltip = TFRKPHN_parl_early_tt
+		add_stability = -0.03
+		hidden_effect = { country_event = { id = tfrkphn.7134 days = 30 } country_event = { id = tfrkphn.7152 days = 14 } }
+		ai_chance = { base = 5 }
+	}
+	option = {
+		name = tfrkphn.7136.b
+		trigger = { has_political_power > 99 }
+		add_political_power = -100
+		add_stability = -0.05
+		if = { limit = { has_country_flag = TFRKPHN_parl_coal_1 } add_to_variable = { TFRKPHN_parl_sup1 = 0.2 } }
+		if = { limit = { has_country_flag = TFRKPHN_parl_coal_2 } add_to_variable = { TFRKPHN_parl_sup2 = 0.2 } }
+		if = { limit = { has_country_flag = TFRKPHN_parl_coal_3 } add_to_variable = { TFRKPHN_parl_sup3 = 0.2 } }
+		if = { limit = { has_country_flag = TFRKPHN_parl_coal_4 } add_to_variable = { TFRKPHN_parl_sup4 = 0.2 } }
+		hidden_effect = { TFRKPHN_parl_calc = yes }
+		ai_chance = { base = 5 }
+	}
+}
+country_event = {
+	id = tfrkphn.7137
+	title = tfrkphn.7137.t
+	desc = tfrkphn.7137.d
+	picture = GFX_report_event_kor_seoul_riot
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7137.a
+		add_popularity = { ideology = libertarian_socialist popularity = 0.10 }
+		add_popularity = { ideology = communist popularity = 0.05 }
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.04 }
+		add_stability = -0.03
+	}
+}

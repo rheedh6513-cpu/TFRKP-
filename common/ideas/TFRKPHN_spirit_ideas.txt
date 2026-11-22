@@ -1,0 +1,106 @@
+# [안내] 삼김 중점이 주는 국가정신. 그림은 임시로 트리 그림. skx_build.py가 만든다.
+ideas = {
+	country = {
+		TFRKPHN_sp_kbg_civil_army = {
+			picture = TFRKPHN_spirit_kbg
+			allowed = { original_tag = KOR }
+			modifier = {
+				stability_factor = 0.03
+				army_org_factor = -0.02
+				command_power_gain_mult = 0.10
+			}
+		}
+		TFRKPHN_sp_kbg_real_name = {
+			picture = TFRKPHN_spirit_kbg
+			allowed = { original_tag = KOR }
+			modifier = {
+				political_power_factor = 0.03
+				production_factory_max_efficiency_factor = 0.03
+			}
+		}
+		TFRKPHN_sp_kbg_local_era = {
+			picture = TFRKPHN_spirit_kbg
+			allowed = { original_tag = KOR }
+			modifier = {
+				production_speed_infrastructure_factor = 0.10
+				stability_factor = 0.02
+			}
+		}
+		TFRKPHN_sp_kbg_globalize = {
+			picture = TFRKPHN_spirit_kbg
+			allowed = { original_tag = KOR }
+			modifier = {
+				research_speed_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+				trade_opinion_factor = 0.20
+			}
+		}
+		TFRKPHN_sp_kdy_grand_bargain = {
+			picture = TFRKPHN_spirit_kdy
+			allowed = { original_tag = KOR }
+			modifier = {
+				stability_factor = 0.03
+				production_factory_efficiency_gain_factor = 0.05
+			}
+		}
+		TFRKPHN_sp_kdy_venture = {
+			picture = TFRKPHN_spirit_kdy
+			allowed = { original_tag = KOR }
+			modifier = {
+				research_speed_factor = 0.05
+				industrial_capacity_factory = 0.03
+			}
+		}
+		TFRKPHN_sp_kdy_broadband = {
+			picture = TFRKPHN_spirit_kdy
+			allowed = { original_tag = KOR }
+			modifier = {
+				research_speed_factor = 0.05
+				encryption_factor = 0.10
+				decryption_factor = 0.10
+			}
+		}
+		TFRKPHN_sp_kdy_safety_net = {
+			picture = TFRKPHN_spirit_kdy
+			allowed = { original_tag = KOR }
+			modifier = {
+				stability_factor = 0.04
+				consumer_goods_factor = 0.02
+				monthly_population = 0.05
+			}
+		}
+		TFRKPHN_sp_kms_grand_coalition = {
+			picture = TFRKPHN_spirit_kms
+			allowed = { original_tag = KOR }
+			modifier = {
+				political_power_factor = 0.05
+				drift_defence_factor = 0.10
+			}
+		}
+		TFRKPHN_sp_kms_security_first = {
+			picture = TFRKPHN_spirit_kms
+			allowed = { original_tag = KOR }
+			modifier = {
+				war_support_factor = 0.05
+				army_defence_factor = 0.03
+			}
+		}
+		TFRKPHN_sp_kms_deregulate = {
+			picture = TFRKPHN_spirit_kms
+			allowed = { original_tag = KOR }
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				industrial_capacity_factory = 0.03
+				stability_factor = -0.02
+			}
+		}
+		TFRKPHN_sp_kms_coalition_council = {
+			picture = TFRKPHN_spirit_kms
+			allowed = { original_tag = KOR }
+			modifier = {
+				stability_factor = 0.04
+				drift_defence_factor = 0.05
+			}
+		}
+	}
+}

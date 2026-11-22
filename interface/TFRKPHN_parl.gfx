@@ -1,0 +1,16 @@
+# [안내] 의원내각제 국회 화면. parl_build.py가 만든다.
+spriteTypes = {
+	spriteType = { name = "GFX_TFRKPHN_parl_dot" texturefile = "gfx/interface/gui/TFRKPHN_parl/dot.png" noOfFrames = 9 }
+	spriteType = { name = "GFX_TFRKPHN_parl_bg" texturefile = "gfx/interface/gui/TFRKPHN_parl/bg.png" }
+	spriteType = { name = "GFX_TFRKPHN_parl_line" texturefile = "gfx/interface/gui/TFRKPHN_parl/line.png" }
+	spriteType = { name = "GFX_TFRKPHN_parl_snd_logo16" texturefile = "gfx/interface/gui/TFRKPHN_parl/snd_logo16.png" }
+	spriteType = { name = "GFX_TFRKPHN_parl_snd_logo40" texturefile = "gfx/interface/gui/TFRKPHN_parl/snd_logo40.png" }
+	spriteType = { name = "GFX_TFRKPHN_parl_orp_logo16" texturefile = "gfx/interface/gui/TFRKPHN_parl/orp_logo16.png" }
+	spriteType = { name = "GFX_TFRKPHN_parl_hjr_logo16" texturefile = "gfx/interface/gui/TFRKPHN_parl/hjr_logo16.png" }
+	spriteType = { name = "GFX_TFRKPHN_parl_jinbo_logo16" texturefile = "gfx/interface/gui/TFRKPHN_parl/jinbo_logo16.png" }
+	spriteType = { name = "GFX_TFRKPHN_parl_leg1" texturefile = "gfx/interface/gui/TFRKPHN_parl/leg1.png" }
+	spriteType = { name = "GFX_TFRKPHN_parl_leg2" texturefile = "gfx/interface/gui/TFRKPHN_parl/leg2.png" }
+	spriteType = { name = "GFX_TFRKPHN_parl_leg3" texturefile = "gfx/interface/gui/TFRKPHN_parl/leg3.png" }
+	spriteType = { name = "GFX_TFRKPHN_parl_leg4" texturefile = "gfx/interface/gui/TFRKPHN_parl/leg4.png" }
+	spriteType = { name = "GFX_portrait_TFRKPHN_kys" texturefile = "gfx/leaders/KOR/TFRKPHN_kys.png" }
+}

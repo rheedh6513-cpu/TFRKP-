@@ -1,0 +1,31 @@
+# [안내] 삼김 세 정부의 국가정신. 값은 매주 바뀐다 (skx_build.py).
+TFRKPHN_spirit_kbg = {
+	icon = GFX_idea_TFRKPHN_spirit_kbg
+	enable = { always = yes }
+	political_power_factor = TFRKPHN_kbg_sp_pp
+	stability_factor = TFRKPHN_kbg_sp_st
+	consumer_goods_factor = TFRKPHN_kbg_sp_cg
+	production_speed_infrastructure_factor = TFRKPHN_kbg_sp_inf
+	industrial_capacity_factory = TFRKPHN_kbg_sp_ic
+}
+TFRKPHN_spirit_kdy = {
+	icon = GFX_idea_TFRKPHN_spirit_kdy
+	enable = { always = yes }
+	consumer_goods_factor = TFRKPHN_kdy_sp_cg
+	political_power_factor = TFRKPHN_kdy_sp_pp
+	production_speed_buildings_factor = TFRKPHN_kdy_sp_bd
+	stability_factor = TFRKPHN_kdy_sp_st
+	industrial_capacity_factory = TFRKPHN_kdy_sp_ic
+	production_speed_industrial_complex_factor = TFRKPHN_kdy_sp_pic
+	research_speed_factor = TFRKPHN_kdy_sp_rs
+}
+TFRKPHN_spirit_kms = {
+	icon = GFX_idea_TFRKPHN_spirit_kms
+	enable = { always = yes }
+	political_power_factor = TFRKPHN_kms_sp_pp
+	stability_factor = TFRKPHN_kms_sp_st
+	drift_defence_factor = 0.10
+	production_speed_buildings_factor = TFRKPHN_kms_sp_bd
+	production_speed_infrastructure_factor = TFRKPHN_kms_sp_inf
+	army_org_factor = TFRKPHN_kms_sp_org
+}

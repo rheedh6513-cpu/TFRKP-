@@ -1,3 +1,6 @@
 spriteTypes = {
 	spriteType = { name = "GFX_TFRKPHN_cho_leak_news" texturefile = "gfx/event_pictures/TFRKPHN_cho_leak_news.png" }	# 7070 새어 나간 명단 (사용자가 준 우리공화당 집회 사진을 잘라 씀, 2026-11-21)
+	spriteType = { name = "GFX_TFRKPHN_cho_two_men" texturefile = "gfx/event_pictures/TFRKPHN_cho_two_men.png" }	# 7132 앞에 섰던 사람들 (사용자 사진, 2026-11-22)
+	spriteType = { name = "GFX_TFRKPHN_cho_dpk_case" texturefile = "gfx/event_pictures/TFRKPHN_cho_dpk_case.png" }	# 7131 간판이 내려지던 날 (사용자 사진, 방송 자막과 로고는 잘라 냄, 2026-11-22)
+	spriteType = { name = "GFX_TFRKPHN_cho_assembly_night" texturefile = "gfx/event_pictures/TFRKPHN_cho_assembly_night.png" }	# 7074 돌아온 법안 (사용자 사진, 2026-11-22)
 }

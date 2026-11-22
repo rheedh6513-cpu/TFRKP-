@@ -267,6 +267,7 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			country_event = tfrkphn.7050
+			mark_focus_tree_layout_dirty = yes	# 본편 군사 가지가 열린다 (woo_army_build.py)
 		}
 	}
 	focus = {
@@ -274,7 +275,7 @@ focus_tree = {
 		icon = GFX_goal_generic_political_pressure
 		x = 6
 		y = 7
-		cost = 3
+		cost = 2
 		prerequisite = { focus = TFRKPHN_woo_19 }
 		available = { date > 2028.4.1 }
 		ai_will_do = { factor = 1 }
@@ -283,4 +284,7 @@ focus_tree = {
 			hidden_effect = { if = { limit = { TFRKPHN_woo_good = yes } country_event = tfrkphn.7051 } else = { country_event = tfrkphn.7052 } }
 		}
 	}
+	# Korea Plus 원본의 국방개혁 가지와 대아대전 가지 (woo_army_build.py). 국방개혁 가지는 19번 뒤에 열린다.
+	shared_focus = KOR_yoon_army_upper
+	shared_focus = KOR_gwr_reserve_forces
 }

@@ -40,6 +40,9 @@ TFRKPHN_clear_head_minister = {
 		if = { limit = { has_idea = TFRKPHN_hong_moon_jong_HM } remove_ideas = TFRKPHN_hong_moon_jong_HM }
 		if = { limit = { has_idea = TFRKPHN_lee_in_je_HM } remove_ideas = TFRKPHN_lee_in_je_HM }
 		if = { limit = { has_idea = TFRKPHN_sim_jang_hye_young_HM } remove_ideas = TFRKPHN_sim_jang_hye_young_HM }
+		if = { limit = { has_idea = TFRKPHN_sk_kbg_im_jong_seok_HM } remove_ideas = TFRKPHN_sk_kbg_im_jong_seok_HM }
+		if = { limit = { has_idea = TFRKPHN_sk_kdy_kim_bu_gyeom_HM } remove_ideas = TFRKPHN_sk_kdy_kim_bu_gyeom_HM }
+		if = { limit = { has_idea = TFRKPHN_sk_kms_kwon_young_se_HM } remove_ideas = TFRKPHN_sk_kms_kwon_young_se_HM }
 		if = { limit = { has_idea = TFRKPHN_woo_chung_sye_kyun_HM } remove_ideas = TFRKPHN_woo_chung_sye_kyun_HM }
 		if = { limit = { has_idea = TFRKPHN_yoon_hee_sook_HM } remove_ideas = TFRKPHN_yoon_hee_sook_HM }
 	}
@@ -70,6 +73,9 @@ TFRKPHN_clear_foreign_minister = {
 		if = { limit = { has_idea = TFRKPHN_cho_hyun_dong_FM } remove_ideas = TFRKPHN_cho_hyun_dong_FM }
 		if = { limit = { has_idea = TFRKPHN_kim_dae_sik_FM } remove_ideas = TFRKPHN_kim_dae_sik_FM }
 		if = { limit = { has_idea = TFRKPHN_sim_lee_jeong_mi_FM } remove_ideas = TFRKPHN_sim_lee_jeong_mi_FM }
+		if = { limit = { has_idea = TFRKPHN_sk_kbg_kang_kyung_hwa_FM } remove_ideas = TFRKPHN_sk_kbg_kang_kyung_hwa_FM }
+		if = { limit = { has_idea = TFRKPHN_sk_kdy_wi_sung_lac_FM } remove_ideas = TFRKPHN_sk_kdy_wi_sung_lac_FM }
+		if = { limit = { has_idea = TFRKPHN_sk_kms_cho_tae_yeol_FM } remove_ideas = TFRKPHN_sk_kms_cho_tae_yeol_FM }
 		if = { limit = { has_idea = TFRKPHN_woo_park_jin_FM } remove_ideas = TFRKPHN_woo_park_jin_FM }
 		if = { limit = { has_idea = TFRKPHN_yoon_sang_hyeon_FM } remove_ideas = TFRKPHN_yoon_sang_hyeon_FM }
 	}
@@ -105,6 +111,9 @@ TFRKPHN_clear_economic_minister = {
 		if = { limit = { has_idea = TFRKPHN_oh_kyung_hoon_EM } remove_ideas = TFRKPHN_oh_kyung_hoon_EM }
 		if = { limit = { has_idea = TFRKPHN_seo_byung_soo_EM } remove_ideas = TFRKPHN_seo_byung_soo_EM }
 		if = { limit = { has_idea = TFRKPHN_sim_kang_eun_mi_EM } remove_ideas = TFRKPHN_sim_kang_eun_mi_EM }
+		if = { limit = { has_idea = TFRKPHN_sk_kbg_kim_dong_yeon_EM } remove_ideas = TFRKPHN_sk_kbg_kim_dong_yeon_EM }
+		if = { limit = { has_idea = TFRKPHN_sk_kdy_hong_nam_gi_EM } remove_ideas = TFRKPHN_sk_kdy_hong_nam_gi_EM }
+		if = { limit = { has_idea = TFRKPHN_sk_kms_choi_sang_mok_EM } remove_ideas = TFRKPHN_sk_kms_choi_sang_mok_EM }
 		if = { limit = { has_idea = TFRKPHN_woo_kim_dong_yeon_EM } remove_ideas = TFRKPHN_woo_kim_dong_yeon_EM }
 	}
 }
@@ -140,6 +149,9 @@ TFRKPHN_clear_interior_minister = {
 		if = { limit = { has_idea = TFRKPHN_kim_jin_tae_IM } remove_ideas = TFRKPHN_kim_jin_tae_IM }
 		if = { limit = { has_idea = TFRKPHN_lee_myoung_su_IM } remove_ideas = TFRKPHN_lee_myoung_su_IM }
 		if = { limit = { has_idea = TFRKPHN_sim_kwon_young_gook_IM } remove_ideas = TFRKPHN_sim_kwon_young_gook_IM }
+		if = { limit = { has_idea = TFRKPHN_sk_kbg_kim_gyeong_soo_IM } remove_ideas = TFRKPHN_sk_kbg_kim_gyeong_soo_IM }
+		if = { limit = { has_idea = TFRKPHN_sk_kdy_lee_won_ook_IM } remove_ideas = TFRKPHN_sk_kdy_lee_won_ook_IM }
+		if = { limit = { has_idea = TFRKPHN_sk_kms_won_hee_ryong_IM } remove_ideas = TFRKPHN_sk_kms_won_hee_ryong_IM }
 		if = { limit = { has_idea = TFRKPHN_woo_kim_bu_gyeom_IM } remove_ideas = TFRKPHN_woo_kim_bu_gyeom_IM }
 	}
 }
@@ -171,6 +183,9 @@ TFRKPHN_clear_intelligence_minister = {
 		if = { limit = { has_idea = TFRKPHN_hwangbo_seung_hee_IntelM } remove_ideas = TFRKPHN_hwangbo_seung_hee_IntelM }
 		if = { limit = { has_idea = TFRKPHN_kim_hong_kyun_IntelM } remove_ideas = TFRKPHN_kim_hong_kyun_IntelM }
 		if = { limit = { has_idea = TFRKPHN_sim_lee_dong_soo_IntelM } remove_ideas = TFRKPHN_sim_lee_dong_soo_IntelM }
+		if = { limit = { has_idea = TFRKPHN_sk_kbg_park_sun_won_IntelM } remove_ideas = TFRKPHN_sk_kbg_park_sun_won_IntelM }
+		if = { limit = { has_idea = TFRKPHN_sk_kdy_lee_jong_seok_IntelM } remove_ideas = TFRKPHN_sk_kdy_lee_jong_seok_IntelM }
+		if = { limit = { has_idea = TFRKPHN_sk_kms_ha_tae_keung_IntelM } remove_ideas = TFRKPHN_sk_kms_ha_tae_keung_IntelM }
 		if = { limit = { has_idea = TFRKPHN_woo_suh_hoon_IntelM } remove_ideas = TFRKPHN_woo_suh_hoon_IntelM }
 		if = { limit = { has_idea = TFRKPHN_yoon_jae_ok_IntelM } remove_ideas = TFRKPHN_yoon_jae_ok_IntelM }
 	}
@@ -207,6 +222,9 @@ TFRKPHN_clear_theorist_minister = {
 		if = { limit = { has_idea = TFRKPHN_lim_jong_deuk_TM } remove_ideas = TFRKPHN_lim_jong_deuk_TM }
 		if = { limit = { has_idea = TFRKPHN_shin_beom_chul_TM } remove_ideas = TFRKPHN_shin_beom_chul_TM }
 		if = { limit = { has_idea = TFRKPHN_sim_kim_jong_dae_TM } remove_ideas = TFRKPHN_sim_kim_jong_dae_TM }
+		if = { limit = { has_idea = TFRKPHN_sk_kbg_kim_byung_joo_TM } remove_ideas = TFRKPHN_sk_kbg_kim_byung_joo_TM }
+		if = { limit = { has_idea = TFRKPHN_sk_kdy_suh_wook_TM } remove_ideas = TFRKPHN_sk_kdy_suh_wook_TM }
+		if = { limit = { has_idea = TFRKPHN_sk_kms_han_ki_ho_TM } remove_ideas = TFRKPHN_sk_kms_han_ki_ho_TM }
 		if = { limit = { has_idea = TFRKPHN_woo_kim_yong_woo_TM } remove_ideas = TFRKPHN_woo_kim_yong_woo_TM }
 	}
 }

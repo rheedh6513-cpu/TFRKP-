@@ -1,0 +1,13 @@
+# [안내] 의원내각제 총리 후보. parl_build.py가 만든다. 김동연은 삼김 인물(TFRKPHN_kdy_char)을 그대로 쓴다.
+characters = {
+	TFRKPHN_kys_char = {
+		name = TFRKPHN_kys_char
+		portraits = { civilian = { large = GFX_portrait_TFRKPHN_kys } }
+		country_leader = {
+			desc = TFRKPHN_kys_desc
+			ideology = korean_neoconservatism
+			expire = "2065.1.1"
+			id = -1
+		}
+	}
+}

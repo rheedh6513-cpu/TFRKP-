@@ -10,6 +10,11 @@ country_event = {
 			set_country_flag = TFRKPHN_cho_dissolve_fired
 			country_event = tfrkphn.7040
 		}
+		if = {	# 완장(05)을 건너뛰었으면 민주당 해산(7131)도 여기서 띄운다 (2026-11-22)
+			limit = { NOT = { has_country_flag = TFRKPHN_dpk_case } }
+			set_country_flag = TFRKPHN_dpk_case
+			country_event = tfrkphn.7131
+		}
 	}
 }
 country_event = {
@@ -86,13 +91,15 @@ country_event = {
 		name = tfrkphn.7073.a
 		add_war_support = 0.02
 		add_stability = -0.02
+		set_country_flag = TFRKPHN_dpk_case
+		country_event = { id = tfrkphn.7131 days = 20 }
 	}
 }
 country_event = {
 	id = tfrkphn.7074
 	title = tfrkphn.7074.t
 	desc = tfrkphn.7074.d
-	picture = GFX_report_event_kor_minju_disagree
+	picture = GFX_TFRKPHN_cho_assembly_night
 	is_triggered_only = yes
 	option = {
 		name = tfrkphn.7074.a
@@ -121,5 +128,30 @@ country_event = {
 	option = {
 		name = tfrkphn.7076.a
 		add_war_support = 0.02
+	}
+}
+country_event = {
+	id = tfrkphn.7131
+	title = tfrkphn.7131.t
+	desc = tfrkphn.7131.d
+	picture = GFX_TFRKPHN_cho_dpk_case
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7131.a
+		add_stability = -0.03
+		add_political_power = 30
+		set_country_flag = TFRKPHN_dpk_dissolved
+		country_event = { id = tfrkphn.7132 days = 30 }
+	}
+}
+country_event = {
+	id = tfrkphn.7132
+	title = tfrkphn.7132.t
+	desc = tfrkphn.7132.d
+	picture = GFX_TFRKPHN_cho_two_men
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7132.a
+		add_stability = -0.01
 	}
 }
