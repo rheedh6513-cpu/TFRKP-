@@ -1,0 +1,10 @@
+# [안내] 심상정 정부 「시지프스의 바위 굴리기」 그림판. sim_build.py가 만든다.
+scripted_gui = {
+	TFRKPHN_sim_rock_gui = {
+		context_type = decision_category
+		window_name = "TFRKPHN_sim_rock_container"
+		properties = {
+			TFRKPHN_sim_rock_pic = { frame = TFRKPHN_sim_rock_f }
+		}
+	}
+}

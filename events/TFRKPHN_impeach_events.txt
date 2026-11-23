@@ -430,12 +430,6 @@ country_event = {
 		custom_effect_tooltip = TFRKPHN_cho_block_open_tt
 		hidden_effect = { country_event = { id = tfrkphn.7060 days = 30 } }
 	}
-	option = {
-		name = tfrkphn.7054.b
-		custom_effect_tooltip = TFRKPHN_cho_back_tt
-		add_political_power = -150
-		hidden_effect = { country_event = { id = tfrkphn.7042 days = 3 } }
-	}
 }
 country_event = {
 	id = tfrkphn.7036

@@ -1,0 +1,251 @@
+# [안내] 심상정 정부 개혁 정책 10개와 개혁 동력 결정. 개혁 하나가 통과하면 시지프스의 바위가 한 칸 오른다. sim_build.py가 만든다.
+TFRKPHN_sim_reform_category = {
+	TFRKPHN_sim_rf01 = {
+		icon = GFX_decision_generic_political_discourse
+		cost = 50
+		days_remove = 30
+		fire_only_once = yes
+		visible = { always = yes }
+		available = {
+			custom_trigger_tooltip = { tooltip = TFRKPHN_sim_need_people_tt check_variable = { TFRKPHN_sim_people > 39.5 } }
+			custom_trigger_tooltip = { tooltip = TFRKPHN_sim_need_dem_tt check_variable = { TFRKPHN_sim_dem > 39.5 } }
+			custom_trigger_tooltip = { tooltip = TFRKPHN_sim_one_at_a_time_tt NOT = { has_country_flag = TFRKPHN_sim_rf_running } }
+		}
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
+			custom_effect_tooltip = TFRKPHN_sim_rf_spend_tt
+			hidden_effect = { set_country_flag = TFRKPHN_sim_rf_running subtract_from_variable = { TFRKPHN_sim_people = 20 } subtract_from_variable = { TFRKPHN_sim_dem = 20 } }
+		}
+		remove_effect = {
+			custom_effect_tooltip = TFRKPHN_sim_rock_up_tt
+			hidden_effect = { clr_country_flag = TFRKPHN_sim_rf_running add_to_variable = { TFRKPHN_sim_rock = 1 } clamp_variable = { var = TFRKPHN_sim_rock min = 0 max = 10 } set_variable = { TFRKPHN_sim_rock_f = TFRKPHN_sim_rock } add_to_variable = { TFRKPHN_sim_rock_f = 1 } }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_sim_rf02 = {
+		icon = GFX_decision_generic_political_discourse
+		cost = 50
+		days_remove = 30
+		fire_only_once = yes
+		visible = { always = yes }
+		available = {
+			custom_trigger_tooltip = { tooltip = TFRKPHN_sim_need_people_tt check_variable = { TFRKPHN_sim_people > 39.5 } }
+			custom_trigger_tooltip = { tooltip = TFRKPHN_sim_need_dem_tt check_variable = { TFRKPHN_sim_dem > 39.5 } }
+			custom_trigger_tooltip = { tooltip = TFRKPHN_sim_one_at_a_time_tt NOT = { has_country_flag = TFRKPHN_sim_rf_running } }
+		}
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
+			custom_effect_tooltip = TFRKPHN_sim_rf_spend_tt
+			hidden_effect = { set_country_flag = TFRKPHN_sim_rf_running subtract_from_variable = { TFRKPHN_sim_people = 20 } subtract_from_variable = { TFRKPHN_sim_dem = 20 } }
+		}
+		remove_effect = {
+			custom_effect_tooltip = TFRKPHN_sim_rock_up_tt
+			hidden_effect = { clr_country_flag = TFRKPHN_sim_rf_running add_to_variable = { TFRKPHN_sim_rock = 1 } clamp_variable = { var = TFRKPHN_sim_rock min = 0 max = 10 } set_variable = { TFRKPHN_sim_rock_f = TFRKPHN_sim_rock } add_to_variable = { TFRKPHN_sim_rock_f = 1 } }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_sim_rf03 = {
+		icon = GFX_decision_generic_political_discourse
+		cost = 50
+		days_remove = 30
+		fire_only_once = yes
+		visible = { always = yes }
+		available = {
+			custom_trigger_tooltip = { tooltip = TFRKPHN_sim_need_people_tt check_variable = { TFRKPHN_sim_people > 39.5 } }
+			custom_trigger_tooltip = { tooltip = TFRKPHN_sim_need_dem_tt check_variable = { TFRKPHN_sim_dem > 39.5 } }
+			custom_trigger_tooltip = { tooltip = TFRKPHN_sim_one_at_a_time_tt NOT = { has_country_flag = TFRKPHN_sim_rf_running } }
+		}
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
+			custom_effect_tooltip = TFRKPHN_sim_rf_spend_tt
+			hidden_effect = { set_country_flag = TFRKPHN_sim_rf_running subtract_from_variable = { TFRKPHN_sim_people = 20 } subtract_from_variable = { TFRKPHN_sim_dem = 20 } }
+		}
+		remove_effect = {
+			custom_effect_tooltip = TFRKPHN_sim_rock_up_tt
+			hidden_effect = { clr_country_flag = TFRKPHN_sim_rf_running add_to_variable = { TFRKPHN_sim_rock = 1 } clamp_variable = { var = TFRKPHN_sim_rock min = 0 max = 10 } set_variable = { TFRKPHN_sim_rock_f = TFRKPHN_sim_rock } add_to_variable = { TFRKPHN_sim_rock_f = 1 } }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_sim_rf04 = {
+		icon = GFX_decision_generic_political_discourse
+		cost = 50
+		days_remove = 30
+		fire_only_once = yes
+		visible = { always = yes }
+		available = {
+			custom_trigger_tooltip = { tooltip = TFRKPHN_sim_need_people_tt check_variable = { TFRKPHN_sim_people > 39.5 } }
+			custom_trigger_tooltip = { tooltip = TFRKPHN_sim_need_dem_tt check_variable = { TFRKPHN_sim_dem > 39.5 } }
+			custom_trigger_tooltip = { tooltip = TFRKPHN_sim_one_at_a_time_tt NOT = { has_country_flag = TFRKPHN_sim_rf_running } }
+		}
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
+			custom_effect_tooltip = TFRKPHN_sim_rf_spend_tt
+			hidden_effect = { set_country_flag = TFRKPHN_sim_rf_running subtract_from_variable = { TFRKPHN_sim_people = 20 } subtract_from_variable = { TFRKPHN_sim_dem = 20 } }
+		}
+		remove_effect = {
+			custom_effect_tooltip = TFRKPHN_sim_rock_up_tt
+			hidden_effect = { clr_country_flag = TFRKPHN_sim_rf_running add_to_variable = { TFRKPHN_sim_rock = 1 } clamp_variable = { var = TFRKPHN_sim_rock min = 0 max = 10 } set_variable = { TFRKPHN_sim_rock_f = TFRKPHN_sim_rock } add_to_variable = { TFRKPHN_sim_rock_f = 1 } }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_sim_rf05 = {
+		icon = GFX_decision_generic_political_discourse
+		cost = 50
+		days_remove = 30
+		fire_only_once = yes
+		visible = { always = yes }
+		available = {
+			custom_trigger_tooltip = { tooltip = TFRKPHN_sim_need_people_tt check_variable = { TFRKPHN_sim_people > 39.5 } }
+			custom_trigger_tooltip = { tooltip = TFRKPHN_sim_need_dem_tt check_variable = { TFRKPHN_sim_dem > 39.5 } }
+			custom_trigger_tooltip = { tooltip = TFRKPHN_sim_one_at_a_time_tt NOT = { has_country_flag = TFRKPHN_sim_rf_running } }
+		}
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
+			custom_effect_tooltip = TFRKPHN_sim_rf_spend_tt
+			hidden_effect = { set_country_flag = TFRKPHN_sim_rf_running subtract_from_variable = { TFRKPHN_sim_people = 20 } subtract_from_variable = { TFRKPHN_sim_dem = 20 } }
+		}
+		remove_effect = {
+			custom_effect_tooltip = TFRKPHN_sim_rock_up_tt
+			hidden_effect = { clr_country_flag = TFRKPHN_sim_rf_running add_to_variable = { TFRKPHN_sim_rock = 1 } clamp_variable = { var = TFRKPHN_sim_rock min = 0 max = 10 } set_variable = { TFRKPHN_sim_rock_f = TFRKPHN_sim_rock } add_to_variable = { TFRKPHN_sim_rock_f = 1 } }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_sim_rf06 = {
+		icon = GFX_decision_generic_political_discourse
+		cost = 50
+		days_remove = 30
+		fire_only_once = yes
+		visible = { always = yes }
+		available = {
+			custom_trigger_tooltip = { tooltip = TFRKPHN_sim_need_people_tt check_variable = { TFRKPHN_sim_people > 39.5 } }
+			custom_trigger_tooltip = { tooltip = TFRKPHN_sim_need_dem_tt check_variable = { TFRKPHN_sim_dem > 39.5 } }
+			custom_trigger_tooltip = { tooltip = TFRKPHN_sim_one_at_a_time_tt NOT = { has_country_flag = TFRKPHN_sim_rf_running } }
+		}
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
+			custom_effect_tooltip = TFRKPHN_sim_rf_spend_tt
+			hidden_effect = { set_country_flag = TFRKPHN_sim_rf_running subtract_from_variable = { TFRKPHN_sim_people = 20 } subtract_from_variable = { TFRKPHN_sim_dem = 20 } }
+		}
+		remove_effect = {
+			custom_effect_tooltip = TFRKPHN_sim_rock_up_tt
+			hidden_effect = { clr_country_flag = TFRKPHN_sim_rf_running add_to_variable = { TFRKPHN_sim_rock = 1 } clamp_variable = { var = TFRKPHN_sim_rock min = 0 max = 10 } set_variable = { TFRKPHN_sim_rock_f = TFRKPHN_sim_rock } add_to_variable = { TFRKPHN_sim_rock_f = 1 } }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_sim_rf07 = {
+		icon = GFX_decision_generic_political_discourse
+		cost = 50
+		days_remove = 30
+		fire_only_once = yes
+		visible = { always = yes }
+		available = {
+			custom_trigger_tooltip = { tooltip = TFRKPHN_sim_need_people_tt check_variable = { TFRKPHN_sim_people > 39.5 } }
+			custom_trigger_tooltip = { tooltip = TFRKPHN_sim_need_dem_tt check_variable = { TFRKPHN_sim_dem > 39.5 } }
+			custom_trigger_tooltip = { tooltip = TFRKPHN_sim_one_at_a_time_tt NOT = { has_country_flag = TFRKPHN_sim_rf_running } }
+		}
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
+			custom_effect_tooltip = TFRKPHN_sim_rf_spend_tt
+			hidden_effect = { set_country_flag = TFRKPHN_sim_rf_running subtract_from_variable = { TFRKPHN_sim_people = 20 } subtract_from_variable = { TFRKPHN_sim_dem = 20 } }
+		}
+		remove_effect = {
+			custom_effect_tooltip = TFRKPHN_sim_rock_up_tt
+			hidden_effect = { clr_country_flag = TFRKPHN_sim_rf_running add_to_variable = { TFRKPHN_sim_rock = 1 } clamp_variable = { var = TFRKPHN_sim_rock min = 0 max = 10 } set_variable = { TFRKPHN_sim_rock_f = TFRKPHN_sim_rock } add_to_variable = { TFRKPHN_sim_rock_f = 1 } }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_sim_rf08 = {
+		icon = GFX_decision_generic_political_discourse
+		cost = 50
+		days_remove = 30
+		fire_only_once = yes
+		visible = { always = yes }
+		available = {
+			custom_trigger_tooltip = { tooltip = TFRKPHN_sim_need_people_tt check_variable = { TFRKPHN_sim_people > 39.5 } }
+			custom_trigger_tooltip = { tooltip = TFRKPHN_sim_need_dem_tt check_variable = { TFRKPHN_sim_dem > 39.5 } }
+			custom_trigger_tooltip = { tooltip = TFRKPHN_sim_one_at_a_time_tt NOT = { has_country_flag = TFRKPHN_sim_rf_running } }
+		}
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
+			custom_effect_tooltip = TFRKPHN_sim_rf_spend_tt
+			hidden_effect = { set_country_flag = TFRKPHN_sim_rf_running subtract_from_variable = { TFRKPHN_sim_people = 20 } subtract_from_variable = { TFRKPHN_sim_dem = 20 } }
+		}
+		remove_effect = {
+			custom_effect_tooltip = TFRKPHN_sim_rock_up_tt
+			hidden_effect = { clr_country_flag = TFRKPHN_sim_rf_running add_to_variable = { TFRKPHN_sim_rock = 1 } clamp_variable = { var = TFRKPHN_sim_rock min = 0 max = 10 } set_variable = { TFRKPHN_sim_rock_f = TFRKPHN_sim_rock } add_to_variable = { TFRKPHN_sim_rock_f = 1 } }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_sim_rf09 = {
+		icon = GFX_decision_generic_political_discourse
+		cost = 50
+		days_remove = 30
+		fire_only_once = yes
+		visible = { always = yes }
+		available = {
+			custom_trigger_tooltip = { tooltip = TFRKPHN_sim_need_people_tt check_variable = { TFRKPHN_sim_people > 39.5 } }
+			custom_trigger_tooltip = { tooltip = TFRKPHN_sim_need_dem_tt check_variable = { TFRKPHN_sim_dem > 39.5 } }
+			custom_trigger_tooltip = { tooltip = TFRKPHN_sim_one_at_a_time_tt NOT = { has_country_flag = TFRKPHN_sim_rf_running } }
+		}
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
+			custom_effect_tooltip = TFRKPHN_sim_rf_spend_tt
+			hidden_effect = { set_country_flag = TFRKPHN_sim_rf_running subtract_from_variable = { TFRKPHN_sim_people = 20 } subtract_from_variable = { TFRKPHN_sim_dem = 20 } }
+		}
+		remove_effect = {
+			custom_effect_tooltip = TFRKPHN_sim_rock_up_tt
+			hidden_effect = { clr_country_flag = TFRKPHN_sim_rf_running add_to_variable = { TFRKPHN_sim_rock = 1 } clamp_variable = { var = TFRKPHN_sim_rock min = 0 max = 10 } set_variable = { TFRKPHN_sim_rock_f = TFRKPHN_sim_rock } add_to_variable = { TFRKPHN_sim_rock_f = 1 } }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_sim_rf10 = {
+		icon = GFX_decision_generic_political_discourse
+		cost = 50
+		days_remove = 30
+		fire_only_once = yes
+		visible = { always = yes }
+		available = {
+			custom_trigger_tooltip = { tooltip = TFRKPHN_sim_need_people_tt check_variable = { TFRKPHN_sim_people > 39.5 } }
+			custom_trigger_tooltip = { tooltip = TFRKPHN_sim_need_dem_tt check_variable = { TFRKPHN_sim_dem > 39.5 } }
+			custom_trigger_tooltip = { tooltip = TFRKPHN_sim_one_at_a_time_tt NOT = { has_country_flag = TFRKPHN_sim_rf_running } }
+		}
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
+			custom_effect_tooltip = TFRKPHN_sim_rf_spend_tt
+			hidden_effect = { set_country_flag = TFRKPHN_sim_rf_running subtract_from_variable = { TFRKPHN_sim_people = 20 } subtract_from_variable = { TFRKPHN_sim_dem = 20 } }
+		}
+		remove_effect = {
+			custom_effect_tooltip = TFRKPHN_sim_rock_up_tt
+			hidden_effect = { clr_country_flag = TFRKPHN_sim_rf_running add_to_variable = { TFRKPHN_sim_rock = 1 } clamp_variable = { var = TFRKPHN_sim_rock min = 0 max = 10 } set_variable = { TFRKPHN_sim_rock_f = TFRKPHN_sim_rock } add_to_variable = { TFRKPHN_sim_rock_f = 1 } }
+		}
+		ai_will_do = { factor = 0 }
+	}
+}
+TFRKPHN_sim_power_category = {
+	TFRKPHN_sim_pw_people = {
+		icon = GFX_decision_generic_speech
+		cost = 40
+		days_re_enable = 30
+		visible = { always = yes }
+		available = { custom_trigger_tooltip = { tooltip = TFRKPHN_sim_max_tt check_variable = { TFRKPHN_sim_people < 99.5 } } }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
+			custom_effect_tooltip = TFRKPHN_sim_add_people_tt
+			hidden_effect = { add_to_variable = { TFRKPHN_sim_people = 10 } clamp_variable = { var = TFRKPHN_sim_people min = 0 max = 100 } }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_sim_pw_dem = {
+		icon = GFX_decision_generic_political_discourse
+		cost = 40
+		days_re_enable = 30
+		visible = { always = yes }
+		available = { custom_trigger_tooltip = { tooltip = TFRKPHN_sim_max_tt check_variable = { TFRKPHN_sim_dem < 99.5 } } }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
+			custom_effect_tooltip = TFRKPHN_sim_add_dem_tt
+			hidden_effect = { add_to_variable = { TFRKPHN_sim_dem = 10 } clamp_variable = { var = TFRKPHN_sim_dem min = 0 max = 100 } }
+		}
+		ai_will_do = { factor = 0 }
+	}
+}

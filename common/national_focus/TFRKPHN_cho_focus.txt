@@ -138,16 +138,33 @@ focus_tree = {
 	focus = {
 		id = TFRKPHN_cho_10
 		icon = GFX_goal_generic_army_doctrines
-		x = 5
+		x = 4
 		y = 5
 		cost = 2
 		prerequisite = { focus = TFRKPHN_cho_09 }
-		available = { has_country_flag = TFRKPHN_cho_block NOT = { has_country_flag = TFRKPHN_cho_shell_fired } }
+		mutually_exclusive = { focus = TFRKPHN_cho_11 }
+		available = { has_country_flag = TFRKPHN_cho_block NOT = { has_country_flag = TFRKPHN_cho_shell_fired } NOT = { has_country_flag = TFRKPHN_cho_back_fired } NOT = { has_country_flag = TFRKPHN_cho_backed_down } }
 		bypass = { has_country_flag = TFRKPHN_cho_shell_fired }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			custom_effect_tooltip = TFRKPHN_cho_shell_tt
 			hidden_effect = { if = { limit = { NOT = { has_country_flag = TFRKPHN_cho_shell_fired } } set_country_flag = TFRKPHN_cho_shell_fired country_event = tfrkphn.7041 } }
+		}
+	}
+	focus = {
+		id = TFRKPHN_cho_11
+		icon = GFX_goal_generic_political_pressure
+		x = 6
+		y = 5
+		cost = 2
+		prerequisite = { focus = TFRKPHN_cho_09 }
+		mutually_exclusive = { focus = TFRKPHN_cho_10 }
+		available = { has_country_flag = TFRKPHN_cho_block NOT = { has_country_flag = TFRKPHN_cho_shell_fired } NOT = { has_country_flag = TFRKPHN_cho_back_fired } NOT = { has_country_flag = TFRKPHN_cho_backed_down } }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			custom_effect_tooltip = TFRKPHN_cho_back_tt
+			add_political_power = -150
+			hidden_effect = { set_country_flag = TFRKPHN_cho_back_fired country_event = { id = tfrkphn.7042 days = 3 } }
 		}
 	}
 }

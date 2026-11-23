@@ -104,7 +104,7 @@ country_event = {
 	option = {
 		name = tfrkphn.7101.a
 		add_stability = 0.05
-		hidden_effect = { country_event = { id = tfrkphn.7115 days = 30 } }
+		hidden_effect = { country_event = { id = tfrkphn.7164 days = 30 } }	# 결말을 고르는 숨은 이벤트 (kbg_end_build.py)
 	}
 }
 country_event = {
@@ -408,8 +408,12 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = tfrkphn.7115.a
-		add_stability = 0.03
+		add_stability = -0.03
 		set_country_flag = TFRKPHN_samkim_end
+		set_country_flag = TFRKPHN_kbg_bad_end
+		set_country_flag = TFRKPHN_nx_started	# 「남은 한 해」를 건너뛴다 (kbg_end_build.py)
+		custom_effect_tooltip = TFRKPHN_kbg_bad_tt
+		hidden_effect = { country_event = { id = tfrkphn.7142 days = 60 } }
 	}
 }
 country_event = {

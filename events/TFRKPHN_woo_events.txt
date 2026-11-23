@@ -71,6 +71,8 @@ country_event = {
 		add_stability = -0.10
 		set_country_flag = TFRKPHN_woo_ended
 		set_country_flag = TFRKPHN_woo_bitter_end
+		custom_effect_tooltip = TFRKPHN_samkim_next_tt
+		hidden_effect = { country_event = { id = tfrkphn.7061 days = 7 } }
 	}
 }
 country_event = {

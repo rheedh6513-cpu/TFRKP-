@@ -23,7 +23,7 @@ country_event = {
 	is_triggered_only = yes
 	immediate = {
 		if = {
-			limit = { NOT = { has_country_flag = TFRKPHN_cho_shell_fired } }
+			limit = { NOT = { has_country_flag = TFRKPHN_cho_shell_fired } NOT = { has_country_flag = TFRKPHN_cho_back_fired } NOT = { has_country_flag = TFRKPHN_cho_backed_down } NOT = { focus_progress = { focus = TFRKPHN_cho_11 progress > 0 } } }
 			set_country_flag = TFRKPHN_cho_shell_fired
 			country_event = tfrkphn.7041
 		}

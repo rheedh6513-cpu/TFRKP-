@@ -16,4 +16,18 @@ focus_tree = {
 			country_event = { id = tfrkphn.7119 days = 1 }
 		}
 	}
+	focus = {
+		id = TFRKPHN_sim_02
+		icon = GFX_goal_generic_national_unity
+		x = 10
+		y = 1
+		cost = 5
+		prerequisite = { focus = TFRKPHN_sim_01 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_stability = -0.025
+			custom_effect_tooltip = TFRKPHN_sim_02_tt
+			hidden_effect = { set_country_flag = TFRKPHN_sim_reform_open set_variable = { TFRKPHN_sim_rock = 0 } set_variable = { TFRKPHN_sim_rock_f = 1 } set_variable = { TFRKPHN_sim_people = 30 } set_variable = { TFRKPHN_sim_dem = 30 } }
+		}
+	}
 }
