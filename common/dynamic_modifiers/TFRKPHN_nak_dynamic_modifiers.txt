@@ -1,0 +1,7 @@
+# [안내] 이낙연 정부 국민정신 「민생」. 값은 민생 게이지 단계(0~4)에 따라 움직인다. nak_build.py가 만든다.
+TFRKPHN_nak_minsaeng = {
+	icon = GFX_idea_KOR_yoon_common_conservatism_dynamic_modifir_idea
+	political_power_factor = TFRKPHN_nak_ms_pp
+	stability_factor = TFRKPHN_nak_ms_st
+	consumer_goods_factor = TFRKPHN_nak_ms_cg
+}

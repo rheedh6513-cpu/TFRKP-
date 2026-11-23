@@ -1,0 +1,11 @@
+# [안내] 이낙연 루트 시험용 사건. 콘솔에서 event tfrkphn.7165 로 부른다. nak_build.py가 만든다.
+add_namespace = tfrkphn
+country_event = {
+	id = tfrkphn.7165
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		load_focus_tree = { tree = TFRKPHN_nak_tree keep_completed = no }
+		complete_national_focus = TFRKPHN_nak_b01_01
+	}
+}

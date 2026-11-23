@@ -12,13 +12,21 @@ focus_tree = {
 
 	focus = {
 		id = TFRKPHN_nak_b01_01
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_goal_generic_national_unity
 		x = 3
 		y = 0
 		cost = 5
 		ai_will_do = { factor = 1 }
-		completion_reward = {
-			add_political_power = 25
+		completion_reward = {	# 내 삶을 지켜주는 나라 (nak_build.py)
+			add_stability = 0.075
+			add_political_power = 80
+			custom_effect_tooltip = TFRKPHN_nak_ms_open_tt
+			hidden_effect = {
+				set_country_flag = TFRKPHN_nak_ms_open
+				set_variable = { TFRKPHN_nak_ms = 50 }
+				set_variable = { TFRKPHN_nak_gov = 50 }
+				TFRKPHN_nak_ms_refresh = yes
+			}
 		}
 	}
 

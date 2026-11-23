@@ -1,0 +1,8 @@
+# [안내] 이낙연 정부 결정 탭 「민생」. 중점 「내 삶을 지켜주는 나라」를 끝내면 열린다. nak_build.py가 만든다.
+TFRKPHN_nak_ms_category = {
+	icon = generic_political_actions
+	priority = 215
+	scripted_gui = TFRKPHN_nak_ms_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_nak_ms_open }
+}

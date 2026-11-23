@@ -1,0 +1,42 @@
+# [안내] 이낙연 정부 민생 결정. 추경은 유동성을 쓰고, 현장 방문은 정치력을 쓴다. nak_build.py가 만든다.
+TFRKPHN_nak_ms_category = {
+	TFRKPHN_nak_ms_budget = {
+		icon = GFX_decision_generic_welfare
+		cost = 0
+		days_re_enable = 60
+		visible = { always = yes }
+		available = { custom_trigger_tooltip = { tooltip = TFRKPHN_nak_ms_max_tt check_variable = { TFRKPHN_nak_ms < 99.5 } } set_temp_variable = { income_trigger_temp_var = 20 } has_income_with_inflation_greater_than_or_equals = yes }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
+			set_temp_variable = { income_var_temp = -20 } add_income_with_inflation = yes custom_effect_tooltip = TFRKPHN_nak_ms_add10_tt
+			hidden_effect = { add_to_variable = { TFRKPHN_nak_ms = 10 } TFRKPHN_nak_ms_refresh = yes }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_nak_ms_visit = {
+		icon = GFX_decision_generic_welfare
+		cost = 50
+		days_re_enable = 30
+		visible = { always = yes }
+		available = { custom_trigger_tooltip = { tooltip = TFRKPHN_nak_ms_max_tt check_variable = { TFRKPHN_nak_ms < 99.5 } } }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
+			custom_effect_tooltip = TFRKPHN_nak_ms_add5_tt
+			hidden_effect = { add_to_variable = { TFRKPHN_nak_ms = 5 } TFRKPHN_nak_ms_refresh = yes }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_nak_gov = {
+		icon = GFX_decision_generic_speech
+		cost = 40
+		days_re_enable = 30
+		visible = { always = yes }
+		available = { custom_trigger_tooltip = { tooltip = TFRKPHN_nak_gov_max_tt check_variable = { TFRKPHN_nak_gov < 99.5 } } }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
+			custom_effect_tooltip = TFRKPHN_nak_gov_add10_tt
+			hidden_effect = { add_to_variable = { TFRKPHN_nak_gov = 10 } TFRKPHN_nak_ms_refresh = yes }
+		}
+		ai_will_do = { factor = 0 }
+	}
+}

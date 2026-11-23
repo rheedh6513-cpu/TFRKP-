@@ -1,0 +1,19 @@
+# [안내] 이낙연 정부 민생 게이지. 게이지를 0~100으로 맞추고 단계(25마다 하나)를 다시 세어 국민정신 값을 고친다. nak_build.py가 만든다.
+TFRKPHN_nak_ms_refresh = {
+	hidden_effect = {
+		clamp_variable = { var = TFRKPHN_nak_ms min = 0 max = 100 }
+		clamp_variable = { var = TFRKPHN_nak_gov min = 0 max = 100 }
+		set_variable = { TFRKPHN_nak_gov_f = TFRKPHN_nak_gov } divide_variable = { TFRKPHN_nak_gov_f = 5 } round_variable = TFRKPHN_nak_gov_f add_to_variable = { TFRKPHN_nak_gov_f = 1 }
+		set_variable = { TFRKPHN_nak_ms_lv = 0 }
+		if = { limit = { check_variable = { TFRKPHN_nak_ms > 24.5 } } set_variable = { TFRKPHN_nak_ms_lv = 1 } }
+		if = { limit = { check_variable = { TFRKPHN_nak_ms > 49.5 } } set_variable = { TFRKPHN_nak_ms_lv = 2 } }
+		if = { limit = { check_variable = { TFRKPHN_nak_ms > 74.5 } } set_variable = { TFRKPHN_nak_ms_lv = 3 } }
+		if = { limit = { check_variable = { TFRKPHN_nak_ms > 99.5 } } set_variable = { TFRKPHN_nak_ms_lv = 4 } }
+		set_variable = { TFRKPHN_nak_ms_pp = TFRKPHN_nak_ms_lv } multiply_variable = { TFRKPHN_nak_ms_pp = 0.05 }
+		set_variable = { TFRKPHN_nak_ms_st = TFRKPHN_nak_ms_lv } multiply_variable = { TFRKPHN_nak_ms_st = 0.03 }
+		set_variable = { TFRKPHN_nak_ms_cg = TFRKPHN_nak_ms_lv } multiply_variable = { TFRKPHN_nak_ms_cg = 0.025 }
+		set_variable = { TFRKPHN_nak_ms_f = TFRKPHN_nak_ms } divide_variable = { TFRKPHN_nak_ms_f = 5 } round_variable = TFRKPHN_nak_ms_f add_to_variable = { TFRKPHN_nak_ms_f = 1 }
+		if = { limit = { NOT = { has_dynamic_modifier = { modifier = TFRKPHN_nak_minsaeng } } } add_dynamic_modifier = { modifier = TFRKPHN_nak_minsaeng } }
+		force_update_dynamic_modifier = yes
+	}
+}

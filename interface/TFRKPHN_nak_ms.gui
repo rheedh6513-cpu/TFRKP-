@@ -1,0 +1,43 @@
+# [안내] 이낙연 정부 「민생」 그림판. 맨 위에 사진, 그 아래 가운데에 시계 모양 민생 게이지(시침은 전체, 분침은 지금 단계 안), 시계 아래에 지금 단계와 효과, 맨 아래에 정부 지지율과 민생 지지율 가로 막대 둘. nak_build.py가 만든다.
+guiTypes = {
+	containerWindowType = {
+		name = "TFRKPHN_nak_ms_container"
+		size = { width = 100%% height = 606 }
+		containerWindowType = {
+			name = "TFRKPHN_nak_ms_panel"
+			position = { x = 0 y = 0 }
+			size = { width = 500 height = 604 }
+			background = { name = "background" spriteType = "GFX_tiled_decisions_bg_small" alwaystransparent = yes }
+			containerWindowType = {
+				name = "TFRKPHN_nak_ms_title_container"
+				position = { x = 1 y = 0 }
+				size = { width = 498 height = 30 }
+				background = { name = "background" spriteType = "GFX_tiled_header_1" alwaystransparent = yes }
+				instantTextBoxType = { name = "TFRKPHN_nak_ms_top" position = { x = -240 y = 2 } orientation = CENTER_UP text = "TFRKPHN_nak_ms_top" font = "hoi_18mbs" format = left maxWidth = 480 alwaystransparent = yes }
+			}
+			iconType = { name = "TFRKPHN_nak_ms_photo" position = { x = 1 y = 30 } spriteType = "GFX_TFRKPHN_nak_ms_photo" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_nak_ms_clockface" position = { x = 98 y = 268 } spriteType = "GFX_TFRKPHN_nak_ms_clockface" alwaystransparent = yes }
+			instantTextBoxType = { name = "TFRKPHN_nak_ms_state" position = { x = 10 y = 432 } text = "TFRKPHN_nak_ms_state" font = "hoi_18mbs" format = centre maxWidth = 480 maxHeight = 44 alwaystransparent = yes }
+			containerWindowType = {
+				name = "TFRKPHN_nak_rate_box"
+				position = { x = 70 y = 484 }
+				size = { width = 360 height = 112 }
+				background = { name = "Background" quadTextureSprite = "GFX_tiled_window_thin_border2" clipping = no }
+				containerWindowType = {
+					name = "TFRKPHN_nak_gov_row"
+					position = { x = 5 y = 22 }
+					instantTextBoxType = { name = "TFRKPHN_nak_gov_bar_label" font = "VCR02_20" maxWidth = 150 maxHeight = 16 format = center text = "TFRKPHN_nak_gov_bar_label" }
+					iconType = { name = "TFRKPHN_nak_gov_bar" spriteType = "GFX_KOR_dpk_progressbar_green" position = { x = 135 y = -3 } pdx_tooltip = TFRKPHN_nak_gov_bar_tt }
+					iconType = { name = "TFRKPHN_nak_gov_bar_frame" spriteType = "GFX_KOR_dpk_progressbar_frame" position = { x = 135 y = -3 } scale = 0.65 pdx_tooltip = TFRKPHN_nak_gov_bar_tt }
+				}
+				containerWindowType = {
+					name = "TFRKPHN_nak_ms_row"
+					position = { x = 5 y = 66 }
+					instantTextBoxType = { name = "TFRKPHN_nak_ms_bar_label" font = "VCR02_20" maxWidth = 150 maxHeight = 16 format = center text = "TFRKPHN_nak_ms_bar_label" }
+					iconType = { name = "TFRKPHN_nak_ms_bar" spriteType = "GFX_KOR_dpk_progressbar" position = { x = 135 y = -3 } pdx_tooltip = TFRKPHN_nak_ms_bar_tt }
+					iconType = { name = "TFRKPHN_nak_ms_bar_frame" spriteType = "GFX_KOR_dpk_progressbar_frame" position = { x = 135 y = -3 } scale = 0.65 pdx_tooltip = TFRKPHN_nak_ms_bar_tt }
+				}
+			}
+		}
+	}
+}

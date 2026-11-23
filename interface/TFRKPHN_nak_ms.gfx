@@ -1,0 +1,4 @@
+spriteTypes = {
+	spriteType = { name = "GFX_TFRKPHN_nak_ms_photo" texturefile = "gfx/interface/TFRKPHN_nak/TFRKPHN_nak_ms_photo.png" }
+	spriteType = { name = "GFX_TFRKPHN_nak_ms_clockface" texturefile = "gfx/interface/TFRKPHN_nak/TFRKPHN_nak_ms_clockface.png" noOfFrames = 21 }
+}
