@@ -5,6 +5,7 @@ characters = {
 		portraits = { civilian = { large = GFX_portrait_TFRKPHN_kdy } }
 		country_leader = {
 			desc = TFRKPHN_kdy_desc
+			traits = { TFRKPHN_trait_leader_kdy }
 			ideology = centrist
 			expire = "2065.1.1"
 			id = -1
@@ -15,6 +16,7 @@ characters = {
 		portraits = { civilian = { large = GFX_portrait_TFRKPHN_kms } }
 		country_leader = {
 			desc = TFRKPHN_kms_desc
+			traits = { TFRKPHN_trait_leader_kms }
 			ideology = korean_neoconservatism
 			expire = "2065.1.1"
 			id = -1
@@ -25,6 +27,7 @@ characters = {
 		portraits = { civilian = { large = GFX_portrait_TFRKPHN_kbg } }
 		country_leader = {
 			desc = TFRKPHN_kbg_desc
+			traits = { TFRKPHN_trait_leader_kbg }
 			ideology = centrist
 			expire = "2065.1.1"
 			id = -1

@@ -1,0 +1,56 @@
+# [안내] 조원진과 그 뒤 대통령들의 지도자 특성. leader_desc2.py가 만든다 (haera_fix.py 맨 끝). 값은 임시.
+leader_traits = {
+	TFRKPHN_trait_leader_cho = {
+		random = no
+		war_support_factor = 0.05
+		stability_factor = -0.03
+		political_power_factor = -0.05
+		ai_will_do = { factor = 1 }
+	}
+	TFRKPHN_trait_leader_kjt = {
+		random = no
+		stability_factor = 0.05
+		political_power_factor = 0.10
+		war_support_factor = -0.03
+		ai_will_do = { factor = 1 }
+	}
+	TFRKPHN_trait_leader_woo = {
+		random = no
+		stability_factor = 0.05
+		drift_defence_factor = 0.15
+		political_power_factor = -0.05
+		ai_will_do = { factor = 1 }
+	}
+	TFRKPHN_trait_leader_kbg = {
+		random = no
+		political_power_factor = 0.15
+		stability_factor = -0.03
+		ai_will_do = { factor = 1 }
+	}
+	TFRKPHN_trait_leader_kdy = {
+		random = no
+		production_speed_buildings_factor = 0.05
+		consumer_goods_factor = -0.03
+		political_power_factor = -0.05
+		ai_will_do = { factor = 1 }
+	}
+	TFRKPHN_trait_leader_kms = {
+		random = no
+		political_power_factor = 0.10
+		stability_factor = 0.03
+		war_support_factor = -0.02
+		ai_will_do = { factor = 1 }
+	}
+	TFRKPHN_trait_leader_kys = {
+		random = no
+		political_power_factor = 0.05
+		stability_factor = 0.03
+		ai_will_do = { factor = 1 }
+	}
+	TFRKPHN_trait_leader_hng = {
+		random = no
+		consumer_goods_factor = -0.02
+		stability_factor = 0.03
+		ai_will_do = { factor = 1 }
+	}
+}

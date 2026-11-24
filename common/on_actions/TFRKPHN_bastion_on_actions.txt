@@ -1,0 +1,68 @@
+# [안내] 보루·재건 탭. 우원식 루트가 열리면 기둥을 세우고 달마다 깎는다. 우원식 정부가 끝나면 남은 값을 삼김 정부로 넘긴다. bastion_build.py가 만든다.
+on_actions = {
+	on_daily_KOR = {
+		effect = {
+			if = {
+				limit = { has_country_flag = TFRKPHN_woo_route NOT = { has_country_flag = TFRKPHN_woo_ended } NOT = { has_country_flag = TFRKPHN_bo_init } }
+				set_country_flag = TFRKPHN_bo_init
+				set_variable = { TFRKPHN_bo_days = 0 }
+				set_variable = { TFRKPHN_bo_1 = 70 } set_variable = { TFRKPHN_bo_c1 = 70 }
+				set_variable = { TFRKPHN_bo_2 = 75 } set_variable = { TFRKPHN_bo_c2 = 75 }
+				set_variable = { TFRKPHN_bo_3 = 60 } set_variable = { TFRKPHN_bo_c3 = 60 }
+				set_variable = { TFRKPHN_bo_4 = 55 } set_variable = { TFRKPHN_bo_c4 = 55 }
+				TFRKPHN_bo_refresh = yes
+			}
+			if = {
+				limit = { has_country_flag = TFRKPHN_bo_init NOT = { has_country_flag = TFRKPHN_woo_ended } }
+				add_to_variable = { TFRKPHN_bo_days = 1 }
+				if = { limit = { check_variable = { TFRKPHN_bo_days = 45 } } country_event = tfrkphn.7212 }
+				if = { limit = { check_variable = { TFRKPHN_bo_days = 120 } } country_event = tfrkphn.7213 }
+				if = { limit = { check_variable = { TFRKPHN_bo_days = 200 } } country_event = tfrkphn.7214 }
+				if = { limit = { check_variable = { TFRKPHN_bo_days = 280 } } country_event = tfrkphn.7215 }
+			}
+			if = {
+				limit = { has_country_flag = TFRKPHN_bo_init NOT = { has_country_flag = TFRKPHN_woo_ended } NOT = { has_country_flag = TFRKPHN_bo_tick } }
+				set_country_flag = { flag = TFRKPHN_bo_tick days = 30 value = 1 }
+				if = { limit = { has_completed_focus = TFRKPHN_woo_07 } add_to_variable = { TFRKPHN_bo_1 = -1 } } else = { add_to_variable = { TFRKPHN_bo_1 = -3 } }
+				if = { limit = { has_completed_focus = TFRKPHN_woo_10 } add_to_variable = { TFRKPHN_bo_2 = -1 } } else = { add_to_variable = { TFRKPHN_bo_2 = -2 } }
+				if = { limit = { has_completed_focus = TFRKPHN_woo_04 } add_to_variable = { TFRKPHN_bo_3 = -1 } } else = { add_to_variable = { TFRKPHN_bo_3 = -3 } }
+				if = { limit = { has_completed_focus = TFRKPHN_woo_12 } add_to_variable = { TFRKPHN_bo_4 = -1 } } else = { add_to_variable = { TFRKPHN_bo_4 = -4 } }
+				TFRKPHN_bo_refresh = yes
+				if = { limit = { OR = { check_variable = { TFRKPHN_bo_1 < 20 } check_variable = { TFRKPHN_bo_2 < 20 } check_variable = { TFRKPHN_bo_3 < 20 } check_variable = { TFRKPHN_bo_4 < 20 } } } add_stability = -0.02 }
+			}
+			if = {
+				limit = { has_country_flag = TFRKPHN_bo_init has_country_flag = TFRKPHN_woo_ended NOT = { has_country_flag = TFRKPHN_bo_closed } }
+				set_country_flag = TFRKPHN_bo_closed
+				remove_dynamic_modifier = { modifier = TFRKPHN_bo_modifier }
+			}
+			if = {
+				limit = { OR = { has_country_flag = TFRKPHN_samkim_kbg_pm has_country_flag = TFRKPHN_samkim_kdy_pm has_country_flag = TFRKPHN_samkim_kms_pm } NOT = { has_country_flag = TFRKPHN_samkim_end } NOT = { has_country_flag = TFRKPHN_rb_init } }
+				set_country_flag = TFRKPHN_rb_init
+				if = {
+					limit = { has_country_flag = TFRKPHN_bo_init }
+					set_variable = { TFRKPHN_rb_1 = TFRKPHN_bo_1 }
+					set_variable = { TFRKPHN_rb_2 = TFRKPHN_bo_2 }
+					set_variable = { TFRKPHN_rb_3 = TFRKPHN_bo_3 }
+					set_variable = { TFRKPHN_rb_4 = TFRKPHN_bo_4 }
+				}
+				else = {
+					set_variable = { TFRKPHN_rb_1 = 35 }
+					set_variable = { TFRKPHN_rb_2 = 40 }
+					set_variable = { TFRKPHN_rb_3 = 30 }
+					set_variable = { TFRKPHN_rb_4 = 30 }
+				}
+				set_variable = { TFRKPHN_rb_s1 = TFRKPHN_rb_1 }
+				set_variable = { TFRKPHN_rb_s2 = TFRKPHN_rb_2 }
+				set_variable = { TFRKPHN_rb_s3 = TFRKPHN_rb_3 }
+				set_variable = { TFRKPHN_rb_s4 = TFRKPHN_rb_4 }
+				TFRKPHN_rb_refresh = yes
+			}
+			if = {
+				limit = { has_country_flag = TFRKPHN_rb_init has_country_flag = TFRKPHN_samkim_end NOT = { has_country_flag = TFRKPHN_rb_closed } }
+				set_country_flag = TFRKPHN_rb_closed
+				remove_dynamic_modifier = { modifier = TFRKPHN_rb_modifier }
+				country_event = { id = tfrkphn.7216 days = 3 }
+			}
+		}
+	}
+}

@@ -8,12 +8,18 @@ guiTypes = {
 			position = { x = 0 y = 0 }
 			size = { width = 500 height = 168 }
 			background = { name = "background" spriteType = "GFX_tiled_decisions_bg_small" alwaystransparent = yes }
-			buttonType = { name = "TFRKPHN_woo_ind_b1" position = { x = 3 y = 9 } spriteType = "GFX_TFRKPHN_woo_ind_1" pdx_tooltip = "TFRKPHN_woo_ind_b1_tt" clicksound = click_default }
-			buttonType = { name = "TFRKPHN_woo_ind_b2" position = { x = 86 y = 9 } spriteType = "GFX_TFRKPHN_woo_ind_2" pdx_tooltip = "TFRKPHN_woo_ind_b2_tt" clicksound = click_default }
-			buttonType = { name = "TFRKPHN_woo_ind_b3" position = { x = 169 y = 9 } spriteType = "GFX_TFRKPHN_woo_ind_3" pdx_tooltip = "TFRKPHN_woo_ind_b3_tt" clicksound = click_default }
-			buttonType = { name = "TFRKPHN_woo_ind_b4" position = { x = 252 y = 9 } spriteType = "GFX_TFRKPHN_woo_ind_4" pdx_tooltip = "TFRKPHN_woo_ind_b4_tt" clicksound = click_default }
-			buttonType = { name = "TFRKPHN_woo_ind_b5" position = { x = 335 y = 9 } spriteType = "GFX_TFRKPHN_woo_ind_5" pdx_tooltip = "TFRKPHN_woo_ind_b5_tt" clicksound = click_default }
-			buttonType = { name = "TFRKPHN_woo_ind_b6" position = { x = 418 y = 9 } spriteType = "GFX_TFRKPHN_woo_ind_6" pdx_tooltip = "TFRKPHN_woo_ind_b6_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_woo_ind_b1" position = { x = 4 y = 9 } spriteType = "GFX_TFRKPHN_woo_ind_1" pdx_tooltip = "TFRKPHN_woo_ind_b1_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_woo_ind_c1" position = { x = 4 y = 9 } spriteType = "GFX_TFRKPHN_woo_ind_1c" pdx_tooltip = "TFRKPHN_woo_ind_b1_tt" }
+			buttonType = { name = "TFRKPHN_woo_ind_b2" position = { x = 85 y = 9 } spriteType = "GFX_TFRKPHN_woo_ind_2" pdx_tooltip = "TFRKPHN_woo_ind_b2_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_woo_ind_c2" position = { x = 85 y = 9 } spriteType = "GFX_TFRKPHN_woo_ind_2c" pdx_tooltip = "TFRKPHN_woo_ind_b2_tt" }
+			buttonType = { name = "TFRKPHN_woo_ind_b3" position = { x = 166 y = 9 } spriteType = "GFX_TFRKPHN_woo_ind_3" pdx_tooltip = "TFRKPHN_woo_ind_b3_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_woo_ind_c3" position = { x = 166 y = 9 } spriteType = "GFX_TFRKPHN_woo_ind_3c" pdx_tooltip = "TFRKPHN_woo_ind_b3_tt" }
+			buttonType = { name = "TFRKPHN_woo_ind_b4" position = { x = 247 y = 9 } spriteType = "GFX_TFRKPHN_woo_ind_4" pdx_tooltip = "TFRKPHN_woo_ind_b4_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_woo_ind_c4" position = { x = 247 y = 9 } spriteType = "GFX_TFRKPHN_woo_ind_4c" pdx_tooltip = "TFRKPHN_woo_ind_b4_tt" }
+			buttonType = { name = "TFRKPHN_woo_ind_b5" position = { x = 328 y = 9 } spriteType = "GFX_TFRKPHN_woo_ind_5" pdx_tooltip = "TFRKPHN_woo_ind_b5_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_woo_ind_c5" position = { x = 328 y = 9 } spriteType = "GFX_TFRKPHN_woo_ind_5c" pdx_tooltip = "TFRKPHN_woo_ind_b5_tt" }
+			buttonType = { name = "TFRKPHN_woo_ind_b6" position = { x = 409 y = 9 } spriteType = "GFX_TFRKPHN_woo_ind_6" pdx_tooltip = "TFRKPHN_woo_ind_b6_tt" clicksound = click_default }
+			iconType = { name = "TFRKPHN_woo_ind_c6" position = { x = 409 y = 9 } spriteType = "GFX_TFRKPHN_woo_ind_6c" pdx_tooltip = "TFRKPHN_woo_ind_b6_tt" }
 		}
 	}
 }

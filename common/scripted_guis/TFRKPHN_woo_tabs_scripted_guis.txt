@@ -100,11 +100,17 @@ scripted_gui = {
 			TFRKPHN_woo_ind_b6_click = { add_political_power = -25 add_war_support = 0.01 set_temp_variable = { military_development_var_temp = 0.02 } add_military_development = yes set_country_flag = TFRKPHN_wi_done6 set_variable = { TFRKPHN_wi_f6 = 2 } add_to_variable = { TFRKPHN_wi_cnt = 1 } if = { limit = { check_variable = { TFRKPHN_wi_cnt > 5.5 } } add_stability = 0.03 } }
 		}
 		triggers = {
+			TFRKPHN_woo_ind_c1_visible = { has_country_flag = TFRKPHN_wi_done1 }
 			TFRKPHN_woo_ind_b1_click_enabled = { NOT = { has_country_flag = TFRKPHN_wi_done1 } has_political_power > 24 }
+			TFRKPHN_woo_ind_c2_visible = { has_country_flag = TFRKPHN_wi_done2 }
 			TFRKPHN_woo_ind_b2_click_enabled = { NOT = { has_country_flag = TFRKPHN_wi_done2 } has_political_power > 24 }
+			TFRKPHN_woo_ind_c3_visible = { has_country_flag = TFRKPHN_wi_done3 }
 			TFRKPHN_woo_ind_b3_click_enabled = { NOT = { has_country_flag = TFRKPHN_wi_done3 } has_political_power > 24 }
+			TFRKPHN_woo_ind_c4_visible = { has_country_flag = TFRKPHN_wi_done4 }
 			TFRKPHN_woo_ind_b4_click_enabled = { NOT = { has_country_flag = TFRKPHN_wi_done4 } has_political_power > 24 }
+			TFRKPHN_woo_ind_c5_visible = { has_country_flag = TFRKPHN_wi_done5 }
 			TFRKPHN_woo_ind_b5_click_enabled = { NOT = { has_country_flag = TFRKPHN_wi_done5 } has_political_power > 24 }
+			TFRKPHN_woo_ind_c6_visible = { has_country_flag = TFRKPHN_wi_done6 }
 			TFRKPHN_woo_ind_b6_click_enabled = { NOT = { has_country_flag = TFRKPHN_wi_done6 } has_political_power > 24 }
 		}
 	}

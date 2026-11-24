@@ -1,0 +1,10 @@
+﻿l_korean:
+ # [안내] 조원진과 그 뒤 대통령들의 지도자 특성 이름. leader_desc2.py가 만든다.
+ TFRKPHN_trait_leader_cho:0 "광화문의 대통령"
+ TFRKPHN_trait_leader_kjt:0 "법대로"
+ TFRKPHN_trait_leader_woo:0 "전차에서 내려온 대통령"
+ TFRKPHN_trait_leader_kbg:0 "개혁의 칼"
+ TFRKPHN_trait_leader_kdy:0 "빚을 갚는 대통령"
+ TFRKPHN_trait_leader_kms:0 "내각제의 꿈"
+ TFRKPHN_trait_leader_kys:0 "연대의 실무자"
+ TFRKPHN_trait_leader_hng:0 "장부를 맞춘 사람"

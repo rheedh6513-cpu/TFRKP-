@@ -5,6 +5,7 @@ characters = {
 		portraits = { civilian = { large = GFX_portrait_TFRKPHN_kim_jin_tae } }
 		country_leader = {
 			desc = TFRKPHN_kjt_desc
+			traits = { TFRKPHN_trait_leader_kjt }
 			ideology = ultra_conservatism
 			expire = "2065.1.1"
 			id = -1

@@ -1,0 +1,47 @@
+# [안내] 보루·재건 탭의 그림판. 기둥 높이는 변수로 넘긴다. bastion_build.py가 만든다.
+scripted_gui = {
+	TFRKPHN_bo_gui = {
+		context_type = decision_category
+		window_name = "TFRKPHN_bo_container"
+		properties = {
+			TFRKPHN_bo_p1 = { frame = TFRKPHN_bo_f1 }
+			TFRKPHN_bo_p2 = { frame = TFRKPHN_bo_f2 }
+			TFRKPHN_bo_p3 = { frame = TFRKPHN_bo_f3 }
+			TFRKPHN_bo_p4 = { frame = TFRKPHN_bo_f4 }
+		}
+		effects = {
+			TFRKPHN_bo_b1_click = { add_political_power = -25 add_to_variable = { TFRKPHN_bo_1 = 8 } set_country_flag = { flag = TFRKPHN_bo_cd1 days = 40 value = 1 } TFRKPHN_bo_refresh = yes }
+			TFRKPHN_bo_b2_click = { add_political_power = -25 add_to_variable = { TFRKPHN_bo_2 = 8 } set_country_flag = { flag = TFRKPHN_bo_cd2 days = 40 value = 1 } TFRKPHN_bo_refresh = yes }
+			TFRKPHN_bo_b3_click = { add_political_power = -25 add_to_variable = { TFRKPHN_bo_3 = 8 } set_country_flag = { flag = TFRKPHN_bo_cd3 days = 40 value = 1 } TFRKPHN_bo_refresh = yes }
+			TFRKPHN_bo_b4_click = { add_political_power = -25 add_to_variable = { TFRKPHN_bo_4 = 8 } set_country_flag = { flag = TFRKPHN_bo_cd4 days = 40 value = 1 } TFRKPHN_bo_refresh = yes }
+		}
+		triggers = {
+			TFRKPHN_bo_b1_click_enabled = { has_political_power > 24 NOT = { has_country_flag = TFRKPHN_bo_cd1 } check_variable = { TFRKPHN_bo_1 < TFRKPHN_bo_c1 } }
+			TFRKPHN_bo_b2_click_enabled = { has_political_power > 24 NOT = { has_country_flag = TFRKPHN_bo_cd2 } check_variable = { TFRKPHN_bo_2 < TFRKPHN_bo_c2 } }
+			TFRKPHN_bo_b3_click_enabled = { has_political_power > 24 NOT = { has_country_flag = TFRKPHN_bo_cd3 } check_variable = { TFRKPHN_bo_3 < TFRKPHN_bo_c3 } }
+			TFRKPHN_bo_b4_click_enabled = { has_political_power > 24 NOT = { has_country_flag = TFRKPHN_bo_cd4 } check_variable = { TFRKPHN_bo_4 < TFRKPHN_bo_c4 } }
+		}
+	}
+	TFRKPHN_rb_gui = {
+		context_type = decision_category
+		window_name = "TFRKPHN_rb_container"
+		properties = {
+			TFRKPHN_rb_p1 = { frame = TFRKPHN_rb_f1 }
+			TFRKPHN_rb_p2 = { frame = TFRKPHN_rb_f2 }
+			TFRKPHN_rb_p3 = { frame = TFRKPHN_rb_f3 }
+			TFRKPHN_rb_p4 = { frame = TFRKPHN_rb_f4 }
+		}
+		effects = {
+			TFRKPHN_rb_b1_click = { add_political_power = -30 if = { limit = { has_country_flag = TFRKPHN_samkim_kms_pm } add_to_variable = { TFRKPHN_rb_1 = 16 } } else = { add_to_variable = { TFRKPHN_rb_1 = 10 } } set_country_flag = { flag = TFRKPHN_rb_cd1 days = 40 value = 1 } TFRKPHN_rb_refresh = yes TFRKPHN_rb_check = yes }
+			TFRKPHN_rb_b2_click = { add_political_power = -30 if = { limit = { has_country_flag = TFRKPHN_samkim_kbg_pm } add_to_variable = { TFRKPHN_rb_2 = 16 } } else = { add_to_variable = { TFRKPHN_rb_2 = 10 } } set_country_flag = { flag = TFRKPHN_rb_cd2 days = 40 value = 1 } TFRKPHN_rb_refresh = yes TFRKPHN_rb_check = yes }
+			TFRKPHN_rb_b3_click = { add_political_power = -30 if = { limit = { has_country_flag = TFRKPHN_samkim_kdy_pm } add_to_variable = { TFRKPHN_rb_3 = 16 } } else = { add_to_variable = { TFRKPHN_rb_3 = 10 } } set_country_flag = { flag = TFRKPHN_rb_cd3 days = 40 value = 1 } TFRKPHN_rb_refresh = yes TFRKPHN_rb_check = yes }
+			TFRKPHN_rb_b4_click = { add_political_power = -30 if = { limit = { has_country_flag = TFRKPHN_samkim_kbg_pm } add_to_variable = { TFRKPHN_rb_4 = 16 } } else = { add_to_variable = { TFRKPHN_rb_4 = 10 } } set_country_flag = { flag = TFRKPHN_rb_cd4 days = 40 value = 1 } TFRKPHN_rb_refresh = yes TFRKPHN_rb_check = yes }
+		}
+		triggers = {
+			TFRKPHN_rb_b1_click_enabled = { has_political_power > 29 NOT = { has_country_flag = TFRKPHN_rb_cd1 } check_variable = { TFRKPHN_rb_1 < 99.5 } }
+			TFRKPHN_rb_b2_click_enabled = { has_political_power > 29 NOT = { has_country_flag = TFRKPHN_rb_cd2 } check_variable = { TFRKPHN_rb_2 < 99.5 } }
+			TFRKPHN_rb_b3_click_enabled = { has_political_power > 29 NOT = { has_country_flag = TFRKPHN_rb_cd3 } check_variable = { TFRKPHN_rb_3 < 99.5 } }
+			TFRKPHN_rb_b4_click_enabled = { has_political_power > 29 NOT = { has_country_flag = TFRKPHN_rb_cd4 } check_variable = { TFRKPHN_rb_4 < 99.5 } }
+		}
+	}
+}

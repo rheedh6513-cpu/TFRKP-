@@ -34,3 +34,17 @@ country_event = {
 		add_political_power = 300
 	}
 }
+country_event = {
+	id = tfrkphn.7217
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		set_country_flag = TFRKPHN_rb_init
+		clr_country_flag = TFRKPHN_samkim_end
+		clr_country_flag = TFRKPHN_rb_done
+		set_variable = { TFRKPHN_rb_1 = 35 } set_variable = { TFRKPHN_rb_2 = 40 } set_variable = { TFRKPHN_rb_3 = 30 } set_variable = { TFRKPHN_rb_4 = 30 }
+		set_variable = { TFRKPHN_rb_s1 = 35 } set_variable = { TFRKPHN_rb_s2 = 40 } set_variable = { TFRKPHN_rb_s3 = 30 } set_variable = { TFRKPHN_rb_s4 = 30 }
+		TFRKPHN_rb_refresh = yes
+		add_political_power = 300
+	}
+}

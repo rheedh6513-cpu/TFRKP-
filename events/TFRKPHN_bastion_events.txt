@@ -1,0 +1,93 @@
+# [안내] 보루·재건 탭의 사건. 7212~7215는 우원식이 도움을 거절하는 사건(받으면 기둥이 깎인다), 7216은 삼김 임기 끝의 뒷이야기. bastion_build.py가 만든다.
+add_namespace = tfrkphn
+country_event = {
+	id = tfrkphn.7212
+	title = tfrkphn.7212.t
+	desc = tfrkphn.7212.d
+	picture = GFX_TFRKPHN_bst_7212
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7212.a
+		ai_chance = { factor = 70 }
+		add_political_power = -40 add_stability = -0.02
+		custom_effect_tooltip = TFRKPHN_bo_keep1_tt
+	}
+	option = {
+		name = tfrkphn.7212.b
+		ai_chance = { factor = 30 }
+		add_political_power = 50
+		custom_effect_tooltip = TFRKPHN_bo_lose1_tt
+		hidden_effect = { add_to_variable = { TFRKPHN_bo_1 = -15 } add_to_variable = { TFRKPHN_bo_c1 = -10 } TFRKPHN_bo_refresh = yes }
+	}
+}
+country_event = {
+	id = tfrkphn.7213
+	title = tfrkphn.7213.t
+	desc = tfrkphn.7213.d
+	picture = GFX_TFRKPHN_bst_7213
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7213.a
+		ai_chance = { factor = 70 }
+		add_stability = -0.03
+		custom_effect_tooltip = TFRKPHN_bo_keep3_tt
+	}
+	option = {
+		name = tfrkphn.7213.b
+		ai_chance = { factor = 30 }
+		add_stability = 0.03
+		custom_effect_tooltip = TFRKPHN_bo_lose3_tt
+		hidden_effect = { add_to_variable = { TFRKPHN_bo_3 = -15 } add_to_variable = { TFRKPHN_bo_c3 = -10 } TFRKPHN_bo_refresh = yes }
+	}
+}
+country_event = {
+	id = tfrkphn.7214
+	title = tfrkphn.7214.t
+	desc = tfrkphn.7214.d
+	picture = GFX_TFRKPHN_bst_7214
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7214.a
+		ai_chance = { factor = 70 }
+		add_political_power = -30 add_stability = -0.02
+		custom_effect_tooltip = TFRKPHN_bo_keep2_tt
+	}
+	option = {
+		name = tfrkphn.7214.b
+		ai_chance = { factor = 30 }
+		add_political_power = 40
+		custom_effect_tooltip = TFRKPHN_bo_lose2_tt
+		hidden_effect = { add_to_variable = { TFRKPHN_bo_2 = -15 } add_to_variable = { TFRKPHN_bo_c2 = -10 } TFRKPHN_bo_refresh = yes }
+	}
+}
+country_event = {
+	id = tfrkphn.7215
+	title = tfrkphn.7215.t
+	desc = tfrkphn.7215.d
+	picture = GFX_TFRKPHN_bst_7215
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7215.a
+		ai_chance = { factor = 70 }
+		add_political_power = -20 add_war_support = -0.02
+		custom_effect_tooltip = TFRKPHN_bo_keep4_tt
+	}
+	option = {
+		name = tfrkphn.7215.b
+		ai_chance = { factor = 30 }
+		add_stability = 0.04
+		custom_effect_tooltip = TFRKPHN_bo_lose4_tt
+		hidden_effect = { add_to_variable = { TFRKPHN_bo_4 = -15 } add_to_variable = { TFRKPHN_bo_c4 = -10 } TFRKPHN_bo_refresh = yes }
+	}
+}
+country_event = {
+	id = tfrkphn.7216
+	title = tfrkphn.7216.t
+	desc = tfrkphn.7216.d
+	picture = GFX_TFRKPHN_bst_7216
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7216.a
+		add_political_power = 25
+	}
+}

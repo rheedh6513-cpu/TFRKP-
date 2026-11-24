@@ -1,0 +1,17 @@
+spriteTypes = {
+	spriteType = { name = "GFX_TFRKPHN_bo_p1" texturefile = "gfx/interface/TFRKPHN_bastion/TFRKPHN_bo_p1.png" noOfFrames = 11 }
+	spriteType = { name = "GFX_TFRKPHN_bo_p2" texturefile = "gfx/interface/TFRKPHN_bastion/TFRKPHN_bo_p2.png" noOfFrames = 11 }
+	spriteType = { name = "GFX_TFRKPHN_bo_p3" texturefile = "gfx/interface/TFRKPHN_bastion/TFRKPHN_bo_p3.png" noOfFrames = 11 }
+	spriteType = { name = "GFX_TFRKPHN_bo_p4" texturefile = "gfx/interface/TFRKPHN_bastion/TFRKPHN_bo_p4.png" noOfFrames = 11 }
+	spriteType = { name = "GFX_TFRKPHN_bo_btn" texturefile = "gfx/interface/TFRKPHN_bastion/TFRKPHN_bo_btn.png" }
+	spriteType = { name = "GFX_TFRKPHN_rb_p1" texturefile = "gfx/interface/TFRKPHN_bastion/TFRKPHN_rb_p1.png" noOfFrames = 11 }
+	spriteType = { name = "GFX_TFRKPHN_rb_p2" texturefile = "gfx/interface/TFRKPHN_bastion/TFRKPHN_rb_p2.png" noOfFrames = 11 }
+	spriteType = { name = "GFX_TFRKPHN_rb_p3" texturefile = "gfx/interface/TFRKPHN_bastion/TFRKPHN_rb_p3.png" noOfFrames = 11 }
+	spriteType = { name = "GFX_TFRKPHN_rb_p4" texturefile = "gfx/interface/TFRKPHN_bastion/TFRKPHN_rb_p4.png" noOfFrames = 11 }
+	spriteType = { name = "GFX_TFRKPHN_rb_btn" texturefile = "gfx/interface/TFRKPHN_bastion/TFRKPHN_rb_btn.png" }
+	spriteType = { name = "GFX_TFRKPHN_bst_7212" texturefile = "gfx/event_pictures/TFRKPHN_bst_7212.png" }
+	spriteType = { name = "GFX_TFRKPHN_bst_7213" texturefile = "gfx/event_pictures/TFRKPHN_bst_7213.png" }
+	spriteType = { name = "GFX_TFRKPHN_bst_7214" texturefile = "gfx/event_pictures/TFRKPHN_bst_7214.png" }
+	spriteType = { name = "GFX_TFRKPHN_bst_7215" texturefile = "gfx/event_pictures/TFRKPHN_bst_7215.png" }
+	spriteType = { name = "GFX_TFRKPHN_bst_7216" texturefile = "gfx/event_pictures/TFRKPHN_bst_7216.png" }
+}

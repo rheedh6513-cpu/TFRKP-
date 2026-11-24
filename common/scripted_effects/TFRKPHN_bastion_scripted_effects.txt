@@ -1,0 +1,94 @@
+# [안내] 보루·재건 탭의 계산. 기둥 값을 범위에 맞추고 그림 칸과 국민정신 값을 고친다. bastion_build.py가 만든다.
+TFRKPHN_bo_refresh = {
+	clamp_variable = { var = TFRKPHN_bo_1 min = 0 max = TFRKPHN_bo_c1 }
+	set_temp_variable = { bt_o = TFRKPHN_bo_1 }
+	modulo_temp_variable = { bt_o = 10 }
+	set_variable = { TFRKPHN_bo_f1 = TFRKPHN_bo_1 }
+	subtract_from_variable = { TFRKPHN_bo_f1 = bt_o }
+	divide_variable = { TFRKPHN_bo_f1 = 10 }
+	add_to_variable = { TFRKPHN_bo_f1 = 1 }
+	clamp_variable = { var = TFRKPHN_bo_2 min = 0 max = TFRKPHN_bo_c2 }
+	set_temp_variable = { bt_o = TFRKPHN_bo_2 }
+	modulo_temp_variable = { bt_o = 10 }
+	set_variable = { TFRKPHN_bo_f2 = TFRKPHN_bo_2 }
+	subtract_from_variable = { TFRKPHN_bo_f2 = bt_o }
+	divide_variable = { TFRKPHN_bo_f2 = 10 }
+	add_to_variable = { TFRKPHN_bo_f2 = 1 }
+	clamp_variable = { var = TFRKPHN_bo_3 min = 0 max = TFRKPHN_bo_c3 }
+	set_temp_variable = { bt_o = TFRKPHN_bo_3 }
+	modulo_temp_variable = { bt_o = 10 }
+	set_variable = { TFRKPHN_bo_f3 = TFRKPHN_bo_3 }
+	subtract_from_variable = { TFRKPHN_bo_f3 = bt_o }
+	divide_variable = { TFRKPHN_bo_f3 = 10 }
+	add_to_variable = { TFRKPHN_bo_f3 = 1 }
+	clamp_variable = { var = TFRKPHN_bo_4 min = 0 max = TFRKPHN_bo_c4 }
+	set_temp_variable = { bt_o = TFRKPHN_bo_4 }
+	modulo_temp_variable = { bt_o = 10 }
+	set_variable = { TFRKPHN_bo_f4 = TFRKPHN_bo_4 }
+	subtract_from_variable = { TFRKPHN_bo_f4 = bt_o }
+	divide_variable = { TFRKPHN_bo_f4 = 10 }
+	add_to_variable = { TFRKPHN_bo_f4 = 1 }
+	set_variable = { TFRKPHN_bo_avg = TFRKPHN_bo_1 }
+	add_to_variable = { TFRKPHN_bo_avg = TFRKPHN_bo_2 }
+	add_to_variable = { TFRKPHN_bo_avg = TFRKPHN_bo_3 }
+	add_to_variable = { TFRKPHN_bo_avg = TFRKPHN_bo_4 }
+	divide_variable = { TFRKPHN_bo_avg = 4 }
+	set_variable = { TFRKPHN_bo_st = TFRKPHN_bo_avg }
+	subtract_from_variable = { TFRKPHN_bo_st = 50 }
+	multiply_variable = { TFRKPHN_bo_st = 0.002 }
+	set_variable = { TFRKPHN_bo_x = TFRKPHN_bo_avg }
+	multiply_variable = { TFRKPHN_bo_x = 0.002 }
+	if = { limit = { NOT = { has_dynamic_modifier = { modifier = TFRKPHN_bo_modifier } } } add_dynamic_modifier = { modifier = TFRKPHN_bo_modifier } }
+	force_update_dynamic_modifier = yes
+}
+TFRKPHN_rb_refresh = {
+	clamp_variable = { var = TFRKPHN_rb_1 min = 0 max = 100 }
+	set_temp_variable = { bt_o = TFRKPHN_rb_1 }
+	modulo_temp_variable = { bt_o = 10 }
+	set_variable = { TFRKPHN_rb_f1 = TFRKPHN_rb_1 }
+	subtract_from_variable = { TFRKPHN_rb_f1 = bt_o }
+	divide_variable = { TFRKPHN_rb_f1 = 10 }
+	add_to_variable = { TFRKPHN_rb_f1 = 1 }
+	clamp_variable = { var = TFRKPHN_rb_2 min = 0 max = 100 }
+	set_temp_variable = { bt_o = TFRKPHN_rb_2 }
+	modulo_temp_variable = { bt_o = 10 }
+	set_variable = { TFRKPHN_rb_f2 = TFRKPHN_rb_2 }
+	subtract_from_variable = { TFRKPHN_rb_f2 = bt_o }
+	divide_variable = { TFRKPHN_rb_f2 = 10 }
+	add_to_variable = { TFRKPHN_rb_f2 = 1 }
+	clamp_variable = { var = TFRKPHN_rb_3 min = 0 max = 100 }
+	set_temp_variable = { bt_o = TFRKPHN_rb_3 }
+	modulo_temp_variable = { bt_o = 10 }
+	set_variable = { TFRKPHN_rb_f3 = TFRKPHN_rb_3 }
+	subtract_from_variable = { TFRKPHN_rb_f3 = bt_o }
+	divide_variable = { TFRKPHN_rb_f3 = 10 }
+	add_to_variable = { TFRKPHN_rb_f3 = 1 }
+	clamp_variable = { var = TFRKPHN_rb_4 min = 0 max = 100 }
+	set_temp_variable = { bt_o = TFRKPHN_rb_4 }
+	modulo_temp_variable = { bt_o = 10 }
+	set_variable = { TFRKPHN_rb_f4 = TFRKPHN_rb_4 }
+	subtract_from_variable = { TFRKPHN_rb_f4 = bt_o }
+	divide_variable = { TFRKPHN_rb_f4 = 10 }
+	add_to_variable = { TFRKPHN_rb_f4 = 1 }
+	set_variable = { TFRKPHN_rb_avg = TFRKPHN_rb_1 }
+	add_to_variable = { TFRKPHN_rb_avg = TFRKPHN_rb_2 }
+	add_to_variable = { TFRKPHN_rb_avg = TFRKPHN_rb_3 }
+	add_to_variable = { TFRKPHN_rb_avg = TFRKPHN_rb_4 }
+	divide_variable = { TFRKPHN_rb_avg = 4 }
+	set_variable = { TFRKPHN_rb_st = TFRKPHN_rb_avg }
+	subtract_from_variable = { TFRKPHN_rb_st = 50 }
+	multiply_variable = { TFRKPHN_rb_st = 0.002 }
+	set_variable = { TFRKPHN_rb_x = TFRKPHN_rb_avg }
+	subtract_from_variable = { TFRKPHN_rb_x = 50 }
+	multiply_variable = { TFRKPHN_rb_x = 0.002 }
+	if = { limit = { NOT = { has_dynamic_modifier = { modifier = TFRKPHN_rb_modifier } } } add_dynamic_modifier = { modifier = TFRKPHN_rb_modifier } }
+	force_update_dynamic_modifier = yes
+}
+TFRKPHN_rb_check = {
+	if = {
+		limit = { NOT = { has_country_flag = TFRKPHN_rb_done } check_variable = { TFRKPHN_rb_1 > 79.5 } check_variable = { TFRKPHN_rb_2 > 79.5 } check_variable = { TFRKPHN_rb_3 > 79.5 } check_variable = { TFRKPHN_rb_4 > 79.5 } }
+		set_country_flag = TFRKPHN_rb_done
+		add_stability = 0.05
+		add_political_power = 100
+	}
+}

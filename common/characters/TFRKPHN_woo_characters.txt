@@ -5,6 +5,7 @@ characters = {
 		portraits = { civilian = { large = GFX_portrait_TFRKPHN_woo_won_shik } }
 		country_leader = {
 			desc = TFRKPHN_woo_desc
+			traits = { TFRKPHN_trait_leader_woo }
 			ideology = cooperative_democracy_liberal
 			expire = "2065.1.1"
 			id = -1

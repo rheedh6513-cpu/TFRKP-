@@ -1,0 +1,12 @@
+# [안내] 조원진은 본편 인물이라 인물 파일에 특성을 적을 수 없다. 대통령이 된 뒤 하루 안에 특성을 한 번 붙인다. leader_desc2.py가 만든다.
+on_actions = {
+	on_daily_KOR = {
+		effect = {
+			if = {
+				limit = { has_country_flag = TFRKPHN_e21_cho has_country_leader = { character = KOR_cho_won_jin_char ruling_only = yes } NOT = { has_country_flag = TFRKPHN_cho_trait_set } }
+				set_country_flag = TFRKPHN_cho_trait_set
+				add_country_leader_trait = TFRKPHN_trait_leader_cho
+			}
+		}
+	}
+}

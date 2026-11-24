@@ -1,0 +1,267 @@
+# [안내] 공장을 주는 1회용 결정 탭 (조원진·우원식·삼김). ind_build.py가 만든다.
+TFRKPHN_ind_cho_category = {
+	TFRKPHN_ind_cho_1 = {
+		icon = GFX_decision_icon_KOR_mega_city_icon
+		available = { owns_state = 870 }
+		highlight_states = { highlight_state_targets = { state = 870 } }
+		cost = 40
+		ai_hint_pp_cost = 40
+		days_remove = 70
+		fire_only_once = yes
+		modifier = { civilian_factory_use = 1 }
+		ai_will_do = { factor = 20 }
+		remove_effect = {
+			870 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
+			}
+		}
+	}
+	TFRKPHN_ind_cho_2 = {
+		icon = GFX_decision_icon_KOR_arms_factory_icon
+		available = { owns_state = 1412 }
+		highlight_states = { highlight_state_targets = { state = 1412 } }
+		cost = 40
+		ai_hint_pp_cost = 40
+		days_remove = 70
+		fire_only_once = yes
+		modifier = { civilian_factory_use = 1 }
+		ai_will_do = { factor = 20 }
+		remove_effect = {
+			1412 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = { type = arms_factory level = 2 instant_build = yes }
+			}
+		}
+	}
+	TFRKPHN_ind_cho_3 = {
+		icon = GFX_decision_icon_KOR_raillway_icon
+		available = { owns_state = 870 }
+		highlight_states = { highlight_state_targets = { state = 870 } }
+		cost = 40
+		ai_hint_pp_cost = 40
+		days_remove = 70
+		fire_only_once = yes
+		modifier = { civilian_factory_use = 1 }
+		ai_will_do = { factor = 20 }
+		remove_effect = {
+			870 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
+			}
+		}
+	}
+	TFRKPHN_ind_cho_4 = {
+		icon = GFX_decision_icon_KOR_dockyard_icon
+		available = { owns_state = 1410 }
+		highlight_states = { highlight_state_targets = { state = 1410 } }
+		cost = 40
+		ai_hint_pp_cost = 40
+		days_remove = 70
+		fire_only_once = yes
+		modifier = { civilian_factory_use = 1 }
+		ai_will_do = { factor = 20 }
+		remove_effect = {
+			1410 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = { type = dockyard level = 2 instant_build = yes }
+			}
+		}
+	}
+	TFRKPHN_ind_cho_5 = {
+		icon = GFX_decision_icon_KOR_mega_city_icon
+		available = { owns_state = 1411 }
+		highlight_states = { highlight_state_targets = { state = 1411 } }
+		cost = 40
+		ai_hint_pp_cost = 40
+		days_remove = 70
+		fire_only_once = yes
+		modifier = { civilian_factory_use = 1 }
+		ai_will_do = { factor = 20 }
+		remove_effect = {
+			1411 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
+			}
+		}
+	}
+}
+TFRKPHN_ind_woo_category = {
+	TFRKPHN_ind_woo_1 = {
+		icon = GFX_decision_icon_KOR_mega_city_icon
+		available = { owns_state = 1041 }
+		highlight_states = { highlight_state_targets = { state = 1041 } }
+		cost = 40
+		ai_hint_pp_cost = 40
+		days_remove = 70
+		fire_only_once = yes
+		modifier = { civilian_factory_use = 1 }
+		ai_will_do = { factor = 20 }
+		remove_effect = {
+			1041 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
+			}
+		}
+	}
+	TFRKPHN_ind_woo_2 = {
+		icon = GFX_decision_icon_KOR_arms_factory_icon
+		available = { owns_state = 1041 }
+		highlight_states = { highlight_state_targets = { state = 1041 } }
+		cost = 40
+		ai_hint_pp_cost = 40
+		days_remove = 70
+		fire_only_once = yes
+		modifier = { civilian_factory_use = 1 }
+		ai_will_do = { factor = 20 }
+		remove_effect = {
+			1041 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+			}
+		}
+	}
+	TFRKPHN_ind_woo_3 = {
+		icon = GFX_decision_icon_KOR_energy_farm_1_icon
+		available = { owns_state = 869 }
+		highlight_states = { highlight_state_targets = { state = 869 } }
+		cost = 40
+		ai_hint_pp_cost = 40
+		days_remove = 70
+		fire_only_once = yes
+		modifier = { civilian_factory_use = 1 }
+		ai_will_do = { factor = 20 }
+		remove_effect = {
+			869 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = { type = energy_farm level = 2 instant_build = yes }
+			}
+		}
+	}
+	TFRKPHN_ind_woo_4 = {
+		icon = GFX_decision_icon_KOR_mega_city_icon
+		available = { owns_state = 869 }
+		highlight_states = { highlight_state_targets = { state = 869 } }
+		cost = 40
+		ai_hint_pp_cost = 40
+		days_remove = 70
+		fire_only_once = yes
+		modifier = { civilian_factory_use = 1 }
+		ai_will_do = { factor = 20 }
+		remove_effect = {
+			869 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
+			}
+		}
+	}
+	TFRKPHN_ind_woo_5 = {
+		icon = GFX_decision_icon_KOR_raillway_icon
+		available = { owns_state = 871 }
+		highlight_states = { highlight_state_targets = { state = 871 } }
+		cost = 40
+		ai_hint_pp_cost = 40
+		days_remove = 70
+		fire_only_once = yes
+		modifier = { civilian_factory_use = 1 }
+		ai_will_do = { factor = 20 }
+		remove_effect = {
+			871 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
+			}
+		}
+	}
+}
+TFRKPHN_ind_skm_category = {
+	TFRKPHN_ind_skm_1 = {
+		icon = GFX_decision_icon_KOR_mega_city_icon
+		available = { owns_state = 1411 }
+		highlight_states = { highlight_state_targets = { state = 1411 } }
+		cost = 40
+		ai_hint_pp_cost = 40
+		days_remove = 70
+		fire_only_once = yes
+		modifier = { civilian_factory_use = 1 }
+		ai_will_do = { factor = 20 }
+		remove_effect = {
+			1411 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
+			}
+		}
+	}
+	TFRKPHN_ind_skm_2 = {
+		icon = GFX_decision_icon_KOR_mega_city_icon
+		available = { owns_state = 525 }
+		highlight_states = { highlight_state_targets = { state = 525 } }
+		cost = 40
+		ai_hint_pp_cost = 40
+		days_remove = 70
+		fire_only_once = yes
+		modifier = { civilian_factory_use = 1 }
+		ai_will_do = { factor = 20 }
+		remove_effect = {
+			525 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
+			}
+		}
+	}
+	TFRKPHN_ind_skm_3 = {
+		icon = GFX_decision_icon_KOR_dockyard_icon
+		available = { owns_state = 1409 }
+		highlight_states = { highlight_state_targets = { state = 1409 } }
+		cost = 40
+		ai_hint_pp_cost = 40
+		days_remove = 70
+		fire_only_once = yes
+		modifier = { civilian_factory_use = 1 }
+		ai_will_do = { factor = 20 }
+		remove_effect = {
+			1409 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+				add_building_construction = { type = dockyard level = 1 instant_build = yes }
+			}
+		}
+	}
+	TFRKPHN_ind_skm_4 = {
+		icon = GFX_decision_icon_KOR_mega_city_icon
+		available = { owns_state = 869 }
+		highlight_states = { highlight_state_targets = { state = 869 } }
+		cost = 40
+		ai_hint_pp_cost = 40
+		days_remove = 70
+		fire_only_once = yes
+		modifier = { civilian_factory_use = 1 }
+		ai_will_do = { factor = 20 }
+		remove_effect = {
+			869 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
+			}
+		}
+	}
+	TFRKPHN_ind_skm_5 = {
+		icon = GFX_decision_icon_KOR_raillway_icon
+		available = { owns_state = 871 }
+		highlight_states = { highlight_state_targets = { state = 871 } }
+		cost = 40
+		ai_hint_pp_cost = 40
+		days_remove = 70
+		fire_only_once = yes
+		modifier = { civilian_factory_use = 1 }
+		ai_will_do = { factor = 20 }
+		remove_effect = {
+			871 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
+			}
+		}
+	}
+}
