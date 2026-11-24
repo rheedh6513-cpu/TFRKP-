@@ -4,27 +4,29 @@
 on_actions = {
 	# 김정은 사망 뒤 다른 스크립트(괴뢰화, 정부 형태 복원 등)가 김정은을 다시 지도자로 세우면 바로 되돌린다
 	on_daily_PRK = {
-		# 군사위원회(CPK)가 있는 동안 최룡해는 평양 쪽에 있을 수 없다
-		if = {
-			limit = {
-				country_exists = CPK
-				has_character = PRK_cho_ryong_hae
-			}
-			hidden_effect = { retire_character = PRK_cho_ryong_hae }
-		}
-		if = {
-			limit = {
-				has_country_flag = PRK_Kim_Is_Dead
-				OR = {
-					has_country_leader = { character = PRK_kim_jongun ruling_only = yes }
-					has_character = PRK_kim_jongun
+		effect = {
+			# 군사위원회(CPK)가 있는 동안 최룡해는 평양 쪽에 있을 수 없다
+			if = {
+				limit = {
+					country_exists = CPK
+					has_character = PRK_cho_ryong_hae
 				}
+				hidden_effect = { retire_character = PRK_cho_ryong_hae }
 			}
-			hidden_effect = {
-				retire_character = PRK_kim_jongun
-				if = {
-					limit = { has_character = PRK_kim_yojong_char }
-					PRK_kim_yojong_char = { promote_character = jucheism }
+			if = {
+				limit = {
+					has_country_flag = PRK_Kim_Is_Dead
+					OR = {
+						has_country_leader = { character = PRK_kim_jongun ruling_only = yes }
+						has_character = PRK_kim_jongun
+					}
+				}
+				hidden_effect = {
+					retire_character = PRK_kim_jongun
+					if = {
+						limit = { has_character = PRK_kim_yojong_char }
+						PRK_kim_yojong_char = { promote_character = jucheism }
+					}
 				}
 			}
 		}

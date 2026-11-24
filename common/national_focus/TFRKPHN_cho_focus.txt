@@ -171,7 +171,7 @@ focus_tree = {
 	}
 	focus = {
 		id = TFRKPHN_cho_12
-		icon = GFX_focus_TFRKPHN_cho_f12
+		icon = GFX_goal_generic_scales
 		x = 4
 		y = 6
 		cost = 10
@@ -185,8 +185,8 @@ focus_tree = {
 	}
 	focus = {
 		id = TFRKPHN_cho_13
-		icon = GFX_focus_TFRKPHN_cho_f13
-		x = 4
+		icon = GFX_goal_generic_national_unity
+		x = 1
 		y = 7
 		cost = 10
 		prerequisite = { focus = TFRKPHN_cho_12 }
@@ -201,11 +201,11 @@ focus_tree = {
 	}
 	focus = {
 		id = TFRKPHN_cho_14
-		icon = GFX_focus_TFRKPHN_cho_f14
-		x = 4
-		y = 8
+		icon = GFX_goal_generic_trade
+		x = 7
+		y = 7
 		cost = 10
-		prerequisite = { focus = TFRKPHN_cho_13 }
+		prerequisite = { focus = TFRKPHN_cho_12 }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			set_temp_variable = { income_var_temp = 40 }
@@ -218,11 +218,11 @@ focus_tree = {
 	}
 	focus = {
 		id = TFRKPHN_cho_15
-		icon = GFX_focus_TFRKPHN_cho_f15
-		x = 4
-		y = 9
+		icon = GFX_goal_generic_national_unity
+		x = 1
+		y = 8
 		cost = 10
-		prerequisite = { focus = TFRKPHN_cho_14 }
+		prerequisite = { focus = TFRKPHN_cho_13 }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_stability = 0.04
@@ -237,11 +237,11 @@ focus_tree = {
 	}
 	focus = {
 		id = TFRKPHN_cho_16
-		icon = GFX_focus_TFRKPHN_cho_f16
+		icon = GFX_goal_generic_scales
 		x = 4
-		y = 10
+		y = 7
 		cost = 10
-		prerequisite = { focus = TFRKPHN_cho_15 }
+		prerequisite = { focus = TFRKPHN_cho_12 }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_political_power = 50
@@ -251,9 +251,9 @@ focus_tree = {
 	}
 	focus = {
 		id = TFRKPHN_cho_17
-		icon = GFX_focus_TFRKPHN_cho_f17
+		icon = GFX_goal_generic_propaganda
 		x = 4
-		y = 11
+		y = 8
 		cost = 10
 		prerequisite = { focus = TFRKPHN_cho_16 }
 		ai_will_do = { factor = 1 }
@@ -267,11 +267,11 @@ focus_tree = {
 	}
 	focus = {
 		id = TFRKPHN_cho_18
-		icon = GFX_focus_TFRKPHN_cho_f18
-		x = 4
-		y = 12
+		icon = GFX_goal_generic_army_doctrines
+		x = 1
+		y = 9
 		cost = 10
-		prerequisite = { focus = TFRKPHN_cho_17 }
+		prerequisite = { focus = TFRKPHN_cho_15 }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_stability = 0.03
@@ -283,11 +283,13 @@ focus_tree = {
 	}
 	focus = {
 		id = TFRKPHN_cho_19
-		icon = GFX_focus_TFRKPHN_cho_f19
+		icon = GFX_goal_generic_political_pressure
 		x = 4
-		y = 13
+		y = 10
 		cost = 10
+		prerequisite = { focus = TFRKPHN_cho_17 }
 		prerequisite = { focus = TFRKPHN_cho_18 }
+		prerequisite = { focus = TFRKPHN_cho_14 }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_political_power = 40
@@ -296,9 +298,9 @@ focus_tree = {
 	}
 	focus = {
 		id = TFRKPHN_cho_20
-		icon = GFX_focus_TFRKPHN_cho_f20
+		icon = GFX_goal_generic_national_unity
 		x = 4
-		y = 14
+		y = 11
 		cost = 10
 		prerequisite = { focus = TFRKPHN_cho_19 }
 		ai_will_do = { factor = 1 }
@@ -308,9 +310,9 @@ focus_tree = {
 	}
 	focus = {
 		id = TFRKPHN_cho_21
-		icon = GFX_focus_TFRKPHN_cho_f21
+		icon = GFX_goal_generic_national_unity
 		x = 4
-		y = 15
+		y = 12
 		cost = 10
 		prerequisite = { focus = TFRKPHN_cho_20 }
 		ai_will_do = { factor = 1 }
@@ -324,9 +326,9 @@ focus_tree = {
 	}
 	focus = {
 		id = TFRKPHN_cho_22
-		icon = GFX_focus_TFRKPHN_cho_f22
-		x = 4
-		y = 16
+		icon = GFX_goal_generic_propaganda
+		x = 2
+		y = 13
 		cost = 10
 		prerequisite = { focus = TFRKPHN_cho_21 }
 		ai_will_do = { factor = 1 }
@@ -342,9 +344,9 @@ focus_tree = {
 	}
 	focus = {
 		id = TFRKPHN_cho_23
-		icon = GFX_focus_TFRKPHN_cho_f23
-		x = 4
-		y = 17
+		icon = GFX_goal_generic_political_pressure
+		x = 2
+		y = 14
 		cost = 10
 		prerequisite = { focus = TFRKPHN_cho_22 }
 		ai_will_do = { factor = 1 }
@@ -358,11 +360,11 @@ focus_tree = {
 	}
 	focus = {
 		id = TFRKPHN_cho_24
-		icon = GFX_focus_TFRKPHN_cho_f24
-		x = 4
-		y = 18
+		icon = GFX_goal_generic_production
+		x = 6
+		y = 13
 		cost = 10
-		prerequisite = { focus = TFRKPHN_cho_23 }
+		prerequisite = { focus = TFRKPHN_cho_21 }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			set_temp_variable = { industrial_development_var_temp = 0.05 }
@@ -376,10 +378,11 @@ focus_tree = {
 	}
 	focus = {
 		id = TFRKPHN_cho_25
-		icon = GFX_focus_TFRKPHN_cho_f25
+		icon = GFX_goal_generic_scales
 		x = 4
-		y = 19
+		y = 15
 		cost = 10
+		prerequisite = { focus = TFRKPHN_cho_23 }
 		prerequisite = { focus = TFRKPHN_cho_24 }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
@@ -391,9 +394,9 @@ focus_tree = {
 	}
 	focus = {
 		id = TFRKPHN_cho_26
-		icon = GFX_focus_TFRKPHN_cho_f26
+		icon = GFX_goal_generic_scales
 		x = 4
-		y = 20
+		y = 16
 		cost = 10
 		prerequisite = { focus = TFRKPHN_cho_25 }
 		ai_will_do = { factor = 1 }
@@ -407,9 +410,9 @@ focus_tree = {
 	}
 	focus = {
 		id = TFRKPHN_cho_27
-		icon = GFX_focus_TFRKPHN_cho_f27
+		icon = GFX_goal_generic_propaganda
 		x = 4
-		y = 21
+		y = 17
 		cost = 10
 		prerequisite = { focus = TFRKPHN_cho_26 }
 		ai_will_do = { factor = 1 }

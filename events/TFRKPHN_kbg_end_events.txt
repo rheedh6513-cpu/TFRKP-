@@ -7,7 +7,7 @@ country_event = {
 	immediate = {
 		set_temp_variable = { TFRKPHN_nx_sc = 0 }
 		if = { limit = { check_variable = { TFRKPHN_brd_kbg_res = 1 } } add_to_temp_variable = { TFRKPHN_nx_sc = 2 } }
-		if = { limit = { stability > 0.5 } add_to_temp_variable = { TFRKPHN_nx_sc = 1 } }
+		if = { limit = { has_stability > 0.5 } add_to_temp_variable = { TFRKPHN_nx_sc = 1 } }
 		if = { limit = { check_variable = { TFRKPHN_kbg_resist < 59.5 } } add_to_temp_variable = { TFRKPHN_nx_sc = 1 } }
 		if = { limit = { NOT = { has_country_flag = TFRKPHN_promise_broken } } add_to_temp_variable = { TFRKPHN_nx_sc = 1 } }
 		if = { limit = { check_variable = { TFRKPHN_nx_sc > 3.5 } } country_event = tfrkphn.7163 }

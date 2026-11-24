@@ -1,0 +1,67 @@
+# [안내] 그림판만 있는 결정 탭이 화면에 올라오게 하는 보이지 않는 결정. gui_dummy_build.py가 만든다.
+TFRKPHN_cho_q_category = {
+	TFRKPHN_cho_q_category_hold = {
+		icon = generic_political_actions
+		allowed = { original_tag = KOR }
+		visible = { always = no }
+		available = { always = no }
+		cost = 0
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes }
+	}
+}
+TFRKPHN_cr_category = {
+	TFRKPHN_cr_category_hold = {
+		icon = generic_political_actions
+		allowed = { original_tag = KOR }
+		visible = { always = no }
+		available = { always = no }
+		cost = 0
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes }
+	}
+}
+TFRKPHN_kp_category = {
+	TFRKPHN_kp_category_hold = {
+		icon = generic_political_actions
+		allowed = { original_tag = KOR }
+		visible = { always = no }
+		available = { always = no }
+		cost = 0
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes }
+	}
+}
+TFRKPHN_woo_eul_category = {
+	TFRKPHN_woo_eul_category_hold = {
+		icon = generic_political_actions
+		allowed = { original_tag = KOR }
+		visible = { always = no }
+		available = { always = no }
+		cost = 0
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes }
+	}
+}
+TFRKPHN_woo_arc_category = {
+	TFRKPHN_woo_arc_category_hold = {
+		icon = generic_political_actions
+		allowed = { original_tag = KOR }
+		visible = { always = no }
+		available = { always = no }
+		cost = 0
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes }
+	}
+}
+TFRKPHN_woo_ind_category = {
+	TFRKPHN_woo_ind_category_hold = {
+		icon = generic_political_actions
+		allowed = { original_tag = KOR }
+		visible = { always = no }
+		available = { always = no }
+		cost = 0
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes }
+	}
+}

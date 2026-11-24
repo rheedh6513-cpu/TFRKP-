@@ -605,23 +605,23 @@ TFRKPHN_parl_gov_8 = {
 }
 TFRKPHN_parl_monthly = {
 	if = { limit = { has_country_flag = TFRKPHN_parl_coal_1 NOT = { has_country_flag = TFRKPHN_parl_lead_1 } }
-		if = { limit = { stability < 0.4 } add_to_variable = { TFRKPHN_parl_sup1 = -0.04 } }
-		else_if = { limit = { stability > 0.6 check_variable = { TFRKPHN_parl_sup1 < 0.9 } } add_to_variable = { TFRKPHN_parl_sup1 = 0.02 } }
+		if = { limit = { has_stability < 0.4 } add_to_variable = { TFRKPHN_parl_sup1 = -0.04 } }
+		else_if = { limit = { has_stability > 0.6 check_variable = { TFRKPHN_parl_sup1 < 0.9 } } add_to_variable = { TFRKPHN_parl_sup1 = 0.02 } }
 	}
 	else_if = { limit = { NOT = { has_country_flag = TFRKPHN_parl_coal_1 } check_variable = { TFRKPHN_parl_sup1 > 0.5 } } add_to_variable = { TFRKPHN_parl_sup1 = -0.02 } }
 	if = { limit = { has_country_flag = TFRKPHN_parl_coal_2 NOT = { has_country_flag = TFRKPHN_parl_lead_2 } }
-		if = { limit = { stability < 0.4 } add_to_variable = { TFRKPHN_parl_sup2 = -0.04 } }
-		else_if = { limit = { stability > 0.6 check_variable = { TFRKPHN_parl_sup2 < 0.9 } } add_to_variable = { TFRKPHN_parl_sup2 = 0.02 } }
+		if = { limit = { has_stability < 0.4 } add_to_variable = { TFRKPHN_parl_sup2 = -0.04 } }
+		else_if = { limit = { has_stability > 0.6 check_variable = { TFRKPHN_parl_sup2 < 0.9 } } add_to_variable = { TFRKPHN_parl_sup2 = 0.02 } }
 	}
 	else_if = { limit = { NOT = { has_country_flag = TFRKPHN_parl_coal_2 } check_variable = { TFRKPHN_parl_sup2 > 0.5 } } add_to_variable = { TFRKPHN_parl_sup2 = -0.02 } }
 	if = { limit = { has_country_flag = TFRKPHN_parl_coal_3 NOT = { has_country_flag = TFRKPHN_parl_lead_3 } }
-		if = { limit = { stability < 0.4 } add_to_variable = { TFRKPHN_parl_sup3 = -0.04 } }
-		else_if = { limit = { stability > 0.6 check_variable = { TFRKPHN_parl_sup3 < 0.9 } } add_to_variable = { TFRKPHN_parl_sup3 = 0.02 } }
+		if = { limit = { has_stability < 0.4 } add_to_variable = { TFRKPHN_parl_sup3 = -0.04 } }
+		else_if = { limit = { has_stability > 0.6 check_variable = { TFRKPHN_parl_sup3 < 0.9 } } add_to_variable = { TFRKPHN_parl_sup3 = 0.02 } }
 	}
 	else_if = { limit = { NOT = { has_country_flag = TFRKPHN_parl_coal_3 } check_variable = { TFRKPHN_parl_sup3 > 0.5 } } add_to_variable = { TFRKPHN_parl_sup3 = -0.02 } }
 	if = { limit = { has_country_flag = TFRKPHN_parl_coal_4 NOT = { has_country_flag = TFRKPHN_parl_lead_4 } }
-		if = { limit = { stability < 0.4 } add_to_variable = { TFRKPHN_parl_sup4 = -0.04 } }
-		else_if = { limit = { stability > 0.6 check_variable = { TFRKPHN_parl_sup4 < 0.9 } } add_to_variable = { TFRKPHN_parl_sup4 = 0.02 } }
+		if = { limit = { has_stability < 0.4 } add_to_variable = { TFRKPHN_parl_sup4 = -0.04 } }
+		else_if = { limit = { has_stability > 0.6 check_variable = { TFRKPHN_parl_sup4 < 0.9 } } add_to_variable = { TFRKPHN_parl_sup4 = 0.02 } }
 	}
 	else_if = { limit = { NOT = { has_country_flag = TFRKPHN_parl_coal_4 } check_variable = { TFRKPHN_parl_sup4 > 0.5 } } add_to_variable = { TFRKPHN_parl_sup4 = -0.02 } }
 	if = { limit = { has_country_flag = TFRKPHN_parl_lead_1 } set_variable = { TFRKPHN_parl_sup1 = 1 } }

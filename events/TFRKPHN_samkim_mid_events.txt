@@ -397,7 +397,7 @@ country_event = {
 	option = {
 		name = tfrkphn.7113.a
 		custom_effect_tooltip = TFRKPHN_kms_ref_tt
-		hidden_effect = { if = { limit = { check_variable = { TFRKPHN_brd_kms_res = 3 } } country_event = { id = tfrkphn.7098 days = 1 } } else_if = { limit = { check_variable = { TFRKPHN_brd_kms_res = 1 } stability > 0.4 } country_event = { id = tfrkphn.7096 days = 1 } } else_if = { limit = { stability > 0.5 } country_event = { id = tfrkphn.7096 days = 1 } } else = { country_event = { id = tfrkphn.7098 days = 1 } } }
+		hidden_effect = { if = { limit = { check_variable = { TFRKPHN_brd_kms_res = 3 } } country_event = { id = tfrkphn.7098 days = 1 } } else_if = { limit = { check_variable = { TFRKPHN_brd_kms_res = 1 } has_stability > 0.4 } country_event = { id = tfrkphn.7096 days = 1 } } else_if = { limit = { has_stability > 0.5 } country_event = { id = tfrkphn.7096 days = 1 } } else = { country_event = { id = tfrkphn.7098 days = 1 } } }
 	}
 }
 country_event = {

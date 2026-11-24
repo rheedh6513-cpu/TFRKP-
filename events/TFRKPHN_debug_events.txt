@@ -1,0 +1,36 @@
+# [안내] 시험용 사건. 콘솔에서 event tfrkphn.7209 / 7210 / 7211 로 부른다. debug_build.py가 만든다.
+add_namespace = tfrkphn
+country_event = {
+	id = tfrkphn.7209
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		set_country_flag = TFRKPHN_e21_cho
+		clr_country_flag = TFRKPHN_cho_removed
+		clr_country_flag = TFRKPHN_kjt_pres
+		add_political_power = 300
+	}
+}
+country_event = {
+	id = tfrkphn.7210
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		set_country_flag = TFRKPHN_e21_cho
+		set_country_flag = TFRKPHN_kjt_pres
+		clr_country_flag = TFRKPHN_cho2_end
+		add_political_power = 300
+	}
+}
+country_event = {
+	id = tfrkphn.7211
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		set_country_flag = TFRKPHN_woo_route
+		clr_country_flag = TFRKPHN_woo_ended
+		load_focus_tree = { tree = TFRKPHN_woo_tree keep_completed = yes }
+		complete_national_focus = TFRKPHN_woo_10
+		add_political_power = 300
+	}
+}

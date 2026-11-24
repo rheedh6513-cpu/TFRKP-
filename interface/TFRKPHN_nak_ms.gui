@@ -22,7 +22,7 @@ guiTypes = {
 				name = "TFRKPHN_nak_rate_box"
 				position = { x = 70 y = 484 }
 				size = { width = 360 height = 112 }
-				background = { name = "Background" quadTextureSprite = "GFX_tiled_window_thin_border2" clipping = no }
+				background = { name = "Background" quadTextureSprite = "GFX_tiled_window_thin_border2" }
 				containerWindowType = {
 					name = "TFRKPHN_nak_gov_row"
 					position = { x = 5 y = 22 }

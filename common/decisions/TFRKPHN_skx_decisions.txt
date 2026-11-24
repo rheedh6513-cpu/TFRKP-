@@ -56,7 +56,7 @@ TFRKPHN_debt_category = {
 		days_re_enable = 120
 		allowed = { original_tag = KOR }
 		visible = { NOT = { has_country_flag = TFRKPHN_samkim_end } NOT = { has_country_flag = TFRKPHN_kdy_debtfree } }
-		available = { stability > 0.3 }
+		available = { has_stability > 0.3 }
 		complete_effect = {
 			TFRKPHN_lij_tire_dec = yes add_to_variable = { TFRKPHN_kdy_debt = -12 } add_stability = -0.02 custom_effect_tooltip = TFRKPHN_mx_kdy_m12 }
 		ai_will_do = { base = 5 }
