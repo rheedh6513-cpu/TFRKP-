@@ -1,0 +1,152 @@
+# [안내] 조원진: 국회 포격 뒤 1막 (새 헌법에서 연말 사임까지)과 김진태 권한대행의 첫 사건. cho_build.py(cho2_part.py)가 만든다.
+add_namespace = tfrkphn
+country_event = {
+	id = tfrkphn.7192
+	title = tfrkphn.7192.t
+	desc = tfrkphn.7192.d
+	picture = GFX_TFRKPHN_chop_7192
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7192.a
+		add_war_support = 0.03
+		add_stability = -0.02
+	}
+}
+country_event = {
+	id = tfrkphn.7193
+	title = tfrkphn.7193.t
+	desc = tfrkphn.7193.d
+	picture = GFX_TFRKPHN_chop_7193
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7193.a
+		add_political_power = 25
+		add_stability = -0.01
+	}
+}
+country_event = {
+	id = tfrkphn.7166
+	title = tfrkphn.7166.t
+	desc = tfrkphn.7166.d
+	picture = GFX_TFRKPHN_cho_assembly_night
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7166.a
+		add_stability = 0.05
+	}
+}
+country_event = {
+	id = tfrkphn.7167
+	title = tfrkphn.7167.t
+	desc = tfrkphn.7167.d
+	picture = GFX_TFRKPHN_chop_7167
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7167.a
+		add_war_support = 0.03
+		add_stability = -0.02
+	}
+}
+country_event = {
+	id = tfrkphn.7168
+	title = tfrkphn.7168.t
+	desc = tfrkphn.7168.d
+	picture = GFX_TFRKPHN_chop_7168
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7168.a
+		add_stability = -0.02
+		set_temp_variable = { income_var_temp = 30 }
+		add_income_with_inflation = yes
+	}
+}
+country_event = {
+	id = tfrkphn.7194
+	title = tfrkphn.7194.t
+	desc = tfrkphn.7194.d
+	picture = GFX_TFRKPHN_chop_7194
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7194.a
+		add_stability = 0.03
+		add_political_power = -25
+	}
+}
+country_event = {
+	id = tfrkphn.7179
+	title = tfrkphn.7179.t
+	desc = tfrkphn.7179.d
+	picture = GFX_TFRKPHN_chop_7179
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7179.a
+		add_stability = -0.05
+		add_political_power = 50
+	}
+}
+country_event = {
+	id = tfrkphn.7170
+	title = tfrkphn.7170.t
+	desc = tfrkphn.7170.d
+	picture = GFX_TFRKPHN_chop_7170
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7170.a
+		hidden_effect = { country_event = { id = tfrkphn.7183 days = 40 } }	# 삼김 사건
+		add_stability = 0.03
+		add_political_power = 50
+	}
+}
+country_event = {
+	id = tfrkphn.7171
+	title = tfrkphn.7171.t
+	desc = tfrkphn.7171.d
+	picture = GFX_TFRKPHN_chop_7171
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7171.a
+		add_stability = -0.05
+		add_war_support = 0.02
+	}
+}
+country_event = {
+	id = tfrkphn.7172
+	title = tfrkphn.7172.t
+	desc = tfrkphn.7172.d
+	picture = GFX_TFRKPHN_chop_7172
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7172.a
+		add_political_power = 25
+	}
+}
+country_event = {
+	id = tfrkphn.7173
+	title = tfrkphn.7173.t
+	desc = tfrkphn.7173.d
+	picture = GFX_TFRKPHN_chop_7173
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7173.a
+		add_stability = 0.05
+		custom_effect_tooltip = TFRKPHN_kjt_acting_tt
+		hidden_effect = {
+			set_country_flag = TFRKPHN_kjt_pres
+			if = { limit = { NOT = { has_character = KOR_TFRKPHN_kim_jin_tae_char } } recruit_character = KOR_TFRKPHN_kim_jin_tae_char }
+			KOR_TFRKPHN_kim_jin_tae_char = { promote_character = ultra_conservatism }
+			country_event = { id = tfrkphn.7169 days = 45 }
+		}
+	}
+}
+country_event = {
+	id = tfrkphn.7169
+	title = tfrkphn.7169.t
+	desc = tfrkphn.7169.d
+	picture = GFX_TFRKPHN_chop_7169
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7169.a
+		add_stability = 0.02
+		add_political_power = 50
+	}
+}

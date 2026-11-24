@@ -1,0 +1,36 @@
+# [안내] 오세훈 루트: 이명박과 견주는 사건 셋. oh_mb_build.py가 만든다.
+add_namespace = tfrkphn
+country_event = {
+	id = tfrkphn.7200
+	title = tfrkphn.7200.t
+	desc = tfrkphn.7200.d
+	picture = GFX_TFRKPHN_oh_podium
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7200.a
+		add_political_power = 25
+	}
+}
+country_event = {
+	id = tfrkphn.7201
+	title = tfrkphn.7201.t
+	desc = tfrkphn.7201.d
+	picture = GFX_TFRKPHN_oh_walk
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7201.a
+		add_stability = 0.02
+	}
+}
+country_event = {
+	id = tfrkphn.7202
+	title = tfrkphn.7202.t
+	desc = tfrkphn.7202.d
+	picture = GFX_TFRKPHN_oh_seoul
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7202.a
+		add_political_power = -25
+		add_stability = 0.02
+	}
+}

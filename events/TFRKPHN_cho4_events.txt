@@ -1,0 +1,152 @@
+# [안내] 조원진과 김진태 정부 사이사이의 삼김 사건 (질산 테러, 납치, 단식, 외유). cho_build.py(cho4_part.py)가 만든다.
+add_namespace = tfrkphn
+country_event = {
+	id = tfrkphn.7183
+	title = tfrkphn.7183.t
+	desc = tfrkphn.7183.d
+	picture = GFX_TFRKPHN_chop_7183
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7183.a
+		add_stability = -0.02
+	}
+}
+country_event = {
+	id = tfrkphn.7184
+	title = tfrkphn.7184.t
+	desc = tfrkphn.7184.d
+	picture = GFX_TFRKPHN_chop_7184
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7184.a
+		add_stability = -0.03
+	}
+}
+country_event = {
+	id = tfrkphn.7185
+	title = tfrkphn.7185.t
+	desc = tfrkphn.7185.d
+	picture = GFX_TFRKPHN_chop_7185
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7185.a
+		add_stability = -0.02
+		add_political_power = -25
+	}
+}
+country_event = {
+	id = tfrkphn.7186
+	title = tfrkphn.7186.t
+	desc = tfrkphn.7186.d
+	picture = GFX_TFRKPHN_chop_7186
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7186.a
+		add_political_power = 25
+		add_stability = -0.01
+	}
+}
+country_event = {
+	id = tfrkphn.7187
+	title = tfrkphn.7187.t
+	desc = tfrkphn.7187.d
+	picture = GFX_TFRKPHN_chop_7187
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7187.a
+		add_political_power = 50
+	}
+}
+country_event = {
+	id = tfrkphn.7203
+	title = tfrkphn.7203.t
+	desc = tfrkphn.7203.d
+	picture = GFX_TFRKPHN_chop_7203
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7203.a
+		add_stability = 0.02
+		add_political_power = 30
+	}
+}
+country_event = {
+	id = tfrkphn.7204
+	title = tfrkphn.7204.t
+	desc = tfrkphn.7204.d
+	picture = GFX_TFRKPHN_chop_7204
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7204.a
+		add_political_power = 15
+	}
+}
+country_event = {
+	id = tfrkphn.7206
+	title = tfrkphn.7206.t
+	desc = tfrkphn.7206.d
+	picture = GFX_TFRKPHN_ev_postcard
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7206.a
+		add_stability = -0.02
+	}
+}
+country_event = {
+	id = tfrkphn.7205
+	title = tfrkphn.7205.t
+	desc = tfrkphn.7205.d
+	picture = GFX_TFRKPHN_chop_7205
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7205.a
+		add_stability = -0.03
+		add_political_power = -25
+	}
+}
+country_event = {
+	id = tfrkphn.7207
+	title = tfrkphn.7207.t
+	desc = tfrkphn.7207.d
+	picture = GFX_TFRKPHN_chop_7207
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7207.a
+		add_stability = -0.03
+	}
+}
+country_event = {
+	id = tfrkphn.7208
+	title = tfrkphn.7208.t
+	desc = tfrkphn.7208.d
+	picture = GFX_TFRKPHN_chop_7208
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7208.a
+		add_political_power = 25
+		add_stability = -0.01
+	}
+}
+country_event = {
+	id = tfrkphn.7188
+	title = tfrkphn.7188.t
+	desc = tfrkphn.7188.d
+	picture = GFX_TFRKPHN_chop_7188
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7188.a
+		add_stability = 0.02
+		add_political_power = 25
+	}
+}
+country_event = {
+	id = tfrkphn.7189
+	title = tfrkphn.7189.t
+	desc = tfrkphn.7189.d
+	picture = GFX_TFRKPHN_chop_7189
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7189.a
+		add_stability = -0.02
+		add_political_power = 25
+	}
+}

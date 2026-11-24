@@ -1,0 +1,32 @@
+# [안내] 세 김씨의 총리 순번 (김무성 개헌 뒤 내각제). skx_build.py(rot_part.py)가 만든다.
+add_namespace = tfrkphn
+country_event = {
+	id = tfrkphn.7190
+	title = tfrkphn.7190.t
+	desc = tfrkphn.7190.d
+	picture = GFX_TFRKPHN_imp_doc
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7190.a
+		add_stability = 0.03
+	}
+}
+country_event = {
+	id = tfrkphn.7191
+	title = tfrkphn.7191.t
+	desc = tfrkphn.7191.d
+	picture = GFX_TFRKPHN_imp_doc
+	is_triggered_only = yes
+	trigger = { has_country_flag = TFRKPHN_parl_rot }
+	option = {
+		name = tfrkphn.7191.a
+		add_political_power = 25
+		add_stability = 0.01
+		hidden_effect = {
+			if = { limit = { check_variable = { TFRKPHN_rot_i = 1 } } set_variable = { TFRKPHN_rot_i = 2 } if = { limit = { NOT = { has_character = KOR_TFRKPHN_kdy_char } } recruit_character = KOR_TFRKPHN_kdy_char } KOR_TFRKPHN_kdy_char = { promote_character = yes } }
+			else_if = { limit = { check_variable = { TFRKPHN_rot_i = 2 } } set_variable = { TFRKPHN_rot_i = 3 } if = { limit = { NOT = { has_character = KOR_TFRKPHN_kms_char } } recruit_character = KOR_TFRKPHN_kms_char } KOR_TFRKPHN_kms_char = { promote_character = yes } }
+			else_if = { limit = { check_variable = { TFRKPHN_rot_i = 3 } } set_variable = { TFRKPHN_rot_i = 1 } if = { limit = { NOT = { has_character = KOR_TFRKPHN_kbg_char } } recruit_character = KOR_TFRKPHN_kbg_char } KOR_TFRKPHN_kbg_char = { promote_character = yes } }
+			country_event = { id = tfrkphn.7191 days = 487 }
+		}
+	}
+}

@@ -16,6 +16,7 @@ focus_tree = {
 			add_stability = -0.03
 			add_political_power = 50
 			set_country_flag = TFRKPHN_cho_route
+			hidden_effect = { country_event = { id = tfrkphn.7192 days = 20 } }
 			hidden_effect = { country_event = { id = tfrkphn.7069 days = 1 } }
 		}
 	}
@@ -58,6 +59,7 @@ focus_tree = {
 		completion_reward = {
 			add_war_support = 0.05
 			add_political_power = 25
+			hidden_effect = { country_event = { id = tfrkphn.7193 days = 20 } }
 			hidden_effect = { country_event = { id = tfrkphn.7072 days = 1 } }
 		}
 	}
@@ -165,6 +167,254 @@ focus_tree = {
 			custom_effect_tooltip = TFRKPHN_cho_back_tt
 			add_political_power = -150
 			hidden_effect = { set_country_flag = TFRKPHN_cho_back_fired country_event = { id = tfrkphn.7042 days = 3 } }
+		}
+	}
+	focus = {
+		id = TFRKPHN_cho_12
+		icon = GFX_focus_TFRKPHN_cho_f12
+		x = 4
+		y = 6
+		cost = 10
+		prerequisite = { focus = TFRKPHN_cho_10 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 50
+			add_stability = -0.03
+			hidden_effect = { country_event = { id = tfrkphn.7166 days = 1 } }
+		}
+	}
+	focus = {
+		id = TFRKPHN_cho_13
+		icon = GFX_focus_TFRKPHN_cho_f13
+		x = 4
+		y = 7
+		cost = 10
+		prerequisite = { focus = TFRKPHN_cho_12 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_war_support = 0.05
+			add_stability = -0.02
+			custom_effect_tooltip = TFRKPHN_tune_cr_p10
+			hidden_effect = { set_temp_variable = { cr_add = 10 } TFRKPHN_cr_add = yes }
+			hidden_effect = { country_event = { id = tfrkphn.7167 days = 1 } }
+		}
+	}
+	focus = {
+		id = TFRKPHN_cho_14
+		icon = GFX_focus_TFRKPHN_cho_f14
+		x = 4
+		y = 8
+		cost = 10
+		prerequisite = { focus = TFRKPHN_cho_13 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			set_temp_variable = { income_var_temp = 40 }
+			add_income_with_inflation = yes
+			set_temp_variable = { industrial_development_var_temp = 0.02 }
+			add_industrial_development = yes
+			add_stability = -0.02
+			hidden_effect = { country_event = { id = tfrkphn.7168 days = 1 } }
+		}
+	}
+	focus = {
+		id = TFRKPHN_cho_15
+		icon = GFX_focus_TFRKPHN_cho_f15
+		x = 4
+		y = 9
+		cost = 10
+		prerequisite = { focus = TFRKPHN_cho_14 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_stability = 0.04
+			set_temp_variable = { income_var_temp = -30 }
+			add_income_with_inflation = yes
+			set_temp_variable = { society_development_var_temp = -0.02 }
+			add_society_development = yes
+			custom_effect_tooltip = TFRKPHN_tune_cr_p10
+			hidden_effect = { set_temp_variable = { cr_add = 10 } TFRKPHN_cr_add = yes }
+			hidden_effect = { country_event = { id = tfrkphn.7194 days = 1 } }
+		}
+	}
+	focus = {
+		id = TFRKPHN_cho_16
+		icon = GFX_focus_TFRKPHN_cho_f16
+		x = 4
+		y = 10
+		cost = 10
+		prerequisite = { focus = TFRKPHN_cho_15 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 50
+			add_stability = -0.04
+			hidden_effect = { country_event = { id = tfrkphn.7179 days = 1 } }
+		}
+	}
+	focus = {
+		id = TFRKPHN_cho_17
+		icon = GFX_focus_TFRKPHN_cho_f17
+		x = 4
+		y = 11
+		cost = 10
+		prerequisite = { focus = TFRKPHN_cho_16 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 25
+			add_war_support = 0.03
+			custom_effect_tooltip = TFRKPHN_tune_cr_p15
+			hidden_effect = { set_temp_variable = { cr_add = 15 } TFRKPHN_cr_add = yes }
+			hidden_effect = { country_event = { id = tfrkphn.7170 days = 1 } }
+		}
+	}
+	focus = {
+		id = TFRKPHN_cho_18
+		icon = GFX_focus_TFRKPHN_cho_f18
+		x = 4
+		y = 12
+		cost = 10
+		prerequisite = { focus = TFRKPHN_cho_17 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_stability = 0.03
+			add_war_support = -0.03
+			custom_effect_tooltip = TFRKPHN_tune_cr_p5
+			hidden_effect = { set_temp_variable = { cr_add = 5 } TFRKPHN_cr_add = yes }
+			hidden_effect = { country_event = { id = tfrkphn.7171 days = 1 } }
+		}
+	}
+	focus = {
+		id = TFRKPHN_cho_19
+		icon = GFX_focus_TFRKPHN_cho_f19
+		x = 4
+		y = 13
+		cost = 10
+		prerequisite = { focus = TFRKPHN_cho_18 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 40
+			hidden_effect = { country_event = { id = tfrkphn.7172 days = 1 } }
+		}
+	}
+	focus = {
+		id = TFRKPHN_cho_20
+		icon = GFX_focus_TFRKPHN_cho_f20
+		x = 4
+		y = 14
+		cost = 10
+		prerequisite = { focus = TFRKPHN_cho_19 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			hidden_effect = { country_event = { id = tfrkphn.7173 days = 1 } }
+		}
+	}
+	focus = {
+		id = TFRKPHN_cho_21
+		icon = GFX_focus_TFRKPHN_cho_f21
+		x = 4
+		y = 15
+		cost = 10
+		prerequisite = { focus = TFRKPHN_cho_20 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.03
+			set_temp_variable = { income_var_temp = -30 }
+			add_income_with_inflation = yes
+			hidden_effect = { country_event = { id = tfrkphn.7174 days = 1 } }
+		}
+	}
+	focus = {
+		id = TFRKPHN_cho_22
+		icon = GFX_focus_TFRKPHN_cho_f22
+		x = 4
+		y = 16
+		cost = 10
+		prerequisite = { focus = TFRKPHN_cho_21 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 25
+			add_stability = 0.03
+			set_temp_variable = { society_development_var_temp = -0.02 }
+			add_society_development = yes
+			custom_effect_tooltip = TFRKPHN_tune_kp_p8_m3
+			hidden_effect = { if = { limit = { has_country_flag = TFRKPHN_kp_init NOT = { has_country_flag = TFRKPHN_kp_closed } } add_to_variable = { TFRKPHN_kp_show = 8 } add_to_variable = { TFRKPHN_kp_real = -3 } TFRKPHN_kp_refresh = yes } }
+			hidden_effect = { country_event = { id = tfrkphn.7175 days = 1 } }
+		}
+	}
+	focus = {
+		id = TFRKPHN_cho_23
+		icon = GFX_focus_TFRKPHN_cho_f23
+		x = 4
+		y = 17
+		cost = 10
+		prerequisite = { focus = TFRKPHN_cho_22 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 50
+			add_stability = -0.02
+			custom_effect_tooltip = TFRKPHN_tune_kp_p0_m3
+			hidden_effect = { if = { limit = { has_country_flag = TFRKPHN_kp_init NOT = { has_country_flag = TFRKPHN_kp_closed } } add_to_variable = { TFRKPHN_kp_show = 0 } add_to_variable = { TFRKPHN_kp_real = -3 } TFRKPHN_kp_refresh = yes } }
+			hidden_effect = { country_event = { id = tfrkphn.7176 days = 1 } }
+		}
+	}
+	focus = {
+		id = TFRKPHN_cho_24
+		icon = GFX_focus_TFRKPHN_cho_f24
+		x = 4
+		y = 18
+		cost = 10
+		prerequisite = { focus = TFRKPHN_cho_23 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			set_temp_variable = { industrial_development_var_temp = 0.05 }
+			add_industrial_development = yes
+			set_temp_variable = { income_var_temp = 30 }
+			add_income_with_inflation = yes
+			custom_effect_tooltip = TFRKPHN_tune_kp_p4_p4
+			hidden_effect = { if = { limit = { has_country_flag = TFRKPHN_kp_init NOT = { has_country_flag = TFRKPHN_kp_closed } } add_to_variable = { TFRKPHN_kp_show = 4 } add_to_variable = { TFRKPHN_kp_real = 4 } TFRKPHN_kp_refresh = yes } }
+			hidden_effect = { country_event = { id = tfrkphn.7177 days = 1 } }
+		}
+	}
+	focus = {
+		id = TFRKPHN_cho_25
+		icon = GFX_focus_TFRKPHN_cho_f25
+		x = 4
+		y = 19
+		cost = 10
+		prerequisite = { focus = TFRKPHN_cho_24 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 40
+			custom_effect_tooltip = TFRKPHN_tune_kp_p0_m2
+			hidden_effect = { if = { limit = { has_country_flag = TFRKPHN_kp_init NOT = { has_country_flag = TFRKPHN_kp_closed } } add_to_variable = { TFRKPHN_kp_show = 0 } add_to_variable = { TFRKPHN_kp_real = -2 } TFRKPHN_kp_refresh = yes } }
+			hidden_effect = { country_event = { id = tfrkphn.7178 days = 1 } }
+		}
+	}
+	focus = {
+		id = TFRKPHN_cho_26
+		icon = GFX_focus_TFRKPHN_cho_f26
+		x = 4
+		y = 20
+		cost = 10
+		prerequisite = { focus = TFRKPHN_cho_25 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 50
+			add_stability = -0.04
+			custom_effect_tooltip = TFRKPHN_tune_kp_p0_m5
+			hidden_effect = { if = { limit = { has_country_flag = TFRKPHN_kp_init NOT = { has_country_flag = TFRKPHN_kp_closed } } add_to_variable = { TFRKPHN_kp_show = 0 } add_to_variable = { TFRKPHN_kp_real = -5 } TFRKPHN_kp_refresh = yes } }
+			hidden_effect = { country_event = { id = tfrkphn.7196 days = 1 } }
+		}
+	}
+	focus = {
+		id = TFRKPHN_cho_27
+		icon = GFX_focus_TFRKPHN_cho_f27
+		x = 4
+		y = 21
+		cost = 10
+		prerequisite = { focus = TFRKPHN_cho_26 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			hidden_effect = { country_event = { id = tfrkphn.7180 days = 1 } }
 		}
 	}
 }

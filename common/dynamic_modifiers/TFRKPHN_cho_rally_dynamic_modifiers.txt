@@ -1,0 +1,6 @@
+# [안내] 조원진 정부 국민정신 「토요일 광장」. 값은 광장 값(50을 넘는 만큼)에 따라 움직인다. cho_build.py(cho_rally_part.py)가 만든다.
+TFRKPHN_cr_modifier = {
+	icon = GFX_idea_KOR_yoon_common_conservatism_dynamic_modifir_idea
+	political_power_factor = TFRKPHN_cr_pp
+	war_support_factor = TFRKPHN_cr_ws
+}

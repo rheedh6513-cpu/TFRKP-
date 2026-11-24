@@ -1,0 +1,32 @@
+# [안내] 이승만 어록 탭의 공장 어록을 누르고 180일 뒤에 공장이 들어서는 숨은 사건. cho_build.py(cho_quote_part.py)가 만든다.
+add_namespace = tfrkphn
+country_event = {
+	id = tfrkphn.7197
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		525 = { if = { limit = { is_owned_by = ROOT } add_extra_state_shared_building_slots = 1 add_building_construction = { type = industrial_complex level = 1 instant_build = yes } } }
+		set_temp_variable = { industrial_development_var_temp = 0.02 }
+		add_industrial_development = yes
+	}
+}
+country_event = {
+	id = tfrkphn.7198
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		870 = { if = { limit = { is_owned_by = ROOT } add_extra_state_shared_building_slots = 1 add_building_construction = { type = industrial_complex level = 1 instant_build = yes } } }
+		set_temp_variable = { industrial_development_var_temp = 0.02 }
+		add_industrial_development = yes
+	}
+}
+country_event = {
+	id = tfrkphn.7199
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		1041 = { if = { limit = { is_owned_by = ROOT } add_extra_state_shared_building_slots = 1 add_building_construction = { type = industrial_complex level = 1 instant_build = yes } } }
+		set_temp_variable = { industrial_development_var_temp = 0.02 }
+		add_industrial_development = yes
+	}
+}

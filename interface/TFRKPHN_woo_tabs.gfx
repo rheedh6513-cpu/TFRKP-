@@ -1,0 +1,34 @@
+spriteTypes = {
+	spriteType = { name = "GFX_TFRKPHN_woo_eul_1" texturefile = "gfx/interface/TFRKPHN_woo_tabs/TFRKPHN_woo_eul_1.png" }
+	spriteType = { name = "GFX_TFRKPHN_woo_eul_2" texturefile = "gfx/interface/TFRKPHN_woo_tabs/TFRKPHN_woo_eul_2.png" }
+	spriteType = { name = "GFX_TFRKPHN_woo_eul_3" texturefile = "gfx/interface/TFRKPHN_woo_tabs/TFRKPHN_woo_eul_3.png" }
+	spriteType = { name = "GFX_TFRKPHN_woo_eul_4" texturefile = "gfx/interface/TFRKPHN_woo_tabs/TFRKPHN_woo_eul_4.png" }
+	spriteType = { name = "GFX_TFRKPHN_woo_eul_5" texturefile = "gfx/interface/TFRKPHN_woo_tabs/TFRKPHN_woo_eul_5.png" }
+	spriteType = { name = "GFX_TFRKPHN_woo_eul_6" texturefile = "gfx/interface/TFRKPHN_woo_tabs/TFRKPHN_woo_eul_6.png" }
+	spriteType = { name = "GFX_TFRKPHN_woo_con_bar" texturefile = "gfx/interface/TFRKPHN_woo_tabs/TFRKPHN_woo_con_bar.png" noOfFrames = 41 }
+	spriteType = { name = "GFX_TFRKPHN_woo_con_1" texturefile = "gfx/interface/TFRKPHN_woo_tabs/TFRKPHN_woo_con_1.png" noOfFrames = 2 }
+	spriteType = { name = "GFX_TFRKPHN_woo_con_2" texturefile = "gfx/interface/TFRKPHN_woo_tabs/TFRKPHN_woo_con_2.png" noOfFrames = 2 }
+	spriteType = { name = "GFX_TFRKPHN_woo_con_3" texturefile = "gfx/interface/TFRKPHN_woo_tabs/TFRKPHN_woo_con_3.png" noOfFrames = 2 }
+	spriteType = { name = "GFX_TFRKPHN_woo_con_4" texturefile = "gfx/interface/TFRKPHN_woo_tabs/TFRKPHN_woo_con_4.png" noOfFrames = 2 }
+	spriteType = { name = "GFX_TFRKPHN_woo_con_5" texturefile = "gfx/interface/TFRKPHN_woo_tabs/TFRKPHN_woo_con_5.png" noOfFrames = 2 }
+	spriteType = { name = "GFX_TFRKPHN_woo_con_6" texturefile = "gfx/interface/TFRKPHN_woo_tabs/TFRKPHN_woo_con_6.png" noOfFrames = 2 }
+	spriteType = { name = "GFX_TFRKPHN_woo_con_7" texturefile = "gfx/interface/TFRKPHN_woo_tabs/TFRKPHN_woo_con_7.png" noOfFrames = 2 }
+	spriteType = { name = "GFX_TFRKPHN_woo_arc_1" texturefile = "gfx/interface/TFRKPHN_woo_tabs/TFRKPHN_woo_arc_1.png" noOfFrames = 2 }
+	spriteType = { name = "GFX_TFRKPHN_woo_arc_2" texturefile = "gfx/interface/TFRKPHN_woo_tabs/TFRKPHN_woo_arc_2.png" noOfFrames = 2 }
+	spriteType = { name = "GFX_TFRKPHN_woo_arc_3" texturefile = "gfx/interface/TFRKPHN_woo_tabs/TFRKPHN_woo_arc_3.png" noOfFrames = 2 }
+	spriteType = { name = "GFX_TFRKPHN_woo_arc_4" texturefile = "gfx/interface/TFRKPHN_woo_tabs/TFRKPHN_woo_arc_4.png" noOfFrames = 2 }
+	spriteType = { name = "GFX_TFRKPHN_woo_arc_5" texturefile = "gfx/interface/TFRKPHN_woo_tabs/TFRKPHN_woo_arc_5.png" noOfFrames = 2 }
+	spriteType = { name = "GFX_TFRKPHN_woo_arc_6" texturefile = "gfx/interface/TFRKPHN_woo_tabs/TFRKPHN_woo_arc_6.png" noOfFrames = 2 }
+	spriteType = { name = "GFX_TFRKPHN_woo_ind_1" texturefile = "gfx/interface/TFRKPHN_woo_tabs/TFRKPHN_woo_ind_1.png" noOfFrames = 2 }
+	spriteType = { name = "GFX_TFRKPHN_woo_ind_card_1_texticon" texturefile = "gfx/texticons/banners/TFRKPHN_woo_ind_card_1.png" legacy_lazy_load = no }
+	spriteType = { name = "GFX_TFRKPHN_woo_ind_2" texturefile = "gfx/interface/TFRKPHN_woo_tabs/TFRKPHN_woo_ind_2.png" noOfFrames = 2 }
+	spriteType = { name = "GFX_TFRKPHN_woo_ind_card_2_texticon" texturefile = "gfx/texticons/banners/TFRKPHN_woo_ind_card_2.png" legacy_lazy_load = no }
+	spriteType = { name = "GFX_TFRKPHN_woo_ind_3" texturefile = "gfx/interface/TFRKPHN_woo_tabs/TFRKPHN_woo_ind_3.png" noOfFrames = 2 }
+	spriteType = { name = "GFX_TFRKPHN_woo_ind_card_3_texticon" texturefile = "gfx/texticons/banners/TFRKPHN_woo_ind_card_3.png" legacy_lazy_load = no }
+	spriteType = { name = "GFX_TFRKPHN_woo_ind_4" texturefile = "gfx/interface/TFRKPHN_woo_tabs/TFRKPHN_woo_ind_4.png" noOfFrames = 2 }
+	spriteType = { name = "GFX_TFRKPHN_woo_ind_card_4_texticon" texturefile = "gfx/texticons/banners/TFRKPHN_woo_ind_card_4.png" legacy_lazy_load = no }
+	spriteType = { name = "GFX_TFRKPHN_woo_ind_5" texturefile = "gfx/interface/TFRKPHN_woo_tabs/TFRKPHN_woo_ind_5.png" noOfFrames = 2 }
+	spriteType = { name = "GFX_TFRKPHN_woo_ind_card_5_texticon" texturefile = "gfx/texticons/banners/TFRKPHN_woo_ind_card_5.png" legacy_lazy_load = no }
+	spriteType = { name = "GFX_TFRKPHN_woo_ind_6" texturefile = "gfx/interface/TFRKPHN_woo_tabs/TFRKPHN_woo_ind_6.png" noOfFrames = 2 }
+	spriteType = { name = "GFX_TFRKPHN_woo_ind_card_6_texticon" texturefile = "gfx/texticons/banners/TFRKPHN_woo_ind_card_6.png" legacy_lazy_load = no }
+}

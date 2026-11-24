@@ -1,0 +1,17 @@
+spriteTypes = {
+	spriteType = { name = "GFX_TFRKPHN_cho_qb1" texturefile = "gfx/interface/TFRKPHN_cho/TFRKPHN_cho_q1.png" }
+	spriteType = { name = "GFX_TFRKPHN_cho_qb2" texturefile = "gfx/interface/TFRKPHN_cho/TFRKPHN_cho_q2.png" }
+	spriteType = { name = "GFX_TFRKPHN_cho_qg2" texturefile = "gfx/interface/TFRKPHN_cho/TFRKPHN_cho_q2g.png" }
+	spriteType = { name = "GFX_TFRKPHN_cho_qb3" texturefile = "gfx/interface/TFRKPHN_cho/TFRKPHN_cho_q3.png" }
+	spriteType = { name = "GFX_TFRKPHN_cho_qb4" texturefile = "gfx/interface/TFRKPHN_cho/TFRKPHN_cho_q4.png" }
+	spriteType = { name = "GFX_TFRKPHN_cho_qb5" texturefile = "gfx/interface/TFRKPHN_cho/TFRKPHN_cho_q5.png" }
+	spriteType = { name = "GFX_TFRKPHN_cho_qb9" texturefile = "gfx/interface/TFRKPHN_cho/TFRKPHN_cho_q9.png" }
+	spriteType = { name = "GFX_TFRKPHN_cho_qg9" texturefile = "gfx/interface/TFRKPHN_cho/TFRKPHN_cho_q9g.png" }
+	spriteType = { name = "GFX_TFRKPHN_cho_qb10" texturefile = "gfx/interface/TFRKPHN_cho/TFRKPHN_cho_q10.png" }
+	spriteType = { name = "GFX_TFRKPHN_cho_qg10" texturefile = "gfx/interface/TFRKPHN_cho/TFRKPHN_cho_q10g.png" }
+	spriteType = { name = "GFX_TFRKPHN_cho_qb11" texturefile = "gfx/interface/TFRKPHN_cho/TFRKPHN_cho_q11.png" }
+	spriteType = { name = "GFX_TFRKPHN_cho_qb12" texturefile = "gfx/interface/TFRKPHN_cho/TFRKPHN_cho_q12.png" }
+	spriteType = { name = "GFX_TFRKPHN_cho_qb6" texturefile = "gfx/interface/TFRKPHN_cho/TFRKPHN_cho_q6.png" }
+	spriteType = { name = "GFX_TFRKPHN_cho_qb7" texturefile = "gfx/interface/TFRKPHN_cho/TFRKPHN_cho_q7.png" }
+	spriteType = { name = "GFX_TFRKPHN_cho_qb8" texturefile = "gfx/interface/TFRKPHN_cho/TFRKPHN_cho_q8.png" }
+}

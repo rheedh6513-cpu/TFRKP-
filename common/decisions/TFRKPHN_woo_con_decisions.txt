@@ -1,0 +1,48 @@
+# [안내] 일곱 사람의 헌법: 찬성 의석을 모으는 결정 셋. 조문 확정은 그림판에서 누른다. woo_tabs_build.py가 만든다.
+TFRKPHN_woo_con_category = {
+	TFRKPHN_woo_con_persuade = {
+		icon = GFX_decision_generic_political_discourse
+		cost = 20
+		days_remove = 14
+		visible = { NOT = { has_country_flag = TFRKPHN_wc_all } }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
+			
+		}
+		remove_effect = {
+			custom_effect_tooltip = TFRKPHN_woo_con_persuade_tt
+			hidden_effect = { random_list = { 1 = { add_to_variable = { TFRKPHN_wc_yes = 2 } } 1 = { add_to_variable = { TFRKPHN_wc_yes = 3 } } 1 = { add_to_variable = { TFRKPHN_wc_yes = 4 } } } clamp_variable = { var = TFRKPHN_wc_yes min = 150 max = 230 } set_variable = { TFRKPHN_wc_bar_f = TFRKPHN_wc_yes } subtract_from_variable = { TFRKPHN_wc_bar_f = 150 } divide_variable = { TFRKPHN_wc_bar_f = 2 } round_variable = TFRKPHN_wc_bar_f add_to_variable = { TFRKPHN_wc_bar_f = 1 } clamp_variable = { var = TFRKPHN_wc_bar_f min = 1 max = 41 } }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_woo_con_coalition = {
+		icon = GFX_decision_generic_political_discourse
+		cost = 20
+		days_remove = 14
+		visible = { NOT = { has_country_flag = TFRKPHN_wc_all } }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
+			add_stability = 0.01
+		}
+		remove_effect = {
+			custom_effect_tooltip = TFRKPHN_woo_con_coalition_tt
+			hidden_effect = { random_list = { 1 = { add_to_variable = { TFRKPHN_wc_yes = 1 } } 1 = { add_to_variable = { TFRKPHN_wc_yes = 2 } } 1 = { add_to_variable = { TFRKPHN_wc_yes = 3 } } } clamp_variable = { var = TFRKPHN_wc_yes min = 150 max = 230 } set_variable = { TFRKPHN_wc_bar_f = TFRKPHN_wc_yes } subtract_from_variable = { TFRKPHN_wc_bar_f = 150 } divide_variable = { TFRKPHN_wc_bar_f = 2 } round_variable = TFRKPHN_wc_bar_f add_to_variable = { TFRKPHN_wc_bar_f = 1 } clamp_variable = { var = TFRKPHN_wc_bar_f min = 1 max = 41 } }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_woo_con_concede = {
+		icon = GFX_decision_generic_political_discourse
+		cost = 20
+		days_remove = 14
+		visible = { NOT = { has_country_flag = TFRKPHN_wc_all } }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
+			add_stability = -0.01
+		}
+		remove_effect = {
+			custom_effect_tooltip = TFRKPHN_woo_con_concede_tt
+			hidden_effect = { random_list = { 1 = { add_to_variable = { TFRKPHN_wc_yes = 4 } } 1 = { add_to_variable = { TFRKPHN_wc_yes = 5 } } 1 = { add_to_variable = { TFRKPHN_wc_yes = 6 } } 1 = { add_to_variable = { TFRKPHN_wc_yes = 7 } } } clamp_variable = { var = TFRKPHN_wc_yes min = 150 max = 230 } set_variable = { TFRKPHN_wc_bar_f = TFRKPHN_wc_yes } subtract_from_variable = { TFRKPHN_wc_bar_f = 150 } divide_variable = { TFRKPHN_wc_bar_f = 2 } round_variable = TFRKPHN_wc_bar_f add_to_variable = { TFRKPHN_wc_bar_f = 1 } clamp_variable = { var = TFRKPHN_wc_bar_f min = 1 max = 41 } }
+		}
+		ai_will_do = { factor = 0 }
+	}
+}

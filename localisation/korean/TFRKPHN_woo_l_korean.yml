@@ -84,3 +84,6 @@
  TFRKPHN_samkim_next_tt:0 "§Y다음 대통령 선거§!가 다가옵니다."
  TFRKPHN_sk_start_good:0 " 새 국회는 연정 협상을 순조롭게 마쳤고, 선거는 차분한 분위기에서 시작됐다."
  TFRKPHN_sk_start_bad:0 " 국회가 석 달 넘게 정부를 세우지 못한 터라, 사람들은 이 선거에서 나라를 다시 묶을 사람을 찾았다."
+ TFRKPHN_woo_seat_p3_tt:0 "개헌 찬성 의석 §G+3§!"
+ TFRKPHN_woo_seat_p4_tt:0 "개헌 찬성 의석 §G+4§!"
+ TFRKPHN_woo_seat_p6_tt:0 "개헌 찬성 의석 §G+6§!"

@@ -1,0 +1,13 @@
+# [안내] 김진태 (조원진이 물러난 뒤 대통령 권한대행). cho_build.py(cho2_part.py)가 만든다. 인물은 넣은 뒤에 새로 시작한 게임에서만 불러올 수 있다.
+characters = {
+	KOR_TFRKPHN_kim_jin_tae_char = {
+		name = KOR_TFRKPHN_kim_jin_tae_char
+		portraits = { civilian = { large = GFX_portrait_TFRKPHN_kim_jin_tae } }
+		country_leader = {
+			desc = TFRKPHN_kjt_desc
+			ideology = ultra_conservatism
+			expire = "2065.1.1"
+			id = -1
+		}
+	}
+}

@@ -1,0 +1,1 @@
+# [안내] 이승만 어록 탭에는 결정이 없다. 어록과 공장은 모두 그림판에서 누른다 (TFRKPHN_cho_q_gui). cho_build.py(cho_quote_part.py)가 만든다.

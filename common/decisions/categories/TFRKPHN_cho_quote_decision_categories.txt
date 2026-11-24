@@ -1,0 +1,9 @@
+# [안내] 조원진 정부 전용 결정 탭 「이승만 어록」. cho_build.py(cho_quote_part.py)가 만든다.
+TFRKPHN_cho_q_category = {
+	icon = generic_political_actions
+	priority = 212
+	scripted_gui = TFRKPHN_cho_q_gui
+	visible_when_empty = yes
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_e21_cho NOT = { has_country_flag = TFRKPHN_cho_removed } NOT = { has_country_flag = TFRKPHN_kjt_pres } }
+}

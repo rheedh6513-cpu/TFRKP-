@@ -1,0 +1,19 @@
+# [안내] 조원진 정부 결정 탭 「토요일 광장」의 그림판. 위는 광장 사진과 광장 값, 아래 사진 넉 장이 단추다. cho_build.py(cho_rally_part.py)가 만든다.
+guiTypes = {
+	containerWindowType = {
+		name = "TFRKPHN_cr_container"
+		size = { width = 100%% height = 242 }
+		containerWindowType = {
+			name = "TFRKPHN_cr_panel"
+			position = { x = 0 y = 0 }
+			size = { width = 500 height = 240 }
+			background = { name = "background" spriteType = "GFX_tiled_decisions_bg_small" alwaystransparent = yes }
+			iconType = { name = "TFRKPHN_cr_banner" position = { x = 8 y = 8 } spriteType = "GFX_TFRKPHN_cr_banner" pdx_tooltip = "TFRKPHN_cr_banner_tt" }
+			instantTextBoxType = { name = "TFRKPHN_cr_top" position = { x = 18 y = 14 } text = "TFRKPHN_cr_top" font = "hoi_18mbs" format = left maxWidth = 460 maxHeight = 24 alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_cr_b1" position = { x = 8 y = 136 } spriteType = "GFX_TFRKPHN_cr_b1" pdx_tooltip = "TFRKPHN_cr_b1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_cr_b2" position = { x = 130 y = 136 } spriteType = "GFX_TFRKPHN_cr_b2" pdx_tooltip = "TFRKPHN_cr_b2_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_cr_b3" position = { x = 252 y = 136 } spriteType = "GFX_TFRKPHN_cr_b3" pdx_tooltip = "TFRKPHN_cr_b3_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_cr_b4" position = { x = 374 y = 136 } spriteType = "GFX_TFRKPHN_cr_b4" pdx_tooltip = "TFRKPHN_cr_b4_tt" clicksound = click_default }
+		}
+	}
+}

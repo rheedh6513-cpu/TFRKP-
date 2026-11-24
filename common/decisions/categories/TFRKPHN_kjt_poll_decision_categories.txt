@@ -1,0 +1,9 @@
+# [안내] 김진태 정부 전용 결정 탭 「지지율」. cho_build.py(kjt_poll_part.py)가 만든다.
+TFRKPHN_kp_category = {
+	icon = generic_political_actions
+	priority = 213
+	scripted_gui = TFRKPHN_kp_gui
+	visible_when_empty = yes
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_kjt_pres has_country_flag = TFRKPHN_kp_init NOT = { has_country_flag = TFRKPHN_cho2_end } }
+}

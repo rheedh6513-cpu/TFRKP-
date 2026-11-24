@@ -1,0 +1,11 @@
+spriteTypes = {
+	spriteType = { name = "GFX_TFRKPHN_kp_board" texturefile = "gfx/interface/TFRKPHN_kjt_poll/TFRKPHN_kp_board.png" }
+	spriteType = { name = "GFX_TFRKPHN_kp_digit" texturefile = "gfx/interface/TFRKPHN_kjt_poll/TFRKPHN_kp_digit.png" noOfFrames = 10 }
+	spriteType = { name = "GFX_TFRKPHN_kp_hund" texturefile = "gfx/interface/TFRKPHN_kjt_poll/TFRKPHN_kp_hund.png" noOfFrames = 2 }
+	spriteType = { name = "GFX_TFRKPHN_kp_b1" texturefile = "gfx/interface/TFRKPHN_kjt_poll/TFRKPHN_kp_b1.png" }
+	spriteType = { name = "GFX_TFRKPHN_kp_b2" texturefile = "gfx/interface/TFRKPHN_kjt_poll/TFRKPHN_kp_b2.png" }
+	spriteType = { name = "GFX_TFRKPHN_kp_b3" texturefile = "gfx/interface/TFRKPHN_kjt_poll/TFRKPHN_kp_b3.png" }
+	spriteType = { name = "GFX_TFRKPHN_kp_b4" texturefile = "gfx/interface/TFRKPHN_kjt_poll/TFRKPHN_kp_b4.png" }
+	spriteType = { name = "GFX_TFRKPHN_kp_b5" texturefile = "gfx/interface/TFRKPHN_kjt_poll/TFRKPHN_kp_b5.png" }
+	spriteType = { name = "GFX_TFRKPHN_kp_b6" texturefile = "gfx/interface/TFRKPHN_kjt_poll/TFRKPHN_kp_b6.png" }
+}

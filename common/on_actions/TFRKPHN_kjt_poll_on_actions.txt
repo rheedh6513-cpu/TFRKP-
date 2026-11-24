@@ -1,0 +1,27 @@
+# [안내] 지지율 탭: 김진태가 대통령이 되면 숫자판을 건다 (발표 62, 실제 48). 달마다 두 숫자의 거리를 보고 안정도를 깎는다. 정권이 끝나면 국민정신을 걷는다. cho_build.py(kjt_poll_part.py)가 만든다.
+on_actions = {
+	on_daily_KOR = {
+		effect = {
+			if = {
+				limit = { has_country_flag = TFRKPHN_kjt_pres NOT = { has_country_flag = TFRKPHN_kp_init } }
+				set_country_flag = TFRKPHN_kp_init
+				set_variable = { TFRKPHN_kp_show = 62 } set_variable = { TFRKPHN_kp_real = 48 }
+				TFRKPHN_kp_refresh = yes
+			}
+			if = {
+				limit = { has_country_flag = TFRKPHN_kp_init NOT = { has_country_flag = TFRKPHN_cho2_end } NOT = { has_country_flag = TFRKPHN_kp_tick } }
+				set_country_flag = { flag = TFRKPHN_kp_tick days = 30 value = 1 }
+				set_temp_variable = { kp_gap = TFRKPHN_kp_show }
+				subtract_from_temp_variable = { kp_gap = TFRKPHN_kp_real }
+				if = { limit = { check_variable = { kp_gap > 69.5 } } add_stability = -0.02 }
+				else_if = { limit = { check_variable = { kp_gap > 39.5 } } add_stability = -0.01 }
+			}
+			if = {
+				limit = { has_country_flag = TFRKPHN_kp_init has_country_flag = TFRKPHN_cho2_end NOT = { has_country_flag = TFRKPHN_kp_closed } }
+				set_country_flag = TFRKPHN_kp_closed
+				remove_dynamic_modifier = { modifier = TFRKPHN_kp_modifier }
+				if = { limit = { has_country_flag = TFRKPHN_kjt_hold_end check_variable = { TFRKPHN_kp_real < 30 } } add_stability = -0.08 }
+			}
+		}
+	}
+}

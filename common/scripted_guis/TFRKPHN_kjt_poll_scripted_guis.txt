@@ -1,0 +1,28 @@
+# [안내] 지지율 탭의 그림판. 숫자판의 세 자리는 변수로 넘긴다. cho_build.py(kjt_poll_part.py)가 만든다.
+scripted_gui = {
+	TFRKPHN_kp_gui = {
+		context_type = decision_category
+		window_name = "TFRKPHN_kp_container"
+		properties = {
+			TFRKPHN_kp_d1 = { frame = TFRKPHN_kp_d1 }
+			TFRKPHN_kp_d2 = { frame = TFRKPHN_kp_d2 }
+			TFRKPHN_kp_d3 = { frame = TFRKPHN_kp_d3 }
+		}
+		effects = {
+			TFRKPHN_kp_b1_click = { add_political_power = -15 add_to_variable = { TFRKPHN_kp_show = 4 } add_to_variable = { TFRKPHN_kp_real = -1 } set_country_flag = { flag = TFRKPHN_kp_cd1 days = 45 value = 1 } TFRKPHN_kp_refresh = yes }
+			TFRKPHN_kp_b2_click = { add_political_power = -20 add_to_variable = { TFRKPHN_kp_show = 6 } add_to_variable = { TFRKPHN_kp_real = -2 } set_country_flag = { flag = TFRKPHN_kp_cd2 days = 60 value = 1 } TFRKPHN_kp_refresh = yes }
+			TFRKPHN_kp_b3_click = { add_political_power = -30 add_to_variable = { TFRKPHN_kp_show = 9 } add_to_variable = { TFRKPHN_kp_real = -4 } add_stability = -0.01 set_country_flag = { flag = TFRKPHN_kp_cd3 days = 90 value = 1 } TFRKPHN_kp_refresh = yes }
+			TFRKPHN_kp_b4_click = { add_political_power = -25 add_to_variable = { TFRKPHN_kp_show = 12 } add_to_variable = { TFRKPHN_kp_real = -5 } set_country_flag = { flag = TFRKPHN_kp_cd4 days = 60 value = 1 } TFRKPHN_kp_refresh = yes }
+			TFRKPHN_kp_b5_click = { add_political_power = -10 add_to_variable = { TFRKPHN_kp_show = 2 } add_to_variable = { TFRKPHN_kp_real = 5 } set_temp_variable = { income_var_temp = -30 } add_income_with_inflation = yes set_country_flag = { flag = TFRKPHN_kp_cd5 days = 90 value = 1 } TFRKPHN_kp_refresh = yes }
+			TFRKPHN_kp_b6_click = { add_political_power = -10 set_country_flag = { flag = TFRKPHN_kp_cd6 days = 30 value = 1 } set_country_flag = { flag = TFRKPHN_kp_peek days = 30 value = 1 } }
+		}
+		triggers = {
+			TFRKPHN_kp_b1_click_enabled = { has_political_power > 14 NOT = { has_country_flag = TFRKPHN_kp_cd1 } }
+			TFRKPHN_kp_b2_click_enabled = { has_political_power > 19 NOT = { has_country_flag = TFRKPHN_kp_cd2 } }
+			TFRKPHN_kp_b3_click_enabled = { has_political_power > 29 NOT = { has_country_flag = TFRKPHN_kp_cd3 } }
+			TFRKPHN_kp_b4_click_enabled = { has_political_power > 24 NOT = { has_country_flag = TFRKPHN_kp_cd4 } check_variable = { TFRKPHN_kp_show > 87.5 } }
+			TFRKPHN_kp_b5_click_enabled = { has_political_power > 9 NOT = { has_country_flag = TFRKPHN_kp_cd5 } set_temp_variable = { income_trigger_temp_var = 30 } has_income_with_inflation_greater_than_or_equals = yes }
+			TFRKPHN_kp_b6_click_enabled = { has_political_power > 9 NOT = { has_country_flag = TFRKPHN_kp_cd6 } }
+		}
+	}
+}

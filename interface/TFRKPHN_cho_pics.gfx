@@ -1,0 +1,35 @@
+# [안내] 조원진, 김진태 줄기의 사건 그림 (직접 그린 것). cho_build.py(cho_pics.py)가 만든다.
+spriteTypes = {
+	spriteType = { name = "GFX_TFRKPHN_chop_7192" texturefile = "gfx/event_pictures/TFRKPHN_chop_7192.png" }
+	spriteType = { name = "GFX_TFRKPHN_chop_7193" texturefile = "gfx/event_pictures/TFRKPHN_chop_7193.png" }
+	spriteType = { name = "GFX_TFRKPHN_chop_7167" texturefile = "gfx/event_pictures/TFRKPHN_chop_7167.png" }
+	spriteType = { name = "GFX_TFRKPHN_chop_7168" texturefile = "gfx/event_pictures/TFRKPHN_chop_7168.png" }
+	spriteType = { name = "GFX_TFRKPHN_chop_7194" texturefile = "gfx/event_pictures/TFRKPHN_chop_7194.png" }
+	spriteType = { name = "GFX_TFRKPHN_chop_7179" texturefile = "gfx/event_pictures/TFRKPHN_chop_7179.png" }
+	spriteType = { name = "GFX_TFRKPHN_chop_7170" texturefile = "gfx/event_pictures/TFRKPHN_chop_7170.png" }
+	spriteType = { name = "GFX_TFRKPHN_chop_7171" texturefile = "gfx/event_pictures/TFRKPHN_chop_7171.png" }
+	spriteType = { name = "GFX_TFRKPHN_chop_7172" texturefile = "gfx/event_pictures/TFRKPHN_chop_7172.png" }
+	spriteType = { name = "GFX_TFRKPHN_chop_7173" texturefile = "gfx/event_pictures/TFRKPHN_chop_7173.png" }
+	spriteType = { name = "GFX_TFRKPHN_chop_7169" texturefile = "gfx/event_pictures/TFRKPHN_chop_7169.png" }
+	spriteType = { name = "GFX_TFRKPHN_chop_7174" texturefile = "gfx/event_pictures/TFRKPHN_chop_7174.png" }
+	spriteType = { name = "GFX_TFRKPHN_chop_7175" texturefile = "gfx/event_pictures/TFRKPHN_chop_7175.png" }
+	spriteType = { name = "GFX_TFRKPHN_chop_7176" texturefile = "gfx/event_pictures/TFRKPHN_chop_7176.png" }
+	spriteType = { name = "GFX_TFRKPHN_chop_7177" texturefile = "gfx/event_pictures/TFRKPHN_chop_7177.png" }
+	spriteType = { name = "GFX_TFRKPHN_chop_7178" texturefile = "gfx/event_pictures/TFRKPHN_chop_7178.png" }
+	spriteType = { name = "GFX_TFRKPHN_chop_7196" texturefile = "gfx/event_pictures/TFRKPHN_chop_7196.png" }
+	spriteType = { name = "GFX_TFRKPHN_chop_7180" texturefile = "gfx/event_pictures/TFRKPHN_chop_7180.png" }
+	spriteType = { name = "GFX_TFRKPHN_chop_7181" texturefile = "gfx/event_pictures/TFRKPHN_chop_7181.png" }
+	spriteType = { name = "GFX_TFRKPHN_chop_7182" texturefile = "gfx/event_pictures/TFRKPHN_chop_7182.png" }
+	spriteType = { name = "GFX_TFRKPHN_chop_7183" texturefile = "gfx/event_pictures/TFRKPHN_chop_7183.png" }
+	spriteType = { name = "GFX_TFRKPHN_chop_7184" texturefile = "gfx/event_pictures/TFRKPHN_chop_7184.png" }
+	spriteType = { name = "GFX_TFRKPHN_chop_7185" texturefile = "gfx/event_pictures/TFRKPHN_chop_7185.png" }
+	spriteType = { name = "GFX_TFRKPHN_chop_7186" texturefile = "gfx/event_pictures/TFRKPHN_chop_7186.png" }
+	spriteType = { name = "GFX_TFRKPHN_chop_7187" texturefile = "gfx/event_pictures/TFRKPHN_chop_7187.png" }
+	spriteType = { name = "GFX_TFRKPHN_chop_7188" texturefile = "gfx/event_pictures/TFRKPHN_chop_7188.png" }
+	spriteType = { name = "GFX_TFRKPHN_chop_7189" texturefile = "gfx/event_pictures/TFRKPHN_chop_7189.png" }
+	spriteType = { name = "GFX_TFRKPHN_chop_7203" texturefile = "gfx/event_pictures/TFRKPHN_chop_7203.png" }
+	spriteType = { name = "GFX_TFRKPHN_chop_7204" texturefile = "gfx/event_pictures/TFRKPHN_chop_7204.png" }
+	spriteType = { name = "GFX_TFRKPHN_chop_7205" texturefile = "gfx/event_pictures/TFRKPHN_chop_7205.png" }
+	spriteType = { name = "GFX_TFRKPHN_chop_7207" texturefile = "gfx/event_pictures/TFRKPHN_chop_7207.png" }
+	spriteType = { name = "GFX_TFRKPHN_chop_7208" texturefile = "gfx/event_pictures/TFRKPHN_chop_7208.png" }
+}

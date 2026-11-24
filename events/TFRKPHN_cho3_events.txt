@@ -1,0 +1,136 @@
+# [안내] 조원진: 국회 포격 뒤 2막과 3막 (김진태 정부에서 결말 둘까지). cho_build.py(cho3_part.py)가 만든다.
+add_namespace = tfrkphn
+country_event = {
+	id = tfrkphn.7174
+	title = tfrkphn.7174.t
+	desc = tfrkphn.7174.d
+	picture = GFX_TFRKPHN_chop_7174
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7174.a
+		hidden_effect = { country_event = { id = tfrkphn.7204 days = 25 } }	# 삼김 사건
+		hidden_effect = { country_event = { id = tfrkphn.7184 days = 55 } }	# 삼김 사건
+		add_stability = 0.05
+		add_political_power = 50
+	}
+}
+country_event = {
+	id = tfrkphn.7175
+	title = tfrkphn.7175.t
+	desc = tfrkphn.7175.d
+	picture = GFX_TFRKPHN_chop_7175
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7175.a
+		hidden_effect = { country_event = { id = tfrkphn.7206 days = 35 } }	# 삼김 사건
+		add_stability = -0.02
+		add_political_power = 50
+	}
+}
+country_event = {
+	id = tfrkphn.7176
+	title = tfrkphn.7176.t
+	desc = tfrkphn.7176.d
+	picture = GFX_TFRKPHN_chop_7176
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7176.a
+		hidden_effect = { country_event = { id = tfrkphn.7207 days = 20 } }	# 삼김 사건
+		hidden_effect = { country_event = { id = tfrkphn.7185 days = 50 } }	# 삼김 사건
+		add_stability = -0.03
+		add_political_power = 75
+	}
+}
+country_event = {
+	id = tfrkphn.7177
+	title = tfrkphn.7177.t
+	desc = tfrkphn.7177.d
+	picture = GFX_TFRKPHN_chop_7177
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7177.a
+		hidden_effect = { country_event = { id = tfrkphn.7188 days = 20 } }	# 삼김 사건
+		hidden_effect = { country_event = { id = tfrkphn.7186 days = 45 } }	# 삼김 사건
+		add_stability = 0.03
+		set_temp_variable = { income_var_temp = 40 }
+		add_income_with_inflation = yes
+	}
+}
+country_event = {
+	id = tfrkphn.7178
+	title = tfrkphn.7178.t
+	desc = tfrkphn.7178.d
+	picture = GFX_TFRKPHN_chop_7178
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7178.a
+		hidden_effect = { country_event = { id = tfrkphn.7208 days = 35 } }	# 삼김 사건
+		add_political_power = 50
+	}
+}
+country_event = {
+	id = tfrkphn.7196
+	title = tfrkphn.7196.t
+	desc = tfrkphn.7196.d
+	picture = GFX_TFRKPHN_chop_7196
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7196.a
+		hidden_effect = { country_event = { id = tfrkphn.7189 days = 15 } }	# 삼김 사건
+		hidden_effect = { country_event = { id = tfrkphn.7205 days = 45 } }	# 삼김 사건
+		add_stability = -0.03
+		add_political_power = 50
+	}
+}
+country_event = {
+	id = tfrkphn.7180
+	title = tfrkphn.7180.t
+	desc = tfrkphn.7180.d
+	picture = GFX_TFRKPHN_chop_7180
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7180.a
+		custom_effect_tooltip = TFRKPHN_kjt_hold_tt
+		add_stability = -0.10
+		hidden_effect = { country_event = { id = tfrkphn.7181 days = 3 } }
+	}
+	option = {
+		name = tfrkphn.7180.b
+		custom_effect_tooltip = TFRKPHN_kjt_fall_tt
+		hidden_effect = { country_event = { id = tfrkphn.7182 days = 3 } }
+	}
+}
+country_event = {
+	id = tfrkphn.7181
+	title = tfrkphn.7181.t
+	desc = tfrkphn.7181.d
+	picture = GFX_TFRKPHN_chop_7181
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7181.a
+		add_stability = 0.05
+		add_war_support = -0.05
+		set_country_flag = TFRKPHN_cho2_end
+		set_country_flag = TFRKPHN_kjt_hold_end
+	}
+}
+country_event = {
+	id = tfrkphn.7182
+	title = tfrkphn.7182.t
+	desc = tfrkphn.7182.d
+	picture = GFX_TFRKPHN_chop_7182
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7182.a
+		hidden_effect = { country_event = { id = tfrkphn.7203 days = 15 } }	# 삼김 사건
+		hidden_effect = { country_event = { id = tfrkphn.7187 days = 30 } }	# 삼김 사건
+		add_stability = 0.10
+		custom_effect_tooltip = TFRKPHN_kjt_fallen_tt
+		hidden_effect = {
+			set_country_flag = TFRKPHN_cho2_end
+			set_country_flag = TFRKPHN_kjt_fallen
+			if = { limit = { NOT = { has_character = KOR_TFRKPHN_woo_won_shik_char } } recruit_character = KOR_TFRKPHN_woo_won_shik_char }
+			KOR_TFRKPHN_woo_won_shik_char = { promote_character = cooperative_democracy_liberal }
+		}
+	}
+}

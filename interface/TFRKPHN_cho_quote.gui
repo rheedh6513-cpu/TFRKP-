@@ -1,0 +1,28 @@
+# [안내] 조원진 정부 결정 탭 「이승만 어록」의 그림판. 붓글씨 구절이 걸려 있고 누르면 연설한다. cho_build.py(cho_quote_part.py)가 만든다.
+guiTypes = {
+	containerWindowType = {
+		name = "TFRKPHN_cho_q_container"
+		size = { width = 100%% height = 1374 }
+		containerWindowType = {
+			name = "TFRKPHN_cho_q_panel"
+			position = { x = 0 y = 0 }
+			size = { width = 500 height = 1372 }
+			background = { name = "background" spriteType = "GFX_tiled_decisions_bg_small" alwaystransparent = yes }
+			buttonType = { name = "TFRKPHN_cho_qb1" position = { x = 8 y = 8 } spriteType = "GFX_TFRKPHN_cho_qb1" pdx_tooltip = "TFRKPHN_cho_qb1_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_cho_qb2" position = { x = 8 y = 90 } spriteType = "GFX_TFRKPHN_cho_qb2" pdx_tooltip = "TFRKPHN_cho_qb2_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_cho_qg2" position = { x = 8 y = 90 } spriteType = "GFX_TFRKPHN_cho_qg2" pdx_tooltip = "TFRKPHN_cho_qg2_tt" }
+			buttonType = { name = "TFRKPHN_cho_qb3" position = { x = 8 y = 194 } spriteType = "GFX_TFRKPHN_cho_qb3" pdx_tooltip = "TFRKPHN_cho_qb3_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_cho_qb4" position = { x = 8 y = 272 } spriteType = "GFX_TFRKPHN_cho_qb4" pdx_tooltip = "TFRKPHN_cho_qb4_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_cho_qb5" position = { x = 8 y = 350 } spriteType = "GFX_TFRKPHN_cho_qb5" pdx_tooltip = "TFRKPHN_cho_qb5_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_cho_qb9" position = { x = 8 y = 428 } spriteType = "GFX_TFRKPHN_cho_qb9" pdx_tooltip = "TFRKPHN_cho_qb9_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_cho_qg9" position = { x = 8 y = 428 } spriteType = "GFX_TFRKPHN_cho_qg9" pdx_tooltip = "TFRKPHN_cho_qg9_tt" }
+			buttonType = { name = "TFRKPHN_cho_qb10" position = { x = 8 y = 612 } spriteType = "GFX_TFRKPHN_cho_qb10" pdx_tooltip = "TFRKPHN_cho_qb10_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_cho_qg10" position = { x = 8 y = 612 } spriteType = "GFX_TFRKPHN_cho_qg10" pdx_tooltip = "TFRKPHN_cho_qg10_tt" }
+			buttonType = { name = "TFRKPHN_cho_qb11" position = { x = 8 y = 716 } spriteType = "GFX_TFRKPHN_cho_qb11" pdx_tooltip = "TFRKPHN_cho_qb11_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_cho_qb12" position = { x = 8 y = 820 } spriteType = "GFX_TFRKPHN_cho_qb12" pdx_tooltip = "TFRKPHN_cho_qb12_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_cho_qb6" position = { x = 8 y = 978 } spriteType = "GFX_TFRKPHN_cho_qb6" pdx_tooltip = "TFRKPHN_cho_qb6_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_cho_qb7" position = { x = 8 y = 1082 } spriteType = "GFX_TFRKPHN_cho_qb7" pdx_tooltip = "TFRKPHN_cho_qb7_tt" clicksound = click_default }
+			buttonType = { name = "TFRKPHN_cho_qb8" position = { x = 8 y = 1212 } spriteType = "GFX_TFRKPHN_cho_qb8" pdx_tooltip = "TFRKPHN_cho_qb8_tt" clicksound = click_default }
+		}
+	}
+}

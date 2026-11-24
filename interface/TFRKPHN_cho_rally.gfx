@@ -1,0 +1,7 @@
+spriteTypes = {
+	spriteType = { name = "GFX_TFRKPHN_cr_banner" texturefile = "gfx/interface/TFRKPHN_cho_rally/TFRKPHN_cr_banner.png" }
+	spriteType = { name = "GFX_TFRKPHN_cr_b1" texturefile = "gfx/interface/TFRKPHN_cho_rally/TFRKPHN_cr_b1.png" }
+	spriteType = { name = "GFX_TFRKPHN_cr_b2" texturefile = "gfx/interface/TFRKPHN_cho_rally/TFRKPHN_cr_b2.png" }
+	spriteType = { name = "GFX_TFRKPHN_cr_b3" texturefile = "gfx/interface/TFRKPHN_cho_rally/TFRKPHN_cr_b3.png" }
+	spriteType = { name = "GFX_TFRKPHN_cr_b4" texturefile = "gfx/interface/TFRKPHN_cho_rally/TFRKPHN_cr_b4.png" }
+}

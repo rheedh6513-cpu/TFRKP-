@@ -1,0 +1,24 @@
+# [안내] 지지율 숫자판. 발표 숫자를 0~140, 실제 민심을 0~100으로 맞추고 세 자리 그림과 국민정신 값을 고친다. cho_build.py(kjt_poll_part.py)가 만든다.
+TFRKPHN_kp_refresh = {
+	clamp_variable = { var = TFRKPHN_kp_show min = 0 max = 140 }
+	clamp_variable = { var = TFRKPHN_kp_real min = 0 max = 100 }
+	set_variable = { TFRKPHN_kp_d1 = 1 }
+	set_temp_variable = { kp_t = TFRKPHN_kp_show }
+	if = { limit = { check_variable = { kp_t > 99.5 } } set_variable = { TFRKPHN_kp_d1 = 2 } subtract_from_temp_variable = { kp_t = 100 } }
+	set_temp_variable = { kp_o = kp_t }
+	modulo_temp_variable = { kp_o = 10 }
+	set_temp_variable = { kp_n = kp_t }
+	subtract_from_temp_variable = { kp_n = kp_o }
+	divide_temp_variable = { kp_n = 10 }
+	set_variable = { TFRKPHN_kp_d2 = kp_n }
+	add_to_variable = { TFRKPHN_kp_d2 = 1 }
+	set_variable = { TFRKPHN_kp_d3 = kp_o }
+	add_to_variable = { TFRKPHN_kp_d3 = 1 }
+	set_variable = { TFRKPHN_kp_st = TFRKPHN_kp_show }
+	subtract_from_variable = { TFRKPHN_kp_st = 50 }
+	set_variable = { TFRKPHN_kp_pp = TFRKPHN_kp_st }
+	multiply_variable = { TFRKPHN_kp_st = 0.001 }
+	multiply_variable = { TFRKPHN_kp_pp = 0.002 }
+	if = { limit = { NOT = { has_dynamic_modifier = { modifier = TFRKPHN_kp_modifier } } } add_dynamic_modifier = { modifier = TFRKPHN_kp_modifier } }
+	force_update_dynamic_modifier = yes
+}

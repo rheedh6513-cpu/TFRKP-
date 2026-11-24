@@ -1,0 +1,20 @@
+# [안내] 중점 「헌법의 일곱 사람」이 끝나 있으면 결정 탭 「일곱 사람의 헌법」을 한 번 연다. woo_tabs_build.py가 만든다.
+on_actions = {
+	on_daily_KOR = {
+		effect = {
+			if = {
+				limit = { has_completed_focus = TFRKPHN_woo_10 NOT = { has_country_flag = TFRKPHN_wc_open } }
+				set_country_flag = TFRKPHN_wc_open
+				set_variable = { TFRKPHN_wc_yes = 186 } set_variable = { TFRKPHN_wc_cnt = 0 }
+				set_variable = { TFRKPHN_wc_f1 = 1 } set_variable = { TFRKPHN_wc_f2 = 1 } set_variable = { TFRKPHN_wc_f3 = 1 } set_variable = { TFRKPHN_wc_f4 = 1 } set_variable = { TFRKPHN_wc_f5 = 1 } set_variable = { TFRKPHN_wc_f6 = 1 } set_variable = { TFRKPHN_wc_f7 = 1 }
+				set_variable = { TFRKPHN_wc_bar_f = TFRKPHN_wc_yes } subtract_from_variable = { TFRKPHN_wc_bar_f = 150 } divide_variable = { TFRKPHN_wc_bar_f = 2 } round_variable = TFRKPHN_wc_bar_f add_to_variable = { TFRKPHN_wc_bar_f = 1 } clamp_variable = { var = TFRKPHN_wc_bar_f min = 1 max = 41 }
+			}
+			if = {
+				limit = { has_country_flag = TFRKPHN_woo_route NOT = { has_country_flag = TFRKPHN_woo_tabs_init } }
+				set_country_flag = TFRKPHN_woo_tabs_init set_variable = { TFRKPHN_wi_cnt = 0 }
+				set_variable = { TFRKPHN_wa_f1 = 1 } set_variable = { TFRKPHN_wa_f2 = 1 } set_variable = { TFRKPHN_wa_f3 = 1 } set_variable = { TFRKPHN_wa_f4 = 1 } set_variable = { TFRKPHN_wa_f5 = 1 } set_variable = { TFRKPHN_wa_f6 = 1 }
+				set_variable = { TFRKPHN_wi_f1 = 1 } set_variable = { TFRKPHN_wi_f2 = 1 } set_variable = { TFRKPHN_wi_f3 = 1 } set_variable = { TFRKPHN_wi_f4 = 1 } set_variable = { TFRKPHN_wi_f5 = 1 } set_variable = { TFRKPHN_wi_f6 = 1 }
+			}
+		}
+	}
+}

@@ -1,0 +1,13 @@
+# [안내] 총리 순번 인수인계 글에 들어갈 이름. skx_build.py(rot_part.py)가 만든다.
+defined_text = {
+	name = TFRKPHN_rot_out
+	text = { trigger = { check_variable = { TFRKPHN_rot_i = 1 } } localization_key = TFRKPHN_rot_name_1 }
+	text = { trigger = { check_variable = { TFRKPHN_rot_i = 2 } } localization_key = TFRKPHN_rot_name_2 }
+	text = { trigger = { check_variable = { TFRKPHN_rot_i = 3 } } localization_key = TFRKPHN_rot_name_3 }
+}
+defined_text = {
+	name = TFRKPHN_rot_in
+	text = { trigger = { check_variable = { TFRKPHN_rot_i = 1 } } localization_key = TFRKPHN_rot_name_2 }
+	text = { trigger = { check_variable = { TFRKPHN_rot_i = 2 } } localization_key = TFRKPHN_rot_name_3 }
+	text = { trigger = { check_variable = { TFRKPHN_rot_i = 3 } } localization_key = TFRKPHN_rot_name_1 }
+}

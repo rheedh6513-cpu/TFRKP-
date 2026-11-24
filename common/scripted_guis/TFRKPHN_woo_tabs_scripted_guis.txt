@@ -1,0 +1,111 @@
+# [안내] 을지로 그림판. 사진을 누르면 정치력 30을 쓰고 그 현장을 찾아간다. 같은 현장은 120일 뒤에 다시. woo_tabs_build.py가 만든다.
+scripted_gui = {
+	TFRKPHN_woo_eul_gui = {
+		context_type = decision_category
+		window_name = "TFRKPHN_woo_eul_container"
+		effects = {
+			TFRKPHN_woo_eul_b1_click = { add_political_power = -30 add_stability = 0.01 set_temp_variable = { society_development_var_temp = 0.02 } add_society_development = yes set_country_flag = { flag = TFRKPHN_woo_eul_cd1 days = 120 value = 1 } }
+			TFRKPHN_woo_eul_b2_click = { add_political_power = -30 add_stability = 0.01 set_temp_variable = { society_development_var_temp = 0.02 } add_society_development = yes set_country_flag = { flag = TFRKPHN_woo_eul_cd2 days = 120 value = 1 } }
+			TFRKPHN_woo_eul_b3_click = { add_political_power = -30 set_temp_variable = { industrial_development_var_temp = 0.03 } add_industrial_development = yes set_country_flag = { flag = TFRKPHN_woo_eul_cd3 days = 120 value = 1 } }
+			TFRKPHN_woo_eul_b4_click = { add_political_power = -30 set_temp_variable = { society_development_var_temp = 0.03 } add_society_development = yes set_country_flag = { flag = TFRKPHN_woo_eul_cd4 days = 120 value = 1 } }
+			TFRKPHN_woo_eul_b5_click = { add_political_power = -30 add_stability = 0.01 set_temp_variable = { industrial_development_var_temp = 0.02 } add_industrial_development = yes set_country_flag = { flag = TFRKPHN_woo_eul_cd5 days = 120 value = 1 } }
+			TFRKPHN_woo_eul_b6_click = { add_political_power = -30 add_stability = 0.02 set_country_flag = { flag = TFRKPHN_woo_eul_cd6 days = 120 value = 1 } }
+		}
+		triggers = {
+			TFRKPHN_woo_eul_b1_click_enabled = { has_political_power > 29 NOT = { has_country_flag = TFRKPHN_woo_eul_cd1 } }
+			TFRKPHN_woo_eul_b2_click_enabled = { has_political_power > 29 NOT = { has_country_flag = TFRKPHN_woo_eul_cd2 } }
+			TFRKPHN_woo_eul_b3_click_enabled = { has_political_power > 29 NOT = { has_country_flag = TFRKPHN_woo_eul_cd3 } }
+			TFRKPHN_woo_eul_b4_click_enabled = { has_political_power > 29 NOT = { has_country_flag = TFRKPHN_woo_eul_cd4 } }
+			TFRKPHN_woo_eul_b5_click_enabled = { has_political_power > 29 NOT = { has_country_flag = TFRKPHN_woo_eul_cd5 } }
+			TFRKPHN_woo_eul_b6_click_enabled = { has_political_power > 29 NOT = { has_country_flag = TFRKPHN_woo_eul_cd6 } }
+		}
+	}
+	TFRKPHN_woo_con_gui = {
+		context_type = decision_category
+		window_name = "TFRKPHN_woo_con_container"
+		properties = {
+			TFRKPHN_woo_con_bar = { frame = TFRKPHN_wc_bar_f }
+			TFRKPHN_woo_con_b1 = { frame = TFRKPHN_wc_f1 }
+			TFRKPHN_woo_con_b2 = { frame = TFRKPHN_wc_f2 }
+			TFRKPHN_woo_con_b3 = { frame = TFRKPHN_wc_f3 }
+			TFRKPHN_woo_con_b4 = { frame = TFRKPHN_wc_f4 }
+			TFRKPHN_woo_con_b5 = { frame = TFRKPHN_wc_f5 }
+			TFRKPHN_woo_con_b6 = { frame = TFRKPHN_wc_f6 }
+			TFRKPHN_woo_con_b7 = { frame = TFRKPHN_wc_f7 }
+		}
+		effects = {
+			TFRKPHN_woo_con_b1_click = { add_political_power = -30 add_stability = 0.02 set_country_flag = TFRKPHN_wc_done1 set_variable = { TFRKPHN_wc_f1 = 2 } add_to_variable = { TFRKPHN_wc_cnt = 1 } add_to_variable = { TFRKPHN_wc_yes = -6 } clamp_variable = { var = TFRKPHN_wc_yes min = 150 max = 230 } set_variable = { TFRKPHN_wc_bar_f = TFRKPHN_wc_yes } subtract_from_variable = { TFRKPHN_wc_bar_f = 150 } divide_variable = { TFRKPHN_wc_bar_f = 2 } round_variable = TFRKPHN_wc_bar_f add_to_variable = { TFRKPHN_wc_bar_f = 1 } clamp_variable = { var = TFRKPHN_wc_bar_f min = 1 max = 41 } }
+			TFRKPHN_woo_con_b2_click = { add_political_power = -30 add_stability = 0.02 set_country_flag = TFRKPHN_wc_done2 set_variable = { TFRKPHN_wc_f2 = 2 } add_to_variable = { TFRKPHN_wc_cnt = 1 } add_to_variable = { TFRKPHN_wc_yes = -6 } clamp_variable = { var = TFRKPHN_wc_yes min = 150 max = 230 } set_variable = { TFRKPHN_wc_bar_f = TFRKPHN_wc_yes } subtract_from_variable = { TFRKPHN_wc_bar_f = 150 } divide_variable = { TFRKPHN_wc_bar_f = 2 } round_variable = TFRKPHN_wc_bar_f add_to_variable = { TFRKPHN_wc_bar_f = 1 } clamp_variable = { var = TFRKPHN_wc_bar_f min = 1 max = 41 } }
+			TFRKPHN_woo_con_b3_click = { add_political_power = -30 add_political_power = 40 set_country_flag = TFRKPHN_wc_done3 set_variable = { TFRKPHN_wc_f3 = 2 } add_to_variable = { TFRKPHN_wc_cnt = 1 } add_to_variable = { TFRKPHN_wc_yes = -6 } clamp_variable = { var = TFRKPHN_wc_yes min = 150 max = 230 } set_variable = { TFRKPHN_wc_bar_f = TFRKPHN_wc_yes } subtract_from_variable = { TFRKPHN_wc_bar_f = 150 } divide_variable = { TFRKPHN_wc_bar_f = 2 } round_variable = TFRKPHN_wc_bar_f add_to_variable = { TFRKPHN_wc_bar_f = 1 } clamp_variable = { var = TFRKPHN_wc_bar_f min = 1 max = 41 } }
+			TFRKPHN_woo_con_b4_click = { add_political_power = -30 add_stability = 0.01 add_political_power = 20 set_country_flag = TFRKPHN_wc_done4 set_variable = { TFRKPHN_wc_f4 = 2 } add_to_variable = { TFRKPHN_wc_cnt = 1 } add_to_variable = { TFRKPHN_wc_yes = -6 } clamp_variable = { var = TFRKPHN_wc_yes min = 150 max = 230 } set_variable = { TFRKPHN_wc_bar_f = TFRKPHN_wc_yes } subtract_from_variable = { TFRKPHN_wc_bar_f = 150 } divide_variable = { TFRKPHN_wc_bar_f = 2 } round_variable = TFRKPHN_wc_bar_f add_to_variable = { TFRKPHN_wc_bar_f = 1 } clamp_variable = { var = TFRKPHN_wc_bar_f min = 1 max = 41 } }
+			TFRKPHN_woo_con_b5_click = { add_political_power = -30 set_temp_variable = { society_development_var_temp = 0.03 } add_society_development = yes set_country_flag = TFRKPHN_wc_done5 set_variable = { TFRKPHN_wc_f5 = 2 } add_to_variable = { TFRKPHN_wc_cnt = 1 } add_to_variable = { TFRKPHN_wc_yes = -6 } clamp_variable = { var = TFRKPHN_wc_yes min = 150 max = 230 } set_variable = { TFRKPHN_wc_bar_f = TFRKPHN_wc_yes } subtract_from_variable = { TFRKPHN_wc_bar_f = 150 } divide_variable = { TFRKPHN_wc_bar_f = 2 } round_variable = TFRKPHN_wc_bar_f add_to_variable = { TFRKPHN_wc_bar_f = 1 } clamp_variable = { var = TFRKPHN_wc_bar_f min = 1 max = 41 } }
+			TFRKPHN_woo_con_b6_click = { add_political_power = -30 add_stability = 0.01 set_temp_variable = { society_development_var_temp = 0.02 } add_society_development = yes set_country_flag = TFRKPHN_wc_done6 set_variable = { TFRKPHN_wc_f6 = 2 } add_to_variable = { TFRKPHN_wc_cnt = 1 } add_to_variable = { TFRKPHN_wc_yes = -6 } clamp_variable = { var = TFRKPHN_wc_yes min = 150 max = 230 } set_variable = { TFRKPHN_wc_bar_f = TFRKPHN_wc_yes } subtract_from_variable = { TFRKPHN_wc_bar_f = 150 } divide_variable = { TFRKPHN_wc_bar_f = 2 } round_variable = TFRKPHN_wc_bar_f add_to_variable = { TFRKPHN_wc_bar_f = 1 } clamp_variable = { var = TFRKPHN_wc_bar_f min = 1 max = 41 } }
+			TFRKPHN_woo_con_b7_click = { add_political_power = -30 add_stability = 0.03 set_country_flag = TFRKPHN_wc_done7 set_variable = { TFRKPHN_wc_f7 = 2 } add_to_variable = { TFRKPHN_wc_cnt = 1 } add_to_variable = { TFRKPHN_wc_yes = -6 } clamp_variable = { var = TFRKPHN_wc_yes min = 150 max = 230 } set_variable = { TFRKPHN_wc_bar_f = TFRKPHN_wc_yes } subtract_from_variable = { TFRKPHN_wc_bar_f = 150 } divide_variable = { TFRKPHN_wc_bar_f = 2 } round_variable = TFRKPHN_wc_bar_f add_to_variable = { TFRKPHN_wc_bar_f = 1 } clamp_variable = { var = TFRKPHN_wc_bar_f min = 1 max = 41 } if = { limit = { check_variable = { TFRKPHN_wc_cnt > 6.5 } } set_country_flag = TFRKPHN_wc_all add_stability = 0.05 } }
+		}
+		triggers = {
+			TFRKPHN_woo_con_b1_click_enabled = { NOT = { has_country_flag = TFRKPHN_wc_done1 } check_variable = { TFRKPHN_wc_yes > 199.5 } has_political_power > 29 }
+			TFRKPHN_woo_con_b2_click_enabled = { NOT = { has_country_flag = TFRKPHN_wc_done2 } check_variable = { TFRKPHN_wc_yes > 199.5 } has_political_power > 29 }
+			TFRKPHN_woo_con_b3_click_enabled = { NOT = { has_country_flag = TFRKPHN_wc_done3 } check_variable = { TFRKPHN_wc_yes > 199.5 } has_political_power > 29 }
+			TFRKPHN_woo_con_b4_click_enabled = { NOT = { has_country_flag = TFRKPHN_wc_done4 } check_variable = { TFRKPHN_wc_yes > 199.5 } has_political_power > 29 }
+			TFRKPHN_woo_con_b5_click_enabled = { NOT = { has_country_flag = TFRKPHN_wc_done5 } check_variable = { TFRKPHN_wc_yes > 199.5 } has_political_power > 29 }
+			TFRKPHN_woo_con_b6_click_enabled = { NOT = { has_country_flag = TFRKPHN_wc_done6 } check_variable = { TFRKPHN_wc_yes > 199.5 } has_political_power > 29 }
+			TFRKPHN_woo_con_b7_click_enabled = { NOT = { has_country_flag = TFRKPHN_wc_done7 } check_variable = { TFRKPHN_wc_yes > 199.5 } has_political_power > 29 check_variable = { TFRKPHN_wc_cnt > 5.5 } }
+		}
+	}
+	TFRKPHN_woo_arc_gui = {
+		context_type = decision_category
+		window_name = "TFRKPHN_woo_arc_container"
+		properties = {
+			TFRKPHN_woo_arc_b1 = { frame = TFRKPHN_wa_f1 }
+			TFRKPHN_woo_arc_b2 = { frame = TFRKPHN_wa_f2 }
+			TFRKPHN_woo_arc_b3 = { frame = TFRKPHN_wa_f3 }
+			TFRKPHN_woo_arc_b4 = { frame = TFRKPHN_wa_f4 }
+			TFRKPHN_woo_arc_b5 = { frame = TFRKPHN_wa_f5 }
+			TFRKPHN_woo_arc_b6 = { frame = TFRKPHN_wa_f6 }
+		}
+		effects = {
+			TFRKPHN_woo_arc_b1_click = { add_political_power = -20 add_stability = -0.01 set_country_flag = TFRKPHN_wa_done1 set_variable = { TFRKPHN_wa_f1 = 2 } add_to_variable = { TFRKPHN_woo_open = 5 } clamp_variable = { var = TFRKPHN_woo_open min = 0 max = 100 } }
+			TFRKPHN_woo_arc_b2_click = { add_political_power = -20 add_stability = -0.01 set_country_flag = TFRKPHN_wa_done2 set_variable = { TFRKPHN_wa_f2 = 2 } add_to_variable = { TFRKPHN_woo_open = 5 } clamp_variable = { var = TFRKPHN_woo_open min = 0 max = 100 } }
+			TFRKPHN_woo_arc_b3_click = { add_political_power = -20 add_stability = -0.01 set_country_flag = TFRKPHN_wa_done3 set_variable = { TFRKPHN_wa_f3 = 2 } add_to_variable = { TFRKPHN_woo_open = 5 } clamp_variable = { var = TFRKPHN_woo_open min = 0 max = 100 } }
+			TFRKPHN_woo_arc_b4_click = { add_political_power = -20 add_stability = -0.01 set_country_flag = TFRKPHN_wa_done4 set_variable = { TFRKPHN_wa_f4 = 2 } add_to_variable = { TFRKPHN_woo_open = 5 } clamp_variable = { var = TFRKPHN_woo_open min = 0 max = 100 } }
+			TFRKPHN_woo_arc_b5_click = { add_political_power = -20 add_stability = -0.01 set_country_flag = TFRKPHN_wa_done5 set_variable = { TFRKPHN_wa_f5 = 2 } add_to_variable = { TFRKPHN_woo_open = 5 } clamp_variable = { var = TFRKPHN_woo_open min = 0 max = 100 } }
+			TFRKPHN_woo_arc_b6_click = { add_political_power = -20 add_stability = -0.01 set_country_flag = TFRKPHN_wa_done6 set_variable = { TFRKPHN_wa_f6 = 2 } add_to_variable = { TFRKPHN_woo_open = 5 } clamp_variable = { var = TFRKPHN_woo_open min = 0 max = 100 } }
+		}
+		triggers = {
+			TFRKPHN_woo_arc_b1_click_enabled = { NOT = { has_country_flag = TFRKPHN_wa_done1 } has_political_power > 19 }
+			TFRKPHN_woo_arc_b2_click_enabled = { NOT = { has_country_flag = TFRKPHN_wa_done2 } has_political_power > 19 }
+			TFRKPHN_woo_arc_b3_click_enabled = { NOT = { has_country_flag = TFRKPHN_wa_done3 } has_political_power > 19 }
+			TFRKPHN_woo_arc_b4_click_enabled = { NOT = { has_country_flag = TFRKPHN_wa_done4 } has_political_power > 19 }
+			TFRKPHN_woo_arc_b5_click_enabled = { NOT = { has_country_flag = TFRKPHN_wa_done5 } has_political_power > 19 }
+			TFRKPHN_woo_arc_b6_click_enabled = { NOT = { has_country_flag = TFRKPHN_wa_done6 } has_political_power > 19 }
+		}
+	}
+	TFRKPHN_woo_ind_gui = {
+		context_type = decision_category
+		window_name = "TFRKPHN_woo_ind_container"
+		properties = {
+			TFRKPHN_woo_ind_b1 = { frame = TFRKPHN_wi_f1 }
+			TFRKPHN_woo_ind_b2 = { frame = TFRKPHN_wi_f2 }
+			TFRKPHN_woo_ind_b3 = { frame = TFRKPHN_wi_f3 }
+			TFRKPHN_woo_ind_b4 = { frame = TFRKPHN_wi_f4 }
+			TFRKPHN_woo_ind_b5 = { frame = TFRKPHN_wi_f5 }
+			TFRKPHN_woo_ind_b6 = { frame = TFRKPHN_wi_f6 }
+		}
+		effects = {
+			TFRKPHN_woo_ind_b1_click = { add_political_power = -25 add_war_support = 0.01 set_temp_variable = { military_development_var_temp = 0.02 } add_military_development = yes set_country_flag = TFRKPHN_wi_done1 set_variable = { TFRKPHN_wi_f1 = 2 } add_to_variable = { TFRKPHN_wi_cnt = 1 } if = { limit = { check_variable = { TFRKPHN_wi_cnt > 5.5 } } add_stability = 0.03 } }
+			TFRKPHN_woo_ind_b2_click = { add_political_power = -25 add_war_support = 0.01 set_temp_variable = { military_development_var_temp = 0.02 } add_military_development = yes set_country_flag = TFRKPHN_wi_done2 set_variable = { TFRKPHN_wi_f2 = 2 } add_to_variable = { TFRKPHN_wi_cnt = 1 } if = { limit = { check_variable = { TFRKPHN_wi_cnt > 5.5 } } add_stability = 0.03 } }
+			TFRKPHN_woo_ind_b3_click = { add_political_power = -25 add_war_support = 0.01 set_temp_variable = { military_development_var_temp = 0.02 } add_military_development = yes set_country_flag = TFRKPHN_wi_done3 set_variable = { TFRKPHN_wi_f3 = 2 } add_to_variable = { TFRKPHN_wi_cnt = 1 } if = { limit = { check_variable = { TFRKPHN_wi_cnt > 5.5 } } add_stability = 0.03 } }
+			TFRKPHN_woo_ind_b4_click = { add_political_power = -25 add_war_support = 0.01 set_temp_variable = { military_development_var_temp = 0.02 } add_military_development = yes set_country_flag = TFRKPHN_wi_done4 set_variable = { TFRKPHN_wi_f4 = 2 } add_to_variable = { TFRKPHN_wi_cnt = 1 } if = { limit = { check_variable = { TFRKPHN_wi_cnt > 5.5 } } add_stability = 0.03 } }
+			TFRKPHN_woo_ind_b5_click = { add_political_power = -25 add_war_support = 0.01 set_temp_variable = { military_development_var_temp = 0.02 } add_military_development = yes set_country_flag = TFRKPHN_wi_done5 set_variable = { TFRKPHN_wi_f5 = 2 } add_to_variable = { TFRKPHN_wi_cnt = 1 } if = { limit = { check_variable = { TFRKPHN_wi_cnt > 5.5 } } add_stability = 0.03 } }
+			TFRKPHN_woo_ind_b6_click = { add_political_power = -25 add_war_support = 0.01 set_temp_variable = { military_development_var_temp = 0.02 } add_military_development = yes set_country_flag = TFRKPHN_wi_done6 set_variable = { TFRKPHN_wi_f6 = 2 } add_to_variable = { TFRKPHN_wi_cnt = 1 } if = { limit = { check_variable = { TFRKPHN_wi_cnt > 5.5 } } add_stability = 0.03 } }
+		}
+		triggers = {
+			TFRKPHN_woo_ind_b1_click_enabled = { NOT = { has_country_flag = TFRKPHN_wi_done1 } has_political_power > 24 }
+			TFRKPHN_woo_ind_b2_click_enabled = { NOT = { has_country_flag = TFRKPHN_wi_done2 } has_political_power > 24 }
+			TFRKPHN_woo_ind_b3_click_enabled = { NOT = { has_country_flag = TFRKPHN_wi_done3 } has_political_power > 24 }
+			TFRKPHN_woo_ind_b4_click_enabled = { NOT = { has_country_flag = TFRKPHN_wi_done4 } has_political_power > 24 }
+			TFRKPHN_woo_ind_b5_click_enabled = { NOT = { has_country_flag = TFRKPHN_wi_done5 } has_political_power > 24 }
+			TFRKPHN_woo_ind_b6_click_enabled = { NOT = { has_country_flag = TFRKPHN_wi_done6 } has_political_power > 24 }
+		}
+	}
+}
