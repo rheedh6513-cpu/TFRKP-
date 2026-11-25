@@ -1,6 +1,6 @@
 ﻿l_korean:
  # 이인제 정부 전쟁 국채 상환. debt_build.py가 만든다.
- TFRKPHN_wd_left:0 "남은 국채 §Y[?TFRKPHN_wd_left|0]§! / 150"
+ TFRKPHN_wd_left:0 "남은 국채 §Y[?TFRKPHN_wd_left|0]§! / [?TFRKPHN_wd_total|0]"
  TFRKPHN_wd_days:0 "남은 기한 §Y[?TFRKPHN_wd_days|0]§!일"
  TFRKPHN_wd_b_budget:0 "예산에서 갚는다"
  TFRKPHN_wd_b_budget_tt:0 "§Y예산에서 갚는다§!\n올해 예산의 남는 돈을 국채 상환에 돌립니다.\n\n비용: £pol_power §Y20§!\n전쟁 국채 §G-10§!\n국가 부채 §G-10십억§!\n\n§g한 번 쓰면 30일 동안 다시 쓸 수 없습니다.§!"

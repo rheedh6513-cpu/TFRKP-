@@ -183,6 +183,7 @@ focus_tree = {
 			add_stability = 0.03
 			add_to_variable = { TFRKPHN_lee_cg = -0.02 }
 			TFRKPHN_wd_start = yes	# 전쟁 국채 상환 탭 (debt_build.py)
+			TFRKPHN_wd_inherit = yes	# 홍준표 정부의 선택에 따라 국채 크기를 고친다 (oh_victory_build.py)
 			TFRKPHN_lee_gov_init = yes
 			custom_effect_tooltip = TFRKPHN_lee_tt_cg2
 		}
@@ -715,6 +716,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			TFRKPHN_lij_tire_focus = yes
+			TFRKPHN_pdto_sure = yes	# PDTO 확정 가입 (gaw_sure.py)
 			TFRKPHN_lij_tire_focus = yes
 			add_to_variable = { TFRKPHN_lee_army = 0.03 } TFRKPHN_lee_gov_init = yes custom_effect_tooltip = TFRKPHN_buff_h1_tt	# 버프 (buff_build.py)
 			country_event = { id = tfrkphn.547 }	# 외정은 대통령이 (sec_build.py)

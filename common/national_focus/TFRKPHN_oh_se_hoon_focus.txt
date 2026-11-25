@@ -40,6 +40,7 @@ focus_tree = {
 			add_stability = 0.04
 			custom_effect_tooltip = TFRKPHN_oh_fx_a1_tt
 			hidden_effect = { TFRKPHN_nr_start = yes }
+			TFRKPHN_nr_inherit = yes	# 홍준표 정부의 선택에 따라 출발 자리를 고친다 (oh_victory_build.py)
 			hidden_effect = { country_event = { id = tfrkphn.6723 days = 1 } }
 		}
 	}
@@ -819,6 +820,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			TFRKPHN_pdto_sure = yes	# PDTO 확정 가입 (gaw_sure.py)
 			add_political_power = 50
 			custom_effect_tooltip = TFRKPHN_oh_fx_h4_tt
 			hidden_effect = { add_political_power = 50 }

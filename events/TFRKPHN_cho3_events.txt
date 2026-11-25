@@ -90,12 +90,16 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = tfrkphn.7180.a
+		trigger = { TFRKPHN_ru_hold = yes }	# 러시아식 엔딩 (ru_end.py)
+		custom_effect_tooltip = TFRKPHN_ru_hold_tt
 		custom_effect_tooltip = TFRKPHN_kjt_hold_tt
 		add_stability = -0.10
 		hidden_effect = { country_event = { id = tfrkphn.7181 days = 3 } }
 	}
 	option = {
 		name = tfrkphn.7180.b
+		trigger = { NOT = { TFRKPHN_ru_hold = yes } }
+		custom_effect_tooltip = TFRKPHN_ru_fall_tt
 		custom_effect_tooltip = TFRKPHN_kjt_fall_tt
 		hidden_effect = { country_event = { id = tfrkphn.7182 days = 3 } }
 	}
@@ -112,6 +116,7 @@ country_event = {
 		add_war_support = -0.05
 		set_country_flag = TFRKPHN_cho2_end
 		set_country_flag = TFRKPHN_kjt_hold_end
+		hidden_effect = { country_event = { id = tfrkphn.7255 days = 60 } country_event = { id = tfrkphn.7256 days = 210 } country_event = { id = tfrkphn.7257 days = 420 } }	# 러시아식 엔딩 (ru_end.py)
 	}
 }
 country_event = {

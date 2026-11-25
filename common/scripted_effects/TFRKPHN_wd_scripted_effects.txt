@@ -16,6 +16,7 @@ TFRKPHN_wd_start = {
 				set_variable = { TFRKPHN_wd_left = 150 }
 				# 국가 부채가 전쟁 국채보다 적게 남았으면 남은 부채만큼만 갚으면 된다
 				if = { limit = { check_variable = { debt_var < 150 } } set_variable = { TFRKPHN_wd_left = debt_var } round_variable = TFRKPHN_wd_left }
+				set_variable = { TFRKPHN_wd_total = TFRKPHN_wd_left }
 				set_variable = { TFRKPHN_wd_days = 730 }
 				TFRKPHN_wd_check = yes
 			}

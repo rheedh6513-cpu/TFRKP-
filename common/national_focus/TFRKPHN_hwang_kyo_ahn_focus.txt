@@ -59,6 +59,7 @@ focus_tree = {
 		prerequisite = { focus = TFRKPHN_hwang_kyo_ahn_h1 }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			TFRKPHN_pdto_sure = yes	# PDTO 확정 가입 (gaw_sure.py)
 			army_experience = 20 add_war_support = 0.03
 		}
 	}

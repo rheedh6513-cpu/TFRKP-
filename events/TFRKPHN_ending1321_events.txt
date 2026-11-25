@@ -1,0 +1,212 @@
+# [안내] 1-3-2-1 엔딩 중점의 사건 (7233~7253). 대아대전 승전 뒤에 열린다. ending_1321.py가 만든다.
+add_namespace = tfrkphn
+country_event = {
+	id = tfrkphn.7248
+	title = tfrkphn.7248.t
+	desc = tfrkphn.7248.d
+	picture = GFX_TFRKPHN_samkim_end
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7248.a
+	}
+}
+country_event = {
+	id = tfrkphn.7233
+	title = tfrkphn.7233.t
+	desc = tfrkphn.7233.d
+	picture = GFX_TFRKPHN_samkim_end
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7233.a
+	}
+}
+country_event = {
+	id = tfrkphn.7234
+	title = tfrkphn.7234.t
+	desc = tfrkphn.7234.d
+	picture = GFX_TFRKPHN_samkim_end
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7234.a
+	}
+}
+country_event = {
+	id = tfrkphn.7235
+	title = tfrkphn.7235.t
+	desc = tfrkphn.7235.d
+	picture = GFX_TFRKPHN_samkim_end
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7235.a
+	}
+}
+country_event = {
+	id = tfrkphn.7236
+	title = tfrkphn.7236.t
+	desc = tfrkphn.7236.d
+	picture = GFX_TFRKPHN_samkim_end
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7236.a
+	}
+}
+country_event = {
+	id = tfrkphn.7237
+	title = tfrkphn.7237.t
+	desc = tfrkphn.7237.d
+	picture = GFX_TFRKPHN_samkim_end
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7237.a
+	}
+}
+country_event = {
+	id = tfrkphn.7249
+	title = tfrkphn.7249.t
+	desc = tfrkphn.7249.d
+	picture = GFX_TFRKPHN_samkim_end
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7249.a
+	}
+}
+country_event = {
+	id = tfrkphn.7250
+	title = tfrkphn.7250.t
+	desc = tfrkphn.7250.d
+	picture = GFX_TFRKPHN_samkim_end
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7250.a
+	}
+}
+country_event = {
+	id = tfrkphn.7238
+	title = tfrkphn.7238.t
+	desc = tfrkphn.7238.d
+	picture = GFX_TFRKPHN_samkim_end
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7238.a
+	}
+}
+country_event = {
+	id = tfrkphn.7239
+	title = tfrkphn.7239.t
+	desc = tfrkphn.7239.d
+	picture = GFX_TFRKPHN_samkim_end
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7239.a
+	}
+}
+country_event = {
+	id = tfrkphn.7240
+	title = tfrkphn.7240.t
+	desc = tfrkphn.7240.d
+	picture = GFX_TFRKPHN_samkim_end
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7240.a
+	}
+}
+country_event = {
+	id = tfrkphn.7241
+	title = tfrkphn.7241.t
+	desc = tfrkphn.7241.d
+	picture = GFX_TFRKPHN_samkim_end
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7241.a
+	}
+}
+country_event = {
+	id = tfrkphn.7242
+	title = tfrkphn.7242.t
+	desc = tfrkphn.7242.d
+	picture = GFX_TFRKPHN_samkim_end
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7242.a
+	}
+}
+country_event = {
+	id = tfrkphn.7251
+	title = tfrkphn.7251.t
+	desc = tfrkphn.7251.d
+	picture = GFX_TFRKPHN_samkim_end
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7251.a
+	}
+}
+country_event = {
+	id = tfrkphn.7252
+	title = tfrkphn.7252.t
+	desc = tfrkphn.7252.d
+	picture = GFX_TFRKPHN_samkim_end
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7252.a
+	}
+}
+country_event = {
+	id = tfrkphn.7243
+	title = tfrkphn.7243.t
+	desc = tfrkphn.7243.d
+	picture = GFX_TFRKPHN_samkim_end
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7243.a
+	}
+}
+country_event = {
+	id = tfrkphn.7244
+	title = tfrkphn.7244.t
+	desc = tfrkphn.7244.d
+	picture = GFX_TFRKPHN_samkim_end
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7244.a
+	}
+}
+country_event = {
+	id = tfrkphn.7245
+	title = tfrkphn.7245.t
+	desc = tfrkphn.7245.d
+	picture = GFX_TFRKPHN_samkim_end
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7245.a
+	}
+}
+country_event = {
+	id = tfrkphn.7246
+	title = tfrkphn.7246.t
+	desc = tfrkphn.7246.d
+	picture = GFX_TFRKPHN_samkim_end
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7246.a
+	}
+}
+country_event = {
+	id = tfrkphn.7247
+	title = tfrkphn.7247.t
+	desc = tfrkphn.7247.d
+	picture = GFX_TFRKPHN_samkim_end
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7247.a
+	}
+}
+country_event = {
+	id = tfrkphn.7253
+	title = tfrkphn.7253.t
+	desc = tfrkphn.7253.d
+	picture = GFX_TFRKPHN_samkim_end
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7253.a
+	}
+}

@@ -25,6 +25,7 @@ focus_tree = {
 		prerequisite = { focus = TFRKPHN_sim_01 }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			TFRKPHN_pdto_sure = yes	# PDTO 확정 가입 (gaw_sure.py)
 			add_stability = -0.025
 			custom_effect_tooltip = TFRKPHN_sim_02_tt
 			hidden_effect = { set_country_flag = TFRKPHN_sim_reform_open set_variable = { TFRKPHN_sim_rock = 0 } set_variable = { TFRKPHN_sim_rock_f = 1 } set_variable = { TFRKPHN_sim_people = 30 } set_variable = { TFRKPHN_sim_dem = 30 } }

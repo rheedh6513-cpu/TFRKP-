@@ -635,7 +635,7 @@ focus_tree = {
 		ai_will_do = { factor = 0 }
 		completion_reward = {
 			set_country_flag = TFRKPHN_imp_election_done
-			if = { limit = { has_country_flag = TFRKPHN_e21_unified has_country_flag = TFRKPHN_e21_cand_sim } country_event = tfrkphn.7034 }
+			if = { limit = { has_country_flag = TFRKPHN_e21_unified has_country_flag = TFRKPHN_e21_cand_sim } country_event = tfrkphn.7218 }
 			else_if = { limit = { has_country_flag = TFRKPHN_e21_unified } country_event = tfrkphn.7030 }
 			else = { country_event = tfrkphn.7031 }
 		}

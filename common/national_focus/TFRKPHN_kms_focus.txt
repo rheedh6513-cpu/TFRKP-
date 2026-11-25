@@ -51,6 +51,7 @@ focus_tree = {
 		prerequisite = { focus = TFRKPHN_kms_t_11 }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			TFRKPHN_pdto_sure = yes	# PDTO 확정 가입 (gaw_sure.py)
 			# 공장 보상 (focus_fac.py)
 			1412 = { add_extra_state_shared_building_slots = 1 add_building_construction = { type = arms_factory level = 1 instant_build = yes } }
 			add_war_support = 0.05
@@ -250,6 +251,117 @@ focus_tree = {
 			add_political_power = 100
 			set_country_flag = TFRKPHN_sk_tree_done
 			hidden_effect = { country_event = { id = tfrkphn.7097 days = 1 } }
+		}
+	}
+	# 엔딩 (1-3-2-1). PDTO가 대아대전에서 이기면 열린다. ending_1321.py가 끼운다.
+	focus = {
+		id = TFRKPHN_kms_g0
+		icon = GFX_goal_generic_political_pressure
+		x = 5
+		y = 12
+		cost = 3
+		allow_branch = { OR = { has_global_flag = PRC_japanese_gaw_victory_global has_country_flag = TFRKPHN_gaw_end_test } }	# 뒤의 깃발은 시험용 사건 tfrkphn.599가 세운다
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 50
+			custom_effect_tooltip = TFRKPHN_e1321_rb1_4_tt
+			hidden_effect = { add_to_variable = { TFRKPHN_rb_1 = 4 } TFRKPHN_rb_refresh = yes TFRKPHN_rb_check = yes }
+			hidden_effect = { country_event = { id = tfrkphn.7252 hours = 6 } }
+		}
+	}
+	focus = {
+		id = TFRKPHN_kms_e1
+		icon = GFX_goal_generic_political_pressure
+		x = 3
+		y = 13
+		cost = 3
+		prerequisite = { focus = TFRKPHN_kms_g0 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = -20
+			custom_effect_tooltip = TFRKPHN_e1321_rb1_8_tt
+			hidden_effect = { add_to_variable = { TFRKPHN_rb_1 = 8 } TFRKPHN_rb_refresh = yes TFRKPHN_rb_check = yes }
+			hidden_effect = { country_event = { id = tfrkphn.7243 hours = 6 } }
+		}
+	}
+	focus = {
+		id = TFRKPHN_kms_e2
+		icon = GFX_goal_generic_national_unity
+		x = 5
+		y = 13
+		cost = 3
+		prerequisite = { focus = TFRKPHN_kms_g0 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = -20
+			custom_effect_tooltip = TFRKPHN_e1321_rb1_5_tt
+			hidden_effect = { add_to_variable = { TFRKPHN_rb_1 = 5 } TFRKPHN_rb_refresh = yes TFRKPHN_rb_check = yes }
+			hidden_effect = { country_event = { id = tfrkphn.7244 hours = 6 } }
+		}
+	}
+	focus = {
+		id = TFRKPHN_kms_e3
+		icon = GFX_goal_generic_propaganda
+		x = 7
+		y = 13
+		cost = 3
+		prerequisite = { focus = TFRKPHN_kms_g0 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 30
+			custom_effect_tooltip = TFRKPHN_e1321_rb1_5_tt
+			hidden_effect = { add_to_variable = { TFRKPHN_rb_1 = 5 } TFRKPHN_rb_refresh = yes TFRKPHN_rb_check = yes }
+			hidden_effect = { country_event = { id = tfrkphn.7245 hours = 6 } }
+		}
+	}
+	focus = {
+		id = TFRKPHN_kms_e4
+		icon = GFX_goal_generic_political_pressure
+		x = 4
+		y = 14
+		cost = 3
+		prerequisite = { focus = TFRKPHN_kms_e1 }
+		prerequisite = { focus = TFRKPHN_kms_e2 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_stability = 0.03
+			hidden_effect = { country_event = { id = tfrkphn.7246 hours = 6 } }
+		}
+	}
+	focus = {
+		id = TFRKPHN_kms_e5
+		icon = GFX_goal_generic_national_unity
+		x = 6
+		y = 14
+		cost = 3
+		prerequisite = { focus = TFRKPHN_kms_e2 }
+		prerequisite = { focus = TFRKPHN_kms_e3 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 50
+			custom_effect_tooltip = TFRKPHN_e1321_rb1_3_tt
+			custom_effect_tooltip = TFRKPHN_e1321_rb2_3_tt
+			custom_effect_tooltip = TFRKPHN_e1321_rb3_3_tt
+			custom_effect_tooltip = TFRKPHN_e1321_rb4_3_tt
+			hidden_effect = { add_to_variable = { TFRKPHN_rb_1 = 3 } add_to_variable = { TFRKPHN_rb_2 = 3 } add_to_variable = { TFRKPHN_rb_3 = 3 } add_to_variable = { TFRKPHN_rb_4 = 3 } TFRKPHN_rb_refresh = yes TFRKPHN_rb_check = yes }
+			hidden_effect = { country_event = { id = tfrkphn.7247 hours = 6 } }
+		}
+	}
+	focus = {
+		id = TFRKPHN_kms_g9
+		icon = GFX_goal_generic_national_unity
+		x = 5
+		y = 15
+		cost = 3
+		prerequisite = { focus = TFRKPHN_kms_e4 }
+		prerequisite = { focus = TFRKPHN_kms_e5 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 100
+			custom_effect_tooltip = TFRKPHN_e1321_rb1_6_tt
+			hidden_effect = { add_to_variable = { TFRKPHN_rb_1 = 6 } TFRKPHN_rb_refresh = yes TFRKPHN_rb_check = yes }
+			hidden_effect = { country_event = { id = tfrkphn.7253 hours = 6 } }
 		}
 	}
 	# Korea Plus 원본의 국방개혁 가지와 대아대전 가지 (woo_army_build.py)

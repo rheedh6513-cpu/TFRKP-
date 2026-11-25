@@ -106,6 +106,7 @@ focus_tree = {
 		prerequisite = { focus = TFRKPHN_nak_b01_04 }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			TFRKPHN_pdto_sure = yes	# PDTO 확정 가입 (gaw_sure.py)
 			add_political_power = 25
 		}
 	}

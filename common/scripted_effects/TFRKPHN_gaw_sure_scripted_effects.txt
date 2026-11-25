@@ -1,0 +1,13 @@
+# [안내] PDTO 확정 가입과 대아대전 참전. gaw_sure.py가 만든다.
+TFRKPHN_pdto_sure = {
+	custom_effect_tooltip = TFRKPHN_pdto_sure_tt
+	hidden_effect = {
+		if = {
+			limit = { country_exists = JAP JAP = { is_faction_leader = yes } NOT = { is_in_faction_with = JAP } }
+			if = { limit = { is_in_faction = yes } leave_faction = yes }
+			JAP = { add_to_faction = KOR }
+			KOR_add_to_pdto_effect = yes
+		}
+		set_country_flag = TFRKPHN_pdto_sure_done
+	}
+}

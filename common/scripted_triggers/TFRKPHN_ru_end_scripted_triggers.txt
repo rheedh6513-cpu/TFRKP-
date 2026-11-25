@@ -1,0 +1,7 @@
+# [안내] 정권이 버티는 조건 (러시아식 엔딩). ru_end.py가 만든다.
+TFRKPHN_ru_hold = {
+	OR = {
+		check_variable = { TFRKPHN_kp_real > 34.5 }
+		AND = { check_variable = { TFRKPHN_kp_real > 27.5 } check_variable = { TFRKPHN_cr > 59.5 } }
+	}
+}

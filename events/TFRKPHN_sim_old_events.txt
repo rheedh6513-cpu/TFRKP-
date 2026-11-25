@@ -1,0 +1,13 @@
+# [안내] [사람이 씀] 사건 7218 「어느 한 노인」. 심상정 당선(7034) 몇 시간 전에 나온다. 닫으면 6시간 뒤 당선 사건이 이어진다. sim_old_build.py가 만든다.
+add_namespace = tfrkphn
+country_event = {
+	id = tfrkphn.7218
+	title = tfrkphn.7218.t
+	desc = tfrkphn.7218.d
+	picture = GFX_TFRKPHN_sim_oldman
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7218.a
+		hidden_effect = { country_event = { id = tfrkphn.7034 hours = 6 } }
+	}
+}

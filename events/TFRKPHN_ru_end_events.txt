@@ -1,0 +1,67 @@
+# [안내] 러시아식 엔딩의 사건 셋. 정권이 버틴 뒤(「겨울」 7181) 60, 210, 420일에 나온다. ru_end.py가 만든다.
+add_namespace = tfrkphn
+country_event = {
+	id = tfrkphn.7255
+	title = tfrkphn.7255.t
+	desc = tfrkphn.7255.d
+	picture = GFX_TFRKPHN_chop_7181
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7255.a
+		add_stability = 0.05
+		add_political_power = 50
+		custom_effect_tooltip = TFRKPHN_tune_kp_p0_m3
+		hidden_effect = { if = { limit = { has_country_flag = TFRKPHN_kp_init } add_to_variable = { TFRKPHN_kp_real = -4 } TFRKPHN_kp_refresh = yes } }
+	}
+}
+country_event = {
+	id = tfrkphn.7256
+	title = tfrkphn.7256.t
+	desc = tfrkphn.7256.d
+	picture = GFX_TFRKPHN_chop_7181
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7256.a
+		add_political_power = 30
+		add_stability = -0.02
+		custom_effect_tooltip = TFRKPHN_tune_kp_p0_m3
+		hidden_effect = { if = { limit = { has_country_flag = TFRKPHN_kp_init } add_to_variable = { TFRKPHN_kp_real = -4 } TFRKPHN_kp_refresh = yes } }
+	}
+}
+country_event = {
+	id = tfrkphn.7257
+	title = tfrkphn.7257.t
+	desc = tfrkphn.7257.d
+	picture = GFX_TFRKPHN_chop_7181
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7257.a
+		add_stability = 0.03
+		add_war_support = -0.03
+		add_political_power = 40
+		hidden_effect = { country_event = { id = tfrkphn.7258 days = 120 } }
+		custom_effect_tooltip = TFRKPHN_tune_kp_p0_m3
+		hidden_effect = { if = { limit = { has_country_flag = TFRKPHN_kp_init } add_to_variable = { TFRKPHN_kp_real = -4 } TFRKPHN_kp_refresh = yes } }
+	}
+}
+country_event = {
+	id = tfrkphn.7258
+	title = tfrkphn.7258.t
+	desc = tfrkphn.7258.d
+	picture = GFX_TFRKPHN_chop_7181
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7258.a
+		custom_effect_tooltip = TFRKPHN_ru_pdto_out_tt
+		add_stability = -0.03
+		add_political_power = 50
+		hidden_effect = {
+			set_country_flag = TFRKPHN_ru_pdto_out
+			set_country_flag = TFRKPHN_ru_end
+			if = { limit = { is_in_faction = yes } leave_faction = yes }
+			clr_country_flag = pdto_member
+			if = { limit = { has_idea = JAP_PDTO_member_1 } remove_ideas = JAP_PDTO_member_1 }
+			if = { limit = { has_idea = JAP_PDTO_member_2 } remove_ideas = JAP_PDTO_member_2 }
+		}
+	}
+}

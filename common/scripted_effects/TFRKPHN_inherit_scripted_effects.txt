@@ -1,0 +1,87 @@
+# [안내] 홍준표 정부의 선택에 따라 다음 정부의 출발 값을 고친다. oh_victory_build.py가 만든다.
+TFRKPHN_nr_inherit = {
+	custom_effect_tooltip = TFRKPHN_inh_nr_head_tt
+	if = {
+		limit = { has_country_flag = TFRKPHN_hong_tw_bill_rejected has_completed_focus = TFRKPHN_hong_b02_13 }
+		custom_effect_tooltip = TFRKPHN_inh_nr_0_tt
+		hidden_effect = { add_to_variable = { TFRKPHN_nr1 = -10 } }
+	}
+	if = {
+		limit = { has_country_flag = TFRKPHN_hong_tw_bill_passed }
+		custom_effect_tooltip = TFRKPHN_inh_nr_1_tt
+		hidden_effect = { add_to_variable = { TFRKPHN_nr1 = 5 } }
+	}
+	if = {
+		limit = { has_completed_focus = TFRKPHN_hong_b02_04 }
+		custom_effect_tooltip = TFRKPHN_inh_nr_2_tt
+		hidden_effect = { add_to_variable = { TFRKPHN_nr2 = -4 } }
+	}
+	if = {
+		limit = { has_completed_focus = TFRKPHN_hong_b02_06 }
+		custom_effect_tooltip = TFRKPHN_inh_nr_3_tt
+		hidden_effect = { add_to_variable = { TFRKPHN_nr2 = -4 } }
+	}
+	if = {
+		limit = { has_completed_focus = TFRKPHN_hong_b02_12 }
+		custom_effect_tooltip = TFRKPHN_inh_nr_4_tt
+		hidden_effect = { add_to_variable = { TFRKPHN_nr2 = -6 } add_to_variable = { TFRKPHN_nr3 = -5 } }
+	}
+	if = {
+		limit = { has_completed_focus = TFRKPHN_hong_b02_13 }
+		custom_effect_tooltip = TFRKPHN_inh_nr_5_tt
+		hidden_effect = { add_to_variable = { TFRKPHN_nr2 = -4 } }
+	}
+	if = {
+		limit = { has_completed_focus = TFRKPHN_hong_b02_07 }
+		custom_effect_tooltip = TFRKPHN_inh_nr_6_tt
+		hidden_effect = { add_to_variable = { TFRKPHN_nr3 = -5 } }
+	}
+	if = {
+		limit = { has_completed_focus = TFRKPHN_hong_b03_20 }
+		custom_effect_tooltip = TFRKPHN_inh_nr_7_tt
+		hidden_effect = { add_to_variable = { TFRKPHN_nr3 = -5 } }
+	}
+	if = {
+		limit = { has_completed_focus = TFRKPHN_hong_b03_22 }
+		custom_effect_tooltip = TFRKPHN_inh_nr_8_tt
+		hidden_effect = { add_to_variable = { TFRKPHN_nr3 = 5 } }
+	}
+	hidden_effect = { TFRKPHN_nr_apply = yes }
+}
+TFRKPHN_wd_inherit = {
+	if = {
+		limit = { has_country_flag = TFRKPHN_wd_on }
+		custom_effect_tooltip = TFRKPHN_inh_wd_head_tt
+		if = {
+			limit = { has_completed_focus = TFRKPHN_hong_b02_04 }
+			custom_effect_tooltip = TFRKPHN_inh_wd_0_tt
+			hidden_effect = { add_to_variable = { TFRKPHN_wd_left = 10 } }
+		}
+		if = {
+			limit = { has_completed_focus = TFRKPHN_hong_b02_06 }
+			custom_effect_tooltip = TFRKPHN_inh_wd_1_tt
+			hidden_effect = { add_to_variable = { TFRKPHN_wd_left = 10 } }
+		}
+		if = {
+			limit = { has_completed_focus = TFRKPHN_hong_b02_12 }
+			custom_effect_tooltip = TFRKPHN_inh_wd_2_tt
+			hidden_effect = { add_to_variable = { TFRKPHN_wd_left = 20 } }
+		}
+		if = {
+			limit = { has_completed_focus = TFRKPHN_hong_b03_29 }
+			custom_effect_tooltip = TFRKPHN_inh_wd_3_tt
+			hidden_effect = { add_to_variable = { TFRKPHN_wd_left = 10 } }
+		}
+		if = {
+			limit = { has_completed_focus = TFRKPHN_hong_b03_32 }
+			custom_effect_tooltip = TFRKPHN_inh_wd_4_tt
+			hidden_effect = { add_to_variable = { TFRKPHN_wd_left = -30 } }
+		}
+		hidden_effect = {
+			clamp_variable = { var = TFRKPHN_wd_left min = 60 max = 210 }
+			if = { limit = { check_variable = { debt_var < TFRKPHN_wd_left } } set_variable = { TFRKPHN_wd_left = debt_var } round_variable = TFRKPHN_wd_left }
+			set_variable = { TFRKPHN_wd_total = TFRKPHN_wd_left }
+			TFRKPHN_wd_check = yes
+		}
+	}
+}
