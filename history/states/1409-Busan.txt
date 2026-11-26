@@ -1,0 +1,33 @@
+state={
+	id=1409
+	name="STATE_1409"
+	resources = {
+        aluminium = 2
+	}
+	provinces={
+		4056
+	}
+	history={
+		owner = KOR
+		add_core_of = KOR
+		add_claim_by = PRK
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 2
+			arms_factory = 1
+			air_base = 2
+			dockyard = 1
+			4056 = { naval_base = 6 }
+			nuclear_reactor = 1
+			4056 = { landmark_tfrkphn_busan_tower = 1 }	# 랜드마크 (lm_build.py)
+		}
+		victory_points = {
+			4056 30 
+		}
+	}
+
+	manpower=3410925
+	buildings_max_level_factor=1.000
+	state_category=large_town
+	local_supplies=0.000
+}

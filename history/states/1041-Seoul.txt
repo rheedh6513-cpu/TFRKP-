@@ -1,0 +1,38 @@
+state={
+	id=1041
+	name="STATE_1041"
+	
+	resources = {
+		steel = 420
+        tungsten = 50
+        aluminium = 14
+	}
+	
+	history = {
+		owner = KOR
+		add_core_of = KOR
+		add_claim_by = PRK
+		victory_points = { 13692 50 }
+		victory_points = { 13691 20 }
+		buildings = {
+			infrastructure = 5
+			radar_station = 3
+			office_park = 1
+			air_base = 5
+			power_plant = 3
+			industrial_complex = 4
+			anti_air_building = 4
+			7221 = { naval_base = 4 }
+			13692 = { landmark_tfrkphn_namsan_tower = 1 }	# 랜드마크 (lm_build.py)
+			14245 = { landmark_tfrkphn_gyeongbokgung = 1 }	# 랜드마크 (lm_build.py)
+		}
+		
+	}
+	provinces={
+		7125 7221 13690 13691 13692 13693 13694 13695 14241 14244 14245 14246
+	}
+	manpower = 25925799
+	buildings_max_level_factor=1.000
+	
+	state_category = conurbation
+}

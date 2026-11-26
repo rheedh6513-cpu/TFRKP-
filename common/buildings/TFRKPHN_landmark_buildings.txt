@@ -83,7 +83,7 @@ buildings = {
 		value = 5
 		is_buildable = no
 		disable_grow_animation = yes
-		spawn_point = landmark_tfrkphn_spawn_b
+		spawn_point = landmark_spawn
 		repair_speed_factor = 0.15
 		only_display_if_exists = yes
 		special_icon = GFX_tfrkphn_gwangan_bridge_icon_small
@@ -99,13 +99,5 @@ buildings = {
 				stability_factor = 0.03
 			}
 		}
-	}
-}
-# 한 지역에 랜드마크를 둘 세울 때 쓰는 둘째 자리 종류
-spawn_points = {
-	landmark_tfrkphn_spawn_b = {
-		type = province
-		max = 1
-		disable_auto_nudging = yes
 	}
 }
