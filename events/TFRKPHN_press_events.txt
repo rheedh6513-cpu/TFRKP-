@@ -1,0 +1,14 @@
+# [안내] 언론 통폐합 뒤 조선일보 사설 (보통 사건창, 그림은 제호가 있는 신문 1면). 7175의 선택지가 사흘 뒤에 부른다. press_build.py가 만든다.
+add_namespace = tfrkphn
+country_event = {
+	id = tfrkphn.7307
+	title = tfrkphn.7307.t
+	desc = tfrkphn.7307.d
+	picture = GFX_TFRKPHN_press_7307
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7307.a
+		hidden_effect = { country_event = { id = tfrkphn.7308 days = 11 } }	# 백지 1면 (press2_build.py)
+		add_stability = -0.01
+	}
+}

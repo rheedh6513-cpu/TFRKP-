@@ -146,6 +146,8 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = tfrkphn.7189.a
+		hidden_effect = { country_event = { id = tfrkphn.7273 days = 60 } }	# 포격 뒤 (motive_build.py)
+		hidden_effect = { country_event = { id = tfrkphn.7263 days = 30 } }	# 이 층 창문 (mirror_build.py)
 		add_stability = -0.02
 		add_political_power = 25
 	}

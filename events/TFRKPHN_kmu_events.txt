@@ -1,0 +1,274 @@
+# [안내] 김문수 줄기의 사건 (7284~7305). kmu_build.py가 만든다.
+add_namespace = tfrkphn
+country_event = {
+	id = tfrkphn.7284
+	title = tfrkphn.7284.t
+	desc = tfrkphn.7284.d
+	picture = GFX_TFRKPHN_chop_7170
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7284.a
+		add_stability = 0.05
+		custom_effect_tooltip = TFRKPHN_kmu_acting_tt
+		hidden_effect = {
+			set_country_flag = TFRKPHN_kmu_pres
+			if = { limit = { NOT = { has_character = KOR_kim_moon_soo_char } } recruit_character = KOR_kim_moon_soo_char }
+			KOR_kim_moon_soo_char = { add_country_leader_role = { country_leader = { desc = TFRKPHN_kmu_desc ideology = ultra_conservatism traits = { TFRKPHN_trait_leader_kmu } } promote_leader = yes } }
+		}
+	}
+}
+country_event = {
+	id = tfrkphn.7285
+	title = tfrkphn.7285.t
+	desc = tfrkphn.7285.d
+	picture = GFX_TFRKPHN_chop_7170
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7285.a
+		add_political_power = 100
+		add_stability = 0.05
+	}
+}
+country_event = {
+	id = tfrkphn.7286
+	title = tfrkphn.7286.t
+	desc = tfrkphn.7286.d
+	picture = GFX_TFRKPHN_chop_7177
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7286.a
+		add_political_power = 50
+		add_stability = -0.02
+	}
+}
+country_event = {
+	id = tfrkphn.7287
+	title = tfrkphn.7287.t
+	desc = tfrkphn.7287.d
+	picture = GFX_TFRKPHN_chop_7177
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7287.a
+		add_stability = 0.03
+	}
+}
+country_event = {
+	id = tfrkphn.7288
+	title = tfrkphn.7288.t
+	desc = tfrkphn.7288.d
+	picture = GFX_TFRKPHN_chop_7170
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7288.a
+		add_stability = 0.03
+		add_political_power = 25
+	}
+}
+country_event = {
+	id = tfrkphn.7289
+	title = tfrkphn.7289.t
+	desc = tfrkphn.7289.d
+	picture = GFX_TFRKPHN_chop_7177
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7289.a
+		add_stability = -0.05
+		set_country_flag = TFRKPHN_kmu_crash
+		1041 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
+		1410 = { add_extra_state_shared_building_slots = 1 add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+	}
+}
+country_event = {
+	id = tfrkphn.7290
+	title = tfrkphn.7290.t
+	desc = tfrkphn.7290.d
+	picture = GFX_TFRKPHN_chop_7181
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7290.a
+		add_war_support = 0.05
+		add_stability = -0.03
+	}
+}
+country_event = {
+	id = tfrkphn.7291
+	title = tfrkphn.7291.t
+	desc = tfrkphn.7291.d
+	picture = GFX_TFRKPHN_chop_7177
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7291.a
+		add_political_power = 100
+		custom_effect_tooltip = TFRKPHN_kv_stake_tt
+		hidden_effect = {
+			if = { limit = { OR = { AND = { has_country_flag = TFRKPHN_kv_init check_variable = { TFRKPHN_kv_vote > 50 } } AND = { NOT = { has_country_flag = TFRKPHN_kv_init } has_stability > 0.45 } } } set_country_flag = TFRKPHN_kmu_hold_path }	# 예상 득표율로 가른다 (kmu_tab.py)
+			else = { set_country_flag = TFRKPHN_kmu_fall_path }
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+}
+country_event = {
+	id = tfrkphn.7292
+	title = tfrkphn.7292.t
+	desc = tfrkphn.7292.d
+	picture = GFX_TFRKPHN_chop_7170
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7292.a
+		add_political_power = 50
+		set_country_flag = TFRKPHN_cho2_end
+	}
+}
+country_event = {
+	id = tfrkphn.7293
+	title = tfrkphn.7293.t
+	desc = tfrkphn.7293.d
+	picture = GFX_TFRKPHN_chop_7177
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7293.a
+		add_political_power = 30
+		add_stability = -0.01
+	}
+}
+country_event = {
+	id = tfrkphn.7294
+	title = tfrkphn.7294.t
+	desc = tfrkphn.7294.d
+	picture = GFX_TFRKPHN_chop_7181
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7294.a
+		add_stability = -0.02
+	}
+}
+country_event = {
+	id = tfrkphn.7295
+	title = tfrkphn.7295.t
+	desc = tfrkphn.7295.d
+	picture = GFX_TFRKPHN_chop_7170
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7295.a
+		add_stability = 0.03
+	}
+}
+country_event = {
+	id = tfrkphn.7296
+	title = tfrkphn.7296.t
+	desc = tfrkphn.7296.d
+	picture = GFX_TFRKPHN_chop_7177
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7296.a
+		add_stability = 0.02
+	}
+}
+country_event = {
+	id = tfrkphn.7297
+	title = tfrkphn.7297.t
+	desc = tfrkphn.7297.d
+	picture = GFX_TFRKPHN_chop_7181
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7297.a
+		add_war_support = 0.02
+	}
+}
+country_event = {
+	id = tfrkphn.7298
+	title = tfrkphn.7298.t
+	desc = tfrkphn.7298.d
+	picture = GFX_TFRKPHN_chop_7170
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7298.a
+		add_stability = 0.05
+		add_political_power = 50
+	}
+}
+country_event = {
+	id = tfrkphn.7299
+	title = tfrkphn.7299.t
+	desc = tfrkphn.7299.d
+	picture = GFX_TFRKPHN_chop_7177
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7299.a
+		add_stability = -0.05
+	}
+}
+country_event = {
+	id = tfrkphn.7300
+	title = tfrkphn.7300.t
+	desc = tfrkphn.7300.d
+	picture = GFX_TFRKPHN_chop_7177
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7300.a
+		add_stability = -0.03
+	}
+}
+country_event = {
+	id = tfrkphn.7301
+	title = tfrkphn.7301.t
+	desc = tfrkphn.7301.d
+	picture = GFX_TFRKPHN_chop_7170
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7301.a
+		add_political_power = -30
+	}
+}
+country_event = {
+	id = tfrkphn.7302
+	title = tfrkphn.7302.t
+	desc = tfrkphn.7302.d
+	picture = GFX_TFRKPHN_chop_7181
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7302.a
+		add_stability = -0.03
+	}
+}
+country_event = {
+	id = tfrkphn.7303
+	title = tfrkphn.7303.t
+	desc = tfrkphn.7303.d
+	picture = GFX_TFRKPHN_chop_7177
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7303.a
+		add_political_power = -30
+	}
+}
+country_event = {
+	id = tfrkphn.7304
+	title = tfrkphn.7304.t
+	desc = tfrkphn.7304.d
+	picture = GFX_TFRKPHN_chop_7170
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7304.a
+		add_stability = 0.05
+	}
+}
+country_event = {
+	id = tfrkphn.7305
+	title = tfrkphn.7305.t
+	desc = tfrkphn.7305.d
+	picture = GFX_TFRKPHN_chop_7181
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7305.a
+		add_stability = 0.10
+		custom_effect_tooltip = TFRKPHN_kjt_fallen_tt
+		hidden_effect = {
+			set_country_flag = TFRKPHN_cho2_end
+			set_country_flag = TFRKPHN_kjt_fallen
+			clr_country_flag = TFRKPHN_kmu_pres
+			if = { limit = { NOT = { has_character = KOR_TFRKPHN_woo_won_shik_char } } recruit_character = KOR_TFRKPHN_woo_won_shik_char }
+			KOR_TFRKPHN_woo_won_shik_char = { promote_character = cooperative_democracy_liberal }
+		}
+	}
+}

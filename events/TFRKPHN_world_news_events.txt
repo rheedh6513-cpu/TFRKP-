@@ -1,0 +1,45 @@
+# [안내] 국회 포격 위기 뒤 전 세계 뉴스 (7260, 7261). world_news.py가 만든다.
+add_namespace = tfrkphn
+news_event = {
+	id = tfrkphn.7260
+	title = tfrkphn.7260.t
+	desc = tfrkphn.7260.d
+	picture = GFX_TFRKPHN_e21_shell
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = tfrkphn.7260.a
+		trigger = { original_tag = KOR }
+	}
+	option = {
+		name = tfrkphn.7260.b
+		trigger = { NOT = { original_tag = KOR } }
+	}
+}
+news_event = {
+	id = tfrkphn.7261
+	title = tfrkphn.7261.t
+	desc = tfrkphn.7261.d
+	picture = GFX_TFRKPHN_e21_aug
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = tfrkphn.7261.a
+		trigger = { original_tag = KOR }
+	}
+	option = {
+		name = tfrkphn.7261.b
+		trigger = { NOT = { original_tag = KOR } }
+	}
+}
+country_event = {
+	id = tfrkphn.7262
+	title = tfrkphn.7262.t
+	desc = tfrkphn.7262.d
+	picture = GFX_TFRKPHN_e21_shell
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7262.a
+		add_stability = -0.02
+	}
+}

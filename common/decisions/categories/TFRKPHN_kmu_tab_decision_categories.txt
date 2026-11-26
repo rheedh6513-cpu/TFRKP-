@@ -1,0 +1,13 @@
+# [안내] 김문수 정부 전용 결정 탭 「투표함」과 「다리와 공항」. kmu_tab.py가 만든다.
+TFRKPHN_kv_category = {
+	icon = generic_political_actions
+	priority = 213
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_kmu_pres NOT = { has_country_flag = TFRKPHN_cho2_end } has_country_flag = TFRKPHN_kv_init }
+}
+TFRKPHN_kb_category = {
+	icon = GFX_decision_icon_KOR_build
+	priority = 212
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_kmu_pres NOT = { has_country_flag = TFRKPHN_cho2_end } has_country_flag = TFRKPHN_kv_init }
+}

@@ -259,7 +259,7 @@ focus_tree = {
 		icon = GFX_goal_generic_political_pressure
 		x = 5
 		y = 12
-		cost = 3
+		cost = 2
 		allow_branch = { OR = { has_global_flag = PRC_japanese_gaw_victory_global has_country_flag = TFRKPHN_gaw_end_test } }	# 뒤의 깃발은 시험용 사건 tfrkphn.599가 세운다
 		ai_will_do = { factor = 1 }
 		completion_reward = {
@@ -274,7 +274,7 @@ focus_tree = {
 		icon = GFX_goal_generic_political_pressure
 		x = 3
 		y = 13
-		cost = 3
+		cost = 2
 		prerequisite = { focus = TFRKPHN_kms_g0 }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
@@ -289,7 +289,7 @@ focus_tree = {
 		icon = GFX_goal_generic_national_unity
 		x = 5
 		y = 13
-		cost = 3
+		cost = 2
 		prerequisite = { focus = TFRKPHN_kms_g0 }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
@@ -304,7 +304,7 @@ focus_tree = {
 		icon = GFX_goal_generic_propaganda
 		x = 7
 		y = 13
-		cost = 3
+		cost = 2
 		prerequisite = { focus = TFRKPHN_kms_g0 }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
@@ -319,7 +319,7 @@ focus_tree = {
 		icon = GFX_goal_generic_political_pressure
 		x = 4
 		y = 14
-		cost = 3
+		cost = 2
 		prerequisite = { focus = TFRKPHN_kms_e1 }
 		prerequisite = { focus = TFRKPHN_kms_e2 }
 		ai_will_do = { factor = 1 }
@@ -333,7 +333,7 @@ focus_tree = {
 		icon = GFX_goal_generic_national_unity
 		x = 6
 		y = 14
-		cost = 3
+		cost = 2
 		prerequisite = { focus = TFRKPHN_kms_e2 }
 		prerequisite = { focus = TFRKPHN_kms_e3 }
 		ai_will_do = { factor = 1 }
@@ -352,7 +352,7 @@ focus_tree = {
 		icon = GFX_goal_generic_national_unity
 		x = 5
 		y = 15
-		cost = 3
+		cost = 2
 		prerequisite = { focus = TFRKPHN_kms_e4 }
 		prerequisite = { focus = TFRKPHN_kms_e5 }
 		ai_will_do = { factor = 1 }

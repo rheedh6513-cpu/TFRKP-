@@ -3,7 +3,7 @@ on_actions = {
 	on_daily_KOR = {
 		effect = {
 			if = {
-				limit = { has_country_flag = TFRKPHN_e21_cho NOT = { has_country_flag = TFRKPHN_cho_removed } NOT = { has_country_flag = TFRKPHN_kjt_pres } NOT = { has_country_flag = TFRKPHN_cr_init } }
+				limit = { has_country_flag = TFRKPHN_e21_cho NOT = { has_country_flag = TFRKPHN_cho_removed } NOT = { has_country_flag = TFRKPHN_kjt_pres } NOT = { has_country_flag = TFRKPHN_kmu_pres } NOT = { has_country_flag = TFRKPHN_cr_init } }
 				set_country_flag = TFRKPHN_cr_init
 				set_variable = { TFRKPHN_cr = 50 }
 				TFRKPHN_cr_refresh = yes
@@ -15,7 +15,7 @@ on_actions = {
 				TFRKPHN_cr_refresh = yes
 			}
 			if = {
-				limit = { has_country_flag = TFRKPHN_cr_init NOT = { has_country_flag = TFRKPHN_cr_closed } OR = { has_country_flag = TFRKPHN_cho_removed has_country_flag = TFRKPHN_kjt_pres } }
+				limit = { has_country_flag = TFRKPHN_cr_init NOT = { has_country_flag = TFRKPHN_cr_closed } OR = { has_country_flag = TFRKPHN_cho_removed has_country_flag = TFRKPHN_kmu_pres has_country_flag = TFRKPHN_kjt_pres } }
 				set_country_flag = TFRKPHN_cr_closed
 				remove_dynamic_modifier = { modifier = TFRKPHN_cr_modifier }
 			}

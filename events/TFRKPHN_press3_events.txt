@@ -1,0 +1,14 @@
+# [안내] 해직 기자들이 조선일보에 들어가 지면을 내는 사건. 7310의 선택지가 보름 뒤에 부른다. press3_build.py가 만든다.
+add_namespace = tfrkphn
+country_event = {
+	id = tfrkphn.7311
+	title = tfrkphn.7311.t
+	desc = tfrkphn.7311.d
+	picture = GFX_TFRKPHN_press_7311
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7311.a
+		add_stability = -0.02
+		add_political_power = -25
+	}
+}

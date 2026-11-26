@@ -5,5 +5,5 @@ TFRKPHN_cho_q_category = {
 	scripted_gui = TFRKPHN_cho_q_gui
 	visible_when_empty = yes
 	allowed = { original_tag = KOR }
-	visible = { has_country_flag = TFRKPHN_e21_cho NOT = { has_country_flag = TFRKPHN_cho_removed } NOT = { has_country_flag = TFRKPHN_kjt_pres } }
+	visible = { has_country_flag = TFRKPHN_e21_cho NOT = { has_country_flag = TFRKPHN_cho_removed } NOT = { has_country_flag = TFRKPHN_kjt_pres } NOT = { has_country_flag = TFRKPHN_kmu_pres } }
 }

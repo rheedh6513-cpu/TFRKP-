@@ -1,0 +1,111 @@
+# [안내] 서울 랜드마크 건물. 바닐라 랜드마크 정의를 따랐고 DLC는 요구하지 않는다. 대한민국이 가지고 있을 때만 효과가 난다. lm_build.py가 만든다.
+buildings = {
+	landmark_tfrkphn_namsan_tower = {
+		show_on_map = 1
+		base_cost = 20000
+		damage_factor = 0
+		icon_frame = 22
+		value = 5
+		is_buildable = no
+		disable_grow_animation = yes
+		spawn_point = landmark_spawn
+		repair_speed_factor = 0.15
+		only_display_if_exists = yes
+		special_icon = GFX_tfrkphn_namsan_tower_icon_small
+		level_cap = {
+			province_max = 1
+		}
+		always_shown = yes
+		drawn_at_distance = yes
+		show_modifier = yes
+		country_modifiers = {
+			enable_for_controllers = { KOR }
+			modifiers = {
+				political_power_factor = 0.03
+			}
+		}
+	}
+	landmark_tfrkphn_gyeongbokgung = {
+		show_on_map = 1
+		base_cost = 20000
+		damage_factor = 0
+		icon_frame = 22
+		value = 5
+		is_buildable = no
+		disable_grow_animation = yes
+		spawn_point = landmark_spawn
+		repair_speed_factor = 0.15
+		only_display_if_exists = yes
+		special_icon = GFX_tfrkphn_gyeongbokgung_icon_small
+		level_cap = {
+			province_max = 1
+		}
+		always_shown = yes
+		drawn_at_distance = yes
+		show_modifier = yes
+		country_modifiers = {
+			enable_for_controllers = { KOR }
+			modifiers = {
+				stability_factor = 0.05
+			}
+		}
+	}
+	landmark_tfrkphn_busan_tower = {
+		show_on_map = 1
+		base_cost = 20000
+		damage_factor = 0
+		icon_frame = 22
+		value = 5
+		is_buildable = no
+		disable_grow_animation = yes
+		spawn_point = landmark_spawn
+		repair_speed_factor = 0.15
+		only_display_if_exists = yes
+		special_icon = GFX_tfrkphn_busan_tower_icon_small
+		level_cap = {
+			province_max = 1
+		}
+		always_shown = yes
+		drawn_at_distance = yes
+		show_modifier = yes
+		country_modifiers = {
+			enable_for_controllers = { KOR }
+			modifiers = {
+				political_power_factor = 0.02
+			}
+		}
+	}
+	landmark_tfrkphn_gwangan_bridge = {
+		show_on_map = 1
+		base_cost = 20000
+		damage_factor = 0
+		icon_frame = 22
+		value = 5
+		is_buildable = no
+		disable_grow_animation = yes
+		spawn_point = landmark_tfrkphn_spawn_b
+		repair_speed_factor = 0.15
+		only_display_if_exists = yes
+		special_icon = GFX_tfrkphn_gwangan_bridge_icon_small
+		level_cap = {
+			province_max = 1
+		}
+		always_shown = yes
+		drawn_at_distance = yes
+		show_modifier = yes
+		country_modifiers = {
+			enable_for_controllers = { KOR }
+			modifiers = {
+				stability_factor = 0.03
+			}
+		}
+	}
+}
+# 한 지역에 랜드마크를 둘 세울 때 쓰는 둘째 자리 종류
+spawn_points = {
+	landmark_tfrkphn_spawn_b = {
+		type = province
+		max = 1
+		disable_auto_nudging = yes
+	}
+}

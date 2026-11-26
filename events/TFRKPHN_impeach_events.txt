@@ -315,10 +315,13 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = tfrkphn.7041.a
+		hidden_effect = { country_event = { id = tfrkphn.7269 days = 30 } }	# 포격 뒤 (motive_build.py)
 		custom_effect_tooltip = TFRKPHN_cho_newconst_tt
 		add_stability = -0.15
 		add_war_support = 0.05
 		set_country_flag = TFRKPHN_cho_new_const
+		hidden_effect = { every_country = { news_event = { id = tfrkphn.7260 days = 1 } } }	# 전 세계 뉴스 (world_news.py)
+		hidden_effect = { country_event = { id = tfrkphn.7262 days = 10 } }	# 월급 명세서 (world_news.py)
 	}
 }
 country_event = {
@@ -331,6 +334,7 @@ country_event = {
 		name = tfrkphn.7042.a
 		add_stability = -0.05
 		set_country_flag = TFRKPHN_cho_backed_down
+		hidden_effect = { every_country = { news_event = { id = tfrkphn.7261 days = 1 } } }	# 전 세계 뉴스 (world_news.py)
 		hidden_effect = { country_event = { id = tfrkphn.7043 days = 60 } }
 	}
 }

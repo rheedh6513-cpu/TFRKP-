@@ -1,0 +1,13 @@
+# [안내] 사건 7283 낯선 얼굴들. youth_fix.py가 만든다.
+add_namespace = tfrkphn
+country_event = {
+	id = tfrkphn.7283
+	title = tfrkphn.7283.t
+	desc = tfrkphn.7283.d
+	picture = GFX_TFRKPHN_chop_7170
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7283.a
+		add_political_power = 30
+	}
+}

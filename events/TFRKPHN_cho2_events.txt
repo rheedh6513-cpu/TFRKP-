@@ -20,6 +20,7 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = tfrkphn.7193.a
+		hidden_effect = { country_event = { id = tfrkphn.7265 days = 30 } }	# 아들의 사진 (motive_build.py)
 		add_political_power = 25
 		add_stability = -0.01
 	}
@@ -32,6 +33,7 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = tfrkphn.7166.a
+		hidden_effect = { country_event = { id = tfrkphn.7271 days = 40 } }	# 포격 뒤 (motive_build.py)
 		add_stability = 0.05
 	}
 }
@@ -68,6 +70,7 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = tfrkphn.7194.a
+		hidden_effect = { country_event = { id = tfrkphn.7270 days = 30 } }	# 포격 뒤 (motive_build.py)
 		add_stability = 0.03
 		add_political_power = -25
 	}
@@ -117,7 +120,17 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = tfrkphn.7172.a
+		ai_chance = { factor = 70 }
 		add_political_power = 25
+		custom_effect_tooltip = TFRKPHN_kjt_route_tt
+	}
+	option = {
+		name = tfrkphn.7172.b
+		ai_chance = { factor = 30 }
+		add_political_power = 25
+		custom_effect_tooltip = TFRKPHN_kmu_route_tt
+		set_country_flag = TFRKPHN_kmu_route
+		mark_focus_tree_layout_dirty = yes
 	}
 }
 country_event = {
@@ -128,6 +141,7 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = tfrkphn.7173.a
+		hidden_effect = { country_event = { id = tfrkphn.7272 days = 10 } }	# 포격 뒤 (motive_build.py)
 		add_stability = 0.05
 		custom_effect_tooltip = TFRKPHN_kjt_acting_tt
 		hidden_effect = {

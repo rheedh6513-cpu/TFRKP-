@@ -14,7 +14,7 @@ focus_tree = {
 	focus = {
 		id = TFRKPHN_ahn_cheol_soo_b01_01
 		icon = GFX_goal_generic_political_pressure
-		x = 3
+		x = 4
 		y = 0
 		cost = 5
 		ai_will_do = { factor = 1 }
@@ -23,22 +23,9 @@ focus_tree = {
 			add_stability = 0.03
 		}
 	}
-	# >>> 늘린 중점 (alt27_tree_build.py)
-	focus = {
-		id = TFRKPHN_ahn_cheol_soo_a1
-		icon = GFX_goal_generic_scientific_exchange
-		x = 2
-		y = 1
-		cost = 5
-		prerequisite = { focus = TFRKPHN_ahn_cheol_soo_b01_01 }
-		ai_will_do = { factor = 1 }
-		completion_reward = {
-			add_political_power = 50 add_stability = 0.02
-		}
-	}
 
 	focus = {
-		id = TFRKPHN_ahn_cheol_soo_a2
+		id = TFRKPHN_ahn_cheol_soo_t02
 		icon = GFX_goal_generic_political_pressure
 		x = 4
 		y = 1
@@ -46,49 +33,94 @@ focus_tree = {
 		prerequisite = { focus = TFRKPHN_ahn_cheol_soo_b01_01 }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			add_popularity = { ideology = market_liberal popularity = 0.05 } add_stability = 0.03
+			# 태풍앞의 민주주의 (ahn_tree2.py)
+			add_political_power = 25
 		}
 	}
 
 	focus = {
-		id = TFRKPHN_ahn_cheol_soo_a3
-		icon = GFX_goal_generic_construct_civ_factory
+		id = TFRKPHN_ahn_cheol_soo_t03
+		icon = GFX_goal_generic_political_pressure
 		x = 2
 		y = 2
 		cost = 5
-		prerequisite = { focus = TFRKPHN_ahn_cheol_soo_a1 }
+		prerequisite = { focus = TFRKPHN_ahn_cheol_soo_t02 }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			add_political_power = 50 add_stability = 0.02
+			# 절망적인 국군 (ahn_tree2.py)
+			add_political_power = 25
 		}
 	}
 
 	focus = {
-		id = TFRKPHN_ahn_cheol_soo_a4
-		icon = GFX_goal_generic_diplomatic_treaty
+		id = TFRKPHN_ahn_cheol_soo_t04
+		icon = GFX_goal_generic_political_pressure
 		x = 4
 		y = 2
 		cost = 5
-		prerequisite = { focus = TFRKPHN_ahn_cheol_soo_a2 }
+		prerequisite = { focus = TFRKPHN_ahn_cheol_soo_t02 }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			TFRKPHN_pdto_sure = yes	# PDTO 확정 가입 (gaw_sure.py)
-			add_stability = 0.03 add_war_support = -0.03
+			# 의대선호, 공대기피 (ahn_tree2.py)
+			add_political_power = 25
 		}
 	}
 
 	focus = {
-		id = TFRKPHN_ahn_cheol_soo_a5
-		icon = GFX_goal_generic_national_unity
-		x = 3
-		y = 3
+		id = TFRKPHN_ahn_cheol_soo_t05
+		icon = GFX_goal_generic_political_pressure
+		x = 6
+		y = 2
 		cost = 5
-		prerequisite = { focus = TFRKPHN_ahn_cheol_soo_a3 focus = TFRKPHN_ahn_cheol_soo_a4 }
+		prerequisite = { focus = TFRKPHN_ahn_cheol_soo_t02 }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			add_political_power = 75 add_stability = 0.03
+			# 부패뿐인 정치 (ahn_tree2.py)
+			add_political_power = 25
 		}
 	}
 
-	# <<< 늘린 중점
+	focus = {
+		id = TFRKPHN_ahn_cheol_soo_t06
+		icon = GFX_goal_generic_political_pressure
+		x = 3
+		y = 3
+		cost = 5
+		prerequisite = { focus = TFRKPHN_ahn_cheol_soo_t03 focus = TFRKPHN_ahn_cheol_soo_t04 focus = TFRKPHN_ahn_cheol_soo_t05 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# OPEN AI의 자산 (ahn_tree2.py)
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TFRKPHN_ahn_cheol_soo_t07
+		icon = GFX_goal_generic_political_pressure
+		x = 5
+		y = 3
+		cost = 5
+		prerequisite = { focus = TFRKPHN_ahn_cheol_soo_t03 focus = TFRKPHN_ahn_cheol_soo_t04 focus = TFRKPHN_ahn_cheol_soo_t05 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# 아리스를 보며 (ahn_tree2.py)
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TFRKPHN_ahn_cheol_soo_t08
+		icon = GFX_goal_generic_political_pressure
+		x = 4
+		y = 4
+		cost = 5
+		prerequisite = { focus = TFRKPHN_ahn_cheol_soo_t06 }
+		prerequisite = { focus = TFRKPHN_ahn_cheol_soo_t07 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			# 떠오른 방안 (ahn_tree2.py)
+			add_political_power = 25
+			TFRKPHN_pdto_sure = yes	# PDTO 확정 가입 (gaw_sure.py 자리: 임시)
+		}
+	}
 }

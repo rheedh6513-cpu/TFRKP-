@@ -1,0 +1,68 @@
+# [안내] 무너짐 엔딩의 사건 (7277~7282). end_trees.py가 만든다.
+add_namespace = tfrkphn
+country_event = {
+	id = tfrkphn.7277
+	title = tfrkphn.7277.t
+	desc = tfrkphn.7277.d
+	picture = GFX_TFRKPHN_chop_7180
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7277.a
+		add_stability = -0.03
+	}
+}
+country_event = {
+	id = tfrkphn.7278
+	title = tfrkphn.7278.t
+	desc = tfrkphn.7278.d
+	picture = GFX_TFRKPHN_chop_7180
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7278.a
+		add_stability = -0.03
+	}
+}
+country_event = {
+	id = tfrkphn.7279
+	title = tfrkphn.7279.t
+	desc = tfrkphn.7279.d
+	picture = GFX_TFRKPHN_chop_7180
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7279.a
+		add_political_power = -50
+	}
+}
+country_event = {
+	id = tfrkphn.7280
+	title = tfrkphn.7280.t
+	desc = tfrkphn.7280.d
+	picture = GFX_TFRKPHN_chop_7181
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7280.a
+		add_stability = 0.02
+	}
+}
+country_event = {
+	id = tfrkphn.7281
+	title = tfrkphn.7281.t
+	desc = tfrkphn.7281.d
+	picture = GFX_TFRKPHN_chop_7180
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7281.a
+		add_stability = -0.02
+	}
+}
+country_event = {
+	id = tfrkphn.7282
+	title = tfrkphn.7282.t
+	desc = tfrkphn.7282.d
+	picture = GFX_TFRKPHN_chop_7181
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7282.a
+		add_stability = 0.03
+	}
+}

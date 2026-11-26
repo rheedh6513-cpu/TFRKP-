@@ -39,7 +39,6 @@ country_event = {
 		add_stability = 0.03
 		add_war_support = -0.03
 		add_political_power = 40
-		hidden_effect = { country_event = { id = tfrkphn.7258 days = 120 } }
 		custom_effect_tooltip = TFRKPHN_tune_kp_p0_m3
 		hidden_effect = { if = { limit = { has_country_flag = TFRKPHN_kp_init } add_to_variable = { TFRKPHN_kp_real = -4 } TFRKPHN_kp_refresh = yes } }
 	}
@@ -63,5 +62,17 @@ country_event = {
 			if = { limit = { has_idea = JAP_PDTO_member_1 } remove_ideas = JAP_PDTO_member_1 }
 			if = { limit = { has_idea = JAP_PDTO_member_2 } remove_ideas = JAP_PDTO_member_2 }
 		}
+	}
+}
+country_event = {
+	id = tfrkphn.7276
+	title = tfrkphn.7276.t
+	desc = tfrkphn.7276.d
+	picture = GFX_TFRKPHN_chop_7181
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7276.a
+		add_stability = 0.05
+		add_political_power = 50
 	}
 }

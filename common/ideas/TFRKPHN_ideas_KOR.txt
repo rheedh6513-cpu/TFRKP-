@@ -137,7 +137,7 @@ ideas = {
 	}
 	country = {
 		TFRKPHN_true_conservative = {
-			picture = KOR_yoon_common_conservatism_dynamic_modifir_idea
+			picture = TFRKPHN_true_conservative
 			allowed = { always = no }
 			allowed_civil_war = { always = yes }
 			modifier = {

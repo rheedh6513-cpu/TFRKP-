@@ -1,0 +1,263 @@
+# [안내] 김문수 정부 전용 결정. kmu_tab.py가 만든다.
+TFRKPHN_kv_category = {
+	TFRKPHN_kv_1 = {
+		icon = generic_political_rally
+		cost = 15
+		ai_hint_pp_cost = 15
+		days_re_enable = 60
+		ai_will_do = { factor = 5 }
+		complete_effect = {
+			custom_effect_tooltip = TFRKPHN_kv_lab_p4
+			add_to_variable = { TFRKPHN_kv_labor = 4 }
+			TFRKPHN_kv_refresh = yes
+		}
+	}
+	TFRKPHN_kv_2 = {
+		icon = generic_political_rally
+		cost = 25
+		ai_hint_pp_cost = 25
+		days_re_enable = 90
+		ai_will_do = { factor = 5 }
+		complete_effect = {
+			custom_effect_tooltip = TFRKPHN_kv_lab_p6
+			add_to_variable = { TFRKPHN_kv_labor = 6 }
+			TFRKPHN_kv_refresh = yes
+		}
+	}
+	TFRKPHN_kv_3 = {
+		icon = generic_political_rally
+		cost = 20
+		ai_hint_pp_cost = 20
+		days_re_enable = 75
+		ai_will_do = { factor = 5 }
+		complete_effect = {
+			custom_effect_tooltip = TFRKPHN_kv_lab_p5
+			add_to_variable = { TFRKPHN_kv_labor = 5 }
+			TFRKPHN_kv_refresh = yes
+		}
+	}
+	TFRKPHN_kv_4 = {
+		icon = generic_political_rally
+		cost = 50
+		ai_hint_pp_cost = 50
+		days_re_enable = 180
+		ai_will_do = { factor = 5 }
+		complete_effect = {
+			custom_effect_tooltip = TFRKPHN_kv_lab_p10
+			add_to_variable = { TFRKPHN_kv_labor = 10 }
+			add_stability = 0.02
+			TFRKPHN_kv_refresh = yes
+		}
+	}
+	TFRKPHN_kv_5 = {
+		icon = generic_political_rally
+		cost = 30
+		ai_hint_pp_cost = 30
+		days_re_enable = 120
+		ai_will_do = { factor = 5 }
+		complete_effect = {
+			custom_effect_tooltip = TFRKPHN_kv_lab_p8
+			add_to_variable = { TFRKPHN_kv_labor = 8 }
+			TFRKPHN_kv_refresh = yes
+		}
+	}
+	TFRKPHN_kv_6 = {
+		icon = generic_political_discourse
+		cost = 40
+		ai_hint_pp_cost = 40
+		days_re_enable = 180
+		ai_will_do = { factor = 5 }
+		complete_effect = {
+			custom_effect_tooltip = TFRKPHN_kv_vote_p5
+			set_temp_variable = { kv_base = 5 }
+			TFRKPHN_kv_vote_add = yes
+			add_stability = -0.01
+			TFRKPHN_kv_refresh = yes
+		}
+	}
+	TFRKPHN_kv_7 = {
+		icon = generic_political_discourse
+		cost = 30
+		ai_hint_pp_cost = 30
+		days_re_enable = 90
+		ai_will_do = { factor = 5 }
+		complete_effect = {
+			custom_effect_tooltip = TFRKPHN_kv_vote_p4
+			set_temp_variable = { kv_base = 4 }
+			TFRKPHN_kv_vote_add = yes
+			TFRKPHN_kv_refresh = yes
+		}
+	}
+	TFRKPHN_kv_8 = {
+		icon = generic_political_discourse
+		cost = 35
+		ai_hint_pp_cost = 35
+		days_re_enable = 120
+		ai_will_do = { factor = 5 }
+		complete_effect = {
+			custom_effect_tooltip = TFRKPHN_kv_lab_m2
+			add_to_variable = { TFRKPHN_kv_labor = -2 }
+			custom_effect_tooltip = TFRKPHN_kv_vote_p4
+			set_temp_variable = { kv_base = 4 }
+			TFRKPHN_kv_vote_add = yes
+			TFRKPHN_kv_refresh = yes
+		}
+	}
+	TFRKPHN_kv_9 = {
+		icon = generic_political_discourse
+		cost = 25
+		ai_hint_pp_cost = 25
+		days_re_enable = 90
+		ai_will_do = { factor = 5 }
+		complete_effect = {
+			custom_effect_tooltip = TFRKPHN_kv_lab_m3
+			add_to_variable = { TFRKPHN_kv_labor = -3 }
+			custom_effect_tooltip = TFRKPHN_kv_vote_p3
+			set_temp_variable = { kv_base = 3 }
+			TFRKPHN_kv_vote_add = yes
+			add_stability = -0.02
+			TFRKPHN_kv_refresh = yes
+		}
+	}
+	TFRKPHN_kv_10 = {
+		icon = generic_political_discourse
+		available = { check_variable = { TFRKPHN_kv_labor > 59.5 } }
+		cost = 20
+		ai_hint_pp_cost = 20
+		days_re_enable = 120
+		ai_will_do = { factor = 5 }
+		complete_effect = {
+			custom_effect_tooltip = TFRKPHN_kv_vote_p3
+			set_temp_variable = { kv_base = 3 }
+			TFRKPHN_kv_vote_add = yes
+			TFRKPHN_kv_refresh = yes
+		}
+	}
+}
+TFRKPHN_kb_category = {
+	TFRKPHN_kb_1 = {
+		icon = GFX_decision_icon_KOR_raillway_icon
+		available = { owns_state = 525 }
+		highlight_states = { highlight_state_targets = { state = 525 } }
+		cost = 50
+		ai_hint_pp_cost = 50
+		days_remove = 120
+		fire_only_once = yes
+		modifier = { civilian_factory_use = 2 }
+		ai_will_do = { factor = 5 }
+		remove_effect = {
+			525 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = infrastructure level = 2 instant_build = yes }
+				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			}
+			custom_effect_tooltip = TFRKPHN_kb_debt_p12
+			add_to_variable = { TFRKPHN_kb_debt = 12 }
+			custom_effect_tooltip = TFRKPHN_kv_lab_p2
+			add_to_variable = { TFRKPHN_kv_labor = 2 }
+			TFRKPHN_kv_refresh = yes
+		}
+	}
+	TFRKPHN_kb_2 = {
+		icon = GFX_decision_icon_KOR_mega_city_icon
+		available = { owns_state = 1409 }
+		highlight_states = { highlight_state_targets = { state = 1409 } }
+		cost = 50
+		ai_hint_pp_cost = 50
+		days_remove = 120
+		fire_only_once = yes
+		modifier = { civilian_factory_use = 2 }
+		ai_will_do = { factor = 5 }
+		remove_effect = {
+			1409 = {
+				add_building_construction = { type = air_base level = 3 instant_build = yes }
+				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
+			}
+			custom_effect_tooltip = TFRKPHN_kb_debt_p15
+			add_to_variable = { TFRKPHN_kb_debt = 15 }
+			custom_effect_tooltip = TFRKPHN_kv_lab_p2
+			add_to_variable = { TFRKPHN_kv_labor = 2 }
+			TFRKPHN_kv_refresh = yes
+		}
+	}
+	TFRKPHN_kb_3 = {
+		icon = GFX_decision_icon_KOR_raillway_icon
+		available = { owns_state = 1041 }
+		highlight_states = { highlight_state_targets = { state = 1041 } }
+		cost = 50
+		ai_hint_pp_cost = 50
+		days_remove = 120
+		fire_only_once = yes
+		modifier = { civilian_factory_use = 2 }
+		ai_will_do = { factor = 5 }
+		remove_effect = {
+			1041 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = infrastructure level = 2 instant_build = yes }
+				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			}
+			custom_effect_tooltip = TFRKPHN_kb_debt_p12
+			add_to_variable = { TFRKPHN_kb_debt = 12 }
+			custom_effect_tooltip = TFRKPHN_kv_lab_p2
+			add_to_variable = { TFRKPHN_kv_labor = 2 }
+			TFRKPHN_kv_refresh = yes
+		}
+	}
+	TFRKPHN_kb_4 = {
+		icon = GFX_decision_icon_KOR_raillway_icon
+		available = { owns_state = 871 }
+		highlight_states = { highlight_state_targets = { state = 871 } }
+		cost = 50
+		ai_hint_pp_cost = 50
+		days_remove = 120
+		fire_only_once = yes
+		modifier = { civilian_factory_use = 2 }
+		ai_will_do = { factor = 5 }
+		remove_effect = {
+			871 = {
+				add_building_construction = { type = infrastructure level = 2 instant_build = yes }
+			}
+			custom_effect_tooltip = TFRKPHN_kb_debt_p8
+			add_to_variable = { TFRKPHN_kb_debt = 8 }
+			custom_effect_tooltip = TFRKPHN_kv_lab_p2
+			add_to_variable = { TFRKPHN_kv_labor = 2 }
+			TFRKPHN_kv_refresh = yes
+		}
+	}
+	TFRKPHN_kb_5 = {
+		icon = GFX_decision_icon_KOR_dockyard_icon
+		available = { owns_state = 1412 }
+		highlight_states = { highlight_state_targets = { state = 1412 } }
+		cost = 50
+		ai_hint_pp_cost = 50
+		days_remove = 120
+		fire_only_once = yes
+		modifier = { civilian_factory_use = 2 }
+		ai_will_do = { factor = 5 }
+		remove_effect = {
+			1412 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = { type = dockyard level = 1 instant_build = yes }
+				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			}
+			custom_effect_tooltip = TFRKPHN_kb_debt_p10
+			add_to_variable = { TFRKPHN_kb_debt = 10 }
+			custom_effect_tooltip = TFRKPHN_kv_lab_p2
+			add_to_variable = { TFRKPHN_kv_labor = 2 }
+			TFRKPHN_kv_refresh = yes
+		}
+	}
+	TFRKPHN_kb_pay = {
+		icon = generic_political_discourse
+		available = { check_variable = { TFRKPHN_kb_debt > 7.5 } }
+		cost = 40
+		ai_hint_pp_cost = 40
+		days_re_enable = 120
+		ai_will_do = { factor = 1 }
+		complete_effect = {
+			custom_effect_tooltip = TFRKPHN_kb_pay_tt
+			add_to_variable = { TFRKPHN_kb_debt = -8 }
+			TFRKPHN_kv_refresh = yes
+		}
+	}
+}

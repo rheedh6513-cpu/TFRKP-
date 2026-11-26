@@ -37,6 +37,7 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = tfrkphn.7069.a
+		hidden_effect = { country_event = { id = tfrkphn.7283 days = 10 } }	# 낯선 얼굴들 (youth_fix.py)
 		add_war_support = 0.02
 	}
 }

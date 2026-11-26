@@ -1,0 +1,14 @@
+# [안내] 이낙연 정부 국민정신. nak_tree2.py가 만든다.
+ideas = {
+	country = {
+		TFRKPHN_nak_united_party = {
+			picture = GFX_idea_KOR_dpk_lead_pre_lee_idea
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				stability_factor = 0.05
+				political_power_gain = 0.15
+			}
+		}
+	}
+}

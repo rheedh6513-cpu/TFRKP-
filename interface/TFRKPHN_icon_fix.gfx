@@ -1,0 +1,4 @@
+# [안내] 국민정신 그림 (icon_fix.py)
+spriteTypes = {
+	spriteType = { name = "GFX_idea_TFRKPHN_true_conservative" texturefile = "gfx/interface/ideas/TFRKPHN_true_conservative.png" }
+}

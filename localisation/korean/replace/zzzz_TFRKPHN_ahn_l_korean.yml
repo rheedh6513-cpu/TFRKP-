@@ -1,0 +1,17 @@
+﻿l_korean:
+ # [안내] 안철수 초기 트리 중점 이름 (사용자가 정한 이름). ahn_tree2.py가 만든다.
+ TFRKPHN_ahn_cheol_soo_b01_01:0 "제3지대 대통령"
+ TFRKPHN_ahn_cheol_soo_t02:0 "태풍앞의 민주주의"
+ TFRKPHN_ahn_cheol_soo_t02_desc:0 ""
+ TFRKPHN_ahn_cheol_soo_t03:0 "절망적인 국군"
+ TFRKPHN_ahn_cheol_soo_t03_desc:0 ""
+ TFRKPHN_ahn_cheol_soo_t04:0 "의대선호, 공대기피"
+ TFRKPHN_ahn_cheol_soo_t04_desc:0 ""
+ TFRKPHN_ahn_cheol_soo_t05:0 "부패뿐인 정치"
+ TFRKPHN_ahn_cheol_soo_t05_desc:0 ""
+ TFRKPHN_ahn_cheol_soo_t06:0 "OPEN AI의 자산"
+ TFRKPHN_ahn_cheol_soo_t06_desc:0 ""
+ TFRKPHN_ahn_cheol_soo_t07:0 "아리스를 보며"
+ TFRKPHN_ahn_cheol_soo_t07_desc:0 ""
+ TFRKPHN_ahn_cheol_soo_t08:0 "떠오른 방안"
+ TFRKPHN_ahn_cheol_soo_t08_desc:0 ""

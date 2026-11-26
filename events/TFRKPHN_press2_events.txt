@@ -1,0 +1,40 @@
+# [안내] 언론 통폐합 뒤 신문 사건 세 개 (7308 백지 1면, 7309 한겨레 1면, 7310 동아일보 인터뷰). press2_build.py가 만든다.
+add_namespace = tfrkphn
+country_event = {
+	id = tfrkphn.7308
+	title = tfrkphn.7308.t
+	desc = tfrkphn.7308.d
+	picture = GFX_TFRKPHN_press_7308
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7308.a
+		add_stability = -0.02
+		add_political_power = 25
+		hidden_effect = { country_event = { id = tfrkphn.7310 days = 8 } }
+	}
+}
+country_event = {
+	id = tfrkphn.7309
+	title = tfrkphn.7309.t
+	desc = tfrkphn.7309.d
+	picture = GFX_TFRKPHN_press_7309
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7309.a
+		add_political_power = 50
+		add_stability = -0.01
+	}
+}
+country_event = {
+	id = tfrkphn.7310
+	title = tfrkphn.7310.t
+	desc = tfrkphn.7310.d
+	picture = GFX_TFRKPHN_press_7310
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7310.a
+		hidden_effect = { country_event = { id = tfrkphn.7311 days = 15 } }	# 다른 목소리 (press3_build.py)
+		add_stability = -0.02
+		add_war_support = 0.01
+	}
+}

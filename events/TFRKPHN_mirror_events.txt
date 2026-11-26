@@ -1,0 +1,16 @@
+# [안내] 사건 7263 「이 층 창문」 (본편 korea.720의 반대). mirror_build.py가 만든다.
+add_namespace = tfrkphn
+country_event = {
+	id = tfrkphn.7263
+	title = tfrkphn.7263.t
+	desc = tfrkphn.7263.d
+	picture = GFX_TFRKPHN_chop_7189
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7263.a
+		add_stability = -0.02
+		add_political_power = 20
+		custom_effect_tooltip = TFRKPHN_tune_kp_p0_m3
+		hidden_effect = { if = { limit = { has_country_flag = TFRKPHN_kp_init } add_to_variable = { TFRKPHN_kp_real = -3 } TFRKPHN_kp_refresh = yes } }
+	}
+}

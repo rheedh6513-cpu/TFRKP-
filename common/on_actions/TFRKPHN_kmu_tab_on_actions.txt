@@ -1,0 +1,40 @@
+# [안내] 김문수 탭: 취임하면 숫자를 깐다(노동자 지지 55, 예상 득표율 46, 나랏빚 0). 달마다 숫자가 움직인다. 정권이 끝나면 국민정신을 걷는다. kmu_tab.py가 만든다.
+on_actions = {
+	on_daily_KOR = {
+		effect = {
+			if = {
+				limit = { has_country_flag = TFRKPHN_kmu_pres NOT = { has_country_flag = TFRKPHN_kv_init } }
+				set_country_flag = TFRKPHN_kv_init
+				set_variable = { TFRKPHN_kv_labor = 55 } set_variable = { TFRKPHN_kv_vote = 46 } set_variable = { TFRKPHN_kb_debt = 0 }
+				TFRKPHN_kv_refresh = yes
+			}
+			if = {
+				limit = { has_country_flag = TFRKPHN_kv_init has_country_flag = TFRKPHN_kmu_pres NOT = { has_country_flag = TFRKPHN_cho2_end } NOT = { has_country_flag = TFRKPHN_kv_tick } }
+				set_country_flag = { flag = TFRKPHN_kv_tick days = 30 value = 1 }
+				add_to_variable = { TFRKPHN_kv_labor = -1 }
+				set_temp_variable = { kv_d = TFRKPHN_kv_labor }
+				subtract_from_temp_variable = { kv_d = 50 }
+				divide_temp_variable = { kv_d = 20 }
+				add_to_variable = { TFRKPHN_kv_vote = kv_d }
+				TFRKPHN_kv_refresh = yes
+			}
+			if = {
+				limit = { has_country_flag = TFRKPHN_kv_init has_country_flag = TFRKPHN_kmu_crash NOT = { has_country_flag = TFRKPHN_kb_crash_added } }
+				set_country_flag = TFRKPHN_kb_crash_added
+				add_to_variable = { TFRKPHN_kb_debt = 15 }
+				TFRKPHN_kv_refresh = yes
+			}
+			if = {
+				limit = { has_country_flag = TFRKPHN_kv_init has_country_flag = TFRKPHN_kmu_pres NOT = { has_country_flag = TFRKPHN_cho2_end } check_variable = { TFRKPHN_kb_debt > 59.5 } NOT = { has_country_flag = TFRKPHN_kb_fx_fired } }
+				set_country_flag = TFRKPHN_kb_fx_fired
+				country_event = { id = tfrkphn.7306 days = 3 }
+			}
+			if = {
+				limit = { has_country_flag = TFRKPHN_kv_init OR = { has_country_flag = TFRKPHN_cho2_end NOT = { has_country_flag = TFRKPHN_kmu_pres } } NOT = { has_country_flag = TFRKPHN_kv_closed } }
+				set_country_flag = TFRKPHN_kv_closed
+				remove_dynamic_modifier = { modifier = TFRKPHN_kv_modifier }
+				remove_dynamic_modifier = { modifier = TFRKPHN_kb_modifier }
+			}
+		}
+	}
+}

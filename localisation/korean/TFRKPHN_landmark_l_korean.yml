@@ -1,0 +1,14 @@
+﻿l_korean:
+ # [안내] 서울 랜드마크 이름과 설명. lm_build.py가 만든다.
+ landmark_tfrkphn_namsan_tower:0 "남산서울타워"
+ landmark_tfrkphn_namsan_tower_plural:0 "남산서울타워"
+ landmark_tfrkphn_namsan_tower_desc:0 "서울 한가운데 남산 꼭대기에 선 전파탑입니다. 1975년에 세워졌고, 서울 어디서나 보입니다."
+ landmark_tfrkphn_gyeongbokgung:0 "경복궁 근정전"
+ landmark_tfrkphn_gyeongbokgung_plural:0 "경복궁 근정전"
+ landmark_tfrkphn_gyeongbokgung_desc:0 "조선의 법궁 경복궁의 으뜸 전각입니다. 왕이 신하들의 조회를 받고 나라의 큰 의식을 치르던 곳입니다."
+ landmark_tfrkphn_busan_tower:0 "부산타워"
+ landmark_tfrkphn_busan_tower_plural:0 "부산타워"
+ landmark_tfrkphn_busan_tower_desc:0 "부산 용두산 꼭대기에 선 높이 120미터의 탑입니다. 1973년에 세워졌고, 부산항이 한눈에 내려다보입니다."
+ landmark_tfrkphn_gwangan_bridge:0 "광안대교"
+ landmark_tfrkphn_gwangan_bridge_plural:0 "광안대교"
+ landmark_tfrkphn_gwangan_bridge_desc:0 "부산 수영만을 가로지르는 2층 현수교입니다. 2003년에 개통했고, 밤이면 다리 전체에 불이 들어옵니다."

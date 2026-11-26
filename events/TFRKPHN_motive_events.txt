@@ -1,0 +1,144 @@
+# [안내] 우리공화당 정권의 까닭을 보여 주는 사건 다섯 (7264~7268). motive_build.py가 만든다.
+add_namespace = tfrkphn
+country_event = {
+	id = tfrkphn.7268
+	title = tfrkphn.7268.t
+	desc = tfrkphn.7268.d
+	picture = GFX_TFRKPHN_chop_7181
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7268.a
+		add_stability = -0.03
+		add_political_power = 20
+	}
+}
+country_event = {
+	id = tfrkphn.7264
+	title = tfrkphn.7264.t
+	desc = tfrkphn.7264.d
+	picture = GFX_TFRKPHN_chop_7181
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7264.a
+		add_political_power = 25
+	}
+}
+country_event = {
+	id = tfrkphn.7265
+	title = tfrkphn.7265.t
+	desc = tfrkphn.7265.d
+	picture = GFX_TFRKPHN_chop_7170
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7265.a
+		add_war_support = 0.02
+	}
+}
+country_event = {
+	id = tfrkphn.7266
+	title = tfrkphn.7266.t
+	desc = tfrkphn.7266.d
+	picture = GFX_TFRKPHN_chop_7189
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7266.a
+		add_political_power = 30
+		add_stability = -0.01
+	}
+}
+country_event = {
+	id = tfrkphn.7267
+	title = tfrkphn.7267.t
+	desc = tfrkphn.7267.d
+	picture = GFX_TFRKPHN_chop_7181
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7267.a
+		add_stability = 0.02
+	}
+}
+country_event = {
+	id = tfrkphn.7269
+	title = tfrkphn.7269.t
+	desc = tfrkphn.7269.d
+	picture = GFX_TFRKPHN_e21_shell
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7269.a
+		add_war_support = 0.02
+		add_stability = -0.01
+	}
+}
+country_event = {
+	id = tfrkphn.7270
+	title = tfrkphn.7270.t
+	desc = tfrkphn.7270.d
+	picture = GFX_TFRKPHN_chop_7194
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7270.a
+		add_stability = 0.02
+	}
+}
+country_event = {
+	id = tfrkphn.7271
+	title = tfrkphn.7271.t
+	desc = tfrkphn.7271.d
+	picture = GFX_TFRKPHN_e21_shell
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7271.a
+		add_political_power = 25
+		add_stability = -0.01
+	}
+}
+country_event = {
+	id = tfrkphn.7272
+	title = tfrkphn.7272.t
+	desc = tfrkphn.7272.d
+	picture = GFX_TFRKPHN_chop_7181
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7272.a
+		add_political_power = 30
+	}
+}
+country_event = {
+	id = tfrkphn.7273
+	title = tfrkphn.7273.t
+	desc = tfrkphn.7273.d
+	picture = GFX_TFRKPHN_chop_7189
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7273.a
+		add_stability = 0.03
+		hidden_effect = { if = { limit = { has_country_flag = TFRKPHN_kp_init } add_to_variable = { TFRKPHN_kp_real = 3 } TFRKPHN_kp_refresh = yes } }
+		custom_effect_tooltip = TFRKPHN_mot_kp_p3_tt
+	}
+}
+country_event = {
+	id = tfrkphn.7274
+	title = tfrkphn.7274.t
+	desc = tfrkphn.7274.d
+	picture = GFX_TFRKPHN_chop_7177
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7274.a
+		add_stability = 0.02
+		hidden_effect = { if = { limit = { has_country_flag = TFRKPHN_kp_init } add_to_variable = { TFRKPHN_kp_real = 3 } TFRKPHN_kp_refresh = yes } }
+		custom_effect_tooltip = TFRKPHN_mot_kp_p3_tt
+	}
+}
+country_event = {
+	id = tfrkphn.7275
+	title = tfrkphn.7275.t
+	desc = tfrkphn.7275.d
+	picture = GFX_TFRKPHN_chop_7177
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7275.a
+		add_stability = 0.02
+		hidden_effect = { if = { limit = { has_country_flag = TFRKPHN_kp_init } add_to_variable = { TFRKPHN_kp_real = 3 } TFRKPHN_kp_refresh = yes } }
+		custom_effect_tooltip = TFRKPHN_mot_kp_p3_tt
+	}
+}

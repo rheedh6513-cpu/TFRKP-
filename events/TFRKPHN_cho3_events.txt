@@ -22,6 +22,8 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = tfrkphn.7175.a
+		hidden_effect = { country_event = { id = tfrkphn.7309 days = 20 } }	# 한겨레 1면 (press2_build.py)
+		hidden_effect = { country_event = { id = tfrkphn.7307 days = 3 } }	# 조선일보 사설 (press_build.py)
 		hidden_effect = { country_event = { id = tfrkphn.7206 days = 35 } }	# 삼김 사건
 		add_stability = -0.02
 		add_political_power = 50
@@ -49,6 +51,7 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = tfrkphn.7177.a
+		hidden_effect = { country_event = { id = tfrkphn.7274 days = 30 } }	# 포격 뒤 (motive_build.py)
 		hidden_effect = { country_event = { id = tfrkphn.7188 days = 20 } }	# 삼김 사건
 		hidden_effect = { country_event = { id = tfrkphn.7186 days = 45 } }	# 삼김 사건
 		add_stability = 0.03
@@ -64,6 +67,7 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = tfrkphn.7178.a
+		hidden_effect = { country_event = { id = tfrkphn.7275 days = 30 } }	# 포격 뒤 (motive_build.py)
 		hidden_effect = { country_event = { id = tfrkphn.7208 days = 35 } }	# 삼김 사건
 		add_political_power = 50
 	}
@@ -76,6 +80,7 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = tfrkphn.7196.a
+		hidden_effect = { country_event = { id = tfrkphn.7266 days = 5 } }	# 홍콩의 송금 (motive_build.py)
 		hidden_effect = { country_event = { id = tfrkphn.7189 days = 15 } }	# 삼김 사건
 		hidden_effect = { country_event = { id = tfrkphn.7205 days = 45 } }	# 삼김 사건
 		add_stability = -0.03
@@ -94,14 +99,18 @@ country_event = {
 		custom_effect_tooltip = TFRKPHN_ru_hold_tt
 		custom_effect_tooltip = TFRKPHN_kjt_hold_tt
 		add_stability = -0.10
-		hidden_effect = { country_event = { id = tfrkphn.7181 days = 3 } }
+		custom_effect_tooltip = TFRKPHN_kjt_hold_path_tt
+		set_country_flag = TFRKPHN_kjt_hold_path
+		mark_focus_tree_layout_dirty = yes
 	}
 	option = {
 		name = tfrkphn.7180.b
 		trigger = { NOT = { TFRKPHN_ru_hold = yes } }
 		custom_effect_tooltip = TFRKPHN_ru_fall_tt
 		custom_effect_tooltip = TFRKPHN_kjt_fall_tt
-		hidden_effect = { country_event = { id = tfrkphn.7182 days = 3 } }
+		custom_effect_tooltip = TFRKPHN_kjt_fall_path_tt
+		set_country_flag = TFRKPHN_kjt_fall_path
+		mark_focus_tree_layout_dirty = yes
 	}
 }
 country_event = {
@@ -116,7 +125,6 @@ country_event = {
 		add_war_support = -0.05
 		set_country_flag = TFRKPHN_cho2_end
 		set_country_flag = TFRKPHN_kjt_hold_end
-		hidden_effect = { country_event = { id = tfrkphn.7255 days = 60 } country_event = { id = tfrkphn.7256 days = 210 } country_event = { id = tfrkphn.7257 days = 420 } }	# 러시아식 엔딩 (ru_end.py)
 	}
 }
 country_event = {

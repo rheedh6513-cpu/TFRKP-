@@ -1,0 +1,18 @@
+# [안내] [사람이 씀] 이낙연 루트 사건. 7312 좋소 (중소기업 지원 다음 날), 7313 이상은 사라지지않았다. (양안전 승전 뒤, on_actions가 부른다). nak_tree2.py가 만든다.
+add_namespace = tfrkphn
+country_event = {
+	id = tfrkphn.7312
+	title = tfrkphn.7312.t
+	desc = tfrkphn.7312.d
+	picture = GFX_TFRKPHN_nak_7312
+	is_triggered_only = yes
+	option = { name = tfrkphn.7312.a }
+}
+country_event = {
+	id = tfrkphn.7313
+	title = tfrkphn.7313.t
+	desc = tfrkphn.7313.d
+	picture = GFX_TFRKPHN_nak_7313
+	is_triggered_only = yes
+	option = { name = tfrkphn.7313.a }
+}

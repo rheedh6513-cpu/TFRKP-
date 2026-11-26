@@ -1,0 +1,12 @@
+# [안내] 이낙연 정부가 양안전에서 이기면 열흘 뒤 7313 「이상은 사라지지않았다.」를 한 번 부른다. nak_tree2.py가 만든다.
+on_actions = {
+	on_daily_KOR = {
+		effect = {
+			if = {
+				limit = { has_focus_tree = TFRKPHN_nak_tree has_country_flag = KOR_lee_taiwan_war_victory NOT = { has_country_flag = TFRKPHN_nak_7313_fired } }
+				set_country_flag = TFRKPHN_nak_7313_fired
+				country_event = { id = tfrkphn.7313 days = 10 }
+			}
+		}
+	}
+}

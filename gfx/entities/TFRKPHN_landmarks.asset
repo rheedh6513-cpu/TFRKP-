@@ -1,0 +1,69 @@
+# [안내] 서울 랜드마크 엔티티. 크기(scale)는 게임에서 보고 고친다. lm_build.py가 만든다.
+entity = {
+	name = "building_landmark_tfrkphn_namsan_tower"
+	pdxmesh = "tfrkphn_namsan_tower_mesh"
+	default_state = "idle"
+	state = { name = "idle" animation_blend_time = 0.3 looping = no }
+	scale = 0.1
+}
+entity = {
+	name = "building_landmark_tfrkphn_namsan_tower_destroyed"
+	pdxmesh = "tfrkphn_namsan_tower_mesh"
+	default_state = "idle"
+	state = { name = "idle" animation_blend_time = 0.3 looping = no }
+	state = { name = "destroy" animation_blend_time = 0.0 looping = no
+		event = { time = 0 particle = "building_explode_effect" keep_particle = yes }
+	}
+	scale = 0.1
+}
+entity = {
+	name = "building_landmark_tfrkphn_gyeongbokgung"
+	pdxmesh = "tfrkphn_gyeongbokgung_mesh"
+	default_state = "idle"
+	state = { name = "idle" animation_blend_time = 0.3 looping = no }
+	scale = 0.075
+}
+entity = {
+	name = "building_landmark_tfrkphn_gyeongbokgung_destroyed"
+	pdxmesh = "tfrkphn_gyeongbokgung_mesh"
+	default_state = "idle"
+	state = { name = "idle" animation_blend_time = 0.3 looping = no }
+	state = { name = "destroy" animation_blend_time = 0.0 looping = no
+		event = { time = 0 particle = "building_explode_effect" keep_particle = yes }
+	}
+	scale = 0.075
+}
+entity = {
+	name = "building_landmark_tfrkphn_busan_tower"
+	pdxmesh = "tfrkphn_busan_tower_mesh"
+	default_state = "idle"
+	state = { name = "idle" animation_blend_time = 0.3 looping = no }
+	scale = 0.09
+}
+entity = {
+	name = "building_landmark_tfrkphn_busan_tower_destroyed"
+	pdxmesh = "tfrkphn_busan_tower_mesh"
+	default_state = "idle"
+	state = { name = "idle" animation_blend_time = 0.3 looping = no }
+	state = { name = "destroy" animation_blend_time = 0.0 looping = no
+		event = { time = 0 particle = "building_explode_effect" keep_particle = yes }
+	}
+	scale = 0.09
+}
+entity = {
+	name = "building_landmark_tfrkphn_gwangan_bridge"
+	pdxmesh = "tfrkphn_gwangan_bridge_mesh"
+	default_state = "idle"
+	state = { name = "idle" animation_blend_time = 0.3 looping = no }
+	scale = 0.06
+}
+entity = {
+	name = "building_landmark_tfrkphn_gwangan_bridge_destroyed"
+	pdxmesh = "tfrkphn_gwangan_bridge_mesh"
+	default_state = "idle"
+	state = { name = "idle" animation_blend_time = 0.3 looping = no }
+	state = { name = "destroy" animation_blend_time = 0.0 looping = no
+		event = { time = 0 particle = "building_explode_effect" keep_particle = yes }
+	}
+	scale = 0.06
+}

@@ -1,0 +1,24 @@
+# [안내] 김문수 탭의 숫자를 0~100으로 맞추고 국민정신 값을 고친다. kmu_tab.py가 만든다.
+TFRKPHN_kv_refresh = {
+	clamp_variable = { var = TFRKPHN_kv_labor min = 0 max = 100 }
+	clamp_variable = { var = TFRKPHN_kv_vote min = 0 max = 100 }
+	clamp_variable = { var = TFRKPHN_kb_debt min = 0 max = 100 }
+	set_variable = { TFRKPHN_kv_st = TFRKPHN_kv_labor }
+	subtract_from_variable = { TFRKPHN_kv_st = 50 }
+	multiply_variable = { TFRKPHN_kv_st = 0.001 }
+	set_variable = { TFRKPHN_kv_pp = TFRKPHN_kv_vote }
+	subtract_from_variable = { TFRKPHN_kv_pp = 50 }
+	multiply_variable = { TFRKPHN_kv_pp = 0.002 }
+	set_variable = { TFRKPHN_kb_cg = TFRKPHN_kb_debt }
+	multiply_variable = { TFRKPHN_kb_cg = 0.001 }
+	if = { limit = { NOT = { has_dynamic_modifier = { modifier = TFRKPHN_kv_modifier } } } add_dynamic_modifier = { modifier = TFRKPHN_kv_modifier } }
+	if = { limit = { NOT = { has_dynamic_modifier = { modifier = TFRKPHN_kb_modifier } } } add_dynamic_modifier = { modifier = TFRKPHN_kb_modifier } }
+	force_update_dynamic_modifier = yes
+}
+# 선거 결정: 득표율을 기본값(kv_base) x 노동자 지지 / 50 만큼 올린다
+TFRKPHN_kv_vote_add = {
+	set_temp_variable = { kv_g = TFRKPHN_kv_labor }
+	divide_temp_variable = { kv_g = 50 }
+	multiply_temp_variable = { kv_g = kv_base }
+	add_to_variable = { TFRKPHN_kv_vote = kv_g }
+}

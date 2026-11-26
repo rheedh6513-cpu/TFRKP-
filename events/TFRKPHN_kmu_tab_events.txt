@@ -1,0 +1,16 @@
+# [안내] 김문수 탭 「다리와 공항」의 사건. 나랏빚이 60을 넘으면 뜬다. kmu_tab.py가 만든다.
+add_namespace = tfrkphn
+country_event = {
+	id = tfrkphn.7306
+	title = tfrkphn.7306.t
+	desc = tfrkphn.7306.d
+	picture = GFX_TFRKPHN_chop_7177
+	is_triggered_only = yes
+	option = {
+		name = tfrkphn.7306.a
+		add_stability = -0.03
+		custom_effect_tooltip = TFRKPHN_kb_crash_tt
+		add_to_variable = { TFRKPHN_kv_labor = -5 }
+		TFRKPHN_kv_refresh = yes
+	}
+}
