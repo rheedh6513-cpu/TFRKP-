@@ -7,7 +7,7 @@ on_actions = {
 					original_tag = KOR
 					NOT = { has_country_flag = TFRKPHN_gaw_in }
 					NOT = { has_country_flag = TFRKPHN_ru_pdto_out }	# 러시아식 엔딩에서 PDTO를 나간 정권은 뺀다 (ru_end.py)
-					OR = { has_global_flag = TFRKP_GAW_is_started_flag AND = { country_exists = JAP country_exists = PRC JAP = { has_war_with = PRC } } }
+					OR = { has_global_flag = TFRKP_GAW_is_started_flag AND = { country_exists = JAP country_exists = PRC JAP = { has_war_with = PRC } NOT = { AND = { has_global_flag = PRC_ongoing_taiwan_war NOT = { has_global_flag = PRC_taiwan_war_won } NOT = { has_global_flag = PRC_taiwan_war_lost } } } } }	# 양안전 중 일중 전쟁은 대아대전이 아니다
 					NOT = { has_global_flag = PRC_japanese_gaw_victory_global }
 					NOT = { has_global_flag = PRC_chinese_gaw_victory_global }
 				}
@@ -24,7 +24,7 @@ on_actions = {
 					country_event = { id = tfrkphn.7254 hours = 6 }
 				}
 				if = {
-					limit = { country_exists = PRC NOT = { has_war_with = PRC } JAP = { has_war_with = PRC } }
+					limit = { country_exists = PRC NOT = { has_war_with = PRC } JAP = { has_war_with = PRC } NOT = { AND = { has_global_flag = PRC_ongoing_taiwan_war NOT = { has_global_flag = PRC_taiwan_war_won } NOT = { has_global_flag = PRC_taiwan_war_lost } } } }
 					declare_war_on = { target = PRC type = annex_everything }
 				}
 			}

@@ -81,6 +81,7 @@ on_actions = {
 					has_country_flag = TFRKPHN_kju_op_done
 					has_war_with = PRC
 					NOT = { has_global_flag = TFRKP_GAW_is_started_flag }
+					NOT = { AND = { has_global_flag = PRC_ongoing_taiwan_war NOT = { has_global_flag = PRC_taiwan_war_won } NOT = { has_global_flag = PRC_taiwan_war_lost } } }	# 양안전 중에는 대아대전이 아니다 (taiwan_fix.py)
 				}
 				set_global_flag = TFRKP_GAW_is_started_flag
 				news_event = { id = tfrkphn.253 }
