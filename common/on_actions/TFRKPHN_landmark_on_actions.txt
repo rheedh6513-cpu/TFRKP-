@@ -6,7 +6,7 @@ on_actions = {
 				limit = { NOT = { has_global_flag = TFRKPHN_landmarks_built } }
 				set_global_flag = TFRKPHN_landmarks_built
 				1041 = { add_building_construction = { type = landmark_tfrkphn_namsan_tower level = 1 province = 13692 instant_build = yes } }
-				1041 = { add_building_construction = { type = landmark_tfrkphn_gyeongbokgung level = 1 province = 13693 instant_build = yes } }
+				1041 = { add_building_construction = { type = landmark_tfrkphn_gyeongbokgung level = 1 province = 13695 instant_build = yes } }
 				1409 = { add_building_construction = { type = landmark_tfrkphn_busan_tower level = 1 province = 4056 instant_build = yes } }
 				1409 = { add_building_construction = { type = landmark_tfrkphn_gwangan_bridge level = 1 province = 4056 instant_build = yes } }
 			}
