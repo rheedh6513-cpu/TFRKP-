@@ -17,9 +17,8 @@ state={
 			arms_factory = 1
 			air_base = 2
 			dockyard = 1
-			4056 = { naval_base = 6 }
+			4056 = { naval_base = 6 landmark_tfrkphn_busan_tower = 1 }	# 랜드마크를 같은 칸에 (lm_build.py)
 			nuclear_reactor = 1
-			4056 = { landmark_tfrkphn_busan_tower = 1 }	# 랜드마크 (lm_build.py)
 		}
 		victory_points = {
 			4056 30 
