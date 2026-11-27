@@ -55,7 +55,7 @@ country_event = {
 	id = tfrkphn.7006
 	title = tfrkphn.7006.t
 	desc = TFRKPHN_lg_7006_a
-	picture = GFX_report_event_kim_death
+	picture = GFX_TFRKPHN_ph_7006
 	is_triggered_only = yes
 	immediate = {
 		hidden_effect = {
@@ -76,7 +76,7 @@ news_event = {
 	id = tfrkphn.7007
 	title = tfrkphn.7006.t
 	desc = TFRKPHN_lg_7007_a
-	picture = GFX_news_event_kor_news_14
+	picture = GFX_TFRKPHN_ph_7007
 	major = yes
 	is_triggered_only = yes
 	option = { name = kor_news.14.o1 trigger = { OR = { is_in_faction_with = KOR original_tag = KOR } } }
@@ -88,7 +88,7 @@ country_event = {
 	id = tfrkphn.7015
 	title = tfrkphn.7015.t
 	desc = TFRKPHN_lg_7015_a
-	picture = GFX_TFRKPHN_kju_hague
+	picture = GFX_TFRKPHN_ph_7015
 	is_triggered_only = yes
 	option = {
 		name = TFRKPHN_lg_next
@@ -100,7 +100,7 @@ country_event = {
 	title = tfrkphn.7016.t
 	desc = { trigger = { has_country_flag = TFRKPHN_kju_seek_death } text = tfrkphn.7016.d }
 	desc = { trigger = { NOT = { has_country_flag = TFRKPHN_kju_seek_death } } text = tfrkphn.7016.d2 }
-	picture = GFX_TFRKPHN_kju_seoul
+	picture = GFX_TFRKPHN_ph_7016
 	is_triggered_only = yes
 	option = { name = tfrkphn.7016.a trigger = { has_country_flag = TFRKPHN_kju_seek_death } add_war_support = 0.02 add_political_power = 30 hidden_effect = { set_country_flag = TFRKPHN_kju_v_death } }
 	option = { name = tfrkphn.7016.b trigger = { NOT = { has_country_flag = TFRKPHN_kju_seek_death } } add_stability = 0.02 add_political_power = 30 hidden_effect = { set_country_flag = TFRKPHN_kju_v_life } }

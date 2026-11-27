@@ -1,0 +1,6 @@
+# [안내] 보수 정당 목록의 우리공화당 줄. 우익 정당 칸(KOR_NatAsm_ORP_seats)이 있으면 비운다. taiwan_fix.py가 만든다.
+defined_text = {
+	name = TFRKPHN_PPP_orp
+	text = { trigger = { has_variable = KOR_NatAsm_ORP_seats } localization_key = TFRKPHN_NA_empty }
+	text = { localization_key = TFRKPHN_PPP_orp_kp }
+}

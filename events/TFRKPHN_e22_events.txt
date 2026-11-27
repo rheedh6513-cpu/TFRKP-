@@ -6,7 +6,7 @@ country_event = {
 	id = tfrkphn.1001
 	title = korea.122.t
 	desc = korea.122.desc
-	picture = GFX_report_event_yoon_joon
+	picture = GFX_TFRKPHN_ph_1001
 	is_triggered_only = yes
 
 	option = {
@@ -32,7 +32,7 @@ country_event = {
 	id = tfrkphn.1003
 	title = korea.123.t
 	desc = korea.123.desc
-	picture = GFX_report_event_yoon_suncheon
+	picture = GFX_TFRKPHN_ph_1003
 	is_triggered_only = yes
 
 	immediate = {
@@ -80,7 +80,7 @@ country_event = {
 	id = tfrkphn.1005
 	title = korea.124.t
 	desc = korea.124.desc
-	picture = GFX_report_event_yoon_sim_mistake
+	picture = GFX_TFRKPHN_ph_1005
 	is_triggered_only = yes
 
 	immediate = {
@@ -128,7 +128,7 @@ country_event = {
 	id = tfrkphn.1007
 	title = korea.116.t
 	desc = korea.116.desc
-	picture = GFX_report_event_working_jm
+	picture = GFX_TFRKPHN_ph_1007
 	is_triggered_only = yes
 
 	immediate = {
@@ -172,7 +172,7 @@ country_event = {
 	id = tfrkphn.1009
 	title = korea.281.t
 	desc = korea.281.d
-	picture = GFX_report_event_281
+	picture = GFX_TFRKPHN_ph_1009
 
 	is_triggered_only = yes
 	immediate = {
@@ -206,7 +206,7 @@ country_event = {
 	id = tfrkphn.1011
 	title = korea.282.t
 	desc = korea.282.d
-	picture = GFX_report_event_282
+	picture = GFX_TFRKPHN_ph_1011
 	is_triggered_only = yes
 
 	immediate = {
@@ -250,7 +250,7 @@ country_event = {
 	id = tfrkphn.1013
 	title = korea.283.t
 	desc = korea.283.d
-	picture = GFX_report_event_283
+	picture = GFX_TFRKPHN_ph_1013
 	is_triggered_only = yes
 
 	immediate = {
@@ -286,7 +286,7 @@ country_event = {
 	id = tfrkphn.1015
 	title = korea.284.t
 	desc = korea.284.d
-	picture = GFX_report_event_284
+	picture = GFX_TFRKPHN_ph_1015
 	is_triggered_only = yes
 
 	immediate = {
@@ -322,7 +322,7 @@ country_event = {
 	id = tfrkphn.1017
 	title = korea.285.t
 	desc = korea.285.d
-	picture = GFX_report_event_285
+	picture = GFX_TFRKPHN_ph_1017
 	is_triggered_only = yes
 
 	immediate = {
@@ -354,7 +354,7 @@ country_event = {
 	id = tfrkphn.1019
 	title = korea.286.t
 	desc = korea.286.d
-	picture = GFX_report_event_286
+	picture = GFX_TFRKPHN_ph_1019
 	is_triggered_only = yes
 
 	immediate = {
@@ -386,7 +386,7 @@ country_event = {
 	id = tfrkphn.1021
 	title = korea.287.t
 	desc = korea.287.d
-	picture = GFX_report_event_287
+	picture = GFX_TFRKPHN_ph_1021
 	is_triggered_only = yes
 
 	immediate = {
@@ -420,7 +420,7 @@ country_event = {
 	id = tfrkphn.1023
 	title = korea.288.t
 	desc = korea.288.d
-	picture = GFX_report_event_288
+	picture = GFX_TFRKPHN_ph_1023
 	is_triggered_only = yes
 
 	immediate = {
@@ -456,7 +456,7 @@ country_event = {
 	id = tfrkphn.1025
 	title = korea.289.t
 	desc = korea.289.d
-	picture = GFX_report_event_289
+	picture = GFX_TFRKPHN_ph_1025
 	is_triggered_only = yes
 
 	immediate = {
@@ -492,7 +492,7 @@ country_event = {
 	id = tfrkphn.1027
 	title = korea.290.t
 	desc = korea.290.d
-	picture = GFX_report_event_290
+	picture = GFX_TFRKPHN_ph_1027
 	is_triggered_only = yes
 
 	immediate = {

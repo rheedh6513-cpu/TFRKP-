@@ -2678,7 +2678,7 @@ country_event = {
 	id = tfrkphn.241
 	title = tfrkphn.241.t
 	desc = TFRKPHN_lg_241_a
-	picture = GFX_report_event_ppp_ge_win
+	picture = GFX_TFRKPHN_ph_241
 	is_triggered_only = yes
 	immediate = { hidden_effect = { if = { limit = { has_country_flag = TFRKPHN_successor_lee_in_je } news_event = { id = tfrkphn.7018 hours = 6 } } else_if = { limit = { has_country_flag = TFRKPHN_successor_oh_se_hoon } news_event = { id = tfrkphn.7019 hours = 6 } } } }	# 재선 세계 뉴스 (elec27_news.py)
 	option = {

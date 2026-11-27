@@ -4,7 +4,7 @@ country_event = {
 	id = tfrkphn.7314
 	title = tfrkphn.7314.t
 	desc = tfrkphn.7314.d
-	picture = GFX_TFRKPHN_ledger_party
+	picture = GFX_TFRKPHN_ph_7314
 	fire_only_once = yes
 	is_triggered_only = yes
 	trigger = { has_country_flag = TFRKP_HN_hong_president NOT = { has_country_flag = TFRKPHN_imp_done } }
@@ -47,7 +47,7 @@ country_event = {
 	id = tfrkphn.7315
 	title = tfrkphn.7315.t
 	desc = tfrkphn.7315.d
-	picture = GFX_TFRKPHN_kuk
+	picture = GFX_TFRKPHN_ph_7315
 	fire_only_once = yes
 	is_triggered_only = yes
 	trigger = { has_country_flag = TFRKP_HN_hong_president NOT = { has_country_flag = TFRKPHN_imp_done } }

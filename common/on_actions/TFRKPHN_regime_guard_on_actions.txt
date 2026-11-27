@@ -22,6 +22,8 @@ on_actions = {
 			}
 			# 탄핵 뒤: 홍준표는 지도자 자리에 남지 않는다
 			if = { limit = { has_country_flag = TFRKPHN_imp_done has_country_leader = { character = KOR_hong_joon_pyo_char ruling_only = yes } } KOR_hong_joon_pyo_char = { remove_country_leader_role = { ideology = korean_neoconservatism } } }
+			# KP의 빈자리 인물(KOR_vacant_char, 이름 「공석」)이 시작부터 중도 정당 대표로 들어 있다. 우원식 정부처럼 그 정당이 집권하면 공석이 지도자로 앉는 일이 있어(사용자 2026-11-27 17시 6분 화면), 이 모드에서는 어느 루트에서든 공석이 집권 지도자가 되면 바로 내린다 (홍준표, 이낙연, 2027 대선 뒤 정권 모두)
+			if = { limit = { has_country_leader = { character = KOR_vacant_char ruling_only = yes } } KOR_vacant_char = { remove_country_leader_role = { ideology = centrist } remove_country_leader_role = { ideology = social_democracy } remove_country_leader_role = { ideology = neoconservative } remove_country_leader_role = { ideology = civic_nationalism } remove_country_leader_role = { ideology = ultra_conservatism } } }
 			# 탄핵 뒤 정권 사슬: 위에 있는 정권이 먼저다 (3김 총리, 우원식, 안철수, 심상정, 김진태 몰락 뒤 우원식, 김문수, 김진태, 조원진, 권한대행 이인제)
 			if = { limit = { has_country_flag = TFRKPHN_imp_done NOT = { has_country_flag = TFRKPHN_samkim_end } }
 				if = { limit = { has_country_flag = TFRKPHN_samkim_kms_pm } if = { limit = { NOT = { has_character = KOR_TFRKPHN_kms_char } } recruit_character = KOR_TFRKPHN_kms_char } KOR_TFRKPHN_kms_char = { promote_character = korean_neoconservatism } }
@@ -33,6 +35,7 @@ on_actions = {
 				else_if = { limit = { has_country_flag = TFRKPHN_kjt_fallen } if = { limit = { NOT = { has_character = KOR_TFRKPHN_woo_won_shik_char } } recruit_character = KOR_TFRKPHN_woo_won_shik_char } KOR_TFRKPHN_woo_won_shik_char = { promote_character = cooperative_democracy_liberal } }
 				else_if = { limit = { has_country_flag = TFRKPHN_kmu_pres has_character = KOR_kim_moon_soo_char } KOR_kim_moon_soo_char = { promote_character = ultra_conservatism } }
 				else_if = { limit = { has_country_flag = TFRKPHN_kjt_pres } if = { limit = { NOT = { has_character = KOR_TFRKPHN_kim_jin_tae_char } } recruit_character = KOR_TFRKPHN_kim_jin_tae_char } KOR_TFRKPHN_kim_jin_tae_char = { promote_character = ultra_conservatism } }
+				else_if = { limit = { has_country_flag = TFRKPHN_cho_suspended NOT = { has_country_flag = TFRKPHN_cho_removed } } if = { limit = { NOT = { has_character = KOR_TFRKPHN_hmj_char } } recruit_character = KOR_TFRKPHN_hmj_char } KOR_TFRKPHN_hmj_char = { promote_character = ultra_conservatism } }	# 탄핵소추로 직무정지된 조원진 대신 홍문종 총리가 권한대행 (2026-11-27)
 				else_if = { limit = { has_country_flag = TFRKPHN_e21_cho NOT = { has_country_flag = TFRKPHN_cho_removed } has_character = KOR_cho_won_jin_char } KOR_cho_won_jin_char = { promote_character = ultra_conservatism } }
 				else_if = { limit = { always = yes has_character = KOR_lee_in_je_char } KOR_lee_in_je_char = { promote_character = korean_neoconservatism } }
 			}

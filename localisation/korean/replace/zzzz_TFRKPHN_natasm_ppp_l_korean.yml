@@ -1,0 +1,4 @@
+﻿l_korean:
+ # [안내] 보수 정당 설명: 우리공화당이 우익 정당으로 따로 있을 때는 보수 목록에서 뺀다. taiwan_fix.py가 만든다.
+ KOR_PPP_Party_desc:0 "[GetNatAsmPartyName]\n\n\n\n\n£GFX_NA_ppp_banner_texticon\n\n\n\n\n\n£GFX_KOR_PPP_texticon §A보수정당§!§L의 계보는 1990년 '3당 합당'에서 그 기원을 찾습니다. 당시 군부정권을 계승한 민주정의당, 민주화 세력인 김영삼, 김종필의 세력이 합당하여 거대 여당은 민주자유당을 창당한 것이 시작입니다. 현재 [GetNamePPPLoc]이 §A보수정당§!§L을 이끌고 있으며 이들은 '자유민주주의' '법치주의'의 가치를 내세우고 있으며, 굳건한 한미동맹을 외교 안보정책의 최우선 근간으로 삼고 있습니다.§!\n§W------------§!\n§A원내 보수 정당 목록§!\n[GetNamePPPLoc][TFRKPHN_PPP_orp]"
+ TFRKPHN_PPP_orp_kp:0 "\n[GetNameORPLoc]"

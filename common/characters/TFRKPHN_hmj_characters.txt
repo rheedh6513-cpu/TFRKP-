@@ -1,0 +1,14 @@
+# [안내] 홍문종 권한대행. hmj_build.py가 만든다.
+characters = {
+	KOR_TFRKPHN_hmj_char = {
+		name = KOR_TFRKPHN_hmj_char
+		portraits = { civilian = { large = GFX_portrait_TFRKPHN_hong_moon_jong } }
+		country_leader = {
+			desc = TFRKPHN_hmj_desc
+			traits = { TFRKPHN_trait_orp_coleader }
+			ideology = ultra_conservatism
+			expire = "2065.1.1"
+			id = -1
+		}
+	}
+}

@@ -15,10 +15,12 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_TFRKPHN_orp_texticon"
 		texturefile = "gfx/interface/GUI/TFRKPHN_natasm/orp_texticon.png"
+		legacy_lazy_load = no
 	}
 	spriteType = {
 		name = "GFX_TFRKPHN_orp_party_texticon"
 		texturefile = "gfx/interface/GUI/TFRKPHN_natasm/orp_party_texticon.png"
+		legacy_lazy_load = no
 	}
 	spriteType = {
 		name = "GFX_TFRKPHN_NatAsm_party_icon"
