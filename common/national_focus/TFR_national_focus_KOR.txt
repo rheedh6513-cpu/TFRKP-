@@ -20426,8 +20426,8 @@ shared_focus = {
 		y = -2
 		trigger = { has_focus_tree = TFRKPHN_woo_tree }
 	}
-	offset = {	# [홍낙] 우리공화당 트리에서는 트리 오른쪽 바깥(29, 0)에 놓는다 (cho_army.py)
-		x = 42
+	offset = {	# [홍낙] 우리공화당 트리에서는 트리 오른쪽 바깥(35, 0)에 놓는다 (cho_army.py, 오른쪽으로 6칸)
+		x = 48
 		y = -2
 		trigger = { has_focus_tree = TFRKPHN_cho_tree }
 	}
@@ -21615,9 +21615,9 @@ shared_focus = {
 		x = 9
 		y = 2
 	}
-	offset = {	# [홍낙] 우리공화당 트리: 국방개혁 가지 아래 (29, 11) (cho_army.py)
+	offset = {	# [홍낙] 우리공화당 트리: 국방개혁 가지 아래 (35, 11) (cho_army.py, 오른쪽으로 6칸)
 		trigger = { has_focus_tree = TFRKPHN_cho_tree }
-		x = 18
+		x = 24
 		y = 2
 	}
 	offset = {	# 이인제, 오세훈 트리: 군사 가지(38~51, 0~9) 아래 (44, 11). 사용자 2026-11-20 "아래에 위치하게". 예전 (42, 0)은 군사 가지와 겹쳤다 (2026-11-20 화면)

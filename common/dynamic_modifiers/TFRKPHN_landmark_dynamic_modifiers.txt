@@ -1,0 +1,5 @@
+# [안내] 평양 류경호텔을 대한민국이 차지했을 때의 효과. lm_build.py가 만든다.
+TFRKPHN_ryugyong_kor = {
+	icon = GFX_idea_KOR_yoon_common_conservatism_dynamic_modifir_idea
+	stability_factor = 0.03
+}

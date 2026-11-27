@@ -49,8 +49,8 @@ country_event = {
 country_event = {
 	id = tfrkphn.6738
 	title = tfrkphn.6738.t
-	desc = { text = tfrkphn.6738.d trigger = { has_country_flag = TFRKPHN_gj_by_mega } }
-	desc = { text = tfrkphn.6738.d2 trigger = { NOT = { has_country_flag = TFRKPHN_gj_by_mega } } }
+	desc = { text = tfrkphn.6738.d trigger = { check_variable = { TFRKPHN_mega_s3 > 1.5 } } }
+	desc = { text = tfrkphn.6738.d2 trigger = { NOT = { check_variable = { TFRKPHN_mega_s3 > 1.5 } } } }
 	picture = GFX_TFRKPHN_le30_6738
 	is_triggered_only = yes
 	option = {

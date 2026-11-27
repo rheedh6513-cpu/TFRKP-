@@ -143,6 +143,8 @@ country_event = {
 			set_country_flag = TFRKPHN_cho2_end
 			set_country_flag = TFRKPHN_kjt_fallen
 			if = { limit = { NOT = { has_character = KOR_TFRKPHN_woo_won_shik_char } } recruit_character = KOR_TFRKPHN_woo_won_shik_char }
+			set_politics = { ruling_party = social_liberal elections_allowed = yes }	# 우원식 과도 정부 (route_fix_woo, taiwan_fix.py)
+			end_coalition = yes
 			KOR_TFRKPHN_woo_won_shik_char = { promote_character = cooperative_democracy_liberal }
 		}
 	}

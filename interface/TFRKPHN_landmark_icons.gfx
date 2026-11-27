@@ -8,4 +8,12 @@ spriteTypes = {
 	spriteType = { name = "GFX_tfrkphn_busan_tower_icon" texturefile = "gfx/interface/buildings/TFRKPHN/tfrkphn_busan_tower_icon.png" noOfFrames = 2 }
 	spriteType = { name = "GFX_tfrkphn_gwangan_bridge_icon_small" texturefile = "gfx/interface/buildings/TFRKPHN/tfrkphn_gwangan_bridge_icon_small.png" noOfFrames = 2 }
 	spriteType = { name = "GFX_tfrkphn_gwangan_bridge_icon" texturefile = "gfx/interface/buildings/TFRKPHN/tfrkphn_gwangan_bridge_icon.png" noOfFrames = 2 }
+	spriteType = { name = "GFX_tfrkphn_ryugyong_icon_small" texturefile = "gfx/interface/buildings/TFRKPHN/tfrkphn_ryugyong_icon_small.png" noOfFrames = 2 }
+	spriteType = { name = "GFX_tfrkphn_ryugyong_icon" texturefile = "gfx/interface/buildings/TFRKPHN/tfrkphn_ryugyong_icon.png" noOfFrames = 2 }
+	spriteType = { name = "GFX_tfrkphn_daegu83_icon_small" texturefile = "gfx/interface/buildings/TFRKPHN/tfrkphn_daegu83_icon_small.png" noOfFrames = 2 }
+	spriteType = { name = "GFX_tfrkphn_daegu83_icon" texturefile = "gfx/interface/buildings/TFRKPHN/tfrkphn_daegu83_icon.png" noOfFrames = 2 }
+	spriteType = { name = "GFX_tfrkphn_gwangju518_icon_small" texturefile = "gfx/interface/buildings/TFRKPHN/tfrkphn_gwangju518_icon_small.png" noOfFrames = 2 }
+	spriteType = { name = "GFX_tfrkphn_gwangju518_icon" texturefile = "gfx/interface/buildings/TFRKPHN/tfrkphn_gwangju518_icon.png" noOfFrames = 2 }
+	spriteType = { name = "GFX_tfrkphn_hanbit_icon_small" texturefile = "gfx/interface/buildings/TFRKPHN/tfrkphn_hanbit_icon_small.png" noOfFrames = 2 }
+	spriteType = { name = "GFX_tfrkphn_hanbit_icon" texturefile = "gfx/interface/buildings/TFRKPHN/tfrkphn_hanbit_icon.png" noOfFrames = 2 }
 }

@@ -1,0 +1,27 @@
+state={
+	id=1411
+	name="STATE_1411"
+	provinces={
+		14234 4086
+	}
+	history={
+		owner = KOR
+		add_core_of = KOR
+		add_claim_by = PRK
+		buildings = {
+			infrastructure = 3
+			air_base = 2
+			industrial_complex = 2
+			arms_factory = 1
+			14234 = { landmark_tfrkphn_daegu83 = 1 }	# 랜드마크 (lm_build.py)
+		}
+		victory_points = {
+			14234 10
+		}
+	}
+
+	manpower=2460980
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

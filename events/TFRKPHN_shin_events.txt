@@ -1,0 +1,60 @@
+# [안내] 국가수사국의 첫 사건: 2021년 경선 신천지 집단 입당 의혹 (shin_build.py)
+add_namespace = tfrkphn
+country_event = {
+	id = tfrkphn.7314
+	title = tfrkphn.7314.t
+	desc = tfrkphn.7314.d
+	picture = GFX_TFRKPHN_ledger_party
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = { has_country_flag = TFRKP_HN_hong_president NOT = { has_country_flag = TFRKPHN_imp_done } }
+	option = {
+		name = tfrkphn.7314.a
+		custom_effect_tooltip = TFRKPHN_shin_a_tt
+		add_political_power = 40
+		add_stability = -0.03
+		hidden_effect = { country_event = { id = tfrkphn.7316 days = 3 } }
+	}
+	option = {
+		name = tfrkphn.7314.b
+		custom_effect_tooltip = TFRKPHN_shin_b_tt
+		add_political_power = -30
+		add_stability = 0.02
+	}
+}
+country_event = {
+	id = tfrkphn.7316
+	title = tfrkphn.7316.t
+	desc = tfrkphn.7316.d
+	picture = GFX_TFRKPHN_crime_raid
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = { has_country_flag = TFRKP_HN_hong_president NOT = { has_country_flag = TFRKPHN_imp_done } }
+	option = {
+		name = tfrkphn.7316.a
+		custom_effect_tooltip = TFRKPHN_shin_d_tt
+		add_stability = -0.02
+		set_country_flag = TFRKPHN_shin_seized
+		hidden_effect = { country_event = { id = tfrkphn.7315 days = 40 } }
+	}
+	option = {
+		name = tfrkphn.7316.b
+		custom_effect_tooltip = TFRKPHN_shin_e_tt
+		add_political_power = -40
+	}
+}
+country_event = {
+	id = tfrkphn.7315
+	title = tfrkphn.7315.t
+	desc = tfrkphn.7315.d
+	picture = GFX_TFRKPHN_kuk
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = { has_country_flag = TFRKP_HN_hong_president NOT = { has_country_flag = TFRKPHN_imp_done } }
+	option = {
+		name = tfrkphn.7315.a
+		custom_effect_tooltip = TFRKPHN_shin_c_tt
+		add_stability = 0.02
+		add_political_power = 25
+	}
+}

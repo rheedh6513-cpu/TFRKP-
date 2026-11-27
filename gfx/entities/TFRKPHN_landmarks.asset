@@ -67,3 +67,71 @@ entity = {
 	}
 	scale = 0.11
 }
+entity = {
+	name = "building_landmark_tfrkphn_ryugyong"
+	pdxmesh = "tfrkphn_ryugyong_mesh"
+	default_state = "idle"
+	state = { name = "idle" animation_blend_time = 0.3 looping = no }
+	scale = 0.18
+}
+entity = {
+	name = "building_landmark_tfrkphn_ryugyong_destroyed"
+	pdxmesh = "tfrkphn_ryugyong_mesh"
+	default_state = "idle"
+	state = { name = "idle" animation_blend_time = 0.3 looping = no }
+	state = { name = "destroy" animation_blend_time = 0.0 looping = no
+		event = { time = 0 particle = "building_explode_effect" keep_particle = yes }
+	}
+	scale = 0.18
+}
+entity = {
+	name = "building_landmark_tfrkphn_daegu83"
+	pdxmesh = "tfrkphn_daegu83_mesh"
+	default_state = "idle"
+	state = { name = "idle" animation_blend_time = 0.3 looping = no }
+	scale = 0.2
+}
+entity = {
+	name = "building_landmark_tfrkphn_daegu83_destroyed"
+	pdxmesh = "tfrkphn_daegu83_mesh"
+	default_state = "idle"
+	state = { name = "idle" animation_blend_time = 0.3 looping = no }
+	state = { name = "destroy" animation_blend_time = 0.0 looping = no
+		event = { time = 0 particle = "building_explode_effect" keep_particle = yes }
+	}
+	scale = 0.2
+}
+entity = {
+	name = "building_landmark_tfrkphn_gwangju518"
+	pdxmesh = "tfrkphn_gwangju518_mesh"
+	default_state = "idle"
+	state = { name = "idle" animation_blend_time = 0.3 looping = no }
+	scale = 0.2
+}
+entity = {
+	name = "building_landmark_tfrkphn_gwangju518_destroyed"
+	pdxmesh = "tfrkphn_gwangju518_mesh"
+	default_state = "idle"
+	state = { name = "idle" animation_blend_time = 0.3 looping = no }
+	state = { name = "destroy" animation_blend_time = 0.0 looping = no
+		event = { time = 0 particle = "building_explode_effect" keep_particle = yes }
+	}
+	scale = 0.2
+}
+entity = {
+	name = "building_landmark_tfrkphn_hanbit"
+	pdxmesh = "tfrkphn_hanbit_mesh"
+	default_state = "idle"
+	state = { name = "idle" animation_blend_time = 0.3 looping = no }
+	scale = 0.2
+}
+entity = {
+	name = "building_landmark_tfrkphn_hanbit_destroyed"
+	pdxmesh = "tfrkphn_hanbit_mesh"
+	default_state = "idle"
+	state = { name = "idle" animation_blend_time = 0.3 looping = no }
+	state = { name = "destroy" animation_blend_time = 0.0 looping = no
+		event = { time = 0 particle = "building_explode_effect" keep_particle = yes }
+	}
+	scale = 0.2
+}

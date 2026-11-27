@@ -100,4 +100,104 @@ buildings = {
 			}
 		}
 	}
+	landmark_tfrkphn_ryugyong = {
+		show_on_map = 1
+		base_cost = 20000
+		damage_factor = 0
+		icon_frame = 22
+		value = 5
+		is_buildable = no
+		disable_grow_animation = yes
+		spawn_point = landmark_spawn
+		repair_speed_factor = 0.15
+		only_display_if_exists = yes
+		special_icon = GFX_tfrkphn_ryugyong_icon_small
+		level_cap = {
+			province_max = 1
+		}
+		always_shown = yes
+		drawn_at_distance = yes
+		show_modifier = yes
+		country_modifiers = {
+			enable_for_controllers = { PRK }
+			modifiers = {
+				political_power_factor = 0.03
+			}
+		}
+	}
+	landmark_tfrkphn_daegu83 = {
+		show_on_map = 1
+		base_cost = 20000
+		damage_factor = 0
+		icon_frame = 22
+		value = 5
+		is_buildable = no
+		disable_grow_animation = yes
+		spawn_point = landmark_spawn
+		repair_speed_factor = 0.15
+		only_display_if_exists = yes
+		special_icon = GFX_tfrkphn_daegu83_icon_small
+		level_cap = {
+			province_max = 1
+		}
+		always_shown = yes
+		drawn_at_distance = yes
+		show_modifier = yes
+		country_modifiers = {
+			enable_for_controllers = { KOR }
+			modifiers = {
+				political_power_factor = 0.02
+			}
+		}
+	}
+	landmark_tfrkphn_gwangju518 = {
+		show_on_map = 1
+		base_cost = 20000
+		damage_factor = 0
+		icon_frame = 22
+		value = 5
+		is_buildable = no
+		disable_grow_animation = yes
+		spawn_point = landmark_spawn
+		repair_speed_factor = 0.15
+		only_display_if_exists = yes
+		special_icon = GFX_tfrkphn_gwangju518_icon_small
+		level_cap = {
+			province_max = 1
+		}
+		always_shown = yes
+		drawn_at_distance = yes
+		show_modifier = yes
+		country_modifiers = {
+			enable_for_controllers = { KOR }
+			modifiers = {
+				stability_factor = 0.03
+			}
+		}
+	}
+	landmark_tfrkphn_hanbit = {
+		show_on_map = 1
+		base_cost = 20000
+		damage_factor = 0
+		icon_frame = 22
+		value = 5
+		is_buildable = no
+		disable_grow_animation = yes
+		spawn_point = landmark_spawn
+		repair_speed_factor = 0.15
+		only_display_if_exists = yes
+		special_icon = GFX_tfrkphn_hanbit_icon_small
+		level_cap = {
+			province_max = 1
+		}
+		always_shown = yes
+		drawn_at_distance = yes
+		show_modifier = yes
+		country_modifiers = {
+			enable_for_controllers = { KOR }
+			modifiers = {
+				research_speed_factor = 0.02
+			}
+		}
+	}
 }

@@ -6,9 +6,9 @@ objectTypes = {
 		meshsettings = {
 			name = "tfrkphn_namsan_towerShape"
 			index = 0
-			texture_diffuse = "tfrkphn_namsan_tower_diffuse.dds"
-			texture_normal = "tfrkphn_namsan_tower_normal.dds"
-			texture_specular = "tfrkphn_namsan_tower_specular.dds"
+			texture_diffuse = "tfrkphn_lm_atlas_diffuse.dds"
+			texture_normal = "tfrkphn_lm_atlas_normal.dds"
+			texture_specular = "tfrkphn_lm_atlas_specular.dds"
 			shader = "PdxMeshAdvancedSnow"
 		}
 	}
@@ -18,9 +18,9 @@ objectTypes = {
 		meshsettings = {
 			name = "tfrkphn_gyeongbokgungShape"
 			index = 0
-			texture_diffuse = "tfrkphn_gyeongbokgung_diffuse.dds"
-			texture_normal = "tfrkphn_gyeongbokgung_normal.dds"
-			texture_specular = "tfrkphn_gyeongbokgung_specular.dds"
+			texture_diffuse = "tfrkphn_lm_atlas_diffuse.dds"
+			texture_normal = "tfrkphn_lm_atlas_normal.dds"
+			texture_specular = "tfrkphn_lm_atlas_specular.dds"
 			shader = "PdxMeshAdvancedSnow"
 		}
 	}
@@ -30,9 +30,9 @@ objectTypes = {
 		meshsettings = {
 			name = "tfrkphn_busan_towerShape"
 			index = 0
-			texture_diffuse = "tfrkphn_busan_tower_diffuse.dds"
-			texture_normal = "tfrkphn_busan_tower_normal.dds"
-			texture_specular = "tfrkphn_busan_tower_specular.dds"
+			texture_diffuse = "tfrkphn_lm_atlas_diffuse.dds"
+			texture_normal = "tfrkphn_lm_atlas_normal.dds"
+			texture_specular = "tfrkphn_lm_atlas_specular.dds"
 			shader = "PdxMeshAdvancedSnow"
 		}
 	}
@@ -42,9 +42,57 @@ objectTypes = {
 		meshsettings = {
 			name = "tfrkphn_gwangan_bridgeShape"
 			index = 0
-			texture_diffuse = "tfrkphn_gwangan_bridge_diffuse.dds"
-			texture_normal = "tfrkphn_gwangan_bridge_normal.dds"
-			texture_specular = "tfrkphn_gwangan_bridge_specular.dds"
+			texture_diffuse = "tfrkphn_lm_atlas_diffuse.dds"
+			texture_normal = "tfrkphn_lm_atlas_normal.dds"
+			texture_specular = "tfrkphn_lm_atlas_specular.dds"
+			shader = "PdxMeshAdvancedSnow"
+		}
+	}
+	pdxmesh = {
+		name = "tfrkphn_ryugyong_mesh"
+		file = "gfx/models/buildings/landmarks/TFRKPHN/tfrkphn_ryugyong.mesh"
+		meshsettings = {
+			name = "tfrkphn_ryugyongShape"
+			index = 0
+			texture_diffuse = "tfrkphn_lm_atlas_diffuse.dds"
+			texture_normal = "tfrkphn_lm_atlas_normal.dds"
+			texture_specular = "tfrkphn_lm_atlas_specular.dds"
+			shader = "PdxMeshAdvancedSnow"
+		}
+	}
+	pdxmesh = {
+		name = "tfrkphn_daegu83_mesh"
+		file = "gfx/models/buildings/landmarks/TFRKPHN/tfrkphn_daegu83.mesh"
+		meshsettings = {
+			name = "tfrkphn_daegu83Shape"
+			index = 0
+			texture_diffuse = "tfrkphn_lm_atlas_diffuse.dds"
+			texture_normal = "tfrkphn_lm_atlas_normal.dds"
+			texture_specular = "tfrkphn_lm_atlas_specular.dds"
+			shader = "PdxMeshAdvancedSnow"
+		}
+	}
+	pdxmesh = {
+		name = "tfrkphn_gwangju518_mesh"
+		file = "gfx/models/buildings/landmarks/TFRKPHN/tfrkphn_gwangju518.mesh"
+		meshsettings = {
+			name = "tfrkphn_gwangju518Shape"
+			index = 0
+			texture_diffuse = "tfrkphn_lm_atlas_diffuse.dds"
+			texture_normal = "tfrkphn_lm_atlas_normal.dds"
+			texture_specular = "tfrkphn_lm_atlas_specular.dds"
+			shader = "PdxMeshAdvancedSnow"
+		}
+	}
+	pdxmesh = {
+		name = "tfrkphn_hanbit_mesh"
+		file = "gfx/models/buildings/landmarks/TFRKPHN/tfrkphn_hanbit.mesh"
+		meshsettings = {
+			name = "tfrkphn_hanbitShape"
+			index = 0
+			texture_diffuse = "tfrkphn_lm_atlas_diffuse.dds"
+			texture_normal = "tfrkphn_lm_atlas_normal.dds"
+			texture_specular = "tfrkphn_lm_atlas_specular.dds"
 			shader = "PdxMeshAdvancedSnow"
 		}
 	}

@@ -205,6 +205,7 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = TFRKPHN_lg_next
+		hidden_effect = { country_event = { id = tfrkphn.7314 days = 20 } }	# 신천지 경선 수사 (shin_build.py)
 		hidden_effect = { country_event = { id = tfrkphn.8002 } }
 	}
 }

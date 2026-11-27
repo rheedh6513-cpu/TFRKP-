@@ -1,0 +1,46 @@
+# [안내] 정권 지킴이: 누가 지도자인가, 연립을 하는가. 매일 한 번 이 파일에서만 정한다. regime_guard.py가 만든다.
+# 정권 순서: 홍준표 -> (탄핵) 권한대행 이인제 -> 우리공화당(조원진, 김진태, 김문수) -> 우원식, 3김 / (2027 대선) 이인제, 오세훈
+on_actions = {
+	on_daily_KOR = {
+		effect = {
+			if = { limit = { original_tag = KOR }
+
+			# ---- 1. 연립 ----
+			# 홍준표 정부: 연립 없이 보수주의 단독 집권
+			if = { limit = { has_country_flag = TFRKP_HN_hong_president NOT = { has_country_flag = TFRKPHN_imp_done } has_government = conservative is_in_coalition = yes } end_coalition = yes }
+			# 탄핵 뒤 권한대행 정부: 연립 없음 (3김 엔딩, 2027 이인제 정부는 빼고)
+			if = { limit = { has_country_flag = TFRKPHN_imp_done NOT = { has_country_flag = TFRKPHN_samkim_end } NOT = { has_country_flag = TFRKPHN_successor_lee_in_je } has_government = conservative is_in_coalition = yes } end_coalition = yes }
+			# 우리공화당 정권(조원진, 김진태, 김문수): 연립 없음
+			if = { limit = { has_country_flag = TFRKPHN_e21_cho has_government = authoritarian_democrat is_in_coalition = yes } end_coalition = yes }
+
+			# ---- 2. 지도자 ----
+			# 홍준표 재임 중: 다른 사건이 이준석 등을 당 대표로 올려도 홍준표를 다시 앉힌다
+			if = {
+				limit = { has_country_flag = TFRKP_HN_hong_president NOT = { has_country_flag = TFRKPHN_imp_done } has_government = conservative NOT = { has_country_leader = { character = KOR_hong_joon_pyo_char ruling_only = yes } } }
+				if = { limit = { NOT = { has_character = KOR_hong_joon_pyo_char } } recruit_character = KOR_hong_joon_pyo_char }
+				KOR_hong_joon_pyo_char = { promote_character = korean_neoconservatism }
+			}
+			# 탄핵 뒤: 홍준표는 지도자 자리에 남지 않는다
+			if = { limit = { has_country_flag = TFRKPHN_imp_done has_country_leader = { character = KOR_hong_joon_pyo_char ruling_only = yes } } KOR_hong_joon_pyo_char = { remove_country_leader_role = { ideology = korean_neoconservatism } } }
+			# 탄핵 뒤 정권 사슬: 위에 있는 정권이 먼저다 (3김 총리, 우원식, 안철수, 심상정, 김진태 몰락 뒤 우원식, 김문수, 김진태, 조원진, 권한대행 이인제)
+			if = { limit = { has_country_flag = TFRKPHN_imp_done NOT = { has_country_flag = TFRKPHN_samkim_end } }
+				if = { limit = { has_country_flag = TFRKPHN_samkim_kms_pm } if = { limit = { NOT = { has_character = KOR_TFRKPHN_kms_char } } recruit_character = KOR_TFRKPHN_kms_char } KOR_TFRKPHN_kms_char = { promote_character = korean_neoconservatism } }
+				else_if = { limit = { has_country_flag = TFRKPHN_samkim_kdy_pm } if = { limit = { NOT = { has_character = KOR_TFRKPHN_kdy_char } } recruit_character = KOR_TFRKPHN_kdy_char } KOR_TFRKPHN_kdy_char = { promote_character = centrist } }
+				else_if = { limit = { has_country_flag = TFRKPHN_samkim_kbg_pm } if = { limit = { NOT = { has_character = KOR_TFRKPHN_kbg_char } } recruit_character = KOR_TFRKPHN_kbg_char } KOR_TFRKPHN_kbg_char = { promote_character = centrist } }
+				else_if = { limit = { has_country_flag = TFRKPHN_woo_pres } if = { limit = { NOT = { has_character = KOR_TFRKPHN_woo_won_shik_char } } recruit_character = KOR_TFRKPHN_woo_won_shik_char } KOR_TFRKPHN_woo_won_shik_char = { promote_character = cooperative_democracy_liberal } }
+				else_if = { limit = { has_country_flag = TFRKPHN_e21_ahn has_character = KOR_ahn_cheol_soo_char } KOR_ahn_cheol_soo_char = { promote_character = classical_liberalism } }
+				else_if = { limit = { has_country_flag = TFRKPHN_e21_sim_pres has_character = KOR_sim_sang_jung_char } KOR_sim_sang_jung_char = { promote_character = dreaming_realism } }
+				else_if = { limit = { has_country_flag = TFRKPHN_kjt_fallen } if = { limit = { NOT = { has_character = KOR_TFRKPHN_woo_won_shik_char } } recruit_character = KOR_TFRKPHN_woo_won_shik_char } KOR_TFRKPHN_woo_won_shik_char = { promote_character = cooperative_democracy_liberal } }
+				else_if = { limit = { has_country_flag = TFRKPHN_kmu_pres has_character = KOR_kim_moon_soo_char } KOR_kim_moon_soo_char = { promote_character = ultra_conservatism } }
+				else_if = { limit = { has_country_flag = TFRKPHN_kjt_pres } if = { limit = { NOT = { has_character = KOR_TFRKPHN_kim_jin_tae_char } } recruit_character = KOR_TFRKPHN_kim_jin_tae_char } KOR_TFRKPHN_kim_jin_tae_char = { promote_character = ultra_conservatism } }
+				else_if = { limit = { has_country_flag = TFRKPHN_e21_cho NOT = { has_country_flag = TFRKPHN_cho_removed } has_character = KOR_cho_won_jin_char } KOR_cho_won_jin_char = { promote_character = ultra_conservatism } }
+				else_if = { limit = { always = yes has_character = KOR_lee_in_je_char } KOR_lee_in_je_char = { promote_character = korean_neoconservatism } }
+			}
+			# 2027 대선 뒤 이인제, 오세훈 정부
+			if = { limit = { has_country_flag = TFRKPHN_successor_lee_in_je NOT = { has_country_flag = TFRKPHN_lij_dead } has_government = conservative has_character = KOR_lee_in_je_char NOT = { has_country_leader = { character = KOR_lee_in_je_char ruling_only = yes } } } KOR_lee_in_je_char = { promote_character = korean_neoconservatism } }
+			if = { limit = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_government = conservative has_character = KOR_oh_se_hoon_char NOT = { has_country_leader = { character = KOR_oh_se_hoon_char ruling_only = yes } } } KOR_oh_se_hoon_char = { promote_character = korean_warm_conservatism } }
+
+			}
+		}
+	}
+}

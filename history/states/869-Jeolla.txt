@@ -1,0 +1,47 @@
+state={
+	id=869
+	name="STATE_869"
+	
+	resources = {
+		oil = 8
+		steel = 200
+	}
+
+	history={
+		owner = KOR
+		add_core_of = KOR
+		add_claim_by = PRK
+		buildings = {
+			infrastructure = 4
+			air_base = 3
+			industrial_complex = 1
+			arms_factory = 1
+			nuclear_reactor = 1
+			1177 = { naval_base = 6 }
+			10110 = { naval_base = 3 }
+			dockyard = 3
+			synthetic_refinery = 2
+			14228 = { landmark_tfrkphn_gwangju518 = 1 }	# 랜드마크 (lm_build.py)
+		}
+		victory_points = {
+			14228 7
+		}
+		victory_points = {
+			10110 3
+		}
+		victory_points = {
+			12085 2
+		}
+		victory_points = {
+			1177 5
+		}
+
+	}
+
+	provinces={
+		1177 4126 10110 11948 12085 14226 14228 14230 14231 14232 14236
+	}
+	manpower=5142427
+	buildings_max_level_factor=1.000
+	state_category = large_suburb
+}

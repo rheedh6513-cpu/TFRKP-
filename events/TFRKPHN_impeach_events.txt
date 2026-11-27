@@ -48,6 +48,8 @@ country_event = {
 			clr_country_flag = TFRKPHN_imp_on
 			clr_country_flag = TFRKPHN_imp_ready
 			if = { limit = { NOT = { has_character = KOR_lee_in_je_char } } recruit_character = KOR_lee_in_je_char }
+			if = { limit = { has_country_leader = { character = KOR_hong_joon_pyo_char ruling_only = yes } } KOR_hong_joon_pyo_char = { remove_country_leader_role = { ideology = korean_neoconservatism } } }	# 탄핵된 홍준표는 지도자에서 내려온다 (taiwan_fix.py)
+			end_coalition = yes	# 권한대행 정부는 연립 없음 (taiwan_fix.py)
 			if = { limit = { has_idea = TFRKPHN_lee_in_je_HM } remove_ideas = TFRKPHN_lee_in_je_HM }	# 국무총리 칸에서 빼고 대통령 권한대행으로 (2026-11-21 20시 06분)
 			set_politics = { ruling_party = conservative elections_allowed = yes }
 			KOR_lee_in_je_char = { promote_character = korean_neoconservatism }
@@ -193,6 +195,10 @@ country_event = {
 			if = { limit = { NOT = { has_character = KOR_ahn_cheol_soo_char } } recruit_character = KOR_ahn_cheol_soo_char }
 			KOR_ahn_cheol_soo_char = { promote_character = yes }
 			TFRKPHN_clear_all_ministers = yes	# # 이전 장관 모두 비우기 (cab_clear_build.py, 2026-11-22)
+			end_coalition = yes
+			TFRKPHN_army_keep_effect = yes	# 본편 군사 가지 기록 보존
+			load_focus_tree = { tree = TFRKPHN_ahn_cheol_soo_tree keep_completed = no }	# 안철수 트리 (route_fix_ahn, taiwan_fix.py)
+			mark_focus_tree_layout_dirty = yes
 		}
 	}
 	option = {
@@ -320,8 +326,9 @@ country_event = {
 		add_stability = -0.15
 		add_war_support = 0.05
 		set_country_flag = TFRKPHN_cho_new_const
-		hidden_effect = { every_country = { news_event = { id = tfrkphn.7260 days = 1 } } }	# 전 세계 뉴스 (world_news.py)
+		news_event = { id = tfrkphn.7260 days = 1 }	# 전 세계 뉴스, major라 한 번만 보내도 모든 나라에 뜬다 (world_news.py)
 		hidden_effect = { country_event = { id = tfrkphn.7262 days = 10 } }	# 월급 명세서 (world_news.py)
+		hidden_effect = { mark_focus_tree_layout_dirty = yes }	# 포격 뒤 중점을 보이게 다시 그린다 (route_fix_shell)
 	}
 }
 country_event = {
@@ -334,7 +341,7 @@ country_event = {
 		name = tfrkphn.7042.a
 		add_stability = -0.05
 		set_country_flag = TFRKPHN_cho_backed_down
-		hidden_effect = { every_country = { news_event = { id = tfrkphn.7261 days = 1 } } }	# 전 세계 뉴스 (world_news.py)
+		news_event = { id = tfrkphn.7261 days = 1 }	# 전 세계 뉴스, major라 한 번만 보내도 모든 나라에 뜬다 (world_news.py)
 		hidden_effect = { country_event = { id = tfrkphn.7043 days = 60 } }
 	}
 }
