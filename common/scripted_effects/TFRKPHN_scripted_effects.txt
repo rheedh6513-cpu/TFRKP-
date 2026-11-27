@@ -34,6 +34,7 @@ TFRKPHN_hong_start_effect = {
 	}
 	set_country_flag = TFRKP_HN_hong_president
 	end_coalition = yes	# 연립 없이 보수주의 단독 집권 (ideology_build.py)
+	if = { limit = { NOT = { has_country_flag = TFRKPHN_hk_sched } } set_country_flag = TFRKPHN_hk_sched country_event = { id = tfrkphn.7320 days = 330 } }	# 수성구의 두 사람 (hk_build.py)
 	# 당선 뒤 2주마다 차례로 뜨는 사건 (예전에는 중점 보상이었다)
 	if = {
 		limit = { NOT = { has_country_flag = TFRKPHN_hong_auto_events_sent } }

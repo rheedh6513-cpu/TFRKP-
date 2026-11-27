@@ -1,0 +1,39 @@
+# [안내] 홍준표 대통령과 김부겸. hk_build.py가 만든다.
+add_namespace = tfrkphn
+country_event = {
+	id = tfrkphn.7320
+	title = tfrkphn.7320.t
+	desc = tfrkphn.7320.d
+	picture = GFX_TFRKPHN_ph_7320
+	is_triggered_only = yes
+	trigger = { has_country_flag = TFRKP_HN_hong_president NOT = { has_country_flag = TFRKPHN_imp_done } }
+	option = {
+		name = tfrkphn.7320.a
+		add_stability = 0.03
+		add_political_power = -50
+		add_popularity = { ideology = social_liberal popularity = 0.01 }
+	}
+	option = {
+		name = tfrkphn.7320.b
+		add_political_power = 25
+		add_popularity = { ideology = conservative popularity = 0.01 }
+	}
+}
+country_event = {
+	id = tfrkphn.7321
+	title = tfrkphn.7321.t
+	desc = tfrkphn.7321.d
+	picture = GFX_TFRKPHN_ph_7321
+	is_triggered_only = yes
+	trigger = { has_country_flag = TFRKPHN_imp_done NOT = { has_country_flag = TFRKPHN_imp_election_done } }
+	option = {
+		name = tfrkphn.7321.a
+		add_stability = 0.03
+		add_political_power = -30
+	}
+	option = {
+		name = tfrkphn.7321.b
+		add_political_power = 30
+		add_stability = -0.02
+	}
+}

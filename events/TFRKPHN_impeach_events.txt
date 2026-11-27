@@ -56,6 +56,7 @@ country_event = {
 			mark_focus_tree_layout_dirty = yes
 			activate_mission = TFRKPHN_imp_elec_mission activate_shine_on_focus = TFRKPHN_hong_b05_10 set_variable = { TFRKPHN_imp_elec_cd = 70 }	# 원본처럼 임무로 70일 (autofocus_days.py)
 			country_event = { id = tfrkphn.7027 days = 10 }
+			country_event = { id = tfrkphn.7321 days = 7 }	# 옆자리: 김무성과 권한대행 이인제 (hk_build.py)
 			country_event = { id = tfrkphn.7032 days = 25 }	# 사실상 4파전 (2026-11-20 23시 47분)	# 무너진 양당 (2026-11-20 23시 43분)	# 70일 뒤 제21대 대통령 선거 중점 완료 (2026-11-20 23시 41분)
 		}
 	}
@@ -277,6 +278,7 @@ country_event = {
 		name = tfrkphn.7034.a
 		custom_effect_tooltip = TFRKPHN_e21_sim_tt
 		add_stability = 0.10
+		hidden_effect = { country_event = { id = tfrkphn.7322 hours = 12 } }	# 회상 (sim_memory_build.py)
 	}
 }
 country_event = {

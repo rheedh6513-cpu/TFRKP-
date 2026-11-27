@@ -18,6 +18,7 @@ TFRKPHN_sim_reform_category = {
 		}
 		remove_effect = {
 			custom_effect_tooltip = TFRKPHN_sim_rock_up_tt
+			TFRKPHN_sim_rf_pace = yes
 			hidden_effect = { clr_country_flag = TFRKPHN_sim_rf_running add_to_variable = { TFRKPHN_sim_rock = 1 } clamp_variable = { var = TFRKPHN_sim_rock min = 0 max = 10 } set_variable = { TFRKPHN_sim_rock_f = TFRKPHN_sim_rock } add_to_variable = { TFRKPHN_sim_rock_f = 1 } }
 		}
 		ai_will_do = { factor = 0 }
@@ -40,6 +41,7 @@ TFRKPHN_sim_reform_category = {
 		}
 		remove_effect = {
 			custom_effect_tooltip = TFRKPHN_sim_rock_up_tt
+			TFRKPHN_sim_rf_pace = yes
 			hidden_effect = { clr_country_flag = TFRKPHN_sim_rf_running add_to_variable = { TFRKPHN_sim_rock = 1 } clamp_variable = { var = TFRKPHN_sim_rock min = 0 max = 10 } set_variable = { TFRKPHN_sim_rock_f = TFRKPHN_sim_rock } add_to_variable = { TFRKPHN_sim_rock_f = 1 } }
 		}
 		ai_will_do = { factor = 0 }
@@ -62,6 +64,7 @@ TFRKPHN_sim_reform_category = {
 		}
 		remove_effect = {
 			custom_effect_tooltip = TFRKPHN_sim_rock_up_tt
+			TFRKPHN_sim_rf_pace = yes
 			hidden_effect = { clr_country_flag = TFRKPHN_sim_rf_running add_to_variable = { TFRKPHN_sim_rock = 1 } clamp_variable = { var = TFRKPHN_sim_rock min = 0 max = 10 } set_variable = { TFRKPHN_sim_rock_f = TFRKPHN_sim_rock } add_to_variable = { TFRKPHN_sim_rock_f = 1 } }
 		}
 		ai_will_do = { factor = 0 }
@@ -84,6 +87,7 @@ TFRKPHN_sim_reform_category = {
 		}
 		remove_effect = {
 			custom_effect_tooltip = TFRKPHN_sim_rock_up_tt
+			TFRKPHN_sim_rf_pace = yes
 			hidden_effect = { clr_country_flag = TFRKPHN_sim_rf_running add_to_variable = { TFRKPHN_sim_rock = 1 } clamp_variable = { var = TFRKPHN_sim_rock min = 0 max = 10 } set_variable = { TFRKPHN_sim_rock_f = TFRKPHN_sim_rock } add_to_variable = { TFRKPHN_sim_rock_f = 1 } }
 		}
 		ai_will_do = { factor = 0 }
@@ -106,6 +110,7 @@ TFRKPHN_sim_reform_category = {
 		}
 		remove_effect = {
 			custom_effect_tooltip = TFRKPHN_sim_rock_up_tt
+			TFRKPHN_sim_rf_pace = yes
 			hidden_effect = { clr_country_flag = TFRKPHN_sim_rf_running add_to_variable = { TFRKPHN_sim_rock = 1 } clamp_variable = { var = TFRKPHN_sim_rock min = 0 max = 10 } set_variable = { TFRKPHN_sim_rock_f = TFRKPHN_sim_rock } add_to_variable = { TFRKPHN_sim_rock_f = 1 } }
 		}
 		ai_will_do = { factor = 0 }
@@ -128,6 +133,7 @@ TFRKPHN_sim_reform_category = {
 		}
 		remove_effect = {
 			custom_effect_tooltip = TFRKPHN_sim_rock_up_tt
+			TFRKPHN_sim_rf_pace = yes
 			hidden_effect = { clr_country_flag = TFRKPHN_sim_rf_running add_to_variable = { TFRKPHN_sim_rock = 1 } clamp_variable = { var = TFRKPHN_sim_rock min = 0 max = 10 } set_variable = { TFRKPHN_sim_rock_f = TFRKPHN_sim_rock } add_to_variable = { TFRKPHN_sim_rock_f = 1 } }
 		}
 		ai_will_do = { factor = 0 }
@@ -150,6 +156,7 @@ TFRKPHN_sim_reform_category = {
 		}
 		remove_effect = {
 			custom_effect_tooltip = TFRKPHN_sim_rock_up_tt
+			TFRKPHN_sim_rf_pace = yes
 			hidden_effect = { clr_country_flag = TFRKPHN_sim_rf_running add_to_variable = { TFRKPHN_sim_rock = 1 } clamp_variable = { var = TFRKPHN_sim_rock min = 0 max = 10 } set_variable = { TFRKPHN_sim_rock_f = TFRKPHN_sim_rock } add_to_variable = { TFRKPHN_sim_rock_f = 1 } }
 		}
 		ai_will_do = { factor = 0 }
@@ -172,6 +179,7 @@ TFRKPHN_sim_reform_category = {
 		}
 		remove_effect = {
 			custom_effect_tooltip = TFRKPHN_sim_rock_up_tt
+			TFRKPHN_sim_rf_pace = yes
 			hidden_effect = { clr_country_flag = TFRKPHN_sim_rf_running add_to_variable = { TFRKPHN_sim_rock = 1 } clamp_variable = { var = TFRKPHN_sim_rock min = 0 max = 10 } set_variable = { TFRKPHN_sim_rock_f = TFRKPHN_sim_rock } add_to_variable = { TFRKPHN_sim_rock_f = 1 } }
 		}
 		ai_will_do = { factor = 0 }
@@ -194,6 +202,7 @@ TFRKPHN_sim_reform_category = {
 		}
 		remove_effect = {
 			custom_effect_tooltip = TFRKPHN_sim_rock_up_tt
+			TFRKPHN_sim_rf_pace = yes
 			hidden_effect = { clr_country_flag = TFRKPHN_sim_rf_running add_to_variable = { TFRKPHN_sim_rock = 1 } clamp_variable = { var = TFRKPHN_sim_rock min = 0 max = 10 } set_variable = { TFRKPHN_sim_rock_f = TFRKPHN_sim_rock } add_to_variable = { TFRKPHN_sim_rock_f = 1 } }
 		}
 		ai_will_do = { factor = 0 }
@@ -216,35 +225,8 @@ TFRKPHN_sim_reform_category = {
 		}
 		remove_effect = {
 			custom_effect_tooltip = TFRKPHN_sim_rock_up_tt
+			TFRKPHN_sim_rf_pace = yes
 			hidden_effect = { clr_country_flag = TFRKPHN_sim_rf_running add_to_variable = { TFRKPHN_sim_rock = 1 } clamp_variable = { var = TFRKPHN_sim_rock min = 0 max = 10 } set_variable = { TFRKPHN_sim_rock_f = TFRKPHN_sim_rock } add_to_variable = { TFRKPHN_sim_rock_f = 1 } }
-		}
-		ai_will_do = { factor = 0 }
-	}
-}
-TFRKPHN_sim_power_category = {
-	TFRKPHN_sim_pw_people = {
-		icon = GFX_decision_generic_speech
-		cost = 40
-		days_re_enable = 30
-		visible = { always = yes }
-		available = { custom_trigger_tooltip = { tooltip = TFRKPHN_sim_max_tt check_variable = { TFRKPHN_sim_people < 99.5 } } }
-		complete_effect = {
-			TFRKPHN_lij_tire_dec = yes
-			custom_effect_tooltip = TFRKPHN_sim_add_people_tt
-			hidden_effect = { add_to_variable = { TFRKPHN_sim_people = 10 } clamp_variable = { var = TFRKPHN_sim_people min = 0 max = 100 } }
-		}
-		ai_will_do = { factor = 0 }
-	}
-	TFRKPHN_sim_pw_dem = {
-		icon = GFX_decision_generic_political_discourse
-		cost = 40
-		days_re_enable = 30
-		visible = { always = yes }
-		available = { custom_trigger_tooltip = { tooltip = TFRKPHN_sim_max_tt check_variable = { TFRKPHN_sim_dem < 99.5 } } }
-		complete_effect = {
-			TFRKPHN_lij_tire_dec = yes
-			custom_effect_tooltip = TFRKPHN_sim_add_dem_tt
-			hidden_effect = { add_to_variable = { TFRKPHN_sim_dem = 10 } clamp_variable = { var = TFRKPHN_sim_dem min = 0 max = 100 } }
 		}
 		ai_will_do = { factor = 0 }
 	}

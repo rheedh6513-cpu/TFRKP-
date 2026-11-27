@@ -1,0 +1,14 @@
+# [안내] sim_tabs_build.py가 만든다.
+scripted_gui = {
+	TFRKPHN_sim_people_gui = {
+		context_type = decision_category
+		window_name = "TFRKPHN_sim_people_container"
+	}
+	TFRKPHN_sim_dem_gui = {
+		context_type = decision_category
+		window_name = "TFRKPHN_sim_dem_container"
+		properties = {
+			TFRKPHN_sim_seatbar_img = { frame = TFRKPHN_sim_seats_f }
+		}
+	}
+}

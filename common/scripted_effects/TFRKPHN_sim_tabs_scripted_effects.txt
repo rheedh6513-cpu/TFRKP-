@@ -1,0 +1,25 @@
+# [안내] 심상정 정부 개혁 속도와 확보 의석. sim_tabs_build.py가 만든다.
+TFRKPHN_sim_rf_pace = {
+	hidden_effect = {
+		if = { limit = { check_variable = { TFRKPHN_sim_rf_last < 90 } } add_to_variable = { TFRKPHN_sim_people = -10 } clamp_variable = { var = TFRKPHN_sim_people min = 0 max = 100 } set_country_flag = { flag = TFRKPHN_sim_too_fast days = 180 } }
+		set_variable = { TFRKPHN_sim_rf_last = 0 }
+		clr_country_flag = TFRKPHN_sim_too_slow
+	}
+	custom_effect_tooltip = TFRKPHN_sim_pace_tt
+}
+TFRKPHN_sim_seats_calc = {
+	if = { limit = { NOT = { has_variable = KOR_NatAsm_JP_seats } } set_variable = { KOR_NatAsm_JP_seats = 0 } }
+	if = { limit = { NOT = { has_variable = KOR_NatAsm_DP_seats } } set_variable = { KOR_NatAsm_DP_seats = 0 } }
+	set_temp_variable = { TFRKPHN_sim_t = KOR_NatAsm_DP_seats }
+	multiply_temp_variable = { TFRKPHN_sim_t = TFRKPHN_sim_dem }
+	divide_temp_variable = { TFRKPHN_sim_t = 100 }
+	set_variable = { TFRKPHN_sim_seats = KOR_NatAsm_JP_seats }
+	add_to_variable = { TFRKPHN_sim_seats = TFRKPHN_sim_t }
+	round_variable = TFRKPHN_sim_seats
+	set_variable = { TFRKPHN_sim_seats_f = TFRKPHN_sim_seats }
+	divide_variable = { TFRKPHN_sim_seats_f = 10 }
+	subtract_from_variable = { TFRKPHN_sim_seats_f = 0.49 }
+	round_variable = TFRKPHN_sim_seats_f
+	add_to_variable = { TFRKPHN_sim_seats_f = 1 }
+	clamp_variable = { var = TFRKPHN_sim_seats_f min = 1 max = 31 }
+}

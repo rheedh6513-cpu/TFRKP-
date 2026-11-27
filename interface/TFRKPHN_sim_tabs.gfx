@@ -1,0 +1,5 @@
+spriteTypes = {
+	spriteType = { name = "GFX_TFRKPHN_sim_people_pic" texturefile = "gfx/interface/TFRKPHN_sim/TFRKPHN_sim_people.png" }
+	spriteType = { name = "GFX_TFRKPHN_sim_dem_pic" texturefile = "gfx/interface/TFRKPHN_sim/TFRKPHN_sim_dem.png" }
+	spriteType = { name = "GFX_TFRKPHN_sim_seatbar" texturefile = "gfx/interface/TFRKPHN_sim/TFRKPHN_sim_seatbar.png" noOfFrames = 31 }
+}

@@ -1,0 +1,7 @@
+# [안내] sim_tabs_build.py가 만든다.
+defined_text = {
+	name = TFRKPHN_sim_pace_state
+	text = { trigger = { has_country_flag = TFRKPHN_sim_too_fast } localization_key = TFRKPHN_sim_pace_fast }
+	text = { trigger = { has_country_flag = TFRKPHN_sim_too_slow } localization_key = TFRKPHN_sim_pace_slow }
+	text = { localization_key = TFRKPHN_sim_pace_ok }
+}

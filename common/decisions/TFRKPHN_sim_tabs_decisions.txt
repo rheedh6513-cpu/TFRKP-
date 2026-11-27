@@ -1,0 +1,121 @@
+# [안내] 심상정 정부 「민중 지지도」, 「민주당과의 협력도」 결정. sim_tabs_build.py가 만든다.
+TFRKPHN_sim_people_category = {
+	TFRKPHN_sim_pw_people = {
+		icon = GFX_decision_generic_speech
+		cost = 40
+		days_re_enable = 30
+		visible = { always = yes }
+		available = { custom_trigger_tooltip = { tooltip = TFRKPHN_sim_max_tt check_variable = { TFRKPHN_sim_people < 99.5 } } }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
+			hidden_effect = { add_to_variable = { TFRKPHN_sim_people = 10 } }
+			custom_effect_tooltip = TFRKPHN_sim_add_people_tt
+			hidden_effect = { clamp_variable = { var = TFRKPHN_sim_people min = 0 max = 100 } clamp_variable = { var = TFRKPHN_sim_dem min = 0 max = 100 } TFRKPHN_sim_seats_calc = yes }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_sim_pp_union = {
+		icon = GFX_decision_generic_industry
+		cost = 60
+		days_re_enable = 60
+		visible = { always = yes }
+		available = { custom_trigger_tooltip = { tooltip = TFRKPHN_sim_max_tt check_variable = { TFRKPHN_sim_people < 99.5 } } }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
+			add_stability = -0.02
+			hidden_effect = { add_to_variable = { TFRKPHN_sim_people = 15 } }
+			custom_effect_tooltip = TFRKPHN_sim_add_people15_tt
+			hidden_effect = { clamp_variable = { var = TFRKPHN_sim_people min = 0 max = 100 } clamp_variable = { var = TFRKPHN_sim_dem min = 0 max = 100 } TFRKPHN_sim_seats_calc = yes }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_sim_pp_forum = {
+		icon = GFX_decision_generic_political_discourse
+		cost = 30
+		days_re_enable = 45
+		visible = { always = yes }
+		available = { custom_trigger_tooltip = { tooltip = TFRKPHN_sim_max_tt check_variable = { TFRKPHN_sim_people < 99.5 } } }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
+			hidden_effect = { add_to_variable = { TFRKPHN_sim_people = 5 } set_country_flag = { flag = TFRKPHN_sim_forum days = 90 } }
+			custom_effect_tooltip = TFRKPHN_sim_add_people5_tt
+			custom_effect_tooltip = TFRKPHN_sim_forum_tt
+			hidden_effect = { clamp_variable = { var = TFRKPHN_sim_people min = 0 max = 100 } clamp_variable = { var = TFRKPHN_sim_dem min = 0 max = 100 } TFRKPHN_sim_seats_calc = yes }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_sim_pp_pace = {
+		icon = GFX_decision_generic_civil_support
+		cost = 25
+		days_re_enable = 60
+		visible = { always = yes }
+		available = { custom_trigger_tooltip = { tooltip = TFRKPHN_sim_need_fast_tt has_country_flag = TFRKPHN_sim_too_fast } }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
+			hidden_effect = { add_to_variable = { TFRKPHN_sim_people = 8 } clr_country_flag = TFRKPHN_sim_too_fast }
+			custom_effect_tooltip = TFRKPHN_sim_add_people8_tt
+			hidden_effect = { clamp_variable = { var = TFRKPHN_sim_people min = 0 max = 100 } clamp_variable = { var = TFRKPHN_sim_dem min = 0 max = 100 } TFRKPHN_sim_seats_calc = yes }
+		}
+		ai_will_do = { factor = 0 }
+	}
+}
+TFRKPHN_sim_dem_category = {
+	TFRKPHN_sim_pw_dem = {
+		icon = GFX_decision_generic_political_discourse
+		cost = 40
+		days_re_enable = 30
+		visible = { always = yes }
+		available = { custom_trigger_tooltip = { tooltip = TFRKPHN_sim_max_tt check_variable = { TFRKPHN_sim_dem < 99.5 } } }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
+			hidden_effect = { add_to_variable = { TFRKPHN_sim_dem = 10 } }
+			custom_effect_tooltip = TFRKPHN_sim_add_dem_tt
+			hidden_effect = { clamp_variable = { var = TFRKPHN_sim_people min = 0 max = 100 } clamp_variable = { var = TFRKPHN_sim_dem min = 0 max = 100 } TFRKPHN_sim_seats_calc = yes }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_sim_dm_prog = {
+		icon = GFX_decision_generic_speech
+		cost = 50
+		days_re_enable = 45
+		visible = { always = yes }
+		available = { custom_trigger_tooltip = { tooltip = TFRKPHN_sim_max_tt check_variable = { TFRKPHN_sim_dem < 99.5 } } }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
+			hidden_effect = { add_to_variable = { TFRKPHN_sim_dem = 8 } }
+			custom_effect_tooltip = TFRKPHN_sim_add_dem8_tt
+			hidden_effect = { clamp_variable = { var = TFRKPHN_sim_people min = 0 max = 100 } clamp_variable = { var = TFRKPHN_sim_dem min = 0 max = 100 } TFRKPHN_sim_seats_calc = yes }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_sim_dm_bill = {
+		icon = GFX_decision_generic_nationalism
+		cost = 70
+		days_re_enable = 90
+		visible = { always = yes }
+		available = { custom_trigger_tooltip = { tooltip = TFRKPHN_sim_max_tt check_variable = { TFRKPHN_sim_dem < 99.5 } } }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
+			hidden_effect = { add_to_variable = { TFRKPHN_sim_dem = 15 } add_to_variable = { TFRKPHN_sim_people = -5 } }
+			custom_effect_tooltip = TFRKPHN_sim_add_dem15_tt
+			custom_effect_tooltip = TFRKPHN_sim_sub_people5_tt
+			hidden_effect = { clamp_variable = { var = TFRKPHN_sim_people min = 0 max = 100 } clamp_variable = { var = TFRKPHN_sim_dem min = 0 max = 100 } TFRKPHN_sim_seats_calc = yes }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	TFRKPHN_sim_dm_council = {
+		icon = GFX_decision_generic_civil_support
+		cost = 100
+		days_re_enable = 99999
+		visible = { always = yes }
+		available = { custom_trigger_tooltip = { tooltip = TFRKPHN_sim_once_tt NOT = { has_country_flag = TFRKPHN_sim_council } } }
+		complete_effect = {
+			TFRKPHN_lij_tire_dec = yes
+			hidden_effect = { add_to_variable = { TFRKPHN_sim_dem = 20 } set_country_flag = TFRKPHN_sim_council }
+			custom_effect_tooltip = TFRKPHN_sim_add_dem20_tt
+			custom_effect_tooltip = TFRKPHN_sim_council_tt
+			hidden_effect = { clamp_variable = { var = TFRKPHN_sim_people min = 0 max = 100 } clamp_variable = { var = TFRKPHN_sim_dem min = 0 max = 100 } TFRKPHN_sim_seats_calc = yes }
+		}
+		ai_will_do = { factor = 0 }
+	}
+}
