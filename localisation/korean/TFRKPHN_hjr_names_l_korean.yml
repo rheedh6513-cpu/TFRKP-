@@ -1,0 +1,10 @@
+﻿l_korean:
+ # [안내] 헌정회복연대 계열 이름. hjr_names.py가 만든다.
+ TFRKPHN_hjr_con:0 "헌정회복연대 보수계"
+ TFRKPHN_hjr_con_long:0 "헌정 회복을 위한 국민연대 보수계"
+ TFRKPHN_hjr_mkt:0 "헌정회복연대 중도계"
+ TFRKPHN_hjr_mkt_long:0 "헌정 회복을 위한 국민연대 중도계"
+ TFRKPHN_hjr_soc:0 "헌정회복연대 민주계"
+ TFRKPHN_hjr_soc_long:0 "헌정 회복을 위한 국민연대 민주계"
+ TFRKPHN_hjr_sd:0 "헌정회복연대 진보계"
+ TFRKPHN_hjr_sd_long:0 "헌정 회복을 위한 국민연대 진보계"

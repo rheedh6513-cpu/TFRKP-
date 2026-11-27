@@ -1,0 +1,16 @@
+# [안내] 조원진 파면 뒤 제22대 대선까지 남은 기간. autofocus_days.py가 만든다.
+TFRKPHN_e22_elec_category = {
+	TFRKPHN_e22_elec_mission = {
+		icon = GFX_decision_icon_KOR_lee_martial_law_election_countdown_mission
+		allowed = { original_tag = KOR }
+		available = { always = no }
+		selectable_mission = no
+		is_good = no
+		days_mission_timeout = 60
+		priority = 100
+		timeout_effect = {
+			custom_effect_tooltip = TFRKPHN_e22_elec_mission_tt
+			hidden_effect = { country_event = tfrkphn.7044 }
+		}
+	}
+}

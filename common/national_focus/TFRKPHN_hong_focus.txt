@@ -629,7 +629,7 @@ focus_tree = {
 		x = 0
 		y = 6
 		cost = 10
-		available = { custom_trigger_tooltip = { tooltip = TFRKPHN_imp_elec_auto_tt always = no } }
+		available = { custom_trigger_tooltip = { tooltip = TFRKPHN_imp_elec_cd_tt always = no } }
 		cancelable = no
 		continue_if_invalid = yes
 		ai_will_do = { factor = 0 }

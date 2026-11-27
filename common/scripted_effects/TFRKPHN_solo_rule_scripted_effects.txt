@@ -1,0 +1,9 @@
+# [안내] 단독 집권 (연립, 여당 계파 모두 없음). regime_guard.py가 만든다.
+TFRKPHN_solo_rule = {
+	hidden_effect = {
+		end_ruling_party_wings = yes
+		if = { limit = { has_dynamic_modifier = { modifier = party_popularity_dynamic_modifier_ruling_party_wings } } remove_dynamic_modifier = { modifier = party_popularity_dynamic_modifier_ruling_party_wings } }
+		clear_variable = ruling_party_wings_pp_gain
+		end_coalition = yes
+	}
+}

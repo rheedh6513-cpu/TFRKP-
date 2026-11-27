@@ -1,0 +1,17 @@
+# [안내] 탄핵 뒤 제21대 대선까지 남은 기간 (원본 이재명 서거 선거 임무와 같은 방식). autofocus_days.py가 만든다.
+TFRKPHN_imp_elec_category = {
+	TFRKPHN_imp_elec_mission = {
+		icon = GFX_decision_icon_KOR_lee_martial_law_election_countdown_mission
+		allowed = { original_tag = KOR }
+		available = { always = no }
+		selectable_mission = no
+		is_good = no
+		days_mission_timeout = 70
+		priority = 100
+		timeout_effect = {
+			custom_effect_tooltip = TFRKPHN_imp_elec_mission_tt
+			effect_tooltip = { complete_national_focus = TFRKPHN_hong_b05_10 }
+			hidden_effect = { country_event = tfrkphn.7026 }
+		}
+	}
+}

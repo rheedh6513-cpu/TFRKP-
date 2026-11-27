@@ -7,11 +7,11 @@ on_actions = {
 
 			# ---- 1. 연립 ----
 			# 홍준표 정부: 연립 없이 보수주의 단독 집권
-			if = { limit = { has_country_flag = TFRKP_HN_hong_president NOT = { has_country_flag = TFRKPHN_imp_done } has_government = conservative is_in_coalition = yes } end_coalition = yes }
+			if = { limit = { has_country_flag = TFRKP_HN_hong_president NOT = { has_country_flag = TFRKPHN_imp_done } has_government = conservative OR = { is_in_coalition = yes check_variable = { ruling_party_wings_array^num > 0 } } } TFRKPHN_solo_rule = yes }
 			# 탄핵 뒤 권한대행 정부: 연립 없음 (3김 엔딩, 2027 이인제 정부는 빼고)
-			if = { limit = { has_country_flag = TFRKPHN_imp_done NOT = { has_country_flag = TFRKPHN_samkim_end } NOT = { has_country_flag = TFRKPHN_successor_lee_in_je } has_government = conservative is_in_coalition = yes } end_coalition = yes }
+			if = { limit = { has_country_flag = TFRKPHN_imp_done NOT = { has_country_flag = TFRKPHN_samkim_end } NOT = { has_country_flag = TFRKPHN_successor_lee_in_je } has_government = conservative OR = { is_in_coalition = yes check_variable = { ruling_party_wings_array^num > 0 } } } TFRKPHN_solo_rule = yes }
 			# 우리공화당 정권(조원진, 김진태, 김문수): 연립 없음
-			if = { limit = { has_country_flag = TFRKPHN_e21_cho has_government = authoritarian_democrat is_in_coalition = yes } end_coalition = yes }
+			if = { limit = { OR = { has_country_flag = TFRKPHN_e21_cho has_country_flag = TFRKPHN_successor_cho_won_jin } has_government = authoritarian_democrat OR = { is_in_coalition = yes check_variable = { ruling_party_wings_array^num > 0 } } } TFRKPHN_solo_rule = yes }
 
 			# ---- 2. 지도자 ----
 			# 홍준표 재임 중: 다른 사건이 이준석 등을 당 대표로 올려도 홍준표를 다시 앉힌다
@@ -35,10 +35,14 @@ on_actions = {
 				else_if = { limit = { has_country_flag = TFRKPHN_kjt_fallen } if = { limit = { NOT = { has_character = KOR_TFRKPHN_woo_won_shik_char } } recruit_character = KOR_TFRKPHN_woo_won_shik_char } KOR_TFRKPHN_woo_won_shik_char = { promote_character = cooperative_democracy_liberal } }
 				else_if = { limit = { has_country_flag = TFRKPHN_kmu_pres has_character = KOR_kim_moon_soo_char } KOR_kim_moon_soo_char = { promote_character = ultra_conservatism } }
 				else_if = { limit = { has_country_flag = TFRKPHN_kjt_pres } if = { limit = { NOT = { has_character = KOR_TFRKPHN_kim_jin_tae_char } } recruit_character = KOR_TFRKPHN_kim_jin_tae_char } KOR_TFRKPHN_kim_jin_tae_char = { promote_character = ultra_conservatism } }
-				else_if = { limit = { has_country_flag = TFRKPHN_cho_suspended NOT = { has_country_flag = TFRKPHN_cho_removed } } if = { limit = { NOT = { has_character = KOR_TFRKPHN_hmj_char } } recruit_character = KOR_TFRKPHN_hmj_char } KOR_TFRKPHN_hmj_char = { promote_character = ultra_conservatism } }	# 탄핵소추로 직무정지된 조원진 대신 홍문종 총리가 권한대행 (2026-11-27)
+				else_if = { limit = { OR = { has_country_flag = TFRKPHN_cho_suspended has_country_flag = TFRKPHN_cho_backed_down } NOT = { has_country_flag = TFRKPHN_cho_removed } } if = { limit = { NOT = { has_character = KOR_TFRKPHN_hmj_char } } recruit_character = KOR_TFRKPHN_hmj_char } KOR_TFRKPHN_hmj_char = { promote_character = ultra_conservatism } }	# 탄핵소추로 직무정지된 조원진 대신 홍문종 총리가 권한대행 (2026-11-27)
 				else_if = { limit = { has_country_flag = TFRKPHN_e21_cho NOT = { has_country_flag = TFRKPHN_cho_removed } has_character = KOR_cho_won_jin_char } KOR_cho_won_jin_char = { promote_character = ultra_conservatism } }
 				else_if = { limit = { always = yes has_character = KOR_lee_in_je_char } KOR_lee_in_je_char = { promote_character = korean_neoconservatism } }
 			}
+			# 탄핵 표시 없이 우원식 정부가 선 경우 (콘솔 등): 자동 생성 인물 대신 우원식 (사용자 2026-11-27 19시 55분 화면)
+			if = { limit = { has_country_flag = TFRKPHN_woo_pres NOT = { has_country_flag = TFRKPHN_imp_done } has_government = social_liberal NOT = { has_country_leader = { character = KOR_TFRKPHN_woo_won_shik_char ruling_only = yes } } } if = { limit = { NOT = { has_character = KOR_TFRKPHN_woo_won_shik_char } } recruit_character = KOR_TFRKPHN_woo_won_shik_char } KOR_TFRKPHN_woo_won_shik_char = { promote_character = cooperative_democracy_liberal } }
+			# 탄핵 표시 없이 조원진이 직무정지된 경우 (콘솔, 옛 저장): 총리 홍문종이 권한대행 (사용자 2026-11-27 20시)
+			if = { limit = { NOT = { has_country_flag = TFRKPHN_imp_done } OR = { has_country_flag = TFRKPHN_cho_suspended has_country_flag = TFRKPHN_cho_backed_down } NOT = { has_country_flag = TFRKPHN_cho_removed } NOT = { has_country_leader = { character = KOR_TFRKPHN_hmj_char ruling_only = yes } } } if = { limit = { NOT = { has_character = KOR_TFRKPHN_hmj_char } } recruit_character = KOR_TFRKPHN_hmj_char } KOR_TFRKPHN_hmj_char = { promote_character = ultra_conservatism } }
 			# 2027 대선 뒤 이인제, 오세훈 정부
 			if = { limit = { has_country_flag = TFRKPHN_successor_lee_in_je NOT = { has_country_flag = TFRKPHN_lij_dead } has_government = conservative has_character = KOR_lee_in_je_char NOT = { has_country_leader = { character = KOR_lee_in_je_char ruling_only = yes } } } KOR_lee_in_je_char = { promote_character = korean_neoconservatism } }
 			if = { limit = { has_country_flag = TFRKPHN_successor_oh_se_hoon has_government = conservative has_character = KOR_oh_se_hoon_char NOT = { has_country_leader = { character = KOR_oh_se_hoon_char ruling_only = yes } } } KOR_oh_se_hoon_char = { promote_character = korean_warm_conservatism } }

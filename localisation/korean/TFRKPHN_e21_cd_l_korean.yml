@@ -1,0 +1,9 @@
+﻿l_korean:
+ # [안내] autofocus_days.py가 만든다.
+ TFRKPHN_e21_cd_tt:0 "자동으로 통과될 것임 (§Y[?TFRKPHN_e21_cd|0]§!일 남음)"
+ TFRKPHN_imp_elec_cd_tt:0 "자동으로 통과될 것임 (§Y[?TFRKPHN_imp_elec_cd|0]§!일 남음)"
+ TFRKPHN_imp_elec_category:0 "제21대 대통령 선거"
+ TFRKPHN_imp_elec_category_desc:0 "대통령이 파면되면 후임 대통령을 뽑는 선거를 치러야 합니다."
+ TFRKPHN_imp_elec_mission:0 "파면에 따른 선거까지 남은 기간"
+ TFRKPHN_imp_elec_mission_desc:0 "기간이 끝나면 제21대 대통령 선거가 치러집니다."
+ TFRKPHN_imp_elec_mission_tt:0 "§L대통령 파면에 따른 제21대 대통령 선거가 치러질 것입니다.§!"

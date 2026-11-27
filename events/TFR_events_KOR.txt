@@ -10522,6 +10522,7 @@ country_event = {
 			add_ideas = vacant_hog
 			activate_shine_on_focus = KOR_lee_defeat_21st_president_election
 			activate_mission = KOR_lee_martial_law_election_countdown_mission
+			set_variable = { TFRKPHN_e21_cd = 60 }	# 남은 날짜 표시 (autofocus_days.py)
 			complete_national_focus = KOR_lee_defeat_dead_of_president
 			remove_ideas = KOR_dpk_lead_pre_lee_idea
 			remove_ideas = KOR_dpk_lead_anxious_idea

@@ -1,10 +1,10 @@
 # [안내] 헌정회복연대 연정. woo_cab_build.py가 만든다.
 TFRKPHN_hjr_coalition_set = {
 	hidden_effect = {
-		set_party_name = { ideology = conservative long_name = TFRKPHN_woo_party_long name = TFRKPHN_woo_party }
-		set_party_name = { ideology = market_liberal long_name = TFRKPHN_woo_party_long name = TFRKPHN_woo_party }
-		set_party_name = { ideology = social_liberal long_name = TFRKPHN_woo_party_long name = TFRKPHN_woo_party }
-		set_party_name = { ideology = social_democrat long_name = TFRKPHN_woo_party_long name = TFRKPHN_woo_party }
+		set_party_name = { ideology = conservative long_name = TFRKPHN_hjr_con_long name = TFRKPHN_hjr_con }
+		set_party_name = { ideology = market_liberal long_name = TFRKPHN_hjr_mkt_long name = TFRKPHN_hjr_mkt }
+		set_party_name = { ideology = social_liberal long_name = TFRKPHN_hjr_soc_long name = TFRKPHN_hjr_soc }
+		set_party_name = { ideology = social_democrat long_name = TFRKPHN_hjr_sd_long name = TFRKPHN_hjr_sd }
 		set_popularities = { social_liberal = 34 conservative = 24 social_democrat = 20 market_liberal = 10 authoritarian_democrat = 6 libertarian_socialist = 3 nationalist = 3 }
 	}
 	if = { limit = { NOT = { has_idea = TFRKPHN_hjr_coalition_idea } } add_ideas = TFRKPHN_hjr_coalition_idea }
