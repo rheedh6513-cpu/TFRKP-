@@ -1,0 +1,6 @@
+# [안내] 안철수 트리 중점 아이콘 (사용자가 준 그림). ahn_icons.py가 만든다.
+spriteTypes = {
+	spriteType = { name = "GFX_focus_TFRKPHN_ahn_b01_01" texturefile = "gfx/interface/goals/TFRKPHN_ahn_b01_01.png" }
+	spriteType = { name = "GFX_focus_TFRKPHN_ahn_t06" texturefile = "gfx/interface/goals/TFRKPHN_ahn_t06.png" }
+	spriteType = { name = "GFX_focus_TFRKPHN_ahn_t07" texturefile = "gfx/interface/goals/TFRKPHN_ahn_t07.png" }
+}

@@ -27,3 +27,661 @@ TFRKPHN_sim_dem_category = {
 	allowed = { original_tag = KOR }
 	visible = { has_country_flag = TFRKPHN_sim_reform_open }
 }
+TFRKPHN_sim_people_category = {
+	icon = generic_political_actions
+	priority = 228
+	scripted_gui = TFRKPHN_sim_people_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_dem_category = {
+	icon = generic_political_actions
+	priority = 227
+	scripted_gui = TFRKPHN_sim_dem_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_people_category = {
+	icon = generic_political_actions
+	priority = 228
+	scripted_gui = TFRKPHN_sim_people_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_dem_category = {
+	icon = generic_political_actions
+	priority = 227
+	scripted_gui = TFRKPHN_sim_dem_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_people_category = {
+	icon = generic_political_actions
+	priority = 228
+	scripted_gui = TFRKPHN_sim_people_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_dem_category = {
+	icon = generic_political_actions
+	priority = 227
+	scripted_gui = TFRKPHN_sim_dem_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_people_category = {
+	icon = generic_political_actions
+	priority = 228
+	scripted_gui = TFRKPHN_sim_people_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_dem_category = {
+	icon = generic_political_actions
+	priority = 227
+	scripted_gui = TFRKPHN_sim_dem_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_people_category = {
+	icon = generic_political_actions
+	priority = 228
+	scripted_gui = TFRKPHN_sim_people_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_dem_category = {
+	icon = generic_political_actions
+	priority = 227
+	scripted_gui = TFRKPHN_sim_dem_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_people_category = {
+	icon = generic_political_actions
+	priority = 228
+	scripted_gui = TFRKPHN_sim_people_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_dem_category = {
+	icon = generic_political_actions
+	priority = 227
+	scripted_gui = TFRKPHN_sim_dem_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_people_category = {
+	icon = generic_political_actions
+	priority = 228
+	scripted_gui = TFRKPHN_sim_people_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_dem_category = {
+	icon = generic_political_actions
+	priority = 227
+	scripted_gui = TFRKPHN_sim_dem_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_people_category = {
+	icon = generic_political_actions
+	priority = 228
+	scripted_gui = TFRKPHN_sim_people_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_dem_category = {
+	icon = generic_political_actions
+	priority = 227
+	scripted_gui = TFRKPHN_sim_dem_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_people_category = {
+	icon = generic_political_actions
+	priority = 228
+	scripted_gui = TFRKPHN_sim_people_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_dem_category = {
+	icon = generic_political_actions
+	priority = 227
+	scripted_gui = TFRKPHN_sim_dem_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_people_category = {
+	icon = generic_political_actions
+	priority = 228
+	scripted_gui = TFRKPHN_sim_people_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_dem_category = {
+	icon = generic_political_actions
+	priority = 227
+	scripted_gui = TFRKPHN_sim_dem_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_people_category = {
+	icon = generic_political_actions
+	priority = 228
+	scripted_gui = TFRKPHN_sim_people_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_dem_category = {
+	icon = generic_political_actions
+	priority = 227
+	scripted_gui = TFRKPHN_sim_dem_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_people_category = {
+	icon = generic_political_actions
+	priority = 228
+	scripted_gui = TFRKPHN_sim_people_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_dem_category = {
+	icon = generic_political_actions
+	priority = 227
+	scripted_gui = TFRKPHN_sim_dem_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_people_category = {
+	icon = generic_political_actions
+	priority = 228
+	scripted_gui = TFRKPHN_sim_people_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_dem_category = {
+	icon = generic_political_actions
+	priority = 227
+	scripted_gui = TFRKPHN_sim_dem_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_people_category = {
+	icon = generic_political_actions
+	priority = 228
+	scripted_gui = TFRKPHN_sim_people_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_dem_category = {
+	icon = generic_political_actions
+	priority = 227
+	scripted_gui = TFRKPHN_sim_dem_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_people_category = {
+	icon = generic_political_actions
+	priority = 228
+	scripted_gui = TFRKPHN_sim_people_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_dem_category = {
+	icon = generic_political_actions
+	priority = 227
+	scripted_gui = TFRKPHN_sim_dem_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_people_category = {
+	icon = generic_political_actions
+	priority = 228
+	scripted_gui = TFRKPHN_sim_people_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_dem_category = {
+	icon = generic_political_actions
+	priority = 227
+	scripted_gui = TFRKPHN_sim_dem_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_people_category = {
+	icon = generic_political_actions
+	priority = 228
+	scripted_gui = TFRKPHN_sim_people_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_dem_category = {
+	icon = generic_political_actions
+	priority = 227
+	scripted_gui = TFRKPHN_sim_dem_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_people_category = {
+	icon = generic_political_actions
+	priority = 228
+	scripted_gui = TFRKPHN_sim_people_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_dem_category = {
+	icon = generic_political_actions
+	priority = 227
+	scripted_gui = TFRKPHN_sim_dem_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_people_category = {
+	icon = generic_political_actions
+	priority = 228
+	scripted_gui = TFRKPHN_sim_people_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_dem_category = {
+	icon = generic_political_actions
+	priority = 227
+	scripted_gui = TFRKPHN_sim_dem_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_people_category = {
+	icon = generic_political_actions
+	priority = 228
+	scripted_gui = TFRKPHN_sim_people_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_dem_category = {
+	icon = generic_political_actions
+	priority = 227
+	scripted_gui = TFRKPHN_sim_dem_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_people_category = {
+	icon = generic_political_actions
+	priority = 228
+	scripted_gui = TFRKPHN_sim_people_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_dem_category = {
+	icon = generic_political_actions
+	priority = 227
+	scripted_gui = TFRKPHN_sim_dem_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_people_category = {
+	icon = generic_political_actions
+	priority = 228
+	scripted_gui = TFRKPHN_sim_people_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_dem_category = {
+	icon = generic_political_actions
+	priority = 227
+	scripted_gui = TFRKPHN_sim_dem_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_people_category = {
+	icon = generic_political_actions
+	priority = 228
+	scripted_gui = TFRKPHN_sim_people_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_dem_category = {
+	icon = generic_political_actions
+	priority = 227
+	scripted_gui = TFRKPHN_sim_dem_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_people_category = {
+	icon = generic_political_actions
+	priority = 228
+	scripted_gui = TFRKPHN_sim_people_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_dem_category = {
+	icon = generic_political_actions
+	priority = 227
+	scripted_gui = TFRKPHN_sim_dem_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_people_category = {
+	icon = generic_political_actions
+	priority = 228
+	scripted_gui = TFRKPHN_sim_people_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_dem_category = {
+	icon = generic_political_actions
+	priority = 227
+	scripted_gui = TFRKPHN_sim_dem_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_people_category = {
+	icon = generic_political_actions
+	priority = 228
+	scripted_gui = TFRKPHN_sim_people_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_dem_category = {
+	icon = generic_political_actions
+	priority = 227
+	scripted_gui = TFRKPHN_sim_dem_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_people_category = {
+	icon = generic_political_actions
+	priority = 228
+	scripted_gui = TFRKPHN_sim_people_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_dem_category = {
+	icon = generic_political_actions
+	priority = 227
+	scripted_gui = TFRKPHN_sim_dem_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_people_category = {
+	icon = generic_political_actions
+	priority = 228
+	scripted_gui = TFRKPHN_sim_people_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_dem_category = {
+	icon = generic_political_actions
+	priority = 227
+	scripted_gui = TFRKPHN_sim_dem_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_people_category = {
+	icon = generic_political_actions
+	priority = 228
+	scripted_gui = TFRKPHN_sim_people_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_dem_category = {
+	icon = generic_political_actions
+	priority = 227
+	scripted_gui = TFRKPHN_sim_dem_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_people_category = {
+	icon = generic_political_actions
+	priority = 228
+	scripted_gui = TFRKPHN_sim_people_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_dem_category = {
+	icon = generic_political_actions
+	priority = 227
+	scripted_gui = TFRKPHN_sim_dem_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_people_category = {
+	icon = generic_political_actions
+	priority = 228
+	scripted_gui = TFRKPHN_sim_people_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_dem_category = {
+	icon = generic_political_actions
+	priority = 227
+	scripted_gui = TFRKPHN_sim_dem_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_people_category = {
+	icon = generic_political_actions
+	priority = 228
+	scripted_gui = TFRKPHN_sim_people_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_dem_category = {
+	icon = generic_political_actions
+	priority = 227
+	scripted_gui = TFRKPHN_sim_dem_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_people_category = {
+	icon = generic_political_actions
+	priority = 228
+	scripted_gui = TFRKPHN_sim_people_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_dem_category = {
+	icon = generic_political_actions
+	priority = 227
+	scripted_gui = TFRKPHN_sim_dem_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_people_category = {
+	icon = generic_political_actions
+	priority = 228
+	scripted_gui = TFRKPHN_sim_people_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_dem_category = {
+	icon = generic_political_actions
+	priority = 227
+	scripted_gui = TFRKPHN_sim_dem_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_people_category = {
+	icon = generic_political_actions
+	priority = 228
+	scripted_gui = TFRKPHN_sim_people_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_dem_category = {
+	icon = generic_political_actions
+	priority = 227
+	scripted_gui = TFRKPHN_sim_dem_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_people_category = {
+	icon = generic_political_actions
+	priority = 228
+	scripted_gui = TFRKPHN_sim_people_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_dem_category = {
+	icon = generic_political_actions
+	priority = 227
+	scripted_gui = TFRKPHN_sim_dem_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_people_category = {
+	icon = generic_political_actions
+	priority = 228
+	scripted_gui = TFRKPHN_sim_people_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_dem_category = {
+	icon = generic_political_actions
+	priority = 227
+	scripted_gui = TFRKPHN_sim_dem_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_people_category = {
+	icon = generic_political_actions
+	priority = 228
+	scripted_gui = TFRKPHN_sim_people_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_dem_category = {
+	icon = generic_political_actions
+	priority = 227
+	scripted_gui = TFRKPHN_sim_dem_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_people_category = {
+	icon = generic_political_actions
+	priority = 228
+	scripted_gui = TFRKPHN_sim_people_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_dem_category = {
+	icon = generic_political_actions
+	priority = 227
+	scripted_gui = TFRKPHN_sim_dem_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_people_category = {
+	icon = generic_political_actions
+	priority = 228
+	scripted_gui = TFRKPHN_sim_people_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_dem_category = {
+	icon = generic_political_actions
+	priority = 227
+	scripted_gui = TFRKPHN_sim_dem_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_people_category = {
+	icon = generic_political_actions
+	priority = 228
+	scripted_gui = TFRKPHN_sim_people_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_dem_category = {
+	icon = generic_political_actions
+	priority = 227
+	scripted_gui = TFRKPHN_sim_dem_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_people_category = {
+	icon = generic_political_actions
+	priority = 228
+	scripted_gui = TFRKPHN_sim_people_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_dem_category = {
+	icon = generic_political_actions
+	priority = 227
+	scripted_gui = TFRKPHN_sim_dem_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_people_category = {
+	icon = generic_political_actions
+	priority = 228
+	scripted_gui = TFRKPHN_sim_people_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_dem_category = {
+	icon = generic_political_actions
+	priority = 227
+	scripted_gui = TFRKPHN_sim_dem_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_people_category = {
+	icon = generic_political_actions
+	priority = 228
+	scripted_gui = TFRKPHN_sim_people_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_dem_category = {
+	icon = generic_political_actions
+	priority = 227
+	scripted_gui = TFRKPHN_sim_dem_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_people_category = {
+	icon = generic_political_actions
+	priority = 228
+	scripted_gui = TFRKPHN_sim_people_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_dem_category = {
+	icon = generic_political_actions
+	priority = 227
+	scripted_gui = TFRKPHN_sim_dem_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_people_category = {
+	icon = generic_political_actions
+	priority = 228
+	scripted_gui = TFRKPHN_sim_people_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_dem_category = {
+	icon = generic_political_actions
+	priority = 227
+	scripted_gui = TFRKPHN_sim_dem_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_people_category = {
+	icon = generic_political_actions
+	priority = 228
+	scripted_gui = TFRKPHN_sim_people_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}
+TFRKPHN_sim_dem_category = {
+	icon = generic_political_actions
+	priority = 227
+	scripted_gui = TFRKPHN_sim_dem_gui
+	allowed = { original_tag = KOR }
+	visible = { has_country_flag = TFRKPHN_sim_reform_open }
+}

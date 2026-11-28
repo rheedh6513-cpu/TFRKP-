@@ -1,0 +1,11 @@
+# [안내] 이낙연, 심상정 첫 중점 아이콘 (사용자가 준 그림). first_icons.py가 만든다.
+spriteTypes = {
+	spriteType = {
+		name = "GFX_focus_TFRKPHN_nak_b01_01"
+		texturefile = "gfx/interface/goals/TFRKPHN_nak_b01_01.png"
+	}
+	spriteType = {
+		name = "GFX_focus_TFRKPHN_sim_01"
+		texturefile = "gfx/interface/goals/TFRKPHN_sim_01.png"
+	}
+}

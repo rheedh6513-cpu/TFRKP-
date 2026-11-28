@@ -12,7 +12,7 @@ focus_tree = {
 
 	focus = {
 		id = TFRKPHN_nak_b01_01
-		icon = GFX_goal_generic_national_unity
+		icon = GFX_focus_TFRKPHN_nak_b01_01
 		x = 4
 		y = 0
 		cost = 5

@@ -6,7 +6,7 @@ focus_tree = {
 	continuous_focus_position = { x = 50 y = 1170 }
 	focus = {
 		id = TFRKPHN_sim_01
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_focus_TFRKPHN_sim_01
 		x = 10
 		y = 0
 		cost = 1
@@ -29,6 +29,20 @@ focus_tree = {
 			add_stability = -0.025
 			custom_effect_tooltip = TFRKPHN_sim_02_tt
 			hidden_effect = { set_country_flag = TFRKPHN_sim_reform_open set_variable = { TFRKPHN_sim_rock = 0 } set_variable = { TFRKPHN_sim_rock_f = 1 } set_variable = { TFRKPHN_sim_people = 30 } set_variable = { TFRKPHN_sim_dem = 30 } }
+		}
+	}
+	focus = {
+		id = TFRKPHN_sim_03
+		icon = GFX_goal_generic_propaganda
+		x = 6
+		y = 2
+		cost = 5
+		prerequisite = { focus = TFRKPHN_sim_02 }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 50
+			custom_effect_tooltip = TFRKPHN_sim_03_tt
+			hidden_effect = { add_to_variable = { TFRKPHN_sim_people = 5 } clamp_variable = { var = TFRKPHN_sim_people min = 0 max = 100 } }
 		}
 	}
 }
